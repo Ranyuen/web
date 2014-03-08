@@ -71,6 +71,11 @@ body {
     background: rgba(255, 255, 255, 0.8);
     overflow: hidden;
     padding: 0 5mm $menu_height 5mm;
+    & > article{
+      ul,ol{
+        list-style-position: inside;
+      }
+    }
   }
 
   & > footer {

@@ -159,6 +159,8 @@ body > header {
   background: rgba(255, 255, 255, 0.8);
   overflow: hidden;
   padding: 0 5mm 12mm 5mm; }
+.container > article > article ul, .container > article > article ol {
+  list-style-position: inside; }
 .container > footer {
   background: rgba(255, 255, 255, 0.6);
   color: #666;
