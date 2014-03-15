@@ -1,6 +1,8 @@
 ---
 title: 蘭裕園
 ---
+<a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm; margin-bottom: 1em;">2014年 超高品質なエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;">ここをクリック!</u></a>
+
 ## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 
