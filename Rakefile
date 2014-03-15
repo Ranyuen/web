@@ -20,7 +20,7 @@ class ContribScss
     lambda{|t, p|
       @all.each do |f|
         puts "Generate CSS at #{@dest}/#{f}.css"
-        Sass.compile_file "#{@src}/#{f}.scss", "#{@dest}/#{f}.css", {style: @style}
+        Sass.compile_file "#{@src}/#{f}.scss", "#{@dest}/#{f}.css", {style: @style, cache: false}
       end
     }
   end
