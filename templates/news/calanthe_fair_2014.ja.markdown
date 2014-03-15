@@ -36,7 +36,7 @@ b {
 
 あなたが今までに見たことがないきれいなエビネを見付けることができるかもしれません。
 
-<span class="shadow" style="color: purple;">紫</span>・<span class="shadow" style="color: #990033;">ワインレッド</span>・<span class="shadow" style="color: pink;">ピンク</span>・<span class="shadow" style="color: green;">グリーン</span>など<span class="shadow" style="background: linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);">カラフルな</span>花色のものを主体に、一鉢あたり1～7本立ちの株を<b>5,000～10,000鉢</b>、<b>2,000円 (税別)</b> で販売予定。
+<span class="shadow" style="color: purple;">紫</span>・<span class="shadow" style="color: #990033;">ワインレッド</span>・<span class="shadow" style="color: pink;">ピンク</span>・<span class="shadow" style="color: green;">グリーン</span>など<span class="shadow" style="background: linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);">カラフルな</span>花色のものを主体に、一鉢あたり<b>2,000円 (税別)</b>で、<u>1～7本立ち</u>の株を5,000～10,000鉢販売予定。
 
 売り切れの際は御容赦ください。
 
@@ -48,7 +48,6 @@ b {
 2014年 4月18日 (金) から<br />
 連日、花は追加します！<br />
 10:00 ～ 15:00<br />
-3日 (土)、4日 (日) は最終セール 全品半額50%off<br />
 <a href="/about_us/direction">アクセス</a>
 </div>
 
