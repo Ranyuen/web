@@ -150,6 +150,58 @@ body > header {
   width: 100%;
   z-index: 1000; }
 
+.facebook {
+  background-image: url("/assets/images/icons/facebook.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: block;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s;
+  width: 180px; }
+.facebook:hover, .facebook:focus {
+  background-color: #3b5b99;
+  color: white; }
+.facebook img {
+  height: 24px;
+  width: 24px;
+  position: absolute; }
+.facebook span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative; }
+.facebook span:after {
+  content: "Ranyuen Facebook"; }
+
+.youtube {
+  background-image: url("/assets/images/icons/youtube.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: block;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s;
+  width: 180px; }
+.youtube:hover, .youtube:focus {
+  background-color: #e51a27;
+  color: white; }
+.youtube img {
+  height: 24px;
+  width: 24px;
+  position: absolute; }
+.youtube span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative; }
+.youtube span:after {
+  content: "Ranyuen YouTube"; }
+
 .container {
   margin: 0 auto;
   position: relative;

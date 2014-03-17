@@ -61,6 +61,14 @@ body {
   }
 }
 
+.facebook {
+  @include social-icon('/assets/images/icons/facebook.png', rgb(59, 91, 153), 'Ranyuen Facebook');
+}
+
+.youtube {
+  @include social-icon('/assets/images/icons/youtube.png', rgb(229, 26, 39), 'Ranyuen YouTube');
+}
+
 .container {
   margin: 0 auto;
   position: relative;

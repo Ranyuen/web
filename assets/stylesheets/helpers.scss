@@ -208,4 +208,39 @@ $nav_bg_color: rgb(240, 245, 240);
 
   .nav-item-home { font-size: larger; }
 }
+
+@mixin social-icon($image, $color, $content) {
+  $social-icon-size: 24px;
+
+  background-image: url($image);
+  background-repeat: no-repeat;
+  background-size: $social-icon-size $social-icon-size;
+  display: block;
+  height: $social-icon-size;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s;
+  width: 180px;
+
+  &:hover, &:focus {
+    background-color: $color;
+    color: white;
+  }
+
+  img {
+    height: $social-icon-size;
+    width: $social-icon-size;
+    position: absolute;
+  }
+
+  span {
+    display: inline-block;
+    height: $social-icon-size;
+    left: $social-icon-size + 2px;
+    line-height: $social-icon-size;
+    position: relative;
+
+    &:after { content: $content; }
+  }
+}
 // vim:set fdm=marker:
