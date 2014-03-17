@@ -47,7 +47,7 @@ b {
 <div style="margin: 1em 0; padding: 0 1em; background: #eee;">
 2014年 4月18日 (金) から<br />
 連日、花は追加します！<br />
-10:00 ～ 15:00<br />
+10:00 ～ 17:00<br />
 <a href="/about_us/direction">アクセス</a>
 </div>
 
