@@ -11,3 +11,33 @@ title: 蘭裕園
 現在、34棟のハウスで約200万本のランを育てています。そのほかにフラスコ培養で新品種を開発するための「みどりの故郷研究室」、4月と6月にのみ開園する売店 (約70坪) があります。
 
 2000点以上のエビネやアワチドリ / 夢ちどり (ウチョウランの仲間) などの写真を掲載していますので、変化の多さをお楽しみいただければ幸いです。
+
+[Facebookにも2000点以上の写真を掲載しています。](http://fb.me/ranyuenjapan)ぜひご覧ください。
+
+<a class="facebook" href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/facebook.png"/><span>Ranyuen Facebook</span></a>
+<style>
+.facebook {
+  display: block;
+  height: 24px;
+  position: relative;
+  transition: linear 0.5s;
+  width: 180px;
+}
+.facebook:hover, .facebook:focus {
+  background: rgb(59, 91, 153);
+  color: white;
+  text-decoration: none;
+}
+.facebook img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+}
+.facebook span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative;
+}
+</style>
