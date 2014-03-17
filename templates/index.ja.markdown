@@ -20,13 +20,13 @@ title: 蘭裕園
   display: block;
   height: 24px;
   position: relative;
+  text-decoration: none;
   transition: linear 0.5s;
   width: 180px;
 }
 .facebook:hover, .facebook:focus {
   background: rgb(59, 91, 153);
   color: white;
-  text-decoration: none;
 }
 .facebook img {
   height: 24px;
@@ -34,6 +34,34 @@ title: 蘭裕園
   position: absolute;
 }
 .facebook span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative;
+}
+</style>
+
+<a class="youtube" href="https://www.youtube.com/channel/UCO0wggpBXkCF44aGeqGPWvg/videos"><img src="/assets/images/icons/youtube.png"/><span>Ranyuen YouTube</span></a>
+<style>
+.youtube {
+  display: block;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s;
+  width: 180px;
+}
+.youtube:hover, .youtube:focus {
+  background: rgb(229, 26, 39);
+  color: white;
+}
+.youtube img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+}
+.youtube span {
   display: inline-block;
   height: 24px;
   left: 26px;
