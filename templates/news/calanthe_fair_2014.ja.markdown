@@ -51,11 +51,70 @@ b {
 <a href="/about_us/direction">アクセス</a>
 </div>
 
+[当園のFacebookでもっとおおくの写真をご覧いただけます。](http://fb.me/ranyuenjapan)
+
+<a class="facebook" href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/facebook.png"/><span>Ranyuen Facebook</span></a>
+<style>
+.facebook {
+  display: block;
+  height: 24px;
+  position: relative;
+  transition: linear 0.5s;
+  width: 180px;
+}
+.facebook:hover, .facebook:focus {
+  background: rgb(59, 91, 153);
+  color: white;
+  text-decoration: none;
+}
+.facebook img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+}
+.facebook span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative;
+}
+</style>
+
 同時にたくさんのお客様のご来店も予測されます。
+
 混雑を避けるため事前に [こちらのフォーム](/assets/calanthe_fair_2014_request.pdf) に住所・氏名を記入して当日お持ちください。次回より展示会のご案内および特典がございます。印刷ができない場合は、FAXにて案内ハガキをご請求ください。
 
 <?php $h->echoYouTube('m_DPZkngK9s', '蘭裕園エビネセール2011'); ?>
 
-<?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?> <br />
+<?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?>
+
+<a class="youtube" href="https://www.youtube.com/channel/UCO0wggpBXkCF44aGeqGPWvg/videos"><img src="/assets/images/icons/youtube.png"/><span>Ranyuen YouTube</span></a>
+<style>
+.youtube {
+  display: block;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s;
+  width: 180px;
+}
+.youtube:hover, .youtube:focus {
+  background: rgb(229, 26, 39);
+  color: white;
+}
+.youtube img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+}
+.youtube span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative;
+}
+</style>
 
 当園の以前からのお客様には、4月上旬ごろにご案内ハガキをお送りします。
