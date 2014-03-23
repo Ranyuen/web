@@ -16,4 +16,4 @@ title: 蘭裕園
 
 <a class="facebook" href="http://fb.me/ranyuenjapan"><span></span></a>
 
-<a class="youtube" href="https://www.youtube.com/channel/UCO0wggpBXkCF44aGeqGPWvg/videos"><span></span></a>
+<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span></span></a>
