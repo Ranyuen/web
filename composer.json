@@ -6,7 +6,11 @@
     "slim/slim": "2.4.*",
     "slim/views": "dev-master",
     "slim/middleware": "*",
-    "symfony/yaml": "2.5.*@dev"
+    "symfony/yaml": "2.5.*@dev",
+    "j4mie/idiorm": "1.4.*",
+    "j4mie/paris": "1.4.*",
+    "pimple/pimple": "2.*",
+    "davedevelopment/phpmig": "1.*"
   },
   "require-dev": {
     "phpunit/phpunit": "3.7.*@dev"

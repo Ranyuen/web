@@ -2,6 +2,7 @@
 namespace Ranyuen;
 
 use \Slim;
+use \ORM;
 
 /**
  * Quick start
