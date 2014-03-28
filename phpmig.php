@@ -4,7 +4,7 @@ use \Phpmig\Adapter;
 
 $container = new ArrayObject();
 
-
+require 'vendor/autoload.php';
 $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
 $config = new \Ranyuen\Config;
 $config->load("config/$env.yaml");
