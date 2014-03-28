@@ -13,4 +13,4 @@ PLATFORMS
 DEPENDENCIES
   net-ssh
   rake
-  sass (= 3.2.13)
+  sass
