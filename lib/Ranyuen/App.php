@@ -2,7 +2,6 @@
 namespace Ranyuen;
 
 use \Slim;
-use \ORM;
 
 /**
  * Quick start
@@ -73,6 +72,24 @@ class App
     }
 
     /**
+     * @param  string   $api_name
+     * @param  string   $method
+     * @param  string[] $uri_params
+     * @param  array    $request_params
+     * @return App
+     */
+    public function renderApi($api_name, $method, $uri_params, $request_params)
+    {
+        $api_name = preg_replace_callback('/[-_](.)/', function ($m) {
+            return strtoupper($m[1]);
+        }, ucwords(strtolower($api_name)));
+        $controller = (new \ReflectionClass("\Ranyuen\\Api\\$api_name"))->newInstance();
+        echo json_encode($controller->render($method, $uri_params, $request_params));
+
+        return $this;
+    }
+
+    /**
      * @param  array  $config
      * @param  string $env
      * @return array
@@ -115,6 +132,21 @@ class App
             $this->render($lang, $path);
             $this->logger->addAccessInfo();
         };
+        $app->get('/api/:path+', function ($path) use ($app) {
+            $this->renderApi($path[0], 'GET', array_slice($path, 1),
+                $app->request->get());
+        });
+        $app->get('/api/:path+', function ($path) use ($app) {
+            $this->renderApi($path[0], 'POST', array_slice($path, 1),
+                $app->request->post());
+        });
+        $app->get('/api/:path+', function ($path) use ($app) {
+            $this->renderApi($path[0], 'PUT', array_slice($path, 1),
+                $app->request->put());
+        });
+        $app->get('/api/:path+', function ($path) use ($app) {
+            $this->renderApi($path[0], 'DELETE', array_slice($path, 1), []);
+        });
         $app->get('/:lang/', function ($lang) use ($controller) {
             $controller($lang, '/index');
         });

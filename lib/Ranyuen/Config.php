@@ -16,6 +16,9 @@ class Config
         }
     }
 
+    /**
+     * @return Pimple
+     */
     public function container()
     {
         return self::$container;
