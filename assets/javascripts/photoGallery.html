@@ -1,0 +1,46 @@
+<polymer-element  name="pg-search">
+  <template>
+  <input name="description" type="text" placeholder="検索" value="{{description}}" on-keyup="{{change}}"/>
+    <select name="species_name" value="{{species_name}}" on-change="{{change}}">
+      <option value="all">全て</option>
+      <option value="Calanthe">エビネ (Calanthe)</option>
+      <option value="Ponerorchis">アワチドリ / 夢ちどり (Ponerorchis)</option>
+    </select>
+  </template>
+  <script>
+    Polymer('pg-search', {
+      description: '',
+      species_name: 'all',
+      change: function (evt, detail, sender) {
+        console.log([this.description, this.species_name]);
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="pg-photos">
+  <template>
+    <template repeat="{{photo in photos}}">
+      <div>
+        <img src="/Calanthe/gallery/{{photo.id}}.jpg" alt="{{photo.description_ja}} 蘭裕園" />
+        <div>
+          <div>{{photo.description_ja}}</div>
+          <div>{{photo.description_en}}</div>
+        </div>
+      </div>
+    </template>
+  </template>
+  <script>
+    Polymer('pg-photos', {
+      ready: function () {
+        var me = this;
+
+        this.photos = [];
+        new App().photos(60, 0).then(function (photos) {
+          console.log(photos);
+          me.photos = photos;
+        }).catch(function (err) { throw err; });
+      }
+    });
+  </script>
+</polymer-element>

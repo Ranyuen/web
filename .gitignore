@@ -1,6 +1,7 @@
 .bundle/
 .sass-cache/
 .vagrant/
+Calanthe/
 node_modules/
 vendor/
 *.log

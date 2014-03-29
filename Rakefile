@@ -184,9 +184,11 @@ end
 desc 'Build files.'
 task :build => [:scss, :gen_nav, :gen_sitemap]
 
-desc 'Run tests (need Grunt).'
-task :test do
+task :test_grunt do
   sh 'grunt test'
+end
+
+task :test_php do
   Dir['{lib,test}/**/*.php'].concat(Dir['*.php']).each do |file|
     sh "php -l #{file}"
   end
@@ -195,4 +197,7 @@ task :test do
   end
   sh 'vendor/bin/phpunit test'
 end
+
+desc 'Run tests (need Grunt).'
+task :test => [:test_grunt, :test_php]
 # vim:set fdm=marker:

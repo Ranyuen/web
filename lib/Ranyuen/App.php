@@ -83,8 +83,9 @@ class App
         $api_name = preg_replace_callback('/[-_](.)/', function ($m) {
             return strtoupper($m[1]);
         }, ucwords(strtolower($api_name)));
-        $controller = (new \ReflectionClass("\Ranyuen\\Api\\$api_name"))->newInstance();
-        echo json_encode($controller->render($method, $uri_params, $request_params));
+        $controller = (new \ReflectionClass("\Ranyuen\\Controller\\Api$api_name"))->newInstance();
+        $response = $controller->render($method, $uri_params, $request_params);
+        echo is_array($response) ? json_encode($response) : $response;
 
         return $this;
     }

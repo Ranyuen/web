@@ -46,6 +46,7 @@ class Config
     {
         self::$container['config'] = $config;
         ORM::configure($config['db']);
+        ORM::configure('logging', true);
         self::$container['db'] = ORM::get_db();
     }
 }
