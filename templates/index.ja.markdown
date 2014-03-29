@@ -13,9 +13,9 @@ title: 蘭裕園
 
 </style>
 
-<a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上なエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
+<a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上のエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
 
-<div class="bluray"><a href="/news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネの花のブルーレイプレゼント！</a></div>
+<div class="bluray"><a href="/news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネのブルーレイさしあげます！</a></div>
 
 ## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
 <div class="top-img"></div>
@@ -30,4 +30,4 @@ title: 蘭裕園
 
 <a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 
-<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園の美しいランを紹介した動画が多数上がっております。</span></a>
+<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上ございます。</span></a>
