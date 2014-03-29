@@ -2,6 +2,7 @@
 $site_names = ['ja' => '蘭裕園', 'en' => 'Ranyuen'];
 $site_name = $site_names[$lang];
 $home = "http://ranyuen.com{$link['base']}";
+$local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
 foreach ([
     'en' => 'English',
@@ -59,7 +60,7 @@ $switch_lang = implode(' / ', $switch_lang);
             </div>
         </nav>
         <nav class="local-nav">
-        <?php $h->echoNav($local_nav, $_SERVER['REQUEST_URI']); ?>
+        <?php $h->echoNav($local_nav, $local_base); ?>
         </nav>
     </header>
     <div class="container">
