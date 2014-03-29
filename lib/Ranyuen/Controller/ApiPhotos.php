@@ -12,6 +12,6 @@ class ApiPhotos implements ApiController
 
         return array_map(function ($photo) {
             return $photo->asArray();
-        }, Photo::limit($limit)->offset($offset)->findMany());
+        }, Photo::rawQuery('select * from photo order by random() limit :limit offset :offset', ['limit' => $limit, 'offset' => $offset])->findMany());
     }
 }
