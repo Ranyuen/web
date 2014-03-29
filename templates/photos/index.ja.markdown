@@ -1,7 +1,7 @@
 ---
-title: 写真
+title: 写真を見る
 ---
-写真
+蘭裕園の写真を見る
 ==
 <!-- <pg-search></pg-search> -->
 <div id="photo-gallery"></div>
