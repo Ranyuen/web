@@ -10,6 +10,6 @@ Enjoy our website as we take you through more than 2000 pictures of various EBIN
 
 Follow us on [Facebook](http://fb.me/ranyuenjapan) for current updates.
 
-<a class="facebook" href="http://fb.me/ranyuenjapan"><span></span></a>
+<a class="facebook" href="http://fb.me/ranyuenjapan"><span>Ranyuen Facebook</span></a>
 
-<a class="youtube" href="https://www.youtube.com/channel/UCO0wggpBXkCF44aGeqGPWvg/videos"><span></span></a>
+<a class="youtube" href="https://www.youtube.com/channel/UCO0wggpBXkCF44aGeqGPWvg/videos"><span>Ranyuen YouTube</span></a>

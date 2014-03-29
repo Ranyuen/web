@@ -15,7 +15,7 @@ Currently we are open to large quantity orders only.
 
 To contact us,
 
-1. Direct to our nursery ([letter](../about_us/direction) or [email (info@ranyuen.com)](mailto:info@ranyuen.com)).
+1. Direct to our nursery ([letter](about_us/direction) or [email (info@ranyuen.com)](mailto:info@ranyuen.com)).
 2. Contact your local leading Japanese horticulture importers.
 
 For European countries, we can introduce our agent in the Netherlands. (We are currently looking for agents and dealers around the world.)

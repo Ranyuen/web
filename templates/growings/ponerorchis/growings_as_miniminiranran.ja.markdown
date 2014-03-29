@@ -45,7 +45,7 @@ title: ミニミニランランの栽培
 
 このため風通しの良い場所に置き、ハカマが枯れる少し前の時期 (5～6月) に株元に殺菌剤 (灰色カビ病に有効なもの) を2回程度散布すると安心です。
 
-詳しくは[病害虫の防除](growings_controlling_pests_of_Ponerorchis)を参照してください。
+詳しくは[病害虫の防除](growings/ponerorchis/growings_controlling_pests_of_Ponerorchis)を参照してください。
 
 ## その他の注意点
 ![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_IMG_2136.jpg)

@@ -2,7 +2,7 @@
 title: 蘭裕園のご紹介
 ---
 ## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
-蘭裕園は[エビネ (Calanthe)](../growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](../growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
+蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 
 山野草や東洋ランとは異なる、カラフルで華やかな日本のラン (Ranyuen style) として、世界中の花好きをとりこにするような品格のあるランを目標に約35年間改良を続けてきました。
 

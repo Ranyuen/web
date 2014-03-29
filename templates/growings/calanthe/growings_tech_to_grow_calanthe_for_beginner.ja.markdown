@@ -24,7 +24,7 @@ title: エビネの栽培法 - 初心者編
 花後すぐに市販の液肥を規定よりも薄くして与えて下さい。固形の置肥も有効です。
 
 ## 年間管理
-本来エビネの栽培は簡単で良い株を庭に植えておけば毎年花が咲きますが、栽培経験の長いベテランたちよりももっと上手に育てたいと思う方は当サイトの[エビネ年間の管理 春夏秋冬](growing_calanthe_01_spring)、他を参考にして下さい。
+本来エビネの栽培は簡単で良い株を庭に植えておけば毎年花が咲きますが、栽培経験の長いベテランたちよりももっと上手に育てたいと思う方は当サイトの[エビネ年間の管理 春夏秋冬](growings/calanthe/growings_calanthe_on_season_01_spring)、他を参考にして下さい。
 
 <img src="/assets/images/tech_to_grow_calanthe_for_beginner.png" width="750" height="1080" alt="春色エビネ 年間管理の目安表 (Calanthe) - Ranyuen" />
 
