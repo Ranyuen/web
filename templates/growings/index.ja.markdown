@@ -1,6 +1,7 @@
 ---
 title: エビネ, アワチドリ / 夢ちどりの育て方
 ---
+<a style="font-weight: bolder;" href="recent_failure_and_provision">近年に多い障害と対策</a>
 ## エビネ (Calanthe)<br /><small>世界で最も多彩なラン</small>
 <img style="float: right;" src="/assets/images/cal_top.jpg" alt="エビネ (Calanthe) - Ranyuen" />
 

@@ -107,6 +107,6 @@ b {
 
 <?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?><br />
 
-<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上ございます。</span></a>
+<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上あります。</span></a>
 
 当園の以前からのお客様には、4月上旬ごろにご案内ハガキをお送りします。
