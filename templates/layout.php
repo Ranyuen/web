@@ -59,7 +59,7 @@ $switch_lang = implode(' / ', $switch_lang);
             </div>
         </nav>
         <nav class="local-nav">
-        <?php $h->echoNav($local_nav, './'); ?>
+        <?php $h->echoNav($local_nav, $_SERVER['REQUEST_URI']); ?>
         </nav>
     </header>
     <div class="container">
