@@ -95,9 +95,7 @@ b {
 <a href="/about_us/direction"><img src="/assets/images/map1_ja.jpg" alt="蘭裕園へのアクセス" /><br />アクセス</a>
 </div>
 
-[当園のFacebookでもっとおおくの写真をご覧いただけます。](http://fb.me/ranyuenjapan)
-
-<a class="facebook" href="http://fb.me/ranyuenjapan"><span></span></a>
+<a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 
 同時にたくさんのお客様のご来店も予測されます。
 
@@ -107,8 +105,8 @@ b {
 
 <?php $h->echoYouTube('m_DPZkngK9s', '2011年カランセフェアの様子 - 蘭裕園'); ?>
 
-<?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?>
+<?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?><br />
 
-<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span></span></a>
+<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園の美しいランを紹介した動画が多数上がっております。</span></a>
 
 当園の以前からのお客様には、4月上旬ごろにご案内ハガキをお送りします。

@@ -1,11 +1,25 @@
 ---
 title: 蘭裕園
 ---
-<a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm; margin-bottom: 1em;">2014年 超高品質なエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
+<style>
+.top-img {
+	background: url(/assets/images/top_img.jpg) no-repeat;
+	min-height: 494px;
+	width: 100%;
+}
+.bluray {
+	width: 40%;
+}
 
-<a href="/news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: blue; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm; margin-bottom: 1em;">蘭裕園の美しいエビネの世界をブルーレイに！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
+</style>
+
+<a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上なエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
+
+<div class="bluray"><a href="/news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネの花のブルーレイプレゼント！</a></div>
 
 ## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
+<div class="top-img"></div>
+
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 
 山野草や東洋ランとは異なる洋ランタイプの花 (Ranyuen style) として、世界中の花好きをとりこにするような品格のあるランを目標に約35年間改良を続けてきました。
@@ -14,8 +28,6 @@ title: 蘭裕園
 
 2000点以上のエビネやアワチドリ / 夢ちどり (ウチョウランの仲間) などの写真を掲載していますので、変化の多さをお楽しみいただければ幸いです。
 
-[Facebookにも2000点以上の写真を掲載しています。](http://fb.me/ranyuenjapan)ぜひご覧ください。
+<a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 
-<a class="facebook" href="http://fb.me/ranyuenjapan"><span></span></a>
-
-<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span></span></a>
+<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園の美しいランを紹介した動画が多数上がっております。</span></a>

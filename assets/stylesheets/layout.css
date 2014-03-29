@@ -154,12 +154,11 @@ body > header {
   background-image: url("/assets/images/icons/facebook.png");
   background-repeat: no-repeat;
   background-size: 24px 24px;
-  display: block;
+  display: inline-block;
   height: 24px;
   position: relative;
   text-decoration: none;
-  transition: linear 0.5s;
-  width: 180px; }
+  transition: linear 0.5s; }
 .facebook:hover, .facebook:focus {
   background-color: #3b5b99;
   color: white; }
@@ -172,20 +171,18 @@ body > header {
   height: 24px;
   left: 26px;
   line-height: 24px;
-  position: relative; }
-.facebook span:after {
-  content: "Ranyuen Facebook"; }
+  position: relative;
+  padding-right: 26px; }
 
 .youtube {
   background-image: url("/assets/images/icons/youtube.png");
   background-repeat: no-repeat;
   background-size: 24px 24px;
-  display: block;
+  display: inline-block;
   height: 24px;
   position: relative;
   text-decoration: none;
-  transition: linear 0.5s;
-  width: 180px; }
+  transition: linear 0.5s; }
 .youtube:hover, .youtube:focus {
   background-color: #e51a27;
   color: white; }
@@ -198,9 +195,8 @@ body > header {
   height: 24px;
   left: 26px;
   line-height: 24px;
-  position: relative; }
-.youtube span:after {
-  content: "Ranyuen YouTube"; }
+  position: relative;
+  padding-right: 26px; }
 
 .container {
   margin: 0 auto;
@@ -279,7 +275,8 @@ body > header {
   font-size: larger; }
 
 .breadcrumb {
-  font-size: small; }
+  font-size: small;
+  margin-bottom: -20px; }
 .breadcrumb .nav-left, .breadcrumb .nav-right, .breadcrumb .nav-item {
   display: inline-block;
   height: 12mm;
