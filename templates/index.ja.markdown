@@ -30,4 +30,4 @@ title: 蘭裕園
 
 <a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 
-<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上ございます。</span></a>
+<a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上あります。</span></a>
