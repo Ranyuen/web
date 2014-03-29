@@ -21,6 +21,8 @@ class CreatePhotoTable extends Migration
     color_v integer,
     species_name text, -- 種名 (Calanthe, Ponerorchis)
     product_name text, -- 品種名
+    width integer,
+    height integer,
     primary key (id)
 )';
         $container = $this->getContainer();

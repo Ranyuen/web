@@ -56,7 +56,6 @@
             return reject(new Error(request.responseText));
           }
           try {
-            console.log(request.responseText);
             response = JSON.parse(request.responseText);
           } catch (err) {
             return reject(err);
@@ -349,10 +348,12 @@
     this.color_v = 0;
     this.species_name = '';
     this.product_name = '';
+    this.width = 0;
+    this.height = 0;
   });
 
 App.prototype.photos = function (limit, offset) {
-  return new Photo().getResource('/api/photos');
+  return new Photo().getResource('/api/photos', {limit: limit, offset: offset});
 };
 
   new App().route('/photos/', function (params) {
