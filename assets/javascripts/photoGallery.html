@@ -1,0 +1,72 @@
+<polymer-element  name="pg-search">
+  <template>
+  <input name="description" type="text" placeholder="検索" value="{{description}}" on-keyup="{{change}}"/>
+    <select name="species_name" value="{{species_name}}" on-change="{{change}}">
+      <option value="all">全て</option>
+      <option value="Calanthe">エビネ (Calanthe)</option>
+      <option value="Ponerorchis">アワチドリ / 夢ちどり (Ponerorchis)</option>
+    </select>
+  </template>
+  <script>
+    Polymer('pg-search', {
+      description: '',
+      species_name: 'all',
+      change: function (evt, detail, sender) {
+        console.log([this.description, this.species_name]);
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="pg-photos">
+  <template>
+    <div class="photos">
+      <template repeat="{{photo in photos}}">
+        <div class="photo">
+          <img src="/Calanthe/gallery/{{photo.id}}.jpg" alt="{{photo.description_ja}} 蘭裕園"/>
+          <div>
+            <div>{{photo.description_ja}}</div>
+            <div>{{photo.description_en}}</div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+  <!-- <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script> -->
+  <script>
+    Polymer('pg-photos', {
+      ready: function () {
+        var me = this;
+
+        this.photos = [];
+        new App().photos(100, 0).then(function (photos) {
+          me.photos = photos;
+          // setTimeout(function () {
+          //   var photos, width;
+
+          //   photos = [].slice.call(me.shadowRoot.getElementsByClassName('photo'));
+          //   width = parseFloat(window.getComputedStyle(photos[0]).width);
+          //   photos.forEach(function (photo, i) {
+          //     photo.width = width;
+          //     photo.height = this.photos[i].height * width / this.photos[i].width;
+          //   }, me);
+          //   new Masonry(me.shadowRoot.getElementsByClassName('photos')[0], {
+          //     columnWidth: '.photo',
+          //     gutter: 10,
+          //     itemSelector: '.photo'
+          //   }).appended(photos);
+          // }, 1000);
+        }).catch(function (err) { throw err; });
+      }
+    });
+  </script>
+  <style>
+    pg-photos .photo {
+      background: #f0f5f0;
+      float: left;
+      margin: 0.6%;
+      min-height: 230px;
+      width: 32%;
+    }
+  </style>
+</polymer-element>

@@ -1,7 +1,9 @@
 .bundle/
 .sass-cache/
 .vagrant/
+Calanthe/
 node_modules/
 vendor/
-logs/*.log
+*.log
+*.sqlite3
 Thumbs.db

@@ -25,6 +25,7 @@ $switch_lang = implode(' / ', $switch_lang);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="home" href="<?php $h->h($home); ?>"/>
+    <base href="<?php $h->h($link['base']); ?>"/>
     <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
     <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
@@ -37,6 +38,11 @@ $switch_lang = implode(' / ', $switch_lang);
     <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="/assets/bower_components/uri.js/src/URI.js"></script>
+    <script src="/assets/bower_components/zepto/zepto.min.js"></script>
+    <script src="/assets/bower_components/bluebird/js/browser/bluebird.js"></script>
+    <script src="/assets/bower_components/platform/platform.js"></script>
+    <link rel="import" href="/assets/bower_components/polymer/polymer.html"/>
 </head>
 <body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
     <header>
@@ -60,7 +66,8 @@ $switch_lang = implode(' / ', $switch_lang);
         <!-- <div id="indicate">0</div>
         <script>
         var t = 0;
-        function rfrsh() {
+        function rfrsh()
+        {
             if (t % 10 === 0) {
                 t = 0;
                 document.getElementById('indicate').textContent =
@@ -106,7 +113,7 @@ $switch_lang = implode(' / ', $switch_lang);
     </script>
     <script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (function (i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function () {
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');

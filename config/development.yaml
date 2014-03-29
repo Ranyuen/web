@@ -1,6 +1,7 @@
 lang:
   default: ja
   e: en
+db: sqlite:./db.sqlite3
 redirect:
   "/index.html": "/"
   "/cal/cal.html": "/growings/"
