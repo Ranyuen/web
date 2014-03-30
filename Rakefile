@@ -184,20 +184,34 @@ end
 desc 'Build files.'
 task :build => [:scss, :gen_nav, :gen_sitemap]
 
-task :test_grunt do
-  sh 'grunt test'
-end
+namespace :test do
+  task(:test_grunt){ sh 'grunt test' }
 
-task :test_php do
-  Dir['{lib,test}/**/*.php'].concat(Dir['*.php']).each do |file|
-    sh "php -l #{file}"
+  task :test_php do
+    Dir['{lib,test}/**/*.php'].concat(Dir['*.php']).each do |file|
+      sh "php -l #{file}"
+    end
+    %w{lib/}.concat(Dir['*.php']).each do |path|
+      sh "php php-cs-fixer.phar fix #{path} --level=all"
+    end
+    sh 'vendor/bin/phpunit test'
   end
-  %w{lib/}.concat(Dir['*.php']).each do |path|
-    sh "php php-cs-fixer.phar fix #{path} --level=all"
+
+  task :test_phantomjs do
+    pid_file = 'php.pid'
+    begin
+      sh 'sudo php -S 0.0.0.0:80 index.php > /dev/null 2>&1 &'
+      sleep 0.5
+      sh 'phantomjs phantomjs.js'
+    ensure
+      if File.exist? pid_file
+        open(pid_file){|f| sh "sudo kill -9 #{f.read}" }
+        File.delete pid_file
+      end
+    end
   end
-  sh 'vendor/bin/phpunit test'
 end
 
 desc 'Run tests (need Grunt).'
-task :test => [:test_grunt, :test_php]
+task :test => ['test:test_grunt', 'test:test_php']
 # vim:set fdm=marker:
