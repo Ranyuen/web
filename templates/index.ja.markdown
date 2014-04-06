@@ -28,10 +28,6 @@ title: 蘭裕園
 <li>蘭裕園オリジナル！手のひらサイズの妖精ラン「アワチドリ」</li></ul></div>
 <div class="bluray"><a href="/news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネのブルーレイさしあげます！</a></div>
 
-<a href="news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上のエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
-
-<div class="bluray"><a href="news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネのブルーレイさしあげます！</a></div>
-
 ## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
 <div class="top-img"></div>
 
