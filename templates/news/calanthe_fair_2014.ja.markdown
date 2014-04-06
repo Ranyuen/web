@@ -46,9 +46,9 @@ figcaption {
 }
 </style>
 
-2014年 超高品質なエビネを世界で一番安く買えるチャンス！
+2014年 高品質なエビネを世界で一番安く買えるチャンス！
 ==
-品質の高いエビネを超格安で買えるチャンスがまもなくやってくる！
+4月18日～　品質の高いエビネを格安で買えるチャンスがやってくる！
 
 ↓そのわけは？↓
 --
@@ -95,20 +95,21 @@ figcaption {
 種まきから10年以上育て、<b>1～10芽 (平均3～4芽)</b> にも成長した特大株が<b>一鉢2,000円 (税別)</b>！
 
 <figure>
-  <img src="/assets/images/calanthe_fair_2014_4.jpg" alt="3月23日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
-  <img src="/assets/images/calanthe_fair_2014_5.jpg" alt="3月23日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
-  <figurecaption>3月23日現在での株の一例</figurecaption>
+  <img src="/assets/images/calanthe_fair_2014_6.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
+  <img src="/assets/images/calanthe_fair_2014_7.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
+  <img src="/assets/images/calanthe_fair_2014_8.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
+  <figurecaption>4月06日現在での株の一例</figurecaption>
 </figure>
 
-5,000～10,000鉢販売予定。売り切れの際は御容赦ください。
+4月18日午前10時からの開園です。5,000～10,000鉢販売予定、毎日補充します。お楽しみに！
 
-<b>またとない最高の機会をお見逃しなく！</b>
+<b>二度とない最高の機会をお見逃しなく！</b>
 
 この他にも一部、マニア向け・展示会用の高額商品も取り揃えています。
 
 <h2 class="lottery">&nbsp;絶対に当たる！ハズレなしのお楽しみ抽選会開催！</h2>
 
-エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。<br>
+エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。(※お一人様1回限り。最終セール日は除く。)<br />
 <ul>
   <li>世界で最も多彩なラン、春色エビネのブルーレイ</li>
   <li>カラフルな花色の春色エビネ1鉢</li>
@@ -116,13 +117,13 @@ figcaption {
   <li>蘭裕園オリジナル！手のひらサイズの妖精ラン「アワチドリ」</li>
 </ul>
 <figure>
-  <img src="/assets/images/present.png" alt="プレゼント">
+  <img src="/assets/images/present.png" alt="プレゼント エビネ - 蘭裕園" />
 </figure>
 <div style="margin: 1em 0; padding: 0 1em; background: #eee;">
 2014年 4月18日 (金) から 5/3 (土) まで<br />
 連日、花は追加します！<br />
 10:00 ～ 17:00 (最終日5/3は15:00まで)<br />
-最終セール 5/2、5/3 全品表示価格の半額<br />
+最終セール 5/2、5/3 全品表示価格の半額！売り切れの際は御容赦ください。<br />
 <a href="/about_us/direction">アクセス<br /><img src="/assets/images/map1_ja.jpg" alt="蘭裕園へのアクセス" /></a><br />
 車でご来園なさるお客様は下記の駐車場をご利用ください。
 <a href="/about_us/direction"><img src="/assets/images/map2_ja.jpg" alt="蘭裕園駐車場"></a>
