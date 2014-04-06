@@ -2,10 +2,13 @@
 title: 蘭裕園
 ---
 <style>
-.top-img {
-	background: url(/assets/images/top_img.jpg) no-repeat;
-	min-height: 494px;
+figure img {
+	display: block;
+	min-width: 494px;
 	width: 100%;
+}
+figcaption {
+	text-align: right;
 }
 .bluray {
 	margin-top: 15px;
@@ -17,9 +20,12 @@ title: 蘭裕園
 	text-align: center;
 }
 </style>
-<div class="top-img"></div>
 
-## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
+## Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
+<figure>
+	<img src="/assets/images/top_img.jpg" alt="春色エビネ 蘭裕園 - エビネ">
+	<figcaption>春色エビネ</figcaption>
+</figure>
 
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 

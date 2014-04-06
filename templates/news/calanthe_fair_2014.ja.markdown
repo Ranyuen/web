@@ -1,5 +1,5 @@
 ---
-title: 2014年 超高品質なエビネを世界で一番安く買えるチャンス！
+title: 高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ---
 <style>
 h1, h2 {
@@ -16,7 +16,7 @@ h1 {
 }
 .lottery {
   border-left: solid 10px;
-  border-bottom: groove 3px; 
+  border-bottom: solid 2px; 
   color: red;
   font-size: 6mm;
   font-weight: bold;
@@ -46,7 +46,7 @@ figcaption {
 }
 </style>
 
-2014年 高品質なエビネを世界で一番安く買えるチャンス！
+高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ==
 4月18日～　品質の高いエビネを格安で買えるチャンスがやってくる！
 
@@ -86,7 +86,8 @@ figcaption {
 ><span style="background: rgb(189,88,0); color: white;">ゴールド</span
 ><span style="background: rgb(162,146,192); color: white;">セルリアンブルー</span
 ><span style="background: rgb(189,126,0); color: white;">オレンジ</span
-><span style="background: rgb(189,50,0); color: white;">チョコレート</span>
+><span style="background: rgb(189,50,0); color: white;">チョコレート</span
+><span>グレープ</span>
 など、
 </div>
 
@@ -98,12 +99,14 @@ figcaption {
   <img src="/assets/images/calanthe_fair_2014_6.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_7.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_8.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
-  <figurecaption>4月06日現在での株の一例</figurecaption>
+  <figurecaption>4月06日の2000円株の状態</figurecaption>
 </figure>
 
-4月18日午前10時からの開園です。5,000～10,000鉢販売予定、毎日補充します。お楽しみに！
+4月18日午前10時からの開園です。5,000～10,000鉢販売予定、毎日補充します。
 
-<b>二度とない最高の機会をお見逃しなく！</b>
+販売するエビネは、前～後期で花のタイプが異なるため、2度・3度のご来園をおすすめします。
+
+<b>二度とないチャンス！</b>　是非お友だちとご一緒にご来園ください。
 
 この他にも一部、マニア向け・展示会用の高額商品も取り揃えています。
 
