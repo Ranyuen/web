@@ -16,12 +16,12 @@ title: 蘭裕園
 	font-weight: bold;
 	text-align: center;
 }
-
 </style>
 
 <div class="pre"><a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上のエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
-<h2 style="font-size: 9mm; color: red;">～ 絶対に当たる！ハズレ無しの抽選会開催！～</h2>
+<h2 style="font-size: 9mm; color: red; line-height: 9mm;">～ 絶対に当たる！ハズレ無しの抽選会開催！～</h2>
 エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。<br>
+<span style="font-size: 4mm;">※お一人様1回限り。最終セール日は除く。</span>
 <ul><li>世界で最も多彩なラン、春色エビネのブルーレイ</li>
 <li>カラフルな花色の春色エビネ1鉢</li>
 <li>ラン花のオリジナル絵ハガキ4枚セット</li>
