@@ -6,7 +6,7 @@ h1, h2 {
   margin: 0.5em 0;
   text-align: center;
 }
-h1 { color: white; }
+h1 { color: red; }
 b {
   color: red;
   font-size: x-large;
