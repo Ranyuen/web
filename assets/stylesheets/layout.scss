@@ -71,11 +71,13 @@ body {
   @include social-icon('/assets/images/icons/youtube.png', rgb(229, 26, 39));
 }
 
+#header-container-separator { height: $menu_height * 2; }
+
 .container {
   line-height: 1.4em;
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
-  top: $menu_height * 2;
   width: $cols16;
 
   & > article {

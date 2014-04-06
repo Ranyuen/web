@@ -201,11 +201,14 @@ body > header {
   position: relative;
   padding-right: 26px; }
 
+#header-container-separator {
+  height: 24mm; }
+
 .container {
   line-height: 1.4em;
   margin: 0 auto;
+  overflow: hidden;
   position: relative;
-  top: 24mm;
   width: 70.5em; }
 .container > article {
   background: rgba(255, 255, 255, 0.8);

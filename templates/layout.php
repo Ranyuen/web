@@ -63,6 +63,7 @@ $switch_lang = implode(' / ', $switch_lang);
         <?php $h->echoNav($local_nav, $local_base); ?>
         </nav>
     </header>
+    <div id="header-container-separator"> </div>
     <div class="container">
         <!-- <div id="indicate">0</div>
         <script>
@@ -109,7 +110,9 @@ $switch_lang = implode(' / ', $switch_lang);
     </div>
     <script>
     window.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.container').style.top = window.getComputedStyle(document.querySelector('body > header')).height;
+        var menuHeight = window.getComputedStyle(document.querySelector('body > header')).height;
+
+        document.querySelector('#header-container-separator').style.height = menuHeight;
     });
     </script>
     <script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
