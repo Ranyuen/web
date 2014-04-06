@@ -23,14 +23,14 @@ title: 蘭裕園
 <h2 style="font-size: 9mm; color: red;">～ 絶対に当たる！ハズレ無しの抽選会開催！～</h2>
 エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。<br>
 <ul><li>世界で最も多彩なラン、春色エビネのブルーレイ</li>
-
 <li>カラフルな花色の春色エビネ1鉢</li>
-
 <li>ラン花のオリジナル絵ハガキ4枚セット</li>
-
 <li>蘭裕園オリジナル！手のひらサイズの妖精ラン「アワチドリ」</li></ul></div>
 <div class="bluray"><a href="/news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネのブルーレイさしあげます！</a></div>
 
+<a href="news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上のエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
+
+<div class="bluray"><a href="news/bluray_present_2014" style="display: block; text-decoration: none; text-align: center; background: #4169E1; color: white; font-size: 6mm; line-height: 9mm; margin-top: -10px; margin-bottom: 1em;">エビネのブルーレイさしあげます！</a></div>
 
 ## Ranyuen Style<br /><small>求めるものはこころ安らぐ花</small>
 <div class="top-img"></div>

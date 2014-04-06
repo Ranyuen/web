@@ -32,6 +32,7 @@ class Helper
     {
         $is_first = true;
         foreach ($nav as $href => $title) {
+            if (!$title) { continue; }
             echo '<div class="nav-item ' . ($is_first ? 'nav-item-home' : '') . '"><a href="';
             $this->h(preg_replace('/\/\//', '/', $base . $href));
             echo '">';
@@ -45,6 +46,7 @@ class Helper
     {
         echo '<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
         foreach ($nav as $href => $title) {
+            if (!$title) { continue; }
             echo '<div class="nav-item"><a href="';
             $this->h(preg_replace('/\/\//', '/', $base . $href));
             echo '" itemprop="url"><span itemprop="title">';

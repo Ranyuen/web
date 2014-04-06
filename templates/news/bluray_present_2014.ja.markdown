@@ -46,4 +46,4 @@ figure { text-align: center; }
 
 映像をご覧になった方は、是非ご意見をお寄せ下さい。<a href="mailto:cal_pone@ranyuen.com">cal_pone@ranyuen.com</a>
 
-関連 → <a href="calanthe_fair_2014">2014年 超高品質なエビネを世界で一番安く買えるチャンス！</a>
+関連 → <a href="news/calanthe_fair_2014">2014年 超高品質なエビネを世界で一番安く買えるチャンス！</a>

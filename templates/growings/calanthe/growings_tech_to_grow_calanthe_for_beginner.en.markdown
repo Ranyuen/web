@@ -26,7 +26,7 @@ When the roots fill the pot, you will need to prepare a bigger pot with AKADAMA 
 ### Gardening
 The best timing to plant in the garden will be right after flowering. Take it from the pot and without loosening the roots, go ahead and plant it in your garden.
 
-A good EBINE will bloom every year without special treatment but [if you want to grow it like the professionals, we will be happy to share our useful information.](/growings_calanthe/growing_calanthe_spring)
+A good EBINE will bloom every year without special treatment but [if you want to grow it like the professionals, we will be happy to share our useful information.](/growings/calanthe/growings_calanthe_on_season_01_spring)
 
 ![Spring Calanthe (EBINE) - Ranyuen](/assets/images/growings_bo2.jpg)
 ![Spring Calanthe (EBINE) - Ranyuen](/assets/images/growings_bo3.jpg)
