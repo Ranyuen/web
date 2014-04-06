@@ -14,12 +14,13 @@ h1 {
   line-height: 40px;
   width: 100%;
 }
-h3 {
+.lottery {
   border-left: solid 10px;
   border-bottom: groove 3px; 
   color: red;
   font-size: 6mm;
   font-weight: bold;
+  text-align: left;
 }
 }
 b {
@@ -105,32 +106,28 @@ figcaption {
 
 この他にも一部、マニア向け・展示会用の高額商品も取り揃えています。
 
-### &nbsp;絶対に当たる！ハズレなしの抽選会開催！
-エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。<br>
-<figure>
-  <img src="/assets/images/bluray_present_2014_2.png" alt="ブルーレイ")>
-  <figcaption>世界で最も多彩なラン、春色エビネのブルーレイ</figcaption>
-</figure>
-<figure>
-  <img src="/assets/images/haruiro_ebine.png" alt="春色エビネ")>
-  <figcaption>カラフルな花色の春色エビネ1鉢</figcaption>
-</figure><br>
-<figure>
-  <img src="/assets/images/ehagaki_2014.png" alt="絵ハガキ")>
-  <figcaption>ラン花のオリジナル絵ハガキ4枚セット</figcaption>
-</figure>
-<figure>
-  <img src="/assets/images/awachidori.png" alt="アワチドリ")>
-  <figcaption>蘭裕園オリジナル！手のひらサイズの妖精ラン「アワチドリ」</figcaption>
-</figure>
+<h2 class="lottery">&nbsp;絶対に当たる！ハズレなしのお楽しみ抽選会開催！</h2>
 
+エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。<br>
+<ul>
+  <li>世界で最も多彩なラン、春色エビネのブルーレイ</li>
+  <li>カラフルな花色の春色エビネ1鉢</li>
+  <li>ラン花のオリジナル絵ハガキ4枚セット</li>
+  <li>蘭裕園オリジナル！手のひらサイズの妖精ラン「アワチドリ」</li>
+</ul>
+<figure>
+  <img src="/assets/images/present.png" alt="プレゼント">
+</figure>
 <div style="margin: 1em 0; padding: 0 1em; background: #eee;">
 2014年 4月18日 (金) から 5/3 (土) まで<br />
 連日、花は追加します！<br />
 10:00 ～ 17:00 (最終日5/3は15:00まで)<br />
 最終セール 5/2、5/3 全品表示価格の半額<br />
-<a href="/about_us/direction"><img src="/assets/images/map1_ja.jpg" alt="蘭裕園へのアクセス" /><br />アクセス</a>
+<a href="/about_us/direction">アクセス<br /><img src="/assets/images/map1_ja.jpg" alt="蘭裕園へのアクセス" /></a><br />
+車でご来園なさるお客様は下記の駐車場をご利用ください。
+<a href="/about_us/direction"><img src="/assets/images/map2_ja.jpg" alt="蘭裕園駐車場"></a>
 </div>
+
 
 <a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 
