@@ -118,6 +118,9 @@ body {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
 
+iframe {
+  border: 0; }
+
 figure {
   display: inline-block;
   position: relative; }

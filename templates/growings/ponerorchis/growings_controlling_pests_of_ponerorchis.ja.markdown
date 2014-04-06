@@ -10,4 +10,12 @@ title: 病害虫の防除
 
 それでは、都市部周辺で近年多く発生している病害虫について解説していきます。
 
+害虫の防除
+--
+<iframe src="/assets/swf/growings_controlling_pests_of_ponerorchis_musi.swf.html" width="750" height="600" scrolling="no"></iframe>
+
 <!-- FIXME: 書写 -->
+
+病気の防除
+--
+<iframe src="/assets/swf/growings_controlling_pests_of_ponerorchis_byo.swf.html" width="750" height="600" scrolling="no"></iframe>
