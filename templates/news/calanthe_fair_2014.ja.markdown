@@ -6,7 +6,7 @@ h1, h2 {
   margin: 0.5em 0;
   text-align: center;
 }
-h1 { color: red; }
+h1 { color: white; }
 b {
   color: red;
   font-size: x-large;
@@ -86,6 +86,9 @@ b {
 <b>またとない最高の機会をお見逃しなく！</b>
 
 この他にも一部、マニア向け・展示会用の高額商品も取り揃えています。
+
+絶対に当たる！ハズレなしの抽選会開催！
+==
 
 <div style="margin: 1em 0; padding: 0 1em; background: #eee;">
 2014年 4月18日 (金) から 5/3 (土) まで<br />

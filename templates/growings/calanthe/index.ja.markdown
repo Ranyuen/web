@@ -2,7 +2,7 @@
 title: エビネの栽培
 ---
 <img style="display: block;" src="/assets/images/sai_fir.jpg" width="735" height="294" alt="エビネ (Calanthe) の栽培 - Ranyuen" />
-<a style="display: inline-block; font-weight: bolder; margin-top: 20px;" href="../recent_failure_and_provision">近年に多い障害と対策</a>
+<a style="display: inline-block; font-weight: bolder; margin-top: 20px;" href="growings/recent_failure_and_provision">近年に多い障害と対策</a>
 ## エビネの栽培 - はじめに
 エビネの栽培は本来は難しいものではありません。庭や鉢植えなどで、適所に置けば、放っておいても毎年花が咲きます。エビネは種類により、また地域や環境、各人の好みなどにより、いろいろな栽培がされてきました。しかし、ここ数年は栽培経験の長いベテランからも花付きが悪く上手に育てられない、株に元気がなく葉先から枯れ込むなど、どう栽培したら良いのかわからないなど、と相談されることがよくあります。近年は、日照不足や夏期の異常な高温など気象の変化が激しく、さらに園芸種として品種改良された結果によるエビネ自身の性質の変化や、生活様式に合わせた観賞方法の違い、その他さまざまな事柄の変化により、栽培の仕方も今までとはかなり違ってきています。
 

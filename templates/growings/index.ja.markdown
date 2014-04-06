@@ -1,7 +1,7 @@
 ---
 title: エビネ, アワチドリ / 夢ちどりの育て方
 ---
-<a style="font-weight: bolder;" href="recent_failure_and_provision">近年に多い障害と対策</a>
+<a style="font-weight: bolder;" href="growings/recent_failure_and_provision">近年に多い障害と対策</a>
 ## エビネ (Calanthe)<br /><small>世界で最も多彩なラン</small>
 <img style="float: right;" src="/assets/images/cal_top.jpg" alt="エビネ (Calanthe) - Ranyuen" />
 
@@ -11,7 +11,7 @@ title: エビネ, アワチドリ / 夢ちどりの育て方
 
 日本の自然から生まれた奇跡のラン、カランセ蘭裕園スタイル (洋ランタイプの春咲きエビネ) をお楽しみください。
 
-[エビネの栽培](calanthe/)
+[エビネの栽培](growings/calanthe/)
 
 <div style="clear: both;"> </div>
 
@@ -28,4 +28,4 @@ title: エビネ, アワチドリ / 夢ちどりの育て方
 
 アワチドリ / 夢ちどりともに、夏の暑さに強く、丈夫でたくさんの花を咲かせるように改良し、Ponerorchis 蘭裕園スタイルを作り上げています。蘭裕園スタイルの小さなラン、戯れる妖精たちのもつ不思議な魅力で多くの方に心安らいでいただけることを願っています。
 
-[アワチドリ/夢ちどりの栽培](ponerorchis/)
+[アワチドリ/夢ちどりの栽培](growings/ponerorchis/)
