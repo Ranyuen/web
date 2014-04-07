@@ -2,8 +2,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     net-ssh (2.8.0)
-    rake (10.1.1)
-    sass (3.2.13)
+    rake (10.2.2)
+    sass (3.3.4)
 
 PLATFORMS
   ruby

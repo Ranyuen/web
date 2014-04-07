@@ -108,7 +108,6 @@ body {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
-
 @keyframes animateLogo {
   0% {
     -webkit-transform: rotate(45deg);
@@ -117,7 +116,6 @@ body {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg); } }
-
 iframe {
   border: 0; }
 

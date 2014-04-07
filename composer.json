@@ -2,7 +2,7 @@
   "require": {
     "clover/text-ltsv": "1.0.*@dev",
     "dflydev/markdown": "1.0.*@dev",
-    "monolog/monolog": "1.7.*@dev",
+    "monolog/monolog": "1.8.*",
     "slim/slim": "2.4.*",
     "slim/views": "dev-master",
     "slim/middleware": "*",
