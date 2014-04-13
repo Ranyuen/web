@@ -64,11 +64,11 @@ class Helper
      */
     public function echoYouTube($movie_id, $title='', $width=560, $height=315)
     {
-        echo "<iframe width=\"$width\" height=\"$height\" src=\"//www.youtube.com/embed/$movie_id\" frameborder=\"0\" allowfullscreen></iframe>";
+        echo "<div class=\"widget-youtube\"><iframe width=\"$width\" height=\"$height\" src=\"//www.youtube.com/embed/$movie_id\" frameborder=\"0\" allowfullscreen></iframe>";
         if ($title) {
-            echo "<a href=\"http://youtu.be/$movie_id\">";
+            echo "<div><a href=\"http://youtu.be/$movie_id\">";
             $this->h($title);
-            echo "</a>";
+            echo "</a></div></div>";
         }
     }
 

@@ -140,6 +140,12 @@ a {
 a:visited {
   color: #265778; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em; }
+
+b {
+  color: #990066; }
+
 body {
   background-attachment: fixed; }
 body.ja {
@@ -150,6 +156,30 @@ body > header {
   position: fixed;
   width: 100%;
   z-index: 1000; }
+
+.supplement {
+  background: rgba(0, 0, 0, 0.1);
+  font-size: smaller;
+  padding: 0.5em; }
+
+.cf {
+  font-size: small; }
+
+.point {
+  background: rgba(255, 51, 153, 0.2);
+  color: #990066;
+  font-size: larger;
+  font-weight: bold;
+  padding: 0.5em; }
+.point :after {
+  color: red;
+  content: "Point!";
+  font-size: small;
+  font-weight: normal;
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg); }
 
 .facebook {
   background-image: url("/assets/images/icons/facebook.png");
@@ -198,6 +228,9 @@ body > header {
   line-height: 24px;
   position: relative;
   padding-right: 26px; }
+
+.widget-youtube {
+  margin: 1.5em 0; }
 
 #header-container-separator {
   height: 24mm; }
