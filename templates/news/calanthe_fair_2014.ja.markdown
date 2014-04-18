@@ -7,7 +7,7 @@ h1, h2 {
   text-align: center;
 }
 h1 {
-  background-color: red; 
+  background-color: red;
   color: white;
   display: block;
   height: 40px;
@@ -16,7 +16,7 @@ h1 {
 }
 .lottery {
   border-left: solid 10px;
-  border-bottom: solid 2px; 
+  border-bottom: solid 2px;
   color: red;
   font-size: 6mm;
   font-weight: bold;
@@ -150,7 +150,7 @@ figcaption {
 
 <?php $h->echoYouTube('m_DPZkngK9s', '2011年カランセフェアの様子 - 蘭裕園'); ?>
 
-<?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?><br />
+<?php $h->echoYouTube('wqRFDs8zuqY', 'Spring Calanthe -Happiness Treasure Box- 2014'); ?>
 
 <a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上あります。</span></a>
 

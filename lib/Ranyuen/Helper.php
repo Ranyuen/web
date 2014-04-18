@@ -68,8 +68,9 @@ class Helper
         if ($title) {
             echo "<div><a href=\"http://youtu.be/$movie_id\">";
             $this->h($title);
-            echo "</a></div></div>";
+            echo "</a></div>";
         }
+        echo '</div>';
     }
 
     /**
