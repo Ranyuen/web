@@ -150,8 +150,16 @@ body {
   background-attachment: fixed; }
 body.ja {
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif; }
+body.ja q:before {
+  content: "「"; }
+body.ja q:after {
+  content: "」"; }
 body.en {
   font-family: "Alef", sans-serif; }
+body.en q:before {
+  content: "\""; }
+body.en q:after {
+  content: "\""; }
 body > header {
   position: fixed;
   width: 100%;

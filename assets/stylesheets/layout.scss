@@ -56,9 +56,23 @@ b { color: #990066; }
 body {
   background-attachment: fixed;
 
-  &.ja { font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif; }
+  &.ja {
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
 
-  &.en { font-family: "Alef", sans-serif; }
+    q {
+      &:before { content: "「"; }
+      &:after  { content: "」"; }
+    }
+  }
+
+  &.en {
+    font-family: "Alef", sans-serif;
+
+    q {
+      &:before { content: "\""; }
+      &:after  { content: "\""; }
+    }
+  }
 
   & > header {
     position: fixed;
