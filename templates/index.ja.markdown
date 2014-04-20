@@ -22,10 +22,7 @@ figcaption {
 </style>
 
 ## Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
-<figure>
-	<img src="/assets/images/top_img.jpg" alt="春色エビネ 蘭裕園 - エビネ">
-	<figcaption>春色エビネ</figcaption>
-</figure>
+<img src="/assets/images/top_img.jpg" alt="春色エビネ 蘭裕園 - エビネ" />
 
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 
@@ -34,6 +31,8 @@ figcaption {
 現在、34棟のハウスで約200万本のランを育てています。そのほかにフラスコ培養で新品種を開発するための「みどりの故郷研究室」、4月と6月にのみ開園する売店 (約70坪) があります。
 
 2000点以上のエビネやアワチドリ / 夢ちどり (ウチョウランの仲間) などの写真を掲載していますので、変化の多さをお楽しみいただければ幸いです。
+
+<b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
 <div class="pre"><a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上のエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
 <h2 style="font-size: 9mm; color: red; line-height: 9mm;">～ 絶対に当たる！ハズレ無しの抽選会開催！～</h2>
