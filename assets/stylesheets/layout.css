@@ -120,8 +120,10 @@ iframe {
   border: 0; }
 
 figure {
+  background: rgba(0, 0, 255, 0.1);
   display: inline-block;
-  position: relative; }
+  position: relative;
+  padding: 0.5em; }
 figure figurecaption {
   display: block;
   font-size: smaller;
@@ -240,14 +242,12 @@ body > header {
 .widget-youtube {
   margin: 1.5em 0; }
 
-#header-container-separator {
-  height: 24mm; }
-
 .container {
   line-height: 1.4em;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  top: 24mm;
   width: 70.5em; }
 .container > article {
   background: rgba(255, 255, 255, 0.8);
