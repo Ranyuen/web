@@ -48,7 +48,12 @@ figcaption {
   color: #696969;
   font-size: 13px;
 }
+.growings {
+  font-weight: bold;
+}
 </style>
+
+<div class="growings"><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></div>
 
 高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ==
@@ -116,7 +121,6 @@ figcaption {
 ※通信販売は行っておりません<br />
 ※販売目的のための大量購入はご遠慮下さい。
 </div>
-
 <h2 class="lottery">&nbsp;絶対に当たる！ハズレなしのお楽しみ抽選会開催！</h2>
 
 エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。(※お一人様1日1回限り。最終セール日は除く。)<br />

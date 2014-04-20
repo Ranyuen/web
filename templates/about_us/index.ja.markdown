@@ -10,22 +10,24 @@ title: 蘭裕園のご紹介
 
 2000点以上のエビネやアワチドリ / 夢ちどり (ウチョウランの仲間) などの写真を掲載していますので、変化の多さをお楽しみいただければ幸いです。
 
-## 売店 (カランセフェアー、アワチドリ / 夢ちどり展)
+<a style="font-weight: bold;" href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a>
+
+## 売店 (エビネ展2014)
 <figure>
-  <figurecaption>蘭裕園売店 (写真はカランセフェアーの様子)</figurecaption>
-  <img src="/assets/images/about_us_14.jpg" height="450" alt="蘭裕園エビネフェア - Ranyuen" />
+  <figurecaption>蘭裕園売店 (写真はエビネ展2014の様子 : 撮影日2014年4月18日)</figurecaption>
+  <img src="/assets/images/calanthe_fair_2014_9.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 
-  <img src="/assets/images/about_us_12.jpg" height="450" alt="蘭裕園エビネフェア - Ranyuen" />
+  <img src="/assets/images/calanthe_fair_2014_10.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 
-  <img src="/assets/images/about_us_13.jpg" height="450" alt="蘭裕園エビネフェア - Ranyuen" />
+  <img src="/assets/images/calanthe_fair_2014_11.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 </figure>
 
 <figure>
   <figurecaption>開園を待つお客様で、行列ができる事もよくあります。遠方からのたくさんのみなさまのご来園本当にありがとうございます。</figurecaption>
-  <img src="/assets/images/about_us_15.jpg" height="450" alt="蘭裕園エビネフェア - Ranyuen" />
+  <img src="/assets/images/calanthe_fair_2014_12.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 </figure>
 
-蘭裕園売店は、カランセフェア (エビネ、4月) に約20日間、アワチドリ / 夢ちどり展 (6月) に約10日間。あわせて1年間に約1カ月だけの開園です。ご注意下さい。
+蘭裕園売店は、エビネ展 (エビネ、4月) に約20日間、アワチドリ / 夢ちどり展 (6月) に約10日間。あわせて1年間に約1カ月だけの開園です。ご注意下さい。
 
 品種改良、研究が中心の農園のため、他の時期はお休みです。
 
