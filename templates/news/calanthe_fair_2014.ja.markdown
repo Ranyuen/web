@@ -22,11 +22,7 @@ h1 {
   font-weight: bold;
   text-align: left;
 }
-}
-b {
-  color: red;
-  font-size: x-large;
-}
+b { font-size: large; }
 .color-box {
   background: #ffdddd;
   line-height: 2em;
@@ -41,22 +37,19 @@ b {
   text-decoration: underline;
   width: 8.5em;
 }
-figcaption {
-  text-align: center;
-}
+figcaption { text-align: center; }
 .attention {
   color: #696969;
   font-size: 13px;
 }
-.growings {
-  font-weight: bold;
-}
 </style>
 
-<div class="growings"><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></div>
+<b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
 高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ==
+→ <b><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></b>
+
 4月18日から5月3日まで　品質の高いエビネを格安で買えるチャンスがやってくる！
 
 ↓そのわけは？↓
