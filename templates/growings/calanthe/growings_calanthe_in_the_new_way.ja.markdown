@@ -135,13 +135,13 @@ cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFaceb
 
 もありますので、参考にしてください。<i>→参考:</i> [エビネの株分け](growings/calanthe/growings_repot_calanthe)
 
-肥料の施し方<a name="肥料の施し方"></a>
+<a name="肥料の施し方"></a>肥料の施し方
 --
 <figure>
   <img src="/assets/images/growings_calanthe_in_the_new_way_ja_1.png" alt="エビネ 新芽の前は避ける。 - 蘭裕園" style="max-width: 400px;" />
   <figurecaption>
     <p><b>新芽の前は避ける。</b></p>
-    <p>根のそばには肥料は置かないようにします。</p>
+    <p>新芽の前には肥料は置かないようにします。</p>
   </figurecaption>
 </figure>
 
