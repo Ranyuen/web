@@ -147,7 +147,7 @@ cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFaceb
 
 化学肥料は新芽の無い位置。あるいは、全体にバラまくように施します。
 
-肥料の種類のほか、場合によっては発生したばかりの新芽を傷めてしまう可能性があるため、注意しましょう。
+肥料の種類のほか、場合によっては発生したばかりの新根を傷めてしまう可能性があるため、注意しましょう。
 
 詳しくは [上手な肥料の施し方](growings/calanthe/growings_fertilizing_for_calanthe) を御覧ください。
 
