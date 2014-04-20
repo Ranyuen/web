@@ -68,7 +68,7 @@ cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFaceb
   <img src="/assets/images/growings_calanthe_in_the_new_way_ja_3.png" alt="エビネの花茎はねじるようにして引き抜く - 蘭裕園" style="max-width: 300px;" />
   <figurecaption>
     <p><b>花茎はねじるようにして引き抜く。</b></p>
-    <p>新芽 (新葉) はやわらかく傷つきやすいので、抜けるからといって揺すってはいけません。固くて抜けないときは、火であぶったハサミを使い、なるべき下の方で切り取ってください。</p>
+    <p>新芽 (新葉) はやわらかく傷つきやすいので、抜けないからといって揺すってはいけません。固くて抜けないときは、火であぶったハサミを使い、なるべき下の方で切り取ってください。</p>
   </figurecaption>
 </figure>
 
