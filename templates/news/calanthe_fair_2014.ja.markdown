@@ -46,9 +46,13 @@ figcaption { text-align: center; }
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
+
+
 高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ==
 → <b><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></b>
+
+→ <b><a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日/3日)</a></b>
 
 4月18日から5月3日まで　品質の高いエビネを格安で買えるチャンスがやってくる！
 

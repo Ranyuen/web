@@ -36,7 +36,7 @@ figcaption {
 
 <div class="pre"><a href="/news/calanthe_fair_2014" style="display: block; text-decoration: none; text-align: center; background: red; color: white; font-size: 9mm; font-weight: bold; line-height: 12mm;">特上のエビネを世界で一番安く買えるチャンス！<br /><u style="font-size: 6mm;" >ここをクリック!</u></a>
 <p></p>
-<a style="font-size: 30px; color: blue;" href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a>
+<a style="font-size: 30px; color: blue;" href="news/information_of_calanrthe_fair_2014">5月2日/3日　最終半額セール開催！</a>
 <h2 style="font-size: 9mm; color: red; line-height: 9mm;">～ 絶対に当たる！ハズレ無しの抽選会開催！～</h2>
 エビネを2000円以上お買い上げいただいたお客様全員に以下のプレゼントが当たる抽選クジをご用意しております。<br>
 <span style="font-size: 4mm;">※お一人様1回限り。最終セール日は除く。</span>
