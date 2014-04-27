@@ -112,7 +112,7 @@ $switch_lang = implode(' / ', $switch_lang);
     window.addEventListener('DOMContentLoaded', function () {
         var menuHeight = window.getComputedStyle(document.querySelector('body > header')).height;
 
-        document.querySelector('.container').style.top = menuHeight;
+        // document.querySelector('.container').style.top = menuHeight;
         // document.querySelector('#header-container-separator').style.height = menuHeight;
     });
     </script>
