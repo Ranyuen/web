@@ -149,7 +149,9 @@ b {
   color: #990066; }
 
 body {
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  height: 100%;
+  position: relative; }
 body.ja {
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif; }
 body.ja q:before {
@@ -163,7 +165,6 @@ body.en q:before {
 body.en q:after {
   content: "\""; }
 body > header {
-  position: fixed;
   width: 100%;
   z-index: 1000; }
 
@@ -245,9 +246,8 @@ body > header {
 .container {
   line-height: 1.4em;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
-  top: 24mm;
   width: 70.5em; }
 .container > article {
   background: rgba(255, 255, 255, 0.8);
