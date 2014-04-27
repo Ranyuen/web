@@ -57,6 +57,8 @@ b { color: #990066; }
 
 body {
   background-attachment: fixed;
+  height: 100%;
+  position: relative;
 
   &.ja {
     font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
@@ -77,7 +79,7 @@ body {
   }
 
   & > header {
-    position: fixed;
+    // position: fixed;
     width: 100%;
     z-index: 1000;
   }
@@ -125,9 +127,9 @@ body {
 .container {
   line-height: 1.4em;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
-  top: $menu_height * 2;
+  // top: $menu_height * 2;
   width: $cols16;
 
   & > article {
