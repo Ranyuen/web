@@ -1,5 +1,5 @@
 ---
-title: 最終半額セールのお知らせ(5月2日/3日)
+title: 最終半額セールのお知らせ(5月2日・3日)
 ---
 <style>
 h1, h2 {
@@ -21,7 +21,7 @@ h1 {
 エビネ最終半額セール開催！
 ==
 
-<div style="font-size: 25px; line-height: 50px; margin-bottom: 20px; text-align: center;"><b style="font-size: 33px;">5月2/3日(3日は15時まで)</b>の2日間、エビネの最終セールを行います。<br>期間中はなんと全品表示価格の<b style="font-size: 33px;">半額</b>です！<br>
+<div style="font-size: 25px; line-height: 50px; margin-bottom: 20px; text-align: center;"><b style="font-size: 33px;">5月2・3日(3日は15時まで)</b>の2日間、エビネの最終セールを行います。<br>期間中はなんと全品表示価格の<b style="font-size: 33px;">半額</b>です！<br>
 最終セールとなりますので、是非お友達をお誘いのうえ、ご来援ください！<br>
 (売り切れも予想されますのでお早目のご来園をお勧めします。)</div>
 <figure>

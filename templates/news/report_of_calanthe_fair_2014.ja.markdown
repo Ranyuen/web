@@ -31,7 +31,7 @@ h1 {
 
 → <a href="news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える！こんなチャンスは今年だけ！</a>
 
-→ <a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日/3日)</a>
+→ <a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日・3日)</a>
 
 <a href="/about_us/direction">蘭裕園へのアクセス</a>
 <figure>

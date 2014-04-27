@@ -52,7 +52,7 @@ figcaption { text-align: center; }
 ==
 → <b><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></b>
 
-→ <b><a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日/3日)</a></b>
+→ <b><a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日・3日)</a></b>
 
 4月18日から5月3日まで　品質の高いエビネを格安で買えるチャンスがやってくる！
 
