@@ -193,7 +193,7 @@ body > header {
   transform: rotate(12deg); }
 
 .facebook {
-  background-image: url("/assets/images/icons/facebook.png");
+  background-image: url("/assets/images/icons/f_b_icon.png");
   background-repeat: no-repeat;
   background-size: 24px 24px;
   display: inline-block;
@@ -217,7 +217,7 @@ body > header {
   padding-right: 26px; }
 
 .youtube {
-  background-image: url("/assets/images/icons/youtube.png");
+  background-image: url("/assets/images/icons/yt_icon.png");
   background-repeat: no-repeat;
   background-size: 24px 24px;
   display: inline-block;
