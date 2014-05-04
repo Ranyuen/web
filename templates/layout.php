@@ -4,7 +4,7 @@ $site_name = $site_names[$lang];
 $site_keywords = ['ja' => 'エビネ, ウチョウラン', 'en' => 'Calanthe, Ponerorchis'];
 $site_keyword = $site_keywords[$lang];
 $site_catchCopy = 'エビネとウチョウランの専門農園';
-$home = "http://ranyuen.com {$link['base']}"; 
+$home = "http://ranyuen.com{$link['base']}";
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
 foreach (['en' => 'English', 'ja' => '日本語'] as $k => $v) {
@@ -16,16 +16,18 @@ $switch_lang = implode(' / ', $switch_lang);
 <!--[if lt IE 9]><html class="ie"><![endif]-->
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
 <head>
-  <meta charset="UTF-8">
-  <title><?php if($title === '蘭裕園') { $h -> h("$site_name - $site_catchCopy"); } else { $h -> h("$title | $site_name"); } ?></title>
+  <meta charset="UTF-8"/>
+  <title><?php $h->h($title === '蘭裕園' ? "$site_name - $site_catchCopy" : "$title | $site_name"); ?></title>
   <meta name="google-site-verification" content="osPpSihI4cWmpC3IfcU0MFq6zDdSPWyb7V2_ECHHo5Q"/>
   <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
-  <meta name="description" content="<?php if (isset($description)) { $h -> h($description);} ?>"/>
-  <meta name="keywords" content="<?php $h -> h($site_keyword); ?>"/>
+<?php if (isset($description)) { ?>
+  <meta name="description" content="<?php $h->h($description); ?>"/>
+<?php } ?>
+  <meta name="keywords" content="<?php $h->h($site_keyword); ?>"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="home" href="<?php $h -> h($home); ?>"/>
-  <base href="<?php $h -> h($link['base']); ?>"/>
+  <link rel="home" href="<?php $h->h($home); ?>"/>
+  <base href="<?php $h->h($link['base']); ?>"/>
   <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
   <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css"/>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
@@ -41,32 +43,32 @@ $switch_lang = implode(' / ', $switch_lang);
   <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/assets/bower_components/uri.js/src/URI.js"></script>
 </head>
-<body class="<?php $h -> h($lang); ?>" lang="<?php $h -> h($lang); ?>">
+<body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
   <div class="container">
     <header class="cf">
-      <div class="headerInner cf">
+      <div class="header-inner cf">
         <div class="logo">
           <h1>
-            <a rel="home" href="<?php $h -> h($home); ?>">
-              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h("$site_name"); ?>" longdesc="<?php $h -> h($home); ?>"/>
+            <a rel="home" href="<?php $h->h($home); ?>">
+              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h->h("$site_name"); ?>" longdesc="<?php $h->h($home); ?>"/>
             </a>
           </h1>
         </div><!-- /logo -->
         <div class="lang">
           <?php echo $switch_lang; ?>
         </div><!-- /lang -->
-      </div><!-- /headerInner -->
+      </div><!-- /header-inner -->
       <nav class="cf">
-        <?php $h -> echoNav($global_nav, $link['base']); ?>
+        <?php $h->echoNav($global_nav, $link['base']); ?>
       </nav>
     </header>
     <div class="main cf">
-      <div class="mainInner">
-        <?php $h -> echoBreadcrumb($breadcrumb, $link['base']); ?>
+      <div class="main-inner">
+        <?php $h->echoBreadcrumb($breadcrumb, $link['base']); ?>
         <article>
-          <?php $h -> render($content, $__params); ?>
+          <?php $h->render($content, $__params); ?>
         </article>
-      </div><!-- /mainInner -->
+      </div><!-- /main-inner -->
       <div class="side">
         <aside>
           <?php $h -> echoNav($local_nav, $local_base); ?>
@@ -76,8 +78,8 @@ $switch_lang = implode(' / ', $switch_lang);
     <footer class="cf">
       <p class="copyright">
         <small>
-          Copyright (C) 2010-2014 <a rel="home" href="<?php $h -> h($home); ?>"><?php $h -> h("$site_name - $site_catchCopy"); ?></a> All Rights Reserved.<br/>
-          Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h -> h($home); ?>">Ranyuen</a>&#39;s farm.
+          Copyright (C) 2010-2014 <a rel="home" href="<?php $h->h($home); ?>"><?php $h->h("$site_name - $site_catchCopy"); ?></a> All Rights Reserved.<br/>
+          Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h->h($home); ?>">Ranyuen</a>&#39;s farm.
         </small>
       </p>
     </footer>

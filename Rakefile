@@ -1,5 +1,6 @@
 # coding=utf-8
 # {{{ contrib
+
 class ContribScss
   # @param [Hash] options
   #   src:   [String]   Source directory. Required.
@@ -27,6 +28,9 @@ class ContribScss
     }
   end
 end
+# desc 'Build SCSS files.'
+# task :scss, &ContribScss.new(src: 'assets/stylesheets', all: %w{layout})
+
 # }}} contrib
 
 require 'json'
@@ -124,9 +128,6 @@ XML
     nodes
   end
 end
-
-desc 'Build SCSS files.'
-task :scss, &ContribScss.new(src: 'assets/stylesheets', all: %w{layout})
 
 desc 'Generate site navigation JSON.'
 task :gen_nav do
