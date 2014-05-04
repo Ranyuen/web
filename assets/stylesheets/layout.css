@@ -153,7 +153,7 @@ body {
   height: 100%;
   position: relative; }
 body.ja {
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif; }
+  font-family: "游ゴシック Light", "游ゴシック", "YuGothic", sans-serif; }
 body.ja q:before {
   content: "「"; }
 body.ja q:after {
