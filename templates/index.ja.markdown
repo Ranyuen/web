@@ -21,7 +21,8 @@ figcaption {
 }
 </style>
 
-## Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
+Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
+==
 <img src="/assets/images/top_img.jpg" alt="春色エビネ 蘭裕園 - エビネ" />
 
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
