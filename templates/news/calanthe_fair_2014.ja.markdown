@@ -10,7 +10,7 @@ h1 {
   background-color: red;
   color: white;
   display: block;
-  height: 40px;
+  height: 80px;
   line-height: 40px;
   width: 100%;
 }
@@ -46,9 +46,7 @@ figcaption { text-align: center; }
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
-
-
-高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
+<strike>高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！</strike><br /><span style="font-size: 16px; text-align: right;">(終了しました)</span>
 ==
 → <b><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></b><br />
 → <b><a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a></b>

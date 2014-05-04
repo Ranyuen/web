@@ -18,7 +18,7 @@ h1 {
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
-エビネ最終半額セール開催！
+<strike>エビネ最終半額セール開催！</strike>&nbsp;<span style="font-size: 16px;">(終了しました)</span>
 ==
 
 <div style="font-size: 25px; line-height: 50px; margin-bottom: 20px; text-align: center;"><b style="font-size: 33px;">5月2・3日(3日は15時まで)</b>の2日間、エビネの最終セールを行います。<br>期間中はなんと全品表示価格の<b style="font-size: 33px;">半額</b>です！<br>

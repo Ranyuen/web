@@ -14,9 +14,9 @@ figure { text-align: center; }
 }
 </style>
 
-蘭裕園の美しいエビネの世界をブルーレイに！
+<strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<span style="font-size: 16px;">(終了しました)</span>
 ==
-蘭裕園の美しいエビネの世界をブルーレイに！　そのブルーレイを、抽選で無料でプレゼントします。
+<div style="text-align: center;">たくさんのお客様にご応募頂きありがとうございました。蘭裕園のランを楽しんで頂けたのならば幸いです。</div>
 
 <figure>
 	<img src ="/assets/images/bluray_present_2014_1.png" alt="こころの花5 蘭裕園の世界が詰まったブルーレイ エビネ - 蘭裕園" />

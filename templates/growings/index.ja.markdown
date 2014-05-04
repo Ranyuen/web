@@ -16,8 +16,6 @@ title: エビネ, アワチドリ / 夢ちどりの育て方
 
 → [エビネの栽培](growings/calanthe/)
 
-<a href="news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える！こんなチャンスは今年だけ！</a>
-
 <div style="clear: both;"> </div>
 
 ## アワチドリ/夢ちどり (Ponerorchis)<br /><small>Ponerorchis (ウチョウランの仲間) - 小さなランの世界</small>
