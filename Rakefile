@@ -186,18 +186,6 @@ desc 'Build files.'
 task :build => [:scss, :gen_nav, :gen_sitemap]
 
 namespace :test do
-  task(:test_grunt){ sh 'grunt test' }
-
-  task :test_php do
-    Dir['{lib,test}/**/*.php'].concat(Dir['*.php']).each do |file|
-      sh "php -l #{file}"
-    end
-    %w{lib/}.concat(Dir['*.php']).each do |path|
-      sh "php php-cs-fixer.phar fix #{path} --level=all"
-    end
-    sh 'vendor/bin/phpunit test'
-  end
-
   task :test_phantomjs do
     pid_file = 'php.pid'
     begin
@@ -213,6 +201,6 @@ namespace :test do
   end
 end
 
-desc 'Run tests (need Grunt).'
-task :test => ['test:test_grunt', 'test:test_php']
+desc 'Run tests.'
+task :test => []
 # vim:set fdm=marker:

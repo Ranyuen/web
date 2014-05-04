@@ -8,7 +8,9 @@
     "gulp": "~3.6.2",
     "gulp-jshint": "~1.5.5",
     "jshint-stylish": "~0.2.0",
-    "gulp-less": "~1.2.3"
+    "gulp-less": "~1.2.3",
+    "gulp-exec": "~2.0.1",
+    "bluebird": "~1.2.4"
   },
   "scripts": {
     "test": "grunt test --force"
