@@ -5,9 +5,9 @@
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-exec": "~0.4.5"
+    "gulp": "~3.6.2",
+    "gulp-jshint": "~1.5.5",
+    "jshint-stylish": "~0.2.0"
   },
   "scripts": {
     "test": "grunt test --force"
