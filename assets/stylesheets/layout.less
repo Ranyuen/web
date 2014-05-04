@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import (less) "../bower_components/normalize-css/normalize.css";
 @import "helpers";
 
 @-webkit-keyframes animateLogo {
@@ -38,7 +39,7 @@ figure {
 }
 
 table {
-  thead { background: $nav_bg_color; }
+  thead { background: @nav_bg_color; }
 
   th, td { border: 1px solid #666; }
 }
@@ -113,29 +114,29 @@ body {
 }
 
 .facebook {
-  @include social-icon('/assets/images/icons/facebook.png', rgb(59, 91, 153));
+  .social-icon('/assets/images/icons/facebook.png', rgb(59, 91, 153));
 }
 
 .youtube {
-  @include social-icon('/assets/images/icons/youtube.png', rgb(229, 26, 39));
+  .social-icon('/assets/images/icons/youtube.png', rgb(229, 26, 39));
 }
 
 .widget-youtube { margin: 1.5em 0; }
 
-// #header-container-separator { height: $menu_height * 2; }
+// #header-container-separator { height: @menu_height * 2; }
 
 .container {
   line-height: 1.4em;
   margin: 0 auto;
   overflow: visible;
   position: relative;
-  // top: $menu_height * 2;
-  width: $cols16;
+  // top: @menu_height * 2;
+  width: @16cols;
 
   & > article {
     background: rgba(255, 255, 255, 0.8);
     overflow: hidden;
-    padding: 0 5mm $menu_height 5mm;
+    padding: 0 5mm @menu_height 5mm;
   }
 
   & > footer {
@@ -148,13 +149,13 @@ body {
 
 .global-nav {
   background: rgb(255, 219, 238);
-  height: $menu_height;
+  height: @menu_height;
   border-bottom: solid 1px transparent;
-  @include navigation;
+  .navigation;
 
   .logo-span {
     padding: 0;
-    width: $menu_height;
+    width: @menu_height;
   }
 
   .logo {
@@ -172,21 +173,21 @@ body {
     }
 
     img {
-      height: $menu_height;
-      min-width: $menu_height;
+      height: @menu_height;
+      min-width: @menu_height;
     }
   }
 }
 
 .local-nav {
-  background: $nav_bg_color;
-  @include navigation;
+  background: @nav_bg_color;
+  .navigation;
 }
 
 .breadcrumb {
   font-size: small;
   margin-bottom: -20px;
-  @include navigation;
+  .navigation;
 
   a {
     color: #000;
@@ -197,43 +198,33 @@ body {
   }
 }
 
+
 /*
-  Style overrides for IE6-8
-  http://jonikorpi.com/leaving-old-IE-behind/
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
 */
 
 .ie {
+
 }
 
 
 /*
-  An easy way to zoom your entire layout in or out (as long as it's set in ems).
-  Just change the media queries to activate them.
-  Assuming your base font-size is 16:
-  - the first one zooms out by a factor of (16-2)/16 = 0.875
-  - the second one zooms in by a factor of (16+2)/16 = 1.125
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125
 */
 
-// @media screen and (max-width: 1px) {
-//   body {
-//     font-size: ($font-size - 2) / $em;
-//   }
-// }
-//
-// @media screen and (max-width: 1px) {
-//   body {
-//     font-size: ($font-size + 2) / $em;
-//   }
-// }
-
-@media screen and (max-width: $cols16 + 2em) {
-  .container { width: $cols12; }
+@media screen and (max-width: @16cols + 2em) {
+  .container { width: @12cols; }
 }
 
-@media screen and (max-width: $cols12 + 2em) {
-  .container { width: $cols8; }
+@media screen and (max-width: @12cols + 2em) {
+  .container { width: @8cols; }
 }
 
-@media screen and (max-width: $cols8 + 2em) {
-  .container { width: $cols6; }
+@media screen and (max-width: @8cols + 2em) {
+  .container { width: @6cols; }
 }

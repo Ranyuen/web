@@ -28,7 +28,6 @@ $switch_lang = implode(' / ', $switch_lang);
     <link rel="home" href="<?php $h->h($home); ?>"/>
     <base href="<?php $h->h($link['base']); ?>"/>
     <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
-    <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
     <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
     <style>
