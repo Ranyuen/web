@@ -14,7 +14,7 @@ figure { text-align: center; }
 }
 </style>
 
-<strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<span style="font-size: 16px;">(終了しました)</span>
+<strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<small> (プレゼントは終了しました)</small>
 ==
 <div style="text-align: center;">たくさんのお客様にご応募頂きありがとうございました。蘭裕園のランを楽しんで頂けたのならば幸いです。</div>
 
