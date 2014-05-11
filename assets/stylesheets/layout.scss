@@ -61,7 +61,7 @@ body {
   position: relative;
 
   &.ja {
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-family: "游ゴシック Light", "游ゴシック", "YuGothic", sans-serif;
 
     q {
       &:before { content: "「"; }
@@ -113,11 +113,11 @@ body {
 }
 
 .facebook {
-  @include social-icon('/assets/images/icons/facebook.png', rgb(59, 91, 153));
+  @include social-icon('/assets/images/icons/f_b_icon.png', rgb(59, 91, 153));
 }
 
 .youtube {
-  @include social-icon('/assets/images/icons/youtube.png', rgb(229, 26, 39));
+  @include social-icon('/assets/images/icons/yt_icon.png', rgb(229, 26, 39));
 }
 
 .widget-youtube { margin: 1.5em 0; }

@@ -14,9 +14,9 @@ figure { text-align: center; }
 }
 </style>
 
-蘭裕園の美しいエビネの世界をブルーレイに！
+<strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<span style="font-size: 16px;">(終了しました)</span>
 ==
-蘭裕園の美しいエビネの世界をブルーレイに！　そのブルーレイを、抽選で無料でプレゼントします。
+<div style="text-align: center;">たくさんのお客様にご応募頂きありがとうございました。蘭裕園のランを楽しんで頂けたのならば幸いです。</div>
 
 <figure>
 	<img src ="/assets/images/bluray_present_2014_1.png" alt="こころの花5 蘭裕園の世界が詰まったブルーレイ エビネ - 蘭裕園" />
@@ -38,7 +38,7 @@ figure { text-align: center; }
 	<img src ="/assets/images/bluray_present_2014_2.jpg" alt="こころの花5 蘭裕園の世界が詰まったブルーレイ エビネ - 蘭裕園" />
 </figure>
 
-<span class="green">春色エビネ</span>は、蘭裕園が世界に向け改良した、カラフルで高品質、都会的でオシャレなエビネです。そんなエビネたちを300点以上収録した、いやし系のブルーレイを抽選で30名様にプレゼントいたします。ピアノの調べとともに、ごゆっくりとお楽しみください。
+<span class="green">春色エビネ (Spring Calanthe)</span>は、蘭裕園が世界に向け改良した、カラフルで高品質、都会的でオシャレなエビネです。そんなエビネたちを300点以上収録した、いやし系のブルーレイを抽選で30名様にプレゼントいたします。ピアノの調べとともに、ごゆっくりとお楽しみください。
 
 <b>蘭裕園ブルーレイ「こころのはな5」のお申込みは<a href="mailto:cal_pone@ranyuen.com">cal_pone@ranyuen.com</a>まで</b>。氏名と住所、メッセージをお送りください。当選は発送を以ておしらせします。
 

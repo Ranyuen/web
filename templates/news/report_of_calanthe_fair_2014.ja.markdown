@@ -18,7 +18,7 @@ h1 {
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
-速報！エビネ展2014 -　蘭裕園
+<strike>速報！エビネ展2014 -　蘭裕園</strike>&nbsp;<span style="font-size: 16px; line-height: 40px;">(終了しました)</span>
 ==
 <figure>
 	<img src="/assets/images/report_calanthe_fair_2014.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
@@ -31,7 +31,7 @@ h1 {
 
 → <a href="news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える！こんなチャンスは今年だけ！</a>
 
-→ <a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日/3日)</a>
+→ <a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a>
 
 <a href="/about_us/direction">蘭裕園へのアクセス</a>
 <figure>

@@ -10,7 +10,7 @@ h1 {
   background-color: red;
   color: white;
   display: block;
-  height: 40px;
+  height: 80px;
   line-height: 40px;
   width: 100%;
 }
@@ -46,13 +46,10 @@ figcaption { text-align: center; }
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
-
-
-高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
+<strike>高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！</strike><br /><span style="font-size: 16px; text-align: right;">(終了しました)</span>
 ==
-→ <b><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></b>
-
-→ <b><a href="news/information_of_calanrthe_fair_2014">最終半額セール開催のお知らせ(5月2日/3日)</a></b>
+→ <b><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></b><br />
+→ <b><a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a></b>
 
 4月18日から5月3日まで　品質の高いエビネを格安で買えるチャンスがやってくる！
 
@@ -135,6 +132,8 @@ figcaption { text-align: center; }
 連日、花は追加します！<br />
 10:00 ～ 17:00 (最終日5/3は15:00まで)<br />
 最終セール 5/2、5/3 全品表示価格の半額！売り切れの際は御容赦ください。<br />
+ → <a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a><br />
+<p></p>
 <a href="/about_us/direction">アクセス<br /><img src="/assets/images/map1_ja.jpg" alt="蘭裕園へのアクセス" /></a><br />
 売店前第一駐車場は狭いため、車でご来園なさるお客様は下記の第二駐車場（約50台）をご利用ください。
 <a href="/about_us/direction"><img src="/assets/images/map2_ja.jpg" alt="蘭裕園駐車場"></a>
