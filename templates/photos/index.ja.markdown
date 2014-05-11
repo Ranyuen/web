@@ -20,7 +20,9 @@ $photos = $controller->render('GET', [], [ 'limit' => 100 ]);
 <div class="photos">
 <?php foreach ($photos as $photo) { ?>
   <div class="photo">
-    <img src="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg" alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園"/>
+    <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg">
+      <img src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>" alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園"/>
+    </a>
     <div>
       <div><?php $h->h($photo['description_ja']); ?></div>
       <div><?php $h->h($photo['description_en']); ?></div>
