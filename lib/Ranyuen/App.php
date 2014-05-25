@@ -85,6 +85,7 @@ class App
         }, ucwords(strtolower($api_name)));
         $controller = (new \ReflectionClass("\Ranyuen\\Controller\\Api$api_name"))->newInstance();
         $response = $controller->render($method, $uri_params, $request_params);
+        if (!$response) { return $this; }
         echo is_array($response) ? json_encode($response) : $response;
 
         return $this;
