@@ -17,7 +17,9 @@ class ApiPhoto
         imagecopyresampled($mini_image, $image,
             0, 0, 0, 0,
             $mini_width, $mini_height, $width, $height);
+        imagedestroy($image);
         header('Content-Type: image/jpeg');
-        imagejpeg($mini_image, null, 100);
+        imagejpeg($mini_image, null, 95);
+        imagedestroy($mini_image);
     }
 }

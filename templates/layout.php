@@ -39,11 +39,7 @@ $switch_lang = implode(' / ', $switch_lang);
     <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--<script src="/assets/bower_components/uri.js/src/URI.js"></script>-->
-    <script src="/assets/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/assets/bower_components/bluebird/js/browser/bluebird.js"></script>
-    <!--<script src="/assets/bower_components/platform/platform.js"></script>-->
-    <!--<link rel="import" href="/assets/bower_components/polymer/polymer.html"/>-->
+    <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
     <header>
