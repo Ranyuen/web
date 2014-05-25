@@ -20,7 +20,7 @@ figcaption {
 	text-align: center;
 }
 </style>
-
+<b><a href="news/information_of_shipping_of_awachidori_and_yumechidori_2014">夢ちどり、アワチドリ ６月上旬から出荷が始まります</a></b>
 Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
 ==
 <img src="/assets/images/top_img.jpg" alt="春色エビネ 蘭裕園 - エビネ" />
