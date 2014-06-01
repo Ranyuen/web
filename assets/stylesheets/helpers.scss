@@ -176,7 +176,7 @@ $nav_bg_color: rgb(240, 245, 240);
 @mixin navigation {
   .nav-left, .nav-right, .nav-item {
     display: inline-block;
-    height: $menu_height;
+    // height: $menu_height;
     line-height: $menu_height;
     margin: 0;
     vertical-align: middle;
@@ -188,6 +188,10 @@ $nav_bg_color: rgb(240, 245, 240);
   .nav-right {
     position: absolute;
     right: 0;
+  }
+
+  .nav-right .lang {
+    font-size: smaller;
   }
 
   .nav-item {

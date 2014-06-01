@@ -11,6 +11,7 @@
             transform: rotate(0deg);
   }
 }
+
 @keyframes animateLogo {
   0% {
     -webkit-transform: rotate(45deg);
@@ -148,7 +149,7 @@ body {
 
 .global-nav {
   background: rgb(255, 219, 238);
-  height: $menu_height;
+  // height: $menu_height;
   border-bottom: solid 1px transparent;
   @include navigation;
 
@@ -228,6 +229,11 @@ body {
 
 @media screen and (max-width: $cols16 + 2em) {
   .container { width: $cols12; }
+  .global-nav .nav-right {
+    position: relative;
+    width: 100%;
+    text-align: right;
+  }
 }
 
 @media screen and (max-width: $cols12 + 2em) {
