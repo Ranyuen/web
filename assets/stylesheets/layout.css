@@ -271,7 +271,7 @@ body > header {
   position: absolute;
   right: 0; }
 .global-nav .nav-right .lang {
-  font-size: smaller; }
+  font-size: 80%; }
 .global-nav .nav-item {
   padding: 0 2mm; }
 .global-nav .nav-item a {
@@ -310,7 +310,7 @@ body > header {
   position: absolute;
   right: 0; }
 .local-nav .nav-right .lang {
-  font-size: smaller; }
+  font-size: 80%; }
 .local-nav .nav-item {
   padding: 0 2mm; }
 .local-nav .nav-item a {
@@ -333,7 +333,7 @@ body > header {
   position: absolute;
   right: 0; }
 .breadcrumb .nav-right .lang {
-  font-size: smaller; }
+  font-size: 80%; }
 .breadcrumb .nav-item {
   padding: 0 2mm; }
 .breadcrumb .nav-item a {
