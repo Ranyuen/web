@@ -1,5 +1,5 @@
 ---
-title: 夢ちどり、アワチドリ 6月上旬から出荷が始まりました
+title: ミニミニランラン (夢ちどり、アワチドリ) 6月上旬から出荷が始まりました
 ---
 <style>
 h1, h2 {
@@ -16,30 +16,30 @@ h2 { height: 50px; }
 
 <b>[エビネの育て方を極める - 最先端のエビネ栽培法](growings/calanthe/growings_calanthe_in_the_new_way)</b>
 
-夢ちどり、アワチドリ 6月上旬から出荷が始まります<br /><small>～ ホームセンター、園芸店などでお求めいただけます ～</small>
+ミニミニランラン (夢ちどり、アワチドリ)  6月上旬から出荷が始まります<br /><small>ホームセンター、園芸店などでお求めいただけます</small>
 ==
 蘭裕園の夢ちどり、アワチドリは<b>おしゃれで高品質、とてもキュートで都会的なミニラン</b>です。山野草のウチョウランとはかなり異なります。
+
 <figure>
-  <img src="/assets/images/shipment_chidori_1.jpg" />
+  <img src="/assets/images/shipment_chidori_1.jpg" alt="ミニミニランラン (夢ちどり、アワチドリ) 6月上旬から出荷が始まりました - 蘭裕園" />
+  <figcaption>ミニミニランラン (夢ちどり、アワチドリ) 6月上旬から出荷が始まりました</figcaption>
 </figure>
 
 ミニミニランラン　ヨーロッパでも大人気！
 ---
 <figure>
-  <img src="/assets/images/floriade2012_3.jpg" />
-  <img src="/assets/images/floriade2012_1.jpg" />
-  <figcaption>国際園芸博覧会フロリアード (2012) - 蘭裕園</figcaption>
+  <img src="/assets/images/floriade2012_3.jpg" alt="国際園芸博覧会フロリアード (2012) の様子 - 蘭裕園"/>
+  <img src="/assets/images/floriade2012_1.jpg" alt="国際園芸博覧会フロリアード (2012) の様子 - 蘭裕園"/>
+  <figcaption>国際園芸博覧会フロリアード (2012) の様子</figcaption>
 </figure>
 
-蘭裕園が開発した妖精のような姿の小さな蘭は、オランダで10年に1度開催される<b>国際園芸博覧会フロリアード (2012)</b>で数千本が展示され、
+蘭裕園が開発した妖精のような姿の小さな蘭は、オランダで10年に1度開催される<b>国際園芸博覧会フロリアード (2012)</b>で数千本が展示されました。
 
-またコンテスト出品したアワチドリ <b>'ジパング3'</b> が9.30ポイントの高得点で<b>フロリアード優秀品種</b>に選ばれたことで、
-
-ヨーロッパを中心に世界中で人気が急上昇しています。
+またコンテスト出品したアワチドリ <b>'ジパング3'</b> が9.30ポイントの高得点で<b>フロリアード優秀品種</b>に選ばれたことで、ヨーロッパを中心に世界中で人気が急上昇しています。
 
 <figure>
-  <img src="/assets/images/floriade2012_2.jpg" />
-  <figrecaption style="text-align: center;">アワチドリ 'ジパング3' - 蘭裕園</figrecaption>
+  <img src="/assets/images/floriade2012_2.jpg" alt="アワチドリ 'ジパング3' が9.30ポイントの高得点を獲得！ - 蘭裕園" />
+  <figcaption style="text-align: center;">アワチドリ 'ジパング3' が9.30ポイントの高得点を獲得！</figcaption>
 </figure>
 
 <?php $h->echoYouTube('HD6NsO7GS5I', 'ponerorchis suzukiana and its hybrids -- Floriade 2012  - 蘭裕園'); ?>
