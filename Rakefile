@@ -20,7 +20,9 @@ class ContribScss
     lambda{|t, p|
       @all.each do |f|
         puts "Generate CSS at #{@dest}/#{f}.css"
-        Sass.compile_file "#{@src}/#{f}.scss", "#{@dest}/#{f}.css", {style: @style, cache: false}
+        scss = open("#{@src}/#{f}.scss", 'r:utf-8'){|f| f.read }
+        css = Sass.compile scss, {style: @style, cache: false, load_paths: [@src]}
+        open("#{@dest}/#{f}.css", 'wb'){|f| f.puts css.gsub(/\r\n/, "\n") }
       end
     }
   end

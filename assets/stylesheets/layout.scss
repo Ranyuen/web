@@ -79,7 +79,6 @@ body {
   }
 
   & > header {
-    // position: fixed;
     width: 100%;
     z-index: 1000;
   }
@@ -122,14 +121,11 @@ body {
 
 .widget-youtube { margin: 1.5em 0; }
 
-// #header-container-separator { height: $menu_height * 2; }
-
 .container {
   line-height: 1.4em;
   margin: 0 auto;
   overflow: visible;
   position: relative;
-  // top: $menu_height * 2;
   width: $cols16;
 
   & > article {
@@ -148,7 +144,6 @@ body {
 
 .global-nav {
   background: rgb(255, 219, 238);
-  height: $menu_height;
   border-bottom: solid 1px transparent;
   @include navigation;
 
@@ -228,6 +223,12 @@ body {
 
 @media screen and (max-width: $cols16 + 2em) {
   .container { width: $cols12; }
+
+  .global-nav .nav-right {
+    position: relative;
+    width: 100%;
+    text-align: right;
+  }
 }
 
 @media screen and (max-width: $cols12 + 2em) {

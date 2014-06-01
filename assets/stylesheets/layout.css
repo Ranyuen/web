@@ -261,17 +261,17 @@ body > header {
 
 .global-nav {
   background: #ffdbee;
-  height: 12mm;
   border-bottom: solid 1px transparent; }
 .global-nav .nav-left, .global-nav .nav-right, .global-nav .nav-item {
   display: inline-block;
-  height: 12mm;
   line-height: 12mm;
   margin: 0;
   vertical-align: middle; }
 .global-nav .nav-right {
   position: absolute;
   right: 0; }
+.global-nav .nav-right .lang {
+  font-size: 80%; }
 .global-nav .nav-item {
   padding: 0 2mm; }
 .global-nav .nav-item a {
@@ -303,13 +303,14 @@ body > header {
   background: #f0f5f0; }
 .local-nav .nav-left, .local-nav .nav-right, .local-nav .nav-item {
   display: inline-block;
-  height: 12mm;
   line-height: 12mm;
   margin: 0;
   vertical-align: middle; }
 .local-nav .nav-right {
   position: absolute;
   right: 0; }
+.local-nav .nav-right .lang {
+  font-size: 80%; }
 .local-nav .nav-item {
   padding: 0 2mm; }
 .local-nav .nav-item a {
@@ -325,13 +326,14 @@ body > header {
   margin-bottom: -20px; }
 .breadcrumb .nav-left, .breadcrumb .nav-right, .breadcrumb .nav-item {
   display: inline-block;
-  height: 12mm;
   line-height: 12mm;
   margin: 0;
   vertical-align: middle; }
 .breadcrumb .nav-right {
   position: absolute;
   right: 0; }
+.breadcrumb .nav-right .lang {
+  font-size: 80%; }
 .breadcrumb .nav-item {
   padding: 0 2mm; }
 .breadcrumb .nav-item a {
@@ -361,7 +363,12 @@ body > header {
 */
 @media screen and (max-width: 72.5em) {
   .container {
-    width: 52.5em; } }
+    width: 52.5em; }
+
+  .global-nav .nav-right {
+    position: relative;
+    width: 100%;
+    text-align: right; } }
 @media screen and (max-width: 54.5em) {
   .container {
     width: 34.5em; } }

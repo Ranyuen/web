@@ -176,7 +176,6 @@ $nav_bg_color: rgb(240, 245, 240);
 @mixin navigation {
   .nav-left, .nav-right, .nav-item {
     display: inline-block;
-    height: $menu_height;
     line-height: $menu_height;
     margin: 0;
     vertical-align: middle;
@@ -189,6 +188,8 @@ $nav_bg_color: rgb(240, 245, 240);
     position: absolute;
     right: 0;
   }
+
+  .nav-right .lang { font-size: 80%; }
 
   .nav-item {
     padding: 0 2mm;
@@ -238,7 +239,6 @@ $nav_bg_color: rgb(240, 245, 240);
     line-height: $social-icon-size;
     position: relative;
     padding-right: $social-icon-size + 2px;
-    
   }
 }
 // vim:set fdm=marker:
