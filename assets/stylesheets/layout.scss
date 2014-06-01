@@ -29,13 +29,17 @@ figure {
   display: inline-block;
   position: relative;
   padding: 0.5em;
+  text-align: center;
 
-  figurecaption {
+  figcaption {
     display: block;
     font-size: smaller;
     opacity: 0.8;
+    text-align: center;
   }
 }
+
+small { font-size: 60%; }
 
 table {
   thead { background: $nav_bg_color; }
@@ -51,7 +55,10 @@ a {
   &:visited { color: #265778; }
 }
 
-h1, h2, h3, h4, h5, h6 { margin-top: 1.5em; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  text-align: center;
+}
 
 b { color: #990066; }
 
