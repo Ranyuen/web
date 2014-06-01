@@ -27,6 +27,7 @@ iframe { border: 0; }
 figure {
   background: rgba(0, 0, 255, 0.1);
   display: block;
+  overflow: hidden;
   position: relative;
   padding: 0.5em;
   text-align: center;
@@ -37,6 +38,7 @@ figure {
   }
 
   figcaption {
+    clear: both;
     display: block;
     font-size: smaller;
     opacity: 0.8;
@@ -44,7 +46,7 @@ figure {
   }
 }
 
-small { font-size: 60%; }
+small { font-size: 80%; }
 
 table {
   thead { background: $nav_bg_color; }
