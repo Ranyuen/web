@@ -223,6 +223,7 @@ body {
 
 @media screen and (max-width: $cols16 + 2em) {
   .container { width: $cols12; }
+
   .global-nav .nav-right {
     position: relative;
     width: 100%;

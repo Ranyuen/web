@@ -189,9 +189,7 @@ $nav_bg_color: rgb(240, 245, 240);
     right: 0;
   }
 
-  .nav-right .lang {
-    font-size: 80%;
-  }
+  .nav-right .lang { font-size: 80%; }
 
   .nav-item {
     padding: 0 2mm;
@@ -241,7 +239,6 @@ $nav_bg_color: rgb(240, 245, 240);
     line-height: $social-icon-size;
     position: relative;
     padding-right: $social-icon-size + 2px;
-
   }
 }
 // vim:set fdm=marker:
