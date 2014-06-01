@@ -27,7 +27,7 @@ title: エビネ, アワチドリ / 夢ちどりの育て方
 ## アワチドリ/夢ちどり (Ponerorchis)<br /><small>Ponerorchis (ウチョウランの仲間) - 小さなランの世界</small>
 <figure style="float: right;">
   ![アワチドリ (Ponerorchis suzukiana) - Ranyuen](/assets/images/pone01.jpg)
-  <figurecaption style="text-align: center;">↑アワチドリ/夢ちどり↓</figurecaption>
+  <figcaption style="text-align: center;">↑アワチドリ/夢ちどり↓</figcaption>
   ![夢ちどり (Hybrid of Ponerorchis suzukiana) - Ranyuen](/assets/images/pone02.jpg)
 </figure>
 

@@ -14,7 +14,7 @@ title: 蘭裕園のご紹介
 
 ## 売店 (エビネ展2014)
 <figure>
-  <figurecaption>蘭裕園売店 (写真はエビネ展2014の様子 : 撮影日2014年4月18日)</figurecaption>
+  <figcaption>蘭裕園売店 (写真はエビネ展2014の様子 : 撮影日2014年4月18日)</figcaption>
   <img src="/assets/images/calanthe_fair_2014_9.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 
   <img src="/assets/images/calanthe_fair_2014_10.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
@@ -23,7 +23,7 @@ title: 蘭裕園のご紹介
 </figure>
 
 <figure>
-  <figurecaption>開園を待つお客様で、行列ができる事もよくあります。遠方からのたくさんのみなさまのご来園本当にありがとうございます。</figurecaption>
+  <figcaption>開園を待つお客様で、行列ができる事もよくあります。遠方からのたくさんのみなさまのご来園本当にありがとうございます。</figcaption>
   <img src="/assets/images/calanthe_fair_2014_12.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 </figure>
 
@@ -35,14 +35,14 @@ title: 蘭裕園のご紹介
 <b>みどりの故郷研究室</b>は、研究室、培養室、企画開発室をもつ建物です。約70坪の売店ハウスを併設しています。
 
 <figure>
-  <figurecaption>売店ハウス約70坪、みどりの故郷研究室、培養室、企画開発室をもつ建物。大きさは約60坪</figurecaption>
+  <figcaption>売店ハウス約70坪、みどりの故郷研究室、培養室、企画開発室をもつ建物。大きさは約60坪</figcaption>
   <img src="/assets/images/about_us_img_1955.jpg" height="450" alt="蘭裕園研究室 - Ranyuen" />
 </figure>
 
 2人がけ大型クリーンベンチ3台、1人がけクリーンベンチ1台、合計4台のクリーンベンチがあります。
 
 <figure>
-  <figurecaption>同時に7名が作業すると年間100万本を超える苗を作ることができるクリーンルームです。となりにあるフラスコ培養室は秘密がいっぱいのため、今回は未公開。</figurecaption>
+  <figcaption>同時に7名が作業すると年間100万本を超える苗を作ることができるクリーンルームです。となりにあるフラスコ培養室は秘密がいっぱいのため、今回は未公開。</figcaption>
   <img src="/assets/images/about_us_2.jpg" height="450" alt="蘭裕園研究室 - Ranyuen" />
 
   <img src="/assets/images/about_us_3.jpg" height="450" alt="蘭裕園研究室 - Ranyuen" />
@@ -54,12 +54,12 @@ title: 蘭裕園のご紹介
 育種したランを栽培する数十万本規模の農場があります。
 
 <figure>
-  <figurecaption>アワチドリ / 夢ちどり (ウチョウラン類) のフラスコ培養の様子。今年は約50万本の苗ができる予定。</figurecaption>
+  <figcaption>アワチドリ / 夢ちどり (ウチョウラン類) のフラスコ培養の様子。今年は約50万本の苗ができる予定。</figcaption>
   <img src="/assets/images/about_us_1.jpg" height="450" alt="蘭裕園農場 - Ranyuen" />
 </figure>
 
 <figure>
-  <figurecaption>第七育種農場 約4000坪 (13,000平方メートル)</figurecaption>
+  <figcaption>第七育種農場 約4000坪 (13,000平方メートル)</figcaption>
   <img src="/assets/images/about_us_img_1968.jpg" height="450" alt="蘭裕園農場 - Ranyuen" />
 
   <img src="/assets/images/about_us_img_1970.jpg" height="450" alt="蘭裕園農場 - Ranyuen" />
@@ -69,14 +69,14 @@ title: 蘭裕園のご紹介
 蘭裕園ではオリジナルの植木鉢を開発しています。外観だけではなく、良く育つことを目的とした植木鉢の使用を心がけています。このためプラ鉢を除き、自社開発したオリジナル鉢を海外で生産しています。
 
 <figure>
-  <figurecaption>オリジナル植木鉢が到着</figurecaption>
+  <figcaption>オリジナル植木鉢が到着</figcaption>
   <img src="/assets/images/about_us_23.jpg" height="450" alt="蘭裕園オリジナル植木鉢 - Ranyuen" />
 </figure>
 
 今回は40フィートの大型コンテナ満載の12万鉢が到着しました。
 
 <figure>
-  <figurecaption>海外で作られた植木鉢。</figurecaption>
+  <figcaption>海外で作られた植木鉢。</figcaption>
   <img src="/assets/images/about_us_21.jpg" height="450" alt="蘭裕園オリジナル植木鉢 - Ranyuen" />
 
   <img src="/assets/images/about_us_24.jpg" height="450" alt="蘭裕園オリジナル植木鉢 - Ranyuen" />

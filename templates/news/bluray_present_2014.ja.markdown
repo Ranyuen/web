@@ -20,7 +20,7 @@ figure { text-align: center; }
 
 <figure>
 	<img src ="/assets/images/bluray_present_2014_1.png" alt="こころの花5 蘭裕園の世界が詰まったブルーレイ エビネ - 蘭裕園" />
-	<figurecaption>こころの花5 蘭裕園の世界が詰まったブルーレイ</figurecaption>
+	<figcaption>こころの花5 蘭裕園の世界が詰まったブルーレイ</figcaption>
 </figure>
 
 <span class="green">春色エビネ</span> = 世界で最も多彩なラン

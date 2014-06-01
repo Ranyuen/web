@@ -23,7 +23,7 @@ title: 年間の管理 春期 (3月～5月)
 ## 病害虫
 <figure>
   <img src="/assets/images/aburamushi_yuu2.png" width="250" alt="有翅のアブラムシ - Ranyuen" />
-  <figurecaption>有翅のアブラムシ</figurecaption>
+  <figcaption>有翅のアブラムシ</figcaption>
 </figure>
 
 開花中は花を傷めてしまうため、薬剤散布は行わないのが普通です。つぼみが見えはじめる前に、予防のため2回程度の薬剤散布を行っておくと、開花の頃から発生する病害虫の発生が少なくなります。

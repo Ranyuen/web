@@ -4,7 +4,7 @@ title: ウチョウラン (Ponerorchis) の種類
 ## ウチョウラン
 <figure>
   ![ウチョウラン (平戸島産) (Ponerorchis) - Ranyuen](/assets/images/utyouran.jpg)
-  <figurecaption>ウチョウラン (平戸島産)</figurecaption>
+  <figcaption>ウチョウラン (平戸島産)</figcaption>
 </figure>
 
 本州北部～九州に自生、斜面の岩場だけでなく、地域によっては大木の幹にコケとともに自生していることもあります。産地により早咲きから遅咲きまで (5～8月) さまざまな系統があります。ちなみに鬼怒川上流の女夫渕付近や軽井沢の近くでは7～8月頃ハイキング道などの頭上にある岩で開花している様子が今でもみることができます。

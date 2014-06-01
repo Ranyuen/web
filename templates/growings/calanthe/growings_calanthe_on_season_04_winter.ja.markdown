@@ -9,12 +9,12 @@ title: 年間の管理 冬期 (12月～2月)
 ## 置き場
 <figure>
   <img src="/assets/images/tou_ha.png" width="250" alt="寒風により傷んだ葉 (エビネ, Calanthe) - Ranyuen" />
-  <figurecaption>寒風により傷んだ葉</figurecaption>
+  <figcaption>寒風により傷んだ葉</figcaption>
 </figure>
 
 <figure>
   <img src="/assets/images/tou_fuyume.png" width="250" alt="マイナス10℃の低温で凍りつき、褐色に傷んだ冬至芽 (エビネ, Calanthe) - Ranyuen" />
-  <figurecaption>マイナス10℃の低温で凍りつき、褐色に傷んだ冬至芽</figurecaption>
+  <figcaption>マイナス10℃の低温で凍りつき、褐色に傷んだ冬至芽</figcaption>
 </figure>
 
 周囲の樹木の落葉などで、直射日光が当たる場所では、日焼けにより葉が褐色に痛んだり株によっては真っ白になってしまうこともあるので注意が必要です。多少、黄ばむ程度であれば問題はありません。また、長時間寒風にあてると、葉は褐色に痛んでしまうことがあるので気を付けます。 春咲きエビネの多くの種類は、北風を避けることでマイナス3℃くらいまでは大丈夫です。極度に凍ることのない半日陰に置きます。
