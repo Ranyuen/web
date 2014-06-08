@@ -42,7 +42,7 @@ $photos = $controller->render('GET', [], [ 'limit' => 100 ]);
     </div>
   </div>
 <?php } ?>
-</div>
+</div>-->
 <!--
 <script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 <script>

@@ -25,7 +25,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 一方で、ヨーロッパを中心とした海外では、日本には<b>とてもカラフルなガーデンオーキッド＝庭植えできる蘭 (蘭裕園スタイル) の存在を知り、話題になっています。</b>
 
-<a href="http://fb.me/ranyuenjapan"><img src="/assets/images/top_img.jpg" alt="エビネ - 蘭裕園 (Ranyuen)" style="max-width: 600px;" /></a>
+<a href="http://fb.me/ranyuenjapan"><img src="/assets/images/cal_top4.jpg" alt="エビネ - 蘭裕園 (Ranyuen)" style="max-width: 600px;" /></a>
 
 cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFacebook</span></a>
 
