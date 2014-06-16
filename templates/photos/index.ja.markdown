@@ -6,13 +6,19 @@ title: 写真を見る
 <?php
 $controller = new \Ranyuen\Controller\ApiPhotos;
 $photos = $controller->render('GET', [], [ 'limit' => 20 ]);
+$photos = array_map(function ($photo) {
+  $thumb_width = 349;
+  $thumb_height = floor($photo['height'] * $thumb_width / $photo['width']);
+  $photo['thumb_width'] = $thumb_width;
+  $photo['thumb_height'] = $thumb_height;
+  return $photo;
+}, $photos);
 ?>
 <style>
   .photos .photo {
     background: #f0f5f0;
     float: left;
     margin: 0.6%;
-    min-height: 230px;
     width: 32%;
   }
 </style>
@@ -21,10 +27,12 @@ $photos = $controller->render('GET', [], [ 'limit' => 20 ]);
   <div class="photo">
     <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
       class="lightbox"
-      title="<?php $h->h($photo['description_ja']); ?> 蘭裕園">
+      title="<?php $h->h($photo['description_ja']); ?> 蘭裕園 Ranyuen">
       <img rel="gallery"
-        src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>&width=349"
-        alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園"/>
+        src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>&width=<?php $h->h($photo['thumb_width']); ?>"
+        width="<?php $h->h($photo['thumb_width']); ?>"
+        height="<?php $h->h($photo['thumb_height']); ?>"
+        alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園 Ranyuen"/>
     </a>
     <div>
       <div><?php $h->h($photo['description_ja']); ?></div>
@@ -36,6 +44,7 @@ $photos = $controller->render('GET', [], [ 'limit' => 20 ]);
 <script src="/assets/bower_components/colorbox/jquery.colorbox-min.js"></script>
 <link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
 <script src="/assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js"></script>
+<script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
     $('.lightbox').colorbox({
@@ -46,15 +55,10 @@ $photos = $controller->render('GET', [], [ 'limit' => 20 ]);
       speed:      360,
       width:      '90%'
     });
+    new Masonry(document.getElementsByClassName('photos')[0], {
+      columnWidth: '.photo',
+      gutter: 0,
+      itemSelector: '.photo'
+    });
   });
 </script>
-<!--
-<script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script>
-new Masonry(document.getElementsByClassName('photos')[0], {
-  columnWidth: '.photo',
-  gutter: 0,
-  itemSelector: '.photo'
-});
-</script>
--->

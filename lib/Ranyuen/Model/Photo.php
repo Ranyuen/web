@@ -7,8 +7,6 @@ class Photo extends Model
 {
     public static $_table = 'photo';
 
-    public $width;
-    public $height;
     private $image;
 
     public function loadImageSize()
