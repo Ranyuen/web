@@ -64,32 +64,30 @@ class Photo extends Model
 
     private function deleteOldCache()
     {
-        // try {
-        //     $cache_dir = 'Calanthe/cache';
-        //     $is_dir_too_large = function () use ($cache_dir) {
-        //         return preg_match('/\A[0-9]+G/', exec("du -h $cache_dir"));
-        //     };
-        //     if ($dir = opendir($cache_dir)) {
-        //         while (($file = readdir($dir)) !== false) {
-        //             if ($file[0] !== '.' &&
-        //                 filemtime($file) < time() - 60 * 60 * 24 * 7) {
-        //                 unlink("$cache_dir/$file");
-        //             }
-        //         }
-        //         closedir($dir);
+        $cache_dir = 'Calanthe/cache';
+        // $is_dir_too_large = function () use ($cache_dir) {
+        //     return preg_match('/\A[0-9]+G/', exec("du -h $cache_dir"));
+        // };
+        if ($dir = opendir($cache_dir)) {
+            while (($file = readdir($dir)) !== false) {
+                if (is_file($file) &&
+                    $file[0] !== '.' &&
+                    filemtime($file) < time() - 60 * 60 * 24 * 7) {
+                    unlink("$cache_dir/$file");
+                }
+            }
+            closedir($dir);
+        }
+        // if ($is_dir_too_large()) {
+        //     $filenames = glob("$cache_dir/*.*");
+        //     $filesizes = array_map(
+        //         function ($filename) { return filesize($filename); },
+        //         $filenames);
+        //     array_multisort($filenames,
+        //         $filesizes, SORT_ASC);
+        //     while ($is_dir_too_large() && $filenames) {
+        //         unlink(array_pop($filenames));
         //     }
-        //     if ($is_dir_too_large()) {
-        //         $filenames = glob("$cache_dir/*.*");
-        //         $filesizes = array_map(
-        //             function ($filename) { return filesize($filename); },
-        //             $filenames);
-        //         array_multisort($filenames,
-        //             $filesizes, SORT_ASC);
-        //         while ($is_dir_too_large() && $filenames) {
-        //             unlink(array_pop($filenames));
-        //         }
-        //     }
-        // } catch (Exception $ex) {
         // }
     }
 }
