@@ -1,5 +1,7 @@
-/Calanthe/
+/Calanthe/gallery/*
+/Calanthe/cache/*
 *.sqlite3
+!.gitkeep
 
 
 # Created by http://www.gitignore.io

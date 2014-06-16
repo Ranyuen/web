@@ -1,25 +1,35 @@
 <?php
 namespace Ranyuen\Controller;
 
+use \Ranyuen\Model\Photo;
+
 class ApiPhoto
 {
     public function render($method, array $uri_params, array $request_params)
     {
         if (!isset($request_params['id'])) {
-            return [ 'error' => 'id is required.', 'status' => 404 ];
+            return [ 'error' => ':id is required.', 'status' => 404 ];
         }
-        $filename = "Calanthe/gallery/{$request_params['id']}.jpg";
-        $image = imagecreatefromjpeg($filename);
-        list($width, $height) = getimagesize($filename);
-        $mini_width = 349;
-        $mini_height = floor($height * $mini_width / $width);
-        $mini_image = imagecreatetruecolor($mini_width, $mini_height);
-        imagecopyresampled($mini_image, $image,
-            0, 0, 0, 0,
-            $mini_width, $mini_height, $width, $height);
-        imagedestroy($image);
-        header('Content-Type: image/jpeg');
-        imagejpeg($mini_image, null, 95);
-        imagedestroy($mini_image);
+        $id = $request_params['id'];
+        $width = isset($request_params['width']) ? $request_params['width'] : null;
+        $height = isset($request_params['height']) ?
+            $request_params['height'] :
+            null;
+        if (!($width || $height)) {
+            return [ 'error' => ':width or :height is required.', 'status' => 404 ];
+        }
+        $photo = Photo::create([ 'id' => $id ]);
+        $photo->loadImageSize();
+        if ($width && $height) {
+            $_height = floor($photo->height * $width / $photo->width);
+            $_width = floor($photo->width * $height / $photo->height);
+            $height = min($_height, $height);
+            $width = min($_width, $width);
+        } elseif ($width) {
+            $height = floor($photo->height * $width / $photo->width);
+        } else {
+            $width = floor($photo->width * $height / $photo->height);
+        }
+        $photo->renderResized($width, $height);
     }
 }

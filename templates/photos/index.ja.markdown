@@ -5,22 +5,8 @@ title: 写真を見る
 ==
 <?php
 $controller = new \Ranyuen\Controller\ApiPhotos;
-$photos = $controller->render('GET', [], [ 'limit' => 100 ]);
+$photos = $controller->render('GET', [], [ 'limit' => 20 ]);
 ?>
-<link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
-<script src="/assets/bower_components/colorbox/jquery.colorbox-min.js"></script>
-<script src="/assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js"></script>
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    $('.lightbox').colorbox({
-      fixed:      true,
-      height:     '90%',
-      transition: 'fade',
-      speed:      300,
-      width:      '90%'
-    });
-  });
-</script>
 <style>
   .photos .photo {
     background: #f0f5f0;
@@ -33,8 +19,11 @@ $photos = $controller->render('GET', [], [ 'limit' => 100 ]);
 <div class="photos">
 <?php foreach ($photos as $photo) { ?>
   <div class="photo">
-    <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg" class="lightbox" title="<?php $h->h($photo['description_ja']); ?> 蘭裕園">
-      <img src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>" alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園"/>
+    <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
+      class="lightbox"
+      title="<?php $h->h($photo['description_ja']); ?> 蘭裕園">
+      <img src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>&width=349"
+        alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園"/>
     </a>
     <div>
       <div><?php $h->h($photo['description_ja']); ?></div>
@@ -42,7 +31,21 @@ $photos = $controller->render('GET', [], [ 'limit' => 100 ]);
     </div>
   </div>
 <?php } ?>
-</div>-->
+</div>
+<script src="/assets/bower_components/colorbox/jquery.colorbox-min.js"></script>
+<link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
+<script src="/assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    $('.lightbox').colorbox({
+      fixed:      true,
+      height:     '90%',
+      transition: 'fade',
+      speed:      300,
+      width:      '90%'
+    });
+  });
+</script>
 <!--
 <script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
 <script>
