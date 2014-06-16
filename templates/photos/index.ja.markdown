@@ -22,7 +22,8 @@ $photos = $controller->render('GET', [], [ 'limit' => 20 ]);
     <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
       class="lightbox"
       title="<?php $h->h($photo['description_ja']); ?> 蘭裕園">
-      <img src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>&width=349"
+      <img rel="gallery"
+        src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>&width=349"
         alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園"/>
     </a>
     <div>
@@ -38,10 +39,11 @@ $photos = $controller->render('GET', [], [ 'limit' => 20 ]);
 <script>
   window.addEventListener('DOMContentLoaded', function () {
     $('.lightbox').colorbox({
+      rel:        'gallery',
       fixed:      true,
       height:     '90%',
-      transition: 'fade',
-      speed:      300,
+      transition: 'elastic',
+      speed:      360,
       width:      '90%'
     });
   });
