@@ -5,7 +5,9 @@ title: 写真を見る
 ==
 <?php
 $controller = new \Ranyuen\Controller\ApiPhotos;
-$photos = $controller->render('GET', [], [ 'limit' => 20 ]);
+$species_name = isset($_GET['species_name']) ? $_GET['species_name'] : null;
+if ($species_name === 'all') { $species_name = null; }
+$photos = $controller->render('GET', [], [ 'species_name' => $species_name, 'limit' => 20 ]);
 $photos = array_map(function ($photo) {
   $thumb_width = 349;
   $thumb_height = floor($photo['height'] * $thumb_width / $photo['width']);
@@ -22,6 +24,16 @@ $photos = array_map(function ($photo) {
     width: 32%;
   }
 </style>
+
+<form method="GET">
+  <select name="species_name">
+    <option value="all" <?php if (!$species_name) { echo 'selected'; } ?>>全て見る</option>
+    <option value="Calanthe" <?php if ($species_name === 'Calanthe') { echo 'selected'; } ?>>エビネ</option>
+    <option value="Ponerorchis" <?php if ($species_name === 'Ponerorchis') { echo 'selected'; } ?>>夢チドリ/アワチドリ</option>
+    <input type="submit" value="検索" />
+  </select>
+</form>
+
 <div class="photos">
 <?php foreach ($photos as $photo) { ?>
   <div class="photo">
