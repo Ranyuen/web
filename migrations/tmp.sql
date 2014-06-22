@@ -202,3 +202,5 @@ values
 ('842e79c1-ee90-4930-9440-9cd521c42b5a', 'エビネ', 'Calanthe', 'Calanthe'),
 ('868a7029-099b-4966-854d-f923abc11eab', 'エビネ', 'Calanthe', 'Calanthe'),
 ('870ab613-ce48-4898-89b8-8baf9c3b04c1', 'エビネ', 'Calanthe', 'Calanthe');
+('0CE48D1B-4CFF-4426-99B5-526444A34F89', 'アワチドリ', 'Ponerochis', 'Ponerochis');
+('0E3ACEDA-FD59-428a-8BD5-3C90073DE435', 'アワチドリ', 'Ponerochis', 'Ponerochis');
