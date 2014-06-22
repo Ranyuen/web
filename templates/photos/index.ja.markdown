@@ -30,8 +30,8 @@ $photos = array_map(function ($photo) {
     <option value="all" <?php if (!$species_name) { echo 'selected'; } ?>>全て見る</option>
     <option value="Calanthe" <?php if ($species_name === 'Calanthe') { echo 'selected'; } ?>>エビネ</option>
     <option value="Ponerorchis" <?php if ($species_name === 'Ponerorchis') { echo 'selected'; } ?>>夢チドリ/アワチドリ</option>
-    <input type="submit" value="検索" />
   </select>
+  <input type="submit" value="検索" />
 </form>
 
 <div class="photos">
