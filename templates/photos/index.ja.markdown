@@ -34,7 +34,7 @@ $photos = array_map(function ($photo) {
   </select>
   <input type="submit" value="検索" />
 </form>
-<div class="photos">
+<div id="photo-gallery" class="photos">
 <?php foreach ($photos as $photo) { ?>
   <div class="photo">
     <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
@@ -57,20 +57,11 @@ $photos = array_map(function ($photo) {
 <link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
 <script src="/assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js"></script>
 <script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+<script src="/assets/bower_components/uri.js/src/URI.min.js"></script>
+<script src="/assets/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js"></script>
+<script src="/assets/javascripts/photoGallery.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
-    $('.lightbox').colorbox({
-      rel:        'gallery',
-      fixed:      true,
-      height:     '90%',
-      transition: 'elastic',
-      speed:      360,
-      width:      '90%'
-    });
-    new Masonry(document.getElementsByClassName('photos')[0], {
-      columnWidth: '.photo',
-      gutter: 0,
-      itemSelector: '.photo'
-    });
+    new PhotoGallery().init(document.getElementById("photo-gallery"));
   });
 </script>
