@@ -72,6 +72,11 @@ PhotoGallery.prototype.init = function (rootNode) {
     gutter:       0,
     itemSelector: '.photo'
   });
+  window.onscroll = this.onscroll.bind(this);
+  this.applied();
+};
+
+PhotoGallery.prototype.applied = function () {
   $('.lightbox').colorbox({
     rel:        'gallery',
     fixed:      true,
@@ -80,7 +85,6 @@ PhotoGallery.prototype.init = function (rootNode) {
     speed:      360,
     width:      '90%'
   });
-  window.onscroll = this.onscroll.bind(this);
 };
 
 PhotoGallery.prototype.onscroll = function () {
@@ -145,6 +149,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
   });
   this.rootNode.appendChild(fragment);
   this._masonry.appended(photoNodes);
+  this.applied();
 };
 
 global.PhotoGallery = PhotoGallery;
