@@ -1,5 +1,6 @@
 # coding=utf-8
 # {{{ contrib
+
 class ContribScss
   # @param [Hash] options
   #   src:   [String]   Source directory. Required.
@@ -27,6 +28,9 @@ class ContribScss
     }
   end
 end
+# desc 'Build SCSS files.'
+# task :scss, &ContribScss.new(src: 'assets/stylesheets', all: %w{layout})
+
 # }}} contrib
 
 require 'json'
@@ -125,9 +129,6 @@ XML
   end
 end
 
-desc 'Build SCSS files.'
-task :scss, &ContribScss.new(src: 'assets/stylesheets', all: %w{layout})
-
 desc 'Generate site navigation JSON.'
 task :gen_nav do
   g = NavGenerator.new
@@ -187,18 +188,6 @@ desc 'Build files.'
 task :build => [:scss, :gen_nav, :gen_sitemap]
 
 namespace :test do
-  task(:test_grunt){ sh 'grunt test' }
-
-  task :test_php do
-    Dir['{lib,test}/**/*.php'].concat(Dir['*.php']).each do |file|
-      sh "php -l #{file}"
-    end
-    %w{lib/}.concat(Dir['*.php']).each do |path|
-      sh "php php-cs-fixer.phar fix #{path} --level=all"
-    end
-    sh 'vendor/bin/phpunit test'
-  end
-
   task :test_phantomjs do
     pid_file = 'php.pid'
     begin
@@ -214,6 +203,6 @@ namespace :test do
   end
 end
 
-desc 'Run tests (need Grunt).'
-task :test => ['test:test_grunt', 'test:test_php']
+desc 'Run tests.'
+task :test => []
 # vim:set fdm=marker:
