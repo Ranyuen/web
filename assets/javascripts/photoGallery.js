@@ -69,9 +69,12 @@ function PhotoGallery() {
 PhotoGallery.prototype.init = function (rootNode) {
   this.rootNode = rootNode;
   this._masonry = new Masonry(rootNode, {
-    columnWidth:  '.photo',
-    gutter:       0,
-    itemSelector: '.photo'
+    columnWidth:        '.photo',
+    gutter:             0,
+    itemSelector:       '.photo',
+    hiddenStyle:        { opacity: 0 },
+    visibleStyle:       { opacity: 1 },
+    transitionDuration: '0.8s'
   });
   window.onscroll = debounce(this.onscroll.bind(this));
   this.applied();
