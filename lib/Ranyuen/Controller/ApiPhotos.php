@@ -14,29 +14,20 @@ class ApiPhotos implements ApiController
         $result = [];
         try {
             if ($species_name === null) {
-                $result = Photo::rawQuery(
-                    'SELECT * FROM photo ORDER BY RANDOM() LIMIT :limit OFFSET :offset',
-                    ['limit' => $limit, 'offset' => $offset]
-                )->findMany();
-            } else if ($species_name === 'all') {
-                // FIXME Don't use rawQuery at ORM.
-                $result = Photo::rawQuery(
-                    'SELECT * FROM photo LIMIT :limit OFFSET :offset',
-                    ['limit' => $limit, 'offset' => $offset]
-                )->findMany();
+                $result = Photo::order_by_expr('RANDOM()')
+                    ->limit($limit)
+                    ->findMany();
+            } elseif ($species_name === 'all') {
+                $result = Photo::offset($offset)->limit($limit)->findMany();
             } else {
-                // FIXME Don't use rawQuery at ORM.
-                $result = Photo::rawQuery(
-                    'SELECT * FROM photo WHERE LOWER(species_name) LIKE :species_name LIMIT :limit OFFSET :offset',
-                    [
-                        'species_name' => '%' . strtolower($species_name) . '%',
-                        'limit' => $limit,
-                        'offset' => $offset
-                    ]
-                    )->findMany();
+                $result = Photo::where_raw('LOWER(species_name) LIKE ?', '%' . strtolower($species_name) . '%')
+                    ->offset($offset)
+                    ->limit($limit)
+                    ->findMany();
             }
         } catch (PDOException $e) {
         }
+
         return array_map(function ($photo) { return $photo->asArray(); }, $result);
     }
 }
