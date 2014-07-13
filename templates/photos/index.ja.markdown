@@ -26,13 +26,13 @@ $photos = array_map(function ($photo) {
     width: 32%;
   }
 </style>
-<form method="GET">
-  <select name="species_name">
+<form id="search-form" method="GET">
+  <select id="search-form-species_name" name="species_name">
+    <option value="" <?php if ($species_name === null) { echo 'selected'; } ?>>--種類を選ぶ--</option>
     <option value="all" <?php if ($species_name === 'all') { echo 'selected'; } ?>>全て見る</option>
     <option value="Calanthe" <?php if ($species_name === 'Calanthe') { echo 'selected'; } ?>>エビネ</option>
     <option value="Ponerorchis" <?php if ($species_name === 'Ponerorchis') { echo 'selected'; } ?>>アワチドリ/夢ちどり</option>
   </select>
-  <input type="submit" value="検索" />
 </form>
 <div id="photo-gallery" class="photos">
 <?php foreach ($photos as $photo) { ?>
@@ -63,5 +63,8 @@ $photos = array_map(function ($photo) {
 <script>
   window.addEventListener('DOMContentLoaded', function () {
     new PhotoGallery().init(document.getElementById("photo-gallery"));
+    document.getElementById('search-form-species_name').onchange = function () {
+      document.getElementById('search-form').submit();
+    };
   });
 </script>

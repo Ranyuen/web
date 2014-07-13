@@ -9,28 +9,30 @@ class ApiPhotos implements ApiController
     {
         $limit = isset($request_params['limit']) ? $request_params['limit'] : 100;
         $offset = isset($request_params['offset']) ? $request_params['offset'] : 0;
-        $species_name = isset($request_params['species_name']) ?
+        $species_name = isset($request_params['species_name']) && $request_params['species_name'] ?
             $request_params['species_name'] : null;
         $result = [];
         try {
             if ($species_name === null) {
                 $result = Photo::rawQuery(
-                    'select * from photo order by random() limit :limit offset :offset',
+                    'SELECT * FROM photo ORDER BY RANDOM() LIMIT :limit OFFSET :offset',
                     ['limit' => $limit, 'offset' => $offset]
                 )->findMany();
             } else if ($species_name === 'all') {
+                // FIXME Don't use rawQuery at ORM.
                 $result = Photo::rawQuery(
-                    'select * from photo limit :limit offset :offset',
+                    'SELECT * FROM photo LIMIT :limit OFFSET :offset',
                     ['limit' => $limit, 'offset' => $offset]
                 )->findMany();
             } else {
+                // FIXME Don't use rawQuery at ORM.
                 $result = Photo::rawQuery(
-                    'select * from photo where lower(species_name) like :species_name limit :limit offset :offset',
+                    'SELECT * FROM photo WHERE LOWER(species_name) LIKE :species_name LIMIT :limit OFFSET :offset',
                     [
                         'species_name' => '%' . strtolower($species_name) . '%',
-                            'limit' => $limit,
-                            'offset' => $offset
-                        ]
+                        'limit' => $limit,
+                        'offset' => $offset
+                    ]
                     )->findMany();
             }
         } catch (PDOException $e) {
