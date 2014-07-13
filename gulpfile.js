@@ -5,7 +5,9 @@ var exec = require('gulp-exec'),
     jshint = require('gulp-jshint'),
     jshintStylish = require('jshint-stylish'),
     less = require('gulp-less'),
-    Promise = require('bluebird');
+    Promise = require('bluebird'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
 
 /**
  * @param {string} cmd
@@ -22,6 +24,28 @@ function childPromise(cmd) {
     });
   });
 }
+
+gulp.task('uglifyjs_layout', function () {
+  gulp.src(['assets/bower_components/jquery/dist/jquery.min.js',
+            'assets/javascripts/messageForDeveloperFromRanyuen.js'
+          ]).
+    pipe(concat('layout_js_min.js')).
+    pipe(uglify()).
+    pipe(gulp.dest('assets/javascripts'));
+});
+
+gulp.task('uglifyjs_photo', function () {
+  gulp.src(['assets/bower_components/colorbox/jquery.colorbox-min.js',
+            'assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
+            'assets/bower_components/masonry/dist/masonry.pkgd.min.js',
+            'assets/bower_components/uri.js/src/URI.min.js',
+            'assets/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
+            'assets/javascripts/photoGallery.js'
+            ]).
+  pipe(concat('photo_js_min.js')).
+  pipe(uglify()).
+  pipe(gulp.dest('assets/javascripts'));
+})
 
 gulp.task('jshint', function () {
   gulp.src(['*.js', 'assets/javascripts/*.js']).
@@ -60,5 +84,5 @@ gulp.task('php-unit', function (done) {
   });
 });
 
-gulp.task('build', ['less']);
+gulp.task('build', ['less', 'uglifyjs_layout', 'uglifyjs_photo']);
 gulp.task('test', ['jshint', 'php-lint', 'php-fixer', 'php-unit']);
