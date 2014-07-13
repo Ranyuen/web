@@ -63,7 +63,7 @@ function PhotoGallery() {
   this.currentPage = 1;
   this._masonry = null;
   this._lockLoadingNextPage = false;
-  this,_lastPhotoNode = null;
+  this._lastPhotoNode = null;
 }
 
 PhotoGallery.prototype.init = function (rootNode) {
@@ -86,14 +86,12 @@ PhotoGallery.prototype.applied = function () {
     speed:      360,
     width:      '90%'
   });
-  this._lastPhotoNode = Array.from(document.getElementsByClassName('photo')).pop();
+  this._lastPhotoNode = this.rootNode.querySelector('.photo:last-of-type');
 };
 
 PhotoGallery.prototype.onscroll = function () {
-  var lastPhotoNode = this.rootNode.querySelector('.photo:last-of-type');
-
   if (document.documentElement.clientHeight >
-      lastPhotoNode.getBoundingClientRect().top) {
+      this._lastPhotoNode.getBoundingClientRect().top) {
     this.loadNextpage();
   }
 };
