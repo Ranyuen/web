@@ -106,8 +106,9 @@ PhotoGallery.prototype.loadNextpage = function () {
   if (this._lockLoadingNextPage) { return; }
   this._lockLoadingNextPage = true;
   uri = URI('/api/photos/').
-    addSearch(URI(location.href).search()).
-    addSearch({limit: 20, offset: (this.currentPage - 1) * 20});
+    addSearch(URI(location.href).search(true)).
+    addSearch({limit: 20, offset: this.currentPage * 20}).
+    toString();
   req = new XMLHttpRequest();
   req.open('GET', uri);
   req.send();
@@ -122,7 +123,7 @@ PhotoGallery.prototype.loadNextpage = function () {
     } catch (err) {
       return console.error([err, req.responseText]);
     }
-    ++ this.currentPage;
+    ++ _this.currentPage;
     _this.insertPhotoNodes(res.map(function (photo) {
       var thumb_width = 349,
           thumb_height = ~~(photo.height * thumb_width / photo.width);
