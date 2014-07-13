@@ -16,7 +16,10 @@ title: ウチョウラン (Ponerorchis) の種類
 一茎に5～10花、この仲間としてはやや大きめの花を咲かせ、花の変化が多く主に山野草として楽しまれています。北関東を中心に全国に愛好家がいます。関東以北の系統ではやや冷涼地に自生していることが多く、少々暑がるため、都市部周辺で初心者が栽培するには少し難しくなります。クーラー室など涼しい場所が確保できれば良く育ちます。
 
 ## アワチドリ (suzukiana)
-![アワチドリ (Ponerorchis suzukiana) - Ranyuen](/assets/images/awachidori_bot.jpg)
+<figure>
+  ![アワチドリ (Ponerorchis suzukiana) - Ranyuen](/assets/images/awachidori_bot.jpg)
+  <figcaption>アワチドリ</figcaption>
+</figure>
 
 千葉県の房総半島にのみ自生。原種は距の大きさと特徴のある咲き方でウチョウランとの区別は容易です。川沿いの斜面などウチョウランよりも水気の多い場所に自生が見られ葉の枚数が多く、その分蒸散量も多くなりウチョウランよりも水分を好みます。
 
@@ -25,7 +28,10 @@ title: ウチョウラン (Ponerorchis) の種類
 アワチドリという和名は発見者、鈴木吉五郎氏の話では「亀山から清澄山に行く途中、上総の国からわずかに安房の国に入った場所、清澄山四方木付近で発見したため付けた」とのこと。しかし実際には安房の国よりも上総の国に多く自生しています。低山に自生するため日中の暑さには強いのですが、夜間なるべく涼しくなるように心掛けます。
 
 ## クロカミラン (kurokamiana)
-![クロカミラン (Ponerorchis) - Ranyuen](/assets/images/kurokamiran.jpg)
+<figure>
+  ![クロカミラン (Ponerorchis) - Ranyuen](/assets/images/kurokamiran.jpg)
+  <figcaption>クロカミラン</figcaption>
+</figure>
 
 佐賀県黒髪山とその周辺地域に自生します。焼物で有名な町、有田の駅周辺や神社の裏山など、人里近くの山でも見られましたが、採取により激減してしまいました。開花期に竜門ダム周辺を訪れると今でも人の手の届かないところに点在して開花する様子が見られます (要双眼鏡)。
 
@@ -34,8 +40,10 @@ title: ウチョウラン (Ponerorchis) の種類
 自生地ではヒナランと一緒に生えている様子も見られますが、これら2種間の雑種は見当たりません。人工交配では二種間の雑種も作り出されています。
 
 ## サツマチドリ (micropunctata)
-![サツマチドリ (Ponerorchis) - Ranyuen](/assets/images/satsumachidori.jpg)
-
+<figure>
+  ![サツマチドリ (Ponerorchis) - Ranyuen](/assets/images/satsumachidori.jpg)
+  <figcaption>サツマチドリ</figcaption>
+</figure>
 昭和の終わり頃に鹿児島県下こしき島で発見された種類。その後、前川博士により<i>P.kurokamiana var.micropunctata</i>とされました。発見当時はクロカミランが種として扱われ (<i>P.kurokamiana</i>) その変種としてvar.micropunctataが発見されたことで、分類学者のレベルの高さに多くの人が驚かされました。
 
 距は短く、花はクロカミランに似て多くの斑点を生じます。違いはクロカミランよりも多花性で開花時期が遅く、6～8月頃に咲きます。
@@ -50,8 +58,10 @@ title: ウチョウラン (Ponerorchis) の種類
 以前は山野草として趣味家により栽培されていましたが、夏の暑さが苦手で都市部での栽培は難しくなります。
 
 ## ニョホウチドリ (joo-iokiana)
-![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori01.jpg)
-![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori02.jpg)
+<figure>
+  ![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori01.jpg)![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori02.jpg)
+  <figcaption>ニョホウチドリ</figcaption>
+</figure>
 
 和名は日光の女峰山で発見されたことに因みます。日本の中部から関東にかけての高所に自生します。他のウチョウラン類とは異なり、明るい草原に他の植物とともに自生していることがほとんどです。自生地では7～8月に開花します。
 
