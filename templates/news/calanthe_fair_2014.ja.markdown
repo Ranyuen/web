@@ -60,14 +60,14 @@ figcaption { text-align: center; }
 <figure>
   <img src="/assets/images/calanthe_fair_2014_1.jpg" alt="雪で倒壊したハウスの一部" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_3.jpg" alt="雪で倒壊したハウスの一部" style="max-width: 400px;" />
-  <figurecaption>雪で倒壊したハウスの一部</figurecaption>
+  <figcaption>雪で倒壊したハウスの一部</figcaption>
 </figure>
 
 そのため通常は一般にはほとんど出まわらない<b>豪華</b>で<b>きれい</b>な<b>高品質のエビネ (特上株)</b> を、<b>超格安</b>で販売します。
 
 <figure>
   <img src="/assets/images/calanthe_fair_2014_2.jpg" alt="カラフルな農場のエビネ - 蘭裕園" style="" />
-  <figurecaption>当園のエビネの一例です</figurecaption>
+  <figcaption>当園のエビネの一例です</figcaption>
 </figure>
 
 販売株は<u>すべての花が一鉢づつに異なる</u>ため、たくさんの中から自分好みのエビネを見つけて下さい。
@@ -98,7 +98,7 @@ figcaption { text-align: center; }
   <img src="/assets/images/calanthe_fair_2014_6.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_7.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_8.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
-  <figurecaption>4月6日の2000円株の状態</figurecaption>
+  <figcaption>4月6日の2000円株の状態</figcaption>
 </figure>
 
 4月18日午前10時からの開園です。5,000～10,000鉢販売予定しています。

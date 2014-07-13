@@ -27,16 +27,27 @@ iframe { border: 0; }
 
 figure {
   background: rgba(0, 0, 255, 0.1);
-  display: inline-block;
+  display: block;
+  overflow: hidden;
   position: relative;
   padding: 0.5em;
+  text-align: center;
 
-  figurecaption {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    clear: both;
     display: block;
     font-size: smaller;
     opacity: 0.8;
+    text-align: center;
   }
 }
+
+small { font-size: 80%; }
 
 table {
   thead { background: @nav_bg_color; }
@@ -52,7 +63,10 @@ a {
   &:visited { color: #265778; }
 }
 
-h1, h2, h3, h4, h5, h6 { margin-top: 1.5em; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  text-align: center;
+}
 
 b { color: #990066; }
 
@@ -80,7 +94,6 @@ body {
   }
 
   & > header {
-    // position: fixed;
     width: 100%;
     z-index: 1000;
   }
@@ -114,23 +127,19 @@ body {
 }
 
 .facebook {
-  .social-icon('/assets/images/icons/facebook.png', rgb(59, 91, 153));
+  .social-icon('/assets/images/icons/f_b_icon.png', rgb(59, 91, 153));
 }
 
 .youtube {
-  .social-icon('/assets/images/icons/youtube.png', rgb(229, 26, 39));
+  .social-icon('/assets/images/icons/yt_icon.png', rgb(229, 26, 39));
 }
 
 .widget-youtube { margin: 1.5em 0; }
-
-// #header-container-separator { height: @menu_height * 2; }
-
 .container {
   line-height: 1.4em;
   margin: 0 auto;
   overflow: visible;
   position: relative;
-  // top: @menu_height * 2;
   width: @16cols;
 
   & > article {
@@ -219,6 +228,12 @@ body {
 
 @media screen and (max-width: @16cols + 2em) {
   .container { width: @12cols; }
+
+  .global-nav .nav-right {
+    position: relative;
+    width: 100%;
+    text-align: right;
+  }
 }
 
 @media screen and (max-width: @12cols + 2em) {

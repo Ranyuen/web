@@ -25,7 +25,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 一方で、ヨーロッパを中心とした海外では、日本には<b>とてもカラフルなガーデンオーキッド＝庭植えできる蘭 (蘭裕園スタイル) の存在を知り、話題になっています。</b>
 
-<a href="http://fb.me/ranyuenjapan"><img src="/assets/images/top_img.jpg" alt="エビネ - 蘭裕園 (Ranyuen)" style="max-width: 600px;" /></a>
+<a href="http://fb.me/ranyuenjapan"><img src="/assets/images/cal_top4.jpg" alt="エビネ - 蘭裕園 (Ranyuen)" style="max-width: 600px;" /></a>
 
 cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFacebook</span></a>
 
@@ -66,10 +66,10 @@ cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFaceb
 
 <figure>
   <img src="/assets/images/growings_calanthe_in_the_new_way_ja_3.png" alt="エビネの花茎はねじるようにして引き抜く - 蘭裕園" style="max-width: 300px;" />
-  <figurecaption>
+  <figcaption>
     <p><b>花茎はねじるようにして引き抜く。</b></p>
     <p>新芽 (新葉) はやわらかく傷つきやすいので、抜けないからといって揺すってはいけません。固くて抜けないときは、火であぶったハサミを使い、なるべく下の方で切り取ってください。</p>
-  </figurecaption>
+  </figcaption>
 </figure>
 
 4月下旬頃になると新芽の中から現れたつぼみは下から上へと順次開花していきます。気温が低ければゆっくりと一花ずつ日数をかけ、暖かければ１週間も掛からず一気に上部まで咲きあがります。
@@ -111,10 +111,10 @@ cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFaceb
 
 <figure>
   <img src="/assets/images/growings_calanthe_in_the_new_way_ja_2.png" alt="エビネ 株の前 (新芽の前) を広くあけて植える。 - 蘭裕園" style="max-width: 400px;" />
-  <figurecaption>
+  <figcaption>
     <p><b>株の前 (新芽の前) を広くあけて植える。</b></p>
     <p>根はほぐさずに植え替えます。</p>
-  </figurecaption>
+  </figcaption>
 </figure>
 
 また、植え替え後はすぐに肥料を施します。 <i>→参考:</i> [肥料の施し方](growings/calanthe/growings_calanthe_in_the_new_way#肥料の施し方)
@@ -139,10 +139,10 @@ cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFaceb
 --
 <figure>
   <img src="/assets/images/growings_calanthe_in_the_new_way_ja_1.png" alt="エビネ 新芽の前は避ける。 - 蘭裕園" style="max-width: 400px;" />
-  <figurecaption>
+  <figcaption>
     <p><b>新芽の前は避ける。</b></p>
     <p>新芽の前には肥料は置かないようにします。</p>
-  </figurecaption>
+  </figcaption>
 </figure>
 
 化学肥料は新芽の無い位置。あるいは、全体にバラまくように施します。

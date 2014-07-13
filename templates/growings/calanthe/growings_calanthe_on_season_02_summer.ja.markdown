@@ -4,7 +4,7 @@ title: 年間の管理 夏期 (6月～8月)
 ## エビネ年間の管理 夏期 (6月～8月)
 <figure>
   <img src="/assets/images/summer_ne.png" width="250" alt="7月頃から来年の花芽を作る (エビネ, Calanthe) - Ranyuen" />
-  <figurecaption>7月頃から来年の花芽を作る</figurecaption>
+  <figcaption>7月頃から来年の花芽を作る</figcaption>
 </figure>
 
 新葉は大きく展開し、その下部では、新しいバルブが急速に肥大し、そこから生じた根の成長も旺盛です。淡い緑色をしていた葉は、厚みのある硬い葉となり、夏の強い光や風にも耐えられる様に濃い緑色へと変化します。7月頃から来年の花芽を作る 葉柄部(葉の基部)を包むように支えていたハカマ (葉鞘) も役割を終え、色あせて褐色に変わってきます。
@@ -50,7 +50,7 @@ title: 年間の管理 夏期 (6月～8月)
 
 <figure>
   <img src="/assets/images/hadani_siro.png" width="250" alt="ハダニによる被害葉 (エビネ, Calanthe) - Ranyuen" />
-  <figurecaption>ハダニによる被害葉</figurecaption>
+  <figcaption>ハダニによる被害葉</figcaption>
 </figure>
 
 雨がかからない (乾燥した) 場所では、葉のうらにハダニが発生することがよくあります。葉が白くかすれたような症状が見られるときは、葉のうらに注意します。小さくて動くものがいれば、ハダニの可能性があります。

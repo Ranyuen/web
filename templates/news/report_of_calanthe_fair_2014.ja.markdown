@@ -35,11 +35,11 @@ h1 {
 
 <a href="/about_us/direction">蘭裕園へのアクセス</a>
 <figure>
-  <figurecaption>エビネ展2014の様子 : 撮影日2014年4月18日)</figurecaption>
+  <figcaption>エビネ展2014の様子 : 撮影日2014年4月18日)</figcaption>
   <img src="/assets/images/calanthe_fair_2014_9.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
-  
+
   <img src="/assets/images/calanthe_fair_2014_10.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
-  
+
   <img src="/assets/images/calanthe_fair_2014_16.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 
   <img src="/assets/images/calanthe_fair_2014_13.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
@@ -52,6 +52,5 @@ h1 {
 
   <img src="/assets/images/calanthe_fair_2014_17.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 
-  <img src="/assets/images/calanthe_fair_2014_18.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />  
+  <img src="/assets/images/calanthe_fair_2014_18.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
 </figure>
-
