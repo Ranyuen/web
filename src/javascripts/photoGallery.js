@@ -157,5 +157,5 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
   this.applied();
 };
 
-global.PhotoGallery = PhotoGallery;
+global['PhotoGallery'] = PhotoGallery;
 })((this || 0).self || global);

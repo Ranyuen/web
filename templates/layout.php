@@ -97,7 +97,6 @@ $switch_lang = implode(' / ', $switch_lang);
     a.src = g;
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
   ga('create', 'UA-47871400-1', 'ranyuen.com');
   ga('send', 'pageview');
 </script>
