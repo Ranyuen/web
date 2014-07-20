@@ -136,11 +136,11 @@ body {
 .widget-youtube { margin: 1.5em 0; }
 
 .container {
+  float: right;
   line-height: 1.4em;
-  margin: 0 auto;
   overflow: visible;
   position: relative;
-  width: $cols16;
+  width: 80%; /* $cols16; */
 
   & > article {
     background: rgba(255, 255, 255, 0.8);
@@ -187,9 +187,14 @@ body {
   }
 }
 
+#sidebar {
+  float: left;
+  width: 20%;
+}
+
 .local-nav {
   background: $nav_bg_color;
-  @include navigation;
+  @include navigationLocal;
 }
 
 .breadcrumb {

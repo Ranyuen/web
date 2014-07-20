@@ -209,6 +209,31 @@ $nav_bg_color: rgb(240, 245, 240);
   .nav-item-home { font-size: larger; }
 }
 
+@mixin navigationLocal {
+  .nav-item {
+    line-height: $menu_height;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  .nav-item {
+    padding: 0 2mm;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  .nav-item:not(.nav-item-home) {
+    a {
+      &:hover, &:focus { color: #666; }
+    }
+  }
+
+  .nav-item-home { font-size: larger; }
+}
+
 @mixin social-icon($image, $color) {
   $social-icon-size: 24px;
 

@@ -255,11 +255,12 @@ body > header {
   margin: 1.5em 0; }
 
 .container {
+  float: right;
   line-height: 1.4em;
-  margin: 0 auto;
   overflow: visible;
   position: relative;
-  width: 70.5em; }
+  width: 80%;
+  /* $cols16; */ }
 .container > article {
   background: rgba(255, 255, 255, 0.8);
   overflow: hidden;
@@ -310,18 +311,16 @@ body > header {
   height: 12mm;
   min-width: 12mm; }
 
+#sidebar {
+  float: left;
+  width: 20%; }
+
 .local-nav {
   background: #f0f5f0; }
-.local-nav .nav-left, .local-nav .nav-right, .local-nav .nav-item {
-  display: inline-block;
+.local-nav .nav-item {
   line-height: 12mm;
   margin: 0;
   vertical-align: middle; }
-.local-nav .nav-right {
-  position: absolute;
-  right: 0; }
-.local-nav .nav-right .lang {
-  font-size: 80%; }
 .local-nav .nav-item {
   padding: 0 2mm; }
 .local-nav .nav-item a {

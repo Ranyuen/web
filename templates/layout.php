@@ -55,9 +55,6 @@ $switch_lang = implode(' / ', $switch_lang);
                 <div class="lang"><?php echo $switch_lang; ?></div>
             </div>
         </nav>
-        <nav class="local-nav">
-        <?php $h->echoNav($local_nav, $local_base); ?>
-        </nav>
     </header>
     <!-- <div id="header-container-separator"> </div> -->
     <div class="container">
@@ -103,6 +100,11 @@ $switch_lang = implode(' / ', $switch_lang);
             <p class="copyright">Copyright (C) 2010-2014 <a rel="home" href="<?php $h->h($home); ?>">Ranyuen</a> All Rights Reserved.<br/>
             Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h->h($home); ?>">Ranyuen</a>&#39;s farm.</p>
         </footer>
+    </div>
+    <div id="sidebar">
+        <nav class="local-nav">
+            <?php $h->echoNav($local_nav, $local_base); ?>
+        </nav>
     </div>
     <script>
     window.addEventListener('DOMContentLoaded', function () {
