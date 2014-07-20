@@ -4,12 +4,13 @@ title: 蘭裕園のカラフルな日本のランの写真を続々追加中
 
 蘭裕園のカラフルな日本のランの写真を続々追加中
 ==
+<b><a href="photos/index">写真を見る</a></b>
 <figure>
-  <a href="photos/index"><img src="/assets/images/information_of_new_photos_1.jpg" alt="ミニミニランラン (アワチドリ / 夢ちどり) - 蘭裕園" width="700"/></a>
-  <figcaption>「写真を見る」- 蘭遊園</a></figcaption>
+  <a href="photos/index"><img src="/assets/images/information_of_new_photos_1.jpg" alt="ミニミニランラン (アワチドリ / 夢ちどり) - 蘭裕園"  width="80%"/></a>
+  <figcaption>「写真を見る」- 蘭裕園</a></figcaption>
 </figure>
 
 蘭裕園のカラフルでかわいらしいランの写真を続々追加中です。世界で最も多彩なラン「<b>春色エビネ</b>」、世界で一番キュートなラン「<b>夢ちどり／アワチドリ</b>」の写真を「写真を見る」ページで、現在1000枚近くの写真を公開しています。
 今後も新しい写真を随時追加していく予定ですのでお楽しみに！
 
-<b><a href="photos/index">写真を見る</a></b>
+
