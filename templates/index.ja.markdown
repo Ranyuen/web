@@ -21,6 +21,8 @@ figcaption {
 }
 </style>
 <b><a href="/news/information_of_shipping_of_awachidori_and_yumechidori_2014">ミニミニランラン (アワチドリ / 夢ちどり) 6月上旬から出荷が始まりました</a></b>
+
+<b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
 Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
 ==
 <img src="/assets/images/top_img.jpg" alt="アワチドリ / 夢ちどり - 蘭裕園" />
