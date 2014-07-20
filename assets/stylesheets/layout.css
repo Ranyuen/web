@@ -1,105 +1,4 @@
 @charset "UTF-8";
-/*
-  Frameless      <http://framelessgrid.com/>
-  by Joni Korpi     <http://jonikorpi.com/>
-  licensed under CC0  <http://creativecommons.org/publicdomain/zero/1.0/>
-*/
-/*
-  Margin, padding, and border resets
-  except for form elements
-*/
-body, div, pre, dl, dt, dd, fieldset, form, label, legend, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section {
-  margin: 0;
-  padding: 0;
-  border: 0; }
-
-/*
-  Consistency fixes
-  adopted from http://necolas.github.com/normalize.css/
-*/
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, audio, canvas, video {
-  display: block; }
-
-html {
-  height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  min-height: 100%;
-  font-size: 100%; }
-
-sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-b, strong {
-  font-weight: bold; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-a img, img {
-  -ms-interpolation-mode: bicubic;
-  border: 0; }
-
-input, textarea, button, select {
-  margin: 0;
-  font-size: 100%;
-  line-height: normal;
-  vertical-align: baseline; }
-
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  cursor: pointer;
-  -webkit-appearance: button; }
-
-input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-
-textarea {
-  overflow: auto; }
-
-/*
-  These are easy to forget
-*/
-::selection {
-  background: red;
-  color: white; }
-
-::-moz-selection {
-  background: red;
-  color: white; }
-
-img::selection {
-  background: transparent; }
-
-img::-moz-selection {
-  background: transparent; }
-
-body {
-  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62); }
-
 @-webkit-keyframes animateLogo {
   0% {
     -webkit-transform: rotate(45deg);
@@ -259,12 +158,12 @@ body > header {
   line-height: 1.4em;
   overflow: visible;
   position: relative;
-  width: 80%;
-  /* $cols16; */ }
-.container > article {
-  background: rgba(255, 255, 255, 0.8);
-  overflow: hidden;
-  padding: 0 5mm 12mm 5mm; }
+  width: 100%; }
+.container > #main {
+  padding: 0 5mm;
+  overflow: hidden; }
+.container > #main #mainInner {
+  background: rgba(255, 255, 255, 0.8); }
 .container > footer {
   background: rgba(255, 255, 255, 0.6);
   color: #666;
@@ -279,9 +178,13 @@ body > header {
   line-height: 12mm;
   margin: 0;
   vertical-align: middle; }
+.global-nav .nav-left {
+  float: left;
+  width: 60%; }
 .global-nav .nav-right {
-  position: absolute;
-  right: 0; }
+  float: right;
+  width: 30%;
+  text-align: right; }
 .global-nav .nav-right .lang {
   font-size: 80%; }
 .global-nav .nav-item {
@@ -312,24 +215,16 @@ body > header {
   min-width: 12mm; }
 
 #sidebar {
-  float: left;
-  width: 20%; }
-
-.local-nav {
   background: #f0f5f0; }
-.local-nav .nav-item {
-  line-height: 12mm;
-  margin: 0;
-  vertical-align: middle; }
-.local-nav .nav-item {
-  padding: 0 2mm; }
-.local-nav .nav-item a {
+#sidebar a {
   color: #000;
+  font-size: larger;
   text-decoration: none; }
-.local-nav .nav-item:not(.nav-item-home) a:hover, .local-nav .nav-item:not(.nav-item-home) a:focus {
+#sidebar a:hover, #sidebar a:focus {
   color: #666; }
-.local-nav .nav-item-home {
-  font-size: larger; }
+#sidebar .local-nav {
+  overflow: hidden;
+  background: #f0f5f0; }
 
 .breadcrumb {
   font-size: small;
@@ -339,9 +234,13 @@ body > header {
   line-height: 12mm;
   margin: 0;
   vertical-align: middle; }
+.breadcrumb .nav-left {
+  float: left;
+  width: 60%; }
 .breadcrumb .nav-right {
-  position: absolute;
-  right: 0; }
+  float: right;
+  width: 30%;
+  text-align: right; }
 .breadcrumb .nav-right .lang {
   font-size: 80%; }
 .breadcrumb .nav-item {
@@ -371,17 +270,26 @@ body > header {
   - the first one zooms out by a factor of (16-2)/16 = 0.875
   - the second one zooms in by a factor of (16+2)/16 = 1.125
 */
-@media screen and (max-width: 72.5em) {
+@media screen and (min-width: 480px) {
   .container {
-    width: 52.5em; }
+    width: 100%; }
 
-  .global-nav .nav-right {
+  /*.global-nav .nav-right {
     position: relative;
     width: 100%;
-    text-align: right; } }
-@media screen and (max-width: 54.5em) {
+    text-align: right;
+  } */ }
+@media screen and (min-width: 768px) {
   .container {
-    width: 34.5em; } }
-@media screen and (max-width: 36.5em) {
+    width: 100%; }
+
+  #mainInner {
+    float: right;
+    width: 80%; }
+
+  #sidebar {
+    float: left;
+    width: 20%; } }
+@media screen and (min-width: 1140px) {
   .container {
-    width: 25.5em; } }
+    width: 100%; } }

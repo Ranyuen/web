@@ -140,12 +140,15 @@ body {
   line-height: 1.4em;
   overflow: visible;
   position: relative;
-  width: 80%; /* $cols16; */
+  width: 100%;
 
-  & > article {
-    background: rgba(255, 255, 255, 0.8);
+  & > #main {
+    padding: 0 5mm;
     overflow: hidden;
-    padding: 0 5mm $menu_height 5mm;
+  }
+
+  & > #main #mainInner {
+    background: rgba(255, 255, 255, 0.8);
   }
 
   & > footer {
@@ -188,13 +191,19 @@ body {
 }
 
 #sidebar {
-  float: left;
-  width: 20%;
-}
-
-.local-nav {
   background: $nav_bg_color;
-  @include navigationLocal;
+
+  a {
+    color: #000;
+    font-size: larger;
+    text-decoration: none;
+
+    &:hover, &:focus { color: #666; }
+  }
+  
+  .local-nav {
+    background: $nav_bg_color;
+  }
 }
 
 .breadcrumb {
@@ -240,20 +249,33 @@ body {
 //   }
 // }
 
-@media screen and (max-width: $cols16 + 2em) {
-  .container { width: $cols12; }
+@media screen and (min-width: 480px) {
 
-  .global-nav .nav-right {
+  .container { width: 100%; }
+
+  /*.global-nav .nav-right {
     position: relative;
     width: 100%;
     text-align: right;
+  } */
+}
+
+@media screen and (min-width: 768px) {
+
+  .container { width: 100%; }
+
+  #mainInner {
+    float: right;
+    width: 80%;
+  }
+
+  #sidebar {
+    float: left;
+    width: 20%;
   }
 }
 
-@media screen and (max-width: $cols12 + 2em) {
-  .container { width: $cols8; }
-}
+@media screen and (min-width: 1140px) {
 
-@media screen and (max-width: $cols8 + 2em) {
-  .container { width: $cols6; }
+  .container { width: 100%; }
 }
