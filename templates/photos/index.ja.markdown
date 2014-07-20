@@ -53,13 +53,8 @@ $photos = array_map(function ($photo) {
   </div>
 <?php } ?>
 </div>
-<script src="/assets/bower_components/colorbox/jquery.colorbox-min.js"></script>
 <link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
-<script src="/assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js"></script>
-<script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script src="/assets/bower_components/uri.js/src/URI.min.js"></script>
-<script src="/assets/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js"></script>
-<script src="/assets/javascripts/photoGallery.js"></script>
+<script src="/assets/javascripts/photoGallery.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
     new PhotoGallery().init(document.getElementById("photo-gallery"));

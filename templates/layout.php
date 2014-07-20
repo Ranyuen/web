@@ -38,7 +38,6 @@ $switch_lang = implode(' / ', $switch_lang);
     <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
     <header>
@@ -103,15 +102,7 @@ $switch_lang = implode(' / ', $switch_lang);
             Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h->h($home); ?>">Ranyuen</a>&#39;s farm.</p>
         </footer>
     </div>
-    <script>
-    window.addEventListener('DOMContentLoaded', function () {
-        var menuHeight = window.getComputedStyle(document.querySelector('body > header')).height;
-
-        // document.querySelector('.container').style.top = menuHeight;
-        // document.querySelector('#header-container-separator').style.height = menuHeight;
-    });
-    </script>
-    <script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
+    <script src="/assets/javascripts/layout.min.js"></script>
     <script>
         (function (i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function () {
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

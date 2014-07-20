@@ -18,7 +18,7 @@ class ApiPhotos implements ApiController
                     'select * from photo order by random() limit :limit offset :offset',
                     ['limit' => $limit, 'offset' => $offset]
                 )->findMany();
-            } else if ($species_name === 'all') {
+            } elseif ($species_name === 'all') {
                 $result = Photo::rawQuery(
                     'select * from photo limit :limit offset :offset',
                     ['limit' => $limit, 'offset' => $offset]
@@ -35,6 +35,7 @@ class ApiPhotos implements ApiController
             }
         } catch (PDOException $e) {
         }
+
         return array_map(function ($photo) { return $photo->asArray(); }, $result);
     }
 }
