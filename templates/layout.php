@@ -39,6 +39,7 @@ $switch_lang = implode(' / ', $switch_lang);
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bower_components/uri.js/src/URI.js"></script>
 </head>
 <body class="<?php $h -> h($lang); ?>" lang="<?php $h -> h($lang); ?>">
 
@@ -97,7 +98,7 @@ $switch_lang = implode(' / ', $switch_lang);
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'UA-47871400-1', 'ranyuen.com');
-  ga('send', 'pageview'); 
+  ga('send', 'pageview');
 </script>
 </body>
 </html>

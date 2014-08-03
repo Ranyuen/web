@@ -54,7 +54,10 @@ title: ラン検定
 <script src="/assets/javascripts/view_exam.js"></script>
 <script>
 function changeExam(examName) {
-  location.href = location.href.replace(/([\?&])type=\w+/, '$1type=' + examName);
+  location.href = URI(location.href).
+    removeSearch('type').
+    addSearch('type', examName).
+    toString();
 }
 function prepareExam(examName) {
   var nodes = document.querySelectorAll('#examChanger a');
