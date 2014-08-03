@@ -16,79 +16,99 @@ $switch_lang = implode(' / ', $switch_lang);
 <!--[if lt IE 9]><html class="ie"><![endif]-->
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <title><?php $h->h("$title - $site_name"); ?></title>
-    <meta name="google-site-verification" content="osPpSihI4cWmpC3IfcU0MFq6zDdSPWyb7V2_ECHHo5Q"/>
-    <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
-<?php if (isset($description)) { ?>
-    <meta name="description" content="<?php $h->h($description); ?>"/>
-<?php } ?>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="home" href="<?php $h->h($home); ?>"/>
-    <base href="<?php $h->h($link['base']); ?>"/>
-    <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
-    <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
-    <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
-    <style>
+  <meta charset="UTF-8">
+  <title><?php $h -> h("$title - $site_name"); ?></title>
+  <meta name="google-site-verification" content="osPpSihI4cWmpC3IfcU0MFq6zDdSPWyb7V2_ECHHo5Q"/>
+  <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
+  <?php if (isset($description)) { ?>
+  <meta name="description" content="<?php $h -> h($description); ?>"/> <?php } ?>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="home" href="<?php $h -> h($home); ?>"/>
+  <base href="<?php $h -> h($link['base']); ?>"/>
+  <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
+  <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css"/>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
+  <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
+  <style>
     body, .header {
-        background: url('<?php $h->h($bgimage); ?>') fixed;
+      background: url('<?php $h -> h($bgimage); ?>') fixed;
     }
-    </style>
-    <!--[if lt IE 9]>
-        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
 </head>
-<body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
-    <header>
-        <nav class="global-nav">
-            <div class="nav-left">
-                <a rel="home" class="logo" href="<?php $h->h($home); ?>" title="<?php $h->h($site_name); ?>">
-                    <img src="/assets/images/icons/ranyuen.png" alt="<?php $h->h($site_name); ?>" longdesc="<?php $h->h($home); ?>"/>
-                </a>
-                <div class="logo-span nav-item"> </div>
-            <?php $h->echoNav($global_nav, $link['base']); ?>
-            </div>
-            <div class="nav-right">
-                <div class="lang"><?php echo $switch_lang; ?></div>
-            </div>
-        </nav>
+<body class="<?php $h -> h($lang); ?>" lang="<?php $h -> h($lang); ?>">
+
+  <div class="container">
+    <header class="cf">
+      <div class="headerInner cf">
+        <div class="logo">
+          <h1>
+            <a rel="home" href="<?php $h -> h($home); ?>" title="<?php $h -> h($site_name); ?>">
+              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h($site_name); ?>" longdesc="<?php $h -> h($home); ?>"/>
+            </a>
+          </h1>
+        </div><!-- /logo -->
+        <div class="lang">
+          <?php echo $switch_lang; ?>
+        </div><!-- /lang -->
+      </div><!-- /headerInner -->
+      <nav class="cf">
+        <?php $h -> echoNav($global_nav, $link['base']); ?>
+      </nav>
     </header>
-    <!-- <div id="header-container-separator"> </div> -->
-    <div class="container">
-        <div id="main">
-            <div id="mainInner">
-            <?php $h->echoBreadcrumb($breadcrumb, $link['base']); ?>
-            <article><?php $h->render($content, $__params); ?></article>
-            </div>
-            <div id="sidebar">
-            <nav><?php $h->echoNav($global_nav, $link['base']); ?></nav>
-            </div>
-        </div>
-        <footer>
-            <p class="copyright">Copyright (C) 2010-2014 <a rel="home" href="<?php $h->h($home); ?>">Ranyuen</a> All Rights Reserved.<br/>
-            Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h->h($home); ?>">Ranyuen</a>&#39;s farm.</p>
-        </footer>
-    </div>
-    <script>
-    window.addEventListener('DOMContentLoaded', function () {
-        var menuHeight = window.getComputedStyle(document.querySelector('body > header')).height;
+    <div class="main cf">
+      <div class="mainInner">
+        <?php $h -> echoBreadcrumb($breadcrumb, $link['base']); ?>
+        <article>
+          <?php $h -> render($content, $__params); ?>
+        </article>
+      </div><!-- /mainInner -->
+      <div class="side">
+        <aside>
+          <?php $h -> echoNav($local_nav, $local_base); ?>
+        </aside>
+      </div><!-- /side -->
+    </div><!-- /main -->
+    <footer class="cf">
+      <p class="copyright">
+        <small>
+          Copyright (C) 2010-2014 <a rel="home" href="<?php $h -> h($home); ?>">Ranyuen</a> All Rights Reserved.<br/>
+          Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h -> h($home); ?>">Ranyuen</a>&#39;s farm.
+        </small>
+      </p>
+    </footer>
+  </div><!-- /container -->
 
-        // document.querySelector('.container').style.top = menuHeight;
-        // document.querySelector('#header-container-separator').style.height = menuHeight;
-    });
-    </script>
-    <script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
-    <script>
-        (function (i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function () {
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!-- ▼▼▼ script ▼▼▼ -->
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var menuHeight = window.getComputedStyle(document.querySelector('body > header')).height;
 
-        ga('create', 'UA-47871400-1', 'ranyuen.com');
-        ga('send', 'pageview');
-    </script>
+    // document.querySelector('.container').style.top = menuHeight;
+    // document.querySelector('#header-container-separator').style.height = menuHeight;
+  }); 
+</script>
+<script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] ||
+    function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-47871400-1', 'ranyuen.com');
+  ga('send', 'pageview'); 
+</script>
+<!-- ▲▲▲ script ▲▲▲ -->
 </body>
 </html>

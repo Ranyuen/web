@@ -1,281 +1,256 @@
 @charset "utf-8";
 @import "helpers";
 
-@-webkit-keyframes animateLogo {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-@keyframes animateLogo {
-  0% {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
+/*
+=======================
+  microClearfix
+=======================
+*/
 
-iframe { border: 0; }
-
-figure {
-  background: rgba(0, 0, 255, 0.1);
-  display: block;
-  overflow: hidden;
-  position: relative;
-  padding: 0.5em;
-  text-align: center;
-
-  img {
-    display: block;
-    margin: 0 auto;
+.cf {
+  *zoom: 1;
+  
+  &:before, &:after {
+    content: " ";
+    display: table;
   }
-
-  figcaption {
+  
+  &:after {
     clear: both;
-    display: block;
-    font-size: smaller;
-    opacity: 0.8;
-    text-align: center;
   }
 }
 
-small { font-size: 80%; }
-
-table {
-  thead { background: $nav_bg_color; }
-
-  th, td { border: 1px solid #666; }
-}
-
-img { max-width: 100%; }
-
-a {
-  color: #3b8bba;
-
-  &:visited { color: #265778; }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 1.5em;
-  text-align: center;
-}
-
-b { color: #990066; }
+/*
+=======================
+  baseＥｌｅｍｅｎｔｓ
+=======================
+*/
 
 body {
-  background-attachment: fixed;
-  height: 100%;
-  position: relative;
-
+  margin: 0;
+  line-height: 1.4;
+  color: #333333;
+  background: #d6e9ca;
+  font-size: 16px;
+  
   &.ja {
-    font-family: "游ゴシック Light", "游ゴシック", "YuGothic", sans-serif;
-
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'MS Pゴシック', sans-serif;
+    
     q {
       &:before { content: "「"; }
       &:after  { content: "」"; }
     }
   }
-
+  
   &.en {
     font-family: "Alef", sans-serif;
-
+    
     q {
       &:before { content: "\""; }
       &:after  { content: "\""; }
     }
   }
-
-  & > header {
-    width: 100%;
-    z-index: 1000;
-  }
-}
-
-.supplement {
-  background: rgba(0, 0, 0, 0.1);
-  font-size: smaller;
-  padding: 0.5em;
-}
-
-.cf { font-size: small; }
-
-.point {
-  background: rgba(255, 51, 153, 0.2);
-  color: #990066;
-  font-size: larger;
-  font-weight: bold;
-  padding: 0.5em;
-
-  &:after {
-    color: red;
-    content: "Point!";
-    font-size: small;
-    font-weight: normal;
-    -webkit-transform: rotate(12deg);
-       -moz-transform: rotate(12deg);
-        -ms-transform: rotate(12deg);
-            transform: rotate(12deg);
-  }
-}
-
-.facebook {
-  @include social-icon('/assets/images/icons/f_b_icon.png', rgb(59, 91, 153));
-}
-
-.youtube {
-  @include social-icon('/assets/images/icons/yt_icon.png', rgb(229, 26, 39));
-}
-
-.widget-youtube { margin: 1.5em 0; }
-
-.container {
-  float: right;
-  line-height: 1.4em;
-  overflow: visible;
-  position: relative;
-  width: 100%;
-
-  & > #main {
-    padding: 0 5mm;
-    overflow: hidden;
-  }
-
-  & > #main #mainInner {
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  & > footer {
-    background: rgba(255, 255, 255, 0.6);
-    color: #666;
-    font-size: small;
-    padding: 0 5mm;
-  }
-}
-
-.global-nav {
-  background: rgb(255, 219, 238);
-  border-bottom: solid 1px transparent;
-  @include navigation;
-
-  .logo-span {
-    padding: 0;
-    width: $menu_height;
-  }
-
-  .logo {
-    -webkit-animation: animateLogo 0.5s ease-in-out 0s 1 normal;
-            animation: animateLogo 0.5s ease-in-out 0s 1 normal;
-    display: inline;
-    -webkit-transition: 0.3s ease-in-out;
-            transition: 0.3s ease-in-out;
-    overflow: hidden;
-    position: absolute;
-
-    &:hover, &:focus {
-      -webkit-transform: rotate(5deg);
-              transform: rotate(5deg);
-    }
-
-    img {
-      height: $menu_height;
-      min-width: $menu_height;
-    }
-  }
-}
-
-#sidebar {
-  background: $nav_bg_color;
-
-  a {
-    color: #000;
-    font-size: larger;
-    text-decoration: none;
-
-    &:hover, &:focus { color: #666; }
+  
+  h1, h2, h3,
+  h4, h5, h6,
+  p {
+      margin: 0;
   }
   
-  .local-nav {
-    background: $nav_bg_color;
+  ul {
+      margin: 0;
+      padding: 0;
   }
-}
-
-.breadcrumb {
-  font-size: small;
-  margin-bottom: -20px;
-  @include navigation;
-
-  a {
-    color: #000;
-
-    &:hover, &:focus { color: #666; }
-
-    &:after { content: ' >'; }
+  
+  img {
+    border: none;
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
   }
 }
 
 /*
-  Style overrides for IE6-8
-  http://jonikorpi.com/leaving-old-IE-behind/
+=======================
+  baseLayout
+=======================
 */
 
-.ie {
+.container {
+  margin: 0 auto;
+  width: 90%;
+  min-width: 320px;
 }
 
+header {
+  padding: 20px 2%;
+  background: #ffdbee;
+  
+  .headerInner {
+    .logo {
+      float: left;
+      width: 50%;
+      
+      img {
+        width: 54px;
+      }
+    }
+    
+    .lang {
+      float: left;
+      line-height: 54px;
+      width: 50%;
+      text-align: right;
+      
+      a {
+        color: #006400;
+      }
+    }
+  }
+  
+  nav {
+    margin-top: 20px;
+    
+    .nav-item {
+      margin-top: 6px;
+      text-align: center;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+      
+      a {
+        padding: 4px 2%;
+        border-radius: 6px;
+        display: block;
+        color: #fbfaf5;
+        background: #006400;
+        text-decoration: none;
+        
+        &:hover {
+          background: #008000;
+        }
+      }
+    }
+  }
+}
 
-/*
-  An easy way to zoom your entire layout in or out (as long as it's set in ems).
-  Just change the media queries to activate them.
-  Assuming your base font-size is 16:
-  - the first one zooms out by a factor of (16-2)/16 = 0.875
-  - the second one zooms in by a factor of (16+2)/16 = 1.125
-*/
+.main {
+  padding: 20px 2%;
+  background: #fbfaf5;
+  
+  .side {
+    margin-top: 20px;
+    
+    aside {
+      padding: 20px 2%;
+    }
+    
+    .nav-item {
+      a {
+        padding: 20px 2%;
+        border-bottom: dotted 2px #006400;
+        display: block;
+        color: #006400;
+        text-decoration: none;
+        
+        &:after {
+            content: "\0020 \00BB";
+          }
+        
+        &:hover {
+          color: #00aa00;
+        }
+      }
+      
+      &:first-child {
+        margin-top: 0;
+        
+        a {
+          border-top: dotted 2px #006400;
+        }
+      }
+    }
+  }
+}
 
-// @media screen and (max-width: 1px) {
-//   body {
-//     font-size: ($font-size - 2) / $em;
-//   }
-// }
-//
-// @media screen and (max-width: 1px) {
-//   body {
-//     font-size: ($font-size + 2) / $em;
-//   }
-// }
+footer {
+  padding: 20px 2%;
+  background: #ffdbee;
+  
+  p {
+    text-align: center;
+    
+    a {
+      color: #006400;
+    }
+  }
+}
 
 @media screen and (min-width: 480px) {
 
-  .container { width: 100%; }
-
-  /*.global-nav .nav-right {
-    position: relative;
-    width: 100%;
-    text-align: right;
-  } */
 }
 
 @media screen and (min-width: 768px) {
-
-  .container { width: 100%; }
-
-  #mainInner {
-    float: right;
-    width: 80%;
-  }
-
-  #sidebar {
-    float: left;
-    width: 20%;
+  header {
+    nav {
+      .nav-item {
+        margin-right: 1%;
+        float: left;
+        width: 49.5%;
+        
+        &:nth-child(2) {
+          margin-top: 0;
+          margin-right: 0;
+        }
+        
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 
 @media screen and (min-width: 1140px) {
-
-  .container { width: 100%; }
+  header {
+    nav {
+      .nav-item {
+        margin-top: 0;
+        margin-right: 2%;
+        float: left;
+        width: 15%;
+        
+        &:nth-child(2) {
+          margin-right: 2%;
+        }
+        
+        &:nth-child(3) {
+          width: 32%;
+        }
+        
+        &:nth-child(4) {
+          margin-right: 2%;
+        }
+        
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  
+  .main {
+    .mainInner {
+      float: right;
+      width: 83%;
+    }
+    
+    .side {
+      margin-top: 0;
+      float: left;
+      width: 15%;
+    }
+  }
 }
