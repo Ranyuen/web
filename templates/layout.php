@@ -81,17 +81,7 @@ $switch_lang = implode(' / ', $switch_lang);
         </small>
       </p>
     </footer>
-  </div><!-- /container -->
-
-<!-- ▼▼▼ script ▼▼▼ -->
-<script>
-  window.addEventListener('DOMContentLoaded', function() {
-    var menuHeight = window.getComputedStyle(document.querySelector('body > header')).height;
-
-    // document.querySelector('.container').style.top = menuHeight;
-    // document.querySelector('#header-container-separator').style.height = menuHeight;
-  }); 
-</script>
+  </div>
 <script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
 <script>
   (function(i, s, o, g, r, a, m) {
@@ -109,6 +99,5 @@ $switch_lang = implode(' / ', $switch_lang);
   ga('create', 'UA-47871400-1', 'ranyuen.com');
   ga('send', 'pageview'); 
 </script>
-<!-- ▲▲▲ script ▲▲▲ -->
 </body>
 </html>
