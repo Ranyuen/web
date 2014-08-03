@@ -143,6 +143,8 @@ footer p a {
     margin-top: 0;
     margin-right: 0; }
   header nav .nav-item:nth-child(4) {
+    margin-right: 0; }
+  header nav .nav-item:nth-child(6) {
     margin-right: 0; } }
 @media screen and (min-width: 1140px) {
   header nav .nav-item {
@@ -152,11 +154,9 @@ footer p a {
     width: 15%; }
   header nav .nav-item:nth-child(2) {
     margin-right: 2%; }
-  header nav .nav-item:nth-child(3) {
-    width: 32%; }
   header nav .nav-item:nth-child(4) {
     margin-right: 2%; }
-  header nav .nav-item:last-child {
+  header nav .nav-item:nth-child(6) {
     margin-right: 0; }
 
   .main .mainInner {

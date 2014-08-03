@@ -1,5 +1,5 @@
 ---
-title: エビネ, アワチドリ / 夢ちどりの育て方
+title: 育て方
 ---
 <b><a href="growings/recent_failure_and_provision">近年に多い障害と対策</a></b>
 

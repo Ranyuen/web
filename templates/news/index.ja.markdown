@@ -1,7 +1,7 @@
 ---
 title: お知らせ
 ---
-<style>
+<!-- <style>
 h1 {
   background: red;
   color: white;
@@ -13,5 +13,5 @@ h1 {
   width: 100%;
 }
 </style>
-
+ -->
 <?php $h->echoNav($news_nav, "{$link['base']}/news/"); ?>
