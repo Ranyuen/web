@@ -57,7 +57,7 @@ body img {
   min-width: 320px; }
 
 header {
-  padding: 20px 2%;
+  padding: 10px 2%;
   background: #ffdbee; }
 header .headerInner .logo {
   float: left;
@@ -83,14 +83,30 @@ header nav .nav-item a {
   border-radius: 6px;
   display: block;
   color: #fbfaf5;
-  background: #006400;
+  background: #7f4765;
   text-decoration: none; }
 header nav .nav-item a:hover {
-  background: #008000; }
+  background: #7f6365; }
 
 .main {
   padding: 20px 2%;
   background: #fbfaf5; }
+.main .breadcrumb {
+  *zoom: 1; }
+.main .breadcrumb:before, .main .breadcrumb:after {
+  content: " ";
+  display: table; }
+.main .breadcrumb:after {
+  clear: both; }
+.main .breadcrumb .nav-item {
+  float: left; }
+.main .breadcrumb .nav-item a {
+  display: inline; }
+.main .breadcrumb .nav-item:after {
+  content: " > "; }
+.main .breadcrumb .nav-item:last-child a {
+  color: #000000;
+  text-decoration: none; }
 .main .side {
   margin-top: 20px; }
 .main .side aside {
@@ -102,7 +118,7 @@ header nav .nav-item a:hover {
   color: #006400;
   text-decoration: none; }
 .main .side .nav-item a:after {
-  content: "\0020 \00BB"; }
+  content: " > "; }
 .main .side .nav-item a:hover {
   color: #00aa00; }
 .main .side .nav-item:first-child {
@@ -111,7 +127,7 @@ header nav .nav-item a:hover {
   border-top: dotted 2px #006400; }
 
 footer {
-  padding: 20px 2%;
+  padding: 10px 2%;
   background: #ffdbee; }
 footer p {
   text-align: center; }

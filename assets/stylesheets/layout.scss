@@ -20,6 +20,19 @@
   }
 }
 
+@mixin cf {
+  *zoom: 1;
+  
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  
+  &:after {
+    clear: both;
+  }
+}
+
 /*
 =======================
   baseＥｌｅｍｅｎｔｓ
@@ -83,7 +96,7 @@ body {
 }
 
 header {
-  padding: 20px 2%;
+  padding: 10px 2%;
   background: #ffdbee;
   
   .headerInner {
@@ -124,11 +137,11 @@ header {
         border-radius: 6px;
         display: block;
         color: #fbfaf5;
-        background: #006400;
+        background: #7f4765;
         text-decoration: none;
         
         &:hover {
-          background: #008000;
+          background: #7f6365;
         }
       }
     }
@@ -138,6 +151,29 @@ header {
 .main {
   padding: 20px 2%;
   background: #fbfaf5;
+  
+  .breadcrumb {
+    @include cf;
+    
+    .nav-item {
+      float: left;
+      
+      a {
+        display: inline;
+      }
+      
+      &:after {
+        content: " > ";
+      }
+      
+      &:last-child {
+        a {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    }
+  }
   
   .side {
     margin-top: 20px;
@@ -155,8 +191,8 @@ header {
         text-decoration: none;
         
         &:after {
-            content: "\0020 \00BB";
-          }
+          content: " > ";
+        }
         
         &:hover {
           color: #00aa00;
@@ -175,7 +211,7 @@ header {
 }
 
 footer {
-  padding: 20px 2%;
+  padding: 10px 2%;
   background: #ffdbee;
   
   p {
@@ -187,9 +223,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 480px) {
-
-}
+// @media screen and (min-width: 480px) { }
 
 @media screen and (min-width: 768px) {
   header {
