@@ -1,4 +1,4 @@
-#exam { border: 1px solid #eee; border-radius: 3px 3px 12px 12px; box-shadow: 0 0 1px gray, 1px 1px 1px black; font-size: 12pt; min-height: 400px; position: relative; width: 600px; }
+#exam { border: 1px solid #eee; border-radius: 3px 3px 12px 12px; box-shadow: 0 0 1px gray, 1px 1px 1px black; font-size: 12pt; min-height: 400px; position: relative; }
 #exam .radio, #exam .checkbox { background: black; background: -moz-radial-gradient(circle, #333333, black); background: -o-radial-gradient(circle, #333333, black); background: -khtml-radial-gradient(circle, #333333, black); background: -webkit-radial-gradient(circle, #333333, black); background: -ms-radial-gradient(circle, #333333, black); background: radial-gradient(circle, #333333, black); box-shadow: 1px 1px 2px gray; display: inline-block; height: 1.6em; width: 1.6em; }
 #exam .radio + span, #exam .checkbox + span { display: inline-block; line-height: 1.6em; margin-left: 0.5em; vertical-align: top; }
 #exam .radio { border-radius: 0.8em; }
@@ -7,7 +7,7 @@
 
 #examHeader { border-bottom: 1px solid gray; color: gray; font-weight: bold; }
 #examHeader ol { margin: 0; padding: 0; }
-#examHeader li { display: inline-block; text-align: center; height: 1.5em; line-height: 1.6em; width: 2.6em; }
+#examHeader li { display: inline-block; text-align: center; height: 1.5em; line-height: 1.6em; width: 8%; }
 #examHeader li + li { border-left: 1px solid gray; }
 #examHeader li.done { background: black; color: #eee; }
 #examHeader li.correct, #examHeader li.incorrect, #examHeader li.ans { cursor: pointer; }

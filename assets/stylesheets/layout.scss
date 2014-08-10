@@ -152,25 +152,41 @@ header {
   padding: 20px 2%;
   background: #fbfaf5;
 
-  .breadcrumb {
-    @include cf;
+  .mainInner {
+    .breadcrumb {
+      @include cf;
 
-    .nav-item {
-      float: left;
+      .nav-item {
+        float: left;
 
-      a {
-        display: inline;
-      }
-
-      &:after {
-        content: " > ";
-      }
-
-      &:last-child {
         a {
-          color: #000000;
-          text-decoration: none;
+          display: inline;
         }
+
+        &:after {
+          content: " > ";
+        }
+
+        &:last-child {
+          a {
+            color: #000000;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    article {
+      h1 {
+        margin: 16px 0;
+      }
+
+      h2 {
+        margin: 16px 0;
+      }
+
+      p {
+        margin: 16px 0;
       }
     }
   }

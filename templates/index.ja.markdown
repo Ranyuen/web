@@ -1,30 +1,13 @@
 ---
 title: 蘭裕園
 ---
-<style>
-figure img {
-	display: block;
-	min-width: 494px;
-	width: 100%;
-}
-figcaption {
-	text-align: right;
-}
-.bluray {
-	margin-top: 15px;
-	width: 40%;
-}
-.pre {
-	border: solid 5px red;
-	font-weight: bold;
-	text-align: center;
-}
-</style>
 <b><a href="/news/information_of_shipping_of_awachidori_and_yumechidori_2014">ミニミニランラン (アワチドリ / 夢ちどり) 6月上旬から出荷が始まりました</a></b>
 
 <b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
-Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
+
+Ranyuen Style<small> ～求めるものはこころ安らぐ花～</small>
 ==
+
 <img src="/assets/images/top_img.jpg" alt="アワチドリ / 夢ちどり - 蘭裕園" />
 
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。

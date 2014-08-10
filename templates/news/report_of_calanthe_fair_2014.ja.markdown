@@ -1,20 +1,6 @@
 ---
 title: 速報！エビネ展2014
 ---
-<style>
-h1, h2 {
-  margin: 0.5em 0;
-  text-align: center;
-}
-h1 {
-  background-color: red;
-  color: white;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  width: 100%;
-}
-</style>
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 

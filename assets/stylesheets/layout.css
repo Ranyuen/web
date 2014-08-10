@@ -91,22 +91,28 @@ header nav .nav-item a:hover {
 .main {
   padding: 20px 2%;
   background: #fbfaf5; }
-.main .breadcrumb {
+.main .mainInner .breadcrumb {
   *zoom: 1; }
-.main .breadcrumb:before, .main .breadcrumb:after {
+.main .mainInner .breadcrumb:before, .main .mainInner .breadcrumb:after {
   content: " ";
   display: table; }
-.main .breadcrumb:after {
+.main .mainInner .breadcrumb:after {
   clear: both; }
-.main .breadcrumb .nav-item {
+.main .mainInner .breadcrumb .nav-item {
   float: left; }
-.main .breadcrumb .nav-item a {
+.main .mainInner .breadcrumb .nav-item a {
   display: inline; }
-.main .breadcrumb .nav-item:after {
+.main .mainInner .breadcrumb .nav-item:after {
   content: " > "; }
-.main .breadcrumb .nav-item:last-child a {
+.main .mainInner .breadcrumb .nav-item:last-child a {
   color: #000000;
   text-decoration: none; }
+.main .mainInner article h1 {
+  margin: 16px 0; }
+.main .mainInner article h2 {
+  margin: 16px 0; }
+.main .mainInner article p {
+  margin: 16px 0; }
 .main .side {
   margin-top: 20px; }
 .main .side aside {

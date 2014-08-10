@@ -1,18 +1,6 @@
 ---
 title: 最終半額セールのお知らせ (5月2日・3日)
 ---
-<style>
-h1 {
-  background: red;
-  color: white;
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  margin: 0.5em 0;
-  text-align: center;
-  width: 100%;
-}
-</style>
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 

@@ -1,16 +1,6 @@
 ---
 title: ミニミニランラン (アワチドリ / 夢ちどり) 出荷が始まりました
 ---
-<style>
-h1, h2 {
-  background: #fff;
-  border-left: solid 15px #ffdbee;
-  border-right: solid 15px #ffdbee;
-  box-shadow: 2px 2px 0.1px 0.1px #444;
-  line-height: 50px;
-  margin: 0.5em 0 50px 0;
-}
-</style>
 
 ミニミニランラン (アワチドリ / 夢ちどり)  出荷が始まりました<br /><small>ホームセンター、園芸店などでお求めいただけます</small>
 ==

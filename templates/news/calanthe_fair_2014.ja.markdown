@@ -1,48 +1,6 @@
 ---
 title: 高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ---
-<style>
-h1, h2 {
-  margin: 0.5em 0;
-  text-align: center;
-}
-h1 {
-  background-color: red;
-  color: white;
-  display: block;
-  height: 80px;
-  line-height: 40px;
-  width: 100%;
-}
-.lottery {
-  border-left: solid 10px;
-  border-bottom: solid 2px;
-  color: red;
-  font-size: 6mm;
-  font-weight: bold;
-  text-align: left;
-}
-b { font-size: large; }
-.color-box {
-  background: #ffdddd;
-  line-height: 2em;
-}
-.color-box span {
-  background: transparent !important;
-  color: inherit !important;
-  display: inline-block;
-  height: 2em;
-  line-height: 2em;
-  text-align: center;
-  text-decoration: underline;
-  width: 8.5em;
-}
-figcaption { text-align: center; }
-.attention {
-  color: #696969;
-  font-size: 13px;
-}
-</style>
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
