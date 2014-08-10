@@ -4,4 +4,6 @@ title: 蘭華で遊ぶ
 蘭華で遊ぶ
 ==
 
-<b><a href="play/orchid_exam">ラン検定</a></b>
+<b><a href="play/orchid_exam">ラン検定</a></b> ・・・　日本の蘭に関する様々なクイズに挑戦してみよう！
+
+

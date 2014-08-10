@@ -3,7 +3,8 @@ title: ラン検定
 ---
 <style>
   #examChanger {
-    background: black;
+    /*background: black;*/
+    display: inline-block;
     padding: 0;
   }
   #examChanger li {
