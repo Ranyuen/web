@@ -18,14 +18,7 @@ $switch_lang = implode(' / ', $switch_lang);
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
 <head>
   <meta charset="UTF-8">
-  <title>
-    <?php
-    if($title === '蘭裕園') {
-      $h -> h("$site_name - $site_catchCopy");
-    } else {
-      $h -> h("$title | $site_name - $site_catchCopy");
-    } ?>
-  </title>
+  <title><?php if($title === '蘭裕園') { $h -> h("$site_name - $site_catchCopy"); } else { $h -> h("$title | $site_name - $site_catchCopy"); } ?></title>
   <meta name="google-site-verification" content="osPpSihI4cWmpC3IfcU0MFq6zDdSPWyb7V2_ECHHo5Q"/>
   <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
   <?php if (isset($description)) { ?>
