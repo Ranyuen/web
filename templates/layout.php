@@ -5,11 +5,8 @@ $site_catchCopy = 'エビネとウチョウランの品種改良を専門とす�
 $home = "http://ranyuen.com{$link['base']}"; 
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
-foreach ([
-    'en' => 'English',
-    'ja' => '日本語',
-] as $k => $v) {
-    $switch_lang[] =  $lang === $k ? $v : "<a href=\"{$link[$k]}\">$v</a>";
+foreach (['en' => 'English', 'ja' => '日本語', ] as $k => $v) {
+  $switch_lang[] =  $lang === $k ? $v : "<a href=\"{$link[$k]}\">$v</a>";
 }
 $switch_lang = implode(' / ', $switch_lang);
 ?>
@@ -23,6 +20,7 @@ $switch_lang = implode(' / ', $switch_lang);
   <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
   <?php if (isset($description)) { ?>
   <meta name="description" content="<?php $h -> h($description); ?>"/> <?php } ?>
+  <meta name="keywords" content="エビネ, ウチョウラン"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="home" href="<?php $h -> h($home); ?>"/>
@@ -43,7 +41,6 @@ $switch_lang = implode(' / ', $switch_lang);
   <script src="/assets/bower_components/uri.js/src/URI.js"></script>
 </head>
 <body class="<?php $h -> h($lang); ?>" lang="<?php $h -> h($lang); ?>">
-
   <div class="container">
     <header class="cf">
       <div class="headerInner cf">
