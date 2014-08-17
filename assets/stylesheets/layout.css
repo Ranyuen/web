@@ -58,7 +58,7 @@ body img {
 
 header {
   padding: 10px 2%;
-  background: #ffdbee; }
+  background: #edfffe; }
 header .headerInner .logo {
   float: left;
   width: 50%; }
@@ -83,10 +83,13 @@ header nav .nav-item a {
   border-radius: 6px;
   display: block;
   color: #fbfaf5;
-  background: #7f4765;
-  text-decoration: none; }
+  background: -moz-linear-gradient(top, #d7dfff 0%, #7564de);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d7dfff), to(#7564de));
+  box-shadow: 1px 1px 1px #444647;
+  text-decoration: none;
+  text-shadow: -1px -1px #333333; }
 header nav .nav-item a:hover {
-  background: #7f6365; }
+  background: #b9beff; }
 
 .main {
   padding: 20px 2%;
@@ -134,8 +137,9 @@ header nav .nav-item a:hover {
 
 footer {
   padding: 10px 2%;
-  background: #ffdbee; }
+  background: #edfffe; }
 footer p {
+  font-size: 12px;
   text-align: center; }
 footer p a {
   color: #006400; }
