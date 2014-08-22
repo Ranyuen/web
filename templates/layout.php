@@ -1,11 +1,12 @@
 <?php
 $site_names = ['ja' => '蘭裕園', 'en' => 'Ranyuen'];
 $site_name = $site_names[$lang];
+$h1_name = 'エビネとウチョウランの蘭裕園';
 $site_catchCopy = 'エビネとウチョウランの品種改良を専門とする農園';
 $home = "http://ranyuen.com{$link['base']}"; 
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
-foreach (['en' => 'English', 'ja' => '日本語', ] as $k => $v) {
+foreach (['en' => 'English', 'ja' => '日本語'] as $k => $v) {
   $switch_lang[] =  $lang === $k ? $v : "<a href=\"{$link[$k]}\">$v</a>";
 }
 $switch_lang = implode(' / ', $switch_lang);
@@ -46,8 +47,8 @@ $switch_lang = implode(' / ', $switch_lang);
       <div class="headerInner cf">
         <div class="logo">
           <h1>
-            <a rel="home" href="<?php $h -> h($home); ?>" title="<?php $h -> h($site_name); ?>">
-              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h($site_name); ?>" longdesc="<?php $h -> h($home); ?>"/>
+            <a rel="home" href="<?php $h -> h($home); ?>">
+              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h($h1_name); ?>" longdesc="<?php $h -> h($home); ?>"/>
             </a>
           </h1>
         </div><!-- /logo -->
