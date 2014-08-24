@@ -1,6 +1,8 @@
 <?php
 $site_names = ['ja' => 'エビネとウチョウランの蘭裕園', 'en' => 'Ranyuen'];
 $site_name = $site_names[$lang];
+$site_keywords = ['ja' => 'エビネ, ウチョウラン', 'en' => 'Calanthe, Ponerorchis'];
+$site_keyword = $site_keywords[$lang];
 $site_catchCopy = 'エビネとウチョウランの育種専門農園';
 $home = "http://ranyuen.com{$link['base']}"; 
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
@@ -20,7 +22,7 @@ $switch_lang = implode(' / ', $switch_lang);
   <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
   <?php if (isset($description)) { ?>
   <meta name="description" content="<?php $h -> h($description); ?>"/> <?php } ?>
-  <meta name="keywords" content="エビネ, ウチョウラン"/>
+  <meta name="keywords" content="<?php $h -> h($site_keyword); ?>"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="home" href="<?php $h -> h($home); ?>"/>
