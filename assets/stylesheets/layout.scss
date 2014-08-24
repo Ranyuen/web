@@ -93,6 +93,13 @@ body {
   margin: 0 auto;
   width: 90%;
   min-width: 320px;
+
+  .facebook {
+    @include social-icon('/assets/images/icons/f_b_icon.png', rgb(59, 91, 153));
+  }
+  .youtube {
+    @include social-icon('/assets/images/icons/yt_icon.png', rgb(229, 26, 39));
+  }
 }
 
 header {

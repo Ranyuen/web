@@ -55,6 +55,52 @@ body img {
   margin: 0 auto;
   width: 90%;
   min-width: 320px; }
+.container .facebook {
+  background-image: url("/assets/images/icons/f_b_icon.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s; }
+.container .facebook:hover, .container .facebook:focus {
+  background-color: #3b5b99;
+  color: white; }
+.container .facebook img {
+  height: 24px;
+  width: 24px;
+  position: absolute; }
+.container .facebook span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative;
+  padding-right: 26px; }
+.container .youtube {
+  background-image: url("/assets/images/icons/yt_icon.png");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s; }
+.container .youtube:hover, .container .youtube:focus {
+  background-color: #e51a27;
+  color: white; }
+.container .youtube img {
+  height: 24px;
+  width: 24px;
+  position: absolute; }
+.container .youtube span {
+  display: inline-block;
+  height: 24px;
+  left: 26px;
+  line-height: 24px;
+  position: relative;
+  padding-right: 26px; }
 
 header {
   padding: 10px 2%;
