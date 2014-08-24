@@ -1,8 +1,7 @@
 <?php
-$site_names = ['ja' => '蘭裕園', 'en' => 'Ranyuen'];
+$site_names = ['ja' => 'エビネとウチョウランの蘭裕園', 'en' => 'Ranyuen'];
 $site_name = $site_names[$lang];
-$h1_name = 'エビネとウチョウランの蘭裕園';
-$site_catchCopy = 'エビネとウチョウランの品種改良を専門とする農園';
+$site_catchCopy = 'エビネとウチョウランの育種専門農園';
 $home = "http://ranyuen.com{$link['base']}"; 
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
@@ -48,7 +47,7 @@ $switch_lang = implode(' / ', $switch_lang);
         <div class="logo">
           <h1>
             <a rel="home" href="<?php $h -> h($home); ?>">
-              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h($h1_name); ?>" longdesc="<?php $h -> h($home); ?>"/>
+              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h("$site_name - $site_catchCopy"); ?>" longdesc="<?php $h -> h($home); ?>"/>
             </a>
           </h1>
         </div><!-- /logo -->
@@ -76,7 +75,7 @@ $switch_lang = implode(' / ', $switch_lang);
     <footer class="cf">
       <p class="copyright">
         <small>
-          Copyright (C) 2010-2014 <a rel="home" href="<?php $h -> h($home); ?>">Ranyuen</a> All Rights Reserved.<br/>
+          Copyright (C) 2010-2014 <a rel="home" href="<?php $h -> h($home); ?>"><?php $h -> h("$site_name - $site_catchCopy"); ?></a> All Rights Reserved.<br/>
           Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="<?php $h -> h($home); ?>">Ranyuen</a>&#39;s farm.
         </small>
       </p>
