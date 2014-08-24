@@ -3,7 +3,7 @@ title: 蘭裕園
 ---
 <b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
 
-エビネとウチョウラン<small> ～蘭裕園スタイル～</small>
+蘭裕園スタイルのエビネとウチョウラン
 ==
 
 <img src="/assets/images/top_img2.jpg" alt="アワチドリ / 夢ちどり - 蘭裕園" />
