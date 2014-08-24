@@ -27,7 +27,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 <a href="http://fb.me/ranyuenjapan"><img src="/assets/images/cal_top4.jpg" alt="エビネ - 蘭裕園 (Ranyuen)" style="max-width: 600px;" /></a>
 
-cf. <a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFacebook</span></a>
+<a class="facebook" href="http://fb.me/ranyuenjapan"><span>蘭裕園のFacebook</span></a>
 
 楽しみ方 (鑑賞方法) の違いにより育て方も全く異なるエビネ
 --

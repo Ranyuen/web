@@ -3,7 +3,7 @@ title: 蘭裕園
 ---
 <b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
 
-Ranyuen Style<small> ～求めるものはこころ安らぐ花～</small>
+<span>エビネとウチョウラン<small> ～蘭裕園スタイル～</small></span>
 ==
 
 <img src="/assets/images/top_img2.jpg" alt="アワチドリ / 夢ちどり - 蘭裕園" />
