@@ -24,7 +24,7 @@ title: 育て方
 
 <div style="clear: both;"> </div>
 
-## アワチドリ/夢ちどり (Ponerorchis)<br /><small>Ponerorchis (ウチョウランの仲間) - 小さなランの世界</small>
+## アワチドリ/夢ちどり (Ponerorchis)<br /><small>世界で一番キュートなラン</small>
 <figure style="float: right;">
   ![アワチドリ (Ponerorchis suzukiana) - Ranyuen](/assets/images/pone01.jpg)
   <figcaption style="text-align: center;">↑アワチドリ/夢ちどり↓</figcaption>

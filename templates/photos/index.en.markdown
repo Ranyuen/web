@@ -28,7 +28,7 @@ $photos = array_map(function ($photo) {
 </style>
 <form id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
-    <option value="" <?php if ($species_name === null) { echo 'selected'; } ?>>change species</option>
+    <option value="" <?php if ($species_name === null) { echo 'selected'; } ?>>-change species-</option>
     <option value="all" <?php if ($species_name === 'all') { echo 'selected'; } ?>>All</option>
     <option value="Calanthe" <?php if ($species_name === 'Calanthe') { echo 'selected'; } ?>>Calanthe</option>
     <option value="Ponerorchis" <?php if ($species_name === 'Ponerorchis') { echo 'selected'; } ?>>Ponerochis</option>

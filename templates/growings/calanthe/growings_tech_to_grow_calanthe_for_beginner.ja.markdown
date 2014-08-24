@@ -1,7 +1,7 @@
 ---
 title: エビネの栽培法 - 初心者編
 ---
-## 蘭裕園のエビネ - スプリングカランセ (Spring Calanthe)
+## エビネの栽培法 - 初心者編
 <img src="/assets/images/growings_iikanzi.jpg" width="722" height="288" alt="エビネ (Calanthe) - Ranyuen" />
 
 世界中の温帯地域で、庭植えして楽しめるカラフルなランとして品種改良した新しいタイプのエビネです。山野草のエビネとは違い丈夫で育てやすく、カラフルな花を長い間楽しめます。
