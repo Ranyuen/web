@@ -1,18 +1,6 @@
 ---
 title: 蘭裕園の美しいランの世界をブルーレイに！
 ---
-<style>
-h1, h2 {
-  margin: 0.5em 0;
-  text-align: center;
-}
-figure { text-align: center; }
-.green { color: green; }
-.red {
-  color: red;
-  font-size: large;
-}
-</style>
 
 <strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<small> (プレゼントは終了しました)</small>
 ==
