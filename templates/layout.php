@@ -3,7 +3,7 @@ $site_names = ['ja' => 'エビネとウチョウランの蘭裕園', 'en' => 'Ra
 $site_name = $site_names[$lang];
 $site_keywords = ['ja' => 'エビネ, ウチョウラン', 'en' => 'Calanthe, Ponerorchis'];
 $site_keyword = $site_keywords[$lang];
-$site_catchCopy = 'エビネとウチョウランの育種専門農園';
+$site_catchCopy = 'エビネとウチョウランの専門農園';
 $home = "http://ranyuen.com{$link['base']}"; 
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
