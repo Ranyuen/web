@@ -24,7 +24,7 @@ title: 育て方
 
 <div style="clear: both;"> </div>
 
-## アワチドリ/夢ちどり (Ponerorchis)<br /><small>世界で一番キュートな</small>
+## アワチドリ/夢ちどり (Ponerorchis)<br /><small>世界で一番キュートなラン</small>
 <figure style="float: right;">
   ![アワチドリ (Ponerorchis suzukiana) - Ranyuen](/assets/images/pone01.jpg)
   <figcaption style="text-align: center;">↑アワチドリ/夢ちどり↓</figcaption>
