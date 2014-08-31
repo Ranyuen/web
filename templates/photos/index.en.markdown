@@ -32,6 +32,7 @@ $photos = array_map(function ($photo) {
     <option value="all" <?php if ($species_name === 'all') { echo 'selected'; } ?>>All</option>
     <option value="Calanthe" <?php if ($species_name === 'Calanthe') { echo 'selected'; } ?>>Calanthe</option>
     <option value="Ponerorchis" <?php if ($species_name === 'Ponerorchis') { echo 'selected'; } ?>>Ponerochis</option>
+    <option value="Japanease native orchid" <?php if ($species_name === 'Japanease native orchid') { echo 'selected'; } ?>>Japanease native orchid</option>
     <option value="others" <?php if ($species_name === 'others') { echo 'selected'; } ?>>Others</option>
   </select>
 </form>
