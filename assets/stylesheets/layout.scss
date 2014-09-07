@@ -157,7 +157,6 @@ header {
 .main {
   padding: 20px 2%;
   background: #fbfaf5;
-<<<<<<< Updated upstream
 
   .mainInner {
     .breadcrumb {
@@ -180,16 +179,14 @@ header {
             text-decoration: none;
           }
         }
-=======
-  
+      }
+    }
+  }
+
   h1 {
     margin-top: 32px;
   }
-  
-  h1 {
-    margin-top: 32px;
-  }
-  
+
   .breadcrumb {
     @include cf;
     
@@ -198,7 +195,6 @@ header {
       
       a {
         display: inline;
->>>>>>> Stashed changes
       }
     }
 
@@ -261,7 +257,6 @@ header {
     }
   }
 }
-
 footer {
   padding: 10px 2%;
   background: #edfffe;
