@@ -97,7 +97,13 @@ header nav .nav-item a:hover {
 .main {
   padding: 20px 2%;
   background: #fbfaf5; }
+<<<<<<< Updated upstream
 .main .mainInner .breadcrumb {
+=======
+.main h1 {
+  margin-top: 32px; }
+.main .breadcrumb {
+>>>>>>> Stashed changes
   *zoom: 1; }
 .main .mainInner .breadcrumb:before, .main .mainInner .breadcrumb:after {
   content: " ";
