@@ -4,10 +4,14 @@ description: エビネとウチョウランの専門農園です。エビネと�
 ---
 <b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 <b><a href="/news/information_of_orchid_exam">ラン検定に新しい問題を追加しました</a></b>
 
 蘭裕園スタイルのエビネとウチョウラン
+=======
+Ranyuen Style<small> ～求めるものはこころ安らぐ花～</small>
+>>>>>>> Stashed changes
 =======
 Ranyuen Style<small> ～求めるものはこころ安らぐ花～</small>
 >>>>>>> Stashed changes

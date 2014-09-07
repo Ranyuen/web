@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
@@ -287,6 +288,8 @@
     <changefreq>daily</changefreq>
   </url>
 =======
+=======
+>>>>>>> Stashed changes
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
@@ -544,5 +547,8 @@
     <lastmod>2014-08-03T20:22:32Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </urlset>
