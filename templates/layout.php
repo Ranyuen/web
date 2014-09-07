@@ -4,7 +4,7 @@ $site_name = $site_names[$lang];
 $site_keywords = ['ja' => 'エビネ, ウチョウラン', 'en' => 'Calanthe, Ponerorchis'];
 $site_keyword = $site_keywords[$lang];
 $site_catchCopy = 'エビネとウチョウランの専門農園';
-$home = "http://ranyuen.com{$link['base']}"; 
+$home = "http://ranyuen.com {$link['base']}"; 
 $local_base = preg_replace('/\/[^\/]*$/', '/', $_SERVER['REQUEST_URI']);
 $switch_lang = [];
 foreach (['en' => 'English', 'ja' => '日本語'] as $k => $v) {
@@ -20,8 +20,7 @@ $switch_lang = implode(' / ', $switch_lang);
   <title><?php if($title === '蘭裕園') { $h -> h("$site_name - $site_catchCopy"); } else { $h -> h("$title | $site_name"); } ?></title>
   <meta name="google-site-verification" content="osPpSihI4cWmpC3IfcU0MFq6zDdSPWyb7V2_ECHHo5Q"/>
   <meta name="msvalidate.01" content="C6AA98E0859490689AD2DDDC23486114"/>
-  <?php if (isset($description)) { ?>
-  <meta name="description" content="<?php $h -> h($description); ?>"/> <?php } ?>
+  <meta name="description" content="<?php if (isset($description)) { $h -> h($description);} ?>"/>
   <meta name="keywords" content="<?php $h -> h($site_keyword); ?>"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -49,7 +48,7 @@ $switch_lang = implode(' / ', $switch_lang);
         <div class="logo">
           <h1>
             <a rel="home" href="<?php $h -> h($home); ?>">
-              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h("$site_name - $site_catchCopy"); ?>" longdesc="<?php $h -> h($home); ?>"/>
+              <img src="/assets/images/icons/ranyuen.png" alt="<?php $h -> h("$site_name"); ?>" longdesc="<?php $h -> h($home); ?>"/>
             </a>
           </h1>
         </div><!-- /logo -->
