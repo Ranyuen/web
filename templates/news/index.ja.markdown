@@ -1,8 +1,6 @@
 ---
 title: お知らせ
 ---
-<<<<<<< Updated upstream
-=======
 <style>
 h1 {
   color: white;
@@ -13,6 +11,5 @@ h1 {
   width: 100%;
 }
 </style>
->>>>>>> Stashed changes
 
 <?php $h->echoNav($news_nav, "{$link['base']}/news/"); ?>
