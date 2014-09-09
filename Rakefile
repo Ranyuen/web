@@ -1,115 +1,140 @@
 # coding=utf-8
 require 'json'
+require 'singleton'
 require 'rexml/document'
 require 'rexml/formatters/pretty'
 
-class NavGenerator
-  # param [String] dir
-  # return [Hash]
-  def gather_navs dir
-    cwd = File.absolute_path '.'
-    nav = {}
-    Dir.chdir dir
-    Dir.foreach '.' do |f|
-      next if f == '.' || f == '..'
-      if File.directory? f
-        sub_nav = gather_navs File.absolute_path(f)
-        sub_nav.each do |lang, n|
-          nav[lang] ||= {}
-          nav[lang][f] = n
-        end
-      elsif File.file?(f) && File.extname(f) == '.markdown'
-        meta = get_meta f
-        f = basename f
-        next if f =~ /^error/
-        lang = (f.match(/\.([^.]+)$/) || [])[1] || 'default'
-        nav[lang] ||= {}
-        nav[lang][basename f] = meta[:title]
-      end
-    end
-    Dir.chdir cwd
-    @nav = nav
-    nav
-  end
+module Nav
+  class Generator
+    # Prepare navs.
+    # param [String] dir
+    # return [Nav::Generator]
+    def gather dir; @nav = gather_recur dir; self; end
 
-  # param [Hash] nav
-  # return [String] sitemap XML string.
-  def gen_sitemap nav = @nav
-    sitemap = REXML::Document.new <<XML
+    # return [String]
+    def to_json; @nav.to_json; end
+
+    # return [String] sitemap XML string.
+    def sitemap
+      sitemap = REXML::Document.new <<XML
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </urlset>
 XML
-    part = gen_sitemap_part nav['en'], 'http://ranyuen.com/en/'
-    part.each{|url| sitemap.root.add_element url }
-    part = gen_sitemap_part nav['ja'], 'http://ranyuen.com/'
-    part.each{|url| sitemap.root.add_element url }
+      gen_sitemap_part(@nav['en'], 'http://ranyuen.com/en/').
+        each{|url| sitemap.root.add_element url }
+      gen_sitemap_part(@nav['ja'], 'http://ranyuen.com/').
+        each{|url| sitemap.root.add_element url }
+      Nav.xml_to_s sitemap
+    end
+
+    private
+
+    def gather_recur dir
+      nav = {}
+      cwd = File.absolute_path '.'
+      Dir.chdir dir
+      dirs, files = Dir.foreach('.').
+        reject{|f| f =~ /^(?:\.|error)/ }.
+        partition{|f| File.directory? f }
+      files.select{|f| File.extname(f) == '.markdown' }.each do |f|
+        meta = get_meta_of f
+        f = Nav.file_basename f
+        lang = (f.match(/\.([^.]+)$/) || [])[1] || 'ja'
+        nav[lang] ||= {}
+        nav[lang][Nav.file_basename f] = meta #[:title]
+      end
+      dirs.each do |f|
+        gather_recur(File.absolute_path f).each do |lang, sub_nav|
+          nav[lang] ||= {}
+          nav[lang][f] = sub_nav
+        end
+      end
+      Dir.chdir cwd
+      nav
+    end
+
+    def get_meta_of filename
+      content = open(filename, 'r:utf-8'){|f| f.read.chomp }
+      return {} unless content =~ /^---/
+      get_item = -> name, default = '' do
+        v = (content.lines.find{|line| line =~ %r{^#{name}\s*:} } || "#{name}:").
+          match(%r{^#{name}\s*:\s*(.*)$})[1].chomp
+        v == '' ? default : v
+      end
+      title = get_item.call 'title'
+      lastmod = get_item.call 'lastmod',
+        File.mtime(filename).strftime('%Y-%m-%dT%H:%M:%SZ')
+      {
+        title:   title,
+        lastmod: lastmod,
+      }
+    end
+
+    def gen_sitemap_part nav, base_url
+      nodes = []
+      metas, sub_navs = nav.partition{|key, meta| meta[:title] && meta[:lastmod] }
+      metas.each do |key, meta|
+        url_node = REXML::Element.new 'url'
+        loc_node = REXML::Element.new 'loc'
+        loc_node.text = "#{base_url}#{key == 'index' ? '' : key}"
+        url_node.add_element loc_node
+        lastmod_node = REXML::Element.new 'lastmod'
+        lastmod_node.text = meta[:lastmod]
+        url_node.add_element lastmod_node
+        changefreq_node = REXML::Element.new 'changefreq'
+        changefreq_node.text = 'daily'
+        url_node.add_element changefreq_node
+        nodes << url_node
+      end
+      sub_navs.each do |key, sub_nav|
+        nodes += gen_sitemap_part sub_nav, "#{base_url}#{key}/"
+      end
+      nodes
+    end
+  end
+
+  class Navs
+    include Singleton
+
+    def initialize
+      @generator = Generator.new
+      @generator.gather File.absolute_path('templates')
+    end
+
+    def to_json; @generator.to_json; end
+
+    def to_sitemap_xml; @generator.sitemap; end
+  end
+
+  # @param [String] filename
+  # @return [String]
+  def self.file_basename filename; File.basename filename, File.extname(filename); end
+
+  # @param [REXML::Document] xml
+  # @return [String]
+  def self.xml_to_s xml
     formatter = REXML::Formatters::Pretty.new
     formatter.compact = true
     formatter.width = 120
     io = StringIO.new
-    formatter.write sitemap, io
+    formatter.write xml, io
     io.string
   end
-
-  private
-  def get_meta filename
-    content = open(filename, 'r:utf-8'){|f| f.read }
-    return {} unless content =~ /^---/
-    title =
-      (content.lines.find{|line| line =~ /^title\s*:/ } || 'title:').
-      match(/^title\s*:\s*(.*)$/)[1].chomp
-    lastmod =
-      (content.lines.find{|line| line =~ /^lastmod\s*:/ } || 'lastmod:').
-      match(/^lastmod\s*:\s*(.*)$/)[1].chomp ||
-      File.mtime(filename).strftime('%Y-%m-%dT%H:%M:%SZ')
-    { title:   title,
-      lastmod: lastmod }
-  end
-
-  def basename filename
-    File.basename filename, File.extname(filename)
-  end
-
-  def gen_sitemap_part nav, base_url
-    nodes = []
-    nav.each do |key, child_nav|
-      if child_nav.respond_to? :each
-        nodes += gen_sitemap_part(child_nav, "#{base_url}#{key}/")
-        next
-      end
-      next if key =~ /^error/
-      url_node = REXML::Element.new 'url'
-      loc_node = REXML::Element.new 'loc'
-      loc_node.text = "#{base_url}#{key == 'index' ? '' : key}"
-      url_node.add_element loc_node
-      lastmod_node = REXML::Element.new 'lastmod'
-      lastmod_node.text = Time.now.strftime '%Y-%m-%dT%H:%M:%SZ'
-      url_node.add_element lastmod_node
-      changefreq_node = REXML::Element.new 'changefreq'
-      changefreq_node.text = 'daily'
-      url_node.add_element changefreq_node
-      nodes << url_node
-    end
-    nodes
-  end
 end
 
-desc 'Generate site navigation JSON.'
-task :gen_nav do
-  g = NavGenerator.new
-  nav = g.gather_navs File.absolute_path('templates')
-  nav = nav.to_json
-  open('templates/nav.json', 'w:utf-8'){|f| f.write nav }
-  puts 'Generate navigation at templates/nav.json'
-end
+namespace :nav do
+  desc 'Generate site navigation JSON.'
+  task :nav do
+    nav = Nav::Navs.instance.to_json
+    open('templates/nav.json', 'w:utf-8'){|f| f.write nav }
+    puts 'Generate navigation at templates/nav.json'
+  end
 
-desc 'Generate sitemap.xml'
-task :gen_sitemap => :gen_nav do
-  nav = JSON.parse open('templates/nav.json', 'r:utf-8'){|f| f.read }
-  g = NavGenerator.new
-  sitemap = g.gen_sitemap nav
-  open('sitemap.xml', 'w:utf-8'){|f| f.write sitemap }
-  puts 'Generate sitemap at sitemap.xml'
+  desc 'Generate sitemap.xml'
+  task :sitemap do
+    sitemap = Nav::Navs.instance.to_sitemap_xml
+    open('sitemap.xml', 'w:utf-8'){|f| f.write sitemap }
+    puts 'Generate sitemap at sitemap.xml'
+  end
 end
-# vim:set fdm=marker:

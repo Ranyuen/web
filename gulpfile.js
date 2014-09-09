@@ -1,13 +1,14 @@
 'use strict';
-var cp = require('child_process');
-var exec = require('gulp-exec'),
-    gulp = require('gulp'),
-    jshint = require('gulp-jshint'),
-    jshintStylish = require('jshint-stylish'),
-    less = require('gulp-less'),
-    Promise = require('bluebird'),
-    uglify = require('gulp-uglifyjs'),
-    concat = require('gulp-concat');
+var cp = require('child_process'),
+    fs = require('fs');
+var Promise       = require('bluebird'),
+    gulp          = require('gulp'),
+    concat        = require('gulp-concat'),
+    exec          = require('gulp-exec'),
+    jshint        = require('gulp-jshint'),
+    less          = require('gulp-less'),
+    uglify        = require('gulp-uglifyjs'),
+    jshintStylish = require('jshint-stylish');
 
 /**
  * @param {string} cmd
@@ -92,5 +93,15 @@ gulp.task('php-unit', function (done) {
   });
 });
 
-gulp.task('build', ['less', 'uglifyjs']);
+gulp.task('nav', function (done) {
+  Promise.all([
+    promiseProcess('rake nav:nav'),
+    promiseProcess('rake nav:sitemap'),
+  ]).then(function (stdouts) {
+    stdouts.forEach(function (stdout) { console.log(stdout); });
+    done();
+  }).catch(function (err) { done(err); });
+});
+
+gulp.task('build', ['less', 'uglifyjs', 'nav']);
 gulp.task('test', ['jshint', 'php-lint', 'php-fixer', 'php-unit']);

@@ -19,7 +19,7 @@ class ApiPhotos implements ApiController
                     ->findMany();
             } elseif ($species_name === 'all') {
                 $result = Photo::offset($offset)->limit($limit)->findMany();
-            } else if ($species_name === 'others') {
+            } elseif ($species_name === 'others') {
                 $result = Photo::where_raw('species_name is null')
                     ->offset($offset)
                     ->limit($limit)
