@@ -38,6 +38,7 @@ gulp.task('uglifyjs', function () {
 
   layout = gulp.src([
       'src/bower_components/jquery/dist/jquery.min.js',
+      'src/bower_components/uri.js/src/URI.min.js',
       'src/javascripts/messageForDeveloperFromRanyuen.js',
     ]).
     pipe(concat('layout.min.js')).
@@ -50,9 +51,8 @@ gulp.task('uglifyjs', function () {
   photoGallery = gulp.src([
       'src/bower_components/colorbox/jquery.colorbox-min.js',
       'src/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
-      'src/bower_components/masonry/dist/masonry.pkgd.min.js',
-      'src/bower_components/uri.js/src/URI.min.js',
       'src/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
+      'src/bower_components/masonry/dist/masonry.pkgd.min.js',
       'src/javascripts/photoGallery.js',
     ]).
     pipe(concat('photoGallery.min.js')).
