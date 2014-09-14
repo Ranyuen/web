@@ -12,7 +12,7 @@ class Config
     public function __construct()
     {
         if (!self::$container) {
-            self::$container = new Pimple;
+            self::$container = new Pimple();
         }
     }
 

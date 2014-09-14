@@ -28,8 +28,8 @@ class App
         session_start();
         $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
         if ($env === 'development') { ini_set('display_errors', 1); }
-        if (is_null($config)) { $config = (new Config)->load("config/$env.yaml"); }
-        $this->app = new Slim\Slim;
+        if (is_null($config)) { $config = (new Config())->load("config/$env.yaml"); }
+        $this->app = new Slim\Slim();
         $this->config = $this->setDefaultConfig($config, $env);
         $this->app->config($this->config);
         $this->applyDefaultRoutes($this->app);
@@ -197,7 +197,7 @@ class App
         $params['breadcrumb'] = $nav->getBreadcrumb($lang, $template_name);
         $params['link'] = $nav->getAlterNav($lang, $template_name);
 
-        $params['bgimage'] = (new BgImage)->getRandom();
+        $params['bgimage'] = (new BgImage())->getRandom();
 
         return $params;
     }

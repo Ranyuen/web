@@ -18,14 +18,6 @@ $photos = array_map(function ($photo) {
   return $photo;
 }, $photos);
 ?>
-<style>
-  .photos .photo {
-    background: #f0f5f0;
-    float: left;
-    margin: 0.6%;
-    width: 32%;
-  }
-</style>
 <form id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
     <option value="" <?php if ($species_name === null) { echo 'selected'; } ?>>-change species-</option>
@@ -41,26 +33,23 @@ $photos = array_map(function ($photo) {
   <div class="photo">
     <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
       class="lightbox"
-      title="<?php $h->h($photo['description_en']); ?> Ranyuen">
+      title="<?php $h->h($photo['description_ja']); ?> Ranyuen">
       <img rel="gallery"
         src="/api/photo?format=jpeg&id=<?php $h->h($photo['id']); ?>&width=<?php $h->h($photo['thumb_width']); ?>"
         width="<?php $h->h($photo['thumb_width']); ?>"
         height="<?php $h->h($photo['thumb_height']); ?>"
-        alt="<?php $h->h($photo['description_en']); ?> Ranyuen"/>
+        alt="<?php $h->h($photo['description_ja']); ?> Ranyuen"/>
     </a>
     <div>
+      <div><?php $h->h($photo['description_ja']); ?></div>
       <div><?php $h->h($photo['description_en']); ?></div>
     </div>
   </div>
 <?php } ?>
 </div>
-<script src="/assets/bower_components/colorbox/jquery.colorbox-min.js"></script>
-<link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
-<script src="/assets/bower_components/colorbox/i18n/jquery.colorbox-ja.js"></script>
-<script src="/assets/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
-<script src="/assets/bower_components/uri.js/src/URI.min.js"></script>
-<script src="/assets/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js"></script>
-<script src="/assets/javascripts/photoGallery.js"></script>
+<link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
+<link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
+<script src="/assets/javascripts/photoGallery.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
     new PhotoGallery().init(document.getElementById("photo-gallery"));

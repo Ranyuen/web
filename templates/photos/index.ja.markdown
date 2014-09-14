@@ -18,14 +18,6 @@ $photos = array_map(function ($photo) {
   return $photo;
 }, $photos);
 ?>
-<style>
-  .photos .photo {
-    background: #f0f5f0;
-    float: left;
-    margin: 0.6%;
-    width: 32%;
-  }
-</style>
 <form id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
     <option value="" <?php if ($species_name === null) { echo 'selected'; } ?>>--種類を選ぶ--</option>
@@ -55,7 +47,8 @@ $photos = array_map(function ($photo) {
   </div>
 <?php } ?>
 </div>
-<link href="/assets/bower_components/colorbox/example1/colorbox.css" rel="stylesheet" />
+<link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
+<link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
 <script src="/assets/javascripts/photoGallery.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {

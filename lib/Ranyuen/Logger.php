@@ -29,7 +29,7 @@ class Logger
      */
     public function addAccessInfo()
     {
-        $ltsv = new LTSV;
+        $ltsv = new LTSV();
         $ltsv->add('time', $_SERVER['REQUEST_TIME_FLOAT']);
         $ltsv->add('host', $_SERVER['REMOTE_ADDR']);
         $ltsv->add('method', $_SERVER['REQUEST_METHOD']);

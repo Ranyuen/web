@@ -162,7 +162,7 @@ class Renderer
             }
             ++ $i;
         }
-        $params = (new Yaml\Parser)->parse($front);
+        $params = (new Yaml\Parser())->parse($front);
         for (; $i < $iz; ++ $i)
             $content .= "$lines[$i]\n";
 

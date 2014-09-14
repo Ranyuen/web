@@ -29,19 +29,15 @@ $switch_lang = implode(' / ', $switch_lang);
   <link rel="home" href="<?php $h->h($home); ?>"/>
   <base href="<?php $h->h($link['base']); ?>"/>
   <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
-  <link rel="stylesheet" href="/assets/bower_components/normalize-css/normalize.css"/>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
   <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
   <style>
-    body, .header {
-      background: url('<?php $h -> h($bgimage); ?>') fixed;
-    }
+    body, .header { background: url('<?php $h->h($bgimage); ?>') fixed; }
   </style>
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/assets/bower_components/uri.js/src/URI.js"></script>
+  <script src="/assets/javascripts/layout.min.js"></script>
 </head>
 <body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
   <div class="container">
@@ -84,7 +80,6 @@ $switch_lang = implode(' / ', $switch_lang);
       </p>
     </footer>
   </div>
-<script src="/assets/javascripts/messageForDeveloperFromRanyuen.js"></script>
 <script>
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
