@@ -62,7 +62,7 @@ class Navigation
         $nav = $this->nav[$lang];
         foreach ($template_name as $part) {
             if ($part && $part !== 'index') {
-                if (!(isset($nav[$part]) && is_array($nav[$part]))) { break; }
+                if (!isset($nav[$part]) || isset($nav[$part]['title'])) { break; }
                 $nav = $nav[$part];
             }
         }

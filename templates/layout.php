@@ -68,7 +68,7 @@ $switch_lang = implode(' / ', $switch_lang);
       </div><!-- /main-inner -->
       <div class="side">
         <aside>
-          <?php $h -> echoNav($local_nav, $local_base); ?>
+          <?php $h->echoNav($local_nav, $local_base); ?>
         </aside>
       </div><!-- /side -->
     </div><!-- /main -->

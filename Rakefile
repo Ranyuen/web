@@ -73,7 +73,7 @@ XML
 
     def gen_sitemap_part nav, base_url
       nodes = []
-      metas, sub_navs = nav.partition{|key, meta| meta[:title] && meta[:lastmod] }
+      metas, sub_navs = nav.partition{|key, meta| meta[:title] }
       metas.each do |key, meta|
         url_node = REXML::Element.new 'url'
         loc_node = REXML::Element.new 'loc'
@@ -109,7 +109,9 @@ XML
 
   # @param [String] filename
   # @return [String]
-  def self.file_basename filename; File.basename filename, File.extname(filename); end
+  def self.file_basename filename
+    File.basename filename, File.extname(filename)
+  end
 
   # @param [REXML::Document] xml
   # @return [String]
