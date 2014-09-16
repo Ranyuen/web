@@ -78,18 +78,20 @@ class Navigation
     public function getBreadcrumb($lang, $template_name)
     {
         $nav = $this->nav[$lang];
-        $breadcrumb = [];
-        $path = '';
+        $path = '/';
+        $breadcrumb = [$path => $nav['index']['title']];
         foreach (explode('/', $template_name) as $part) {
-            $path .= '/';
-            if (isset($nav['index'])) {
-                $breadcrumb[$path] = $nav['index']['title'];
-            }
+            if ($part === 'index') { break; }
             if (isset($nav[$part])) {
-                $path .= $part;
+                $path .= $part . '/';
                 $nav = $nav[$part];
             } else {
                 break;
+            }
+            if (isset($nav['index'])) {
+                $breadcrumb[$path] = $nav['index']['title'];
+            } else if (isset($nav['title'])) {
+                $breadcrumb[$path] = $nav['title'];
             }
         }
 
