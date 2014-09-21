@@ -42,37 +42,35 @@ $switch_lang = implode(' / ', $switch_lang);
 </head>
 <body class="<?php $h->h($lang); ?>" lang="<?php $h->h($lang); ?>">
   <div class="container">
-    <header class="cf">
-      <div class="header-inner cf">
+   <header class="clear-fix">
+      <div class="header-inner clear-fix">
         <div class="logo">
           <h1>
             <a rel="home" href="<?php $h->h($home); ?>">
               <img src="/assets/images/icons/ranyuen.png" alt="<?php $h->h("$site_name"); ?>" longdesc="<?php $h->h($home); ?>"/>
             </a>
           </h1>
-        </div><!-- /logo -->
+        </div>
         <div class="lang">
           <?php echo $switch_lang; ?>
-        </div><!-- /lang -->
-      </div><!-- /header-inner -->
-      <nav class="cf">
+        </div>
+      </div>
+      <nav class="clear-fix">
         <?php $h->echoNav($global_nav, $link['base']); ?>
       </nav>
     </header>
-    <div class="main cf">
+    <div class="main clear-fix">
       <div class="main-inner">
         <?php $h->echoBreadcrumb($breadcrumb, $link['base']); ?>
         <article>
           <?php $h->render($content, $__params); ?>
         </article>
-      </div><!-- /main-inner -->
-      <div class="side">
-        <aside>
-          <?php $h->echoNav($local_nav, $local_base); ?>
-        </aside>
-      </div><!-- /side -->
-    </div><!-- /main -->
-    <footer class="cf">
+      </div>
+      <nav class="side">
+        <?php $h->echoNav($local_nav, $local_base); ?>
+      </nav>
+    </div>
+    <footer class="clear-fix">
       <p class="copyright">
         <small>
           Copyright (C) 2010-2014 <a rel="home" href="<?php $h->h($home); ?>"><?php $h->h("$site_name - $site_catchCopy"); ?></a> All Rights Reserved.<br/>
