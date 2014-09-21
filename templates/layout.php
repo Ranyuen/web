@@ -26,6 +26,7 @@ $switch_lang = implode(' / ', $switch_lang);
   <meta name="keywords" content="<?php $h->h($site_keyword); ?>"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="p:domain_verify" content="64ac31d000cfda08c00e325a74e91199"/>
   <link rel="home" href="<?php $h->h($home); ?>"/>
   <base href="<?php $h->h($link['base']); ?>"/>
   <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
