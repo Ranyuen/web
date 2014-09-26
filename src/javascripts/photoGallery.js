@@ -1,3 +1,5 @@
+/* global URI, Masonry, Hogan, global */
+/* jshint browser:true, jquery:true */
 (function (global) {
 'use struct';
 
@@ -45,14 +47,14 @@ function throttle(fun, wait) {
 * @return {function(...:any):any}
  */
 function debounce(fun, wait) {
-  var pre_processed_at = Date.now();
+  var preProcessedAt = Date.now();
 
   if (!wait || wait <= 0) { wait = 1000 / 30; }
   return function (/* arguments */) {
     var current = Date.now();
 
-    if (pre_processed_at + wait > current) { return; }
-    pre_processed_at = current;
+    if (preProcessedAt + wait > current) { return; }
+    preProcessedAt = current;
     fun.apply(null, arguments);
   };
 }
@@ -125,11 +127,11 @@ PhotoGallery.prototype.loadNextpage = function () {
     }
     ++ _this.currentPage;
     _this.insertPhotoNodes(res.map(function (photo) {
-      var thumb_width = 349,
-          thumb_height = ~~(photo.height * thumb_width / photo.width);
+      var thumbWidth = 349,
+          thumbHeight = ~~(photo.height * thumbWidth / photo.width);
 
-      photo.thumb_width = thumb_width
-      photo.thumb_height = thumb_height
+      photo.thumb_width = thumbWidth;
+      photo.thumb_height = thumbHeight;
       return photo;
     }));
   };
@@ -140,6 +142,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
       fragment = document.createDocumentFragment();
 
   photos.forEach(function (photo) {
+    /* jshint maxlen:1000 */
     var photoNode = document.createElement('div');
 
     photoNode.classList.add('photo');

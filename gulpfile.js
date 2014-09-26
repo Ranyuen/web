@@ -1,6 +1,7 @@
+/* global -Promise */
+/* jshint node:true */
 'use strict';
-var cp = require('child_process'),
-    fs = require('fs');
+var cp = require('child_process');
 var Promise       = require('bluebird'),
     gulp          = require('gulp'),
     concat        = require('gulp-concat'),
@@ -14,7 +15,7 @@ var Promise       = require('bluebird'),
 
 /**
  * @param {string} cmd
- * @return {Promise.<string>}
+ * @return {Promise.<string>} stdout
  */
 function promiseProcess(cmd) {
   return new Promise(function (resolve, reject) {
@@ -31,38 +32,6 @@ function promiseProcess(cmd) {
 gulp.task('copy-assets', function () {
   return gulp.src('src/bower_components/colorbox/example1/**').
     pipe(gulp.dest('assets/stylesheets'));
-});
-
-gulp.task('uglifyjs', function () {
-  var layout, photoGallery;
-
-  layout = gulp.src([
-      'src/bower_components/jquery/dist/jquery.min.js',
-      'src/bower_components/uri.js/src/URI.min.js',
-      'src/javascripts/messageForDeveloperFromRanyuen.js',
-    ]).
-    pipe(concat('layout.min.js')).
-    pipe(uglify({
-      outSourceMap: true,
-      output:       {},
-      compress:     { unsafe: true },
-    })).
-    pipe(gulp.dest('assets/javascripts'));
-  photoGallery = gulp.src([
-      'src/bower_components/colorbox/jquery.colorbox-min.js',
-      'src/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
-      'src/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
-      'src/bower_components/masonry/dist/masonry.pkgd.min.js',
-      'src/javascripts/photoGallery.js',
-    ]).
-    pipe(concat('photoGallery.min.js')).
-    pipe(uglify({
-      outSourceMap: true,
-      output:       {},
-      compress:     { unsafe: true },
-    })).
-    pipe(gulp.dest('assets/javascripts'));
-  return merge(layout, photoGallery);
 });
 
 gulp.task('jshint', function () {
@@ -94,17 +63,24 @@ gulp.task('nav', function () {
 
 gulp.task('php-fixer', function () {
   return Promise.all([
+    'index.php',
+    'phpmig.php',
     'lib/',
+    'test/',
+    'templates/',
   ].map(function (path) {
     return promiseProcess('php php-cs-fixer.phar fix ' + path + ' --level=all');
-  })).then(function (outs) {
-    outs.forEach(function (out) { console.log(out); });
-  });
+  }));
 });
 
 gulp.task('php-lint', function () {
-  return gulp.src(['lib/**/**.php', 'test/**/**.php']).
-    pipe(exec('php -l <%= file.path %>', {})).
+  return gulp.src([
+      '*.php',
+      'lib/**/**.php',
+      'test/**/**.php',
+      'templates/**/**.php'
+    ]).
+    pipe(exec('php -l <%= file.path %> > /dev/null', {})).
     pipe(exec.reporter({}));
 });
 
@@ -115,6 +91,35 @@ gulp.task('php-test', function (done) {
 gulp.task('php-unit', function () {
   return promiseProcess('vendor/bin/phpunit test').
     then(function (out) { console.log(out); });
+});
+
+gulp.task('uglifyjs', function () {
+  var layout, photoGallery,
+      uglifyOption = {
+        outSourceMap: true,
+        output:       {},
+        compress:     { unsafe: true },
+      };
+
+  layout = gulp.src([
+      'src/bower_components/jquery/dist/jquery.min.js',
+      'src/bower_components/uri.js/src/URI.min.js',
+      'src/javascripts/messageForDeveloperFromRanyuen.js',
+    ]).
+    pipe(concat('layout.min.js')).
+    pipe(uglify(uglifyOption)).
+    pipe(gulp.dest('assets/javascripts'));
+  photoGallery = gulp.src([
+      'src/bower_components/colorbox/jquery.colorbox-min.js',
+      'src/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
+      'src/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
+      'src/bower_components/masonry/dist/masonry.pkgd.min.js',
+      'src/javascripts/photoGallery.js',
+    ]).
+    pipe(concat('photoGallery.min.js')).
+    pipe(uglify(uglifyOption)).
+    pipe(gulp.dest('assets/javascripts'));
+  return merge(layout, photoGallery);
 });
 
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);

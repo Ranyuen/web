@@ -180,7 +180,7 @@
   'use strict';
 
   console.group('Message for developer from Ranyuen.');
-  console.log('%cRanyuen%c are working to %cmake smile over the world by orchid%c.',
+  console.log('%cRanyuen%c are working to %cmake smile over the world by Japanese orchids%c.',
     'color: red;',
     'color: inherit;',
     'font-weight: bold;',
