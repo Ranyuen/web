@@ -90,7 +90,7 @@ class Navigation
             }
             if (isset($nav['index'])) {
                 $breadcrumb[$path] = $nav['index']['title'];
-            } else if (isset($nav['title'])) {
+            } elseif (isset($nav['title'])) {
                 $breadcrumb[$path] = $nav['title'];
             }
         }

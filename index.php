@@ -5,5 +5,5 @@ if (php_sapi_name() === 'cli-server' && is_file($filename)) { return false; }
 
 require 'vendor/autoload.php';
 
-$app = new \Ranyuen\App;
+$app = new \Ranyuen\App();
 $app->run();
