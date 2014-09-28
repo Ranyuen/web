@@ -2,26 +2,6 @@
 title: ウチョウランの育て方を極める
 description: 花好きの皆様がウチョウランを正確に理解し、自分好みの立派なウチョウランに育てられるように簡単に説明します。
 ---
-<style>
-table {
-  width: 80%;
-}
-th {
-  width: 20%;
-  background: #4f10d0;
-  border: 1px solid #aeacd0;
-  color: #ffffff;
-}
-td {
-  width: 20%;
-  border: 1px solid #aeacd0;
-  font-size: 13px;
-  text-align: center;
-}
-.j-name {
-  font-weight: bold;
-}
-</style>
 <table>
     <caption>ラン科　ウチョウラン属　Ponerochis(ポネロキス)</caption>
     <thead>
