@@ -21,6 +21,7 @@ function promiseProcess(cmd) {
   return new Promise(function (resolve, reject) {
     cp.exec(cmd, function (err, stdout, stderr) {
       if (err) {
+        process.stdout.write(stdout);
         process.stderr.write(stderr);
         return reject(err);
       }
@@ -61,13 +62,24 @@ gulp.task('nav', function () {
   });
 });
 
+gulp.task('php-cs', function () {
+  return Promise.all([
+    '-l .',
+    'lib/',
+    'templates/',
+    'test/',
+  ].map(function (path) {
+    return promiseProcess('php vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
+  }));
+});
+
 gulp.task('php-fixer', function () {
   return Promise.all([
     'index.php',
     'phpmig.php',
     'lib/',
-    'test/',
     'templates/',
+    'test/',
   ].map(function (path) {
     return promiseProcess('php php-cs-fixer.phar fix ' + path + ' --level=all');
   }));
@@ -123,4 +135,5 @@ gulp.task('uglifyjs', function () {
 });
 
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
+gulp.task('deploy', []);
 gulp.task('test', ['jshint', 'php-test']);
