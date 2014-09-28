@@ -135,4 +135,5 @@ gulp.task('uglifyjs', function () {
 });
 
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
+gulp.task('deploy', []);
 gulp.task('test', ['jshint', 'php-test']);
