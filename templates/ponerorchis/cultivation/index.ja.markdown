@@ -18,7 +18,6 @@ description:
 休眠中に植え替えや植え付けをします。 (通常12月～3月)
 
 ## 水やり
-<img src="/assets/images/growings_miniminiranran_mizuyari.png" width="250" alt="アワチドリ / 夢ちどり 水やり (Ponerorchis) - Ranyuen" />
 
 芽出し頃から開花期までは土の表面が少し乾いたらあまり間をあけずに、花後は土が乾いたらたっぷりと、高温期は夕方から夜間に行います。
 
