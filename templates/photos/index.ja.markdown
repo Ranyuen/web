@@ -31,7 +31,7 @@ $photos = array_map(function ($photo) {
 <div id="photo-gallery" class="photos">
 <?php foreach ($photos as $photo) { ?>
   <div class="photo">
-    <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
+    <a href="/images/gallery/<?php $h->h($photo['id']); ?>.jpg"
       class="lightbox"
       title="<?php $h->h($photo['description_ja']); ?> 蘭裕園 Ranyuen">
       <img rel="gallery"

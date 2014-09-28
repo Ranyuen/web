@@ -1,5 +1,5 @@
-/Calanthe/gallery/*
-/Calanthe/cache/*
+/images/gallery/*
+/images/cache/*
 *.sqlite3
 !.gitkeep
 

@@ -147,7 +147,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
 
     photoNode.classList.add('photo');
     photo.alt = photo.description_ja + ' 蘭裕園 Ranyuen';
-    photo.origUrl = '/Calanthe/gallery/' + photo.id + '.jpg';
+    photo.origUrl = '/images/gallery/' + photo.id + '.jpg';
     photo.thumbUrl = '/api/photo?format=jpeg&id=' + photo.id + '&width=' + photo.thumb_width;
     photoNode.innerHTML = Hogan.
       compile('<a class="lightbox" href="{{origUrl}}" title="{{alt}}"><img rel="gallery" src="{{thumbUrl}}" width="{{thumb_width}}" height="{{thumb_height}}" alt="{{alt}}"/></a><div>{{description_ja}}</div><div>{{description_en}}</div>').
