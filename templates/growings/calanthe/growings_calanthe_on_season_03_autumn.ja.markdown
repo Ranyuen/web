@@ -25,14 +25,14 @@ title: 年間の管理 秋期 (9月～11月)
 ## 病害虫
 <figure>
   <img src="/assets/images/aburamushi_yuu.png" width="250" alt="有翅のアブラムシ - Ranyuen" />
-  <figurecaption>有翅のアブラムシ</figurecaption>
+  <figcaption>有翅のアブラムシ</figcaption>
 </figure>
 
 寒くなるにつれ病害虫の発生は少なくなるのが普通です。秋から冬にかけ有翅 (ゆうし) のアブラムシが飛来することがあります。吸汁により、ウイルス病を媒介する可能性があるため、注意が必要です。アブラムシは光るものが嫌いなため、アルミホイルなどを丸めて葉のそばに置くだけでも寄せ付けない効果があります。
 
 <figure>
   <img src="/assets/images/fuza.png" width="250" alt="フザリュームに感染した新芽 - Ranyuen" />
-  <figurecaption>フザリュームに感染した新芽</figurecaption>
+  <figcaption>フザリュームに感染した新芽</figcaption>
 </figure>
 
 新しく作られた新芽がカビの一種 (フザリューム Fusarium) に感染すると、大きくてりっぱな冬至芽ができないこともよくあります。また開花時には、新葉に褐色の不正形の病斑を生じたり異常な徒長がおこり花がうまく咲かないこともあります。他の場所において様子をみるか、新芽があきらかに異常な場合は思い切って新芽を切り落としてしまうとその後、正常な小芽が生じることもあります。

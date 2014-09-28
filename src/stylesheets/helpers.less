@@ -1,0 +1,43 @@
+.clear-fix {
+  *zoom: 1;
+
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after { clear: both; }
+}
+
+.social-icon(@image, @color) {
+  @social-icon-size: 24px;
+
+  background-image: url(@image);
+  background-repeat: no-repeat;
+  background-size: @social-icon-size @social-icon-size;
+  display: inline-block;
+  height: @social-icon-size;
+  position: relative;
+  text-decoration: none;
+  transition: linear 0.5s;
+
+  &:hover, &:focus {
+    background-color: @color;
+    color: white;
+  }
+
+  img {
+    height: @social-icon-size;
+    position: absolute;
+    width: @social-icon-size;
+  }
+
+  span {
+    display: inline-block;
+    height: @social-icon-size;
+    left: @social-icon-size + 2px;
+    line-height: @social-icon-size;
+    position: relative;
+    padding-right: @social-icon-size + 2px;
+  }
+}

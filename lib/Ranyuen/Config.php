@@ -7,12 +7,12 @@ use \Symfony\Component\Yaml\Yaml;
 
 class Config
 {
-    private static $container;
+    private static $_container;
 
     public function __construct()
     {
-        if (!self::$container) {
-            self::$container = new Pimple;
+        if (!self::$_container) {
+            self::$_container = new Pimple();
         }
     }
 
@@ -21,7 +21,7 @@ class Config
      */
     public function container()
     {
-        return self::$container;
+        return self::$_container;
     }
 
     /**
@@ -30,8 +30,8 @@ class Config
      */
     public function load($filepath = '')
     {
-        if (isset(self::$container['config'])) {
-            return self::$container['config'];
+        if (isset(self::$_container['config'])) {
+            return self::$_container['config'];
         }
         if (!$filepath || !is_readable($filepath)) {
             return [];
@@ -44,9 +44,9 @@ class Config
 
     private function fillContainer($config)
     {
-        self::$container['config'] = $config;
+        self::$_container['config'] = $config;
         ORM::configure($config['db']);
         ORM::configure('logging', true);
-        self::$container['db'] = ORM::get_db();
+        self::$_container['db'] = ORM::get_db();
     }
 }

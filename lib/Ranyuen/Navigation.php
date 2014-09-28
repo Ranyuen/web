@@ -44,7 +44,7 @@ class Navigation
     public function getNews($lang)
     {
         $news = isset($this->nav[$lang]['news']) ?
-            $this->nav[$lang]['news'] :
+            $this->gather($this->nav[$lang]['news']) :
             [];
         unset($news['index']);
 
@@ -62,7 +62,7 @@ class Navigation
         $nav = $this->nav[$lang];
         foreach ($template_name as $part) {
             if ($part && $part !== 'index') {
-                if (!(isset($nav[$part]) && is_array($nav[$part]))) { break; }
+                if (!isset($nav[$part]) || isset($nav[$part]['title'])) { break; }
                 $nav = $nav[$part];
             }
         }
@@ -78,16 +78,20 @@ class Navigation
     public function getBreadcrumb($lang, $template_name)
     {
         $nav = $this->nav[$lang];
-        $breadcrumb = [];
-        $path = '';
+        $path = '/';
+        $breadcrumb = [$path => $nav['index']['title']];
         foreach (explode('/', $template_name) as $part) {
-            $path .= '/';
-            if (isset($nav['index'])) { $breadcrumb[$path] = $nav['index']; }
+            if ($part === 'index') { break; }
             if (isset($nav[$part])) {
-                $path .= $part;
+                $path .= $part . '/';
                 $nav = $nav[$part];
             } else {
                 break;
+            }
+            if (isset($nav['index'])) {
+                $breadcrumb[$path] = $nav['index']['title'];
+            } elseif (isset($nav['title'])) {
+                $breadcrumb[$path] = $nav['title'];
             }
         }
 
@@ -135,16 +139,12 @@ class Navigation
         $index = [];
         $local = [];
         $sub = [];
-        foreach ($nav as $href => $title) {
-            if (is_string($title)) {
-                if ($href === 'index') {
-                    $index['/'] = $title;
-                } else {
-                    $local[$href] = $title;
-                }
+        foreach ($nav as $href => $meta) {
+            if (isset($meta['title'])) {
+                $index[$href === 'index' ? '/' : $href] = $meta['title'];
             } else {
                 $sub["$href/"] = isset($nav[$href]['index']) ?
-                    $nav[$href]['index'] :
+                    $nav[$href]['index']['title'] :
                     null;
             }
         }

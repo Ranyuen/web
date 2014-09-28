@@ -1,9 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    net-ssh (2.8.0)
-    rake (10.2.2)
-    sass (3.3.4)
+    rake (10.3.2)
 
 PLATFORMS
   ruby
@@ -11,6 +9,4 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  net-ssh
   rake
-  sass

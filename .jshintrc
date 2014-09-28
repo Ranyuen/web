@@ -1,4 +1,4 @@
-// vim:set ft=javascript:
+// vim:set ft=json:
 {
   // Enforcing options
   "camelcase": true,
@@ -23,6 +23,5 @@
   "validthis": true,
 
   // Environments
-  "devel": true,
-  "node": true
+  "devel": true
 }

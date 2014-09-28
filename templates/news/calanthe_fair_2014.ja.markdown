@@ -1,48 +1,6 @@
 ---
 title: 高品質なエビネを世界で一番安く買える！ こんなチャンスは今年だけ！
 ---
-<style>
-h1, h2 {
-  margin: 0.5em 0;
-  text-align: center;
-}
-h1 {
-  background-color: red;
-  color: white;
-  display: block;
-  height: 80px;
-  line-height: 40px;
-  width: 100%;
-}
-.lottery {
-  border-left: solid 10px;
-  border-bottom: solid 2px;
-  color: red;
-  font-size: 6mm;
-  font-weight: bold;
-  text-align: left;
-}
-b { font-size: large; }
-.color-box {
-  background: #ffdddd;
-  line-height: 2em;
-}
-.color-box span {
-  background: transparent !important;
-  color: inherit !important;
-  display: inline-block;
-  height: 2em;
-  line-height: 2em;
-  text-align: center;
-  text-decoration: underline;
-  width: 8.5em;
-}
-figcaption { text-align: center; }
-.attention {
-  color: #696969;
-  font-size: 13px;
-}
-</style>
 
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
@@ -60,14 +18,14 @@ figcaption { text-align: center; }
 <figure>
   <img src="/assets/images/calanthe_fair_2014_1.jpg" alt="雪で倒壊したハウスの一部" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_3.jpg" alt="雪で倒壊したハウスの一部" style="max-width: 400px;" />
-  <figurecaption>雪で倒壊したハウスの一部</figurecaption>
+  <figcaption>雪で倒壊したハウスの一部</figcaption>
 </figure>
 
 そのため通常は一般にはほとんど出まわらない<b>豪華</b>で<b>きれい</b>な<b>高品質のエビネ (特上株)</b> を、<b>超格安</b>で販売します。
 
 <figure>
   <img src="/assets/images/calanthe_fair_2014_2.jpg" alt="カラフルな農場のエビネ - 蘭裕園" style="" />
-  <figurecaption>当園のエビネの一例です</figurecaption>
+  <figcaption>当園のエビネの一例です</figcaption>
 </figure>
 
 販売株は<u>すべての花が一鉢づつに異なる</u>ため、たくさんの中から自分好みのエビネを見つけて下さい。
@@ -98,7 +56,7 @@ figcaption { text-align: center; }
   <img src="/assets/images/calanthe_fair_2014_6.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_7.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
   <img src="/assets/images/calanthe_fair_2014_8.png" alt="4月06日現在の株での一例 エビネ - 蘭裕園" style="max-width: 400px;" />
-  <figurecaption>4月6日の2000円株の状態</figurecaption>
+  <figcaption>4月6日の2000円株の状態</figcaption>
 </figure>
 
 4月18日午前10時からの開園です。5,000～10,000鉢販売予定しています。

@@ -1,0 +1,239 @@
+@charset "utf-8";
+@import (less) "../bower_components/normalize-css/normalize.css";
+@import "helpers";
+
+@header-footer-bg: #edfffe;
+@header-footer-radius: 8px;
+
+body {
+  background: #d6e9ca;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.8em;
+  margin: 0;
+
+  &.ja {
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'MS Pゴシック', sans-serif;
+
+    q {
+      &:before { content: "「"; }
+      &:after  { content: "」"; }
+    }
+  }
+
+  &.en {
+    font-family: "Alef", sans-serif;
+
+    q {
+      &:before { content: "\""; }
+      &:after  { content: "\""; }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0.4em, 0, 0, 0 }
+
+p { margin: 0; }
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+  border-radius: 4px;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  background: #fbfaf5;
+  margin: 0 auto;
+  min-width: 320px;
+  width: 90%;
+}
+
+header {
+  background: @header-footer-bg;
+  border-radius: 0 0 @header-footer-radius @header-footer-radius;
+  padding: 10px 2%;
+
+  .header-inner {
+    .logo {
+      float: left;
+      width: 50%;
+      h1 { margin: 0; }
+      img { width: 54px; }
+    }
+
+    .lang {
+      float: left;
+      font-size: smaller;
+      line-height: 54px;
+      width: 50%;
+      text-align: right;
+      a { color: #006400; }
+    }
+  }
+
+  nav {
+    margin-top: 6px;
+
+    .nav-item {
+      text-align: center;
+      &:first-child { margin-top: 0; }
+
+      a {
+        @gradient_light: #a9a1de;
+        @gradient_shade: #7564de;
+        @shadow: #6a6d6f;
+        background: @gradient_shade;
+        background: -ms-linear-gradient(top, @gradient_light, @gradient_shade);
+        background: -moz-linear-gradient(top, @gradient_light 0%, @gradient_shade);
+        background: -webkit-gradient(linear, left top, left bottom, from(@gradient_light), to(@gradient_shade));
+        background: linear-gradient(to bottom, @gradient_light, @gradient_shade);
+        border-radius: 18px;
+        box-shadow: 1px 1px 1px @shadow;
+        color: #fbfaf5;
+        display: block;
+        padding: 4px 2%;
+        text-decoration: none;
+        text-shadow: -1px -1px @shadow;
+
+        &:hover {
+          background: @gradient_light;
+          background: linear-gradient(to bottom, @gradient_shade, @gradient_light);
+          box-shadow: 1px 1px 1px @shadow inset;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  padding: 20px 2%;
+
+  h1 { margin-top: 32px; }
+
+  article {
+    h1, h2, p { margin: 16px 0; }
+
+    p {
+      a {
+        &.facebook {
+          .social-icon('/assets/images/icons/f_b_icon.png', rgb(59, 91, 153));
+        }
+
+        &.youtube {
+          .social-icon('/assets/images/icons/yt_icon.png', rgb(229, 26, 39));
+        }
+      }
+    }
+  }
+
+  .breadcrumb {
+    .clear-fix;
+    font-size: smaller;
+    margin-bottom: 0.8em;
+
+    .nav-item {
+      float: left;
+      a { text-decoration: none; }
+      &:after { content: " > "; }
+
+      &:last-child {
+        a { color: inherit; }
+      }
+    }
+  }
+
+  .side {
+    @side-nav-color: #006400;
+    padding: 40px 0 20px 0;
+
+    .nav-item {
+      a {
+        border-bottom: dotted 2px @side-nav-color;
+        display: block;
+        padding: 20px 2%;
+        text-decoration: none;
+        &:after { content: " >"; }
+      }
+    }
+
+    .nav-item:not(.nav-item-home) {
+      a {
+        color: @side-nav-color;
+        &:hover { color: #00aa00; }
+      }
+    }
+
+    .nav-item-home {
+      border-top: dotted 2px @side-nav-color;
+      font-size: larger;
+      a { color: inherit; }
+    }
+  }
+}
+
+footer {
+  background: @header-footer-bg;
+  border-radius: @header-footer-radius @header-footer-radius 0 0;
+  padding: 10px 2%;
+
+  p {
+    font-size: 12px;
+    text-align: center;
+    a { color: #006400; }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    nav {
+      .nav-item {
+        float: left;
+        margin-right: 1%;
+        width: 49.5%;
+
+        &:nth-child(2) {
+          margin-top: 0;
+          margin-right: 0;
+        }
+
+        &:nth-child(4) { margin-right: 0; }
+        &:nth-child(6) { margin-right: 0; }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  header {
+    nav {
+      .nav-item {
+        float: left;
+        margin-top: 0;
+        margin-right: 2%;
+        width: 15%;
+        &:nth-child(2) { margin-right: 2%; }
+        &:nth-child(4) { margin-right: 2%; }
+        &:nth-child(6) { margin-right: 0; }
+      }
+    }
+  }
+
+  .main {
+    .main-inner {
+      float: right;
+      width: 83%;
+    }
+
+    .side {
+      float: left;
+      margin-top: 0;
+      width: 15%;
+    }
+  }
+}

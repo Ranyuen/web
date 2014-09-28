@@ -27,7 +27,7 @@ class ColorTest extends PHPUnit_Framework_TestCase
         array_walk($this->set, function ($set) {
             list($r, $g, $b) = $set[0];
             list($h, $s, $v) = $set[1];
-            $c = (new Color)->fromRgb($r, $g, $b);
+            $c = (new Color())->fromRgb($r, $g, $b);
             $this->assertEquals([$h, $s, $v], $c->hsv());
         });
     }
@@ -37,7 +37,7 @@ class ColorTest extends PHPUnit_Framework_TestCase
         array_walk($this->set, function ($set) {
             list($r, $g, $b) = $set[0];
             list($h, $s, $v) = $set[1];
-            $c = (new Color)->fromHsv($h, $s, $v);
+            $c = (new Color())->fromHsv($h, $s, $v);
             $this->assertEquals([$r, $g, $b], $c->rgb());
         });
     }
@@ -46,7 +46,7 @@ class ColorTest extends PHPUnit_Framework_TestCase
     {
         array_walk($this->set, function ($set) {
             list($h, $s, $v) = $set[1];
-            $c = (new Color)->fromHsv($h, $s, $v);
+            $c = (new Color())->fromHsv($h, $s, $v);
             $this->assertEquals([$h, $s, $v], $c->hsv());
         });
     }

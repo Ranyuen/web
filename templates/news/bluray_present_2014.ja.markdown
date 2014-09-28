@@ -1,26 +1,14 @@
 ---
 title: 蘭裕園の美しいランの世界をブルーレイに！
 ---
-<style>
-h1, h2 {
-  margin: 0.5em 0;
-  text-align: center;
-}
-figure { text-align: center; }
-.green { color: green; }
-.red {
-  color: red;
-  font-size: large;
-}
-</style>
 
-<strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<span style="font-size: 16px;">(終了しました)</span>
+<strike>蘭裕園の美しいエビネの世界をブルーレイに！</strike>&nbsp;<small> (プレゼントは終了しました)</small>
 ==
 <div style="text-align: center;">たくさんのお客様にご応募頂きありがとうございました。蘭裕園のランを楽しんで頂けたのならば幸いです。</div>
 
 <figure>
 	<img src ="/assets/images/bluray_present_2014_1.png" alt="こころの花5 蘭裕園の世界が詰まったブルーレイ エビネ - 蘭裕園" />
-	<figurecaption>こころの花5 蘭裕園の世界が詰まったブルーレイ</figurecaption>
+	<figcaption>こころの花5 蘭裕園の世界が詰まったブルーレイ</figcaption>
 </figure>
 
 <span class="green">春色エビネ</span> = 世界で最も多彩なラン

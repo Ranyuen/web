@@ -1,5 +1,5 @@
 (function () {
-  /* global phantom, document */
+  /* global phantom, document, require */
   'use strict';
   var tests = {};
 

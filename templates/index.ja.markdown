@@ -1,29 +1,15 @@
 ---
 title: 蘭裕園
+description: エビネとウチョウランの専門農園です。エビネとウチョウランの正しい栽培法や、エビネとウチョウランの綺麗な写真を掲載しています。
 ---
-<style>
-figure img {
-	display: block;
-	min-width: 494px;
-	width: 100%;
-}
-figcaption {
-	text-align: right;
-}
-.bluray {
-	margin-top: 15px;
-	width: 40%;
-}
-.pre {
-	border: solid 5px red;
-	font-weight: bold;
-	text-align: center;
-}
-</style>
+<b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
 
-Ranyuen Style<small>　～求めるものはこころ安らぐ花～</small>
+<b><a href="/news/information_of_orchid_exam">ラン検定に新しい問題を追加しました</a></b>
+
+蘭裕園スタイルのエビネとウチョウラン
 ==
-<img src="/assets/images/top_img.jpg" alt="春色エビネ 蘭裕園 - エビネ" />
+
+<img src="/assets/images/top_img2.jpg" alt="アワチドリ / 夢ちどり - 蘭裕園" />
 
 蘭裕園は[エビネ (Calanthe)](growings/calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](growings/ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 
