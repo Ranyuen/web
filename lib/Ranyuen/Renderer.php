@@ -7,42 +7,45 @@ use Symfony\Component\Yaml;
 class Renderer
 {
     /** @type array */
-    private $config;
+    private $_config;
     /** @type string */
-    private $layout = null;
+    private $_layout = null;
 
     /**
      * @param array $config
      */
     public function __construct($config)
     {
-        $this->config = $config;
+        $this->_config = $config;
     }
 
     /**
-     * @param  string   $template_name
+     * @param  string   $templateName
      * @return Renderer
      */
-    public function setLayout($tamplate_name)
+    public function setLayout($templateName)
     {
-        $this->layout = file_get_contents(
-            "{$this->config['templates.path']}/$tamplate_name.php");
+        $this->_layout = file_get_contents(
+            "{$this->_config['templates.path']}/$templateName.php"
+        );
 
         return $this;
     }
 
     /**
-     * @param  string $template_name
+     * @param  string $templateName
      * @param  array  $params
      * @return string
      */
-    public function render($template_name, $params = [])
+    public function render($templateName, $params = [])
     {
-        $template_type = $this->detectTemplateType($template_name);
-        $filepath = "{$this->config['templates.path']}/$template_name.$template_type";
-        if (! is_file($filepath)) { return false; }
+        $templateType = $this->detectTemplateType($templateName);
+        $filepath = "{$this->_config['templates.path']}/$templateName.$templateType";
+        if (!is_file($filepath)) {
+            return false;
+        }
         $template = file_get_contents($filepath);
-        switch ($template_type) {
+        switch ($templateType) {
             case 'php':
                 return $this->renderPhpTemplateWithLayout($template, $params);
             case 'markdown':
@@ -61,7 +64,7 @@ class Renderer
         if ($fromtMatter) {
             $__params = array_merge($fromtMatter, $__params);
         }
-        $__params['h'] = new Helper($this->config);
+        $__params['h'] = new Helper($this->_config);
         $render = function () use ($__params) {
             foreach (func_get_arg(1) as $__k => $__v) {
                 ${$__k} = $__v;
@@ -79,27 +82,29 @@ class Renderer
     }
 
     /**
-     * @param  string $template_name
+     * @param  string $templateName
      * @return string 'php' or 'markdown'
      */
-    private function detectTemplateType($template_name)
+    private function detectTemplateType($templateName)
     {
-        $template_type = 'php';
-        $dir = dirname("{$this->config['templates.path']}/$template_name");
-        if (! is_dir($dir)) { return 'php'; }
+        $templateType = 'php';
+        $dir = dirname("{$this->_config['templates.path']}/$templateName");
+        if (!is_dir($dir)) {
+            return 'php';
+        }
         if ($handle = opendir($dir)) {
-            $regex = '/^(?:' . basename($template_name) . ')\.(php|markdown)$/';
+            $regex = '/^(?:' . basename($templateName) . ')\.(php|markdown)$/';
             while (false !== ($file = readdir($handle))) {
                 $matches = [];
                 if (is_file("$dir/$file") &&
                     preg_match($regex, $file, $matches)) {
-                    $template_type = $matches[1];
+                    $templateType = $matches[1];
                     break;
                 }
             }
         }
 
-        return $template_type;
+        return $templateType;
     }
 
     /**
@@ -109,14 +114,15 @@ class Renderer
      */
     private function renderPhpTemplateWithLayout($template, $params)
     {
-        if ($this->layout) {
-            list($content, $frontMatter) = $this->stripYamlFromtMatter($template);
+        if ($this->_layout) {
+            list($content, $frontMatter) =
+                $this->stripYamlFromtMatter($template);
             if ($frontMatter) {
                 $params = array_merge($frontMatter, $params);
             }
             $params['content'] = $content;
 
-            return $this->renderTemplate($this->layout, $params);
+            return $this->renderTemplate($this->_layout, $params);
         } else {
             return $this->renderTemplate($template, $params);
         }
@@ -129,15 +135,16 @@ class Renderer
      */
     private function renderMarkdownTemplateWithLayout($template, $params)
     {
-        if ($this->layout) {
-            list($content, $frontMatter) = $this->stripYamlFromtMatter($template);
+        if ($this->_layout) {
+            list($content, $frontMatter) =
+                $this->stripYamlFromtMatter($template);
             if ($frontMatter) {
                 $params = array_merge($frontMatter, $params);
             }
             $params['content'] = (new MarkdownExtraParser())
                 ->transformMarkdown($this->renderTemplate($content, $params));
 
-            return $this->renderTemplate($this->layout, $params);
+            return $this->renderTemplate($this->_layout, $params);
         } else {
             return (new MarkdownExtraParser())
                 ->transformMarkdown($this->renderTemplate($template, $params));

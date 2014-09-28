@@ -69,7 +69,7 @@ gulp.task('php-cs', function () {
     'templates/',
     'test/',
   ].map(function (path) {
-    return promiseProcess('php vendor/bin/phpcs ' + path);
+    return promiseProcess('php vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
   }));
 });
 
@@ -78,8 +78,8 @@ gulp.task('php-fixer', function () {
     'index.php',
     'phpmig.php',
     'lib/',
-    'test/',
     'templates/',
+    'test/',
   ].map(function (path) {
     return promiseProcess('php php-cs-fixer.phar fix ' + path + ' --level=all');
   }));
@@ -97,7 +97,7 @@ gulp.task('php-lint', function () {
 });
 
 gulp.task('php-test', function (done) {
-  runSequence('php-lint', 'php-fixer', 'php-cs', 'php-unit', done);
+  runSequence('php-lint', 'php-fixer', 'php-unit', done);
 });
 
 gulp.task('php-unit', function () {
