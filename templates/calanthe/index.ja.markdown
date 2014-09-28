@@ -1,5 +1,5 @@
 ---
-title: エビネの栽培
+title: エビネを極める
 ---
 <img style="display: block;" src="/assets/images/sai_fir.jpg" width="735" height="294" alt="エビネ (Calanthe) の栽培 - Ranyuen" />
 
