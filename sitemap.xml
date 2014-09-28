@@ -161,18 +161,8 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/ponerorchis/1_kind_of_ponerorchis</loc>
+    <loc>http://ranyuen.com/ponerorchis/as_miniminiranran</loc>
     <lastmod>2014-09-28T18:07:58Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/ponerorchis/3_as_miniminiranran</loc>
-    <lastmod>2014-09-28T18:07:58Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/ponerorchis/4_ponerorchis_in_the_new_way</loc>
-    <lastmod>2014-09-28T18:13:20Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -181,22 +171,32 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/ponerorchis/cultivation/1_special_upbringing_of_ponerorchis</loc>
+    <loc>http://ranyuen.com/ponerorchis/kind_of_ponerorchis</loc>
     <lastmod>2014-09-28T18:07:58Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/ponerorchis/cultivation/2_habitat_of_ponerorchis</loc>
-    <lastmod>2014-09-28T18:07:58Z</lastmod>
+    <loc>http://ranyuen.com/ponerorchis/ponerorchis_in_the_new_way</loc>
+    <lastmod>2014-09-28T18:13:20Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/ponerorchis/cultivation/3_controlling_pests_of_ponerorchis</loc>
-    <lastmod>2014-09-28T18:08:17Z</lastmod>
+    <loc>http://ranyuen.com/ponerorchis/cultivation/controlling_pests_of_ponerorchis</loc>
+    <lastmod>2014-09-28T18:31:28Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/ponerorchis/cultivation/habitat_of_ponerorchis</loc>
+    <lastmod>2014-09-28T18:07:58Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/</loc>
+    <lastmod>2014-09-28T18:07:58Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/ponerorchis/cultivation/special_upbringing_of_ponerorchis</loc>
     <lastmod>2014-09-28T18:07:58Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
