@@ -1,13 +1,10 @@
 ---
-title: アワチドリ / 夢ちどりの栽培法 - 初心者編
+title: ウチョウランの育て方
+description: 
 ---
-## やさしい栽培法 初級者編
-<img src="/assets/images/growings_b1.jpg" width="250" alt="アワチドリ/ 夢ちどり (Ponarorchis) - Ranyuen" />
 
-アワチドリとは、世界中で千葉県の房総半島の一部にのみ自生するランの一種です。野生種は乱獲のため、ほとんどみることができなくなり、絶滅危惧種に指定されています。当園で約35年の年月をかけて改良を行った結果、丈夫でバラエティーに富むランとなり、今では世界中から注目されています。
+# ウチョウランの育て方
 
-同じ仲間に、ウチョウラン・クロカミラン・サツマチドリなどがありますが、これらの種類をもとに丈夫でもっときれいに、花もたくさん咲くように改良した交配種が夢ちどりです。
-　
 ## 置き場所
 屋外の明るい場所で雨、強風が避けられ、夏期はなるべく涼しい場所に置きます。開花中の一ヶ月間くらいは室内へ持ち込むことも可能です。
 
@@ -19,7 +16,6 @@ title: アワチドリ / 夢ちどりの栽培法 - 初心者編
 
 ## 球根の植え付け
 休眠中に植え替えや植え付けをします。 (通常12月～3月)
-<?php $h->echoYouTube('MT2eVsddJK8'); ?>
 
 ## 水やり
 <img src="/assets/images/growings_miniminiranran_mizuyari.png" width="250" alt="アワチドリ / 夢ちどり 水やり (Ponerorchis) - Ranyuen" />
@@ -44,8 +40,14 @@ title: アワチドリ / 夢ちどりの栽培法 - 初心者編
 ## 年間管理
 <img src="/assets/images/tech_to_grow_ponerorchis_for_beginner.png" width="750" height="1080" alt="アワチドリ / 夢ちどり 年間管理の目安表 (Ponerorchis) - Ranyuen" />
 
-##夢ちどり・アワチドリの楽しみ方一例
+## 夢ちどり・アワチドリの楽しみ方一例
 ![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_a2.jpg)
 ![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_a3.jpg)
 ![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_a4.jpg)
 ![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_a5.jpg)
+
+## 東京および自生地における場合
+1. 冬季（12～3月）：休暇、地上部は枯れ球根（1cm～3cm）となる。
+2. 春（3～4月）：球根上部（芽のある側）より芽が伸びはじめる。
+3. 初夏・夏（5～7月）：下から順に開花、同時に地上部（地中）では来年発芽する新球（新しい球根）を作りはじめる。
+4. 秋～冬（8～12月）：茎葉は黄変の後に枯れ地中には新球が出来上がる。

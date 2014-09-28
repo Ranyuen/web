@@ -1,9 +1,27 @@
 ---
-title: ウチョウラン (Ponerorchis) の種類
+title: ウチョウラン（Ponerorchis）の種類
+description: 
 ---
-# ウチョウラン (Ponerorchis) の種類
 
-## ウチョウラン (graminifolia)
+## ウチョウラン（Ponerorchis）の種類
+
+ウチョウラン属（Ponerorchis）には、以下のような種があります。
+
+ラン科 ウチョウラン属 Ponerorchis（ポネロルキス）
+
+|和名（種名）|種名|地域|開花時期（自生地）|
+|-|-|-|-|
+|ウチョウラン|graminifolia|本州北部～九州|5～8月|
+|アワチドリ|suzukiana|千葉県房総半島|6～7月|
+|クロカミラン|kurokamiana|佐賀県黒髪山周辺|5～6月|
+|サツマチドリ|micropunctata|鹿児島県下こしき島|6～7月|
+|ヒナチドリ|chidori|北海道～本州|6～7月|
+|ニョホウチドリ|joo-iokiana|佐賀県黒髪山周辺|7～8月|
+|夢ちどり（上記間の交配種）|Yumechidori|蘭裕園作出|5～8月|
+
+
+## ウチョウラン（graminifolia）
+
 <figure>
   ![ウチョウラン (平戸島産) (Ponerorchis) - Ranyuen](/assets/images/utyouran.jpg)
   <figcaption>ウチョウラン (平戸島産)</figcaption>
@@ -16,6 +34,7 @@ title: ウチョウラン (Ponerorchis) の種類
 一茎に5～10花、この仲間としてはやや大きめの花を咲かせ、花の変化が多く主に山野草として楽しまれています。北関東を中心に全国に愛好家がいます。関東以北の系統ではやや冷涼地に自生していることが多く、少々暑がるため、都市部周辺で初心者が栽培するには少し難しくなります。クーラー室など涼しい場所が確保できれば良く育ちます。
 
 ## アワチドリ (suzukiana)
+
 <figure>
   ![アワチドリ (Ponerorchis suzukiana) - Ranyuen](/assets/images/awachidori_bot.jpg)
   <figcaption>アワチドリ</figcaption>
@@ -28,6 +47,7 @@ title: ウチョウラン (Ponerorchis) の種類
 アワチドリという和名は発見者、鈴木吉五郎氏の話では「亀山から清澄山に行く途中、上総の国からわずかに安房の国に入った場所、清澄山四方木付近で発見したため付けた」とのこと。しかし実際には安房の国よりも上総の国に多く自生しています。低山に自生するため日中の暑さには強いのですが、夜間なるべく涼しくなるように心掛けます。
 
 ## クロカミラン (kurokamiana)
+
 <figure>
   ![クロカミラン (Ponerorchis) - Ranyuen](/assets/images/kurokamiran.jpg)
   <figcaption>クロカミラン</figcaption>
@@ -40,10 +60,12 @@ title: ウチョウラン (Ponerorchis) の種類
 自生地ではヒナランと一緒に生えている様子も見られますが、これら2種間の雑種は見当たりません。人工交配では二種間の雑種も作り出されています。
 
 ## サツマチドリ (micropunctata)
+
 <figure>
   ![サツマチドリ (Ponerorchis) - Ranyuen](/assets/images/satsumachidori.jpg)
   <figcaption>サツマチドリ</figcaption>
 </figure>
+
 昭和の終わり頃に鹿児島県下こしき島で発見された種類。その後、前川博士により<i>P.kurokamiana var.micropunctata</i>とされました。発見当時はクロカミランが種として扱われ (<i>P.kurokamiana</i>) その変種としてvar.micropunctataが発見されたことで、分類学者のレベルの高さに多くの人が驚かされました。
 
 距は短く、花はクロカミランに似て多くの斑点を生じます。違いはクロカミランよりも多花性で開花時期が遅く、6～8月頃に咲きます。
@@ -58,6 +80,7 @@ title: ウチョウラン (Ponerorchis) の種類
 以前は山野草として趣味家により栽培されていましたが、夏の暑さが苦手で都市部での栽培は難しくなります。
 
 ## ニョホウチドリ (joo-iokiana)
+
 <figure>
   ![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori01.jpg)![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori02.jpg)
   <figcaption>ニョホウチドリ</figcaption>
