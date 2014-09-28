@@ -71,8 +71,8 @@ function PhotoGallery() {
 PhotoGallery.prototype.init = function (rootNode) {
   this.rootNode = rootNode;
   this._masonry = new Masonry(rootNode, {
-    columnWidth:        '.photo',
     gutter:             8,
+    isFitWidth:         false,
     itemSelector:       '.photo',
     hiddenStyle:        { opacity: 0 },
     visibleStyle:       { opacity: 1 },
