@@ -21,6 +21,7 @@ function promiseProcess(cmd) {
   return new Promise(function (resolve, reject) {
     cp.exec(cmd, function (err, stdout, stderr) {
       if (err) {
+        process.stdout.write(stdout);
         process.stderr.write(stderr);
         return reject(err);
       }
@@ -61,6 +62,17 @@ gulp.task('nav', function () {
   });
 });
 
+gulp.task('php-cs', function () {
+  return Promise.all([
+    '-l .',
+    'lib/',
+    'templates/',
+    'test/',
+  ].map(function (path) {
+    return promiseProcess('php vendor/bin/phpcs ' + path);
+  }));
+});
+
 gulp.task('php-fixer', function () {
   return Promise.all([
     'index.php',
@@ -85,7 +97,7 @@ gulp.task('php-lint', function () {
 });
 
 gulp.task('php-test', function (done) {
-  runSequence('php-lint', 'php-fixer', 'php-unit', done);
+  runSequence('php-lint', 'php-fixer', 'php-cs', 'php-unit', done);
 });
 
 gulp.task('php-unit', function () {
