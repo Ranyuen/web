@@ -1,6 +1,81 @@
 ---
 title: アワチドリ/ 夢ちどりの栽培
 ---
+<style>
+table {
+  width: 80%;
+}
+th {
+  width: 20%;
+  background: #4f10d0;
+  border: 1px solid #aeacd0;
+  color: #ffffff;
+}
+td {
+  width: 20%;
+  border: 1px solid #aeacd0;
+  font-size: 13px;
+  text-align: center;
+}
+.j-name {
+  font-weight: bold;
+}
+</style>
+<table>
+    <caption>ラン科　ウチョウラン属　Ponerochis(ポネロキス)</caption>
+    <thead>
+      <tr>
+        <th>和名</th>
+        <th>種名</th>
+        <th>地域</th>
+        <th>開花時期(自生地)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="j-name">ウチョウラン</td>
+        <td>graminifolia</td>
+        <td>本州北部〜九州</td>
+        <td>5〜8月</td>
+      </tr>
+      <tr>
+        <td class="j-name">アワチドリ</td>
+        <td>suzukiana</td>
+        <td>千葉県房総半島</td>
+        <td>6〜7月</td>
+      </tr>
+      <tr>
+        <td class="j-name">クロカミラン</td>
+        <td>kurokamiana</td>
+        <td>佐賀県黒髪山周辺</td>
+        <td>5〜6月</td>
+      </tr>
+      <tr>
+        <td class="j-name">サツマチドリ</td>
+        <td>micropunctata</td>
+        <td>鹿児島県下甑(しもこしき)島</td>
+        <td>6〜7月</td>
+      </tr>
+      <tr>
+        <td class="j-name">ヒナチドリ</td>
+        <td>chidori</td>
+        <td>北海道〜本州</td>
+        <td>6〜7月</td>
+      </tr>
+      <tr>
+        <td class="j-name">ニョホウチドリ</td>
+        <td>joo-iokiana</td>
+        <td>佐賀県黒髪山周辺</td>
+        <td>7〜8月</td>
+      </tr>
+      <tr>
+        <td class="j-name">夢ちどり</td>
+        <td>Yumechidori</td>
+        <td>蘭裕園作出</td>
+        <td>5〜8月</td>
+      </tr>
+    </tbody>
+  </table>
 ## アワチドリ / 夢ちどりの栽培 - はじめに
 ウチョウランの仲間 (ポネロルキス) は青森県 (ウチョウラン) から鹿児島県島嶼 (サツマチドリ) に至るまでの広い範囲に分布し、自生している環境も種類ごとに異なります。また分類は人により若干異なりますが、日本では、ウチョウラン、アワチドリ、クロカミラン、サツマチドリ、ヒナチドリ、ニョホウチドリなどの和名がつけられた種類が知られています。オルキス属として考えた場合には、日本以外にも多くの種類があり、かなりの数にのぼります。
 
