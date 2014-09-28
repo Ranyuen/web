@@ -1,51 +1,9 @@
 @charset "utf-8";
-@import (less) "../bower_components/normalize-css/normalize.css";
+@import "base";
 @import "helpers";
 
-@header-footer-bg: #edfffe;
+@header-footer-bg: #ffedfe;
 @header-footer-radius: 8px;
-
-body {
-  background: #d6e9ca;
-  color: #333333;
-  font-size: 16px;
-  line-height: 1.8em;
-  margin: 0;
-
-  &.ja {
-    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'MS Pゴシック', sans-serif;
-
-    q {
-      &:before { content: "「"; }
-      &:after  { content: "」"; }
-    }
-  }
-
-  &.en {
-    font-family: "Alef", sans-serif;
-
-    q {
-      &:before { content: "\""; }
-      &:after  { content: "\""; }
-    }
-  }
-}
-
-h1, h2, h3, h4, h5, h6 { margin: 0.4em, 0, 0, 0 }
-
-p { margin: 0; }
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  border: none;
-  border-radius: 4px;
-  max-width: 100%;
-  vertical-align: middle;
-}
 
 .container {
   background: #fbfaf5;
