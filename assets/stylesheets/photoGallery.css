@@ -1,1 +1,1 @@
-@charset "utf-8";.photos .photo{background:#f0f5f0;float:left;margin:.6%;width:32%}
+@charset "utf-8";.photos{margin:0 auto}.photos .photo{background:#e0e8e0;border-radius:8px;margin-bottom:8px}.photos .photo img{border-radius:8px 8px 0 0}.photos .photo .photo-description{padding:0 8px 8px 8px}

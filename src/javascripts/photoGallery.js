@@ -71,12 +71,12 @@ function PhotoGallery() {
 PhotoGallery.prototype.init = function (rootNode) {
   this.rootNode = rootNode;
   this._masonry = new Masonry(rootNode, {
-    columnWidth:        '.photo',
-    gutter:             0,
+    gutter:             8,
+    isFitWidth:         false,
     itemSelector:       '.photo',
     hiddenStyle:        { opacity: 0 },
     visibleStyle:       { opacity: 1 },
-    transitionDuration: '0.8s'
+    transitionDuration: '0.8s',
   });
   window.onscroll = debounce(this.onscroll.bind(this));
   this.applied();
@@ -89,7 +89,7 @@ PhotoGallery.prototype.applied = function () {
     height:     '90%',
     transition: 'elastic',
     speed:      360,
-    width:      '90%'
+    width:      '90%',
   });
   this._lastPhotoNode = this.rootNode.querySelector('.photo:last-of-type');
 };
@@ -147,7 +147,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
 
     photoNode.classList.add('photo');
     photo.alt = photo.description_ja + ' 蘭裕園 Ranyuen';
-    photo.origUrl = '/Calanthe/gallery/' + photo.id + '.jpg';
+    photo.origUrl = '/images/gallery/' + photo.id + '.jpg';
     photo.thumbUrl = '/api/photo?format=jpeg&id=' + photo.id + '&width=' + photo.thumb_width;
     photoNode.innerHTML = Hogan.
       compile('<a class="lightbox" href="{{origUrl}}" title="{{alt}}"><img rel="gallery" src="{{thumbUrl}}" width="{{thumb_width}}" height="{{thumb_height}}" alt="{{alt}}"/></a><div>{{description_ja}}</div><div>{{description_en}}</div>').

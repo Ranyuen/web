@@ -12,7 +12,7 @@ class Photo extends Model
     public function loadImageSize()
     {
         if (!$this->width || !$this->height) {
-            $file = "Calanthe/gallery/$this->id.jpg";
+            $file = "images/gallery/$this->id.jpg";
             list($this->width, $this->height) = getimagesize($file);
         }
 
@@ -22,7 +22,7 @@ class Photo extends Model
     public function loadImage()
     {
         if (!$this->image) {
-            $file = "Calanthe/gallery/$this->id.jpg";
+            $file = "images/gallery/$this->id.jpg";
             $this->image = imagecreatefromjpeg($file);
             $this->loadImageSize();
         }
@@ -32,7 +32,7 @@ class Photo extends Model
 
     public function renderResized($new_width, $new_height)
     {
-        $cache_filename = "Calanthe/cache/{$this->id}_{$new_width}x$new_height.jpg";
+        $cache_filename = "images/cache/{$this->id}_{$new_width}x$new_height.jpg";
         $this->deleteOldCache();
         if (!file_exists($cache_filename)) {
             $this->loadImage();
@@ -48,7 +48,7 @@ class Photo extends Model
 
     private function createCache($new_width, $new_height, $cache_filename)
     {
-        $orig_filename = "Calanthe/gallery/$this->id.jpg";
+        $orig_filename = "images/gallery/$this->id.jpg";
         $orig_image = imagecreatefromjpeg($orig_filename);
         $image = imagecreatetruecolor($new_width, $new_height);
         imagecopyresampled($image, $orig_image,
@@ -62,7 +62,7 @@ class Photo extends Model
 
     private function deleteOldCache()
     {
-        $cache_dir = 'Calanthe/cache';
+        $cache_dir = 'images/cache';
         // $is_dir_too_large = function () use ($cache_dir) {
         //     return preg_match('/\A[0-9]+G/', exec("du -h $cache_dir"));
         // };

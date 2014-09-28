@@ -3,20 +3,20 @@ namespace Ranyuen;
 
 class BgImage
 {
-    private $resources = [];
+    private $_resources = [];
 
     public function __construct()
     {
         if (isset($_SESSION['bgimage'])) {
             $bgimage = $_SESSION['bgimage'];
             if ($bgimage['expiration'] >= time()) {
-                $this->resources = [$bgimage['img']];
+                $this->_resources = [$bgimage['img']];
 
                 return $this;
             }
             unset($_SESSION['bgimage']);
         }
-        $this->resources = $this->getAvailableImages();
+        $this->_resources = $this->getAvailableImages();
     }
 
     /**
@@ -24,7 +24,7 @@ class BgImage
      */
     public function getRandom()
     {
-        $image = $this->resources[array_rand($this->resources)];
+        $image = $this->_resources[array_rand($this->_resources)];
         $_SESSION['bgimage'] = [
             'img' => $image,
             'expiration' => isset($_SESSION['bgimage']['expiration']) ?
@@ -41,12 +41,17 @@ class BgImage
     private function getAvailableImages()
     {
         $files = scandir('assets/images/backgrounds');
-        $files = array_filter($files, function ($file) {
-            return preg_match('/\.(?:jpe?g)|png$/i', $file) > 0;
-        });
-        $files = array_map(function ($file) {
-            return "/assets/images/backgrounds/$file";
-        }, $files);
+        $files = array_filter(
+            $files, function ($file) {
+                return preg_match('/\.(?:jpe?g)|png$/i', $file) > 0;
+            }
+        );
+        $files = array_map(
+            function ($file) {
+                return "/assets/images/backgrounds/$file";
+            },
+            $files
+        );
 
         return $files;
     }

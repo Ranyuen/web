@@ -4,11 +4,11 @@ title: 写真を見る
 蘭裕園の写真を見る
 ==
 <?php
-$controller = new \Ranyuen\Controller\ApiPhotos;
+$controller = new \Ranyuen\Controller\ApiPhotos();
 $species_name = isset($_GET['species_name']) ? $_GET['species_name'] : null;
 $photos = $controller->render('GET', [], [
   'species_name' => $species_name,
-  'limit' => 20
+  'limit'        => 20,
 ]);
 $photos = array_map(function ($photo) {
   $thumb_width = 349;
@@ -31,7 +31,7 @@ $photos = array_map(function ($photo) {
 <div id="photo-gallery" class="photos">
 <?php foreach ($photos as $photo) { ?>
   <div class="photo">
-    <a href="/Calanthe/gallery/<?php $h->h($photo['id']); ?>.jpg"
+    <a href="/images/gallery/<?php $h->h($photo['id']); ?>.jpg"
       class="lightbox"
       title="<?php $h->h($photo['description_ja']); ?> 蘭裕園 Ranyuen">
       <img rel="gallery"
@@ -40,7 +40,7 @@ $photos = array_map(function ($photo) {
         height="<?php $h->h($photo['thumb_height']); ?>"
         alt="<?php $h->h($photo['description_ja']); ?> 蘭裕園 Ranyuen"/>
     </a>
-    <div>
+    <div class="photo-description">
       <div><?php $h->h($photo['description_ja']); ?></div>
       <div><?php $h->h($photo['description_en']); ?></div>
     </div>
