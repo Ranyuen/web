@@ -2,8 +2,10 @@
 // @import (less) "../bower_components/colorbox/example1/colorbox.css";
 
 .photos .photo {
-  background: #f0f5f0;
-  float: left;
-  margin: 0.6%;
-  width: 32%;
+  @padding: 8px;
+  background: #e0e8e0;
+  border-radius: @padding;
+  margin-bottom: @padding;
+  img { border-radius: @padding @padding 0 0; }
+  .photo-description { padding: 0 @padding @padding @padding; }
 }

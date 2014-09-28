@@ -72,11 +72,11 @@ PhotoGallery.prototype.init = function (rootNode) {
   this.rootNode = rootNode;
   this._masonry = new Masonry(rootNode, {
     columnWidth:        '.photo',
-    gutter:             0,
+    gutter:             8,
     itemSelector:       '.photo',
     hiddenStyle:        { opacity: 0 },
     visibleStyle:       { opacity: 1 },
-    transitionDuration: '0.8s'
+    transitionDuration: '0.8s',
   });
   window.onscroll = debounce(this.onscroll.bind(this));
   this.applied();
@@ -89,7 +89,7 @@ PhotoGallery.prototype.applied = function () {
     height:     '90%',
     transition: 'elastic',
     speed:      360,
-    width:      '90%'
+    width:      '90%',
   });
   this._lastPhotoNode = this.rootNode.querySelector('.photo:last-of-type');
 };
