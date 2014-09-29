@@ -2,18 +2,16 @@
   "require": {
     "clover/text-ltsv": "1.0.*@dev",
     "dflydev/markdown": "1.0.*@dev",
-    "monolog/monolog": "1.8.*",
-    "slim/slim": "2.4.*",
-    "slim/views": "dev-master",
-    "slim/middleware": "*",
+    "monolog/monolog": "1.10.*",
+    "slim/slim": "2.*",
     "symfony/yaml": "2.6.*@dev",
-    "j4mie/idiorm": "1.4.*",
-    "j4mie/paris": "1.4.*",
-    "pimple/pimple": "2.*"
+    "j4mie/idiorm": "1.5.*",
+    "j4mie/paris": "1.5.*",
+    "pimple/pimple": "3.*"
   },
   "require-dev": {
     "davedevelopment/phpmig": "1.*",
-    "phpunit/phpunit": "3.7.*@dev",
+    "phpunit/phpunit": "4.2.*",
     "squizlabs/php_codesniffer": "*"
   },
   "autoload": {

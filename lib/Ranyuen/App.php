@@ -1,7 +1,8 @@
 <?php
 namespace Ranyuen;
 
-use \Slim;
+use \ORM;
+use \Pimple\Container;
 
 /**
  * Quick start
@@ -12,13 +13,8 @@ use \Slim;
  */
 class App
 {
-    /** @type \Slim\Slim */
-    public $app;
-
-    /** @type \Ranyuen\Logger */
-    public $logger;
-
-    private $config;
+    private $_config;
+    private $_container;
 
     /**
      * @param array $config
@@ -27,13 +23,21 @@ class App
     {
         session_start();
         $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
-        if ($env === 'development') { ini_set('display_errors', 1); }
-        if (is_null($config)) { $config = (new Config())->load("config/$env.yaml"); }
-        $this->app = new Slim\Slim();
-        $this->config = $this->setDefaultConfig($config, $env);
-        $this->app->config($this->config);
-        $this->applyDefaultRoutes($this->app);
-        $this->logger = new Logger($this->config['mode'], $this->config);
+        if ($env === 'development') {
+            ini_set('display_errors', 1);
+        }
+        $this->_container = new Container();
+        $this->loadServices($this->_container, $env);
+        $this->_config = $this->_container['config'];
+        $this->applyDefaultRoutes($this->_container['router'], $this->_container['logger']);
+    }
+
+    /**
+     * @return Container
+     */
+    public function getContainer()
+    {
+        return $this->_container;
     }
 
     /**
@@ -41,7 +45,8 @@ class App
      */
     public function run()
     {
-        $this->app->run();
+        $this->_container['db'];
+        $this->_container['router']->run();
 
         return $this;
     }
@@ -54,16 +59,17 @@ class App
      */
     public function render($lang, $template_name, $params = [])
     {
-        $renderer = new Renderer($this->config);
-        if (isset($this->config['lang'][$lang])) {
-            $lang = $this->config['lang'][$lang];
+        $router = $this->_container['router'];
+        $renderer = new Renderer($this->_config);
+        if (isset($this->_config['lang'][$lang])) {
+            $lang = $this->_config['lang'][$lang];
         }
         $this->mergeParams($lang, $template_name, $params);
         $str = $renderer
-            ->setLayout($this->config['layout'])
+            ->setLayout($this->_config['layout'])
             ->render("$template_name.$lang", $params);
         if ($str === false) {
-            $this->app->notFound();
+            $router->notFound();
         } else {
             echo $str;
         }
@@ -92,105 +98,85 @@ class App
     }
 
     /**
-     * @param  array  $config
-     * @param  string $env
-     * @return array
+     * @param Container $container
      */
-    private function setDefaultConfig($config, $env)
+    private function loadServices(Container $container, $env)
     {
-        $set_default = function (&$array, $key, $dafault) {
-            if (! isset($array[$key])) { $array[$key] = $dafault; }
+        $container['config'] = function ($c) use ($env) {
+            return (new Config())->load("config/$env.yaml", $env);
         };
+        $container['db'] = function ($c) {
+            ORM::configure($c['config']['db']);
+            ORM::configure('logging', true);
 
-        // Configuration for Ranyuen App.
-        $set_default($config, 'lang', []);
-        $set_default($config['lang'], 'default', 'en');
-        $set_default($config, 'layout', 'layout');
-        $set_default($config, 'log.path', 'logs');
-        $set_default($config, 'redirect', []);
+            return ORM::get_db();
+        };
+        $container['router'] = function ($c) {
+            return new Router($c['config']);
+        };
+        $container['logger'] = function ($c) {
+            $config = $c['config'];
 
-        // Configuration for Slim Framwork.
-        $set_default($config, 'debug', true);
-        $set_default($config, 'log.enabled', false);
-        $set_default($config, 'log.level', \Slim\LOG::INFO);
-        $set_default($config, 'mode', $env);
-        $set_default($config, 'templates.path', 'templates');
-
-        return $config;
+            return new Logger($config['mode'], $config);
+        };
     }
 
-    /**
-     * @param \Slim\Slim
-     */
-    private function applyDefaultRoutes($app)
+    private function applyDefaultRoutes(Router $router, Logger $logger)
     {
-        $this->setDefaultRouteConditions($this->config);
-        $controller = function ($lang, $path) use ($app) {
-            foreach ($this->config['redirect'] as $src => $dest) {
+        $controller = function ($lang, $path) use ($router, $logger) {
+            foreach ($this->_config['redirect'] as $src => $dest) {
                 if ($_SERVER['REQUEST_URI'] === $src) {
-                    $app->redirect($dest, 301);
+                    $router->redirect($dest, 301);
                 }
             }
             $this->render($lang, $path);
-            $this->logger->addAccessInfo();
+            $logger->addAccessInfo();
         };
-        $app->get('/api/:path+', function ($path) use ($app) {
+        $router->get('/api/:path+', function ($path) use ($router) {
             $this->renderApi($path[0], 'GET', array_slice($path, 1),
-                $app->request->get());
+                $router->request->get());
         });
-        $app->get('/api/:path+', function ($path) use ($app) {
+        $router->get('/api/:path+', function ($path) use ($router) {
             $this->renderApi($path[0], 'POST', array_slice($path, 1),
-                $app->request->post());
+                $router->request->post());
         });
-        $app->get('/api/:path+', function ($path) use ($app) {
+        $router->get('/api/:path+', function ($path) use ($router) {
             $this->renderApi($path[0], 'PUT', array_slice($path, 1),
-                $app->request->put());
+                $router->request->put());
         });
-        $app->get('/api/:path+', function ($path) use ($app) {
+        $router->get('/api/:path+', function ($path) use ($router) {
             $this->renderApi($path[0], 'DELETE', array_slice($path, 1), []);
         });
-        $app->get('/:lang/', function ($lang) use ($controller) {
+        $router->get('/:lang/', function ($lang) use ($controller) {
             $controller($lang, '/index');
         });
-        $app->get('/', function () use ($controller) {
+        $router->get('/', function () use ($controller) {
             $controller('default', '/index');
         });
-        $app->get('/:lang/:path+', function ($lang, $path) use ($controller) {
+        $router->get('/:lang/:path+', function ($lang, $path) use ($controller) {
             if ($path[count($path) - 1] === '') {
                 $path[count($path) - 1] = 'index';
             }
             $path = implode('/', $path);
             $controller($lang, $path);
         });
-        $app->get('/:path+', function ($path) use ($controller) {
+        $router->get('/:path+', function ($path) use ($controller) {
             if ($path[count($path) - 1] === '') {
                 $path[count($path) - 1] = 'index';
             }
             $path = implode('/', $path);
             $controller('default', $path);
         });
-        $app->notFound(function () use ($controller) {
+        $router->notFound(function () use ($controller) {
             $controller('default', '/error404');
         });
-    }
-
-    /**
-     * @param array $config
-     */
-    private function setDefaultRouteConditions($config)
-    {
-        $langs = (new Navigation($this->config))->getLangs();
-        $lang_regex = implode('|', $langs);
-        Slim\Route::setDefaultConditions([
-            'lang' => $lang_regex
-        ]);
     }
 
     private function mergeParams($lang, $template_name, &$params)
     {
         $params['lang'] = $lang;
 
-        $nav = new Navigation($this->config);
+        $nav = new Navigation($this->_config);
         $params['global_nav'] = $nav->getGlobalNav($lang);
         $params['local_nav'] = $nav->getLocalNav($lang, $template_name);
         $params['news_nav'] = $nav->getNews($lang);
