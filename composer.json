@@ -4,7 +4,7 @@
     "dflydev/markdown": "1.0.*@dev",
     "monolog/monolog": "1.10.*",
     "slim/slim": "2.*",
-    "symfony/yaml": "2.6.*@dev",
+    "symfony/yaml": "2.5.*",
     "j4mie/idiorm": "1.5.*",
     "j4mie/paris": "1.5.*",
     "pimple/pimple": "3.*"
@@ -12,7 +12,8 @@
   "require-dev": {
     "davedevelopment/phpmig": "1.*",
     "phpunit/phpunit": "4.2.*",
-    "squizlabs/php_codesniffer": "*"
+    "squizlabs/php_codesniffer": "*",
+    "fabpot/php-cs-fixer": "*"
   },
   "autoload": {
     "psr-0": {"Ranyuen\\": "lib/"}

@@ -69,7 +69,7 @@ gulp.task('php-cs', function () {
     'templates/',
     'test/',
   ].map(function (path) {
-    return promiseProcess('php vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
+    return promiseProcess('vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
   }));
 });
 
@@ -81,7 +81,7 @@ gulp.task('php-fixer', function () {
     'templates/',
     'test/',
   ].map(function (path) {
-    return promiseProcess('php php-cs-fixer.phar fix ' + path + ' --level=all');
+    return promiseProcess('vendor/bin/php-cs-fixer fix ' + path + ' --level=all');
   }));
 });
 
