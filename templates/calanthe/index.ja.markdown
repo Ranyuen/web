@@ -1,5 +1,6 @@
 ---
 title: エビネを極める
+description:
 ---
 
 ## エビネ (Calanthe) <small>〜世界で最も多彩なラン</small>
