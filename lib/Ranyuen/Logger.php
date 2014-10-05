@@ -1,14 +1,14 @@
 <?php
 namespace Ranyuen;
 
+use Clover\Text\LTSV;
 use Monolog;
 use Monolog\Handler\RotatingFileHandler;
-use Clover\Text\LTSV;
 
 class Logger
 {
-    private $config;
-    private $log;
+    /** @type Monolog\Logger */
+    private $_logger;
 
     /**
      * @param string $name
@@ -16,12 +16,12 @@ class Logger
      */
     public function __construct($name, $config)
     {
-        $this->config = $config;
-        $this->log = new Monolog\Logger($name);
-        $this->log->pushHandler(new RotatingFileHandler(
-            "{$this->config['log.path']}/$name.log",
+        $this->_logger = new Monolog\Logger($name);
+        $this->_logger->pushHandler(new RotatingFileHandler(
+            "{$config['log.path']}/$name.log",
             0,
-            $this->config['log.level']));
+            $config['log.level'])
+        );
     }
 
     /**
@@ -36,11 +36,13 @@ class Logger
         $ltsv->add('uri', $_SERVER['REQUEST_URI']);
         $ltsv->add('protocol', $_SERVER['SERVER_PROTOCOL']);
         $ltsv->add('status', http_response_code());
-        if (isset($_SERVER['HTTP_REFERER']))
+        if (isset($_SERVER['HTTP_REFERER'])) {
             $ltsv->add('referer', $_SERVER['HTTP_REFERER']);
-        if (isset($_SERVER['HTTP_USER_AGENT']))
+        }
+        if (isset($_SERVER['HTTP_USER_AGENT'])) {
             $ltsv->add('ua', $_SERVER['HTTP_USER_AGENT']);
-        $this->log->addInfo($ltsv->toLine());
+        }
+        $this->_logger->addInfo($ltsv->toLine());
 
         return $this;
     }

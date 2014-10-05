@@ -8,6 +8,7 @@ var Promise       = require('bluebird'),
     exec          = require('gulp-exec'),
     jshint        = require('gulp-jshint'),
     less          = require('gulp-less'),
+    ssh           = require('gulp-ssh'),
     merge         = require('merge-stream'),
     runSequence   = require('run-sequence'),
     uglify        = require('gulp-uglifyjs'),
@@ -33,6 +34,21 @@ function promiseProcess(cmd) {
 gulp.task('copy-assets', function () {
   return gulp.src('src/bower_components/colorbox/example1/**').
     pipe(gulp.dest('assets/stylesheets'));
+});
+
+gulp.task('deploy', function () {
+  return ssh.exec({
+    command: [
+      'cd ~/www; git pull origin master',
+      'cd ~/www; php composer.phar install --no-dev',
+    ],
+    sshConfig: {
+      host:     'ranyuen.sakura.ne.jp',
+      port:     '22',
+      username: 'ranyuen',
+      password: process.env.SSH_PASSWORD,
+    }
+  });
 });
 
 gulp.task('jshint', function () {
@@ -69,7 +85,7 @@ gulp.task('php-cs', function () {
     'templates/',
     'test/',
   ].map(function (path) {
-    return promiseProcess('php vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
+    return promiseProcess('vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
   }));
 });
 
@@ -81,7 +97,7 @@ gulp.task('php-fixer', function () {
     'templates/',
     'test/',
   ].map(function (path) {
-    return promiseProcess('php php-cs-fixer.phar fix ' + path + ' --level=all');
+    return promiseProcess('vendor/bin/php-cs-fixer fix ' + path + ' --level=all');
   }));
 });
 
@@ -135,5 +151,4 @@ gulp.task('uglifyjs', function () {
 });
 
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
-gulp.task('deploy', []);
 gulp.task('test', ['jshint', 'php-test']);
