@@ -31,7 +31,7 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 { margin: 0.4em, 0, 0, 0 }
+h1, h2, h3, h4, h5, h6 { margin: 0.4em, 0, 0, 0;}
 
 p { margin: 0; }
 
@@ -115,7 +115,7 @@ header {
         box-shadow: 1px 1px 1px @shadow;
         color: #fbfaf5;
         display: block;
-        font-size: 15px;
+        font-size: 14px;
         padding: 4px 2%;
         text-decoration: none;
         text-shadow: -1px -1px @shadow;
@@ -140,6 +140,13 @@ header {
     margin-right: 5%;
 
     h1, h2, p { margin: 16px 0; }
+
+    h2 {
+      border-bottom: solid 2px #cdf6dc;
+      border-left: solid 10px #cdf6dc;
+      padding: 0 0 3px 8px;
+      margin-top: 30px;
+    }
 
     p {
       a {
@@ -180,9 +187,9 @@ header {
       a {
         border-bottom: dotted 2px @side-nav-color;
         display: block;
-        padding: 20px 2%;
+        font-size: 13px;
+        padding: 10px 2%;
         text-decoration: none;
-        &:after { content: " >"; }
       }
     }
 
