@@ -4,25 +4,26 @@ namespace Ranyuen;
 use \Pimple\Container;
 
 /**
- * Quick start
- * ===========
- * ```php
+ * @example
+ * <code>
  * (new \Ranyuen\App([]))->run();
- * ```
+ * </code>
  */
 class App
 {
-    /** @type Container */
+    /** @var Container */
     private $_container;
-    /** @type array */
+    /** @var array */
     private $_config;
-    /** @type Router */
+    /** @var Navigation */
+    private $_nav;
+    /** @var Router */
     private $_router;
 
     /**
      * @param array $config
      */
-    public function __construct($config = null)
+    public function __construct(array $config = null)
     {
         session_start();
         $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
@@ -31,9 +32,6 @@ class App
         }
         $this->_container = new Container();
         $this->loadServices($this->_container, $env);
-        $this->_config = $this->_container['config'];
-        $this->_router = $this->_container['router'];
-        $this->applyDefaultRoutes($this->_container['logger']);
     }
 
     /**
@@ -93,7 +91,12 @@ class App
             return strtoupper($m[1]);
         }, ucwords(strtolower($api_name)));
         $controller = (new \ReflectionClass("\Ranyuen\\Controller\\Api$api_name"))->newInstance();
-        $response = $controller->render($method, $uri_params, $request_params);
+        $params = array_merge($uri_params, $request_params);
+        switch ($method) {
+        case 'GET':
+            $response = $controller->get($params);
+            break;
+        }
         if (!$response) { return $this; }
         echo is_array($response) ? json_encode($response) : $response;
 
@@ -102,88 +105,40 @@ class App
 
     /**
      * @param Container $container
+     * @param string    $env
      */
     private function loadServices(Container $container, $env)
     {
         $container['config'] = function ($c) use ($env) {
             return (new Config())->load($env);
         };
-        $container['router'] = function ($c) {
-            return new Router($c['config']);
-        };
         $container['logger'] = function ($c) {
             $config = $c['config'];
 
             return new Logger($config['mode'], $config);
         };
+        $container['nav'] = function ($c) {
+            return new Navigation($c['config']);
+        };
+        $container['router'] = function ($c) {
+            return new Router($this, $c['nav'], $c['logger'], $c['config']);
+        };
         $container['db'] = function ($c) {
-            return new DbCapsule($c['config']['db'], $c['logger']);
+            return new DbCapsule($c['logger'], $c['config']['db']);
         };
-    }
-
-    private function applyDefaultRoutes(Logger $logger)
-    {
-        $router = $this->_router;
-        $controller = function ($lang, $path) use ($router, $logger) {
-            foreach ($this->_config['redirect'] as $src => $dest) {
-                if ($_SERVER['REQUEST_URI'] === $src) {
-                    $router->redirect($dest, 301);
-                }
-            }
-            $this->render($lang, $path);
-            $logger->addAccessInfo();
-        };
-        $router->get('/api/:path+', function ($path) use ($router) {
-            $this->renderApi($path[0], 'GET', array_slice($path, 1),
-                $router->request->get());
-        });
-        $router->get('/api/:path+', function ($path) use ($router) {
-            $this->renderApi($path[0], 'POST', array_slice($path, 1),
-                $router->request->post());
-        });
-        $router->get('/api/:path+', function ($path) use ($router) {
-            $this->renderApi($path[0], 'PUT', array_slice($path, 1),
-                $router->request->put());
-        });
-        $router->get('/api/:path+', function ($path) use ($router) {
-            $this->renderApi($path[0], 'DELETE', array_slice($path, 1), []);
-        });
-        $router->get('/:lang/', function ($lang) use ($controller) {
-            $controller($lang, '/index');
-        });
-        $router->get('/', function () use ($controller) {
-            $controller('default', '/index');
-        });
-        $router->get('/:lang/:path+', function ($lang, $path) use ($controller) {
-            if ($path[count($path) - 1] === '') {
-                $path[count($path) - 1] = 'index';
-            }
-            $path = implode('/', $path);
-            $controller($lang, $path);
-        });
-        $router->get('/:path+', function ($path) use ($controller) {
-            if ($path[count($path) - 1] === '') {
-                $path[count($path) - 1] = 'index';
-            }
-            $path = implode('/', $path);
-            $controller('default', $path);
-        });
-        $router->notFound(function () use ($controller) {
-            $controller('default', '/error404');
-        });
+        $this->_config = $container['config'];
+        $this->_nav = $container['nav'];
+        $this->_router = $container['router'];
     }
 
     private function mergeParams($lang, $template_name, &$params)
     {
         $params['lang'] = $lang;
-
-        $nav = new Navigation($this->_config);
-        $params['global_nav'] = $nav->getGlobalNav($lang);
-        $params['local_nav'] = $nav->getLocalNav($lang, $template_name);
-        $params['news_nav'] = $nav->getNews($lang);
-        $params['breadcrumb'] = $nav->getBreadcrumb($lang, $template_name);
-        $params['link'] = $nav->getAlterNav($lang, $template_name);
-
+        $params['global_nav'] = $this->_nav->getGlobalNav($lang);
+        $params['local_nav'] = $this->_nav->getLocalNav($lang, $template_name);
+        $params['news_nav'] = $this->_nav->getNews($lang);
+        $params['breadcrumb'] = $this->_nav->getBreadcrumb($lang, $template_name);
+        $params['link'] = $this->_nav->getAlterNav($lang, $template_name);
         $params['bgimage'] = (new BgImage())->getRandom();
 
         return $params;

@@ -6,7 +6,7 @@ title: 写真を見る
 <?php
 $controller = new \Ranyuen\Controller\ApiPhotos();
 $species_name = isset($_GET['species_name']) ? $_GET['species_name'] : null;
-$photos = $controller->render('GET', [], [
+$photos = $controller->get([
   'species_name' => $species_name,
   'limit'        => 20,
 ]);

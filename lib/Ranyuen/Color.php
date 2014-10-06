@@ -6,11 +6,11 @@ namespace Ranyuen;
  */
 class Color
 {
-    /** @type integer */
+    /** @var integer */
     private $r;
-    /** @type integer */
+    /** @var integer */
     private $g;
-    /** @type integer */
+    /** @var integer */
     private $b;
 
     /**

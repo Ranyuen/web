@@ -6,9 +6,9 @@ use Symfony\Component\Yaml;
 
 class Renderer
 {
-    /** @type array */
+    /** @var array */
     private $_config;
-    /** @type string */
+    /** @var string */
     private $_layout = null;
 
     /**

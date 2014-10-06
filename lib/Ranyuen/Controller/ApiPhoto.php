@@ -3,17 +3,17 @@ namespace Ranyuen\Controller;
 
 use \Ranyuen\Model\Photo;
 
-class ApiPhoto
+class ApiPhoto extends ApiController
 {
-    public function render($method, array $uri_params, array $request_params)
+    public function get(array $params)
     {
-        if (!isset($request_params['id'])) {
+        if (!isset($params['id'])) {
             return [ 'error' => ':id is required.', 'status' => 404 ];
         }
-        $id = $request_params['id'];
-        $width = isset($request_params['width']) ? $request_params['width'] : null;
-        $height = isset($request_params['height']) ?
-            $request_params['height'] :
+        $id = $params['id'];
+        $width = isset($params['width']) ? $params['width'] : null;
+        $height = isset($params['height']) ?
+            $params['height'] :
             null;
         if (!($width || $height)) {
             return [ 'error' => ':width or :height is required.', 'status' => 404 ];

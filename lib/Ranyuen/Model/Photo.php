@@ -7,7 +7,7 @@ class Photo extends Eloquent\Model
 {
     protected $table = 'photo';
 
-    /** @type resource */
+    /** @var resource */
     private $_image;
 
     /**

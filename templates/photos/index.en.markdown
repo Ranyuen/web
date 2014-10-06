@@ -6,9 +6,9 @@ Photos in Ranyuen
 <?php
 $controller = new \Ranyuen\Controller\ApiPhotos;
 $species_name = isset($_GET['species_name']) ? $_GET['species_name'] : null;
-$photos = $controller->render('GET', [], [
+$photos = $controller->get([
   'species_name' => $species_name,
-  'limit' => 20
+  'limit'        => 20,
 ]);
 $photos = array_map(function ($photo) {
   $thumb_width = 349;
