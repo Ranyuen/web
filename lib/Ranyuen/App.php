@@ -18,8 +18,6 @@ class App
     private $_config;
     /** @type Router */
     private $_router;
-    /** @type DbCapsule */
-    private $_db;
 
     /**
      * @param array $config
@@ -36,7 +34,6 @@ class App
         $this->_config = $this->_container['config'];
         $this->_router = $this->_container['router'];
         $this->applyDefaultRoutes($this->_container['logger']);
-        $this->_db = $this->_container['db'];
     }
 
     /**
@@ -52,6 +49,7 @@ class App
      */
     public function run()
     {
+        $this->_container['db'];
         $this->_router->run();
 
         return $this;
@@ -108,7 +106,7 @@ class App
     private function loadServices(Container $container, $env)
     {
         $container['config'] = function ($c) use ($env) {
-            return (new Config())->load("config/$env.yaml", $env);
+            return (new Config())->load($env);
         };
         $container['router'] = function ($c) {
             return new Router($c['config']);
