@@ -1,0 +1,8 @@
+debug: false
+db:
+  driver: mysql
+  database: ranyuen_production
+  username: ranyuen
+  password: {{DB_PASSWORD}}
+  charset: utf8
+  collation: utf8_unicode_ci

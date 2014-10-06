@@ -1,15 +1,16 @@
 {
   "require": {
     "clover/text-ltsv": "1.0.*@dev",
+    "davedevelopment/phpmig": "1.*",
     "dflydev/markdown": "1.0.*@dev",
     "monolog/monolog": "1.10.*",
+    "mustache/mustache": "2.*",
     "illuminate/database": "4.2.*",
     "pimple/pimple": "3.*",
     "slim/slim": "2.*",
     "symfony/yaml": "2.5.*"
   },
   "require-dev": {
-    "davedevelopment/phpmig": "1.*",
     "fabpot/php-cs-fixer": "*",
     "phpunit/phpunit": "4.2.*",
     "squizlabs/php_codesniffer": "*"
