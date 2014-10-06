@@ -60,6 +60,7 @@ class Navigation
     {
         $template_name = explode('/', $template_name);
         $nav = $this->nav[$lang];
+        
         foreach ($template_name as $part) {
             if ($part && $part !== 'index') {
                 if (!isset($nav[$part]) || isset($nav[$part]['title'])) { break; }
@@ -148,6 +149,7 @@ class Navigation
                     null;
             }
         }
+
         $local = array_merge($index, $local);
         $local = array_merge($local, $sub);
 
