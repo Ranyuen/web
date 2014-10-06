@@ -19,7 +19,7 @@ class ApiPhotos implements ApiController
         } elseif ($species_name === 'others') {
             $result = Photo::whereNull('species_name')->skip($offset)->take($limit)->get();
         } else {
-            $result = Photo::where('LOWER(species_name) LIKE ?', '%' . strtolower($species_name) . '%')->skip($offset)->take($limit)->get();
+            $result = Photo::whereRaw('LOWER(species_name) LIKE ?', ['%' . strtolower($species_name) . '%'])->skip($offset)->take($limit)->get();
         }
         $photos = [];
         foreach ($result as $photo) {
