@@ -5,19 +5,16 @@ use Clover\Text\LTSV;
 use Monolog;
 use Monolog\Handler\RotatingFileHandler;
 
-class Logger
+class Logger extends Monolog\Logger
 {
-    /** @type Monolog\Logger */
-    private $_logger;
-
     /**
      * @param string $name
      * @param array  $config
      */
     public function __construct($name, $config)
     {
-        $this->_logger = new Monolog\Logger($name);
-        $this->_logger->pushHandler(new RotatingFileHandler(
+        parent::__construct($name);
+        $this->pushHandler(new RotatingFileHandler(
             "{$config['log.path']}/$name.log",
             0,
             $config['log.level'])
@@ -25,25 +22,47 @@ class Logger
     }
 
     /**
-     * @return Logger
+     * Override.
+     *
+     * @param  integer      $level   The logging level
+     * @param  string|array $message The log message
+     * @param  array        $context The log context
+     * @return Boolean      Whether the record has been processed
+     */
+    public function addRecord($level, $message, array $context = [])
+    {
+        if (is_array($message)) {
+            $ltsv = new LTSV();
+            foreach ($message as $k => $v) {
+                $ltsv->add($k, $v);
+            }
+            $message = $ltsv->toLine();
+        }
+
+        return parent::addRecord($level, $message, $context);
+    }
+
+    /**
+     * @return Boolean
      */
     public function addAccessInfo()
     {
-        $ltsv = new LTSV();
-        $ltsv->add('time', $_SERVER['REQUEST_TIME_FLOAT']);
-        $ltsv->add('host', $_SERVER['REMOTE_ADDR']);
-        $ltsv->add('method', $_SERVER['REQUEST_METHOD']);
-        $ltsv->add('uri', $_SERVER['REQUEST_URI']);
-        $ltsv->add('protocol', $_SERVER['SERVER_PROTOCOL']);
-        $ltsv->add('status', http_response_code());
+        $message = [
+            'log.type' => 'http',
+            'time'     => $_SERVER['REQUEST_TIME_FLOAT'],
+            'host'     => $_SERVER['REMOTE_ADDR'],
+            'method'   => $_SERVER['REQUEST_METHOD'],
+            'uri'      => $_SERVER['REQUEST_URI'],
+            'protocol' => $_SERVER['SERVER_PROTOCOL'],
+            'status'   => http_response_code(),
+        ];
         if (isset($_SERVER['HTTP_REFERER'])) {
-            $ltsv->add('referer', $_SERVER['HTTP_REFERER']);
+            $message['referer'] = $_SERVER['HTTP_REFERER'];
         }
         if (isset($_SERVER['HTTP_USER_AGENT'])) {
-            $ltsv->add('ua', $_SERVER['HTTP_USER_AGENT']);
+            $message['ua'] = $_SERVER['HTTP_USER_AGENT'];
         }
-        $this->_logger->addInfo($ltsv->toLine());
 
-        return $this;
+        return $this->addInfo($message);
     }
 }

@@ -1,7 +1,6 @@
 <?php
 namespace Ranyuen;
 
-use \ORM;
 use \Pimple\Container;
 
 /**
@@ -13,8 +12,14 @@ use \Pimple\Container;
  */
 class App
 {
-    private $_config;
+    /** @type Container */
     private $_container;
+    /** @type array */
+    private $_config;
+    /** @type Router */
+    private $_router;
+    /** @type DbCapsule */
+    private $_db;
 
     /**
      * @param array $config
@@ -29,7 +34,9 @@ class App
         $this->_container = new Container();
         $this->loadServices($this->_container, $env);
         $this->_config = $this->_container['config'];
-        $this->applyDefaultRoutes($this->_container['router'], $this->_container['logger']);
+        $this->_router = $this->_container['router'];
+        $this->applyDefaultRoutes($this->_container['logger']);
+        $this->_db = $this->_container['db'];
     }
 
     /**
@@ -45,8 +52,7 @@ class App
      */
     public function run()
     {
-        $this->_container['db'];
-        $this->_container['router']->run();
+        $this->_router->run();
 
         return $this;
     }
@@ -59,7 +65,6 @@ class App
      */
     public function render($lang, $template_name, $params = [])
     {
-        $router = $this->_container['router'];
         $renderer = new Renderer($this->_config);
         if (isset($this->_config['lang'][$lang])) {
             $lang = $this->_config['lang'][$lang];
@@ -69,7 +74,7 @@ class App
             ->setLayout($this->_config['layout'])
             ->render("$template_name.$lang", $params);
         if ($str === false) {
-            $router->notFound();
+            $this->_router->notFound();
         } else {
             echo $str;
         }
@@ -105,12 +110,6 @@ class App
         $container['config'] = function ($c) use ($env) {
             return (new Config())->load("config/$env.yaml", $env);
         };
-        $container['db'] = function ($c) {
-            ORM::configure($c['config']['db']);
-            ORM::configure('logging', true);
-
-            return ORM::get_db();
-        };
         $container['router'] = function ($c) {
             return new Router($c['config']);
         };
@@ -119,10 +118,14 @@ class App
 
             return new Logger($config['mode'], $config);
         };
+        $container['db'] = function ($c) {
+            return new DbCapsule($c['config']['db'], $c['logger']);
+        };
     }
 
-    private function applyDefaultRoutes(Router $router, Logger $logger)
+    private function applyDefaultRoutes(Logger $logger)
     {
+        $router = $this->_router;
         $controller = function ($lang, $path) use ($router, $logger) {
             foreach ($this->_config['redirect'] as $src => $dest) {
                 if ($_SERVER['REQUEST_URI'] === $src) {

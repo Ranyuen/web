@@ -18,7 +18,7 @@ class ApiPhoto
         if (!($width || $height)) {
             return [ 'error' => ':width or :height is required.', 'status' => 404 ];
         }
-        $photo = Photo::create([ 'id' => $id ]);
+        $photo = Photo::find($id);
         $photo->loadImageSize();
         if ($width && $height) {
             $_height = floor($photo->height * $width / $photo->width);

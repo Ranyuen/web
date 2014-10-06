@@ -1,7 +1,9 @@
 lang:
   default: ja
   e: en
-db: sqlite:./db.sqlite3
+db:
+  driver: sqlite
+  database: ./db.sqlite3
 redirect:
   "/index.html": "/"
   "/cal/cal.html": "/growings/"
