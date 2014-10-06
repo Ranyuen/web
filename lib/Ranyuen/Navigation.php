@@ -142,11 +142,16 @@ class Navigation
         $sub = [];
         foreach ($nav as $href => $meta) {
             if (isset($meta['title'])) {
-                $index[$href === 'index' ? '/' : $href] = $meta['title'];
+                if ($href === 'index') {
+                    $index['/'] = $meta['title'];
+                } else {
+                    $local[$href] = $meta['title'];
+                }
+
             } else {
                 $sub["$href/"] = isset($nav[$href]['index']) ?
-                    $nav[$href]['index']['title'] :
-                    null;
+                $nav[$href]['index']['title'] :
+                null;
             }
         }
 

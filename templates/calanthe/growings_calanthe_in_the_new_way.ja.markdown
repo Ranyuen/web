@@ -47,7 +47,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 ここでは<b>元気でたくさんの花を咲かせる丈夫な株作り</b>を目的としたエビネ最新栽培法を要点のみ解説します。
 
-より詳しく知りたい方は蘭裕園ホームページの [年間の管理](growings/calanthe/growings_calanthe_on_season_01_spring)・[株分け](growings/calanthe/growings_repot_calanthe)・[エビネ自生地から学ぶ](growings/calanthe/info_lerning_calanthe_from_territory)・[近年に多い障害と対策](growings/recent_failure_and_provision)、他も参考にしてください。
+より詳しく知りたい方は蘭裕園ホームページの [年間の管理](calanthe/cultivation/growings_calanthe_on_season_01_spring)・[株分け](calanthe/cultivation/growings_repot_calanthe)・[エビネ自生地から学ぶ](calanthe/info_lerning_calanthe_from_territory)・[近年に多い障害と対策](calanthe/recent_failure_and_provision)、他も参考にしてください。
 
 <div class="supplement">
   <h1>原種エビネを購入する際に気を付けなくてはいけないこと</h1>
@@ -117,7 +117,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
   </figcaption>
 </figure>
 
-また、植え替え後はすぐに肥料を施します。 <i>→参考:</i> [肥料の施し方](growings/calanthe/growings_calanthe_in_the_new_way#肥料の施し方)
+また、植え替え後はすぐに肥料を施します。 <i>→参考:</i> [肥料の施し方](calanthe/growings_calanthe_in_the_new_way#肥料の施し方)
 
 <!-- (作落ちする群しい理由はいずれどこかで説明しようと考えています。) -->
 
@@ -127,13 +127,13 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 <?php $h->echoYouTube('kMNQ93Bwidg', 'エビネの庭植え - 蘭裕園'); ?>
 
-<i>→参考:</i> [エビネを庭で育てる](growings/calanthe/growings_calanthe_on_a_garden)
+<i>→参考:</i> [エビネを庭で育てる](calanthe/cultivation/growings_calanthe_on_a_garden)
 
 他に、
 
 <?php $h->echoYouTube('4o1rCG4YndU', 'エビネの株分け - 蘭裕園'); ?>
 
-もありますので、参考にしてください。<i>→参考:</i> [エビネの株分け](growings/calanthe/growings_repot_calanthe)
+もありますので、参考にしてください。<i>→参考:</i> [エビネの株分け](calanthe/cultivation/growings_repot_calanthe)
 
 <a name="肥料の施し方"></a>肥料の施し方
 --
@@ -149,7 +149,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 肥料の種類よっては、発生したばかりの新根を傷めてしまう可能性があるため、注意しましょう。
 
-詳しくは [上手な肥料の施し方](growings/calanthe/growings_fertilizing_for_calanthe) を御覧ください。
+詳しくは [上手な肥料の施し方](calanthe/cultivation/growings_fertilizing_for_calanthe) を御覧ください。
 
 エビネに合った環境で育てる
 --
@@ -159,7 +159,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 <b>結論から言うと、日陰でも他の条件が悪くなければほどほどには育ちますが、葉が焼けない程度に明るい場所での栽培と比較すると生育ははるかに劣り、増殖率また着花数ともに低下します。</b>
 
-[エビネの自生地から学ぶ](growings/calanthe/info_lerning_calanthe_from_territory) でも記しましたが、エビネに限らず、日陰の植物と言われているうちのかなり多くの植物は本来は暗い場所 (日陰) よりもほどほどに光が当たる場所を好んでいると考えられます。
+[エビネの自生地から学ぶ](calanthe/info_lerning_calanthe_from_territory) でも記しましたが、エビネに限らず、日陰の植物と言われているうちのかなり多くの植物は本来は暗い場所 (日陰) よりもほどほどに光が当たる場所を好んでいると考えられます。
 
 私の考えでは山野に下草として自生しているエビネの他、植物の多くは本来は日光を好んでいるけれど、上方は力のある大きな木々に常に占領されてしまい、小さな体しか持たない自分たちがそこで生活するために、葉を大きくし、生きていくのに必要な光量を確保できるように進化したと考えています。エビネに限らず多くの植物で言えることですが、<b>自生地では最良の環境の下で自生していることは稀で、多くの場合は生き続けるための最小限の条件を満たした程度の場所で生活していることがほとんどです</b>。
 
@@ -167,7 +167,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 エビネでもほぼ同様なことが起こり、自生地で芽数の多くて立派な株がある場所は、多くの人が想像するよりもかなり明るい場所 (木々の間から間欠的に直射日光が当たる場所、明るい日中2～3時の直光がおちる場所、など) です。
 
-より詳しくは [エビネの自生地から学ぶ](growings/calanthe/info_lerning_calanthe_from_territory) を参照してください。
+より詳しくは [エビネの自生地から学ぶ](calanthe/info_lerning_calanthe_from_territory) を参照してください。
 
 風通しの良いところに植えると良く育つと聞きますが本当に大丈夫ですか?
 --
@@ -226,7 +226,7 @@ A. 基本的には真夏を除きいつでも可能です。
 
 <?php $h->echoYouTube('-AmJHMSm7K4', 'エビネの植え替え - 蘭裕園'); ?>
 
-<i>→参考:</i> [エビネの株分け](growings/calanthe/growings_repot_calanthe)
+<i>→参考:</i> [エビネの株分け](calanthe/cultivation/growings_repot_calanthe)
 
 ### Q. 葉が傷んで変色してしまいましたが、大丈夫ですか?
 A. 夏ごろまでに葉が褐色になってしまうような場合、葉が傷む原因には以下のようなことが考えられます。

@@ -12,27 +12,20 @@ class ApiPhotos implements ApiController
         $species_name = isset($request_params['species_name']) && $request_params['species_name'] ?
             $request_params['species_name'] : null;
         $result = [];
-        try {
-            if ($species_name === null) {
-                $result = Photo::order_by_expr('RANDOM()')
-                    ->limit($limit)
-                    ->findMany();
-            } elseif ($species_name === 'all') {
-                $result = Photo::offset($offset)->limit($limit)->findMany();
-            } elseif ($species_name === 'others') {
-                $result = Photo::where_raw('species_name is null')
-                    ->offset($offset)
-                    ->limit($limit)
-                    ->findMany();
-            } else {
-                $result = Photo::where_raw('LOWER(species_name) LIKE ?', '%' . strtolower($species_name) . '%')
-                    ->offset($offset)
-                    ->limit($limit)
-                    ->findMany();
-            }
-        } catch (PDOException $e) {
+        if ($species_name === null) {
+            $result = Photo::orderBy('RANDOM()')->take($limit)->get();
+        } elseif ($species_name === 'all') {
+            $result = Photo::skip($offset)->take($limit)->get();
+        } elseif ($species_name === 'others') {
+            $result = Photo::whereNull('species_name')->skip($offset)->take($limit)->get();
+        } else {
+            $result = Photo::whereRaw('LOWER(species_name) LIKE ?', ['%' . strtolower($species_name) . '%'])->skip($offset)->take($limit)->get();
+        }
+        $photos = [];
+        foreach ($result as $photo) {
+            $photos[] = $photo->toArray();
         }
 
-        return array_map(function ($photo) { return $photo->asArray(); }, $result);
+        return $photos;
     }
 }

@@ -1,14 +1,18 @@
 <?php
 namespace Ranyuen\Model;
 
-use \Model;
+use \Illuminate\Database\Eloquent;
 
-class Photo extends Model
+class Photo extends Eloquent\Model
 {
-    public static $_table = 'photo';
+    protected $table = 'photo';
 
-    private $image;
+    /** @type resource */
+    private $_image;
 
+    /**
+     * @return Photo
+     */
     public function loadImageSize()
     {
         if (!$this->width || !$this->height) {
@@ -19,17 +23,24 @@ class Photo extends Model
         return $this;
     }
 
+    /**
+     * @return Photo
+     */
     public function loadImage()
     {
-        if (!$this->image) {
+        if (!$this->_image) {
             $file = "images/gallery/$this->id.jpg";
-            $this->image = imagecreatefromjpeg($file);
+            $this->_image = imagecreatefromjpeg($file);
             $this->loadImageSize();
         }
 
         return $this;
     }
 
+    /**
+     * @param integer $new_width
+     * @param integer $new_height
+     */
     public function renderResized($new_width, $new_height)
     {
         $cache_filename = "images/cache/{$this->id}_{$new_width}x$new_height.jpg";
@@ -46,6 +57,11 @@ class Photo extends Model
         readfile($cache_filename);
     }
 
+    /**
+     * @param integer $new_width
+     * @param integer $new_height
+     * @param string  $cache_filename
+     */
     private function createCache($new_width, $new_height, $cache_filename)
     {
         $orig_filename = "images/gallery/$this->id.jpg";
