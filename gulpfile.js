@@ -41,6 +41,7 @@ gulp.task('deploy', function () {
     command: [
       'cd ~/www; git pull origin master',
       'cd ~/www; php composer.phar install --no-dev',
+      'cd ~/www; SERVER_ENV=production vendor/bin/phpmig migrate',
     ],
     sshConfig: {
       host:     'ranyuen.sakura.ne.jp',
