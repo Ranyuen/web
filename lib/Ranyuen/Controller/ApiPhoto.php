@@ -3,7 +3,7 @@ namespace Ranyuen\Controller;
 
 use \Ranyuen\Model\Photo;
 
-class ApiPhoto extends ApiController
+class ApiPhoto
 {
     public function get(array $params)
     {

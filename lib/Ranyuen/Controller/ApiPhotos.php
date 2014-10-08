@@ -3,7 +3,7 @@ namespace Ranyuen\Controller;
 
 use \Ranyuen\Model\Photo;
 
-class ApiPhotos extends ApiController
+class ApiPhotos
 {
     public function get(array $params)
     {
@@ -18,9 +18,16 @@ class ApiPhotos extends ApiController
         } elseif ($species_name === 'all') {
             $result = Photo::skip($offset)->take($limit)->get();
         } elseif ($species_name === 'others') {
-            $result = Photo::whereNull('species_name')->skip($offset)->take($limit)->get();
+            $result = Photo::whereNull('species_name')
+                ->skip($offset)
+                ->take($limit)
+                ->get();
         } else {
-            $result = Photo::whereRaw('LOWER(species_name) LIKE ?', ['%' . strtolower($species_name) . '%'])->skip($offset)->take($limit)->get();
+            $result =
+                Photo::whereRaw('LOWER(species_name) LIKE ?', ['%' . strtolower($species_name) . '%'])
+                ->skip($offset)
+                ->take($limit)
+                ->get();
         }
         $photos = [];
         foreach ($result as $photo) {
