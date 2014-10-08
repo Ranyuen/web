@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "15a0e198cf2d3b48fd139427442b4436",
+    "hash": "4068535fb7e9e3cfb29305f829486b28",
     "packages": [
         {
             "name": "clover/text-ltsv",
@@ -370,6 +370,57 @@
             "time": "2014-09-12 21:42:43"
         },
         {
+            "name": "liquid/liquid",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kalimatas/php-liquid.git",
+                "reference": "03a003b6871704b1a26b59ae9d1091ec1ae0c3e1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kalimatas/php-liquid/zipball/03a003b6871704b1a26b59ae9d1091ec1ae0c3e1",
+                "reference": "03a003b6871704b1a26b59ae9d1091ec1ae0c3e1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Liquid\\": "src/Liquid"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guz Alexander",
+                    "email": "kalimatas@gmail.com",
+                    "homepage": "http://guzalexander.com"
+                },
+                {
+                    "name": "Harald Hanek"
+                },
+                {
+                    "name": "Mateo Murphy"
+                }
+            ],
+            "description": "Liquid template engine for PHP",
+            "homepage": "https://github.com/kalimatas/php-liquid",
+            "keywords": [
+                "liquid",
+                "template"
+            ],
+            "time": "2014-09-07 17:09:02"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.10.0",
             "source": {
@@ -436,51 +487,6 @@
                 "psr-3"
             ],
             "time": "2014-06-04 16:30:04"
-        },
-        {
-            "name": "mustache/mustache",
-            "version": "v2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "fdf41dd673dc99b41d60992470dbae94ae0b6ba1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/fdf41dd673dc99b41d60992470dbae94ae0b6ba1",
-                "reference": "fdf41dd673dc99b41d60992470dbae94ae0b6ba1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Mustache": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Justin Hileman",
-                    "email": "justin@justinhileman.info",
-                    "homepage": "http://justinhileman.com"
-                }
-            ],
-            "description": "A Mustache implementation in PHP.",
-            "homepage": "https://github.com/bobthecow/mustache.php",
-            "keywords": [
-                "mustache",
-                "templating"
-            ],
-            "time": "2014-08-26 19:50:10"
         },
         {
             "name": "nesbot/carbon",
@@ -1501,28 +1507,28 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.0.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "10c7467da0622f7848cc5cadc0828c3359254df4"
+                "reference": "6288ebbf6fa3ed2b2ff2d69c356fbaaf4f0971a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/10c7467da0622f7848cc5cadc0828c3359254df4",
-                "reference": "10c7467da0622f7848cc5cadc0828c3359254df4",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/6288ebbf6fa3ed2b2ff2d69c356fbaaf4f0971a7",
+                "reference": "6288ebbf6fa3ed2b2ff2d69c356fbaaf4f0971a7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~4.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -1547,7 +1553,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2014-05-04 17:56:05"
+            "time": "2014-10-07 09:23:16"
         },
         {
             "name": "sebastian/exporter",
