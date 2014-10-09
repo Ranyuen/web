@@ -1,8 +1,6 @@
 <?php
 namespace Ranyuen;
 
-use \Pimple\Container;
-
 /**
  * @example
  * <code>
