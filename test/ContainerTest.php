@@ -33,7 +33,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         );
         $this->assertEquals('arg1', $obj->arg1);
         $this->assertSame($this->_container['cfg'], $obj->cfg);
-        $this->assertEquals($this->_container['num'], $obj->num);
+        $this->assertEquals($this->_container['num'], $obj->number);
         $this->assertEquals('arg2', $obj->arg2);
         $this->assertSame($this->_container[$this->_momonga_id], $obj->momonga);
     }
@@ -46,7 +46,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         );
         $this->assertEquals('arg1', $obj->arg1);
         $this->assertSame($this->_container['cfg'], $obj->cfg);
-        $this->assertEquals($this->_container['num'], $obj->num);
+        $this->assertEquals($this->_container['num'], $obj->number);
         $this->assertEquals('arg2', $obj->arg2);
         $this->assertSame($this->_container[$this->_momonga_id], $obj->momonga);
     }

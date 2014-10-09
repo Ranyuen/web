@@ -7,6 +7,8 @@ use \Ranyuen\Renderer;
 class NavController extends Controller
 {
     /**
+     * @Inject
+     * @Named("_config=config")
      * @var array
      */
     private $_config;
@@ -25,14 +27,6 @@ class NavController extends Controller
      * @var \Ranyuen\Navigation
      */
     private $_nav;
-
-    /**
-     * @Inject
-     */
-    public function __construct(array $config)
-    {
-        $this->_config = $config;
-    }
 
     /**
      * @param string $lang

@@ -1,6 +1,6 @@
 <?php
 /**
- * Simple DI (Dependency Injector) useing Pimple.
+ * Simple DI (Dependency Injector) extending Pimple.
  *
  * PHP version 5
  *
@@ -17,9 +17,10 @@ namespace Ranyuen;
 
 use \Pimple;
 use \ReflectionClass;
+use \ReflectionException;
 
 /**
- * Simple DI (Dependency Injector) useing Pimple.
+ * Simple DI (Dependency Injector) extending Pimple.
  *
  * cf. fabpot/Pimple
  * cf. koriym/Ray.Di
@@ -95,10 +96,7 @@ class Container extends Pimple\Container
     {
         $interface = new ReflectionClass(get_class($obj));
         foreach ($interface->getProperties() as $prop) {
-            if (!preg_match(
-                '/^\\s*(?:\\/\\*)?\\*\\s*@Inject/m',
-                $prop->getDocComment()
-            )) {
+            if (!$this->hasAnnotationInject($prop)) {
                 continue;
             }
             $matches = [];
@@ -113,6 +111,10 @@ class Container extends Pimple\Container
                 $id = $this->_class_names[$prop_class];
             } else {
                 $id = $prop->getName();
+                $named = $this->getNamed($prop);
+                if (isset($named[$id])) {
+                    $id = $named[$id];
+                }
             }
             if (isset($this[$id])) {
                 $prop->setAccessible(true);
@@ -136,13 +138,11 @@ class Container extends Pimple\Container
         $interface = new ReflectionClass($interface);
         try {
             $method = $interface->getMethod('__construct');
-        } catch (\ReflectionException $ex) {
+        } catch (ReflectionException $ex) {
             $method = null;
         }
-        if ($method && preg_match(
-            '/^\\s*(?:\\/\\*)?\\*\\s*@Inject/m',
-            $method->getDocComment()
-        )) {
+        if ($method && $this->hasAnnotationInject($method)) {
+            $named = $this->getNamed($method);
             $i = 0;
             foreach ($method->getParameters() as $param) {
                 $param_class = $param->getClass();
@@ -153,6 +153,9 @@ class Container extends Pimple\Container
                     $id = $this->_class_names[$param_class];
                 } else {
                     $id = $param->getName();
+                    if (isset($named[$id])) {
+                        $id = $named[$id];
+                    }
                 }
                 if (isset($this[$id])) {
                     array_splice($args, $i, 0, [$this[$id]]);
@@ -164,5 +167,37 @@ class Container extends Pimple\Container
         $this->inject($obj);
 
         return $obj;
+    }
+
+    /**
+     * @return boolean
+     */
+    private function hasAnnotationInject($target)
+    {
+        return !!preg_match(
+            '/^\\s*(?:\\/\\*)?\\*\\s*@Inject/m',
+            $target->getDocComment()
+        );
+    }
+
+    /**
+     * @return array
+     */
+    private function getNamed($target)
+    {
+        $matches = [];
+        $named = [];
+        if (preg_match(
+            '/^\\s*(?:\\/\\*)?\\*\\s*@Named\\([\'"]([^\'"]+)[\'"]\\)/m',
+            $target->getDocComment(),
+            $matches
+        )) {
+            foreach (explode(',', $matches[1]) as $field) {
+                $field = explode('=', $field);
+                $named[$field[0]] = $field[1];
+            }
+        }
+
+        return $named;
     }
 }

@@ -20,17 +20,18 @@ class InjectToConstructor
 
     /**
      * @Inject
+     * @Named("number=num")
      * @param string  $arg1
      * @param Config  $cfg
-     * @param integer $num
+     * @param integer $number
      * @param string  $arg2
      * @param Momonga $momonga
      */
-    public function __construct($arg1, Config $cfg, $num, $arg2, Momonga $momonga)
+    public function __construct($arg1, Config $cfg, $number, $arg2, Momonga $momonga)
     {
         $this->arg1    = $arg1;
         $this->cfg     = $cfg;
-        $this->num     = $num;
+        $this->number  = $number;
         $this->arg2    = $arg2;
         $this->momonga = $momonga;
     }
@@ -47,9 +48,10 @@ class InjectToProperties
     public $cfg;
     /**
      * @Inject
+     * @Named("number=num")
      * @var integer
      */
-    public $num;
+    public $number;
     /** @var string */
     public $arg2;
     /**
