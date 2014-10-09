@@ -115,6 +115,7 @@ class Container extends Pimple\Container
                 $id = $prop->getName();
             }
             if (isset($this[$id])) {
+                $prop->setAccessible(true);
                 $prop->setValue($obj, $this[$id]);
             }
         }
@@ -133,7 +134,11 @@ class Container extends Pimple\Container
     public function newInstance($interface, $args = [])
     {
         $interface = new ReflectionClass($interface);
-        $method = $interface->getMethod('__construct');
+        try {
+            $method = $interface->getMethod('__construct');
+        } catch (\ReflectionException $ex) {
+            $method = null;
+        }
         if ($method && preg_match(
             '/^\\s*(?:\\/\\*)?\\*\\s*@Inject/m',
             $method->getDocComment()

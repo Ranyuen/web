@@ -60,22 +60,22 @@ class App
         $container['config'] = function ($c) use ($env) {
             return (new Config())->load($env);
         };
-        $container['logger'] = function ($c) {
+        $container->bind('\Ranyuen\Logger', 'logger', function ($c) {
             $config = $c['config'];
 
             return new Logger($config['mode'], $config);
-        };
-        $container['nav'] = function ($c) {
+        });
+        $container->bind('\Ranyuen\Navigation', 'nav', function ($c) {
             return new Navigation($c['config']);
-        };
-        $container['router'] = function ($c) {
+        });
+        $container->bind('\Ranyuen\Router', 'router', function ($c) {
             return new Router($this, $c['config']);
-        };
-        $container['db'] = function ($c) {
+        });
+        $container->bind('\Ranyuen\Db', 'db', function ($c) {
             return new DbCapsule($c['logger'], $c['config']['db']);
-        };
+        });
         $this->_config = $container['config'];
-        $this->_nav = $container['nav'];
+        $this->_nav    = $container['nav'];
         $this->_router = $container['router'];
     }
 }

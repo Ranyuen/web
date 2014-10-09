@@ -1,19 +1,15 @@
 <?php
 namespace Ranyuen\Controller;
 
-use \Ranyuen\App;
 use \ReflectionClass;
 
 class ApiController extends Controller
 {
-    /** @var \Ranyuen\Logger */
+    /**
+     * @Inject
+     * @var \Ranyuen\Logger
+     */
     private $_logger;
-
-    public function __construct(App $app)
-    {
-        parent::__construct($app);
-        $this->_logger = $app->getContainer()['logger'];
-    }
 
     /**
      * @param string   $api_name

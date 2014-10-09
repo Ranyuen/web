@@ -1,27 +1,37 @@
 <?php
 namespace Ranyuen\Controller;
 
-use \Ranyuen\App;
 use \Ranyuen\BgImage;
 use \Ranyuen\Renderer;
 
 class NavController extends Controller
 {
-    /** @var array */
+    /**
+     * @var array
+     */
     private $_config;
-    /** @var \Ranyuen\Logger */
+    /**
+     * @Inject
+     * @var \Ranyuen\Logger
+     */
     private $_logger;
-    /** @var \Ranyuen\Router */
+    /**
+     * @Inject
+     * @var \Ranyuen\Router
+     */
     private $_router;
+    /**
+     * @Inject
+     * @var \Ranyuen\Navigation
+     */
+    private $_nav;
 
-    public function __construct(App $app)
+    /**
+     * @Inject
+     */
+    public function __construct(array $config)
     {
-        parent::__construct($app);
-        $c = $app->getContainer();
-        $this->_config = $c['config'];
-        $this->_logger = $c['logger'];
-        $this->_router = $c['router'];
-        $this->_nav = $c['nav'];
+        $this->_config = $config;
     }
 
     /**

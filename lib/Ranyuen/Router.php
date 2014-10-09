@@ -43,34 +43,18 @@ class Router extends Slim\Slim
     private function routeApi(App $app)
     {
         $controller = function ($path) use ($app) {
-            (new \Ranyuen\Controller\ApiController($app))->renderApi(
-                $path[0],
-                $this->request->getMethod(),
-                array_slice($path, 1),
-                $this->request->params()
-            );
+            $app->getContainer()
+                ->newInstance('\Ranyuen\Controller\ApiController')
+                ->renderApi(
+                    $path[0],
+                    $this->request->getMethod(),
+                    array_slice($path, 1),
+                    $this->request->params()
+                );
         };
-        // $this->map('/api/:path+', function ($path) use ($controller) {
-        //     $controller($path);
-        // })->via('GET');
-        $this->get('/api/:path+', function ($path) use ($controller) {
+        $this->map('/api/:path+', function ($path) use ($controller) {
             $controller($path);
-        });
-        // $this->post('/api/:path+', function ($path) use ($controller) {
-        //     $controller($path);
-        // });
-        // $this->put('/api/:path+', function ($path) use ($controller) {
-        //     $controller($path);
-        // });
-        // $this->delete('/api/:path+', function ($path) use ($controller) {
-        //     $controller($path);
-        // });
-        // $this->options('/api/:path+', function ($path) use ($controller) {
-        //     $controller($path);
-        // });
-        // $this->patch('/api/:path+', function ($path) use ($controller) {
-        //     $controller($path);
-        // });
+        })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
     }
 
     /**
@@ -80,7 +64,8 @@ class Router extends Slim\Slim
     {
         $nav = $app->getContainer()['nav'];
         $controller = function ($lang, $path) use ($app) {
-            (new \Ranyuen\Controller\NavController($app))
+            $app->getContainer()
+                ->newInstance('\Ranyuen\Controller\NavController')
                 ->showFromTemplate($lang, $path);
         };
         $lang_regex = implode('|', $nav->getLangs());
