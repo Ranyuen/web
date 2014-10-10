@@ -75,7 +75,7 @@ class Router extends Slim\Slim
         $this->get('/:lang/', function ($lang) use ($controller) {
             $controller($lang, '/index');
         })->conditions(['lang' => $lang_regex]);
-        $this->get('/', function () use ($app) {
+        $this->get('/', function () use ($controller) {
             $controller('default', '/index');
         });
         $this->get('/:lang/:path+', function ($lang, $path) use ($controller) {

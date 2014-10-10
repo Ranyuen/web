@@ -1,5 +1,5 @@
 <?php
-require 'test/ContainerTestResource.php';
+require_once 'test/res/ContainerTestResource.php';
 
 use \Ranyuen\Container;
 

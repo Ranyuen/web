@@ -4,142 +4,73 @@ namespace Ranyuen;
 use dflydev\markdown\MarkdownExtraParser;
 use Symfony\Component\Yaml;
 
+/**
+ * YAML+Liquid+Markdown stack.
+ *
+ * YAML Front Matter + Liquid Template + Markdown.
+ */
 class Renderer
 {
-    /** @var array */
-    private $_config;
+    private $_templates_path = 'view';
+    /** @var Liquid\Template */
+    private $_template;
     /** @var string */
     private $_layout = null;
 
     /**
-     * @param array $config
+     * @param string $templates_path
      */
-    public function __construct($config)
+    public function __construct($templates_path)
     {
-        $this->_config = $config;
+        $this->_templates_path = $templates_path;
+        $this->_template = new Template\LiquidTemplate();
     }
 
     /**
-     * @param  string   $templateName
+     * @param  string   $template_name Liquid HTML file path.
      * @return Renderer
      */
-    public function setLayout($templateName)
+    public function setLayout($template_name)
     {
-        $this->_layout = file_get_contents(
-            "{$this->_config['templates.path']}/$templateName.php"
-        );
+        $dir = $this->_templates_path;
+        if (is_file("$dir/$template_name.html")) {
+            $this->_layout = file_get_contents("$dir/$template_name.html");
+        }
 
         return $this;
     }
 
     /**
-     * @param  string $templateName
+     * @param  object   $helper
+     * @return Renderer
+     */
+    public function addHelper($helper)
+    {
+        $this->_template->registerHelper($helper);
+
+        return $this;
+    }
+
+    /**
+     * @param  string $template_name Liquid Markdown file path.
      * @param  array  $params
      * @return string
      */
-    public function render($templateName, $params = [])
+    public function render($template_name, $params = [])
     {
-        $templateType = $this->detectTemplateType($templateName);
-        $filepath = "{$this->_config['templates.path']}/$templateName.$templateType";
-        if (!is_file($filepath)) {
+        $dir = $this->_templates_path;
+        if (is_file("$dir/$template_name.md")) {
+            $template = file_get_contents("$dir/$template_name.md");
+        } elseif (is_file("$dir/$template_name.markdown")) {
+            $template = file_get_contents("$dir/$template_name.markdown");
+        } else {
             return false;
         }
-        $template = file_get_contents($filepath);
-        switch ($templateType) {
-            case 'php':
-                return $this->renderPhpTemplateWithLayout($template, $params);
-            case 'markdown':
-                return $this->renderMarkdownTemplateWithLayout($template, $params);
-        }
-    }
-
-    /**
-     * @param  string $template
-     * @param  array  $__params
-     * @return string
-     */
-    public function renderTemplate($template, $__params = [])
-    {
-        list($template, $fromtMatter) = $this->stripYamlFromtMatter($template);
-        if ($fromtMatter) {
-            $__params = array_merge($fromtMatter, $__params);
-        }
-        $__params['h'] = new Helper($this->_config);
-        $render = function () use ($__params) {
-            foreach (func_get_arg(1) as $__k => $__v) {
-                ${$__k} = $__v;
-            }
-            unset($__k);
-            unset($__v);
-            ob_start();
-            eval('?>' . func_get_arg(0));
-
-            return ob_get_clean();
-        };
-        $render = $render->bindTo(null);
-
-        return $render($template, $__params);
-    }
-
-    /**
-     * @param  string $templateName
-     * @return string 'php' or 'markdown'
-     */
-    private function detectTemplateType($templateName)
-    {
-        $templateType = 'php';
-        $dir = dirname("{$this->_config['templates.path']}/$templateName");
-        if (!is_dir($dir)) {
-            return 'php';
-        }
-        if ($handle = opendir($dir)) {
-            $regex = '/^(?:' . basename($templateName) . ')\.(php|markdown)$/';
-            while (false !== ($file = readdir($handle))) {
-                $matches = [];
-                if (is_file("$dir/$file") &&
-                    preg_match($regex, $file, $matches)) {
-                    $templateType = $matches[1];
-                    break;
-                }
-            }
-        }
-
-        return $templateType;
-    }
-
-    /**
-     * @param  string $template
-     * @param  array  $params
-     * @return string
-     */
-    private function renderPhpTemplateWithLayout($template, $params)
-    {
         if ($this->_layout) {
-            list($content, $frontMatter) =
+            list($content, $front_matter) =
                 $this->stripYamlFromtMatter($template);
-            if ($frontMatter) {
-                $params = array_merge($frontMatter, $params);
-            }
-            $params['content'] = $content;
-
-            return $this->renderTemplate($this->_layout, $params);
-        } else {
-            return $this->renderTemplate($template, $params);
-        }
-    }
-
-    /**
-     * @param  string $template
-     * @param  array  $params
-     * @return string
-     */
-    private function renderMarkdownTemplateWithLayout($template, $params)
-    {
-        if ($this->_layout) {
-            list($content, $frontMatter) =
-                $this->stripYamlFromtMatter($template);
-            if ($frontMatter) {
-                $params = array_merge($frontMatter, $params);
+            if ($front_matter) {
+                $params = array_merge($front_matter, $params);
             }
             $params['content'] = (new MarkdownExtraParser())
                 ->transformMarkdown($this->renderTemplate($content, $params));
@@ -149,6 +80,22 @@ class Renderer
             return (new MarkdownExtraParser())
                 ->transformMarkdown($this->renderTemplate($template, $params));
         }
+    }
+
+    /**
+     * @param  string $template
+     * @param  array  $params
+     * @return string
+     */
+    public function renderTemplate($template, $params = [])
+    {
+        list($template, $fromt_matter) =
+            $this->stripYamlFromtMatter($template);
+        if ($fromt_matter) {
+            $params = array_merge($fromt_matter, $params);
+        }
+
+        return $this->_template->parse($template)->render($params);
     }
 
     /**
@@ -167,11 +114,12 @@ class Renderer
             for (; $i < $iz && ! preg_match('/^-{3,}\s*$/', $lines[$i]); ++ $i) {
                 $front .= "$lines[$i]\n";
             }
-            ++ $i;
+            ++$i;
         }
         $params = (new Yaml\Parser())->parse($front);
-        for (; $i < $iz; ++ $i)
+        for (; $i < $iz; ++$i) {
             $content .= "$lines[$i]\n";
+        }
 
         return [$content, $params];
     }
