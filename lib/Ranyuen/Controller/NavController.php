@@ -12,26 +12,26 @@ class NavController extends Controller
      * @Named("_config=config")
      * @var array
      */
-    private $_config;
+    protected $_config;
     /**
      * @Inject
      * @var \Ranyuen\Logger
      */
-    private $_logger;
+    protected $_logger;
     /**
      * @Inject
      * @var \Ranyuen\Router
      */
-    private $_router;
+    protected $_router;
     /**
      * @Inject
      * @var \Ranyuen\Navigation
      */
-    private $_nav;
+    protected $_nav;
 
     /**
      * @param string $lang
-     * @param array  $path
+     * @param string $path
      */
     public function showFromTemplate($lang, $path)
     {
@@ -52,7 +52,7 @@ class NavController extends Controller
      * @param  array  $params
      * @return void
      */
-    private function render($lang, $template_name, $params = [])
+    protected function render($lang, $template_name, $params = [])
     {
         if (isset($this->_config['lang'][$lang])) {
             $lang = $this->_config['lang'][$lang];
