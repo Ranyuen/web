@@ -11,7 +11,7 @@ class Navigation
     /**
      * @param array $config
      */
-    public function __construct($config)
+    public function __construct(array $config)
     {
         $this->config = $config;
         $this->nav = Yaml::parse(file_get_contents("{$config['templates.path']}/nav.json"));
@@ -60,10 +60,11 @@ class Navigation
     {
         $template_name = explode('/', $template_name);
         $nav = $this->nav[$lang];
-        
         foreach ($template_name as $part) {
             if ($part && $part !== 'index') {
-                if (!isset($nav[$part]) || isset($nav[$part]['title'])) { break; }
+                if (!isset($nav[$part]) || isset($nav[$part]['title'])) {
+                    break;
+                }
                 $nav = $nav[$part];
             }
         }
@@ -124,6 +125,11 @@ class Navigation
             'en' => '/en/',
         ];
         $alter['base'] = $link_data[$lang];
+        $alter['local_base'] = preg_replace(
+            '/\/[^\/]*$/',
+            '/',
+            $_SERVER['REQUEST_URI']
+        );
         foreach ($link_data as $k => $v) {
             $alter[$k] = $v;
             if (false !== array_search($k, $alt_lang)) {
@@ -147,14 +153,12 @@ class Navigation
                 } else {
                     $local[$href] = $meta['title'];
                 }
-
             } else {
                 $sub["$href/"] = isset($nav[$href]['index']) ?
                 $nav[$href]['index']['title'] :
                 null;
             }
         }
-
         $local = array_merge($index, $local);
         $local = array_merge($local, $sub);
 

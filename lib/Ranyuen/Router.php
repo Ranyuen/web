@@ -37,12 +37,10 @@ class Router extends Slim\Slim
         parent::run();
     }
 
-    /**
-     * @routing
-     */
+    /** @routing */
     private function routeApi(App $app)
     {
-        $controller = function ($path) use ($app) {
+        $this->map('/api/:path+', function ($path) use ($app) {
             $app->getContainer()
                 ->newInstance('\Ranyuen\Controller\ApiController')
                 ->renderApi(
@@ -51,15 +49,27 @@ class Router extends Slim\Slim
                     array_slice($path, 1),
                     $this->request->params()
                 );
-        };
-        $this->map('/api/:path+', function ($path) use ($controller) {
-            $controller($path);
         })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
     }
 
-    /**
-     * @routing
-     */
+    /** @routing */
+    private function routeNavPhotos(App $app)
+    {
+        $nav = $app->getContainer()['nav'];
+        $lang_regex = implode('|', $nav->getLangs());
+        $this->get('/photos/*', function () use ($app) {
+            $app->getContainer()
+                ->newInstance('\Ranyuen\Controller\NavPhotosController')
+                ->showFromTemplate('default');
+        });
+        $this->get('/:lang/photos/*', function ($lang) use ($app) {
+            $app->getContainer()
+                ->newInstance('\Ranyuen\Controller\NavPhotosController')
+                ->showFromTemplate($lang);
+        })->conditions(['lang' => $lang_regex]);
+    }
+
+    /** @routing */
     private function routeNav(App $app)
     {
         $nav = $app->getContainer()['nav'];
@@ -75,7 +85,7 @@ class Router extends Slim\Slim
         $this->get('/:lang/', function ($lang) use ($controller) {
             $controller($lang, '/index');
         })->conditions(['lang' => $lang_regex]);
-        $this->get('/', function () use ($app) {
+        $this->get('/', function () use ($controller) {
             $controller('default', '/index');
         });
         $this->get('/:lang/:path+', function ($lang, $path) use ($controller) {

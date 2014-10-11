@@ -12,4 +12,4 @@ h1 {
 }
 </style>
 
-<?php $h->echoNav($news_nav, "{$link['base']}/news/"); ?>
+{{ nav.news | echoNav: link.base + '/news/' }}

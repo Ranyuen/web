@@ -1,6 +1,15 @@
 lang:
   default: ja
   e: en
+message:
+  ja:
+    sitename: 蘭裕園
+    tagline: エビネとウチョウランの専門農園
+    keywords: 日本のラン, エビネ, ウチョウラン
+  en:
+    sitename: Ranyuen
+    tagline: Nurcery for Japanese Orchids
+    keywords: Japanese Orchids, Calanthe, Ponerorchis
 redirect:
   "/index.html": "/"
   "/cal/cal.html": "/growings/"

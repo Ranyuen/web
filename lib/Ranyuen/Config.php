@@ -2,7 +2,7 @@
 namespace Ranyuen;
 
 use Liquid\Template;
-use \Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Yaml\Yaml;
 
 class Config
 {
@@ -23,7 +23,7 @@ class Config
             'log.enabled'    => false,
             'log.level'      => 7, // INFO
             'mode'           => $env,
-            'templates.path' => 'templates',
+            'templates.path' => 'view',
         ];
         $template = new Template();
         if (is_readable('config/common.yaml')) {
