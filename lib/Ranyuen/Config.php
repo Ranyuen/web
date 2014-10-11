@@ -1,8 +1,8 @@
 <?php
 namespace Ranyuen;
 
-use \Mustache_Engine;
-use \Symfony\Component\Yaml\Yaml;
+use Liquid\Template;
+use Symfony\Component\Yaml\Yaml;
 
 class Config
 {
@@ -23,17 +23,17 @@ class Config
             'log.enabled'    => false,
             'log.level'      => 7, // INFO
             'mode'           => $env,
-            'templates.path' => 'templates',
+            'templates.path' => 'view',
         ];
-        $mustache = new Mustache_Engine();
+        $template = new Template();
         if (is_readable('config/common.yaml')) {
             $yaml = file_get_contents('config/common.yaml');
-            $yaml = $mustache->render($yaml, $_ENV);
+            $yaml = $template->parse($yaml)->render($_ENV);
             $config = array_merge($config, Yaml::parse($yaml));
         }
         if (is_readable("config/$env.yaml")) {
             $yaml = file_get_contents("config/$env.yaml");
-            $yaml = $mustache->render($yaml, $_ENV);
+            $yaml = $template->parse($yaml)->render($_ENV);
             $config = array_merge($config, Yaml::parse($yaml));
         }
 

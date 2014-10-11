@@ -4,9 +4,9 @@
     "davedevelopment/phpmig": "1.*",
     "dflydev/markdown": "1.0.*@dev",
     "monolog/monolog": "1.10.*",
-    "mustache/mustache": "2.*",
     "illuminate/database": "4.2.*",
     "pimple/pimple": "3.*",
+    "liquid/liquid": "~1.0",
     "slim/slim": "2.*",
     "symfony/yaml": "2.5.*"
   },

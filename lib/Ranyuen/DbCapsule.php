@@ -1,23 +1,23 @@
 <?php
 namespace Ranyuen;
 
-use Illuminate\Container\Container;
+use Illuminate;
 use Illuminate\Database\Capsule\Manager;
 use Illuminate\Events\Dispatcher;
 
 class DbCapsule
 {
-    /** @type Manager */
+    /** @var Manager */
     private $_capsule;
 
     /**
      * @param array $config
      */
-    public function __construct(array $config, Logger $logger)
+    public function __construct(Logger $logger, array $config)
     {
         $this->_capsule = new Manager();
         $this->_capsule->addConnection($config);
-        $dispatcher = new Dispatcher(new Container());
+        $dispatcher = new Dispatcher(new Illuminate\Container\Container());
         $dispatcher->listen('illuminate.query',
             function ($query, $bindings, $time, $name) use ($logger) {
                 $message = [

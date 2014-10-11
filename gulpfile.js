@@ -22,8 +22,8 @@ function promiseProcess(cmd) {
   return new Promise(function (resolve, reject) {
     cp.exec(cmd, function (err, stdout, stderr) {
       if (err) {
-        process.stdout.write(stdout);
-        process.stderr.write(stderr);
+        console.log(stdout);
+        console.error(stderr);
         return reject(err);
       }
       resolve(stdout);
@@ -83,8 +83,8 @@ gulp.task('php-cs', function () {
   return Promise.all([
     '-l .',
     'lib/',
-    'templates/',
     'test/',
+    'view/',
   ].map(function (path) {
     return promiseProcess('vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
   }));
@@ -95,8 +95,8 @@ gulp.task('php-fixer', function () {
     'index.php',
     'phpmig.php',
     'lib/',
-    'templates/',
     'test/',
+    'view/',
   ].map(function (path) {
     return promiseProcess('vendor/bin/php-cs-fixer fix ' + path + ' --level=all');
   }));
@@ -107,10 +107,10 @@ gulp.task('php-lint', function () {
       '*.php',
       'lib/**/**.php',
       'test/**/**.php',
-      'templates/**/**.php'
+      'view/**/**.php'
     ]).
-    pipe(exec('php -l <%= file.path %> > /dev/null', {})).
-    pipe(exec.reporter({}));
+    pipe(exec('php -l <%= file.path %>', {})).
+    pipe(exec.reporter({stdout: false}));
 });
 
 gulp.task('php-test', function (done) {
@@ -118,7 +118,7 @@ gulp.task('php-test', function (done) {
 });
 
 gulp.task('php-unit', function () {
-  return promiseProcess('vendor/bin/phpunit test').
+  return promiseProcess('vendor/bin/phpunit test --strict').
     then(function (out) { console.log(out); });
 });
 

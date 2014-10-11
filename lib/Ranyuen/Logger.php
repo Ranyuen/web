@@ -27,7 +27,7 @@ class Logger extends Monolog\Logger
      * @param  integer      $level   The logging level
      * @param  string|array $message The log message
      * @param  array        $context The log context
-     * @return Boolean      Whether the record has been processed
+     * @return boolean      Whether the record has been processed
      */
     public function addRecord($level, $message, array $context = [])
     {
@@ -43,7 +43,7 @@ class Logger extends Monolog\Logger
     }
 
     /**
-     * @return Boolean
+     * @return boolean
      */
     public function addAccessInfo()
     {
