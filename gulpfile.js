@@ -22,8 +22,8 @@ function promiseProcess(cmd) {
   return new Promise(function (resolve, reject) {
     cp.exec(cmd, function (err, stdout, stderr) {
       if (err) {
-        process.stdout.write(stdout);
-        process.stderr.write(stderr);
+        console.log(stdout);
+        console.error(stderr);
         return reject(err);
       }
       resolve(stdout);

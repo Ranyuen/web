@@ -99,7 +99,7 @@ XML
 
     def initialize
       @generator = Generator.new
-      @generator.gather File.absolute_path('templates')
+      @generator.gather File.absolute_path('view')
     end
 
     def to_json; @generator.to_json; end
@@ -129,8 +129,8 @@ namespace :nav do
   desc 'Generate site navigation JSON.'
   task :nav do
     nav = Nav::Navs.instance.to_json
-    open('templates/nav.json', 'w:utf-8'){|f| f.write nav }
-    puts 'Generate navigation at templates/nav.json'
+    open('view/nav.json', 'w:utf-8'){|f| f.write nav }
+    puts 'Generate navigation at view/nav.json'
   end
 
   desc 'Generate sitemap.xml'
