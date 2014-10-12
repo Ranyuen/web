@@ -39,7 +39,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
-      <h1><strike><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></strike><small>(終了しました)</small></h1>
+      <h1><strike><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></strike></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
