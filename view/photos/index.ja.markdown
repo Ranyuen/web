@@ -20,10 +20,10 @@ title: 写真を見る
         class="lightbox"
         title="{{ photo.description_ja }} 蘭裕園 Ranyuen">
         <img rel="gallery"
-        src="/api/photo?format=jpeg&id={{ photo.id }}&width={{ photo.thumb_width }}"
-        width="{{ photo.thumb_width }}"
-        height="{{ photo.thumb_height }}"
-        alt="{{ photo.description_ja }} 蘭裕園 Ranyuen"/>
+          src="/api/photo?format=jpeg&id={{ photo.id }}&width={{ photo.thumb_width }}"
+          width="{{ photo.thumb_width }}"
+          height="{{ photo.thumb_height }}"
+          alt="{{ photo.description_ja }} 蘭裕園 Ranyuen"/>
       </a>
       <div class="photo-description">
         <div>{{ photo.description_ja }}</div>

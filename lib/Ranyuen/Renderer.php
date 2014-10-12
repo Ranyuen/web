@@ -23,7 +23,7 @@ class Renderer
     public function __construct($templates_path)
     {
         $this->_templates_path = $templates_path;
-        $this->_template = new Template\LiquidTemplate();
+        $this->_template = new Template\LiquidTemplate($templates_path);
     }
 
     /**
