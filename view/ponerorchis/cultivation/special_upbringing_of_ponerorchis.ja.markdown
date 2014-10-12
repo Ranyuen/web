@@ -1,9 +1,9 @@
 ---
-title: ウチョウランの特殊な育て方
+title: 特殊な育て方
 description:
 ---
 
-# ウチョウランの特殊な育て方
+# 特殊な育て方
 
 ## ウチョウラン水苔栽培 (二号鉢)
 {{ 'FRrkFYvsV9g' | echoYouTube }}
