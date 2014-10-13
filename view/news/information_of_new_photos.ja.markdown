@@ -4,9 +4,9 @@ title: 蘭裕園のカラフルな日本のランの写真を続々追加中
 
 蘭裕園のカラフルな日本のランの写真を続々追加中
 ==
-<b><a href="photos/index">写真を見る</a></b>
+<b><a href="photos/">写真を見る</a></b>
 <figure>
-  <a href="photos/index"><img src="/assets/images/information_of_new_photos_1.jpg" alt="ミニミニランラン (アワチドリ / 夢ちどり) - 蘭裕園"  width="80%"/></a>
+  <a href="photos/"><img src="/assets/images/information_of_new_photos_1.jpg" alt="ミニミニランラン (アワチドリ / 夢ちどり) - 蘭裕園"  width="80%"/></a>
   <figcaption>「写真を見る」- 蘭裕園</a></figcaption>
 </figure>
 
