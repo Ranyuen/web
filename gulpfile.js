@@ -123,7 +123,7 @@ gulp.task('php-unit', function () {
 });
 
 gulp.task('uglifyjs', function () {
-  var layout, photoGallery,
+  var layout, photoGallery, changeTab,
       uglifyOption = {
         outSourceMap: true,
         output:       {},
@@ -148,7 +148,13 @@ gulp.task('uglifyjs', function () {
     pipe(concat('photoGallery.min.js')).
     pipe(uglify(uglifyOption)).
     pipe(gulp.dest('assets/javascripts'));
-  return merge(layout, photoGallery);
+  changeTab = gulp.src([
+    'src/javascripts/changeTab.js'
+    ]).
+    pipe(concat('changeTab.min.js')).
+    pipe(uglify(uglifyOption)).
+    pipe(gulp.dest('assets/javascripts'));
+  return merge(layout, photoGallery, changeTab);
 });
 
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
