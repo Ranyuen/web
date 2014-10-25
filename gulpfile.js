@@ -39,10 +39,9 @@ gulp.task('copy-assets', function () {
 gulp.task('deploy', function () {
   return ssh.exec({
     command: [
-      'cd ~/www',
-      'git pull origin master',
-      'php composer.phar install --no-dev',
-      'SERVER_ENV=production vendor/bin/phpmig migrate',
+      'cd ~/www; git pull origin master',
+      'cd ~/www; php composer.phar install --no-dev',
+      'cd ~/www; SERVER_ENV=production vendor/bin/phpmig migrate',
     ],
     sshConfig: {
       host:     'ranyuen.sakura.ne.jp',
