@@ -164,7 +164,9 @@ class Navigation
                     $local[(string) $elm['path']] = (string) $elm['title'];
                 }
             } else {
-                $sub[(string) $elm['path'] . '/'] = (string) $elm->page[0]['title'];
+                if ($elm->xpath("page[@path='index']")) {
+                    $sub[(string) $elm['path'] . '/'] = (string) $elm->xpath("page[@path='index']")[0]['title'];
+                }
             }
         }
         $local = array_merge($index, $local);
