@@ -39,9 +39,10 @@ gulp.task('copy-assets', function () {
 gulp.task('deploy', function () {
   return ssh.exec({
     command: [
-      'cd ~/www; git pull origin master',
-      'cd ~/www; php composer.phar install --no-dev',
-      'cd ~/www; SERVER_ENV=production vendor/bin/phpmig migrate',
+      'cd ~/www',
+      'git pull origin master',
+      'php composer.phar install --no-dev',
+      'SERVER_ENV=production vendor/bin/phpmig migrate',
     ],
     sshConfig: {
       host:     'ranyuen.sakura.ne.jp',
@@ -94,6 +95,7 @@ gulp.task('php-fixer', function () {
   return Promise.all([
     'index.php',
     'phpmig.php',
+    'config/',
     'lib/',
     'test/',
     'view/',
@@ -105,6 +107,7 @@ gulp.task('php-fixer', function () {
 gulp.task('php-lint', function () {
   return gulp.src([
       '*.php',
+      'config/**/**.php',
       'lib/**/**.php',
       'test/**/**.php',
       'view/**/**.php'

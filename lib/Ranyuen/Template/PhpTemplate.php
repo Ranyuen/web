@@ -33,7 +33,7 @@ class PhpTemplate implements Template
         $helpers = $this->_helpers;
         if (!is_null($tmp_helpers)) {
             if (is_array($tmp_helpers)) {
-                array_merge($helpers, $tmp_helpers);
+                $helpers = array_merge($helpers, $tmp_helpers);
             } else {
                 $helpers[] = $tmp_helpers;
             }
