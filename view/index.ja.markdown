@@ -49,7 +49,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
   </section>
 </div>
 
-<a href="calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a>
+<a href="calanthe/calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a>
 
 <a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 
