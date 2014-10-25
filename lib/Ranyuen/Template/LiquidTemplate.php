@@ -3,14 +3,16 @@ namespace Ranyuen\Template;
 
 use Liquid;
 
+defined('LIQUID_INCLUDE_ALLOW_EXT') || define('LIQUID_INCLUDE_ALLOW_EXT', true);
+
 class LiquidTemplate implements Template
 {
     /** @var Liquid\Template */
     private $_template;
 
-    public function __construct()
+    public function __construct($path = null)
     {
-        $this->_template = new Liquid\Template();
+        $this->_template = new Liquid\Template($path);
     }
 
     public function registerHelper($helper)

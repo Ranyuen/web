@@ -4,6 +4,8 @@ namespace Ranyuen;
 use Liquid\Template;
 use Symfony\Component\Yaml\Yaml;
 
+defined('LIQUID_INCLUDE_ALLOW_EXT') || define('LIQUID_INCLUDE_ALLOW_EXT', true);
+
 class Config
 {
     /**
@@ -25,17 +27,18 @@ class Config
             'mode'           => $env,
             'templates.path' => 'view',
         ];
-        $template = new Template();
-        if (is_readable('config/common.yaml')) {
-            $yaml = file_get_contents('config/common.yaml');
-            $yaml = $template->parse($yaml)->render($_ENV);
-            $config = array_merge($config, Yaml::parse($yaml));
-        }
-        if (is_readable("config/$env.yaml")) {
-            $yaml = file_get_contents("config/$env.yaml");
-            $yaml = $template->parse($yaml)->render($_ENV);
-            $config = array_merge($config, Yaml::parse($yaml));
-        }
+        $merge_config = function ($config, $file) {
+            $dir = 'config';
+            if (!is_readable("$dir/$file")) {
+                return $config;
+            }
+            $yaml = file_get_contents("$dir/$file");
+            $yaml = (new Template($dir))->parse($yaml)->render($_ENV);
+
+            return array_merge($config, Yaml::parse($yaml));
+        };
+        $config = $merge_config($config, 'env/common.yaml');
+        $config = $merge_config($config, "env/$env.yaml");
 
         return $config;
     }
