@@ -6,9 +6,9 @@
     "monolog/monolog": "1.10.*",
     "illuminate/database": "4.2.*",
     "pimple/pimple": "3.*",
-    "liquid/liquid": "~1.0",
     "slim/slim": "2.*",
-    "symfony/yaml": "2.5.*"
+    "symfony/yaml": "2.5.*",
+    "twig/twig": "1.*"
   },
   "require-dev": {
     "fabpot/php-cs-fixer": "*",
