@@ -9,11 +9,11 @@ messages = {
   // (function(s){return s.split('').map(function(c){return '\\u' + c.charCodeAt(0).toString(16)}).join('')})('');
   'ja': {
     'Next': '\u6b21\u306e\u554f\u984c\u3078', // 次の問題へ
-    'Score': '\u7d50\u679c\u306f\uff1f', // 結果は？
-    'Point!': '\u70b9\uff01', // 点！
+    'Score': '\u7d50\u679c\u306f\uff1f', // 結果は?
+    'Point!': '\u70b9\uff01', // 点!
     'Correct Answer': '\u6b63\u89e3', // 正解
     'Your Choice': '\u3042\u306a\u305f\u306e\u56de\u7b54', // あなたの回答
-    'Again!': '\u3082\u3046\u4e00\u5ea6\uff01' // もう一度！
+    'Again!': '\u3082\u3046\u4e00\u5ea6\uff01' // もう一度!
   }
 };
 var examType = getItselfOrDefault(['easy', 'hard'], getLocationSearch('type')[0]);

@@ -7,10 +7,10 @@ description: エビネの年間管理について、季節毎にポイントを�
 <img src="/assets/images/spring_sai.png" width="735" alt="エビネ (Calanthe) - Ranyuen" />
 
 <ul id="tab">
-  <li class="selected"><a href="calanthe/cultivation/growings_calanthe_in_a_year#spring">春期(3月〜5月)</a></li>
-  <li><a href="calanthe/cultivation/growings_calanthe_in_a_year#summer">夏期(6月〜8月)</a></li>
-  <li><a href="calanthe/cultivation/growings_calanthe_in_a_year#autumn">秋期(9月〜11月)</a></li>
-  <li><a href="calanthe/cultivation/growings_calanthe_in_a_year#winter">冬期(12月〜2月)</a></li>
+  <li class="selected"><a href="calanthe/cultivation/growings_calanthe_in_each_season#spring">春期(3月〜5月)</a></li>
+  <li><a href="calanthe/cultivation/growings_calanthe_in_each_season#summer">夏期(6月〜8月)</a></li>
+  <li><a href="calanthe/cultivation/growings_calanthe_in_each_season#autumn">秋期(9月〜11月)</a></li>
+  <li><a href="calanthe/cultivation/growings_calanthe_in_each_season#winter">冬期(12月〜2月)</a></li>
 </ul>
 
 <div id="growingCalanthe">
@@ -184,7 +184,6 @@ description: エビネの年間管理について、季節毎にポイントを�
   <img src="/assets/images/tou_ha.png" width="250" alt="寒風により傷んだ葉 (エビネ, Calanthe) - Ranyuen" />
   <figcaption>寒風により傷んだ葉</figcaption>
 </figure>
-
 <figure>
   <img src="/assets/images/tou_fuyume.png" width="250" alt="マイナス10℃の低温で凍りつき、褐色に傷んだ冬至芽 (エビネ, Calanthe) - Ranyuen" />
   <figcaption>マイナス10℃の低温で凍りつき、褐色に傷んだ冬至芽</figcaption>
@@ -204,7 +203,11 @@ description: エビネの年間管理について、季節毎にポイントを�
 健全な株では、葉の上からかけても問題はありませんが、夜間凍る心配がある場所では、暖かい日の午前中に行い、夕方までに葉についた水滴が乾くようにしてください。病斑や葉傷みのある株の場合は、被害を広げないように株元にのみ行います。
 
 <h3>冬の作業 (植替え・株分け)</h3>
-<img src="/assets/images/uekae2.png" width="270" alt="植え替え (エビネ, Calanthe) - Ranyuen" />
+<figure>
+  <img src="/assets/images/uekae2.png" width="270" alt="植え替え (エビネ, Calanthe) - Ranyuen" />
+</figure>
+
+
 
 種類や株の状態にもよりますが、最新の考えでは植替えや株分けは、この時期に行うのが良いでしょう。特に初心者の方は芽や根を傷める心配が少なく作業しやすいこの時期 (1～3月) がオススメです。ただし植替え後、北風が避けられ暗くなく凍らない場所に置く事が条件です。
 

@@ -1,8 +1,6 @@
 <?php
 namespace Ranyuen;
 
-use \Symfony\Component\Yaml\Yaml;
-
 class Navigation
 {
     private $config;
@@ -14,7 +12,7 @@ class Navigation
     public function __construct(array $config)
     {
         $this->config = $config;
-        $this->nav = Yaml::parse(file_get_contents("{$config['templates.path']}/nav.json"));
+        $this->nav = simplexml_load_file('config/nav.xml');
     }
 
     /**
@@ -23,7 +21,9 @@ class Navigation
      */
     public function getGlobalNav($lang)
     {
-        return $this->gather($this->nav[$lang]);
+        $lang = htmlspecialchars($lang, ENT_QUOTES, 'utf-8');
+
+        return $this->gather($this->nav->xpath("/nav/lang[@name='$lang']")[0]);
     }
 
     /**
@@ -31,7 +31,10 @@ class Navigation
      */
     public function getLangs()
     {
-        $langs = array_keys($this->nav);
+        $langs = [];
+        foreach ($this->nav->lang as $elm) {
+            $langs[] = (string) $elm['name'];
+        }
         $langs = array_unique(array_merge($langs, array_keys($this->config['lang'])));
 
         return $langs;
@@ -43,9 +46,9 @@ class Navigation
      */
     public function getNews($lang)
     {
-        $news = isset($this->nav[$lang]['news']) ?
-            $this->gather($this->nav[$lang]['news']) :
-            [];
+        $lang = htmlspecialchars($lang, ENT_QUOTES, 'utf-8');
+        $nav = $this->nav->xpath("/nav/lang[@name='$lang']/dir[@path='news']");
+        $news = $nav ? $this->gather($nav[0]) : [];
         unset($news['index']);
 
         return $news;
@@ -59,13 +62,16 @@ class Navigation
     public function getLocalNav($lang, $template_name)
     {
         $template_name = explode('/', $template_name);
-        $nav = $this->nav[$lang];
+        $lang = htmlspecialchars($lang, ENT_QUOTES, 'utf-8');
+        $nav = $this->nav->xpath("/nav/lang[@name='$lang']")[0];
         foreach ($template_name as $part) {
+            $part = htmlspecialchars($part, ENT_QUOTES, 'utf-8');
             if ($part && $part !== 'index') {
-                if (!isset($nav[$part]) || isset($nav[$part]['title'])) {
+                if (!$nav->xpath("*[@path='$part']") ||
+                    $nav->xpath("*[@path='$part']")[0]->getName() === 'page') {
                     break;
                 }
-                $nav = $nav[$part];
+                $nav = $nav->xpath("*[@path='$part']")[0];
             }
         }
 
@@ -79,21 +85,25 @@ class Navigation
      */
     public function getBreadcrumb($lang, $template_name)
     {
-        $nav = $this->nav[$lang];
+        $lang = htmlspecialchars($lang, ENT_QUOTES, 'utf-8');
+        $nav = $this->nav->xpath("/nav/lang[@name='$lang']")[0];
         $path = '/';
-        $breadcrumb = [$path => $nav['index']['title']];
+        $breadcrumb = [$path => (string) $nav->page[0]['title']];
         foreach (explode('/', $template_name) as $part) {
-            if ($part === 'index') { break; }
-            if (isset($nav[$part])) {
+            $part = htmlspecialchars($part, ENT_QUOTES, 'utf-8');
+            if ($part === 'index') {
+                break;
+            }
+            if ($nav->xpath("*[@path='$part']")) {
                 $path .= $part . '/';
-                $nav = $nav[$part];
+                $nav = $nav->xpath("*[@path='$part']")[0];
             } else {
                 break;
             }
-            if (isset($nav['index'])) {
-                $breadcrumb[$path] = $nav['index']['title'];
-            } elseif (isset($nav['title'])) {
-                $breadcrumb[$path] = $nav['title'];
+            if ($nav->xpath("*[@path='index']")) {
+                $breadcrumb[$path] = (string) $nav->xpath("*[@path='index']")[0]['title'];
+            } elseif ($nav->getName() === 'page') {
+                $breadcrumb[$path] = (string) $nav['title'];
             }
         }
 
@@ -146,17 +156,17 @@ class Navigation
         $index = [];
         $local = [];
         $sub = [];
-        foreach ($nav as $href => $meta) {
-            if (isset($meta['title'])) {
-                if ($href === 'index') {
-                    $index['/'] = $meta['title'];
+        foreach ($nav->children() as $elm) {
+            if ($elm->getName() === 'page') {
+                if ((string) $elm['path'] === 'index') {
+                    $index['/'] = (string) $elm['title'];
                 } else {
-                    $local[$href] = $meta['title'];
+                    $local[(string) $elm['path']] = (string) $elm['title'];
                 }
             } else {
-                $sub["$href/"] = isset($nav[$href]['index']) ?
-                $nav[$href]['index']['title'] :
-                null;
+                if ($elm->xpath("page[@path='index']")) {
+                    $sub[(string) $elm['path'] . '/'] = (string) $elm->xpath("page[@path='index']")[0]['title'];
+                }
             }
         }
         $local = array_merge($index, $local);

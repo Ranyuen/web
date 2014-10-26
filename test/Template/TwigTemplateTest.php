@@ -1,24 +1,24 @@
 <?php
 require_once 'test/res/TemplateTestResource.php';
 
-use Ranyuen\Template\LiquidTemplate;
+use Ranyuen\Template\TwigTemplate;
 use TemplateTestResource\GlobalHelper;
 use TemplateTestResource\LocalHelper;
 
-class LiquidTemplateTest extends PHPUnit_Framework_TestCase
+class TwigTemplateTest extends PHPUnit_Framework_TestCase
 {
     public function testRender()
     {
-        $t = new LiquidTemplate();
-        $template = 'Text {{"Liquid."}}';
-        $expected = 'Text Liquid.';
+        $t = new TwigTemplate();
+        $template = 'Text {{"Twig."}}';
+        $expected = 'Text Twig.';
         $t->parse($template);
         $this->assertEquals($expected, $t->render());
     }
 
     public function testRenderWithParams()
     {
-        $t = new LiquidTemplate();
+        $t = new TwigTemplate();
         $template = 'Drink {{kinoko}}.';
         $params = ['kinoko' => 'ヒトヨタケ'];
         $expected = 'Drink ヒトヨタケ.';
@@ -28,7 +28,7 @@ class LiquidTemplateTest extends PHPUnit_Framework_TestCase
 
     public function testRenderWithHelper()
     {
-        $t = new LiquidTemplate();
+        $t = new TwigTemplate();
         $template = '{{kinoko | dokutsurutake}}.
 {{kinoko | kaentake}}.';
         $params = ['kinoko' => ['ヒトヨタケ']];

@@ -1,4 +1,4 @@
-{% assign home = 'http://ranyuen.com' + link.base %}
+{% set home = 'http://ranyuen.com' + link.base %}
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="ie"><![endif]-->
 <!--[if gte IE 9]><!--><html><!--<![endif]-->
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
   <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
   <style>
-    body, .header { background: url('{{ bgimage | escape }}') fixed; }
+    body, .header { background: url('{{ bgimage }}') fixed; }
   </style>
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -45,16 +45,24 @@
             </a>
           </h1>
         </div>
-        <div class="lang">{{ link | echoSwitchLang: lang }}</div>
+        <div class="link_icon">
+          <div class="fb_icon">
+            <a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a>
+          </div>
+          <div class="yt_icon">
+            <a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a>
+          </div>
+        </div>
+        <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
       </div>
-      <nav class="clear-fix">{{ nav.global | echoNav: link.base }}</nav>
+      <nav class="clear-fix">{{ nav.global | echoNav(link.base) | raw }}</nav>
     </header>
     <div class="main clear-fix">
       <div class="main-inner">
-        {{ breadcrumb | echoBreadcrumb: link.base }}
-        <article>{{ content }}</article>
+        {{ breadcrumb | echoBreadcrumb(link.base) | raw }}
+        <article>{{ content | raw }}</article>
       </div>
-      <nav class="side">{{ nav.local | echoNav: link.local_base }}</nav>
+      <nav class="side">{{ nav.local | echoNav(link.local_base) | raw }}</nav>
     </div>
     <footer class="clear-fix">
       <p class="copyright">
@@ -82,4 +90,4 @@
 </script>
 </body>
 </html>
-<!-- vim:ft=liquid: -->
+<!-- vim:ft=twig: -->

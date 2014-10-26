@@ -98,6 +98,12 @@ class Helper
      */
     private function h($str)
     {
+        if (is_array($str)) {
+            $str = implode(', ', $str);
+        } elseif (!is_string($str)) {
+            $str = strval($str);
+        }
+
         return htmlspecialchars(
             $str,
             ENT_QUOTES | ENT_DISALLOWED | ENT_HTML5,

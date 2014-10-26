@@ -72,7 +72,7 @@ gulp.task('less', function () {
 
 gulp.task('nav', function () {
   return Promise.all([
-    promiseProcess('rake nav:nav'),
+    // promiseProcess('rake nav:nav'),
     promiseProcess('rake nav:sitemap'),
   ]).then(function (outs) {
     outs.forEach(function (out) { console.log(out); });
@@ -94,6 +94,7 @@ gulp.task('php-fixer', function () {
   return Promise.all([
     'index.php',
     'phpmig.php',
+    'config/',
     'lib/',
     'test/',
     'view/',
@@ -105,6 +106,7 @@ gulp.task('php-fixer', function () {
 gulp.task('php-lint', function () {
   return gulp.src([
       '*.php',
+      'config/**/**.php',
       'lib/**/**.php',
       'test/**/**.php',
       'view/**/**.php'

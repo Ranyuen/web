@@ -2,14 +2,9 @@
 title: 蘭裕園
 description: エビネとウチョウランの専門農園です。エビネとウチョウランの正しい育て方や、綺麗な写真を掲載しています。
 ---
-<b><a href="/news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></b>
-
-<b><a href="/news/information_of_orchid_exam">ラン検定に新しい問題を追加しました</a></b>
-
 蘭裕園スタイルのエビネとウチョウラン
 ==
-
-<img src="/assets/images/top_img2.jpg" alt="アワチドリ / 夢ちどり - 蘭裕園" />
+![アワチドリ / 夢ちどり - 蘭裕園](/assets/images/top_img3.jpg)
 
 蘭裕園は[エビネ (Calanthe)](calanthe/)、[アワチドリ / 夢ちどり (Ponerorchis)](ponerorchis/) など、日本に自生するランを品種改良する専門の農園です。
 
@@ -27,6 +22,10 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </header>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <h1><a href="/calanthe/recent_failure_and_provision#aburamushi">[害虫警報] アブラムシ大量発生警報、発令中!!</a></h1>
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
       <h1><a href="news/information_of_orchid_exam">ラン検定に新しい問題を追加しました</a></h1>
     </article>
     <article>
@@ -39,7 +38,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
-      <h1><strike><a href="news/report_of_calanthe_fair_2014">速報！エビネ展2014</a></strike></h1>
+      <h1><strike><a href="news/report_of_calanthe_fair_2014">速報!エビネ展2014</a></strike></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
@@ -48,7 +47,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
   </section>
 </div>
 
-<b><a href="calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
+[エビネの育て方を極める - 最先端のエビネ栽培法](calanthe/growings_calanthe_in_the_new_way)
 
 <a class="facebook" href="http://fb.me/ranyuenjapan"><span>Facebookにも2000点以上の写真を掲載しています。ぜひご覧ください。</span></a>
 

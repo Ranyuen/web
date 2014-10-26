@@ -47,7 +47,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 ここでは<b>元気でたくさんの花を咲かせる丈夫な株作り</b>を目的としたエビネ最新栽培法を要点のみ解説します。
 
-より詳しく知りたい方は蘭裕園ホームページの [年間の管理](calanthe/cultivation/growings_calanthe_on_season_01_spring)・[株分け](calanthe/cultivation/growings_repot_calanthe)・[エビネ自生地から学ぶ](calanthe/info_lerning_calanthe_from_territory)・[近年に多い障害と対策](calanthe/recent_failure_and_provision)、他も参考にしてください。
+より詳しく知りたい方は蘭裕園ホームページの [年間の管理](calanthe/cultivation/growings_calanthe_in_each_season)・[株分け](calanthe/cultivation/repot_calanthe)・[エビネ自生地から学ぶ](calanthe/info_lerning_calanthe_from_territory)・[近年に多い障害と対策](calanthe/recent_failure_and_provision)、他も参考にしてください。
 
 <div class="supplement">
   <h1>原種エビネを購入する際に気を付けなくてはいけないこと</h1>
@@ -123,15 +123,15 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 真夏を除き、いつでも行えなおかつ簡単な植え替え方法を2本の動画で紹介します。
 
-{{ '-AmJHMSm7K4' | echoYouTube: 'エビネの植え替え - 蘭裕園' }}
+{{ '-AmJHMSm7K4' | echoYouTube('エビネの植え替え - 蘭裕園') | raw }}
 
-{{ 'kMNQ93Bwidg' | echoYouTube: 'エビネの庭植え - 蘭裕園' }}
+{{ 'kMNQ93Bwidg' | echoYouTube('エビネの庭植え - 蘭裕園') | raw }}
 
 <i>→参考:</i> [エビネを庭で育てる](calanthe/cultivation/growings_calanthe_on_a_garden)
 
 他に、
 
-{{ '4o1rCG4YndU' | echoYouTube: 'エビネの株分け - 蘭裕園' }}
+{{ '4o1rCG4YndU' | echoYouTube('エビネの株分け - 蘭裕園') | raw }}
 
 もありますので、参考にしてください。<i>→参考:</i> [エビネの株分け](calanthe/cultivation/growings_repot_calanthe)
 
@@ -149,7 +149,7 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 肥料の種類よっては、発生したばかりの新根を傷めてしまう可能性があるため、注意しましょう。
 
-詳しくは [上手な肥料の施し方](calanthe/cultivation/growings_fertilizing_for_calanthe) を御覧ください。
+詳しくは [上手な肥料の施し方](calanthe/cultivation/fertilizing_for_calanthe) を御覧ください。
 
 エビネに合った環境で育てる
 --
@@ -202,7 +202,7 @@ A.
 
 1. 花後 (5～7月) に無理な植え替えをしたために、作落ちした。
 2. 肥料や水のやりすぎなどで、株を傷めてしまった。逆に、肥料、水分が少なすぎた。
-3. 育てている場所の光量不足（暗すぎる）による生育不良。
+3. 育てている場所の光量不足 (暗すぎる) による生育不良。
 4. 買い求めた株が花芽は付いていたが、元々力のない株であった。
 
 などが主な原因として考えられますが、<b>上手に育てられない原因は単独ではなく、複数の事柄が原因していることも多くあり、買い求めた時の状態や、種類、また、その後管理した場所や方法を正確に聞いてからではないと実際に何が原因かの特定はできません</b>。
@@ -215,7 +215,7 @@ A.
   <img src="/assets/images/growings_calanthe_in_the_new_way_ja_4.jpg" alt="エビネの庭植え - 蘭裕園 (Ranyuen)" style="max-width: 600px" />
 </figure>
 
-詳しくは蘭裕園ホームページ [エビネの育て方](growings/calanthe/) をご覧ください。
+詳しくは蘭裕園ホームページ [エビネの育て方](calanthe/cultivation/) をご覧ください。
 
 ### Q. 大きく育ってしまったけれど、植え替えはいつやればいいの?
 A. 基本的には真夏を除きいつでも可能です。
@@ -224,15 +224,15 @@ A. 基本的には真夏を除きいつでも可能です。
 
 真夏を除き一年中可能な植え替え方法はこちらの動画を参考にしてください。
 
-{{ '-AmJHMSm7K4' | echoYouTube: 'エビネの植え替え - 蘭裕園' }}
+{{ '-AmJHMSm7K4' | echoYouTube('エビネの植え替え - 蘭裕園') | raw }}
 
-<i>→参考:</i> [エビネの株分け](calanthe/cultivation/growings_repot_calanthe)
+<i>→参考:</i> [エビネの株分け](calanthe/cultivation/repot_calanthe)
 
 ### Q. 葉が傷んで変色してしまいましたが、大丈夫ですか?
 A. 夏ごろまでに葉が褐色になってしまうような場合、葉が傷む原因には以下のようなことが考えられます。
 
 1. 日差しが強すぎるため、葉焼けを起こしている。
-2. 根が良くないために起こる（二次的に起こる）葉先からの枯れこみ
+2. 根が良くないために起こる (二次的に起こる) 葉先からの枯れこみ
 3. 病害虫による被害。
 4. 風当たりが強く、葉と葉がこすれあう。あるいは近くにある別の植物とこすれることによる傷み。
 5. 不適切な農薬使用による藥害。
