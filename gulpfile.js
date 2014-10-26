@@ -72,7 +72,7 @@ gulp.task('less', function () {
 
 gulp.task('nav', function () {
   return Promise.all([
-    promiseProcess('rake nav:nav'),
+    // promiseProcess('rake nav:nav'),
     promiseProcess('rake nav:sitemap'),
   ]).then(function (outs) {
     outs.forEach(function (out) { console.log(out); });

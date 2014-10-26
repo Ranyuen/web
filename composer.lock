@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4068535fb7e9e3cfb29305f829486b28",
+    "hash": "a4d68bfba3dff19b734e00cee580bce6",
     "packages": [
         {
             "name": "clover/text-ltsv",
@@ -368,57 +368,6 @@
                 }
             ],
             "time": "2014-09-12 21:42:43"
-        },
-        {
-            "name": "liquid/liquid",
-            "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kalimatas/php-liquid.git",
-                "reference": "03a003b6871704b1a26b59ae9d1091ec1ae0c3e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kalimatas/php-liquid/zipball/03a003b6871704b1a26b59ae9d1091ec1ae0c3e1",
-                "reference": "03a003b6871704b1a26b59ae9d1091ec1ae0c3e1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Liquid\\": "src/Liquid"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guz Alexander",
-                    "email": "kalimatas@gmail.com",
-                    "homepage": "http://guzalexander.com"
-                },
-                {
-                    "name": "Harald Hanek"
-                },
-                {
-                    "name": "Mateo Murphy"
-                }
-            ],
-            "description": "Liquid template engine for PHP",
-            "homepage": "https://github.com/kalimatas/php-liquid",
-            "keywords": [
-                "liquid",
-                "template"
-            ],
-            "time": "2014-09-07 17:09:02"
         },
         {
             "name": "monolog/monolog",
@@ -910,6 +859,63 @@
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
             "time": "2014-10-01 05:50:18"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.16.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "reference": "42f758d9fe2146d1f0470604fc05ee43580873fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.16-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "https://github.com/fabpot/Twig/graphs/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2014-10-17 12:53:44"
         }
     ],
     "packages-dev": [

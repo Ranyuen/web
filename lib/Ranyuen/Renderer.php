@@ -5,14 +5,14 @@ use dflydev\markdown\MarkdownExtraParser;
 use Symfony\Component\Yaml;
 
 /**
- * YAML+Liquid+Markdown stack.
+ * YAML+Jinja2+Markdown stack.
  *
- * YAML Front Matter + Liquid Template + Markdown.
+ * YAML Front Matter + Jinja2 Template + Markdown.
  */
 class Renderer
 {
     private $_templates_path = 'view';
-    /** @var Liquid\Template */
+    /** @var Template\TwigTemplate */
     private $_template;
     /** @var string */
     private $_layout = null;
@@ -23,11 +23,11 @@ class Renderer
     public function __construct($templates_path)
     {
         $this->_templates_path = $templates_path;
-        $this->_template = new Template\LiquidTemplate($templates_path);
+        $this->_template = new Template\TwigTemplate($templates_path);
     }
 
     /**
-     * @param  string   $template_name Liquid HTML file path.
+     * @param  string   $template_name Jinja2 HTML file path.
      * @return Renderer
      */
     public function setLayout($template_name)
@@ -52,7 +52,7 @@ class Renderer
     }
 
     /**
-     * @param  string $template_name Liquid Markdown file path.
+     * @param  string $template_name Jinja2 Markdown file path.
      * @param  array  $params
      * @return string
      */
