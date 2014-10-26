@@ -11,12 +11,12 @@ AWACHIDORI grows in wild only in a special part of the Boso-peninsula of Chiba p
 Planting the flower bulbs
 --
 We replace and plant during their dormant period. (Usually within December to March)
-{{ 'aaELPiYiynw' | echoYouTube: 'Simple techniques to grow YUMECHIDORI and AWACHIDORI - Ranyuen' }}
+{{ 'aaELPiYiynw' | echoYouTube('Simple techniques to grow YUMECHIDORI and AWACHIDORI - Ranyuen') | raw }}
 
 Planting Ponerorchis using moss
 --
 We introduce to you how to transplant onerorchis using moss.
-{{ 'CeGQS4_zMuA' | echoYouTube:  'Planting Ponerorchis using moss - Ranyuen' }}
+{{ 'CeGQS4_zMuA' | echoYouTube('Planting Ponerorchis using moss - Ranyuen') | raw }}
 
 Pots
 --

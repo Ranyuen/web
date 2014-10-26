@@ -123,15 +123,15 @@ description: 花好きの皆様がエビネを正確に理解し、自分好み�
 
 真夏を除き、いつでも行えなおかつ簡単な植え替え方法を2本の動画で紹介します。
 
-{{ '-AmJHMSm7K4' | echoYouTube: 'エビネの植え替え - 蘭裕園' }}
+{{ '-AmJHMSm7K4' | echoYouTube('エビネの植え替え - 蘭裕園') | raw }}
 
-{{ 'kMNQ93Bwidg' | echoYouTube: 'エビネの庭植え - 蘭裕園' }}
+{{ 'kMNQ93Bwidg' | echoYouTube('エビネの庭植え - 蘭裕園') | raw }}
 
 <i>→参考:</i> [エビネを庭で育てる](calanthe/cultivation/growings_calanthe_on_a_garden)
 
 他に、
 
-{{ '4o1rCG4YndU' | echoYouTube: 'エビネの株分け - 蘭裕園' }}
+{{ '4o1rCG4YndU' | echoYouTube('エビネの株分け - 蘭裕園') | raw }}
 
 もありますので、参考にしてください。<i>→参考:</i> [エビネの株分け](calanthe/cultivation/growings_repot_calanthe)
 
@@ -224,7 +224,7 @@ A. 基本的には真夏を除きいつでも可能です。
 
 真夏を除き一年中可能な植え替え方法はこちらの動画を参考にしてください。
 
-{{ '-AmJHMSm7K4' | echoYouTube: 'エビネの植え替え - 蘭裕園' }}
+{{ '-AmJHMSm7K4' | echoYouTube('エビネの植え替え - 蘭裕園') | raw }}
 
 <i>→参考:</i> [エビネの株分け](calanthe/cultivation/growings_repot_calanthe)
 
