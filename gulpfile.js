@@ -13,6 +13,12 @@ var Promise       = require('bluebird'),
     runSequence   = require('run-sequence'),
     uglify        = require('gulp-uglifyjs'),
     jshintStylish = require('jshint-stylish');
+var sshConfig = {
+      host:     'ranyuen.sakura.ne.jp',
+      port:     '22',
+      username: 'ranyuen',
+      password: process.env.SSH_PASSWORD,
+    };
 
 /**
  * @param {string} cmd
@@ -37,19 +43,20 @@ gulp.task('copy-assets', function () {
 });
 
 gulp.task('deploy', function () {
-  return ssh.exec({
-    command: [
-      'cd ~/www; git pull origin master',
-      'cd ~/www; php composer.phar install --no-dev',
-      'cd ~/www; SERVER_ENV=production vendor/bin/phpmig migrate',
-    ],
-    sshConfig: {
-      host:     'ranyuen.sakura.ne.jp',
-      port:     '22',
-      username: 'ranyuen',
-      password: process.env.SSH_PASSWORD,
-    }
-  });
+  var connection = ssh({
+        sshConfig:    sshConfig,
+        ignoreErrors: true,
+      });
+
+  connection.ignoreErrors = true;
+  return connection.exec([
+      'cd ~/www ; git pull origin master >&2 /dev/null',
+      'cd ~/www ; php composer.phar install --no-dev',
+      // 'cd ~/www ; set SERVER_ENV=production ; vendor/bin/phpmig migrate',
+    ], {
+      filePath: 'deploy.log',
+    }).
+    pipe(gulp.dest('logs'));
 });
 
 gulp.task('jshint', function () {
