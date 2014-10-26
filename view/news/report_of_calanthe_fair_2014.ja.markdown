@@ -1,10 +1,9 @@
 ---
-title: 速報！エビネ展2014
+title: 速報! エビネ展2014
 ---
-
 <b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
 
-<strike>速報！エビネ展2014 -　蘭裕園</strike>&nbsp;<span style="font-size: 16px; line-height: 40px;">(終了しました)</span>
+<s>速報!エビネ展2014</s>&nbsp;<span style="font-size: 16px; line-height: 40px;">(終了しました)</span>
 ==
 <figure>
 	<img src="/assets/images/report_calanthe_fair_2014.jpg" height="450" alt="蘭裕園エビネフェア2014 - Ranyuen" />
@@ -13,9 +12,9 @@ title: 速報！エビネ展2014
 
 おかげ様で現在開催中のエビネ展2014は大盛況です。<b>5月3日</b>までの開催となっておりますので是非お友達お誘いの上ご来園下さい。<br />
 10:00 ～ 17:00 (最終日5/3は15:00まで)<br />
-<b>最終セール 5/2、5/3 全品表示価格の半額！</b>売り切れの際は御容赦ください。
+<b>最終セール 5/2、5/3 全品表示価格の半額!</b> 売り切れの際は御容赦ください。
 
-→ <a href="news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える！こんなチャンスは今年だけ！</a>
+→ <a href="news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える! こんなチャンスは今年だけ!</a>
 
 → <a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a>
 
