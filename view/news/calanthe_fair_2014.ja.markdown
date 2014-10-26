@@ -105,11 +105,11 @@ title: 高品質なエビネを世界で一番安く買える! こんなチャ�
 
 混雑を避けるため事前に [こちらのフォーム](/assets/calanthe_fair_2014_request.pdf) に住所・氏名を記入して当日お持ちください。次回より展示会のご案内および特典がございます。印刷ができない場合は、FAXにて案内ハガキをご請求ください。
 
-{{ 'GC5dimuJxkg' | echoYouTube: '2012年カランセフェアの様子 - 蘭裕園 撮影: oziko' }}
+{{ 'GC5dimuJxkg' | echoYouTube('2012年カランセフェアの様子 - 蘭裕園 撮影: oziko') | raw }}
 
-{{ 'm_DPZkngK9s' | echoYouTube: '2011年カランセフェアの様子 - 蘭裕園'}}
+{{ 'm_DPZkngK9s' | echoYouTube('2011年カランセフェアの様子 - 蘭裕園') | raw}}
 
-{{ 'wqRFDs8zuqY' | echoYouTube: 'Spring Calanthe -Happiness Treasure Box- 2014' }}
+{{ 'wqRFDs8zuqY' | echoYouTube('Spring Calanthe -Happiness Treasure Box- 2014') | raw }}
 
 <a class="youtube" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><span>Youtubeにも蘭裕園のきれいな動画が40本以上あります。</span></a>
 

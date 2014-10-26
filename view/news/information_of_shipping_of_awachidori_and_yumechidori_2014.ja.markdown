@@ -20,7 +20,7 @@ title: ミニミニランラン (アワチドリ / 夢ちどり) 出荷が始ま
   <img src="/assets/images/shipment_chidori_2.jpg" alt="ミニミニランラン (アワチドリ / 夢ちどり) 6月上旬から出荷が始まりました - 蘭裕園" />
 </figure>
 
-{{ 'XZOpmv0O5YM' | echoYouTube: 'Fairy like mini-mini orchids, AWACHIDORI and YUMECHIDORI Ver.2  - 蘭裕園' }}
+{{ 'XZOpmv0O5YM' | echoYouTube('Fairy like mini-mini orchids, AWACHIDORI and YUMECHIDORI Ver.2  - 蘭裕園') | raw }}
 
 おしゃれで高品質、とてもキュートで都会的なミニラン
 --
@@ -62,4 +62,4 @@ _cf._ [アワチドリ / 夢ちどりの栽培](/growings/ponerorchis/)
   <figcaption style="text-align: center;">アワチドリ 'ジパング3' が9.30ポイントの高得点を獲得!</figcaption>
 </figure>
 
-{{ 'HD6NsO7GS5I' | echoYouTube: 'ponerorchis suzukiana and its hybrids -- Floriade 2012  - 蘭裕園' }}
+{{ 'HD6NsO7GS5I' | echoYouTube('ponerorchis suzukiana and its hybrids -- Floriade 2012  - 蘭裕園') | raw }}

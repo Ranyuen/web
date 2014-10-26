@@ -3,7 +3,10 @@
   <lang name="en">
     <page path="index" title="Ranyuen"/>
     <dir path="calanthe">
-      <page path="growings_tech_to_grow_calanthe_for_beginner" title="Simple tech to grow Spring Calanthe"/>
+      <page path="index" title="Grow Calanthe"/>
+    </dir>
+    <dir path="ponerorchis">
+      <page path="index" title="Grow Ponerorchis"/>
     </dir>
     <dir path="about_us">
       <page path="index" title="About Us"/>
@@ -26,16 +29,16 @@
       <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
       <dir path="cultivation">
         <page path="index" title="エビネの栽培"/>
-        <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
-        <page path="growings_calanthe_on_a_garden" title="鉢で育てる"/>
-        <page path="growings_calanthe_on_season_01_spring" title="年間の管理 春期 (3月～5月)"/>
-        <page path="growings_calanthe_on_season_02_summer" title="年間の管理 夏期 (6月～8月)"/>
-        <page path="growings_calanthe_on_season_03_autumn" title="年間の管理 秋期 (9月～11月)"/>
-        <page path="growings_calanthe_on_season_04_winter" title="年間の管理 冬期 (12月～2月)"/>
-        <page path="growings_controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
-        <page path="growings_fertilizing_for_calanthe" title="上手な肥料の施し方"/>
-        <page path="growings_repot_calanthe" title="株分け"/>
-        <page path="growings_tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
+        <page path="calanthe_in_a_pot" title="鉢で育てる"/>
+        <page path="calanthe_on_a_garden" title="庭で育てる"/>
+        <page path="calanthe_on_season_01_spring" title="年間の管理 春期 (3月～5月)"/>
+        <page path="calanthe_on_season_02_summer" title="年間の管理 夏期 (6月～8月)"/>
+        <page path="calanthe_on_season_03_autumn" title="年間の管理 秋期 (9月～11月)"/>
+        <page path="calanthe_on_season_04_winter" title="年間の管理 冬期 (12月～2月)"/>
+        <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
+        <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
+        <page path="repot_calanthe" title="株分け"/>
+        <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
       </dir>
     </dir>
     <dir path="ponerorchis">
