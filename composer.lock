@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a4d68bfba3dff19b734e00cee580bce6",
+    "hash": "77cdd4280cbee3829722b9c00189e701",
     "packages": [
         {
             "name": "clover/text-ltsv",
@@ -566,6 +566,49 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
+        },
+        {
+            "name": "ranyuen/di",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ranyuen/Di.git",
+                "reference": "fcacecc470036a824119f2b2c0d72d35b7c7c9dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/fcacecc470036a824119f2b2c0d72d35b7c7c9dc",
+                "reference": "fcacecc470036a824119f2b2c0d72d35b7c7c9dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "pimple/pimple": "~3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "~1.0@dev",
+                "phpmd/phpmd": "~2.1",
+                "phpunit/phpunit": "~4.3",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ranyuen\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Sachirou Inoue",
+                    "email": "utakata.c4se@gmail.com"
+                }
+            ],
+            "description": "Simple DI (Dependency Injector) extending Pimple.",
+            "time": "2014-10-29 12:35:27"
         },
         {
             "name": "slim/slim",

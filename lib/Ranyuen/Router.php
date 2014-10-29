@@ -1,6 +1,7 @@
 <?php
 namespace Ranyuen;
 
+use Ranyuen\Di\Container;
 use ReflectionClass;
 use Slim;
 
