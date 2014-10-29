@@ -1,6 +1,8 @@
 <?php
 namespace Ranyuen;
 
+use Ranyuen\Di\Container;
+
 /**
  * @example
  * <code>
