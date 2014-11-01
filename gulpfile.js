@@ -156,7 +156,7 @@ gulp.task('uglifyjs', function () {
     pipe(uglify(uglifyOption)).
     pipe(gulp.dest('assets/javascripts'));
   changeTab = gulp.src([
-    'src/javascripts/changeTab.js'
+      'src/javascripts/changeTab.js',
     ]).
     pipe(concat('changeTab.min.js')).
     pipe(uglify(uglifyOption)).
