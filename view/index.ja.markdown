@@ -22,30 +22,39 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </header>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="/news/shipping_spring_calanthe_2014">春色エビネの出荷が始まりました</a></h1>
+      <!-- 掲載日2014/11/01 -->
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="/calanthe/recent_failure_and_provision#aburamushi">[害虫警報] アブラムシ大量発生警報、発令中!!</a></h1>
+      <!-- 掲載日2014/10/25 -->
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new"></p>
       <h1><a href="news/information_of_orchid_exam">ラン検定に新しい問題を追加しました</a></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new"></p>
       <h1><a href="news/information_of_new_photos">蘭裕園のカラフルな日本のランの写真を続々追加中</a></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new"></p>
       <h1><strike><a href="news/information_of_shipping_of_awachidori_and_yumechidori_2014">ミニミニランラン (アワチドリ / 夢ちどり) 出荷が始まりました</a></strike></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new"></p>
       <h1><strike><a href="news/report_of_calanthe_fair_2014">速報!エビネ展2014</a></strike></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new"></p>
       <h1><strike><a href="news/information_of_calanthe_fair_2014">最終半額セールのお知らせ (5月2日・3日)</a></strike></h1>
     </article>
   </section>

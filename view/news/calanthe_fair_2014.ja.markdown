@@ -1,8 +1,6 @@
 ---
 title: 高品質なエビネを世界で一番安く買える! こんなチャンスは今年だけ!
 ---
-**[エビネの育て方を極める - 最先端のエビネ栽培法](/calanthe/calanthe_in_the_new_way)**
-
 <s>高品質なエビネを世界で一番安く買える! こんなチャンスは今年だけ!</s><br /><span style="font-size: 16px; text-align: right;">(終了しました)</span>
 ==
 →  **[速報! エビネ展2014](news/report_of_calanthe_fair_2014)**

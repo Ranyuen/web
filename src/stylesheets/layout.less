@@ -80,28 +80,33 @@ header {
   .header-inner {
     .logo {
       float: left;
-      width: 85%;
-      h1 { margin: 0; }
+      width: 54px;
+      h1 {
+        margin: 0;
+        width: 100%;
+      }
       img { width: 54px; }
     }
 
     .lang {
-      float: left;
+      float: right;
       font-size: smaller;
       line-height: 54px;
-      width: 10%;
+      width: 120px;
       text-align: right;
       a { color: #006400; }
     }
 
     .link_icon {
-      float: left;
+      float: right;
       .clear-fix;
 
       .fb_icon,
       .yt_icon {
+        display: inline-block;
         float: left;
         height: 24px;
+        margin-left: 5px;
         width: 24px;
         line-height: 54px;
       }
@@ -249,17 +254,24 @@ header {
           display: inline-block;
           font-size: 14px;
           margin: 5px 0;
-          width: 70%;
+          width: 60%;
         }
 
         p {
           display: inline-block;
           margin: 5px 0;
-          width: 15%;
+          width: 80px;
 
           img {
-            width: 70%;
+            width: 100%;
           }
+        }
+
+        .new {
+          color: #eb3250;
+          font-size: 14px;
+          width: 50px;
+          text-align: center;
         }
       }
     }
