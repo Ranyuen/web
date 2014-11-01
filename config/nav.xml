@@ -21,23 +21,25 @@
     <page path="index" title="蘭裕園"/>
     <dir path="calanthe">
       <page path="index" title="エビネを極める"/>
-      <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
-      <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
-      <page path="info_lerning_calanthe_from_territory" title="エビネの自生地から学ぶ"/>
-      <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
-      <dir path="cultivation">
-        <page path="index" title="エビネの栽培"/>
-        <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
-        <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
-        <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
-        <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
-        <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
-        <page path="repot_calanthe" title="株分け"/>
-        <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
-      </dir>
       <dir path="grouping">
         <page path="index" title="エビネの種類"/>
         <page path="info_about_JIEBINE_calanthe_discolor" title="ジエビネについて"/>
+      </dir>
+      <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
+      <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
+      <dir path="cultivation">
+        <page path="index" title="エビネの栽培"/>
+        <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
+        <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
+        <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
+        <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
+        <page path="repot_calanthe" title="植え替えと株分け"/>
+        <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
+        <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
+      </dir>
+      <dir path="learning">
+        <page path="index" title="エビネから学ぶ"/>
+        <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
       </dir>
     </dir>
     <dir path="ponerorchis">
