@@ -36,7 +36,10 @@ class App
         $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
         if ('development' === $env) {
             ini_set('display_errors', 1);
+            error_reporting(E_ALL | E_STRICT);
         }
+        // set_error_handler(function () {});
+        // set_exception_handler(function () {});
         $this->config = $config ? $config : [];
         $this->container = new Container();
         $this->loadServices($this->container, $env);
