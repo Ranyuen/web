@@ -1,7 +1,12 @@
 <?php
+/**
+ * RGB and HSV color.
+ */
 namespace Ranyuen;
 
 /**
+ * RGB and HSV color.
+ *
  * http://c4se.hatenablog.com/entry/2013/08/04/190937
  */
 class Color
@@ -14,9 +19,10 @@ class Color
     private $b;
 
     /**
-     * @param  integer $r 0..255
-     * @param  integer $g 0..255
-     * @param  integer $b 0..255
+     * @param integer $r 0..255
+     * @param integer $g 0..255
+     * @param integer $b 0..255
+     *
      * @return Color
      */
     public function fromRgb($r, $g, $b)
@@ -27,9 +33,10 @@ class Color
     }
 
     /**
-     * @param  integer $h 0..360 degree
-     * @param  integer $s 0..100 %
-     * @param  integer $v 0..100 %
+     * @param integer $h 0..360 degree
+     * @param integer $s 0..100 %
+     * @param integer $v 0..100 %
+     *
      * @return Color
      */
     public function fromHsv($h, $s, $v)
@@ -67,14 +74,14 @@ class Color
             return [0, 0, floor($cmax * 100)];
         }
         switch ($cmax) {
-        case $red:
-            $hue = 60 * (($green - $blue) / $d % 6);
-            break;
-        case $green:
-            $hue = 60 * (($blue - $red) / $d + 2);
-            break;
-        default:
-            $hue = 60 * (($red - $green) / $d + 4);
+            case $red:
+                $hue = 60 * (($green - $blue) / $d % 6);
+                break;
+            case $green:
+                $hue = 60 * (($blue - $red) / $d + 2);
+                break;
+            default:
+                $hue = 60 * (($red - $green) / $d + 4);
         }
         $hue = ($hue + 360) % 360;
 
@@ -102,8 +109,11 @@ class Color
             list($red, $green, $blue) = [$chroma, 0, $x];
         }
 
-        return array_map(function ($channel) use ($m) {
-            return ceil(($channel + $m) * 255);
-        }, [$red, $green, $blue]);
+        return array_map(
+            function ($channel) use ($m) {
+                return ceil(($channel + $m) * 255);
+            },
+            [$red, $green, $blue]
+        );
     }
 }

@@ -1,12 +1,18 @@
 <?php
+/**
+ * Template interface.
+ */
 namespace Ranyuen\Template;
 
+/**
+ * Template interface.
+ */
 interface Template
 {
     /**
      * Register the helper.
      *
-     * @param mixed $helper
+     * @param mixed $helper Template helper
      *
      * @return void
      */
@@ -15,7 +21,7 @@ interface Template
     /**
      * Parses the given source string.
      *
-     * @param string $template
+     * @param string $template Template string
      *
      * @return Template
      */
@@ -24,10 +30,10 @@ interface Template
     /**
      * Renders the current template.
      *
-     * @param array $__params
-     * @param mixed $tmp_helpers
+     * @param array $params     Template params
+     * @param mixed $tmpHelpers Temporary helpers
      *
      * @return string
      */
-    public function render(array $__params = [], $tmp_helpers = null);
+    public function render(array $params = [], $tmpHelpers = null);
 }

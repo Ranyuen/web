@@ -1,14 +1,20 @@
 <?php
+/**
+ * Photo model.
+ */
 namespace Ranyuen\Model;
 
 use \Illuminate\Database\Eloquent;
 
+/**
+ * Photo model.
+ */
 class Photo extends Eloquent\Model
 {
     protected $table = 'photo';
 
     /** @var resource */
-    private $_image;
+    private $image;
 
     /**
      * @return Photo
@@ -28,9 +34,9 @@ class Photo extends Eloquent\Model
      */
     public function loadImage()
     {
-        if (!$this->_image) {
+        if (!$this->image) {
             $file = "images/gallery/$this->id.jpg";
-            $this->_image = imagecreatefromjpeg($file);
+            $this->image = imagecreatefromjpeg($file);
             $this->loadImageSize();
         }
 
@@ -38,68 +44,71 @@ class Photo extends Eloquent\Model
     }
 
     /**
-     * @param integer $new_width
-     * @param integer $new_height
+     * @param integer $newWidth  New image width px
+     * @param integer $newHeight New image height px
+     *
+     * @return void
      */
-    public function renderResized($new_width, $new_height)
+    public function renderResized($newWidth, $newHeight)
     {
-        $cache_filename = "images/cache/{$this->id}_{$new_width}x$new_height.jpg";
+        $cacheFilename = "images/cache/{$this->id}_{$newWidth}x$newHeight.jpg";
         $this->deleteOldCache();
-        if (!file_exists($cache_filename)) {
+        if (!file_exists($cacheFilename)) {
             $this->loadImage();
-            $this->createCache($new_width, $new_height, $cache_filename);
+            $this->createCache($newWidth, $newHeight, $cacheFilename);
         }
-        touch($cache_filename);
+        touch($cacheFilename);
         header('Content-Type: image/jpeg');
-        header('Content-Length: ' . filesize($cache_filename));
+        header('Content-Length: '.filesize($cacheFilename));
         ob_clean();
         flush();
-        readfile($cache_filename);
+        readfile($cacheFilename);
     }
 
     /**
-     * @param integer $new_width
-     * @param integer $new_height
-     * @param string  $cache_filename
+     * @param integer $newWidth      New image width px
+     * @param integer $newHeight     New image height px
+     * @param string  $cacheFilename Cache file name
+     *
+     * @return void
      */
-    private function createCache($new_width, $new_height, $cache_filename)
+    private function createCache($newWidth, $newHeight, $cacheFilename)
     {
-        $orig_filename = "images/gallery/$this->id.jpg";
-        $orig_image = imagecreatefromjpeg($orig_filename);
-        $image = imagecreatetruecolor($new_width, $new_height);
-        imagecopyresampled($image, $orig_image,
-            0, 0, 0, 0,
-            $new_width, $new_height, $this->width, $this->height);
-        imagedestroy($orig_image);
+        $origFilename = "images/gallery/$this->id.jpg";
+        $origImage = imagecreatefromjpeg($origFilename);
+        $image = imagecreatetruecolor($newWidth, $newHeight);
+        imagecopyresampled($image, $origImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->width, $this->height);
+        imagedestroy($origImage);
         imageinterlace($image, 1);
-        imagejpeg($image, $cache_filename, 95);
+        imagejpeg($image, $cacheFilename, 95);
         imagedestroy($image);
     }
 
     private function deleteOldCache()
     {
-        $cache_dir = 'images/cache';
-        // $is_dir_too_large = function () use ($cache_dir) {
-        //     return preg_match('/\A[0-9]+G/', exec("du -h $cache_dir"));
+        $cacheDir = 'images/cache';
+        // $isDirTooLarge = function () use ($cacheDir) {
+        //     return preg_match('/\A[0-9]+G/', exec("du -h $cacheDir"));
         // };
-        if ($dir = opendir($cache_dir)) {
+        if ($dir = opendir($cacheDir)) {
             while (($file = readdir($dir)) !== false) {
-                if (is_file($file) &&
-                    $file[0] !== '.' &&
-                    filemtime($file) < time() - 60 * 60 * 24 * 7) {
-                    unlink("$cache_dir/$file");
+                if (is_file($file)
+                    && $file[0] !== '.'
+                    && filemtime($file) < time() - 60 * 60 * 24 * 7
+                ) {
+                    unlink("$cacheDir/$file");
                 }
             }
             closedir($dir);
         }
-        // if ($is_dir_too_large()) {
-        //     $filenames = glob("$cache_dir/*.*");
+        // if ($isDirTooLarge()) {
+        //     $filenames = glob("$cacheDir/*.*");
         //     $filesizes = array_map(
         //         function ($filename) { return filesize($filename); },
         //         $filenames);
         //     array_multisort($filenames,
         //         $filesizes, SORT_ASC);
-        //     while ($is_dir_too_large() && $filenames) {
+        //     while ($isDirTooLarge() && $filenames) {
         //         unlink(array_pop($filenames));
         //     }
         // }

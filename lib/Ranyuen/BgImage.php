@@ -1,35 +1,46 @@
 <?php
+/**
+ * Backgroud image selector.
+ */
 namespace Ranyuen;
 
+/**
+ * Backgroud image selector.
+ */
 class BgImage
 {
-    private $_resources = [];
+    private $resources = [];
 
+    /**
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
     public function __construct()
     {
         if (isset($_SESSION['bgimage'])) {
             $bgimage = $_SESSION['bgimage'];
             if ($bgimage['expiration'] >= time()) {
-                $this->_resources = [$bgimage['img']];
+                $this->resources = [$bgimage['img']];
 
                 return $this;
             }
             unset($_SESSION['bgimage']);
         }
-        $this->_resources = $this->getAvailableImages();
+        $this->resources = $this->getAvailableImages();
     }
 
     /**
      * @return string
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function getRandom()
     {
-        $image = $this->_resources[array_rand($this->_resources)];
+        $image = $this->resources[array_rand($this->resources)];
         $_SESSION['bgimage'] = [
             'img' => $image,
             'expiration' => isset($_SESSION['bgimage']['expiration']) ?
                 $_SESSION['bgimage']['expiration'] :
-                time() + 3600
+                time() + 3600,
         ];
 
         return $image;
@@ -42,7 +53,8 @@ class BgImage
     {
         $files = scandir('assets/images/backgrounds');
         $files = array_filter(
-            $files, function ($file) {
+            $files,
+            function ($file) {
                 return preg_match('/\.(?:jpe?g)|png$/i', $file) > 0;
             }
         );

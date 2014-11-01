@@ -1,9 +1,14 @@
 <?php
+/**
+ * Application main class.
+ */
 namespace Ranyuen;
 
 use Ranyuen\Di\Container;
 
 /**
+ * Application main class.
+ *
  * @example
  * <code>
  * (new \Ranyuen\App([]))->run();
@@ -12,26 +17,29 @@ use Ranyuen\Di\Container;
 class App
 {
     /** @var Container */
-    private $_container;
+    private $container;
     /** @var array */
-    private $_config;
+    private $config;
     /** @var Navigation */
-    private $_nav;
+    private $nav;
     /** @var Router */
-    private $_router;
+    private $router;
 
     /**
-     * @param array $config
+     * @param array $config Additional config. (Most config is written in config/env)
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function __construct(array $config = null)
     {
         session_start();
         $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
-        if ($env === 'development') {
+        if ('development' === $env) {
             ini_set('display_errors', 1);
         }
-        $this->_container = new Container();
-        $this->loadServices($this->_container, $env);
+        $this->config = $config ? $config : [];
+        $this->container = new Container();
+        $this->loadServices($this->container, $env);
     }
 
     /**
@@ -39,7 +47,7 @@ class App
      */
     public function getContainer()
     {
-        return $this->_container;
+        return $this->container;
     }
 
     /**
@@ -47,37 +55,55 @@ class App
      */
     public function run()
     {
-        $this->_container['db'];
-        $this->_router->run();
+        $this->container['db'];
+        $this->router->run();
 
         return $this;
     }
 
     /**
-     * @param Container $container
-     * @param string    $env
+     * @param Container $container DI container
+     * @param string    $env       development or production or...
+     *
+     * @return void
      */
     private function loadServices(Container $container, $env)
     {
         $container['config'] = function ($c) use ($env) {
-            return (new Config())->load($env);
+            return array_merge($this->config, (new Config())->load($env));
         };
-        $container->bind('\Ranyuen\Logger', 'logger', function ($c) {
-            $config = $c['config'];
+        $container->bind(
+            '\Ranyuen\Logger',
+            'logger',
+            function ($c) {
+                $config = $c['config'];
 
-            return new Logger($config['mode'], $config);
-        });
-        $container->bind('\Ranyuen\Navigation', 'nav', function ($c) {
-            return new Navigation($c['config']);
-        });
-        $container->bind('\Ranyuen\Router', 'router', function ($c) {
-            return new Router($this, $c['config']);
-        });
-        $container->bind('\Ranyuen\Db', 'db', function ($c) {
-            return new DbCapsule($c['logger'], $c['config']['db']);
-        });
-        $this->_config = $container['config'];
-        $this->_nav    = $container['nav'];
-        $this->_router = $container['router'];
+                return new Logger($config['mode'], $config);
+            }
+        );
+        $container->bind(
+            '\Ranyuen\Navigation',
+            'nav',
+            function ($c) {
+                return new Navigation($c['config']);
+            }
+        );
+        $container->bind(
+            '\Ranyuen\Router',
+            'router',
+            function ($c) {
+                return new Router($this, $c['config']);
+            }
+        );
+        $container->bind(
+            '\Ranyuen\Db',
+            'db',
+            function ($c) {
+                return new DbCapsule($c['logger'], $c['config']['db']);
+            }
+        );
+        $this->config = $container['config'];
+        $this->nav    = $container['nav'];
+        $this->router = $container['router'];
     }
 }

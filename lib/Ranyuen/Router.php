@@ -1,26 +1,30 @@
 <?php
+/**
+ * URI router.
+ */
 namespace Ranyuen;
 
 use Ranyuen\Di\Container;
 use ReflectionClass;
 use Slim;
 
+/**
+ * URI router.
+ */
 class Router extends Slim\Slim
 {
     /** @var App */
-    private $_app;
+    private $app;
 
     /**
-     * @param App        $app
-     * @param Navigation $nav
-     * @param Logger     $logger
-     * @param array      $config
+     * @param App   $app    Application
+     * @param array $config Application config
      */
     public function __construct(App $app, array $config)
     {
         parent::__construct();
         $this->config($config);
-        $this->_app = $app;
+        $this->app = $app;
     }
 
     /**
@@ -28,21 +32,25 @@ class Router extends Slim\Slim
      */
     public function getContainer()
     {
-        return $this->_app->getContainer();
+        return $this->app->getContainer();
     }
 
     /**
      * Override.
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.UnusedLocalVariable)
      */
     public function run()
     {
         $router = $this;
-        require_once 'config/routes.php';
+        include_once 'config/routes.php';
         $methods = (new ReflectionClass(get_class($this)))->getMethods();
         foreach ($methods as $method) {
             if (preg_match('/@routing/', $method->getDocComment()) >= 1) {
                 $method->setAccessible(true);
-                $method->invoke($this, $this->_app);
+                $method->invoke($this, $this->app);
             }
         }
         parent::run();

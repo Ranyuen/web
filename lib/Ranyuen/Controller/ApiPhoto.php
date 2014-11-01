@@ -1,10 +1,23 @@
 <?php
+/**
+ * /api/photo controller
+ */
 namespace Ranyuen\Controller;
 
 use \Ranyuen\Model\Photo;
 
+/**
+ * /api/photo controller
+ */
 class ApiPhoto
 {
+    /**
+     * @param array $params Request params
+     *
+     * @return mixed
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
     public function get(array $params)
     {
         if (!isset($params['id'])) {
@@ -20,16 +33,27 @@ class ApiPhoto
         }
         $photo = Photo::find($id);
         $photo->loadImageSize();
-        if ($width && $height) {
-            $_height = floor($photo->height * $width / $photo->width);
-            $_width = floor($photo->width * $height / $photo->height);
-            $height = min($_height, $height);
-            $width = min($_width, $width);
-        } elseif ($width) {
-            $height = floor($photo->height * $width / $photo->width);
-        } else {
-            $width = floor($photo->width * $height / $photo->height);
-        }
+        list($width, $height) = $this->calcSize($photo, $width, $height);
         $photo->renderResized($width, $height);
+    }
+
+    private function calcSize($photo, $newWidth, $newHeight)
+    {
+        if ($newWidth && $newHeight) {
+            $newHeight = min(
+                floor($photo->height * $newWidth / $photo->width),
+                $newHeight
+            );
+            $newWidth = min(
+                floor($photo->width * $newHeight / $photo->height),
+                $newWidth
+            );
+        } elseif ($newWidth) {
+            $newHeight = floor($photo->height * $newWidth / $photo->width);
+        } else {
+            $newWidth = floor($photo->width * $newHeight / $photo->height);
+        }
+
+        return [$newWidth, $newHeight];
     }
 }
