@@ -1,8 +1,6 @@
 ---
 title: 速報! エビネ展2014
 ---
-<b><a href="growings/calanthe/growings_calanthe_in_the_new_way">エビネの育て方を極める - 最先端のエビネ栽培法</a></b>
-
 <s>速報!エビネ展2014</s>&nbsp;<span style="font-size: 16px; line-height: 40px;">(終了しました)</span>
 ==
 <figure>

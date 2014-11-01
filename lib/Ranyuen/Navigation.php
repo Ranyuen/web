@@ -1,13 +1,19 @@
 <?php
+/**
+ * Load navigation config and manipulate.
+ */
 namespace Ranyuen;
 
+/**
+ * Load navigation config and manipulate.
+ */
 class Navigation
 {
     private $config;
     private $nav;
 
     /**
-     * @param array $config
+     * @param array $config Application config
      */
     public function __construct(array $config)
     {
@@ -16,7 +22,8 @@ class Navigation
     }
 
     /**
-     * @param  string $lang
+     * @param string $lang Current lang
+     *
      * @return array
      */
     public function getGlobalNav($lang)
@@ -41,7 +48,8 @@ class Navigation
     }
 
     /**
-     * @param  string $lang
+     * @param string $lang Current lang
+     *
      * @return array
      */
     public function getNews($lang)
@@ -55,20 +63,22 @@ class Navigation
     }
 
     /**
-     * @param  string $lang
-     * @param  string $template_name
+     * @param string $lang         Current lang
+     * @param string $templateName Current template name
+     *
      * @return array
      */
-    public function getLocalNav($lang, $template_name)
+    public function getLocalNav($lang, $templateName)
     {
-        $template_name = explode('/', $template_name);
+        $templateName = explode('/', $templateName);
         $lang = htmlspecialchars($lang, ENT_QUOTES, 'utf-8');
         $nav = $this->nav->xpath("/nav/lang[@name='$lang']")[0];
-        foreach ($template_name as $part) {
+        foreach ($templateName as $part) {
             $part = htmlspecialchars($part, ENT_QUOTES, 'utf-8');
             if ($part && $part !== 'index') {
-                if (!$nav->xpath("*[@path='$part']") ||
-                    $nav->xpath("*[@path='$part']")[0]->getName() === 'page') {
+                if (!$nav->xpath("*[@path='$part']")
+                    || $nav->xpath("*[@path='$part']")[0]->getName() === 'page'
+                ) {
                     break;
                 }
                 $nav = $nav->xpath("*[@path='$part']")[0];
@@ -79,23 +89,24 @@ class Navigation
     }
 
     /**
-     * @param  string $lang
-     * @param  string $template_name
+     * @param string $lang         Current lang
+     * @param string $templateName Current template name
+     *
      * @return array
      */
-    public function getBreadcrumb($lang, $template_name)
+    public function getBreadcrumb($lang, $templateName)
     {
         $lang = htmlspecialchars($lang, ENT_QUOTES, 'utf-8');
         $nav = $this->nav->xpath("/nav/lang[@name='$lang']")[0];
         $path = '/';
         $breadcrumb = [$path => (string) $nav->page[0]['title']];
-        foreach (explode('/', $template_name) as $part) {
+        foreach (explode('/', $templateName) as $part) {
             $part = htmlspecialchars($part, ENT_QUOTES, 'utf-8');
-            if ($part === 'index') {
+            if ('index' === $part) {
                 break;
             }
             if ($nav->xpath("*[@path='$part']")) {
-                $path .= $part . '/';
+                $path .= $part.'/';
                 $nav = $nav->xpath("*[@path='$part']")[0];
             } else {
                 break;
@@ -111,40 +122,45 @@ class Navigation
     }
 
     /**
-     * @param  string $lang
-     * @param  string $template_name
+     * @param string $lang         Current lang
+     * @param string $templateName Current template name
+     *
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
-    public function getAlterNav($lang, $template_name)
+    public function getAlterNav($lang, $templateName)
     {
-        $dir = dirname("{$this->config['templates.path']}/$template_name");
-        $alt_lang = [];
-        if (! is_dir($dir)) { $dir = "{$this->config['templates.path']}/"; }
+        $dir = dirname("{$this->config['templates.path']}/$templateName");
+        $altLang = [];
+        if (! is_dir($dir)) {
+            $dir = "{$this->config['templates.path']}/";
+        }
         if ($handle = opendir($dir)) {
-            $regex = '/^(?:' . basename($template_name) . ')\.(\w+)\.\w+$/';
+            $regex = '/^(?:'.basename($templateName).')\.(\w+)\.\w+$/';
             while (false !== ($file = readdir($handle))) {
                 $matches = [];
                 if (is_file("$dir/$file") && preg_match($regex, $file, $matches)) {
-                    $alt_lang[] = $matches[1];
+                    $altLang[] = $matches[1];
                 }
             }
         }
         $alter = [];
-        $link_data = [
+        $linkData = [
             'ja' => '/',
             'en' => '/en/',
         ];
-        $alter['base'] = $link_data[$lang];
+        $alter['base'] = $linkData[$lang];
         $alter['local_base'] = preg_replace(
             '/\/[^\/]*$/',
             '/',
             $_SERVER['REQUEST_URI']
         );
-        foreach ($link_data as $k => $v) {
+        foreach ($linkData as $k => $v) {
             $alter[$k] = $v;
-            if (false !== array_search($k, $alt_lang)) {
-                $t = preg_replace('/index$/', '', $template_name);
-                $alter[$k] = preg_replace('/\/\//', '/', $v . $t);
+            if (false !== array_search($k, $altLang)) {
+                $t = preg_replace('/index$/', '', $templateName);
+                $alter[$k] = preg_replace('/\/\//', '/', $v.$t);
             }
         }
 
@@ -155,7 +171,6 @@ class Navigation
     {
         $index = [];
         $local = [];
-        $sub = [];
         foreach ($nav->children() as $elm) {
             if ($elm->getName() === 'page') {
                 if ((string) $elm['path'] === 'index') {
@@ -165,12 +180,11 @@ class Navigation
                 }
             } else {
                 if ($elm->xpath("page[@path='index']")) {
-                    $sub[(string) $elm['path'] . '/'] = (string) $elm->xpath("page[@path='index']")[0]['title'];
+                    $local[(string) $elm['path'].'/'] = (string) $elm->xpath("page[@path='index']")[0]['title'];
                 }
             }
         }
         $local = array_merge($index, $local);
-        $local = array_merge($local, $sub);
 
         return $local;
     }

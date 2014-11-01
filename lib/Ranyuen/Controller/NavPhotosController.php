@@ -1,35 +1,68 @@
 <?php
+/**
+ * Static page.
+ */
 namespace Ranyuen\Controller;
 
+/**
+ * Static page.
+ */
 class NavPhotosController extends NavController
 {
+    /**
+     * @param string $lang Current lang
+     * @param string $path URI path
+     *
+     * @return void
+     */
     public function showFromTemplate($lang, $path = 'photos/index')
     {
+        $path = 'photos/index';
         parent::showFromTemplate($lang, $path);
     }
 
-    protected function render($lang, $template_name, $params = [])
+    /**
+     * Echo rendered string.
+     *
+     * @param string $lang         Current lang
+     * @param string $templateName Template name
+     * @param array  $params       Template params
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.Superglobals)
+     */
+    protected function render($lang, $templateName, $params = [])
     {
+        $params = [];
         $controller = new \Ranyuen\Controller\ApiPhotos();
-        $species_name = isset($_GET['species_name']) ?
+        $speciesName = isset($_GET['species_name']) ?
             $_GET['species_name'] :
             null;
-        $photos = $controller->get([
-          'species_name' => $species_name,
-          'limit'        => 20,
-        ]);
-        $photos = array_map(function ($photo) {
-          $thumb_width = 349;
-          $thumb_height =
-              floor($photo['height'] * $thumb_width / $photo['width']);
-          $photo['thumb_width'] = $thumb_width;
-          $photo['thumb_height'] = $thumb_height;
+        $photos = $controller->get(
+            [
+                'species_name' => $speciesName,
+                'limit'        => 20,
+            ]
+        );
+        $photos = array_map(
+            function ($photo) {
+                $thumbWidth = 349;
+                $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
+                $photo['thumb_width'] = $thumbWidth;
+                $photo['thumb_height'] = $thumbHeight;
 
-          return $photo;
-        }, $photos);
-        parent::render($lang, $template_name, [
-            'species_name' => $species_name,
-            'photos'       => $photos,
-        ]);
+                return $photo;
+            },
+            $photos
+        );
+        parent::render(
+            $lang,
+            $templateName,
+            [
+                'species_name' => $speciesName,
+                'photos'       => $photos,
+            ]
+        );
     }
 }

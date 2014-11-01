@@ -11,9 +11,12 @@ insert_final_newline = true
 [*.php]
 indent_size = 4
 
+[*.xml]
+indent_size = 4
+
 [*.{html,md}]
 
 [*.{js,json}]
 
-[*.{css,scss}]
+[*.{css,less}]
 

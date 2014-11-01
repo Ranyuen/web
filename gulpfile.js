@@ -86,28 +86,15 @@ gulp.task('nav', function () {
   });
 });
 
-gulp.task('php-cs', function () {
-  return Promise.all([
-    '-l .',
-    'lib/',
-    'test/',
-    'view/',
-  ].map(function (path) {
-    return promiseProcess('vendor/bin/phpcs --standard=PEAR,Zend --extensions=php ' + path);
-  }));
-});
-
 gulp.task('php-fixer', function () {
   return Promise.all([
-    'index.php',
-    'phpmig.php',
-    'config/',
-    'lib/',
-    'test/',
-    'view/',
-  ].map(function (path) {
-    return promiseProcess('vendor/bin/php-cs-fixer fix ' + path + ' --level=all');
-  }));
+    'vendor/bin/php-cs-fixer fix index.php',
+    'vendor/bin/php-cs-fixer fix phpmig.php',
+    'vendor/bin/php-cs-fixer fix config/',
+    'vendor/bin/php-cs-fixer fix lib/',
+    'vendor/bin/php-cs-fixer fix tests/',
+    'vendor/bin/php-cs-fixer fix view/',
+  ]);
 });
 
 gulp.task('php-lint', function () {
@@ -115,19 +102,30 @@ gulp.task('php-lint', function () {
       '*.php',
       'config/**/**.php',
       'lib/**/**.php',
-      'test/**/**.php',
-      'view/**/**.php'
+      'tests/**/**.php',
+      'view/**/**.php',
     ]).
     pipe(exec('php -l <%= file.path %>', {})).
     pipe(exec.reporter({stdout: false}));
 });
 
+gulp.task('php-metrics', function () {
+  return Promise.all([
+      promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php -l .'),
+      promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php lib/'),
+      promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php view/'),
+    ]).then(Promise.all([
+      promiseProcess('vendor/bin/phpmd lib/ text phpmd.xml'),
+      promiseProcess('vendor/bin/phpmd view/ text phpmd.xml'),
+    ]));
+});
+
 gulp.task('php-test', function (done) {
-  runSequence('php-lint', 'php-fixer', 'php-unit', done);
+  runSequence('php-lint', 'php-fixer', 'php-metrics', 'php-unit', done);
 });
 
 gulp.task('php-unit', function () {
-  return promiseProcess('vendor/bin/phpunit test --strict').
+  return promiseProcess('vendor/bin/phpunit').
     then(function (out) { console.log(out); });
 });
 

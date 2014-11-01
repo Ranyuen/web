@@ -1,81 +1,87 @@
 <?php
+/**
+ * YAML+Jinja2+Markdown stack
+ */
 namespace Ranyuen;
 
 use dflydev\markdown\MarkdownExtraParser;
 use Symfony\Component\Yaml;
 
 /**
- * YAML+Jinja2+Markdown stack.
+ * YAML+Jinja2+Markdown stack
  *
  * YAML Front Matter + Jinja2 Template + Markdown.
  */
 class Renderer
 {
-    private $_templates_path = 'view';
+    private $templatesPath = 'view';
     /** @var Template\TwigTemplate */
-    private $_template;
+    private $template;
     /** @var string */
-    private $_layout = null;
+    private $layout = null;
 
     /**
-     * @param string $templates_path
+     * @param string $templatesPath Template directory
      */
-    public function __construct($templates_path)
+    public function __construct($templatesPath)
     {
-        $this->_templates_path = $templates_path;
-        $this->_template = new Template\TwigTemplate($templates_path);
+        $this->templatesPath = $templatesPath;
+        $this->template = new Template\TwigTemplate($templatesPath);
     }
 
     /**
-     * @param  string   $template_name Jinja2 HTML file path.
+     * @param string $templateName Jinja2 HTML file path
+     *
      * @return Renderer
      */
-    public function setLayout($template_name)
+    public function setLayout($templateName)
     {
-        $dir = $this->_templates_path;
-        if (is_file("$dir/$template_name.html")) {
-            $this->_layout = file_get_contents("$dir/$template_name.html");
+        $dir = $this->templatesPath;
+        if (is_file("$dir/$templateName.html")) {
+            $this->layout = file_get_contents("$dir/$templateName.html");
         }
 
         return $this;
     }
 
     /**
-     * @param  object   $helper
+     * @param object $helper Template helper
+     *
      * @return Renderer
      */
     public function addHelper($helper)
     {
-        $this->_template->registerHelper($helper);
+        $this->template->registerHelper($helper);
 
         return $this;
     }
 
     /**
-     * @param  string $template_name Jinja2 Markdown file path.
-     * @param  array  $params
+     * @param string $templateName Jinja2 Markdown file path
+     * @param array  $params       Template params
+     *
      * @return string
      */
-    public function render($template_name, $params = [])
+    public function render($templateName, $params = [])
     {
-        $dir = $this->_templates_path;
-        if (is_file("$dir/$template_name.md")) {
-            $template = file_get_contents("$dir/$template_name.md");
-        } elseif (is_file("$dir/$template_name.markdown")) {
-            $template = file_get_contents("$dir/$template_name.markdown");
+        $dir = $this->templatesPath;
+        if (is_file("$dir/$templateName.md")) {
+            $template = file_get_contents("$dir/$templateName.md");
+        } elseif (is_file("$dir/$templateName.markdown")) {
+            $template = file_get_contents("$dir/$templateName.markdown");
         } else {
             return false;
         }
-        if ($this->_layout) {
-            list($content, $front_matter) =
-                $this->stripYamlFromtMatter($template);
-            if ($front_matter) {
-                $params = array_merge($front_matter, $params);
+        if ($this->layout) {
+            list($content, $frontMatter)
+                = $this->stripYamlFromtMatter($template);
+            if ($frontMatter) {
+                $params = array_merge($frontMatter, $params);
             }
             $params['content'] = (new MarkdownExtraParser())
                 ->transformMarkdown($this->renderTemplate($content, $params));
 
-            return $this->renderTemplate($this->_layout, $params);
+            return $this->renderTemplate($this->layout, $params);
         } else {
             return (new MarkdownExtraParser())
                 ->transformMarkdown($this->renderTemplate($template, $params));
@@ -83,24 +89,26 @@ class Renderer
     }
 
     /**
-     * @param  string $template
-     * @param  array  $params
+     * @param string $template Template string
+     * @param array  $params   Template params
+     *
      * @return string
      */
     public function renderTemplate($template, $params = [])
     {
-        list($template, $fromt_matter) =
-            $this->stripYamlFromtMatter($template);
-        if ($fromt_matter) {
-            $params = array_merge($fromt_matter, $params);
+        list($template, $fromtMatter)
+            = $this->stripYamlFromtMatter($template);
+        if ($fromtMatter) {
+            $params = array_merge($fromtMatter, $params);
         }
 
-        return $this->_template->parse($template)->render($params);
+        return $this->template->parse($template)->render($params);
     }
 
     /**
-     * @param  string $template
-     * @return array  list($content, $params)
+     * @param string $template Template string
+     *
+     * @return array list($content, $params)
      */
     private function stripYamlFromtMatter($template)
     {
@@ -111,7 +119,10 @@ class Renderer
         $iz = count($lines);
         if (preg_match('/^-{3,}\s*$/', $lines[0])) {
             $i = 1;
-            for (; $i < $iz && ! preg_match('/^-{3,}\s*$/', $lines[$i]); ++ $i) {
+            for (; $i < $iz; ++$i) {
+                if (preg_match('/^-{3,}\s*$/', $lines[$i])) {
+                    break;
+                }
                 $front .= "$lines[$i]\n";
             }
             ++$i;

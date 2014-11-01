@@ -1,4 +1,12 @@
 <?php
+/**
+ * Controller interface
+ */
 namespace Ranyuen\Controller;
 
-abstract class Controller { }
+/**
+ * Controller interface
+ */
+abstract class Controller
+{
+}

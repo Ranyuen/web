@@ -1,8 +1,6 @@
 ---
 title: 最終半額セールのお知らせ (5月2日・3日)
 ---
-**[エビネの育て方を極める - 最先端のエビネ栽培法](/calanthe/calanthe_in_the_new_way)**
-
 <s>エビネ最終半額セール開催!</s>&nbsp;<span style="font-size: 16px;">(終了しました)</span>
 ==
 <div style="font-size: 25px; line-height: 50px; margin-bottom: 20px; text-align: center;">

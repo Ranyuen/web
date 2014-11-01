@@ -1,26 +1,36 @@
 <?php
+/**
+ * Config loader.
+ */
 namespace Ranyuen;
 
 use Symfony\Component\Yaml\Yaml;
 use Twig_Loader_Filesystem;
 use Twig_Environment;
 
+/**
+ * Config loader.
+ */
 class Config
 {
     /** @var string */
-    private $_dir = 'config/env';
+    private $dir = 'config/env';
     /** @var Twig_Environment */
-    private $_twig;
+    private $twig;
 
     public function __construct()
     {
-        $loader = new Twig_Loader_Filesystem($this->_dir);
-        $this->_twig = new Twig_Environment($loader);
+        $loader = new Twig_Loader_Filesystem($this->dir);
+        $this->twig = new Twig_Environment($loader);
     }
 
     /**
-     * @param  string $env
+     * @param string $env Stag. development or production or...
+     *
      * @return array
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function load($env = 'development')
     {
@@ -37,16 +47,16 @@ class Config
             'mode'           => $env,
             'templates.path' => 'view',
         ];
-        $merge_config = function ($config, $file) {
-            if (!is_readable("$this->_dir/$file")) {
+        $mergeConfig = function ($config, $file) {
+            if (!is_readable("$this->dir/$file")) {
                 return $config;
             }
-            $yaml = $this->_twig->render($file, $_ENV);
+            $yaml = $this->twig->render($file, $_ENV);
 
             return array_merge($config, Yaml::parse($yaml));
         };
-        $config = $merge_config($config, 'common.yaml');
-        $config = $merge_config($config, "$env.yaml");
+        $config = $mergeConfig($config, 'common.yaml');
+        $config = $mergeConfig($config, "$env.yaml");
 
         return $config;
     }

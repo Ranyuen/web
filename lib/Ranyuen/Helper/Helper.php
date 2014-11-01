@@ -1,40 +1,45 @@
 <?php
+/**
+ * Main view helper.
+ */
 namespace Ranyuen\Helper;
 
 /**
- * Helper methods using in the view.
+ * Main view helper.
  */
 class Helper
 {
     /**
-     * @param  array  $nav
-     * @param  string $base
+     * @param array  $nav  URIs and titles
+     * @param string $base Base URI
+     *
      * @return string
      */
     public function echoNav($nav, $base = '/')
     {
         $output = '';
-        $is_first = true;
+        $isFirst = true;
         foreach ($nav as $href => $title) {
             if (!$title) {
                 continue;
             }
-            $output .= '<div class="nav-item ' .
-                ($is_first ? 'nav-item-home' : '') .
-                '"><a href="' .
-                $this->h(preg_replace('/\/\//', '/', $base . $href)) .
-                '">' .
-                $this->h($title) .
+            $output .= '<div class="nav-item '.
+                ($isFirst ? 'nav-item-home' : '').
+                '"><a href="'.
+                $this->html(preg_replace('/\/\//', '/', $base.$href)).
+                '">'.
+                $this->html($title).
                 '</a></div>';
-            $is_first = false;
+            $isFirst = false;
         }
 
         return $output;
     }
 
     /**
-     * @param  array  $nav
-     * @param  string $base
+     * @param array  $nav  URIs and titles
+     * @param string $base Base URI
+     *
      * @return string
      */
     public function echoBreadcrumb($nav, $base = '/')
@@ -44,10 +49,10 @@ class Helper
             if (!$title) {
                 continue;
             }
-            $output .= '<div class="nav-item"><a href="' .
-                $this->h(preg_replace('/\/\//', '/', $base . $href)) .
-                '" itemprop="url"><span itemprop="title">' .
-                $this->h($title) .
+            $output .= '<div class="nav-item"><a href="'.
+                $this->html(preg_replace('/\/\//', '/', $base.$href)).
+                '" itemprop="url"><span itemprop="title">'.
+                $this->html($title).
                 '</span></a></div>';
         }
         $output .= '</div>';
@@ -56,33 +61,40 @@ class Helper
     }
 
     /**
-     * @param  array  $links
-     * @param  strung $current_lang
+     * @param array  $links       Top URIs
+     * @param strung $currentLang Current lang
+     *
      * @return string
      */
-    public function echoSwitchLang($links, $current_lang)
+    public function echoSwitchLang($links, $currentLang)
     {
-        $switch_lang = [];
+        $switchLang = [];
         foreach (['en' => 'English', 'ja' => '日本語'] as $k => $v) {
-          $switch_lang[] =  $current_lang === $k ? $v : "<a href=\"{$links[$k]}\">$v</a>";
+            $switchLang[] =  $currentLang === $k ? $v : "<a href=\"{$links[$k]}\">$v</a>";
         }
 
-        return implode(' / ', $switch_lang);
+        return implode(' / ', $switchLang);
     }
 
     /**
-     * @param  string  $movie_id
-     * @param  string  $title
-     * @param  integer $width
-     * @param  integer $height
+     * @param string  $movieId YouTube movie ID
+     * @param string  $title   Movie title
+     * @param integer $width   Widget width px
+     * @param integer $height  Wdget height px
+     *
      * @return string
      */
-    public function echoYouTube($movie_id, $title = '', $width = 560, $height = 315)
+    public function echoYouTube($movieId, $title = '', $width = 560, $height = 315)
     {
-        $output = "<div class=\"widget-youtube\"><iframe width=\"$width\" height=\"$height\" src=\"//www.youtube.com/embed/$movie_id\" frameborder=\"0\" allowfullscreen></iframe>";
+        $output = "<div class=\"widget-youtube\">
+<iframe width=\"$width\"
+        height=\"$height\"
+        src=\"//www.youtube.com/embed/$movieId\"
+        frameborder=\"0\"
+        allowfullscreen></iframe>";
         if ($title) {
-            $output .= "<div><a href=\"http://youtu.be/$movie_id\">" .
-                $this->h($title) .
+            $output .= "<div><a href=\"http://youtu.be/$movieId\">".
+                $this->html($title).
                 '</a></div>';
         }
         $output .= '</div>';
@@ -93,10 +105,11 @@ class Helper
     /**
      * Escape all HTML5 special charactors.
      *
-     * @param  string $str
+     * @param string $str Raw string
+     *
      * @return string
      */
-    private function h($str)
+    private function html($str)
     {
         if (is_array($str)) {
             $str = implode(', ', $str);

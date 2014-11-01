@@ -1,4 +1,7 @@
 <?php
+/**
+ * phpmig startup.
+ */
 require 'vendor/autoload.php';
 
 use \Phpmig\Adapter;

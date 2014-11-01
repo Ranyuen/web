@@ -1,4 +1,7 @@
 <?php
+/**
+ * PHP as view template engine.
+ */
 namespace Ranyuen\Template;
 
 use ReflectionClass;
@@ -6,36 +9,44 @@ use ReflectionMethod;
 
 /**
  * PHP as view template engine.
- *
- * cf. harrydeluxe/php-liquid
  */
 class PhpTemplate implements Template
 {
     /** @var string */
-    private $_template;
+    private $template;
     /** @var array */
-    private $_helpers = [];
+    private $helpers = [];
 
     public function registerHelper($helper)
     {
-        $this->_helpers[] = $helper;
+        $this->helpers[] = $helper;
     }
 
     public function parse($template)
     {
-        $this->_template = $template;
+        $this->template = $template;
 
         return $this;
     }
 
-    public function render(array $__params = [], $tmp_helpers = null)
+    /**
+     * @param array $__params   Template params
+     * @param mixed $tmpHelpers Temporary helpers
+     *
+     * @return string
+     *
+     * @SuppressWarnings(PHPMD.CamelCaseParameterName)
+     * @SuppressWarnings(PHPMD.CamelCaseVariableName)
+     * @SuppressWarnings(PHPMD.EvalExpression)
+     */
+    public function render(array $__params = [], $tmpHelpers = null)
     {
-        $helpers = $this->_helpers;
-        if (!is_null($tmp_helpers)) {
-            if (is_array($tmp_helpers)) {
-                $helpers = array_merge($helpers, $tmp_helpers);
+        $helpers = $this->helpers;
+        if (!is_null($tmpHelpers)) {
+            if (is_array($tmpHelpers)) {
+                $helpers = array_merge($helpers, $tmpHelpers);
             } else {
-                $helpers[] = $tmp_helpers;
+                $helpers[] = $tmpHelpers;
             }
         }
         foreach ($helpers as $__helper) {
@@ -49,17 +60,18 @@ class PhpTemplate implements Template
         }
         $render = function () use ($__params) {
             foreach (func_get_arg(1) as $__k => $__v) {
-                ${$__k} = $__v;
+                ${$__k}
+                = $__v;
             }
             unset($__k);
             unset($__v);
             ob_start();
-            eval('?>' . func_get_arg(0));
+            eval('?>'.func_get_arg(0));
 
             return ob_get_clean();
         };
         $render = $render->bindTo(null);
 
-        return $render($this->_template, $__params);
+        return $render($this->template, $__params);
     }
 }

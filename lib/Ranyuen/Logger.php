@@ -1,33 +1,36 @@
 <?php
+/**
+ * Logger.
+ */
 namespace Ranyuen;
 
 use Clover\Text\LTSV;
 use Monolog;
 use Monolog\Handler\RotatingFileHandler;
 
+/**
+ * Logger.
+ */
 class Logger extends Monolog\Logger
 {
     /**
-     * @param string $name
-     * @param array  $config
+     * @param string $name   Logger name
+     * @param array  $config Application config
      */
     public function __construct($name, $config)
     {
         parent::__construct($name);
-        $this->pushHandler(new RotatingFileHandler(
-            "{$config['log.path']}/$name.log",
-            0,
-            $config['log.level'])
-        );
+        $this->pushHandler(new RotatingFileHandler("{$config['log.path']}/$name.log", 0, $config['log.level']));
     }
 
     /**
      * Override.
      *
-     * @param  integer      $level   The logging level
-     * @param  string|array $message The log message
-     * @param  array        $context The log context
-     * @return boolean      Whether the record has been processed
+     * @param integer      $level   The logging level
+     * @param string|array $message The log message
+     * @param array        $context The log context
+     *
+     * @return boolean Whether the record has been processed
      */
     public function addRecord($level, $message, array $context = [])
     {
@@ -43,6 +46,8 @@ class Logger extends Monolog\Logger
     }
 
     /**
+     * @SuppressWarnings(PHPMD.Superglobals)
+     *
      * @return boolean
      */
     public function addAccessInfo()
