@@ -22,6 +22,10 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </header>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
+      <h1><a href="/news/shipping_spring_calanthe_2014">春色エビネの出荷が始まりました</a></h1>
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
       <h1><a href="/calanthe/recent_failure_and_provision#aburamushi">[害虫警報] アブラムシ大量発生警報、発令中!!</a></h1>
     </article>
     <article>
