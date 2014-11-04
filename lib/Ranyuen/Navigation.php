@@ -106,8 +106,11 @@ class Navigation
                 break;
             }
             if ($nav->xpath("*[@path='$part']")) {
-                $path .= $part.'/';
                 $nav = $nav->xpath("*[@path='$part']")[0];
+                $path .= $part;
+                if ($nav->getName() === 'dir') {
+                    $path .= '/';
+                }
             } else {
                 break;
             }
