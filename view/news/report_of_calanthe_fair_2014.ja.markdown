@@ -12,9 +12,9 @@ title: 速報! エビネ展2014
 10:00 ～ 17:00 (最終日5/3は15:00まで)<br />
 <b>最終セール 5/2、5/3 全品表示価格の半額!</b> 売り切れの際は御容赦ください。
 
-→ <a href="news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える! こんなチャンスは今年だけ!</a>
+→ <a href="/news/calanthe_fair_2014">高品質なエビネが世界で一番安く買える! こんなチャンスは今年だけ!</a>
 
-→ <a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a>
+→ <a href="/news/information_of_calanthe_fair_2014">最終半額セールのお知らせ</a>
 
 <a href="/about_us/direction">蘭裕園へのアクセス</a>
 <figure>

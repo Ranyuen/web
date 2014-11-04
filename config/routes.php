@@ -47,14 +47,14 @@ function routeNav($router)
         $controller('default', '/index');
     });
     $router->get('/:lang/:path+', function ($lang, $path) use ($controller) {
-        if ($path[count($path) - 1] === '') {
+        if ('' === $path[count($path) - 1]) {
             $path[count($path) - 1] = 'index';
         }
         $path = implode('/', $path);
         $controller($lang, $path);
     })->conditions(['lang' => $lang_regex]);
     $router->get('/:path+', function ($path) use ($controller) {
-        if ($path[count($path) - 1] === '') {
+        if ('' === $path[count($path) - 1]) {
             $path[count($path) - 1] = 'index';
         }
         $path = implode('/', $path);

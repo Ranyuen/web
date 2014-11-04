@@ -13,6 +13,7 @@ var Promise       = require('bluebird'),
     runSequence   = require('run-sequence'),
     uglify        = require('gulp-uglifyjs'),
     jshintStylish = require('jshint-stylish');
+var Check404 = require('./lib/Check404');
 var sshConfig = {
       host:     'ranyuen.sakura.ne.jp',
       port:     '22',
@@ -37,6 +38,10 @@ function promiseProcess(cmd) {
   });
 }
 
+gulp.task('check404', function () {
+  return new Check404().start('http://localhost:' + process.env.PORT + '/');
+});
+
 gulp.task('copy-assets', function () {
   return gulp.src('src/bower_components/colorbox/example1/**').
     pipe(gulp.dest('assets/stylesheets'));
@@ -50,9 +55,9 @@ gulp.task('deploy', function () {
 
   connection.ignoreErrors = true;
   return connection.exec([
-      'cd ~/www ; git pull origin master >&2 /dev/null',
-      'cd ~/www ; php composer.phar install --no-dev',
-      // 'cd ~/www ; set SERVER_ENV=production ; vendor/bin/phpmig migrate',
+      'cd ~/www; git pull origin master',
+      'cd ~/www; php composer.phar install --no-dev',
+      // 'cd ~/www; set SERVER_ENV=production; vendor/bin/phpmig migrate',
     ], {
       filePath: 'deploy.log',
     }).
@@ -60,7 +65,7 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('jshint', function () {
-  return gulp.src(['*.js', 'src/javascripts/*.js']).
+  return gulp.src(['*.js', 'src/javascripts/**/**.js', 'lib/**/**.js']).
     pipe(jshint()).
     pipe(jshint.reporter(jshintStylish));
 });
@@ -88,12 +93,12 @@ gulp.task('nav', function () {
 
 gulp.task('php-fixer', function () {
   return Promise.all([
-    'vendor/bin/php-cs-fixer fix index.php',
-    'vendor/bin/php-cs-fixer fix phpmig.php',
-    'vendor/bin/php-cs-fixer fix config/',
-    'vendor/bin/php-cs-fixer fix lib/',
-    'vendor/bin/php-cs-fixer fix tests/',
-    'vendor/bin/php-cs-fixer fix view/',
+    promiseProcess('vendor/bin/php-cs-fixer fix index.php'),
+    promiseProcess('vendor/bin/php-cs-fixer fix phpmig.php'),
+    promiseProcess('vendor/bin/php-cs-fixer fix config/'),
+    promiseProcess('vendor/bin/php-cs-fixer fix lib/'),
+    promiseProcess('vendor/bin/php-cs-fixer fix tests/'),
+    promiseProcess('vendor/bin/php-cs-fixer fix view/'),
   ]);
 });
 
@@ -140,6 +145,7 @@ gulp.task('uglifyjs', function () {
   layout = gulp.src([
       'src/bower_components/jquery/dist/jquery.min.js',
       'src/bower_components/uri.js/src/URI.min.js',
+      'src/javascripts/polyfill.js',
       'src/javascripts/messageForDeveloperFromRanyuen.js',
     ]).
     pipe(concat('layout.min.js')).
