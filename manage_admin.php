@@ -34,7 +34,7 @@ function doAdd($option)
 {
     $matches = [];
     if (!preg_match('/^\s*([-_.A-Za-z0-9]{4,100}) ([ -~]{8,1024})$/', $option, $matches)) {
-        echo 'Invalid USERNAME or PASSWORD.';
+        echo "Invalid USERNAME or PASSWORD.\n";
 
         return;
     }
@@ -44,14 +44,14 @@ function doAdd($option)
     $admin->username = $username;
     $admin->setPassword($rawPassword);
     $admin->save();
-    echo 'ok.';
+    echo "ok.\n";
 }
 
 function doRm($option)
 {
     $username = trim(explode(' ', trim($option))[0]);
     if (!$username) {
-        echo 'ok.';
+        echo "ok.\n";
 
         return;
     }
@@ -59,14 +59,14 @@ function doRm($option)
     if ($admin) {
         $admin->delete();
     }
-    echo 'ok.';
+    echo "ok.\n";
 }
 
 function doPassword($option)
 {
     $matches = [];
     if (!preg_match('/^\s*(\S+) ([ -~]{8,1024})$/', $option, $matches)) {
-        echo 'Invalid PASSWORD.';
+        echo "Invalid PASSWORD.\n";
 
         return;
     }
@@ -77,7 +77,12 @@ function doPassword($option)
         $admin->setPassword($rawPassword);
         $admin->save();
     }
-    echo 'ok.';
+    echo "ok.\n";
+}
+
+function doQuit()
+{
+    exit();
 }
 
 if (isset($_SERVER['REMOTE_ADDR'])) {
@@ -88,24 +93,30 @@ $c = (new App())->getContainer();
 $c['db'];
 doHelp();
 while (true) {
-    echo '> ';
-    $command = fgets(STDIN);
-    $command = trim($command);
-    if (in_array($command, ['help', 'h'])) {
-        doHelp();
-    } elseif (in_array($command, ['list', 'l'])) {
-        doList();
-    } elseif (0 === strpos($command, 'add ')) {
-        doAdd(mb_substr($command, 4));
-    } elseif (0 === strpos($command, 'rm ')) {
-        doRm(mb_substr($command, 3));
-    } elseif (0 === strpos($command, 'password ')) {
-        doPassword(mb_substr($command, 9));
-    } elseif (0 === strpos($command, 'pw ')) {
-        doPassword(mb_substr($command, 3));
-    } elseif (in_array($command, ['exit', 'quit', 'q'])) {
-        exit();
-    } else {
+    $command = readline('> ');
+    $reserved = [
+        'help'     => 'doHelp',
+        'h'        => 'doHelp',
+        'list'     => 'doList',
+        'l'        => 'doList',
+        'add'      => 'doAdd',
+        'rm'       => 'doRm',
+        'password' => 'doPassword',
+        'pw'       => 'doPassword',
+        'exit'     => 'doQuit',
+        'quit'     => 'doQuit',
+        'q'        => 'doQuit',
+    ];
+    $isDone = false;
+    foreach ($reserved as $name => $action) {
+        if (preg_match("/^$name(?:\W|$)/", $command)) {
+            $action(mb_substr($command, strlen($name)));
+            readline_add_history($command);
+            $isDone = true;
+            break;
+        }
+    }
+    if (!$isDone) {
         doHelp();
     }
 }
