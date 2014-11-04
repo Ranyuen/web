@@ -12,4 +12,4 @@ h1 {
 }
 </style>
 
-{{ nav.news | echoNav(link.base + '/news/') | raw }}
+{{ nav.news | echoNav(link.base ~ '/news/') | raw }}
