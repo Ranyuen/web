@@ -9,7 +9,7 @@
  */
 
 file_put_contents('php.pid', getmypid());
-$filename = __DIR__ . preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);
+$filename = __DIR__.preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);
 if (PHP_SAPI === 'cli-server' && is_file($filename)) {
     return false;
 }

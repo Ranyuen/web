@@ -46,8 +46,7 @@
       <page path="index" title="ウチョウランを極める"/>
       <page path="as_miniminiranran" title="ミニミニランランの育て方"/>
       <page path="kind_of_ponerorchis" title="ウチョウランの種類"/>
-      <page path="ponerorchis_in_the_new_way"
-        title="ウチョウランの育て方を極める"/>
+      <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める"/>
       <dir path="cultivation">
         <page path="index" title="ウチョウランの育て方"/>
         <page path="controlling_pests_of_ponerorchis" title="病害虫の防除"/>

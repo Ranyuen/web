@@ -21,6 +21,6 @@ class LocalHelper
             $arr = [$arr];
         }
 
-        return '症状: ' . implode('・', $arr);
+        return '症状: '.implode('・', $arr);
     }
 }
