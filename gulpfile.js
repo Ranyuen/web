@@ -13,7 +13,7 @@ var Promise       = require('bluebird'),
     runSequence   = require('run-sequence'),
     uglify        = require('gulp-uglifyjs'),
     jshintStylish = require('jshint-stylish');
-var Check404 = require('./lib/check404');
+var Check404 = require('./lib/Check404');
 var sshConfig = {
       host:     'ranyuen.sakura.ne.jp',
       port:     '22',
@@ -65,7 +65,7 @@ gulp.task('deploy', function () {
 });
 
 gulp.task('jshint', function () {
-  return gulp.src(['*.js', 'src/javascripts/*.js']).
+  return gulp.src(['*.js', 'src/javascripts/**/**.js', 'lib/**/**.js']).
     pipe(jshint()).
     pipe(jshint.reporter(jshintStylish));
 });
@@ -145,6 +145,7 @@ gulp.task('uglifyjs', function () {
   layout = gulp.src([
       'src/bower_components/jquery/dist/jquery.min.js',
       'src/bower_components/uri.js/src/URI.min.js',
+      'src/javascripts/polyfill.js',
       'src/javascripts/messageForDeveloperFromRanyuen.js',
     ]).
     pipe(concat('layout.min.js')).
