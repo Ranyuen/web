@@ -95,6 +95,7 @@ gulp.task('php-fixer', function () {
   return Promise.all([
     promiseProcess('vendor/bin/php-cs-fixer fix index.php'),
     promiseProcess('vendor/bin/php-cs-fixer fix phpmig.php'),
+    promiseProcess('vendor/bin/php-cs-fixer fix manage_admin.php'),
     promiseProcess('vendor/bin/php-cs-fixer fix config/'),
     promiseProcess('vendor/bin/php-cs-fixer fix lib/'),
     promiseProcess('vendor/bin/php-cs-fixer fix tests/'),
@@ -115,14 +116,8 @@ gulp.task('php-lint', function () {
 });
 
 gulp.task('php-metrics', function () {
-  return Promise.all([
-      promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php -l .'),
-      promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php lib/'),
-      promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php view/'),
-    ]).then(Promise.all([
-      promiseProcess('vendor/bin/phpmd lib/ text phpmd.xml'),
-      promiseProcess('vendor/bin/phpmd view/ text phpmd.xml'),
-    ]));
+  return promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php lib/').
+    then(promiseProcess('vendor/bin/phpmd lib/ text phpmd.xml'));
 });
 
 gulp.task('php-test', function (done) {
