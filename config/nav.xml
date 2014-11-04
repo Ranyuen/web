@@ -1,83 +1,83 @@
-<?xml version='1.0' standalone='yes'?>
+<?xml version="1.0" standalone="yes"?>
 <nav>
-  <lang name="en">
-    <page path="index" title="Ranyuen"/>
-    <dir path="calanthe">
-      <page path="index" title="Grow Calanthe"/>
-    </dir>
-    <dir path="ponerorchis">
-      <page path="index" title="Grow Ponerorchis"/>
-    </dir>
-    <dir path="about_us">
-      <page path="index" title="About Us"/>
-      <page path="direction" title="Direction"/>
-      <page path="exporting" title="Exporting"/>
-    </dir>
-    <dir path="photos">
-      <page path="index" title="Photos"/>
-    </dir>
-  </lang>
-  <lang name="ja">
-    <page path="index" title="蘭裕園"/>
-    <dir path="calanthe">
-      <page path="index" title="エビネを極める"/>
-      <dir path="grouping">
-        <page path="index" title="エビネの種類"/>
-        <page path="info_about_JIEBINE_calanthe_discolor" title="ジエビネについて"/>
-      </dir>
-      <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
-      <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
-      <dir path="cultivation">
-        <page path="index" title="エビネの栽培"/>
-        <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
-        <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
-        <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
-        <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
-        <page path="repot_calanthe" title="植え替えと株分け"/>
-        <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
-        <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
-      </dir>
-      <dir path="learning">
-        <page path="index" title="エビネから学ぶ"/>
-        <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
-      </dir>
-    </dir>
-    <dir path="ponerorchis">
-      <page path="index" title="ウチョウランを極める"/>
-      <page path="as_miniminiranran" title="ミニミニランランの育て方"/>
-      <page path="kind_of_ponerorchis" title="ウチョウランの種類"/>
-      <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める"/>
-      <dir path="cultivation">
-        <page path="index" title="ウチョウランの育て方"/>
-        <page path="controlling_pests_of_ponerorchis" title="病害虫の防除"/>
-        <page path="habitat_of_ponerorchis" title="自生地から学ぶ"/>
-        <page path="special_upbringing_of_ponerorchis"
-          title="ウチョウランの特殊な育て方"/>
-      </dir>
-    </dir>
-    <dir path="about_us">
-      <page path="index" title="蘭裕園のご紹介"/>
-      <page path="direction" title="アクセス"/>
-    </dir>
-    <dir path="photos">
-      <page path="index" title="写真を見る"/>
-    </dir>
-    <dir path="play">
-      <page path="index" title="蘭華で遊ぶ"/>
-      <page path="orchid_exam" title="ラン検定"/>
-      <page path="shooting_game" title="ラン害虫退治ゲーム"/>
-      <page path="slide_puzzle" title="スライドパズル"/>
-    </dir>
-    <dir path="news">
-      <page path="news" title="お知らせ"/>
-      <page path="shipping_spring_calanthe_2014" title="春色エビネの出荷が始まりました"/>
-      <page path="information_of_orchid_exam" title="ラン検定に新しい問題を追加しました"/>
-      <page path="information_of_new_photos" title="蘭裕園のカラフルな日本のランの写真を続々追加中"/>
-      <page path="information_of_shipping_of_awachidori_and_yumechidori_2014" title="ミニミニランラン (アワチドリ / 夢ちどり) 出荷が始まりました"/>
-      <page path="information_of_calanthe_fair_2014" title="最終半額セールのお知らせ (5月2日・3日)"/>
-      <page path="report_of_calanthe_fair_2014" title="速報! エビネ展2014"/>
-      <page path="calanthe_fair_2014" title="高品質なエビネを世界で一番安く買える! こんなチャンスは今年だけ!"/>
-      <page path="bluray_present_2014" title="蘭裕園の美しいランの世界をブルーレイに!"/>
-    </dir>
-  </lang>
+    <lang name="en">
+        <page path="index" title="Ranyuen"/>
+        <dir path="calanthe">
+            <page path="index" title="Grow Calanthe"/>
+        </dir>
+        <dir path="ponerorchis">
+            <page path="index" title="Grow Ponerorchis"/>
+        </dir>
+        <dir path="about_us">
+            <page path="index" title="About Us"/>
+            <page path="direction" title="Direction"/>
+            <page path="exporting" title="Exporting"/>
+        </dir>
+        <dir path="photos">
+            <page path="index" title="Photos"/>
+        </dir>
+    </lang>
+    <lang name="ja">
+        <page path="index" title="蘭裕園"/>
+        <dir path="calanthe">
+            <page path="index" title="エビネを極める"/>
+            <dir path="grouping">
+                <page path="index" title="エビネの種類"/>
+                <page path="info_about_JIEBINE_calanthe_discolor" title="ジエビネについて"/>
+            </dir>
+            <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
+            <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
+            <dir path="cultivation">
+                <page path="index" title="エビネの栽培"/>
+                <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
+                <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
+                <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
+                <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
+                <page path="repot_calanthe" title="植え替えと株分け"/>
+                <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
+                <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
+            </dir>
+            <dir path="learning">
+                <page path="index" title="エビネから学ぶ"/>
+                <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
+            </dir>
+        </dir>
+        <dir path="ponerorchis">
+            <page path="index" title="ウチョウランを極める"/>
+            <page path="as_miniminiranran" title="ミニミニランランの育て方"/>
+            <page path="kind_of_ponerorchis" title="ウチョウランの種類"/>
+            <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める"/>
+            <dir path="cultivation">
+                <page path="index" title="ウチョウランの育て方"/>
+                <page path="controlling_pests_of_ponerorchis" title="病害虫の防除"/>
+                <page path="habitat_of_ponerorchis" title="自生地から学ぶ"/>
+                <page path="special_upbringing_of_ponerorchis"
+                    title="ウチョウランの特殊な育て方"/>
+            </dir>
+        </dir>
+        <dir path="about_us">
+            <page path="index" title="蘭裕園のご紹介"/>
+            <page path="direction" title="アクセス"/>
+        </dir>
+        <dir path="photos">
+            <page path="index" title="写真を見る"/>
+        </dir>
+        <dir path="play">
+            <page path="index" title="蘭華で遊ぶ"/>
+            <page path="orchid_exam" title="ラン検定"/>
+            <page path="shooting_game" title="ラン害虫退治ゲーム"/>
+            <page path="slide_puzzle" title="スライドパズル"/>
+        </dir>
+        <dir path="news">
+            <page path="news" title="お知らせ"/>
+            <page path="shipping_spring_calanthe_2014" title="春色エビネの出荷が始まりました"/>
+            <page path="information_of_orchid_exam" title="ラン検定に新しい問題を追加しました"/>
+            <page path="information_of_new_photos" title="蘭裕園のカラフルな日本のランの写真を続々追加中"/>
+            <page path="information_of_shipping_of_awachidori_and_yumechidori_2014" title="ミニミニランラン (アワチドリ / 夢ちどり) 出荷が始まりました"/>
+            <page path="information_of_calanthe_fair_2014" title="最終半額セールのお知らせ (5月2日・3日)"/>
+            <page path="report_of_calanthe_fair_2014" title="速報! エビネ展2014"/>
+            <page path="calanthe_fair_2014" title="高品質なエビネを世界で一番安く買える! こんなチャンスは今年だけ!"/>
+            <page path="bluray_present_2014" title="蘭裕園の美しいランの世界をブルーレイに!"/>
+        </dir>
+    </lang>
 </nav>
