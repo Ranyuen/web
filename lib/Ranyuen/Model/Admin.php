@@ -12,4 +12,46 @@ use Illuminate\Database\Eloquent;
 class Admin extends Eloquent\Model
 {
     protected $table = 'admin';
+
+    /**
+     * Hash the given password and set.
+     *
+     * @param string $rawPassword Password.
+     *
+     * @return void
+     */
+    public function setPassword($rawPassword)
+    {
+        $this->password = password_hash($rawPassword, PASSWORD_DEFAULT);
+    }
+
+    /**
+     * Varify the given passwoed.
+     *
+     * @param string $rawPassword Password.
+     *
+     * @return boolean
+     */
+    public function isPasswordCorrect($rawPassword)
+    {
+        return password_verify($rawPassword, $this->password);
+    }
+
+    /**
+     * Verisy the username and password.
+     *
+     * @param string $username    User name.
+     * @param string $rawPassword Password.
+     *
+     * @return boolean
+     */
+    public function isAuth($username, $rawPassword)
+    {
+        $admin = self::where('username', $username)->first();
+        if (!$admin) {
+            return false;
+        }
+
+        return $admin->isPasswordCorrect($rawPassword);
+    }
 }
