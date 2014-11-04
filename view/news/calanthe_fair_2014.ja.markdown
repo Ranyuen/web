@@ -5,7 +5,7 @@ title: 高品質なエビネを世界で一番安く買える! こんなチャ�
 ==
 →  **[速報! エビネ展2014](news/report_of_calanthe_fair_2014)**
 
-→  **[最終半額セールのお知らせ](news/information_of_calanrthe_fair_2014)**
+→  **[最終半額セールのお知らせ](news/information_of_calanthe_fair_2014)**
 
 4月18日から5月3日まで 品質の高いエビネを格安で買えるチャンスがやってくる!
 
@@ -89,7 +89,7 @@ title: 高品質なエビネを世界で一番安く買える! こんなチャ�
 連日、花は追加します!<br />
 10:00 ～ 17:00 (最終日5/3は15:00まで)<br />
 最終セール 5/2、5/3 全品表示価格の半額!売り切れの際は御容赦ください。<br />
- → <a href="news/information_of_calanrthe_fair_2014">最終半額セールのお知らせ</a><br />
+ → <a href="/news/information_of_calanthe_fair_2014">最終半額セールのお知らせ</a><br />
 <p></p>
 <a href="/about_us/direction">アクセス<br /><img src="/assets/images/map1_ja.jpg" alt="蘭裕園へのアクセス" /></a><br />
 売店前第一駐車場は狭いため、車でご来園なさるお客様は下記の第二駐車場 (約50台) をご利用ください。

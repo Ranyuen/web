@@ -45,7 +45,7 @@ description:
 
 アブラムシが大量に寄生すると、吸汁により植物 (作物) の樹勢を衰えさせてしまうだけでなく、ウイルス病などの病気を媒介する可能性があるため、発生前から初期にかけての防除が重要です。作場付近の除草をまめに行い、産卵場所を減らすことで本格的に活動する来春の発生は少なくすることができます。また、キラキラと光るものを嫌うため、アルミホイル等を吊るしておくだけでも飛来数を減らすことができます。すでに大量飛来している場合は薬剤の使用が一番です。
 
-[エビネの病害虫の防除](calanthe/cultivation/growings_controlling_pests_of_calanthe)
+[エビネの病害虫の防除](calanthe/cultivation/controlling_pests_of_calanthe)
 
 [アワチドリの病害虫の防除](ponerorchis/cultivation/controlling_pests_of_ponerorchis)
 
