@@ -1,6 +1,6 @@
 <?php
 /**
- * Config loader.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 

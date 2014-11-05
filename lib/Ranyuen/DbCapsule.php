@@ -1,6 +1,6 @@
 <?php
 /**
- * DB connection.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 

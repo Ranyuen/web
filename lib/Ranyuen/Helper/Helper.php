@@ -1,6 +1,6 @@
 <?php
 /**
- * Main view helper.
+ * Ranyuen web site
  */
 namespace Ranyuen\Helper;
 

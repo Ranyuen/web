@@ -1,6 +1,6 @@
 <?php
 /**
- * RGB and HSV color.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web entry point.
+ * Ranyuen web site
  *
  * PHP versions from 5.4 to 5.6
  *

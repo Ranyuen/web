@@ -1,5 +1,6 @@
 {
   "require": {
+    "php": ">=5.4",
     "clover/text-ltsv": "1.0.*@dev",
     "davedevelopment/phpmig": "1.*",
     "dflydev/markdown": "1.0.*@dev",

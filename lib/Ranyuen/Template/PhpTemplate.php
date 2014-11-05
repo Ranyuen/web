@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP as view template engine.
+ * Ranyuen web site
  */
 namespace Ranyuen\Template;
 

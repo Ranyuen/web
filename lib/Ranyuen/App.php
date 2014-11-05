@@ -1,6 +1,6 @@
 <?php
 /**
- * Application main class.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 
@@ -18,11 +18,15 @@ class App
 {
     /** @var Container */
     private $container;
-    /** @var array */
+    /**
+     * @var array
+     * @Inject
+     */
     private $config;
-    /** @var Navigation */
-    private $nav;
-    /** @var Router */
+    /**
+     * @var Router
+     * @Inject
+     */
     private $router;
 
     /**
@@ -32,7 +36,6 @@ class App
      */
     public function __construct(array $config = null)
     {
-        session_start();
         $env = isset($_ENV['SERVER_ENV']) ? $_ENV['SERVER_ENV'] : 'development';
         if ('development' === $env) {
             ini_set('display_errors', 1);
@@ -58,24 +61,24 @@ class App
      */
     public function run()
     {
-        $this->container['db'];
+        $this->container['db']; // Prepare DB connection.
         $this->router->run();
 
         return $this;
     }
 
     /**
-     * @param Container $container DI container
-     * @param string    $env       development or production or...
+     * @param Container $c   DI container
+     * @param string    $env development or production or...
      *
      * @return void
      */
-    private function loadServices(Container $container, $env)
+    private function loadServices(Container $c, $env)
     {
-        $container['config'] = function ($c) use ($env) {
+        $c['config'] = function ($c) use ($env) {
             return array_merge($this->config, (new Config())->load($env));
         };
-        $container->bind(
+        $c->bind(
             '\Ranyuen\Logger',
             'logger',
             function ($c) {
@@ -84,29 +87,52 @@ class App
                 return new Logger($config['mode'], $config);
             }
         );
-        $container->bind(
+        $c->bind(
             '\Ranyuen\Navigation',
             'nav',
             function ($c) {
                 return new Navigation($c['config']);
             }
         );
-        $container->bind(
+        $c->bind(
             '\Ranyuen\Router',
             'router',
             function ($c) {
                 return new Router($this, $c['config']);
             }
         );
-        $container->bind(
+        $c->bind(
             '\Ranyuen\Db',
             'db',
             function ($c) {
                 return new DbCapsule($c['logger'], $c['config']['db']);
             }
         );
-        $this->config = $container['config'];
-        $this->nav    = $container['nav'];
-        $this->router = $container['router'];
+        $c->bind(
+            '\Ranyuen\Renderer',
+            'renderer',
+            function ($c) {
+                $config = $c['config'];
+
+                return (new Renderer($config['templates.path']))
+                    ->setLayout($config['layout'])
+                    ->addHelper(new Helper\Helper($config));
+            }
+        );
+        $c->bind(
+            '\Ranyuen\Session',
+            'session',
+            function ($c) {
+                return new Session();
+            }
+        );
+        $c->bind(
+            '\Ranyuen\BgImage',
+            'bgimage',
+            function ($c) {
+                return $c->newInstance('\Ranyuen\BgImage');
+            }
+        );
+        $c->inject($this);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * YAML+Jinja2+Markdown stack
+ * Ranyuen web site
  */
 namespace Ranyuen;
 
@@ -36,6 +36,11 @@ class Renderer
      */
     public function setLayout($templateName)
     {
+        if (is_null($templateName)) {
+            $this->layout = null;
+
+            return $this;
+        }
         $dir = $this->templatesPath;
         if (is_file("$dir/$templateName.html")) {
             $this->layout = file_get_contents("$dir/$templateName.html");

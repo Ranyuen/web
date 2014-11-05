@@ -1,6 +1,6 @@
 <?php
 /**
- * API
+ * Ranyuen web site
  */
 namespace Ranyuen\Controller;
 

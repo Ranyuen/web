@@ -1,6 +1,6 @@
 <?php
 /**
- * Backgroud image selector.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 
@@ -10,36 +10,36 @@ namespace Ranyuen;
 class BgImage
 {
     private $resources = [];
-
     /**
-     * @SuppressWarnings(PHPMD.Superglobals)
+     * @var \Ranyuen\Session
+     * @Inject
      */
+    private $session;
+
     public function __construct()
     {
-        if (isset($_SESSION['bgimage'])) {
-            $bgimage = $_SESSION['bgimage'];
+        if (isset($this->session['bgimage'])) {
+            $bgimage = $this->session['bgimage'];
             if ($bgimage['expiration'] >= time()) {
                 $this->resources = [$bgimage['img']];
 
                 return $this;
             }
-            unset($_SESSION['bgimage']);
+            unset($this->session['bgimage']);
         }
         $this->resources = $this->getAvailableImages();
     }
 
     /**
      * @return string
-     *
-     * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function getRandom()
     {
         $image = $this->resources[array_rand($this->resources)];
-        $_SESSION['bgimage'] = [
+        $this->session['bgimage'] = [
             'img' => $image,
-            'expiration' => isset($_SESSION['bgimage']['expiration']) ?
-                $_SESSION['bgimage']['expiration'] :
+            'expiration' => isset($this->session['bgimage']['expiration']) ?
+                $this->session['bgimage']['expiration'] :
                 time() + 3600,
         ];
 

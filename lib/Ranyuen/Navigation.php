@@ -1,6 +1,6 @@
 <?php
 /**
- * Load navigation config and manipulate.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 

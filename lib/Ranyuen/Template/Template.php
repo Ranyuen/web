@@ -1,6 +1,6 @@
 <?php
 /**
- * Template interface.
+ * Ranyuen web site
  */
 namespace Ranyuen\Template;
 
