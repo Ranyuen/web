@@ -9,15 +9,15 @@ namespace Ranyuen;
  */
 class Navigation
 {
+    /** @Inject */
     private $config;
     private $nav;
 
     /**
      * @param array $config Application config
      */
-    public function __construct(array $config)
+    public function __construct()
     {
-        $this->config = $config;
         $this->nav = simplexml_load_file('config/nav.xml');
     }
 

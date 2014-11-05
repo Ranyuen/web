@@ -18,12 +18,12 @@ class DbCapsule
 
     /**
      * @param Logger $logger Logger
-     * @param array  $config DB config (not application config).
+     * @param array  $config Application config
      */
     public function __construct(Logger $logger, array $config)
     {
         $this->capsule = new Manager();
-        $this->capsule->addConnection($config);
+        $this->capsule->addConnection($config['db']);
         $dispatcher = new Dispatcher(new Illuminate\Container\Container());
         $dispatcher->listen(
             'illuminate.query',

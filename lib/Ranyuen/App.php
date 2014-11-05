@@ -82,30 +82,28 @@ class App
             '\Ranyuen\Logger',
             'logger',
             function ($c) {
-                $config = $c['config'];
-
-                return new Logger($config['mode'], $config);
+                return $c->newInstance('\Ranyuen\Logger', [$c['config']['mode']]);
             }
         );
         $c->bind(
             '\Ranyuen\Navigation',
             'nav',
             function ($c) {
-                return new Navigation($c['config']);
+                return $c->newInstance('\Ranyuen\Navigation');
             }
         );
         $c->bind(
             '\Ranyuen\Router',
             'router',
             function ($c) {
-                return new Router($this, $c['config']);
+                return $c->newInstance('\Ranyuen\Router', [$this]);
             }
         );
         $c->bind(
-            '\Ranyuen\Db',
+            '\Ranyuen\DbCapsule',
             'db',
             function ($c) {
-                return new DbCapsule($c['logger'], $c['config']['db']);
+                return $c->newInstance('\Ranyuen\DbCapsule');
             }
         );
         $c->bind(

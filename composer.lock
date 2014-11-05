@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "987aa791ccf94ccc881212568a759885",
+    "hash": "a5f8a33d667c5f2051cc84a678f8787e",
     "packages": [
         {
             "name": "clover/text-ltsv",
@@ -569,24 +569,25 @@
         },
         {
             "name": "ranyuen/di",
-            "version": "dev-master",
+            "version": "dev-dev0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ranyuen/Di.git",
-                "reference": "1efd2289ee27ad4c515c6ec5f7819db207c61361"
+                "reference": "9588df69ba8b6691f245003903a87447592d7cc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/1efd2289ee27ad4c515c6ec5f7819db207c61361",
-                "reference": "1efd2289ee27ad4c515c6ec5f7819db207c61361",
+                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/9588df69ba8b6691f245003903a87447592d7cc4",
+                "reference": "9588df69ba8b6691f245003903a87447592d7cc4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
+                "php": ">=5.4.0",
                 "pimple/pimple": "~3.0"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "~1.0@dev",
+                "phing/phing": "~2.8",
                 "phpmd/phpmd": "~2.1",
                 "phpunit/phpunit": "~4.3",
                 "squizlabs/php_codesniffer": "~1.5"
@@ -607,11 +608,11 @@
                     "email": "utakata.c4se@gmail.com"
                 }
             ],
-            "description": "Simple Ray.Di style DI (Dependency Injector) extending Pimple.",
+            "description": "Annotation based, simple DI (Dependency Injector) extending Pimple.",
             "keywords": [
                 "di"
             ],
-            "time": "2014-11-03 11:48:49"
+            "time": "2014-11-03 11:56:22"
         },
         {
             "name": "slim/slim",
@@ -1025,12 +1026,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
-                "reference": "ff8ec52e658829b9400f874fe61acf9553088867"
+                "reference": "38dbe4c2a63fc1e59eff14676fd538e4fe233f56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/ff8ec52e658829b9400f874fe61acf9553088867",
-                "reference": "ff8ec52e658829b9400f874fe61acf9553088867",
+                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/38dbe4c2a63fc1e59eff14676fd538e4fe233f56",
+                "reference": "38dbe4c2a63fc1e59eff14676fd538e4fe233f56",
                 "shasum": ""
             },
             "require": {
@@ -1049,12 +1050,12 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Symfony\\CS": "."
+                "psr-4": {
+                    "Symfony\\CS\\": "Symfony/CS/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1068,7 +1069,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-11-03 06:18:03"
+            "time": "2014-11-04 06:25:20"
         },
         {
             "name": "pdepend/pdepend",
@@ -2128,6 +2129,8 @@
         "fabpot/php-cs-fixer": 20
     },
     "prefer-stable": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.4"
+    },
     "platform-dev": []
 }

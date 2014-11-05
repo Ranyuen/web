@@ -10,7 +10,7 @@
     "slim/slim": "2.*",
     "symfony/yaml": "2.5.*",
     "twig/twig": "1.*",
-    "ranyuen/di": "dev-master"
+    "ranyuen/di": "dev-dev0.1.0"
   },
   "require-dev": {
     "fabpot/php-cs-fixer": "~1.0@dev",
