@@ -89,7 +89,7 @@ class AdminController extends Controller
     private function auth()
     {
         if (!isset($this->session['admin_username'])) {
-            $this->router->redirect('/admin/login', 303);
+            $this->router->halt(403, '403 Forbidden');
 
             return false;
         }
