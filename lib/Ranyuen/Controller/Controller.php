@@ -1,6 +1,6 @@
 <?php
 /**
- * Controller interface
+ * Ranyuen web site
  */
 namespace Ranyuen\Controller;
 

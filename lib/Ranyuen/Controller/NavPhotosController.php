@@ -1,6 +1,6 @@
 <?php
 /**
- * Static page.
+ * Ranyuen web site
  */
 namespace Ranyuen\Controller;
 
@@ -29,16 +29,12 @@ class NavPhotosController extends NavController
      * @param array  $params       Template params
      *
      * @return void
-     *
-     * @SuppressWarnings(PHPMD.Superglobals)
      */
     protected function render($lang, $templateName, $params = [])
     {
         $params = [];
         $controller = new \Ranyuen\Controller\ApiPhotos();
-        $speciesName = isset($_GET['species_name']) ?
-            $_GET['species_name'] :
-            null;
+        $speciesName = $this->router->request->get('species_name');
         $photos = $controller->get(
             [
                 'species_name' => $speciesName,

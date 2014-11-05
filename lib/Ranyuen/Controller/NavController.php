@@ -1,12 +1,10 @@
 <?php
 /**
- * Static pages
+ * Ranyuen web site
  */
 namespace Ranyuen\Controller;
 
 use Ranyuen\BgImage;
-use Ranyuen\Helper\Helper;
-use Ranyuen\Renderer;
 
 /**
  * Static pages
@@ -14,25 +12,35 @@ use Ranyuen\Renderer;
 class NavController extends Controller
 {
     /**
-     * @Inject
      * @var array
+     * @Inject
      */
     protected $config;
     /**
-     * @Inject
      * @var \Ranyuen\Logger
+     * @Inject
      */
     protected $logger;
     /**
-     * @Inject
      * @var \Ranyuen\Router
+     * @Inject
      */
     protected $router;
     /**
-     * @Inject
      * @var \Ranyuen\Navigation
+     * @Inject
      */
     protected $nav;
+    /**
+     * @var \Ranyuen\Renderer
+     * @Inject
+     */
+    protected $renderer;
+    /**
+     * @var \Ranyuen\BgImage
+     * @Inject
+     */
+    protected $bgimage;
 
     /**
      * @param string $lang Current lang
@@ -79,16 +87,13 @@ class NavController extends Controller
                 ],
                 'breadcrumb' => $nav->getBreadcrumb($lang, $templateName),
                 'link'       => $nav->getAlterNav($lang, $templateName),
-                'bgimage'    => (new BgImage())->getRandom(),
+                'bgimage'    => $this->bgimage->getRandom(),
                 'messages'   => $this->config['message'][$lang],
             ]
         );
-        $str = (new Renderer($this->config['templates.path']))
-            ->setLayout($this->config['layout'])
-            ->addHelper(new Helper($this->config))
-            ->render("$templateName.$lang", $params);
+        $str = $this->renderer->render("$templateName.$lang", $params);
         if (false === $str) {
-            $this->_router->notFound();
+            $this->router->notFound();
         } else {
             echo $str;
         }

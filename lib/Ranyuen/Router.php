@@ -1,6 +1,6 @@
 <?php
 /**
- * URI router.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 

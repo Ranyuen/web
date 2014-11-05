@@ -1,17 +1,17 @@
 <?php
 /**
- * phpmig startup.
+ * phpmig startup
  */
 require 'vendor/autoload.php';
 
-use \Phpmig\Adapter;
-use \Ranyuen\App;
+use Phpmig\Adapter;
+use Ranyuen\App;
 
-$container = (new App())->getContainer();
-$container['schema'] = function ($c) {
+$c = (new App())->getContainer();
+$c['schema'] = function ($c) {
     return $c['db']->getSchemaBuilder();
 };
-$container['phpmig.adapter'] = new Adapter\File\Flat(__DIR__.DIRECTORY_SEPARATOR.'migrations/.migrations.log');
-$container['phpmig.migrations_path'] = __DIR__.DIRECTORY_SEPARATOR.'migrations';
+$c['phpmig.adapter'] = new Adapter\File\Flat(__DIR__.'/config/migrations/.migrations.log');
+$c['phpmig.migrations_path'] = __DIR__.'/config/migrations';
 
-return $container;
+return $c;

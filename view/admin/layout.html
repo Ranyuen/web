@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <title>{{ title }} | Ranyuen admin</title>
+  <link rel="home" href="/admin/"/>
+</head>
+<body>
+  <header>
+    <span>Admin</span>
+    <span>{{ admin_username }}</span>
+    <span><a href="/admin/logout">Logout</a></span>
+  </header>
+  <div>{{ content | raw }}</div>
+</body>
+</html>
+<!-- vim:ft=twig: -->

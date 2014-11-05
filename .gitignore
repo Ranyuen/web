@@ -1,6 +1,6 @@
 /images/gallery/*
 /images/cache/*
-/migrations/*.log
+/config/migrations/*.log
 *.sqlite3
 !.gitkeep
 

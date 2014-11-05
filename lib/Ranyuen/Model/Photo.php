@@ -1,6 +1,6 @@
 <?php
 /**
- * Photo model.
+ * Ranyuen web site
  */
 namespace Ranyuen\Model;
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Logger.
+ * Ranyuen web site
  */
 namespace Ranyuen;
 

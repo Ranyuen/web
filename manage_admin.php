@@ -1,0 +1,122 @@
+<?php
+/**
+ * CUI admin account manager.
+ */
+require 'vendor/autoload.php';
+
+use Ranyuen\App;
+use Ranyuen\Model\Admin;
+
+function doHelp()
+{
+    echo "* manage_admin.php *
+Ctrl^C to quit.
+
+help                      \t:Print this help.
+list                      \t:List admin usernames.
+add USERNAME PASSWORD     \t:Add a new user.
+rm USERNAME               \t:Delete the user.
+password USERNAME PASSWORD\t:Change password.
+exit                      \t:Quit.
+quit                      \t:Quit.
+";
+}
+
+function doList()
+{
+    $admins = Admin::all();
+    foreach ($admins as $admin) {
+        echo "$admin->username\n";
+    }
+}
+
+function doAdd($option)
+{
+    $matches = [];
+    if (!preg_match('/^\s*([-_.A-Za-z0-9]{4,100}) ([ -~]{8,1024})$/', $option, $matches)) {
+        echo "Invalid USERNAME or PASSWORD.\n";
+
+        return;
+    }
+    $username = $matches[1];
+    $rawPassword = $matches[2];
+    $admin = new Admin();
+    $admin->username = $username;
+    $admin->setPassword($rawPassword);
+    $admin->save();
+    echo "ok.\n";
+}
+
+function doRm($option)
+{
+    $username = trim(explode(' ', trim($option))[0]);
+    if (!$username) {
+        echo "ok.\n";
+
+        return;
+    }
+    $admin = Admin::where('username', $username)->first();
+    if ($admin) {
+        $admin->delete();
+    }
+    echo "ok.\n";
+}
+
+function doPassword($option)
+{
+    $matches = [];
+    if (!preg_match('/^\s*(\S+) ([ -~]{8,1024})$/', $option, $matches)) {
+        echo "Invalid PASSWORD.\n";
+
+        return;
+    }
+    $username = $matches[1];
+    $rawPassword = $matches[2];
+    $admin = Admin::where('username', $username)->first();
+    if ($admin) {
+        $admin->setPassword($rawPassword);
+        $admin->save();
+    }
+    echo "ok.\n";
+}
+
+function doQuit()
+{
+    exit();
+}
+
+if (isset($_SERVER['REMOTE_ADDR'])) {
+    header('Location: /');
+    exit();
+}
+$c = (new App())->getContainer();
+$c['db'];
+doHelp();
+while (true) {
+    $command = readline('> ');
+    $reserved = [
+        'help'     => 'doHelp',
+        'h'        => 'doHelp',
+        'list'     => 'doList',
+        'l'        => 'doList',
+        'add'      => 'doAdd',
+        'rm'       => 'doRm',
+        'password' => 'doPassword',
+        'pw'       => 'doPassword',
+        'exit'     => 'doQuit',
+        'quit'     => 'doQuit',
+        'q'        => 'doQuit',
+    ];
+    $isDone = false;
+    foreach ($reserved as $name => $action) {
+        if (preg_match("/^$name(?:\W|$)/", $command)) {
+            $action(mb_substr($command, strlen($name)));
+            readline_add_history($command);
+            $isDone = true;
+            break;
+        }
+    }
+    if (!$isDone) {
+        doHelp();
+    }
+}

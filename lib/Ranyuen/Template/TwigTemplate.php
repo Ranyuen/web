@@ -1,6 +1,6 @@
 <?php
 /**
- * Twig template engine.
+ * Ranyuen web site
  */
 namespace Ranyuen\Template;
 

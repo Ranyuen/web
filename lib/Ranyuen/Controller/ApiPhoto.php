@@ -1,6 +1,6 @@
 <?php
 /**
- * /api/photo controller
+ * Ranyuen web site
  */
 namespace Ranyuen\Controller;
 

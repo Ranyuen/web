@@ -10,6 +10,32 @@ $router->map('/api/:path+', function ($path) use ($router) {
         );
 })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
 
+function routeAdmin($router)
+{
+    $controller = $router->
+        getContainer()->
+        newInstance('\Ranyuen\Controller\AdminController');
+    $router->get('/admin/', function () use ($controller) {
+        $controller->index();
+    });
+    $router->get('/admin/login', function () use ($controller) {
+        $controller->showLogin();
+    });
+    $router->post('/admin/login', function () use ($router, $controller) {
+        $controller->login(
+            $router->request->post('username'),
+            $router->request->post('password')
+        );
+    });
+    $router->map('/admin/logout', function () use ($controller) {
+        $controller->logout();
+    })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
+    $router->map('/admin/*', function () use ($router) {
+        $router->notFound();
+    })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
+}
+routeAdmin($router);
+
 function routeNavPhotos($router)
 {
     $nav = $router->getContainer()['nav'];
@@ -25,7 +51,6 @@ function routeNavPhotos($router)
             ->showFromTemplate($lang);
     })->conditions(['lang' => $lang_regex]);
 }
-
 routeNavPhotos($router);
 
 function routeNav($router)
@@ -61,5 +86,4 @@ function routeNav($router)
         $controller('default', $path);
     });
 }
-
 routeNav($router);
