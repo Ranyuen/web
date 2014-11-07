@@ -13,9 +13,6 @@ class Navigation
     private $config;
     private $nav;
 
-    /**
-     * @param array $config Application config
-     */
     public function __construct()
     {
         $this->nav = simplexml_load_file('config/nav.xml');

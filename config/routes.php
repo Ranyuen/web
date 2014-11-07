@@ -1,7 +1,7 @@
 <?php
 $router->map('/api/:path+', function ($path) use ($router) {
     $router->getContainer()
-        ->newInstance('\Ranyuen\Controller\ApiController')
+        ->newInstance('Ranyuen\Controller\ApiController')
         ->renderApi(
             $path[0],
             $router->request->getMethod(),
@@ -14,7 +14,7 @@ function routeAdmin($router)
 {
     $controller = $router->
         getContainer()->
-        newInstance('\Ranyuen\Controller\AdminController');
+        newInstance('Ranyuen\Controller\AdminController');
     $router->get('/admin/', function () use ($controller) {
         $controller->index();
     });
@@ -42,12 +42,12 @@ function routeNavPhotos($router)
     $lang_regex = implode('|', $nav->getLangs());
     $router->get('/photos/*', function () use ($router) {
         $router->getContainer()
-            ->newInstance('\Ranyuen\Controller\NavPhotosController')
+            ->newInstance('Ranyuen\Controller\NavPhotosController')
             ->showFromTemplate('default');
     });
     $router->get('/:lang/photos/*', function ($lang) use ($router) {
         $router->getContainer()
-            ->newInstance('\Ranyuen\Controller\NavPhotosController')
+            ->newInstance('Ranyuen\Controller\NavPhotosController')
             ->showFromTemplate($lang);
     })->conditions(['lang' => $lang_regex]);
 }
@@ -58,7 +58,7 @@ function routeNav($router)
     $nav = $router->getContainer()['nav'];
     $controller = function ($lang, $path) use ($router) {
         $router->getContainer()
-            ->newInstance('\Ranyuen\Controller\NavController')
+            ->newInstance('Ranyuen\Controller\NavController')
             ->showFromTemplate($lang, $path);
     };
     $lang_regex = implode('|', $nav->getLangs());

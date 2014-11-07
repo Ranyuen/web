@@ -17,9 +17,9 @@
   "dependencies": {
     "normalize-css": "~3.0.2",
     "jquery": "~2.1.1",
-    "colorbox": "~1.5.9",
+    "colorbox": "~1.5.14",
     "masonry": "~3.1.5",
-    "uri.js": "~1.13.2",
+    "uri.js": "~1.14.1",
     "hogan": "~3.0.2"
   }
 }

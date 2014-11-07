@@ -21,8 +21,8 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/en/about_us/exportiong</loc>
-    <lastmod>2014-10-11T10:21:16Z</lastmod>
+    <loc>http://ranyuen.com/en/about_us/exporting</loc>
+    <lastmod>2014-11-04T16:15:42Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/news/report_of_calanthe_fair_2014</loc>
-    <lastmod>2014-11-01T22:50:30Z</lastmod>
+    <lastmod>2014-11-04T16:15:42Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -87,17 +87,17 @@
   </url>
   <url>
     <loc>http://ranyuen.com/news/calanthe_fair_2014</loc>
-    <lastmod>2014-11-01T22:50:30Z</lastmod>
+    <lastmod>2014-11-04T16:15:42Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/information_of_shipping_of_awachidori_and_yumechidori_2014</loc>
-    <lastmod>2014-10-26T18:32:29Z</lastmod>
+    <lastmod>2014-11-04T16:15:42Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/news</loc>
-    <lastmod>2014-10-26T18:32:29Z</lastmod>
+    <lastmod>2014-11-04T16:15:42Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -117,7 +117,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/recent_failure_and_provision</loc>
-    <lastmod>2014-11-01T22:50:30Z</lastmod>
+    <lastmod>2014-11-04T16:15:42Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -238,6 +238,16 @@
   <url>
     <loc>http://ranyuen.com/about_us/direction</loc>
     <lastmod>2014-10-11T10:21:16Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/admin/</loc>
+    <lastmod>2014-11-05T10:39:54Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/admin/login</loc>
+    <lastmod>2014-11-05T10:39:54Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
 </urlset>

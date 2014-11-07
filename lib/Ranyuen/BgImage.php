@@ -11,7 +11,7 @@ class BgImage
 {
     private $resources = [];
     /**
-     * @var \Ranyuen\Session
+     * @var Ranyuen\Session
      * @Inject
      */
     private $session;

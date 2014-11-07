@@ -13,7 +13,7 @@ class ApiController extends Controller
 {
     /**
      * @Inject
-     * @var \Ranyuen\Logger
+     * @var Ranyuen\Logger
      */
     private $logger;
 

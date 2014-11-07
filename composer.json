@@ -19,6 +19,6 @@
     "phpmd/phpmd": "~2.1"
   },
   "autoload": {
-    "psr-0": {"Ranyuen\\": "lib/"}
+    "psr-4": {"Ranyuen\\": "lib/Ranyuen/"}
   }
 }

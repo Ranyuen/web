@@ -79,35 +79,35 @@ class App
             return array_merge($this->config, (new Config())->load($env));
         };
         $c->bind(
-            '\Ranyuen\Logger',
+            'Ranyuen\Logger',
             'logger',
             function ($c) {
-                return $c->newInstance('\Ranyuen\Logger', [$c['config']['mode']]);
+                return $c->newInstance('Ranyuen\Logger', [$c['config']['mode']]);
             }
         );
         $c->bind(
-            '\Ranyuen\Navigation',
+            'Ranyuen\Navigation',
             'nav',
             function ($c) {
-                return $c->newInstance('\Ranyuen\Navigation');
+                return $c->newInstance('Ranyuen\Navigation');
             }
         );
         $c->bind(
-            '\Ranyuen\Router',
+            'Ranyuen\Router',
             'router',
             function ($c) {
-                return $c->newInstance('\Ranyuen\Router', [$this]);
+                return $c->newInstance('Ranyuen\Router', [$this]);
             }
         );
         $c->bind(
-            '\Ranyuen\DbCapsule',
+            'Ranyuen\DbCapsule',
             'db',
             function ($c) {
-                return $c->newInstance('\Ranyuen\DbCapsule');
+                return $c->newInstance('Ranyuen\DbCapsule');
             }
         );
         $c->bind(
-            '\Ranyuen\Renderer',
+            'Ranyuen\Renderer',
             'renderer',
             function ($c) {
                 $config = $c['config'];
@@ -118,17 +118,17 @@ class App
             }
         );
         $c->bind(
-            '\Ranyuen\Session',
+            'Ranyuen\Session',
             'session',
             function ($c) {
                 return new Session();
             }
         );
         $c->bind(
-            '\Ranyuen\BgImage',
+            'Ranyuen\BgImage',
             'bgimage',
             function ($c) {
-                return $c->newInstance('\Ranyuen\BgImage');
+                return $c->newInstance('Ranyuen\BgImage');
             }
         );
         $c->inject($this);

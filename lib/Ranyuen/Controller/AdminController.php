@@ -14,22 +14,22 @@ use Ranyuen\Model\Admin;
 class AdminController extends Controller
 {
     /**
-     * @var \Ranyuen\Router
+     * @var Ranyuen\Router
      * @Inject
      */
     private $router;
     /**
-     * @var \Ranyuen\Renderer
+     * @var Ranyuen\Renderer
      * @Inject
      */
     private $renderer;
     /**
-     * @var \Ranyuen\Logger
+     * @var Ranyuen\Logger
      * @Inject
      */
     private $logger;
     /**
-     * @var \Ranyuen\Session
+     * @var Ranyuen\Session
      * @Inject
      */
     private $session;

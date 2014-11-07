@@ -17,27 +17,27 @@ class NavController extends Controller
      */
     protected $config;
     /**
-     * @var \Ranyuen\Logger
+     * @var Ranyuen\Logger
      * @Inject
      */
     protected $logger;
     /**
-     * @var \Ranyuen\Router
+     * @var Ranyuen\Router
      * @Inject
      */
     protected $router;
     /**
-     * @var \Ranyuen\Navigation
+     * @var Ranyuen\Navigation
      * @Inject
      */
     protected $nav;
     /**
-     * @var \Ranyuen\Renderer
+     * @var Ranyuen\Renderer
      * @Inject
      */
     protected $renderer;
     /**
-     * @var \Ranyuen\BgImage
+     * @var Ranyuen\BgImage
      * @Inject
      */
     protected $bgimage;

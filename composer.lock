@@ -181,6 +181,126 @@
             "time": "2014-01-06 23:32:02"
         },
         {
+            "name": "doctrine/annotations",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "6a6bec0670bb6e71a263b08bc1b98ea242928633"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/6a6bec0670bb6e71a263b08bc1b98ea242928633",
+                "reference": "6a6bec0670bb6e71a263b08bc1b98ea242928633",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Annotations\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2014-09-25 16:45:30"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/2f708a85bb3aab5d99dab8be435abd73e0b18acb",
+                "reference": "2f708a85bb3aab5d99dab8be435abd73e0b18acb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Common\\Lexer\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com",
+                    "homepage": "http://www.instaclick.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com",
+                    "homepage": "https://github.com/schmittjoh",
+                    "role": "Developer of wrapped JMSSerializerBundle"
+                }
+            ],
+            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "lexer",
+                "parser"
+            ],
+            "time": "2013-01-12 18:59:04"
+        },
+        {
             "name": "illuminate/container",
             "version": "v4.2.9",
             "target-dir": "Illuminate/Container",
@@ -573,15 +693,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ranyuen/Di.git",
-                "reference": "9588df69ba8b6691f245003903a87447592d7cc4"
+                "reference": "e45037e3e8afba4c96dba293356c83464fa7cef5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/9588df69ba8b6691f245003903a87447592d7cc4",
-                "reference": "9588df69ba8b6691f245003903a87447592d7cc4",
+                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/e45037e3e8afba4c96dba293356c83464fa7cef5",
+                "reference": "e45037e3e8afba4c96dba293356c83464fa7cef5",
                 "shasum": ""
             },
             "require": {
+                "doctrine/annotations": "~1.2",
                 "php": ">=5.4.0",
                 "pimple/pimple": "~3.0"
             },
@@ -608,11 +729,11 @@
                     "email": "utakata.c4se@gmail.com"
                 }
             ],
-            "description": "Annotation based, simple DI (Dependency Injector) extending Pimple.",
+            "description": "Annotation based simple DI (Dependency Injection) & AOP (Aspect Oriented Programming).",
             "keywords": [
                 "di"
             ],
-            "time": "2014-11-03 11:56:22"
+            "time": "2014-11-07 15:53:05"
         },
         {
             "name": "slim/slim",
@@ -1025,13 +1146,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/PHP-CS-Fixer.git",
-                "reference": "38dbe4c2a63fc1e59eff14676fd538e4fe233f56"
+                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
+                "reference": "336fbb7f3727380366371095c3206a5f5de4d80d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/PHP-CS-Fixer/zipball/38dbe4c2a63fc1e59eff14676fd538e4fe233f56",
-                "reference": "38dbe4c2a63fc1e59eff14676fd538e4fe233f56",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/336fbb7f3727380366371095c3206a5f5de4d80d",
+                "reference": "336fbb7f3727380366371095c3206a5f5de4d80d",
                 "shasum": ""
             },
             "require": {
@@ -1069,7 +1190,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2014-11-04 06:25:20"
+            "time": "2014-11-06 20:22:46"
         },
         {
             "name": "pdepend/pdepend",
