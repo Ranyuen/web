@@ -109,13 +109,14 @@ class App
         $c->bind(
             'Ranyuen\Renderer',
             'renderer',
-            function ($c) {
+            $c->factory(function ($c) {
                 $config = $c['config'];
+                $renderer = (new Renderer($config['templates.path']))
+                    ->setLayout($config['layout']);
+                $renderer->addHelper($c->newInstance('Ranyuen\Helper\MainHelper'));
 
-                return (new Renderer($config['templates.path']))
-                    ->setLayout($config['layout'])
-                    ->addHelper(new Helper\Helper($config));
-            }
+                return $renderer;
+            })
         );
         $c->bind(
             'Ranyuen\Session',

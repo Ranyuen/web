@@ -17,6 +17,7 @@ class CreateArticleTable extends Migration
             $t->string('url', 255);
             $t->string('lang', 3)->default('ja');
             $t->timestamps();
+            $t->unique(['url', 'lang']);
         });
     }
 

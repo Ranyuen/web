@@ -12,11 +12,6 @@ use Ranyuen\BgImage;
 class NavController extends Controller
 {
     /**
-     * @var array
-     * @Inject
-     */
-    protected $config;
-    /**
      * @var Ranyuen\Logger
      * @Inject
      */
@@ -27,20 +22,10 @@ class NavController extends Controller
      */
     protected $router;
     /**
-     * @var Ranyuen\Navigation
-     * @Inject
-     */
-    protected $nav;
-    /**
      * @var Ranyuen\Renderer
      * @Inject
      */
     protected $renderer;
-    /**
-     * @var Ranyuen\BgImage
-     * @Inject
-     */
-    protected $bgimage;
 
     /**
      * @param string $lang Current lang
@@ -72,25 +57,11 @@ class NavController extends Controller
      */
     protected function render($lang, $templateName, $params = [])
     {
-        if (isset($this->config['lang'][$lang])) {
-            $lang = $this->config['lang'][$lang];
-        }
-        $nav = $this->nav;
         $params = array_merge(
             $params,
-            [
-                'lang'       => $lang,
-                'nav'        => [
-                    'global' => $nav->getGlobalNav($lang),
-                    'local'  => $nav->getLocalNav($lang, $templateName),
-                    'news'   => $nav->getNews($lang),
-                ],
-                'breadcrumb' => $nav->getBreadcrumb($lang, $templateName),
-                'link'       => $nav->getAlterNav($lang, $templateName),
-                'bgimage'    => $this->bgimage->getRandom(),
-                'messages'   => $this->config['message'][$lang],
-            ]
+            $this->getDefaultParams($lang, $templateName)
         );
+        $lang = $params['lang'];
         $str = $this->renderer->render("$templateName.$lang", $params);
         if (false === $str) {
             $this->router->notFound();
