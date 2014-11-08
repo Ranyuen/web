@@ -12,23 +12,25 @@ $router->map('/api/:path+', function ($path) use ($router) {
 
 function routeAdmin($router)
 {
-    $controller = $router->
-        getContainer()->
-        newInstance('Ranyuen\Controller\AdminController');
+    $controller = function () {
+        return $router
+            ->getContainer()
+            ->newInstance('Ranyuen\Controller\AdminController');
+    };
     $router->get('/admin/', function () use ($controller) {
-        $controller->index();
+        $controller()->index();
     });
     $router->get('/admin/login', function () use ($controller) {
-        $controller->showLogin();
+        $controller()->showLogin();
     });
     $router->post('/admin/login', function () use ($router, $controller) {
-        $controller->login(
+        $controller()->login(
             $router->request->post('username'),
             $router->request->post('password')
         );
     });
     $router->map('/admin/logout', function () use ($controller) {
-        $controller->logout();
+        $controller()->logout();
     })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
     $router->map('/admin/*', function () use ($router) {
         $router->notFound();
