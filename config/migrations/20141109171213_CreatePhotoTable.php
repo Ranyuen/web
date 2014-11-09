@@ -36,4 +36,3 @@ class CreatePhotoTable extends Migration
         $this->get('schema')->drop('photo');
     }
 }
-// vim:ft=php:
