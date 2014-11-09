@@ -29,13 +29,13 @@
             <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
             <dir path="cultivation">
                 <page path="index" title="エビネの栽培"/>
-                <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
                 <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
-                <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
-                <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
-                <page path="repot_calanthe" title="植え替えと株分け"/>
+                <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
                 <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
                 <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
+                <page path="repot_calanthe" title="植え替えと株分け"/>
+                <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
+                <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
             </dir>
             <dir path="learning">
                 <page path="index" title="エビネから学ぶ"/>
@@ -58,6 +58,7 @@
         <dir path="about_us">
             <page path="index" title="蘭裕園のご紹介"/>
             <page path="direction" title="アクセス"/>
+            <page path="how_to_buy" title="ご購入をご希望の方へ"/>
         </dir>
         <dir path="photos">
             <page path="index" title="写真を見る"/>
