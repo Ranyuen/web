@@ -22,6 +22,11 @@ class NewsController extends Controller
     /** @var Ranyuen\Renderer */
     private $renderer;
     /**
+     * @var Ranyuen\Renderer
+     * @Inject
+     */
+    private $articleRenderer;
+    /**
      * @var Ranyuen\Logger
      * @Inject
      */
@@ -61,7 +66,8 @@ class NewsController extends Controller
         if (!$article) {
             $this->router->notFound();
         }
-        $article->content = (new Renderer(''))->renderTemplate(
+        $this->articleRenderer->setLayout(null);
+        $article->content = $this->articleRenderer->renderTemplate(
             $article->content,
             [
                 'title'       => $article->title,
