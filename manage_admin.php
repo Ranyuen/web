@@ -89,7 +89,7 @@ class FakeReadline
 {
     private $history = [];
 
-    function readline($prompt)
+    public function readline($prompt)
     {
         if (is_callable('readline')) {
             return readline($prompt);
@@ -99,7 +99,7 @@ class FakeReadline
         return trim(fgets(STDIN));
     }
 
-    function addHistory($line)
+    public function addHistory($line)
     {
         if (is_callable('readline')) {
             readline_add_history($line);

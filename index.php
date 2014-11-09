@@ -15,6 +15,9 @@ if (PHP_SAPI === 'cli-server' && is_file($filename)) {
 }
 
 require 'vendor/autoload.php';
+if (is_file('config/env.php')) {
+    require_once 'config/env.php';
+}
 
 $app = new \Ranyuen\App();
 $app->run();
