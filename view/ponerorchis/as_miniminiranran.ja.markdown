@@ -1,7 +1,7 @@
 ---
-title: ミニミニランランの育て方
+title: ミニミニランラン
 ---
-ミニミニランランの育て方
+ミニミニランラン
 ==
 穴のない小さな鉢を使っての栽培方法
 --
@@ -25,7 +25,7 @@ title: ミニミニランランの育て方
 
 水やり
 --
-![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_sc2.jpg)
+![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_miniminiranran_mizuyari.png)
 
 土の表面が乾いたらたっぷりと与えます。室内ではコップとスプーンを使用すると簡単です。一回の適量はスプーン (大) 3杯程度が目安です。
 

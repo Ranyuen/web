@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/en/about_us/exporting</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/</loc>
-    <lastmod>2014-11-01T22:13:45Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/about_us/how_to_buy</loc>
-    <lastmod>2014-11-09T15:59:34Z</lastmod>
+    <lastmod>2014-11-09T17:00:33Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -57,12 +57,22 @@
   </url>
   <url>
     <loc>http://ranyuen.com/admin/</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/admin/login</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/admin/news/edit</loc>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/admin/news/new</loc>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -72,12 +82,17 @@
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/</loc>
-    <lastmod>2014-11-01T11:54:59Z</lastmod>
+    <lastmod>2014-11-09T17:53:44Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/recent_failure_and_provision</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/calanthe/tech_to_grow_calanthe_for_beginner</loc>
+    <lastmod>2014-11-01T17:45:59Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -116,11 +131,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/calanthe/cultivation/tech_to_grow_calanthe_for_beginner</loc>
-    <lastmod>2014-11-01T17:45:59Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://ranyuen.com/calanthe/grouping/</loc>
     <lastmod>2014-11-01T11:54:59Z</lastmod>
     <changefreq>daily</changefreq>
@@ -147,12 +157,17 @@
   </url>
   <url>
     <loc>http://ranyuen.com/news/calanthe_fair_2014</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/news/</loc>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/information_of_calanthe_fair_2014</loc>
-    <lastmod>2014-11-01T22:13:45Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -167,22 +182,22 @@
   </url>
   <url>
     <loc>http://ranyuen.com/news/information_of_shipping_of_awachidori_and_yumechidori_2014</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/news</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/report_of_calanthe_fair_2014</loc>
-    <lastmod>2014-11-09T11:23:38Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/shipping_spring_calanthe_2014</loc>
-    <lastmod>2014-11-01T22:13:45Z</lastmod>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/news/show</loc>
+    <lastmod>2014-11-09T17:00:26Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -212,12 +227,12 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/as_miniminiranran</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
+    <lastmod>2014-11-09T19:12:21Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
+    <lastmod>2014-11-09T17:54:27Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -231,23 +246,43 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://ranyuen.com/ponerorchis/tech_to_grow_ponerorchis_for_beginner</loc>
+    <lastmod>2014-11-09T17:57:45Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/ponerorchis/awachidori_and_yumechidori/</loc>
+    <lastmod>2014-11-09T19:22:21Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/controlling_pests_of_ponerorchis</loc>
     <lastmod>2014-11-01T11:41:23Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/ponerorchis/cultivation/habitat_of_ponerorchis</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
+    <loc>http://ranyuen.com/ponerorchis/cultivation/</loc>
+    <lastmod>2014-11-09T18:28:02Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/ponerorchis/cultivation/</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
+    <loc>http://ranyuen.com/ponerorchis/cultivation/regulation_of_flowering_time</loc>
+    <lastmod>2014-11-09T18:44:32Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/special_upbringing_of_ponerorchis</loc>
     <lastmod>2014-11-01T11:41:23Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/ponerorchis/cultivation/watering_for_ponerorchis</loc>
+    <lastmod>2014-11-09T19:10:43Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/ponerorchis/learning/</loc>
+    <lastmod>2014-11-09T18:14:48Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
 </urlset>
