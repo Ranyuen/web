@@ -25,11 +25,8 @@
                 <page path="index" title="エビネの種類"/>
                 <page path="info_about_JIEBINE_calanthe_discolor" title="ジエビネについて"/>
             </dir>
-            <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
-            <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
             <dir path="cultivation">
                 <page path="index" title="エビネの栽培"/>
-                <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培法 - 初心者編"/>
                 <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
                 <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
                 <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
@@ -37,23 +34,38 @@
                 <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
                 <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
             </dir>
+            <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培(初心者編)"/>
             <dir path="learning">
                 <page path="index" title="エビネから学ぶ"/>
                 <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
             </dir>
+            <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
+            <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
         </dir>
         <dir path="ponerorchis">
             <page path="index" title="ウチョウランを極める"/>
-            <page path="as_miniminiranran" title="ミニミニランランの育て方"/>
             <page path="kind_of_ponerorchis" title="ウチョウランの種類"/>
-            <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める"/>
             <dir path="cultivation">
-                <page path="index" title="ウチョウランの育て方"/>
-                <page path="controlling_pests_of_ponerorchis" title="病害虫の防除"/>
-                <page path="habitat_of_ponerorchis" title="自生地から学ぶ"/>
+                <page path="index" title="ウチョウランの仲間の栽培"/>
+                <page path="watering_for_ponerorchis" title="水やりの基本"/>
+                <page path="growings_ponerorchis_on_a_garden" title="屋外での自然栽培"/>
+                <page path="overcome_the_intense_heat" title="猛暑を乗り越えるための裏技"/>
+                <page path="controlling_pests_of_ponerorchis" title="ウチョウラン病害虫の防除"/>
+                <page path="tech_to_grow_ponerorchis_for_advanced" title="ウチョウランの仲間の栽培 - 上級者編"/>
                 <page path="special_upbringing_of_ponerorchis"
                     title="ウチョウランの特殊な育て方"/>
+                <page path="regulation_of_flowering_time" title="開花調節"/>
             </dir>
+            <page path="tech_to_grow_ponerorchis_for_beginner" title="ウチョウランの栽培(初心者編)"/>
+            <dir path="learning">
+                <page path="index" title="ウチョウランから学ぶ"/>
+            </dir>
+            <dir path="awachidori_and_yumechidori">
+                <page path="index" title="アワチドリ/夢ちどり"/>
+            </dir>
+            <page path="as_miniminiranran" title="ミニミニランラン"/>
+            <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
+            <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める - 最先端の考え方"/>
         </dir>
         <dir path="about_us">
             <page path="index" title="蘭裕園のご紹介"/>
