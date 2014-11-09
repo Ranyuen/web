@@ -27,7 +27,9 @@ class ApiPhotos
             null;
         $result = [];
         if (null === $speciesName) {
-            $result = Photo::orderByRaw('RANDOM()')->take($limit)->get();
+            //$result = Photo::orderByRaw('RANDOM()')->take($limit)->get();
+            //$result = Photo::orderByRaw('RAND()')->take($limit)->get();
+            $result = Photo::take($limit)->get();
         } elseif ('all' === $speciesName) {
             $result = Photo::skip($offset)->take($limit)->get();
         } elseif ('others' === $speciesName) {
