@@ -51,10 +51,10 @@
                 <page path="growings_ponerorchis_on_a_garden" title="屋外での自然栽培"/>
                 <page path="overcome_the_intense_heat" title="猛暑を乗り越えるための裏技"/>
                 <page path="controlling_pests_of_ponerorchis" title="ウチョウラン病害虫の防除"/>
-                <page path="regulation_of_flowering_time" title="開花調節"/>
                 <page path="tech_to_grow_ponerorchis_for_advanced" title="ウチョウランの仲間の栽培 - 上級者編"/>
                 <page path="special_upbringing_of_ponerorchis"
                     title="ウチョウランの特殊な育て方"/>
+                <page path="regulation_of_flowering_time" title="開花調節"/>
             </dir>
             <page path="tech_to_grow_ponerorchis_for_beginner" title="ウチョウランの栽培(初心者編)"/>
             <dir path="learning">
@@ -62,7 +62,6 @@
             </dir>
             <dir path="awachidori_and_yumechidori">
                 <page path="index" title="アワチドリ/夢ちどり"/>
-
             </dir>
             <page path="as_miniminiranran" title="ミニミニランラン"/>
             <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
