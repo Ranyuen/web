@@ -12,4 +12,5 @@ use Illuminate\Database\Eloquent;
 class Article extends Eloquent\Model
 {
     protected $table = 'article';
+    protected $fillable = ['title', 'description', 'content', 'url', 'lang'];
 }

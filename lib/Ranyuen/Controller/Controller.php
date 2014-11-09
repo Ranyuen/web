@@ -23,7 +23,8 @@ abstract class Controller
     protected $bgimage;
 
     /**
-     * @param string $lang
+     * @param string $lang Current lang.
+     * @param string $path Template path.
      *
      * @return array
      */

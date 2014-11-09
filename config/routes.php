@@ -10,6 +10,31 @@ $router->map('/api/:path+', function ($path) use ($router) {
         );
 })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
 
+function routeAdminNews($router)
+{
+    $cntrllr = function () use ($router) {
+        return $router
+            ->getContainer()
+            ->newInstance('Ranyuen\Controller\AdminNewsController');
+    };
+    $router->get('/admin/news/new', function () use ($cntrllr) {
+        $cntrllr()->newNews();
+    });
+    $router->get('/admin/news/edit/:id', function ($id) use ($cntrllr) {
+        $cntrllr()->edit($id);
+    });
+    $router->post('/admin/news/create', function () use ($cntrllr) {
+        $cntrllr()->create();
+    });
+    $router->put('/admin/news/update/:id', function ($id) use ($cntrllr) {
+        $cntrllr()->update($id);
+    });
+    $router->delete('/admin/news/destroy/:id', function ($id) use ($cntrllr) {
+        $cntrllr()->destroy($id);
+    });
+}
+routeAdminNews($router);
+
 function routeAdmin($router)
 {
     $controller = function () use ($router) {
@@ -61,13 +86,13 @@ function routeNews($router)
         if (is_array($path)) {
             $path = implode('/', $path);
         }
-        $controller->show($path);
+        $controller()->show($path);
     });
     $router->get('/:lang/news/:path+', function ($lang, $path) use ($controller) {
         if (is_array($path)) {
             $path = implode('/', $path);
         }
-        $controller->show($path, $lang);
+        $controller()->show($path, $lang);
     })->conditions(['lang' => $langRegex]);
     $router->map('/news/*', function () use ($router) {
         $router->notFound();

@@ -11,17 +11,16 @@ class ArticleHelper extends Helper
 {
     public function echoNews($articles)
     {
-        return implode('', array_map(
-            function ($article) {
-                $lang  = $this->html($article->lang);
-                $url   = $this->html($article->url);
-                $title = $this->html($article->title);
-
-                return "<div>
+        $result = '';
+        foreach ($articles as $article) {
+            $lang  = $this->html($article->lang);
+            $url   = $this->html($article->url);
+            $title = $this->html($article->title);
+            $result .= "<div>
     <a href=\"/$lang/news/$url\">$title</a>
 </div>";
-            },
-            $articles
-        ));
+        }
+
+        return $result;
     }
 }

@@ -4,8 +4,6 @@
  */
 namespace Ranyuen\Controller;
 
-use Ranyuen\BgImage;
-
 /**
  * Static pages
  */

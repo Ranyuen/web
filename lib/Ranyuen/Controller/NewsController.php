@@ -5,6 +5,7 @@
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
+use Ranyuen\Renderer;
 
 /**
  * News
@@ -39,8 +40,7 @@ class NewsController extends Controller
         $articles = Article::where('lang', $lang)
             ->orderBy('created_at', 'desc')
             ->take(7)
-            ->get()
-            ->toArray();
+            ->get();
         if (is_null($articles)) {
             $articles = [];
         }
@@ -61,7 +61,7 @@ class NewsController extends Controller
         if (!$article) {
             $this->router->notFound();
         }
-        $article->content = (new Renderer())->render(
+        $article->content = (new Renderer(''))->renderTemplate(
             $article->content,
             [
                 'title'       => $article->title,
@@ -70,7 +70,7 @@ class NewsController extends Controller
         );
         $params = array_merge(
             $this->getDefaultParams($lang, "news/$url"),
-            ['articles' => $articles]
+            ['article' => $article]
         );
         echo $this->renderer->render("news/show.$lang", $params);
         $this->logger->addAccessInfo();

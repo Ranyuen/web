@@ -17,22 +17,22 @@ class AdminController extends Controller
      * @var Ranyuen\Router
      * @Inject
      */
-    private $router;
+    protected $router;
     /**
      * @var Ranyuen\Renderer
      * @Inject
      */
-    private $renderer;
+    protected $renderer;
     /**
      * @var Ranyuen\Logger
      * @Inject
      */
-    private $logger;
+    protected $logger;
     /**
      * @var Ranyuen\Session
      * @Inject
      */
-    private $session;
+    protected $session;
 
     public function showLogin()
     {
@@ -86,10 +86,10 @@ class AdminController extends Controller
         $this->logger->addAccessInfo();
     }
 
-    private function auth()
+    protected function auth()
     {
         if (!isset($this->session['admin_username'])) {
-            $this->router->halt(403, '403 Forbidden');
+            $this->router->halt(403, '403 Forbidden <a href="/admin/login">Login</a>');
 
             return false;
         }
