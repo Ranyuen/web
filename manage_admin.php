@@ -85,6 +85,29 @@ function doQuit()
     exit();
 }
 
+class FakeReadline
+{
+    private $history = [];
+
+    function readline($prompt)
+    {
+        if (is_callable('readline')) {
+            return readline($prompt);
+        }
+        echo $prompt;
+
+        return trim(fgets(STDIN));
+    }
+
+    function addHistory($line)
+    {
+        if (is_callable('readline')) {
+            readline_add_history($line);
+        }
+        $this->history[] = $line;
+    }
+}
+
 if (isset($_SERVER['REMOTE_ADDR'])) {
     header('Location: /');
     exit();
@@ -92,8 +115,9 @@ if (isset($_SERVER['REMOTE_ADDR'])) {
 $c = (new App())->getContainer();
 $c['db'];
 doHelp();
+$rl = new FakeReadline();
 while (true) {
-    $command = readline('> ');
+    $command = $rl->readline('> ');
     $reserved = [
         'help'     => 'doHelp',
         'h'        => 'doHelp',
@@ -111,7 +135,7 @@ while (true) {
     foreach ($reserved as $name => $action) {
         if (preg_match("/^$name(?:\W|$)/", $command)) {
             $action(mb_substr($command, strlen($name)));
-            readline_add_history($command);
+            $rl->addHistory($command);
             $isDone = true;
             break;
         }
