@@ -40,6 +40,9 @@ class App
         if ('development' === $env) {
             ini_set('display_errors', 1);
             error_reporting(E_ALL | E_STRICT);
+        } elseif ('production' === $env) {
+            ini_set('display_errors', 0);
+            error_reporting(0);
         }
         // set_error_handler(function () {});
         // set_exception_handler(function () {});

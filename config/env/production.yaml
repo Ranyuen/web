@@ -1,5 +1,6 @@
 debug: false
 db:
+  host: mysql495.db.sakura.ne.jp
   driver: mysql
   database: ranyuen_production
   username: ranyuen
