@@ -23,6 +23,12 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
+      <h1><a href="/about_us/how_to_buy">ご購入をご希望の方へ</a></h1>
+      <!-- 掲載日2014/11/08 -->
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="/news/shipping_spring_calanthe_2014">春色エビネの出荷が始まりました</a></h1>
       <!-- 掲載日2014/11/01 -->
     </article>
