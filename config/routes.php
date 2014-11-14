@@ -1,73 +1,90 @@
 <?php
+$connector = $router->getContainer()
+    ->newInstance(
+        'Ranyuen\Controller\Connector',
+        [$router->getContainer()]
+    );
+
 $router->map('/api/:path+', function ($path) use ($router) {
-    $router->getContainer()
-        ->newInstance('Ranyuen\Controller\ApiController')
-        ->renderApi(
-            $path[0],
-            $router->request->getMethod(),
-            array_slice($path, 1),
-            $router->request->params()
-        );
+    $apiName = preg_replace_callback(
+        '/[-_](.)/',
+        function ($m) {
+            return strtoupper($m[1]);
+        },
+        ucwords(strtolower($path[0]))
+    );
+    $cntrllr = $router
+        ->getContainer()
+        ->newInstance('Ranyuen\Controller\Api'.$apiName.'Controller');
+    $params = array_merge(array_slice($path, 1), $router->request->params());
+    $cntrllr->render($router->request->getMethod(), $params);
 })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
 
-function routeAdminNews($router)
+function routeAdminNews($rtr, $cnnctr)
 {
-    $cntrllr = function () use ($router) {
-        return $router
-            ->getContainer()
-            ->newInstance('Ranyuen\Controller\AdminNewsController');
-    };
-    $router->get('/admin/news/new', function () use ($cntrllr) {
-        $cntrllr()->newNews();
+    $rtr->get('/admin/news/new', function () use ($cnnctr) {
+        $cnnctr->invoke('AdminNews', 'make');
     });
-    $router->get('/admin/news/edit/:id', function ($id) use ($cntrllr) {
-        $cntrllr()->edit($id);
+    $rtr->get('/admin/news/edit/:id', function ($id) use ($cnnctr) {
+        $cnnctr->invoke('AdminNews', 'edit', ['id' => $id]);
     });
-    $router->post('/admin/news/create', function () use ($cntrllr) {
-        $cntrllr()->create();
+    $rtr->post('/admin/news/create', function () use ($cnnctr) {
+        $cnnctr->invoke('AdminNews', 'create');
     });
-    $router->put('/admin/news/update/:id', function ($id) use ($cntrllr) {
-        $cntrllr()->update($id);
+    $rtr->put('/admin/news/update/:id', function ($id) use ($cnnctr) {
+        $cnnctr->invoke('AdminNews', 'update', ['id' => $id]);
     });
-    $router->delete('/admin/news/destroy/:id', function ($id) use ($cntrllr) {
-        $cntrllr()->destroy($id);
+    $rtr->delete('/admin/news/destroy/:id', function ($id) use ($cnnctr) {
+        $cnnctr->invoke('AdminNews', 'destroy', ['id' => $id]);
     });
 }
-routeAdminNews($router);
+routeAdminNews($router, $connector);
 
-function routeAdmin($router)
+function routeAdminNewsTag($rtr, $cnnctr)
 {
-    $controller = function () use ($router) {
-        return $router
-            ->getContainer()
-            ->newInstance('Ranyuen\Controller\AdminController');
-    };
-    $router->get('/admin/', function () use ($controller) {
-        $controller()->index();
+    $rtr->get('/admin/news_tag/new', function () use ($cnnctr) {
+        $cnnctr->invoke('AdminNewsTag', 'make');
     });
-    $router->get('/admin/login', function () use ($controller) {
-        $controller()->showLogin();
+    $rtr->get('/admin/news_tag/edit/:id', function ($id) use ($cnnctr) {
+        $cnnctr->invoke('AdminNewsTag', 'edit', ['id' => $id]);
     });
-    $router->post('/admin/login', function () use ($router, $controller) {
-        $controller()->login(
-            $router->request->post('username'),
-            $router->request->post('password')
-        );
+    $rtr->post('/admin/news_tag/create', function () use ($cnnctr) {
+        $cnnctr->invoke('AdminNewsTag', 'create');
     });
-    $router->map('/admin/logout', function () use ($controller) {
-        $controller()->logout();
+    $rtr->put('/admin/news_tag/update/:id', function ($id) use ($cnnctr) {
+        $cnnctr->invoke('AdminNewsTag', 'update', ['id' => $id]);
+    });
+    $rtr->delete('/admin/news_tag/destroy/:id', function ($id) use ($cnnctr) {
+        $cnnctr->invoke('AdminNewsTag', 'destroy', ['id' => $id]);
+    });
+}
+routeAdminNewsTag($router, $connector);
+
+function routeAdmin($rtr, $cnnctr)
+{
+    $rtr->get('/admin/', function () use ($cnnctr) {
+        $cnnctr->invoke('Admin', 'index');
+    });
+    $rtr->get('/admin/login', function () use ($cnnctr) {
+        $cnnctr->invoke('Admin', 'showLogin');
+    });
+    $rtr->post('/admin/login', function () use ($cnnctr, $rtr) {
+        $cnnctr->invoke('Admin', 'login', $rtr->request->post());
+    });
+    $rtr->map('/admin/logout', function () use ($cnnctr) {
+        $cnnctr->invoke('Admin', 'logout');
     })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
-    $router->map('/admin/*', function () use ($router) {
-        $router->notFound();
+    $rtr->map('/admin/*', function () use ($rtr) {
+        $rtr->notFound();
     })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
 }
-routeAdmin($router);
+routeAdmin($router, $connector);
 
-function routeNews($router)
+function routeNews($rtr)
 {
-    $c = $router->getContainer();
+    $c = $rtr->getContainer();
     $langRegex = implode('|', $c['nav']->getLangs());
-    $controller = function () use ($c) {
+    $cntrllr = function () use ($c) {
         $renderer = $c['renderer'];
         $renderer->addHelper($c->newInstance('Ranyuen\Helper\ArticleHelper'));
 
@@ -76,51 +93,52 @@ function routeNews($router)
             ['renderer' => $renderer]
         );
     };
-    $router->get('/news/', function () use ($controller) {
-        $controller()->index();
+    $rtr->get('/news/', function () use ($cntrllr) {
+        $cntrllr()->index();
     });
-    $router->get('/:lang/news/', function ($lang) use ($controller) {
-        $controller()->index($lang);
+    $rtr->get('/:lang/news/', function ($lang) use ($cntrllr) {
+        $cntrllr()->index($lang);
     })->conditions(['lang' => $langRegex]);
-    $router->get('/news/:path+', function ($path) use ($controller) {
+    $rtr->get('/news/list', function () use ($cntrllr) {
+        $cntrllr()->lists();
+    });
+    $rtr->get('/:lang/news/list', function ($lang) use ($cntrllr) {
+        $cntrllr()->lists($lang);
+    })->conditions(['lang' => $langRegex]);
+    $rtr->get('/news/:path+', function ($path) use ($cntrllr) {
         if (is_array($path)) {
             $path = implode('/', $path);
         }
-        $controller()->show($path);
+        $cntollr()->show($path);
     });
-    $router->get('/:lang/news/:path+', function ($lang, $path) use ($controller) {
+    $rtr->get('/:lang/news/:path+', function ($lang, $path) use ($cntrllr) {
         if (is_array($path)) {
             $path = implode('/', $path);
         }
-        $controller()->show($path, $lang);
+        $cntrllr()->show($path, $lang);
     })->conditions(['lang' => $langRegex]);
-    $router->map('/news/*', function () use ($router) {
-        $router->notFound();
+    $rtr->map('/news/*', function () use ($rtr) {
+        $rtr->notFound();
     })->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH');
-    $router->map('/:lang/news/*', function ($lang) use ($router) {
-        $router->notFound();
+    $rtr->map('/:lang/news/*', function ($lang) use ($rtr) {
+        $rtr->notFound();
     })
         ->via('GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH')
         ->conditions(['lang' => $langRegex]);
 }
 routeNews($router);
 
-function routeNavPhotos($router)
+function routeNavPhotos($rtr, $cnnctr)
 {
-    $nav = $router->getContainer()['nav'];
-    $langRegex = implode('|', $nav->getLangs());
-    $router->get('/photos/*', function () use ($router) {
-        $router->getContainer()
-            ->newInstance('Ranyuen\Controller\NavPhotosController')
-            ->showFromTemplate('default');
+    $langRegex = implode('|', $rtr->getContainer()['nav']->getLangs());
+    $rtr->get('/photos/*', function () use ($cnnctr) {
+        $cnnctr->invoke('NavPhotos', 'showFromTemplate', ['lang' => 'default']);
     });
-    $router->get('/:lang/photos/*', function ($lang) use ($router) {
-        $router->getContainer()
-            ->newInstance('Ranyuen\Controller\NavPhotosController')
-            ->showFromTemplate($lang);
+    $rtr->get('/:lang/photos/*', function ($lang) use ($rtr) {
+        $cnnctr->invoke('NavPhotos', 'showFromTemplate', ['lang' => $lang]);
     })->conditions(['lang' => $langRegex]);
 }
-routeNavPhotos($router);
+routeNavPhotos($router, $connector);
 
 function routeNav($router)
 {

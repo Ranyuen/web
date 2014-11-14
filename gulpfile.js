@@ -23,12 +23,14 @@ var sshConfig = {
 
 /**
  * @param {string} cmd
+ * @param {boolean=} doseIgnoreError
  * @return {Promise.<string>} stdout
  */
-function promiseProcess(cmd) {
+function promiseProcess(cmd, doseIgnoreError) {
+  doseIgnoreError = !!doseIgnoreError;
   return new Promise(function (resolve, reject) {
     cp.exec(cmd, function (err, stdout, stderr) {
-      if (err) {
+      if (err && !doseIgnoreError) {
         console.log(stdout);
         console.error(stderr);
         return reject(err);
@@ -93,19 +95,20 @@ gulp.task('nav', function () {
 
 gulp.task('php-fixer', function () {
   return Promise.all([
-    promiseProcess('vendor/bin/php-cs-fixer fix index.php'),
-    promiseProcess('vendor/bin/php-cs-fixer fix phpmig.php'),
-    promiseProcess('vendor/bin/php-cs-fixer fix manage_admin.php'),
-    promiseProcess('vendor/bin/php-cs-fixer fix config/'),
-    promiseProcess('vendor/bin/php-cs-fixer fix lib/'),
-    promiseProcess('vendor/bin/php-cs-fixer fix tests/'),
-    promiseProcess('vendor/bin/php-cs-fixer fix view/'),
+    promiseProcess('vendor/bin/php-cs-fixer fix index.php', true),
+    promiseProcess('vendor/bin/php-cs-fixer fix phpmig.php', true),
+    promiseProcess('vendor/bin/php-cs-fixer fix bin/', true),
+    promiseProcess('vendor/bin/php-cs-fixer fix config/', true),
+    promiseProcess('vendor/bin/php-cs-fixer fix lib/', true),
+    promiseProcess('vendor/bin/php-cs-fixer fix tests/', true),
+    promiseProcess('vendor/bin/php-cs-fixer fix view/', true),
   ]);
 });
 
 gulp.task('php-lint', function () {
   return gulp.src([
       '*.php',
+      'bin/**/**.php',
       'config/**/**.php',
       'lib/**/**.php',
       'tests/**/**.php',

@@ -4,12 +4,10 @@
  */
 namespace Ranyuen\Controller;
 
-use ReflectionClass;
-
 /**
  * API
  */
-class ApiController extends Controller
+abstract class ApiController extends Controller
 {
     /**
      * @Inject
@@ -18,48 +16,40 @@ class ApiController extends Controller
     private $logger;
 
     /**
-     * @param string   $apiName       API name
-     * @param string   $method        HTTP method
-     * @param string[] $uriParams     Params in the URI
-     * @param array    $requestParams Params in the HTTP param
+     * @param string $method HTTP method
+     * @param array  $params Params.
      *
      * @return void
+     *
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
      */
-    public function renderApi($apiName, $method, array $uriParams, array $requestParams)
+    public function render($method, array $params)
     {
-        $apiName = preg_replace_callback(
-            '/[-_](.)/',
-            function ($m) {
-                return strtoupper($m[1]);
-            },
-            ucwords(strtolower($apiName))
-        );
-        $controller = (new ReflectionClass("\Ranyuen\\Controller\\Api$apiName"))->newInstance();
-        $params = array_merge($uriParams, $requestParams);
         switch ($method) {
             case 'GET':
-                $response = $controller->get($params);
+                $response = $this->get($params);
                 break;
             case 'POST':
-                $response = $controller->post($params);
+                $response = $this->post($params);
                 break;
             case 'PUT':
-                $response = $controller->put($params);
+                $response = $this->put($params);
                 break;
             case 'DELETE':
-                $response = $controller->delete($params);
+                $response = $this->delete($params);
                 break;
             case 'OPTIONS':
-                $response = $controller->options($params);
+                $response = $this->options($params);
                 break;
             case 'PATCH':
-                $response = $controller->patch($params);
+                $response = $this->patch($params);
                 break;
         }
-        if (!$response) {
-            return;
+        if ($response) {
+            echo is_array($response) ? json_encode($response) : $response;
         }
-        echo is_array($response) ? json_encode($response) : $response;
-        $this->logger->addAccessInfo();
+        if ($this->logger) {
+            $this->logger->addAccessInfo();
+        }
     }
 }

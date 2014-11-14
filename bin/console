@@ -1,0 +1,69 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Rails console.
+ */
+if (isset($_SERVER['REMOTE_ADDR'])) {
+    header('Location: /');
+    exit();
+}
+
+require 'vendor/autoload.php';
+
+class FakeReadline
+{
+    private $history = [];
+
+    public function readline($prompt)
+    {
+        if (is_callable('readline')) {
+            return readline($prompt);
+        }
+        echo $prompt;
+
+        return fgets(STDIN);
+    }
+
+    public function addHistory($line)
+    {
+        if (is_callable('readline')) {
+            readline_add_history($line);
+        }
+        $this->history[] = $line;
+    }
+}
+
+(new Ranyuen\App())->getContainer()['db'];
+$rl = new FakeReadline();
+echo "Ctrl^C to quit.\n";
+$doseError = false;
+spl_autoload_register(function ($class) {
+    if (is_file("lib/Ranyuen/Model/$class.php")) {
+        class_alias("Ranyuen\\Model\\$class", $class);
+        include_once "lib/Ranyuen/Model/$class.php";
+    }
+}, true, true);
+set_error_handler(function ($errno, $errstr, $errfile, $errline)
+    use (&$doseError) {
+    $doseError = true;
+    echo "Err: $errno\n$errfile:$errline\n$errstr\n";
+});
+while (true) {
+    $doseError = false;
+    $code = trim($rl->readline('php> '));
+    if (!$code) { continue; }
+    try {
+        $res = eval("?><?php return $code;");
+    } catch (\Exception $ex) {
+        var_dump($ex);
+        continue;
+    }
+    if ($doseError) { continue; }
+    $rl->addHistory($code);
+    if (is_string($res)) {
+        echo $res."\n";
+    } else {
+        var_dump($res);
+    }
+}
+// vim:ft=php:

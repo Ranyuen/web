@@ -5,7 +5,6 @@
 namespace Ranyuen;
 
 use Ranyuen\Di\Container;
-use ReflectionClass;
 use Slim;
 
 /**
@@ -46,13 +45,6 @@ class Router extends Slim\Slim
     {
         $router = $this;
         include_once 'config/routes.php';
-        $methods = (new ReflectionClass(get_class($this)))->getMethods();
-        foreach ($methods as $method) {
-            if (preg_match('/@routing/', $method->getDocComment()) >= 1) {
-                $method->setAccessible(true);
-                $method->invoke($this, $this->app);
-            }
-        }
         parent::run();
     }
 }

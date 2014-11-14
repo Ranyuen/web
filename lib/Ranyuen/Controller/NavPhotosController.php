@@ -33,7 +33,7 @@ class NavPhotosController extends NavController
     protected function render($lang, $templateName, $params = [])
     {
         $params = [];
-        $controller = new \Ranyuen\Controller\ApiPhotos();
+        $controller = new \Ranyuen\Controller\ApiPhotosController();
         $speciesName = $this->router->request->get('species_name');
         $photos = $controller->get(
             [

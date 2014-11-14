@@ -5,6 +5,7 @@
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
+use Ranyuen\Model\ArticleTag;
 
 /**
  * Admin news
@@ -13,61 +14,73 @@ use Ranyuen\Model\Article;
  */
 class AdminNewsController extends AdminController
 {
-    public function newNews()
+    public function make()
     {
-        $this->auth();
-        $this->renderer->setLayout('admin/layout');
-        echo $this->renderer->render('admin/news/new');
+        if ($this->auth()) {
+            echo $this->renderer->render('admin/news/new', ['tags' => ArticleTag::all()]);
+        }
         $this->logger->addAccessInfo();
     }
 
     public function edit($id)
     {
-        $this->auth();
-        $article = Article::find($id);
-        if (!$article) {
-            $this->router->notFound();
+        if ($this->auth()) {
+            $article = Article::with('tags')->find($id);
+            if (!$article) {
+                $this->router->notFound();
+            }
+            echo $this->renderer->render('admin/news/edit', ['article' => $article, 'tags' => ArticleTag::all()]);
         }
-        $this->renderer->setLayout('admin/layout');
-        echo $this->renderer->render('admin/news/edit', ['article' => $article]);
         $this->logger->addAccessInfo();
     }
 
     public function create()
     {
-        $this->auth();
-        $article = Article::create($this->router->request->post());
-        if ($article->isDirty()) {
-            $this->renderer->setLayout('admin/layout');
-            echo $this->renderer->render('admin/news/new', ['article' => $article]);
-        } else {
-            $this->router->response->redirect("/admin/news/edit/$article->id", 303);
+        if ($this->auth()) {
+            $article = Article::create($this->router->request->post());
+            $article->fill($this->router->request->put());
+            $hasSaved = true;
+            $hasSaved = !$article->isDirty() && $hasSaved;
+            $hasSaved = $article->syncTagsByTagNames(
+                explode(',', trim($this->router->request->post('tags'), ', '))
+            ) && $hasSaved;
+            if (!$hasSaved) {
+                echo $this->renderer->render('admin/news/new', ['article' => $article, 'tags' => ArticleTag::all()]);
+            } else {
+                $this->router->response->redirect("/admin/news/edit/$article->id", 303);
+            }
         }
         $this->logger->addAccessInfo();
     }
 
     public function update($id)
     {
-        $this->auth();
-        $article = Article::find($id);
-        if (!$article) {
-            $this->router->notFound();
-        }
-        $article->fill($this->router->request->post());
-        if (!$article->save()) {
-            $this->renderer->setLayout('admin/layout');
-            echo $this->renderer->render('admin/news/edit', ['article' => $article]);
-        } else {
-            $this->router->response->redirect("/admin/news/edit/$article->id", 303);
+        if ($this->auth()) {
+            $article = Article::find($id);
+            if (!$article) {
+                $this->router->notFound();
+            }
+            $article->fill($this->router->request->put());
+            $hasSaved = true;
+            $hasSaved = $article->save() && $hasSaved;
+            $hasSaved = $article->syncTagsByTagNames(
+                explode(',', trim($this->router->request->post('tags'), ', '))
+            ) && $hasSaved;
+            if (!$hasSaved) {
+                echo $this->renderer->render('admin/news/edit', ['article' => $article]);
+            } else {
+                $this->router->response->redirect("/admin/news/edit/$article->id", 303);
+            }
         }
         $this->logger->addAccessInfo();
     }
 
     public function destroy($id)
     {
-        $this->auth();
-        Article::destroy($id);
-        $this->router->response->redirect("/admin/", 303);
+        if ($this->auth()) {
+            Article::destroy($id);
+            $this->router->response->redirect('/admin/', 303);
+        }
         $this->logger->addAccessInfo();
     }
 }

@@ -9,7 +9,7 @@ use \Ranyuen\Model\Photo;
 /**
  * /api/photo controller
  */
-class ApiPhoto
+class ApiPhotoController extends ApiController
 {
     /**
      * @param array $params Request params

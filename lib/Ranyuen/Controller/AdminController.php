@@ -5,6 +5,9 @@
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Admin;
+use Ranyuen\Model\Article;
+use Ranyuen\Model\ArticleTag;
+use Ranyuen\Renderer;
 
 /**
  * Admin
@@ -18,10 +21,7 @@ class AdminController extends Controller
      * @Inject
      */
     protected $router;
-    /**
-     * @var Ranyuen\Renderer
-     * @Inject
-     */
+    /** @var Ranyuen\Renderer */
     protected $renderer;
     /**
      * @var Ranyuen\Logger
@@ -34,9 +34,14 @@ class AdminController extends Controller
      */
     protected $session;
 
+    public function __construct(Renderer $renderer)
+    {
+        $renderer->setLayout('admin/layout');
+        $this->renderer = $renderer;
+    }
+
     public function showLogin()
     {
-        $this->renderer->setLayout('admin/layout');
         echo $this->renderer->render(
             'admin/login',
             [
@@ -46,18 +51,18 @@ class AdminController extends Controller
         $this->logger->addAccessInfo();
     }
 
-    public function login($username, $rawPassword)
+    public function login($username, $password)
     {
-        $this->renderer->setLayout('admin/layout');
-        if (!Admin::isAuth($username, $rawPassword)) {
+        if (!Admin::isAuth($username, $password)) {
             echo $this->renderer->render(
                 'admin/login',
                 [
                     'username'       => $username,
-                    'password'       => $rawPassword,
+                    'password'       => $password,
                     'admin_username' => $this->session['admin_username'],
                 ]
             );
+            $this->logger->addAccessInfo();
 
             return;
         }
@@ -75,14 +80,16 @@ class AdminController extends Controller
 
     public function index()
     {
-        $this->auth();
-        $this->renderer->setLayout('admin/layout');
-        echo $this->renderer->render(
-            'admin/index',
-            [
-                'admin_username' => $this->session['admin_username'],
-            ]
-        );
+        if ($this->auth()) {
+            echo $this->renderer->render(
+                'admin/index',
+                [
+                    'admin_username' => $this->session['admin_username'],
+                    'articles'       => Article::all(),
+                    'article_tags'   => ArticleTag::all(),
+                ]
+            );
+        }
         $this->logger->addAccessInfo();
     }
 

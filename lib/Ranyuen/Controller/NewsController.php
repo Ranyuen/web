@@ -5,6 +5,7 @@
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
+use Ranyuen\Model\ArticleTag;
 use Ranyuen\Renderer;
 
 /**
@@ -42,18 +43,29 @@ class NewsController extends Controller
         if (!$lang) {
             $lang = $this->config['lang']['default'];
         }
-        $articles = Article::where('lang', $lang)
-            ->orderBy('created_at', 'desc')
-            ->take(7)
-            ->get();
-        if (is_null($articles)) {
-            $articles = [];
+        $tags = ArticleTag::allPrimaryTag();
+        if (is_null($tags)) {
+            $tags = [];
         }
+        $params = array_merge(
+            $this->getDefaultParams($lang, 'news/index'),
+            ['tags' => $tags]
+        );
+        echo $this->renderer->render("news/index.$lang", $params);
+        $this->logger->addAccessInfo();
+    }
+
+    public function lists($lang = null)
+    {
+        if (!$lang) {
+            $lang = $this->config['lang']['default'];
+        }
+        $articles = ArticleTag::findByName($this->router->request->get('tag'))->articles;
         $params = array_merge(
             $this->getDefaultParams($lang, 'news/index'),
             ['articles' => $articles]
         );
-        echo $this->renderer->render("news/index.$lang", $params);
+        echo $this->renderer->render("news/list.$lang", $params);
         $this->logger->addAccessInfo();
     }
 
@@ -76,7 +88,10 @@ class NewsController extends Controller
         );
         $params = array_merge(
             $this->getDefaultParams($lang, "news/$url"),
-            ['article' => $article]
+            [
+                'title'   => strip_tags($article->title),
+                'article' => $article,
+            ]
         );
         echo $this->renderer->render("news/show.$lang", $params);
         $this->logger->addAccessInfo();

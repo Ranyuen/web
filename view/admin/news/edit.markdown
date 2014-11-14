@@ -24,13 +24,22 @@ title: Edit news
     <textarea id="news_content" name="content" required cols="80" rows="30">{{ article.content }}</textarea>
   </div>
   <div>
+    <label for="news_tags">Tags</label>
+    <input id="news_tags" name="tags" type="text" value="{% for tag in article.tags %}{{ tag.name_en }},{% endfor %}" multiple list="list_tags" required size="80"/>
+  </div>
+  <div>
     <input value="Update" type="submit"/>
   </div>
-  <input type="hidden" name="_METHOD" value="PUT"/>
+  <input name="_METHOD" value="PUT" type="hidden"/>
 </form>
 <form action="/admin/news/destroy/{{ article.id }}" method="POST">
   <div>
     <input value="Delete" type="submit"/>
   </div>
-  <input type="hidden" name="_METHOD" value="DELETE"/>
+  <input name="_METHOD" value="DELETE" type="hidden"/>
 </form>
+<datalist id="list_tags">
+{% for tag in tags %}
+  <option value="{{ tag.name_en }}"/>
+{% endfor %}
+</datalist>

@@ -78,6 +78,7 @@ class App
      */
     private function loadServices(Container $c, $env)
     {
+        $c->bind('Ranyuen\App', 'app', $this);
         $c['config'] = function ($c) use ($env) {
             return array_merge($this->config, (new Config())->load($env));
         };

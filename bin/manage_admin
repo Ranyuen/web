@@ -1,7 +1,13 @@
+#!/usr/bin/env php
 <?php
 /**
  * CUI admin account manager.
  */
+if (isset($_SERVER['REMOTE_ADDR'])) {
+    header('Location: /');
+    exit();
+}
+
 require 'vendor/autoload.php';
 
 use Ranyuen\App;
@@ -108,10 +114,6 @@ class FakeReadline
     }
 }
 
-if (isset($_SERVER['REMOTE_ADDR'])) {
-    header('Location: /');
-    exit();
-}
 $c = (new App())->getContainer();
 $c['db'];
 doHelp();
@@ -144,3 +146,4 @@ while (true) {
         doHelp();
     }
 }
+// vim:ft=php:

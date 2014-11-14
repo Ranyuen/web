@@ -1,5 +1,5 @@
 ---
 ---
-{{ article.title }}
+{{ article.title | raw }}
 ==
 {{ article.content | raw }}
