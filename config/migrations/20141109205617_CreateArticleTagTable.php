@@ -17,12 +17,10 @@ class CreateArticleTagTable extends Migration
         });
         $this->get('schema')->create('article_tagging', function ($t) {
             $t->bigIncrements('id');
-            $t->bigInteger('article_id');
-            $t->bigInteger('article_tag_id');
+            $t->bigInteger('article_id')->references('id')->on('article');
+            $t->bigInteger('article_tag_id')->references('id')->on('article_tag');
             $t->boolean('is_primary')->default(false);
             $t->unique(['article_id', 'article_tag_id']);
-            $t->foreign('article_id')->references('id')->on('article');
-            $t->foreign('article_tag_id')->references('id')->on('article_tag');
         });
     }
 
