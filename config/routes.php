@@ -109,7 +109,7 @@ function routeNews($rtr)
         if (is_array($path)) {
             $path = implode('/', $path);
         }
-        $cntollr()->show($path);
+        $cntrllr()->show($path);
     });
     $rtr->get('/:lang/news/:path+', function ($lang, $path) use ($cntrllr) {
         if (is_array($path)) {
