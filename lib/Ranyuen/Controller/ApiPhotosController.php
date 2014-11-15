@@ -25,11 +25,15 @@ class ApiPhotosController extends ApiController
         $speciesName = isset($params['species_name']) && $params['species_name'] ?
             $params['species_name'] :
             null;
+
+        return $this->getPhotos($limit, $offset, $speciesName)->toArray();
+    }
+
+    private function getPhotos($limit, $offset, $speciesName)
+    {
         $result = [];
         if (null === $speciesName) {
-            //$result = Photo::orderByRaw('RANDOM()')->take($limit)->get();
-            //$result = Photo::orderByRaw('RAND()')->take($limit)->get();
-            $result = Photo::take($limit)->get();
+            $result = $this->getRandomPhotos($limit, $offset);
         } elseif ('all' === $speciesName) {
             $result = Photo::skip($offset)->take($limit)->get();
         } elseif ('others' === $speciesName) {
@@ -43,11 +47,19 @@ class ApiPhotosController extends ApiController
                 ->take($limit)
                 ->get();
         }
-        $photos = [];
-        foreach ($result as $photo) {
-            $photos[] = $photo->toArray();
-        }
 
-        return $photos;
+        return $result;
+    }
+
+    private function getRandomPhotos($limit, $offset)
+    {
+        switch ($this->config['mode']) {
+            case 'development':
+                return Photo::orderByRaw('RANDOM()')->take($limit)->get();
+            case 'production':
+                return Photo::orderByRaw('RAND()')->take($limit)->get();
+            default:
+                return Photo::skip($offset)->take($limit)->get();
+        }
     }
 }
