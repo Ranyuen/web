@@ -4,6 +4,8 @@
  */
 namespace Ranyuen\Helper;
 
+use Ranyuen\Model\Photo;
+
 /**
  * Main view helper.
  */
@@ -100,5 +102,36 @@ class MainHelper extends Helper
         $output .= '</div>';
 
         return $output;
+    }
+
+    /**
+     * @param string  $id     Photo UUID.
+     * @param integer $width  Display width.
+     * @param integer $height Display height.
+     *
+     * @return string
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
+    public function echoImg($id, $width = null, $height = null)
+    {
+        $photo = Photo::find($id);
+        if (!$photo) {
+            $photo = new Photo();
+            $photo->id = $id;
+            $photo->loadImageSize();
+        }
+        $src = $photo->getPath();
+        if (!$width) {
+            $width = $photo->width;
+        }
+        if (!$height) {
+            $height = $photo->height;
+        }
+
+        return "<img src=\"$src\"
+    alt=\"$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)\"
+    width=\"$width\"
+    height=\"$height\"/>";
     }
 }

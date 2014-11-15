@@ -4,7 +4,7 @@
  */
 namespace Ranyuen\Model;
 
-use \Illuminate\Database\Eloquent;
+use Illuminate\Database\Eloquent;
 
 /**
  * Photo model.
@@ -17,13 +17,38 @@ class Photo extends Eloquent\Model
     private $image;
 
     /**
+     * @return string
+     */
+    public function getPath()
+    {
+        $path = null;
+        $dir = opendir('images/');
+        while (false !== ($entry = readdir($dir))) {
+            if (!is_dir("images/$entry") || '.' === $entry[0]) {
+                continue;
+            }
+            foreach (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'] as $ext) {
+                if (is_file("images/$entry/$this->id.$ext")) {
+                    $path = "images/$entry/$this->id.$ext";
+                    break;
+                }
+            }
+            if ($path) {
+                break;
+            }
+        }
+        closedir($dir);
+
+        return $path;
+    }
+
+    /**
      * @return Photo
      */
     public function loadImageSize()
     {
         if (!$this->width || !$this->height) {
-            $file = "images/gallery/$this->id.jpg";
-            list($this->width, $this->height) = getimagesize($file);
+            list($this->width, $this->height) = getimagesize($this->getPath());
         }
 
         return $this;
@@ -35,8 +60,7 @@ class Photo extends Eloquent\Model
     public function loadImage()
     {
         if (!$this->image) {
-            $file = "images/gallery/$this->id.jpg";
-            $this->image = imagecreatefromjpeg($file);
+            $this->image = imagecreatefromjpeg($this->getPath());
             $this->loadImageSize();
         }
 
@@ -51,7 +75,7 @@ class Photo extends Eloquent\Model
      */
     public function renderResized($newWidth, $newHeight)
     {
-        $cacheFilename = "images/cache/{$this->id}_{$newWidth}x$newHeight.jpg";
+        $cacheFilename = "images/.cache/{$this->id}_{$newWidth}x$newHeight.jpg";
         $this->deleteOldCache();
         if (!file_exists($cacheFilename)) {
             $this->loadImage();
@@ -74,8 +98,7 @@ class Photo extends Eloquent\Model
      */
     private function createCache($newWidth, $newHeight, $cacheFilename)
     {
-        $origFilename = "images/gallery/$this->id.jpg";
-        $origImage = imagecreatefromjpeg($origFilename);
+        $origImage = imagecreatefromjpeg($this->getPath());
         $image = imagecreatetruecolor($newWidth, $newHeight);
         imagecopyresampled($image, $origImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->width, $this->height);
         imagedestroy($origImage);
@@ -86,7 +109,7 @@ class Photo extends Eloquent\Model
 
     private function deleteOldCache()
     {
-        $cacheDir = 'images/cache';
+        $cacheDir = 'images/.cache';
         // $isDirTooLarge = function () use ($cacheDir) {
         //     return preg_match('/\A[0-9]+G/', exec("du -h $cacheDir"));
         // };

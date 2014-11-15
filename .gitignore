@@ -1,7 +1,6 @@
 /config/env.php
 /config/migrations/*.log
-/images/gallery/*
-/images/cache/*
+/images/*/*
 *.sqlite3
 !.gitkeep
 
