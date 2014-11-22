@@ -23,7 +23,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
-      <h1><a href="/news/list?tag=Column">コラム「幻のランを求めて」掲載しました</a></h1>
+      <h1><a href="/news/list?tag=Column">コラム続々掲載中!</a></h1>
       <!-- 掲載日2014/11/15 -->
     </article>
     <article>
