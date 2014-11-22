@@ -128,9 +128,12 @@ class MainHelper extends Helper
         if (!$height) {
             $height = $photo->height;
         }
+        $alt = $this->html("$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)");
+        $width = $this->html($width);
+        $height = $this->html($height);
 
         return "<img src=\"$src\"
-    alt=\"$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)\"
+    alt=\"$alt\"
     width=\"$width\"
     height=\"$height\"/>";
     }

@@ -15,13 +15,18 @@ class Photo extends Eloquent\Model
 
     /** @var resource */
     private $image;
+    /** @var string */
+    private $path;
 
     /**
-     * @return string
+     * @return string When not found, returns empty string.
      */
     public function getPath()
     {
-        $path = null;
+        if (!is_null($this->path)) {
+            return $this->path;
+        }
+        $path = '';
         $dir = opendir('images/');
         while (false !== ($entry = readdir($dir))) {
             if (!is_dir("images/$entry") || '.' === $entry[0]) {
@@ -38,6 +43,7 @@ class Photo extends Eloquent\Model
             }
         }
         closedir($dir);
+        $this->path = $path;
 
         return $path;
     }
@@ -47,8 +53,9 @@ class Photo extends Eloquent\Model
      */
     public function loadImageSize()
     {
-        if (!$this->width || !$this->height) {
-            list($this->width, $this->height) = getimagesize($this->getPath());
+        $path = $this->getPath();
+        if ($path && !$this->width || !$this->height) {
+            list($this->width, $this->height) = getimagesize($path);
         }
 
         return $this;
@@ -59,7 +66,8 @@ class Photo extends Eloquent\Model
      */
     public function loadImage()
     {
-        if (!$this->image) {
+        $path = $this->getPath();
+        if ($path && !$this->image) {
             $this->image = imagecreatefromjpeg($this->getPath());
             $this->loadImageSize();
         }

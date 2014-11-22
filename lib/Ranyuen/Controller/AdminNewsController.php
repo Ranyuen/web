@@ -14,6 +14,12 @@ use Ranyuen\Model\ArticleTag;
  */
 class AdminNewsController extends AdminController
 {
+    /**
+     * @var Ranyuen\DbCapsule
+     * @Inject
+     */
+    private $db;
+
     public function make()
     {
         if ($this->auth()) {
@@ -37,13 +43,16 @@ class AdminNewsController extends AdminController
     public function create()
     {
         if ($this->auth()) {
-            $article = Article::create($this->router->request->post());
-            $article->fill($this->router->request->put());
+            $article = null;
             $hasSaved = true;
-            $hasSaved = !$article->isDirty() && $hasSaved;
-            $hasSaved = $article->syncTagsByTagNames(
-                explode(',', trim($this->router->request->post('tags'), ', '))
-            ) && $hasSaved;
+            $this->db->transaction(function () use (&$article, &$hasSaved) {
+                $article = Article::create($this->router->request->post());
+                $article->fill($this->router->request->put());
+                $hasSaved = !$article->isDirty() && $hasSaved;
+                $hasSaved = $article->syncTagsByTagNames(
+                    explode(',', trim($this->router->request->post('tags'), ', '))
+                ) && $hasSaved;
+            });
             if (!$hasSaved) {
                 echo $this->renderer->render('admin/news/new', ['article' => $article, 'tags' => ArticleTag::all()]);
             } else {
@@ -56,16 +65,19 @@ class AdminNewsController extends AdminController
     public function update($id)
     {
         if ($this->auth()) {
-            $article = Article::find($id);
-            if (!$article) {
-                $this->router->notFound();
-            }
-            $article->fill($this->router->request->put());
+            $article = null;
             $hasSaved = true;
-            $hasSaved = $article->save() && $hasSaved;
-            $hasSaved = $article->syncTagsByTagNames(
-                explode(',', trim($this->router->request->post('tags'), ', '))
-            ) && $hasSaved;
+            $this->db->transaction(function () use (&$article, &$hasSaved) {
+                $article = Article::find($id);
+                if (!$article) {
+                    $this->router->notFound();
+                }
+                $article->fill($this->router->request->put());
+                $hasSaved = $article->save() && $hasSaved;
+                $hasSaved = $article->syncTagsByTagNames(
+                    explode(',', trim($this->router->request->post('tags'), ', '))
+                ) && $hasSaved;
+            });
             if (!$hasSaved) {
                 echo $this->renderer->render('admin/news/edit', ['article' => $article]);
             } else {

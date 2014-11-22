@@ -55,6 +55,18 @@ class DbCapsule
     }
 
     /**
+     * @param \Closure $callback Transaction process.
+     *
+     * @return mixed
+     *
+     * @throws \Exception
+     */
+    public function transaction(\Closure $callback)
+    {
+        return $this->getConnection()->transaction($process);
+    }
+
+    /**
      * @return \Illuminate\Database\Schema\Builder
      */
     public function getSchemaBuilder()
