@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/</loc>
-    <lastmod>2014-11-13T20:29:49Z</lastmod>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/about_us/how_to_buy</loc>
-    <lastmod>2014-11-13T20:28:07Z</lastmod>
+    <lastmod>2014-11-16T00:59:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/admin/</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -67,12 +67,22 @@
   </url>
   <url>
     <loc>http://ranyuen.com/admin/news/edit</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/admin/news/new</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/admin/news_tag/edit</loc>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/admin/news_tag/new</loc>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -112,7 +122,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/cultivation/growings_calanthe_in_each_season</loc>
-    <lastmod>2014-11-01T11:54:59Z</lastmod>
+    <lastmod>2014-11-22T11:31:58Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -151,53 +161,18 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/news/bluray_present_2014</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/calanthe_fair_2014</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://ranyuen.com/news/</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://ranyuen.com/news/information_of_calanthe_fair_2014</loc>
-    <lastmod>2014-11-09T17:00:26Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/information_of_new_photos</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/information_of_orchid_exam</loc>
-    <lastmod>2014-11-01T11:41:23Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/information_of_shipping_of_awachidori_and_yumechidori_2014</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/report_of_calanthe_fair_2014</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://ranyuen.com/news/shipping_spring_calanthe_2014</loc>
-    <lastmod>2014-11-09T17:00:26Z</lastmod>
+    <loc>http://ranyuen.com/news/list</loc>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/show</loc>
-    <lastmod>2014-11-09T22:31:13Z</lastmod>
+    <lastmod>2014-11-15T22:49:28Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>

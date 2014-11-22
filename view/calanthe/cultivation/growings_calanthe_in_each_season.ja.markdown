@@ -1,10 +1,12 @@
 ---
-title: エビネの年間管理
+title: エビネの管理(春夏秋冬)
 description: エビネの年間管理について、季節毎にポイントを押さえ説明します
 ---
 <script src=/assets/javascripts/changeTab.min.js></script>
-# エビネの年間管理
+# エビネの管理(春夏秋冬)
 <img src="/assets/images/spring_sai.png" width="735" alt="エビネ (Calanthe) - Ranyuen" />
+
+季節毎のエビネの管理方法を詳しく説明します。
 
 <ul id="tab">
   <li class="selected"><a href="calanthe/cultivation/growings_calanthe_in_each_season#spring">春期(3月〜5月)</a></li>

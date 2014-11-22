@@ -27,7 +27,7 @@
             </dir>
             <dir path="cultivation">
                 <page path="index" title="エビネの栽培"/>
-                <page path="growings_calanthe_in_each_season" title="エビネの年間管理"/>
+                <page path="growings_calanthe_in_each_season" title="エビネの管理(春夏秋冬)"/>
                 <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
                 <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
                 <page path="repot_calanthe" title="植え替えと株分け"/>
