@@ -138,6 +138,7 @@ gulp.task('uglifyjs', function () {
       'src/bower_components/uri.js/src/URI.min.js',
       'src/javascripts/polyfill.js',
       'src/javascripts/messageForDeveloperFromRanyuen.js',
+      'src/javascripts/globalnav.js',
     ]).
     pipe(concat('layout.min.js')).
     pipe(uglify(uglifyOption)).

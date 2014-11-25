@@ -63,7 +63,7 @@ class DbCapsule
      */
     public function transaction(\Closure $callback)
     {
-        return $this->getConnection()->transaction($process);
+        return $this->getConnection()->transaction($callback);
     }
 
     /**

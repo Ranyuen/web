@@ -34,7 +34,7 @@
 </head>
 <body class="{{ lang }}" lang="{{ lang }}">
   <div class="container">
-   <header class="clear-fix">
+    <header class="clear-fix">
       <div class="header-inner clear-fix">
         <div class="logo">
           <h1>
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <nav class="clear-fix">{{ nav.global | echoNav(link.base) | raw }}</nav>
+      {% include 'globalnav.' ~ lang ~ '.html' %}
     </header>
     <div class="main clear-fix">
       <div class="main-inner">
