@@ -1,23 +1,24 @@
+//@-ms-keyframes globalnav-item-anim {
+//  0% { background-position: 0% 0%; }
+//  100% { background-position: 0% 50%; }
+//}
+//@-moz-keyframes globalnav-item-anim {
+//  0% { background-position: 0% 0%; }
+//  100% { background-position: 0% 50%; }
+//}
+//@-webkit-keyframes globalnavItemAnim {
+//  0% { background-position: 0% 0%; }
+//  100% { background-position: 0% 50%; }
+//}
+//@keyframes globalnavItemAnim {
+//  0% { background-position: 0% 0%; }
+//  100% { background-position: 0% 50%; }
+//}
+
 #globalnav {
   @gradient_light: #de98b2;
   @gradient_shade: #de6bb1;
   @shadow: #8a8d8f;
-  //@-ms-keyframes globalnav-item-anim {
-  //  0% { background-position: 0% 0%; }
-  //  100% { background-position: 0% 50%; }
-  //}
-  //@-moz-keyframes globalnav-item-anim {
-  //  0% { background-position: 0% 0%; }
-  //  100% { background-position: 0% 50%; }
-  //}
-  //@-webkit-keyframes globalnavItemAnim {
-  //  0% { background-position: 0% 0%; }
-  //  100% { background-position: 0% 50%; }
-  //}
-  //@keyframes globalnavItemAnim {
-  //  0% { background-position: 0% 0%; }
-  //  100% { background-position: 0% 50%; }
-  //}
   font-size: 14px;
   margin: 6px 0 5px 0;
   text-shadow: -1px -1px @shadow;
@@ -46,9 +47,10 @@
     box-shadow: 1px 1px 1px @shadow;
     float: left;
     margin: 0 0.6em;
+    min-width: 8.6em;
+    padding: 0 0.8em;
     position: relative;
     text-align: center;
-    width: 9.6em;
     &:hover {
       //-ms-animation: globalnav-item-anim 0.3s ease;
       //-moz-animation: globalnav-item-anim 0.3s ease;
@@ -59,6 +61,8 @@
   }
 
   .globalnav-item_hasSubmenu {
+    padding-right: 0.2em;
+
     & > a:after {
       border-left: 1px solid @gradient_shade;
       display: block;
