@@ -1,10 +1,25 @@
 ---
 title: 蘭華で遊ぶ
 ---
+<link rel="stylesheet" href="assets/stylesheets/playMenu.css" />
 蘭華で遊ぶ
 ==
-**[ラン検定](/play/orchid_exam)** ・・・日本のランに関する様々なクイズに挑戦してみよう!
-
-**[ラン害虫退治ゲーム](/play/shooting_game)** ・・・ランに悪さをする害虫を退治しよう!
-
-**[スライドバズル](/play/slide_puzzle)** ・・・スライドパズルできれいなランの写真を完成させよう!
+<div>
+	<div class="playMenu cf">
+		<div class="playMenu-back">
+			<div class="playMenu-front">
+				<p><a href="/play/orchid_exam">ラン検定</a></p>
+			</div>
+		</div>
+		<div class="playMenu-back">
+			<div class="playMenu-front">
+				<p><a href="/play/shooting_game">ラン害虫退治ゲーム</a></p>
+			</div>
+		</div>
+		<div class="playMenu-back">
+			<div class="playMenu-front">
+				<p><a href="/play/slide_puzzle">スライドバズル</a></p>
+			</div>
+		</div>
+	</div>
+</div>
