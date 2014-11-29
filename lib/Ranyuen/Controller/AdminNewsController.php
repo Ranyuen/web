@@ -70,7 +70,7 @@ class AdminNewsController extends AdminController
             $article = null;
             $hasSaved = true;
             $this->db->transaction(
-                function () use (&$article, &$hasSaved) {
+                function () use ($id, &$article, &$hasSaved) {
                     $article = Article::find($id);
                     if (!$article) {
                         $this->router->notFound();
