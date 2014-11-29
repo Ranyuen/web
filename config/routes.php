@@ -80,6 +80,10 @@ function routeAdmin($rtr, $cnnctr)
 }
 routeAdmin($router, $connector);
 
+$router->get('/columns/', function () use ($router) {
+    $router->redirect('/news/list?tag=Column', 302);
+});
+
 function routeNews($rtr)
 {
     $c = $rtr->getContainer();
