@@ -4,7 +4,7 @@
  */
 namespace Ranyuen\Controller;
 
-use \Ranyuen\Model\Photo;
+use Ranyuen\Model\Photo;
 
 /**
  * /api/photo controller
