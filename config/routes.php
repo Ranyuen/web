@@ -138,7 +138,7 @@ function routeNavPhotos($rtr, $cnnctr)
     $rtr->get('/photos/*', function () use ($cnnctr) {
         $cnnctr->invoke('NavPhotos', 'showFromTemplate', ['lang' => 'default']);
     });
-    $rtr->get('/:lang/photos/*', function ($lang) use ($rtr) {
+    $rtr->get('/:lang/photos/*', function ($lang) use ($cnnctr) {
         $cnnctr->invoke('NavPhotos', 'showFromTemplate', ['lang' => $lang]);
     })->conditions(['lang' => $langRegex]);
 }
