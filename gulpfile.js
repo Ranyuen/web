@@ -1,7 +1,8 @@
 /* global -Promise */
 /* jshint node:true */
 'use strict';
-var cp = require('child_process');
+var cp = require('child_process'),
+    fs = require('fs');
 var Promise       = require('bluebird'),
     gulp          = require('gulp'),
     concat        = require('gulp-concat'),
@@ -14,6 +15,12 @@ var Promise       = require('bluebird'),
     runSequence   = require('run-sequence');
 var Check404   = require('./lib/Check404'),
     promiseSsh = require('./lib/promiseSsh');
+var sshConfig = {
+      host:     'ranyuen.sakura.ne.jp',
+      port:     '22',
+      username: 'ranyuen',
+      password: process.env.SSH_PASSWORD,
+    };
 
 /**
  * @param {string} cmd
@@ -34,6 +41,30 @@ function promiseProcess(cmd, doseIgnoreError) {
   });
 }
 
+gulp.task('backup-db', function () {
+  return promiseSsh(
+    sshConfig,
+    ['mysqldump -Q -h mysql495.db.sakura.ne.jp -uranyuen -p' + process.env.DB_PASSWORD + ' --default-character-set=UTF8 --set-charset ranyuen_production']
+  ).then(function (outs) {
+    var sql = outs[0].stdout,
+        fileName = 'dev/ranyuen_production-' + new Date().toISOString() + '.sql';
+
+    return new Promise(function (resolve, reject) {
+      fs.open(fileName, 'wx', function (err, file) {
+        if (err) { return reject(err); }
+        fs.write(file, sql, 0, sql.length, 0, function (err) {
+          if (err) { return reject(err); }
+          resolve();
+        });
+      });
+    });
+  });
+});
+
+gulp.task('backup-images', function () {
+  return promiseProcess('rsync -av ranyuen@ranyuen.sakura.ne.jp:~/www/images .');
+});
+
 gulp.task('check404', function () {
   return new Check404().start('http://localhost:' + process.env.PORT + '/');
 });
@@ -44,13 +75,7 @@ gulp.task('copy-assets', function () {
 });
 
 gulp.task('deploy', function () {
-  var sshConfig = {
-        host:     'ranyuen.sakura.ne.jp',
-        port:     '22',
-        username: 'ranyuen',
-        password: process.env.SSH_PASSWORD,
-      },
-      commands = [
+  var commands = [
         'cd ~/www; git pull --ff-only origin master',
         'cd ~/www; php composer.phar install --no-dev',
         'cd ~/www; set SERVER_ENV=production; vendor/bin/phpmig migrate',
@@ -163,5 +188,6 @@ gulp.task('uglifyjs', function () {
   return merge(layout, photoGallery, changeTab);
 });
 
+gulp.task('backup', ['backup-db', 'backup-images']);
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
 gulp.task('test', ['jshint', 'php-test']);
