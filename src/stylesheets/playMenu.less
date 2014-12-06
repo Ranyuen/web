@@ -1,62 +1,51 @@
 @charset "utf-8";
 @import "helpers";
 
-.playMenu {
-  margin: 0 auto;
-  width: 95%;
+.play-menu {
+  .clear-fix;
 
-  .playMenu-back {
-    width: 100%;
+  .play-menu-circle {
+    border-radius: 50%;
+    background: #cc99ff;
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.4);
 
-    .playMenu-front {
-      margin: 0 auto;
-      border-radius: 240px;
-      width: 240px;
-      height: 240px;
-      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-      -moz-transition: -moz-transform 2s linear;
-      -webkit-transition: -webkit-transform 2s linear;
-      -o-transition: -o-transform 2s linear;
-      -ms-transition: -ms-transform 2s linear;
+    p {
+      margin: 5px;
+      border-radius: 50%;
+      line-height: 240px;
+      background: radial-gradient(#ffffff, #ff99ff);
+      box-shadow: 0 0 4px 4px rgba(0,0,0,0.4) inset;
+      font-size: 20px;
+      text-align: center;
+
+      a {
+        display: block;
+        color: #460e44;
+        text-decoration: none;
+        text-shadow: 2px 2px 5px #999999;
+      }
 
       &:hover {
-        -moz-transform: rotateY(360deg);
-        -webkit-transform: rotateY(360deg);
-        -o-transform: rotateY(360deg);
-        -ms-transform: rotateY(360deg);
-      }
-
-      p {
-        line-height: 240px;
-        font-size: 25px;
-        text-align: center;
-
-        a {
-          display: block;
-          color: #fff;
-          text-decoration: none;
-          text-shadow: 1px 1px 3px #000;  
-        }
+        background: radial-gradient(#ff99ff, #ffffff);
       }
     }
+  }
+}
 
-    &:nth-child(1) .playMenu-front {
-      background: radial-gradient(at 30% 30%, #7f7fff, #9999ff);
-    }
-
-    &:nth-child(2) .playMenu-front {
-      background: radial-gradient(at 30% 30%, #ffff7f, #ffff99);
-    }
-
-    &:nth-child(3) .playMenu-front {
-      background: radial-gradient(at 30% 30%, #ff7f7f, #ff9999);
+@media screen and (min-width: 768px) {
+  .play-menu {
+    .play-menu-circle {
+      float: left;
+      width: 50%;
     }
   }
 }
 
 @media screen and (min-width: 1140px) {
-  .playMenu .playMenu-back {
-      width: 25%;
+  .play-menu {
+    .play-menu-circle {
       float: left;
+      width: 25%;
+    }
   }
 }

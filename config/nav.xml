@@ -36,7 +36,7 @@
             </dir>
             <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培(初心者編)"/>
             <dir path="learning">
-                <page path="index" title="エビネから学ぶ"/>
+                <page path="index" title="エビネの自生地から学ぶ"/>
                 <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
             </dir>
             <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
@@ -58,7 +58,7 @@
             </dir>
             <page path="tech_to_grow_ponerorchis_for_beginner" title="ウチョウランの栽培(初心者編)"/>
             <dir path="learning">
-                <page path="index" title="ウチョウランから学ぶ"/>
+                <page path="index" title="ウチョウランの自生地から学ぶ"/>
             </dir>
             <dir path="awachidori_and_yumechidori">
                 <page path="index" title="アワチドリ/夢ちどり"/>
