@@ -47,7 +47,7 @@ gulp.task('backup-db', function () {
     ['mysqldump -Q -h mysql495.db.sakura.ne.jp -uranyuen -p' + process.env.DB_PASSWORD + ' --default-character-set=UTF8 --set-charset ranyuen_production']
   ).then(function (outs) {
     var sql = outs[0].stdout,
-        fileName = 'dev/ranyuen_production-' + new Date().toISOString() + '.sql';
+        fileName = 'logs/ranyuen_production-' + new Date().toISOString() + '.sql';
 
     return new Promise(function (resolve, reject) {
       fs.open(fileName, 'wx', function (err, file) {
