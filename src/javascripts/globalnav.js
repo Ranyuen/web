@@ -4,8 +4,7 @@
 
 function globalnav() {
   var i = 0, iz = 0,
-      nav = document.querySelector('#globalnav > ul'),
-      topItems = nav.querySelectorAll(':scope > li');
+      topItems = document.querySelectorAll('#globalnav > ul > li');
 
   for (i = 0, iz = topItems.length; i < iz; ++i) {
     topItem(topItems[i]);
@@ -44,7 +43,6 @@ function onClickItemHasSubmenu(evt) {
 }
 
 global.globalnav = globalnav;
-
 }(this));
 
 window.addEventListener('DOMContentLoaded', window.globalnav);
