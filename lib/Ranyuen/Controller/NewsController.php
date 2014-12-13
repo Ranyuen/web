@@ -60,7 +60,11 @@ class NewsController extends Controller
         if (!$lang) {
             $lang = $this->config['lang']['default'];
         }
-        $articles = ArticleTag::findByName($this->router->request->get('tag'))->articles;
+        $articles = [];
+        $tags = ArticleTag::findByName($this->router->request->get('tag'));
+        if ($tags) {
+            $articles = $tags->articles;
+        }
         $params = array_merge(
             $this->getDefaultParams($lang, 'news/index'),
             ['articles' => $articles]
