@@ -1,2 +1,2 @@
 @echo off
-php manage_admin
+php bin\manage_admin
