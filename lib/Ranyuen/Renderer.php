@@ -79,7 +79,7 @@ class Renderer
         }
         if ($this->layout) {
             list($content, $frontMatter)
-                = $this->stripYamlFromtMatter($template);
+                = $this->stripYamlFrontMatter($template);
             if ($frontMatter) {
                 $params = array_merge($frontMatter, $params);
             }
@@ -101,10 +101,10 @@ class Renderer
      */
     public function renderTemplate($template, $params = [])
     {
-        list($template, $fromtMatter)
-            = $this->stripYamlFromtMatter($template);
-        if ($fromtMatter) {
-            $params = array_merge($fromtMatter, $params);
+        list($template, $frontMatter)
+            = $this->stripYamlFrontMatter($template);
+        if ($frontMatter) {
+            $params = array_merge($frontMatter, $params);
         }
 
         return $this->template->parse($template)->render($params);
@@ -115,7 +115,7 @@ class Renderer
      *
      * @return array list($content, $params)
      */
-    private function stripYamlFromtMatter($template)
+    private function stripYamlFrontMatter($template)
     {
         $front = '';
         $content = '';
