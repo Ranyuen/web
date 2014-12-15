@@ -4,6 +4,7 @@
  */
 namespace Ranyuen\Model;
 
+use dflydev\markdown\MarkdownExtraParser;
 use Illuminate\Database\Eloquent;
 
 /**
@@ -22,6 +23,14 @@ class Article extends Eloquent\Model
     public function taggings()
     {
         return $this->hasMany('Ranyuen\Model\ArticleTagging');
+    }
+
+    /**
+     * @return string
+     */
+    public function plainTitle()
+    {
+        return strip_tags((new MarkdownExtraParser())->transformMarkdown($this->title));
     }
 
     /**

@@ -10,7 +10,7 @@ title: おしらせ
   </div>
   {% for article in tag.articles %}
     <div>
-      <a href="/{{ article.lang }}/news/{{ article.url }}">{{ article.title | raw }}</a>
+      <a href="/{{ article.lang }}/news/{{ article.url }}">{{ article.plainTitle | raw }}</a>
     </div>
   {% endfor %}
 </div>

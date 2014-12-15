@@ -93,7 +93,7 @@ class NewsController extends Controller
         $params = array_merge(
             $this->getDefaultParams($lang, "news/$url"),
             [
-                'title'   => strip_tags($article->title),
+                'title'   => $article->plainTitle(),
                 'article' => $article,
             ]
         );
