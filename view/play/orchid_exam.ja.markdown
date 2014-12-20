@@ -40,6 +40,7 @@ title: ラン検定
 <ul id="examChanger">
   <li><a class="easy" onclick="changeExam('easy')">初級編 (はじめの一歩)</a></li>
   <li><a class="hard" onclick="changeExam('hard')">上級編</a></li>
+  <li><a class="expert" onclick="changeExam('expert')">博士編</a></li>
 </ul>
 <div id="exam">
   <div id="examHeader">
@@ -72,5 +73,5 @@ function prepareExam(examName) {
     }
   }
 }
-prepareExam(getItselfOrDefault(['easy', 'hard'], getLocationSearch('type')[0]));
+prepareExam(getItselfOrDefault(['easy', 'hard', 'expert'], getLocationSearch('type')[0]));
 </script>

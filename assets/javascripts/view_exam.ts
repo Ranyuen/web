@@ -16,7 +16,7 @@ messages = {
     'Again!': '\u3082\u3046\u4e00\u5ea6\uff01' // もう一度!
   }
 };
-var examType = getItselfOrDefault(['easy', 'hard'], getLocationSearch('type')[0]);
+var examType = getItselfOrDefault(['easy', 'hard', 'expert'], getLocationSearch('type')[0]);
 new Background().setBackground(document.getElementById('exam'));
 fetchExam('./assets/exam/' + examType + '.json', (_exam) => {
   exam = _exam;
