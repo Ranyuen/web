@@ -23,7 +23,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
-      <h1><a href="news/information_of_orchid_exam">ラン検定博士編スタート！これが解けたらラン博士です！</a></h1>
+      <h1><a href="news/information_of_orchid_exam_expert">ラン検定博士編スタート！これが解けたらラン博士です！</a></h1>
       <!-- 掲載日2014/12/20 -->
     </article>
     <article>
