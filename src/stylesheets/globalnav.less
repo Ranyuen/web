@@ -43,11 +43,11 @@
     background: -webkit-gradient(linear, left top, left bottom, from(@gradient_light), to(@gradient_shade));
     background: linear-gradient(to bottom, @gradient_light, @gradient_shade);
     background-size: 100% 100%;
-    border-radius: 18px;
+    border-radius: 5px;
     box-shadow: 1px 1px 1px @shadow;
     float: left;
-    margin: 0 0.6em;
-    min-width: 8.6em;
+    margin: 0.2em 0.2em;
+    min-width: 10.8em;
     padding: 0 0.8em;
     position: relative;
     text-align: center;
@@ -61,25 +61,25 @@
   }
 
   .globalnav-item_hasSubmenu {
-    padding-right: 0.2em;
+    // padding-right: 0.2em;
 
     & > a:after {
       border-left: 1px solid @gradient_shade;
       display: block;
       float: right;
-      width: 1.6em;
+      width: 0.3em;
     }
 
     li { border-top: 1px solid @gradient_light; }
   }
 
   .globalnav-item_isClose {
-    & > a:after { content: '\25bc'; }
+    & > a:after { content: ' \25bc'; }
     ul { display: none; }
   }
 
   .globalnav-item_isOpen {
-    & > a:after { content: '\25b2'; }
+    & > a:after { content: ' \25b2'; }
     ul { display: block; }
   }
 }
