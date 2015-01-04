@@ -71,6 +71,7 @@
             <page path="index" title="蘭裕園のご紹介"/>
             <page path="direction" title="アクセス"/>
             <page path="how_to_buy" title="ご購入をご希望の方へ"/>
+            <page path="history_of_author" title="筆者の足跡"/>
         </dir>
         <dir path="photos">
             <page path="index" title="写真を見る"/>
