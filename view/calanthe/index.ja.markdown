@@ -6,7 +6,7 @@ description:
 エビネを極める
 ==
 <figure>
-  <img style="width: 80%;" src="/assets/images/calanthe_top.jpg"/>
+  <img src="/assets/images/calanthe_top.jpg"/>
 </figure>
 **エビネ**の世界名の**カランセ (Calanthe)** は、「美しい花」という意味です。その名の通り、世界中の多くのランと比較しても、エビネほど多彩できれいなランは他に見当たりません。
 

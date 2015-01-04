@@ -50,6 +50,8 @@ title: ラン検定
   </div>
   <div id="examBody"></div>
 </div>
+日本の野生ラン関連コラムは[こちら](news/list?tag=Column)から!
+
 <script src="/assets/javascripts/Exam.js"></script>
 <script src="/assets/javascripts/helper.js"></script>
 <script src="/assets/javascripts/view_exam.js"></script>

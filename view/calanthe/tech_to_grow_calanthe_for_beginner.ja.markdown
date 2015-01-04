@@ -4,8 +4,9 @@ title: エビネの栽培法 - 初心者編
 <link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 エビネの栽培法 - 初心者編
 ==
-<img src="/assets/images/growings_iikanzi.jpg" width="722" height="288" alt="エビネ (Calanthe) - Ranyuen" />
-
+<figure>
+  <img src="/assets/images/growings_iikanzi.jpg" alt="エビネ (Calanthe) - Ranyuen" />
+</figure>
 世界中の温帯地域で、庭植えして楽しめるカラフルなランとして品種改良した新しいタイプのエビネです。山野草のエビネとは違い丈夫で育てやすく、カラフルな花を長い間楽しめます。
 
 世界でもっとも多彩なランとして知られ、カランセという名前で呼ばれています。スプリングカランセは種まきにより作られたもので、クローン株とは異なり、いずれも世界にひとつしかない株です。ペットにそれぞれ名前を付けるように、好きな名前を付けて自分だけのオリジナルの花としてお楽しみ下さい。
