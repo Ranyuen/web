@@ -1,6 +1,7 @@
 ---
 title: 庭で育てる
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 庭で育てる
 ==
 ## 庭に植えて楽しむ

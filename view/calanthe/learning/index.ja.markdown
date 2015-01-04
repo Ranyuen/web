@@ -1,6 +1,7 @@
 ---
 title: エビネの自生地から学ぶ
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 エビネの自生地から学ぶ
 ==
 日照の条件

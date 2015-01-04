@@ -1,6 +1,7 @@
 ---
 title: 屋外での自然栽培
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 屋外での自然栽培
 ==
 ![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_okuga.jpg)

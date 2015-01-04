@@ -1,6 +1,7 @@
 ---
 title: 鉢で育てる
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 #鉢で育てる
 
 ## 鉢の種類と大きさ<a name="type_of_pots"></a>

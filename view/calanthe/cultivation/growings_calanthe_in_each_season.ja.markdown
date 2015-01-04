@@ -2,6 +2,7 @@
 title: エビネの管理(春夏秋冬)
 description: エビネの年間管理について、季節毎にポイントを押さえ説明します
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 <script src=/assets/javascripts/changeTab.min.js></script>
 # エビネの管理(春夏秋冬)
 <img src="/assets/images/spring_sai.png" width="735" alt="エビネ (Calanthe) - Ranyuen" />

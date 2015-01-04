@@ -1,6 +1,9 @@
 ---
 title: エビネの栽培
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
+エビネの栽培
+==
 <img style="display: block;" src="/assets/images/sai_fir.jpg" width="735" height="294" alt="エビネ (Calanthe) の栽培 - Ranyuen" />
 
 <b><a href="calanthe/recent_failure_and_provision">近年に多い障害と対策</a></b>

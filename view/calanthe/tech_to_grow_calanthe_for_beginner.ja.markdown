@@ -1,6 +1,7 @@
 ---
 title: エビネの栽培法 - 初心者編
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 エビネの栽培法 - 初心者編
 ==
 <img src="/assets/images/growings_iikanzi.jpg" width="722" height="288" alt="エビネ (Calanthe) - Ranyuen" />

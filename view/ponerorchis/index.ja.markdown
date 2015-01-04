@@ -2,6 +2,7 @@
 title: ウチョウランを極める
 description:
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランを極める
 ==
 <figure>

@@ -1,6 +1,7 @@
 ---
 title: ウチョウランの仲間の栽培
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの仲間の栽培
 ==
 自分自身の栽培方法を探すことが理想

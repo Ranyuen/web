@@ -1,6 +1,7 @@
 ---
 title: ミニミニランラン
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ミニミニランラン
 ==
 ミニミニランランの育て方

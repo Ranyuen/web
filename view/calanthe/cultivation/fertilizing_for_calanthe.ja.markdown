@@ -1,6 +1,7 @@
 ---
 title: 上手な肥料の施し方
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 上手な肥料の施し方
 ==
 肥培するのはいつ

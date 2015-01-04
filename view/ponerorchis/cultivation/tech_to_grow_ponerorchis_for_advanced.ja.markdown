@@ -1,6 +1,7 @@
 ---
 title: ウチョウランの仲間の栽培 - 上級者編
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの仲間の栽培 - 上級者編
 ==
 株ごとに異なる癖を知り上手に育てる

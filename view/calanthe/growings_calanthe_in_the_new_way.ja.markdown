@@ -2,6 +2,7 @@
 title: エビネの育て方を極める - 最先端のエビネ栽培法
 description: 花好きの皆様がエビネを正確に理解し、自分好みの立派なエビネに育てられるように簡単に説明します
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 <h1>{{ title }}</h1>
 <section class="supplement">
   このページでは、花好きの皆様がエビネを正確に理解し、自分好みの立派なエビネに育てられるように簡単に説明します。

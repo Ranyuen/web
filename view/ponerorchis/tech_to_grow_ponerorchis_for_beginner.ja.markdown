@@ -2,6 +2,7 @@
 title: ウチョウランの栽培(初心者編)
 description:
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの栽培(初心者編)
 ==
 初心者が注意すべきポイント

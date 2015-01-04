@@ -2,6 +2,7 @@
 title: ウチョウランの種類
 description:
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの種類
 ==
 ウチョウラン属 (Ponerorchis)

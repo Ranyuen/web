@@ -2,6 +2,7 @@
 title: ウチョウランの自生地から学ぶ
 description:
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの自生地から学ぶ
 ==
 アワチドリの自生地

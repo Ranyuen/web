@@ -1,6 +1,7 @@
 ---
 title: 開花調節
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 開花調節
 ==
 ラン展などで開花させる方法

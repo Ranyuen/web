@@ -1,6 +1,7 @@
 ---
 title: Growings Ponerorchis
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 Simple techniques to grow Ponerorchis (YUMECHIDORI and AWACHIDORI)
 ==
 For beginners

@@ -2,6 +2,7 @@
 title: ウチョウランの育て方を極める
 description: 花好きの皆様がウチョウランを正確に理解し、自分好みの立派なウチョウランに育てられるように簡単に説明します。
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの育て方を極める
 ==
 最先端のウチョウラン

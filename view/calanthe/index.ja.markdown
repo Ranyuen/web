@@ -2,6 +2,7 @@
 title: エビネを極める
 description:
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 エビネを極める
 ==
 <figure>

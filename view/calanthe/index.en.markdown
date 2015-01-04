@@ -1,6 +1,7 @@
 ---
 title: Growings Calanthe
 ---
+<link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 Simple techniques to grow Spring Calanthe (EBINE)
 ==
 Ranyuen's EBINE "Spring Calanthe"

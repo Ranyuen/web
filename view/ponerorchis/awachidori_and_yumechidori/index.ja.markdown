@@ -1,6 +1,7 @@
 ---
 title: アワチドリ / 夢ちどり
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 アワチドリ / 夢ちどり
 ==
 世界で一番キュートなラン「アワチドリ / 夢ちどり」とは?

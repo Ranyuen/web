@@ -2,6 +2,7 @@
 title: ウチョウランの特殊な育て方
 description:
 ---
+<link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 ウチョウランの特殊な育て方
 ==
 ウチョウラン水苔栽培 (二号鉢)
