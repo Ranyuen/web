@@ -4,7 +4,9 @@ title: ジエビネについて
 <link rel="stylesheet" href="/assets/stylesheets/calanthe.css" />
 ジエビネ (<i>Calanthe discolor</i>) について
 ==
-<img src="/assets/images/JIEBINE_Calanthe_discolor_1.jpg" width="500" alt="ジエビネ (Calanthe discolor) - Ranyuen" />
+<figure style="width: 80%;">
+<img src="/assets/images/JIEBINE_Calanthe_discolor_1.jpg" alt="ジエビネ (Calanthe discolor) - Ranyuen" />
+</figure>
 混乱を避けるために知っておきたいこと
 --
 ジエビネ (<i>Calanthe discolor</i>) は、かつては、北海道から沖縄にかけての広い地域にたくさん自生していた原種で、最も一般的な種類です。主に、落葉広葉樹の雑木林の他、常緑広葉樹、松林、竹林などの林床に下草として自生していました。私が住む千葉市では、私が中学生の頃 (昭和45年) までは、千葉駅や稲毛駅から歩いて行けるくらいの近い里山でも、たくさん見られました。残念ながら現在では、採取と開発により、見ることはできません。

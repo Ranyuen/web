@@ -6,7 +6,7 @@ description:
 ウチョウランを極める
 ==
 <figure>
-  <img style="width: 80%;" src="assets/images/ponerorchis_top.jpg">
+  <img src="assets/images/ponerorchis_top.jpg">
 </figure>
 ウチョウランとは?
 --

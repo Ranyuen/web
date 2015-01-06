@@ -29,6 +29,12 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
+      <h1><a href="ponerorchis/cultivation/growings_ponerorchis_in_each_season">ウチョウランの管理 (春夏秋冬) ページ作成しました</a></h1>
+      <!-- 掲載日2015/1/07 -->
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="news/information_of_orchid_exam_expert">ラン検定博士編スタート！これが解けたらラン博士レベルです！</a></h1>
       <!-- 掲載日2014/12/20 -->
     </article>
@@ -46,7 +52,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new">NEW!</p>
+      <p class="new"></p>
       <h1><a href="/about_us/how_to_buy">ご購入をご希望の方へ</a></h1>
       <!-- 掲載日2014/11/08 -->
     </article>
@@ -61,11 +67,6 @@ description: エビネとウチョウランの専門農園です。エビネと�
       <p class="new"></p>
       <h1><a href="/calanthe/recent_failure_and_provision#aburamushi">[害虫警報] アブラムシ大量発生警報、発令中!!</a></h1>
       <!-- 掲載日2014/10/25 -->
-    </article>
-    <article>
-      <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new"></p>
-      <h1><a href="news/information_of_orchid_exam">ラン検定に新しい問題を追加しました</a></h1>
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
