@@ -87,10 +87,15 @@ description:
 
 ニョホウチドリ (joo-iokiana)
 --
-<figure>
-  ![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori01.jpg)![ニョホウチドリ (Ponerorchis) - Ranyuen](/assets/images/nyohouchidori02.jpg)
-  <figcaption>ニョホウチドリ</figcaption>
+<figure style="float: left; margin-right: 20px; width: 227px;">
+  <img src="/assets/images/nyohouchidori01.jpg" alt="ニョホウチドリ (Ponerorchis) - Ranyuen">
+  <figcaption>ニョホウチドリ 1</figcaption>
 </figure>
+<figure style="float: left; width: 403px;">
+  <img src="/assets/images/nyohouchidori02.jpg" alt="ニョホウチドリ (Ponerorchis) - Ranyuen">
+  <figcaption>ニョホウチドリ 2</figcaption>
+</figure>
+<p style="clear: both;"></p>
 
 和名は日光の女峰山で発見されたことに因みます。日本の中部から関東にかけての高所に自生します。他のウチョウラン類とは異なり、明るい草原に他の植物とともに自生していることがほとんどです。自生地では7～8月に開花します。
 

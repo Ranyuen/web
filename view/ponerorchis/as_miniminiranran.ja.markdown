@@ -10,7 +10,7 @@ title: ミニミニランラン
 
 下方に咲く花がいくつか枯れはじめた頃、なるべく多くの葉を残し、花茎ごと切り取り、枯れた花を取り除けば切り花や皿などの添え花として食卓を彩ることもできます。
 
-![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_sc1.jpg)
+![アワチドリ / 夢ちどり (Ponerorchis) - Ranyuen](/assets/images/growings_miniminiranran.jpg)
 
 このようにテーブルの上でも、楽しめるようにと改良したものが、ミニミニランラン夢ちどりです。
 
