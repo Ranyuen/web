@@ -61,9 +61,8 @@
             <dir path="learning">
                 <page path="index" title="ウチョウランの自生地から学ぶ"/>
             </dir>
-            <dir path="awachidori_and_yumechidori">
-                <page path="index" title="アワチドリ/夢ちどり"/>
-            </dir>
+            <page path="awachidori" title="アワチドリ"/>
+            <page path="yumechidori" title="夢ちどり"/>
             <page path="as_miniminiranran" title="ミニミニランラン"/>
             <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
             <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める - 最先端の考え方"/>
