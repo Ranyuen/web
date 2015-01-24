@@ -8,7 +8,8 @@ description: 夢ちどり/アワチドリなどのウチョウランの仲間の
 <figure>
   <img src="/assets/images/ponerorchis_in_each_season_top.jpg" width="735" alt="ウチョウラン (ponerorchis) - Ranyuen" />
 </figure>
-季節毎のウチョウランの仲間の管理方法を詳しく説明します。
+
+夢ちどり/アワチドリなど、ウチョウランの仲間の年間管理について、季節毎にポイントを押さえ解説します。
 
 <ul id="tab">
   <li class="selected"><a href="ponerorchis/cultivation/growings_ponerorchis_in_each_season#spring">春期(3月〜5月)</a></li>

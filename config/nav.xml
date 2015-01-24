@@ -59,6 +59,7 @@
             </dir>
             <dir path="learning">
                 <page path="index" title="ウチョウランの自生地から学ぶ"/>
+                <page path="info_lerning_awachidori_from_territory" title="アワチドリの自生地"/>
             </dir>
             <page path="yumechidori" title="夢ちどり"/>
             <page path="awachidori" title="アワチドリ"/>
