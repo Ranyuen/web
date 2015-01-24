@@ -8,11 +8,11 @@ descripton: コラム筆者の紹介ページ
 
 <div class="authors clear-fix">
   <article class="authors-square">
-    <h3 class="authors-square-title"><a href="column/authors/yamamoto_hiroshi">山本裕之</a></h3>
+    <h3 class="authors-square-title"><a href="columns/authors/yamamoto_hiroshi">山本裕之</a></h3>
     <img src="assets/images/author.png" alt="山本裕之">
   </article>
   <article class="authors-square">
-    <h3 class="authors-square-title"><a href="column/authors/ogawa_toyoaki">小川豊明</a></h3>
+    <h3 class="authors-square-title"><a href="columns/authors/ogawa_toyoaki">小川豊明</a></h3>
     <img src="assets/images/author_ogawa_toyoaki.jpg" alt="小川豊明">
   </article>
 </div>
