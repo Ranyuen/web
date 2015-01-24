@@ -97,7 +97,8 @@ gulp.task('less', function () {
       'src/stylesheets/playMenu.less',
       'src/stylesheets/news_column.less',
       'src/stylesheets/ponerorchis.less',
-      'src/stylesheets/calanthe.less'
+      'src/stylesheets/calanthe.less',
+      'src/stylesheets/authors.less'
     ]).
     pipe(less({
       compress:  true,
