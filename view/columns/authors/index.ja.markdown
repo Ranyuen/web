@@ -16,3 +16,5 @@ descripton: コラム筆者の紹介ページ
     <img src="assets/images/author_ogawa_toyoaki.jpg" alt="小川豊明">
   </article>
 </div>
+
+[コラムに戻る](/news/list?tag=Column)
