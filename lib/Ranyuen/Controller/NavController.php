@@ -20,7 +20,15 @@ class NavController extends Controller
      */
     private $renderer;
 
-    /** @Route('/photos/') */
+    /**
+     * @param App     $app  Application.
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/photos/')
+     */
     public function photos(App $app, Request $req, $lang)
     {
         $controller = $app->container
@@ -49,37 +57,79 @@ class NavController extends Controller
         );
     }
 
-    /** @Route('/') */
+    /**
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/')
+     */
     public function toplevelIndex(Request $req, $lang)
     {
         return $this->response($req, $lang);
     }
 
-    /** @Route('/{path1}') */
+    /**
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/{path1}')
+     */
     public function toplevel(Request $req, $lang)
     {
         return $this->response($req, $lang);
     }
 
-    /** @Route('/{path1}/') */
+    /**
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/{path1}/')
+     */
     public function seclevelIndex(Request $req, $lang)
     {
         return $this->response($req, $lang);
     }
 
-    /** @Route('/{path1}/{path2}') */
+    /**
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/{path1}/{path2}')
+     */
     public function seclevel(Request $req, $lang)
     {
         return $this->response($req, $lang);
     }
 
-    /** @Route('/{path1}/{path2}/') */
+    /**
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/{path1}/{path2}/')
+     */
     public function thirdlevelIndex(Request $req, $lang)
     {
         return $this->response($req, $lang);
     }
 
-    /** @Route('/{path1}/{path2}/{path3}') */
+    /**
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/{path1}/{path2}/{path3}')
+     */
     public function thirdlevel(Request $req, $lang)
     {
         return $this->response($req, $lang);

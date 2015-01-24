@@ -70,6 +70,7 @@ class App
     /**
      * @return void
      *
+     * @SuppressWarnings(PHPMD.StaticAccess)
      * @SuppressWarnings(PHPMD.Superglobals)
      */
     public function run()
@@ -86,7 +87,7 @@ class App
     /**
      * @param Container $c      DI container
      * @param string    $env    development or production or...
-     * @param array     $config
+     * @param array     $config Additional config.
      *
      * @return void
      */

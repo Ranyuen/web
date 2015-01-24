@@ -23,7 +23,11 @@ class AdminNewsController extends AdminController
      */
     private $db;
 
-    /** @Route('/new') */
+    /**
+     * @return string
+     *
+     * @Route('/new')
+     */
     public function make()
     {
         $this->auth();
@@ -31,7 +35,13 @@ class AdminNewsController extends AdminController
         return $this->renderer->render('admin/news/new', ['tags' => ArticleTag::all()]);
     }
 
-    /** @Route('/edit/{id}') */
+    /**
+     * @param string $id News ID.
+     *
+     * @return string
+     *
+     * @Route('/edit/{id}')
+     */
     public function edit($id)
     {
         $this->auth();
@@ -43,7 +53,11 @@ class AdminNewsController extends AdminController
         return $this->renderer->render('admin/news/edit', ['article' => $article, 'tags' => ArticleTag::all()]);
     }
 
-    /** @Route('/create',via=POST) */
+    /**
+     * @return string|Response
+     *
+     * @Route('/create',via=POST)
+     */
     public function create()
     {
         $this->auth();
@@ -60,13 +74,19 @@ class AdminNewsController extends AdminController
             }
         );
         if (!$hasSaved) {
-            echo $this->renderer->render('admin/news/new', ['article' => $article, 'tags' => ArticleTag::all()]);
-        } else {
-            $this->router->response->redirect("/admin/news/edit/$article->id", 303);
+            return $this->renderer->render('admin/news/new', ['article' => $article, 'tags' => ArticleTag::all()]);
         }
+
+        return new Response('', 303, ['Location' => "/admin/news/edit/$article->id"]);
     }
 
-    /** @Route('/update/{id}',via=PUT) */
+    /**
+     * @param string $id News ID.
+     *
+     * @return string|Response
+     *
+     * @Route('/update/{id}',via=PUT)
+     */
     public function update($id)
     {
         $this->auth();
@@ -86,17 +106,24 @@ class AdminNewsController extends AdminController
             }
         );
         if (!$hasSaved) {
-            echo $this->renderer->render('admin/news/edit', ['article' => $article]);
-        } else {
-            $this->router->response->redirect("/admin/news/edit/$article->id", 303);
+            return $this->renderer->render('admin/news/edit', ['article' => $article]);
         }
+
+        return new Response('', 303, ['Location' => "/admin/news/edit/$article->id"]);
     }
 
-    /** @Route('/destroy/{id}',via=DELETE) */
+    /**
+     * @param string $id News ID.
+     *
+     * @return Response
+     *
+     * @Route('/destroy/{id}',via=DELETE)
+     */
     public function destroy($id)
     {
         $this->auth();
         Article::destroy($id);
-        $this->router->response->redirect('/admin/', 303);
+
+        return new Response('', 303, ['Location' => '/admin']);
     }
 }

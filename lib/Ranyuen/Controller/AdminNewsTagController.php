@@ -16,7 +16,11 @@ use Ranyuen\Model\ArticleTag;
  */
 class AdminNewsTagController extends AdminController
 {
-    /** @Route('/new') */
+    /**
+     * @return string
+     *
+     * @Route('/new')
+     */
     public function make()
     {
         $this->auth();
@@ -24,7 +28,13 @@ class AdminNewsTagController extends AdminController
         return $this->renderer->render('admin/news_tag/new');
     }
 
-    /** @Route('/edit/{id}') */
+    /**
+     * @param string $id News tag ID.
+     *
+     * @return string|Response
+     *
+     * @Route('/edit/{id}')
+     */
     public function edit($id)
     {
         $this->auth();
@@ -35,7 +45,11 @@ class AdminNewsTagController extends AdminController
         return $this->renderer->render('/admin/news_tag/edit', ['tag' => $tag]);
     }
 
-    /** @Route('/create',via=POST) */
+    /**
+     * @return string|Response
+     *
+     * @Route('/create',via=POST)
+     */
     public function create()
     {
         $this->auth();
@@ -47,7 +61,14 @@ class AdminNewsTagController extends AdminController
         return new Response('', 303, ['Location' => "/admin/news_tag/edit/$tag->id"]);
     }
 
-    /** @Route('/update/{id}',via=PUT) */
+    /**
+     * @param Request $req HTTP request.
+     * @param string  $id  News tag ID.
+     *
+     * @return string|Response
+     *
+     * @Route('/update/{id}',via=PUT)
+     */
     public function update(Request $req, $id)
     {
         $this->auth();
@@ -62,7 +83,13 @@ class AdminNewsTagController extends AdminController
         return new Response('', 303, ['Location' => "/admin/news_tag/edit/$tag->id"]);
     }
 
-    /** @Route('/destroy/{id}',via=DELETE) */
+    /**
+     * @param string $id News tag ID.
+     *
+     * @return Response
+     *
+     * @Route('/destroy/{id}',via=DELETE)
+     */
     public function destroy($id)
     {
         $this->auth();

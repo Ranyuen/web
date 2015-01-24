@@ -43,7 +43,14 @@ class AdminController extends Controller
         $this->renderer = $renderer;
     }
 
-    /** @Route('/login') */
+    /**
+     * @param string $username User name.
+     * @param string $password Raw password.
+     *
+     * @return string
+     *
+     * @Route('/login')
+     */
     public function showLogin($username = null, $password = null)
     {
         return $this->renderer->render(
@@ -56,7 +63,14 @@ class AdminController extends Controller
         );
     }
 
-    /** @Route('/login',via=POST) */
+    /**
+     * @param string $username User name.
+     * @param string $password Raw password.
+     *
+     * @return string
+     *
+     * @Route('/login',via=POST)
+     */
     public function login($username, $password)
     {
         if (!Admin::isAuth($username, $password)) {
@@ -67,7 +81,11 @@ class AdminController extends Controller
         return new Response('', 303, ['Location' => '/admin/']);
     }
 
-    /** @Route('/logout') */
+    /**
+     * @return string
+     *
+     * @Route('/logout')
+     */
     public function logout()
     {
         unset($this->session['admin_username']);
@@ -75,7 +93,11 @@ class AdminController extends Controller
         return new Response('', 303, ['Location' => '/admin/login']);
     }
 
-    /** @Route('/') */
+    /**
+     * @return string
+     *
+     * @Route('/')
+     */
     public function index()
     {
         $this->auth();

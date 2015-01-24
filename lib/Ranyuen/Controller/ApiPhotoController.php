@@ -16,6 +16,12 @@ use Ranyuen\Model\Photo;
 class ApiPhotoController extends Controller
 {
     /**
+     * @param Request $req    HTTP request.
+     * @param int     $offset Offset.
+     * @param int     $limit  Limit.
+     *
+     * @return Response
+     *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/photos')
      */
@@ -32,6 +38,12 @@ class ApiPhotoController extends Controller
     }
 
     /**
+     * @param string $id     Photo ID.
+     * @param int    $width  Photo pixel width.
+     * @param int    $height Photo pixel height.
+     *
+     * @return void
+     *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/photo')
      */

@@ -27,13 +27,14 @@ class NewsController extends Controller
      * @Inject
      */
     private $articleRenderer;
-    /**
-     * @var Ranyuen\Logger
-     * @Inject
-     */
-    private $logger;
 
-    /** @Route('/') */
+    /**
+     * @param string $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/')
+     */
     public function index($lang)
     {
         $tags = ArticleTag::allPrimaryTag();
@@ -48,7 +49,13 @@ class NewsController extends Controller
         return $this->renderer->render("news/index.$lang", $params);
     }
 
-    /** @Route('/list') */
+    /**
+     * @param string $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/list')
+     */
     public function lists($lang)
     {
         $articles = [];
@@ -64,7 +71,14 @@ class NewsController extends Controller
         return $this->renderer->render("news/list.$lang", $params);
     }
 
-    /** @Route('/{url}') */
+    /**
+     * @param string $url  New url.
+     * @param string $lang Request lang.
+     *
+     * @return string
+     *
+     * @Route('/{url}')
+     */
     public function show($url, $lang)
     {
         $article = Article::where(['url' => $url, 'lang' => $lang])->first();
