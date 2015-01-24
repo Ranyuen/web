@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Model;
 
 use Illuminate\Database\Eloquent;
@@ -11,6 +12,36 @@ use Illuminate\Database\Eloquent;
  */
 class Photo extends Eloquent\Model
 {
+    public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 100)
+    {
+        switch ($speciesName) {
+            case 'all':
+                return self::skip($offset)->take($limit)->get();
+            case 'others':
+                return self::whereNull('species_name')
+                    ->skip($offset)
+                    ->take($limit)
+                    ->get();
+            default:
+                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])
+                    ->skip($offset)
+                    ->take($limit)
+                    ->get();
+        }
+    }
+
+    public static function getRandomPhotos($offset = 0, $limit = 100)
+    {
+        switch ((new self())->getConnection()->getConfig('driver')) {
+            case 'sqlite':
+                return self::orderByRaw('RANDOM()')->take($limit)->get();
+            case 'mysql':
+                return self::orderByRaw('RAND()')->take($limit)->get();
+            default:
+                return self::skip($offset)->take($limit)->get();
+        }
+    }
+
     protected $table = 'photo';
 
     /** @var resource */

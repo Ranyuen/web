@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Template;
 
 use ReflectionClass;

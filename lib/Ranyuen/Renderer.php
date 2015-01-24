@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen;
 
 use dflydev\markdown\MarkdownExtraParser;

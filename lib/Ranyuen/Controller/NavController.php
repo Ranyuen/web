@@ -2,7 +2,12 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Controller;
+
+use Ranyuen\App;
+use Ranyuen\Little\Request;
+use Ranyuen\Little\Response;
 
 /**
  * Static pages
@@ -10,61 +15,103 @@ namespace Ranyuen\Controller;
 class NavController extends Controller
 {
     /**
-     * @var Ranyuen\Logger
-     * @Inject
-     */
-    protected $logger;
-    /**
-     * @var Ranyuen\Router
-     * @Inject
-     */
-    protected $router;
-    /**
      * @var Ranyuen\Renderer
      * @Inject
      */
-    protected $renderer;
+    private $renderer;
 
-    /**
-     * @param string $lang Current lang
-     * @param string $path URI path
-     *
-     * @return void
-     *
-     * @SuppressWarnings(PHPMD.Superglobals)
-     */
-    public function showFromTemplate($lang, $path)
+    /** @Route('/photos/') */
+    public function photos(App $app, Request $req, $lang)
     {
-        foreach ($this->config['redirect'] as $from => $to) {
-            if ($_SERVER['REQUEST_URI'] === $from) {
-                $this->router->redirect($to, 301);
-            }
-        }
-        $this->render($lang, $path);
-        $this->logger->addAccessInfo();
+        $controller = $app->container
+            ->newInstance('Ranyuen\Controller\ApiPhotoController');
+        $speciesName = $req->get('species_name');
+        $photos = $controller->photos($req, 0, 20);
+        $photos = array_map(
+            function ($photo) {
+                $thumbWidth = 349;
+                $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
+                $photo['thumb_width'] = $thumbWidth;
+                $photo['thumb_height'] = $thumbHeight;
+
+                return $photo;
+            },
+            json_decode($photos->getContent())
+        );
+
+        return $this->render(
+            $lang,
+            '/photos/',
+            [
+                'species_name' => $speciesName,
+                'photos'       => $photos,
+            ]
+        );
     }
 
-    /**
-     * Echo rendered string.
-     *
-     * @param string $lang         Current lang
-     * @param string $templateName Template name
-     * @param array  $params       Template params
-     *
-     * @return void
-     */
-    protected function render($lang, $templateName, $params = [])
+    /** @Route('/') */
+    public function toplevelIndex(Request $req, $lang)
+    {
+        return $this->response($req, $lang);
+    }
+
+    /** @Route('/{path1}') */
+    public function toplevel(Request $req, $lang)
+    {
+        return $this->response($req, $lang);
+    }
+
+    /** @Route('/{path1}/') */
+    public function seclevelIndex(Request $req, $lang)
+    {
+        return $this->response($req, $lang);
+    }
+
+    /** @Route('/{path1}/{path2}') */
+    public function seclevel(Request $req, $lang)
+    {
+        return $this->response($req, $lang);
+    }
+
+    /** @Route('/{path1}/{path2}/') */
+    public function thirdlevelIndex(Request $req, $lang)
+    {
+        return $this->response($req, $lang);
+    }
+
+    /** @Route('/{path1}/{path2}/{path3}') */
+    public function thirdlevel(Request $req, $lang)
+    {
+        return $this->response($req, $lang);
+    }
+
+    public function response(Request $req, $lang)
+    {
+        foreach ($this->config['redirect'] as $from => $to) {
+            if ($req->getRequestUri() === $from) {
+                return new Response('', 301, ['Location' => $to]);
+            }
+        }
+
+        return $this->render($lang, $req->getPathInfo());
+    }
+
+    private function render($lang, $templateName, array $params = [])
     {
         $params = array_merge(
             $params,
             $this->getDefaultParams($lang, $templateName)
         );
-        $lang = $params['lang'];
-        $str = $this->renderer->render("$templateName.$lang", $params);
-        if (false === $str) {
-            $this->router->notFound();
-        } else {
-            echo $str;
+        if ('/' === $templateName[strlen($templateName) - 1]) {
+            $templateName .= 'index';
         }
+        $res = $this->renderer->render("$templateName.$lang", $params);
+        if (false === $res) {
+            $res = $this->renderer->render("error404.$lang", $params);
+
+            return new Response($res, 404);
+        }
+
+        return $res;
     }
 }

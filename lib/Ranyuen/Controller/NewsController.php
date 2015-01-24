@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
@@ -12,15 +13,14 @@ use Ranyuen\Renderer;
  * News
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
+ * @Route('/news')
  */
 class NewsController extends Controller
 {
-    /**
-     * @var Ranyuen\Router
+    /** @var
+     * Ranyuen\Renderer
      * @Inject
      */
-    private $router;
-    /** @var Ranyuen\Renderer */
     private $renderer;
     /**
      * @var Ranyuen\Renderer
@@ -33,16 +33,9 @@ class NewsController extends Controller
      */
     private $logger;
 
-    public function __construct($renderer)
+    /** @Route('/') */
+    public function index($lang)
     {
-        $this->renderer = $renderer;
-    }
-
-    public function index($lang = null)
-    {
-        if (!$lang) {
-            $lang = $this->config['lang']['default'];
-        }
         $tags = ArticleTag::allPrimaryTag();
         if (is_null($tags)) {
             $tags = [];
@@ -51,15 +44,13 @@ class NewsController extends Controller
             $this->getDefaultParams($lang, 'news/index'),
             ['tags' => $tags]
         );
-        echo $this->renderer->render("news/index.$lang", $params);
-        $this->logger->addAccessInfo();
+
+        return $this->renderer->render("news/index.$lang", $params);
     }
 
-    public function lists($lang = null)
+    /** @Route('/list') */
+    public function lists($lang)
     {
-        if (!$lang) {
-            $lang = $this->config['lang']['default'];
-        }
         $articles = [];
         $tags = ArticleTag::findByName($this->router->request->get('tag'));
         if ($tags) {
@@ -69,18 +60,16 @@ class NewsController extends Controller
             $this->getDefaultParams($lang, 'news/index'),
             ['articles' => $articles]
         );
-        echo $this->renderer->render("news/list.$lang", $params);
-        $this->logger->addAccessInfo();
+
+        return $this->renderer->render("news/list.$lang", $params);
     }
 
-    public function show($url, $lang = null)
+    /** @Route('/{url}') */
+    public function show($url, $lang)
     {
-        if (!$lang) {
-            $lang = $this->config['lang']['default'];
-        }
         $article = Article::where(['url' => $url, 'lang' => $lang])->first();
         if (!$article) {
-            $this->router->notFound();
+            return new Response('', 404);
         }
         $this->articleRenderer->setLayout(null);
         $article->content = $this->articleRenderer->renderTemplate(
@@ -97,7 +86,7 @@ class NewsController extends Controller
                 'article' => $article,
             ]
         );
-        echo $this->renderer->render("news/show.$lang", $params);
-        $this->logger->addAccessInfo();
+
+        return $this->renderer->render("news/show.$lang", $params);
     }
 }

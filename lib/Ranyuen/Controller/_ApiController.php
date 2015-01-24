@@ -2,12 +2,13 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Controller;
 
 /**
  * API
  */
-abstract class ApiController extends Controller
+abstract class _ApiController extends Controller
 {
     /**
      * @Inject

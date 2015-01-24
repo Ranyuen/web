@@ -2,73 +2,72 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Controller;
 
+use Ranyuen\Little\Response;
 use Ranyuen\Model\ArticleTag;
 
 /**
  * Admin news_tag
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
+ * @Route('/admin/news_tag')
  */
 class AdminNewsTagController extends AdminController
 {
+    /** @Route('/new') */
     public function make()
     {
-        if ($this->auth()) {
-            echo $this->renderer->render('admin/news_tag/new');
-        }
-        $this->logger->addAccessInfo();
+        $this->auth();
+
+        return $this->renderer->render('admin/news_tag/new');
     }
 
+    /** @Route('/edit/{id}') */
     public function edit($id)
     {
-        if ($this->auth()) {
-            $tag = ArticleTag::find($id);
-            if (!$tag) {
-                $this->router->notFound();
-            }
-            echo $this->renderer->render('/admin/news_tag/edit', ['tag' => $tag]);
+        $this->auth();
+        if (!($tag = ArticleTag::find($id))) {
+            return new Response('', 404);
         }
-        $this->logger->addAccessInfo();
+
+        return $this->renderer->render('/admin/news_tag/edit', ['tag' => $tag]);
     }
 
+    /** @Route('/create',via=POST) */
     public function create()
     {
-        if ($this->auth()) {
-            $tag = ArticleTag::create($this->router->request->post());
-            if ($tag->isDirty()) {
-                echo $this->renderer->render('admin/news_tag/new', ['tag' => $tag]);
-            } else {
-                $this->router->response->redirect("/admin/news_tag/edit/$tag->id", 303);
-            }
+        $this->auth();
+        $tag = ArticleTag::create($this->router->request->post());
+        if ($tag->isDirty()) {
+            return $this->renderer->render('admin/news_tag/new', ['tag' => $tag]);
         }
-        $this->logger->addAccessInfo();
+
+        return new Response('', 303, ['Location' => "/admin/news_tag/edit/$tag->id"]);
     }
 
-    public function update($id)
+    /** @Route('/update/{id}',via=PUT) */
+    public function update(Request $req, $id)
     {
-        if ($this->auth()) {
-            $tag = ArticleTag::find($id);
-            if (!$tag) {
-                $this->router->notFound();
-            }
-            $tag->fill($this->router->request->put());
-            if (!$tag->save()) {
-                echo $this->renderer->render('admin/news/edit', ['tag' => $tag]);
-            } else {
-                $this->router->response->redirect("/admin/news_tag/edit/$tag->id", 303);
-            }
+        $this->auth();
+        if (!($tag = ArticleTag::find($id))) {
+            return new Response('', 404);
         }
-        $this->logger->addAccessInfo();
+        $tag->fill($req->request);
+        if (!$tag->save()) {
+            return $this->renderer->render('admin/news/edit', ['tag' => $tag]);
+        }
+
+        return new Response('', 303, ['Location' => "/admin/news_tag/edit/$tag->id"]);
     }
 
+    /** @Route('/destroy/{id}',via=DELETE) */
     public function destroy($id)
     {
-        if ($this->auth()) {
-            ArticleTag::destroy($id);
-            $this->router->response->redirect('/admin/', 303);
-        }
-        $this->logger->addAccessInfo();
+        $this->auth();
+        ArticleTag::destroy($id);
+
+        return new Response('', 303, ['Location' => '/admin/']);
     }
 }

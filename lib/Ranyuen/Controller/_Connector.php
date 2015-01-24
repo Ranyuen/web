@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
 use Ginq;
@@ -9,7 +10,7 @@ use Ginq;
 /**
  * Connect to controllers.
  */
-class Connector
+class _Connector
 {
     private $container;
 

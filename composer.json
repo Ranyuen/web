@@ -6,12 +6,13 @@
     "dflydev/markdown": "1.0.*@dev",
     "monolog/monolog": "~1.11",
     "illuminate/database": "~4.2",
-    "slim/slim": "~2.4",
     "symfony/yaml": "~2.5",
     "twig/twig": "~1.16",
-    "ranyuen/di": "dev-dev0.1.0",
+    "ranyuen/di": "dev-dev0.2.1",
     "ircmaxell/password-compat": "~1.0",
-    "ginq/ginq": "~0.2"
+    "ginq/ginq": "~0.2",
+    "hafriedlander/php-peg": "dev-master@dev",
+    "ranyuen/little": "dev-master"
   },
   "require-dev": {
     "fabpot/php-cs-fixer": "~1.0@dev",

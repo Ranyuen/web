@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen;
 
 use Ranyuen\Di\Container;
@@ -10,7 +11,7 @@ use Slim;
 /**
  * URI router.
  */
-class Router extends Slim\Slim
+class _Router extends Slim\Slim
 {
     /** @var App */
     private $app;

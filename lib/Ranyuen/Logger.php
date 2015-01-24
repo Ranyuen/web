@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen;
 
 use Clover\Text\LTSV;
@@ -20,7 +21,8 @@ class Logger extends Monolog\Logger
     public function __construct($name, $config)
     {
         parent::__construct($name);
-        $this->pushHandler(new RotatingFileHandler("{$config['log.path']}/$name.log", 0, $config['log.level']));
+        $h = new RotatingFileHandler("{$config['log.path']}/$name.log", 0, $config['log.level']);
+        $this->pushHandler($h);
     }
 
     /**

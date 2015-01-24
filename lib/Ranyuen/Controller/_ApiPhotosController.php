@@ -2,6 +2,7 @@
 /**
  * Ranyuen web site
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Photo;
@@ -9,7 +10,7 @@ use Ranyuen\Model\Photo;
 /**
  * /api/photos controller
  */
-class ApiPhotosController extends ApiController
+class _ApiPhotosController extends ApiController
 {
     /**
      * @param array $params Request params
