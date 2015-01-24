@@ -166,13 +166,28 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://ranyuen.com/columns/authors/</loc>
+    <lastmod>2015-01-24T20:01:56Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/columns/authors/ogawa_toyoaki</loc>
+    <lastmod>2015-01-24T20:01:56Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/columns/authors/yamamoto_hiroshi</loc>
+    <lastmod>2015-01-24T20:01:56Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://ranyuen.com/news/</loc>
     <lastmod>2014-12-20T17:02:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/news/list</loc>
-    <lastmod>2015-01-04T18:18:55Z</lastmod>
+    <lastmod>2015-01-24T20:01:56Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -222,7 +237,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/kind_of_ponerorchis</loc>
-    <lastmod>2015-01-24T12:39:38Z</lastmod>
+    <lastmod>2015-01-24T19:53:36Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -237,7 +252,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/tech_to_grow_ponerorchis_for_beginner</loc>
-    <lastmod>2015-01-04T14:48:16Z</lastmod>
+    <lastmod>2015-01-24T19:53:36Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -252,7 +267,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/growings_ponerorchis_in_each_season</loc>
-    <lastmod>2015-01-24T12:39:38Z</lastmod>
+    <lastmod>2015-01-24T19:53:36Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -262,12 +277,12 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/</loc>
-    <lastmod>2015-01-24T12:39:38Z</lastmod>
+    <lastmod>2015-01-24T19:53:36Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/overcome_the_intense_heat</loc>
-    <lastmod>2015-01-24T12:39:38Z</lastmod>
+    <lastmod>2015-01-24T19:53:36Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>

@@ -85,5 +85,12 @@
         <!--<dir path="news">
             <page path="index" title="お知らせ"/>
         </dir>-->
+        <!--<dir path="column">
+            <page path="index" title="筆者紹介"/>
+            <dir path="author">
+                <page path="yamamoto_hiroshi" title="山本裕之のプロフィール"/>
+                <page path="ogawa_toyoaki" title="小川豊明のプロフィール"/>
+            </dir>
+        </dir>-->
     </lang>
 </nav>
