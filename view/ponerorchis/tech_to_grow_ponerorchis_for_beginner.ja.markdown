@@ -1,9 +1,9 @@
 ---
-title: ウチョウランの栽培(初心者編)
+title: 夢ちどり/アワチドリの栽培(初心者編)
 description:
 ---
 <link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
-ウチョウランの栽培(初心者編)
+夢ちどり/アワチドリの栽培(初心者編)
 ==
 初心者が注意すべきポイント
 --
@@ -39,6 +39,8 @@ description:
 
 年間管理
 --
+詳しくはこちらをご覧ください → [ウチョウランの管理 (春夏秋冬)](/ponerorchis/cultivation/growings_ponerorchis_in_each_season)
+
 <img src="/assets/images/tech_to_grow_ponerorchis_for_beginner.png" width="750" height="1080" alt="アワチドリ / 夢ちどり 年間管理の目安表 (Ponerorchis) - Ranyuen" />
 
 夢ちどり・アワチドリの楽しみ方一例

@@ -1,14 +1,14 @@
 ---
-title: ウチョウランの管理(春夏秋冬)
-description: ウチョウランの年間管理について、季節毎にポイントを押さえ説明します
+title: ウチョウランの仲間の管理(春夏秋冬)
+description: 夢ちどり/アワチドリなどのウチョウランの仲間の年間管理について、季節毎にポイントを押さえ詳しく説明します
 ---
 <link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
 <script src=/assets/javascripts/changeTab.min.js></script>
-# ウチョウランの管理(春夏秋冬)
+# ウチョウランの仲間の管理(春夏秋冬)
 <figure>
   <img src="/assets/images/ponerorchis_in_each_season_top.jpg" width="735" alt="ウチョウラン (ponerorchis) - Ranyuen" />
 </figure>
-季節毎のウチョウランの管理方法を詳しく説明します。
+季節毎のウチョウランの仲間の管理方法を詳しく説明します。
 
 <ul id="tab">
   <li class="selected"><a href="ponerorchis/cultivation/growings_ponerorchis_in_each_season#spring">春期(3月〜5月)</a></li>
