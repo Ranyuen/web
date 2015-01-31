@@ -29,6 +29,12 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
+      <h1><a href="news/calanthe_fair_2015">エビネ展2015のご案内</a></h1>
+      <!-- 掲載日2015/1/31 -->
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="ponerorchis/cultivation/growings_ponerorchis_in_each_season">ウチョウランの管理 (春夏秋冬) ページ作成しました</a></h1>
       <!-- 掲載日2015/1/07 -->
     </article>
