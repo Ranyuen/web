@@ -1,8 +1,8 @@
 ---
-title: 猛暑を乗り越えるために
+title: 猛暑を乗り越える裏技
 ---
 <link rel="stylesheet" href="/assets/stylesheets/ponerorchis.css" />
-猛暑を乗り越えるために
+猛暑を乗り越える裏技
 ==
 はじめに
 --
