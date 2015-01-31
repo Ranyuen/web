@@ -91,11 +91,11 @@ class MainHelper extends Helper
         $output = "<div class=\"widget-youtube\">
 <iframe width=\"$width\"
         height=\"$height\"
-        src=\"//www.youtube.com/embed/$movieId\"
+        src=\"//www.youtube.com/embed/$movieId?rel=0\"
         frameborder=\"0\"
         allowfullscreen></iframe>";
         if ($title) {
-            $output .= "<div><a href=\"http://youtu.be/$movieId\">".
+            $output .= "<div><a href=\"http://youtu.be/$movieId?rel=0\">".
                 $this->html($title).
                 '</a></div>';
         }
