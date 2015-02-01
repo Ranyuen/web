@@ -35,6 +35,18 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
+      <h1><a href="news/information_of_orchid_exam">ラン検定に新しい問題を追加しました！ついに500問突破！</a></h1>
+      <!-- 掲載日2015/1/31 -->
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
+      <h1><a href="/news/list?tag=Column">コラム追加しました</a></h1>
+      <!-- 掲載日2014/12/13 -->
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="https://www.youtube.com/watch?v=gE7eumCEhF0&feature=youtu.be">動画「花火大会 春色エビネ」をYoutubeに投稿しました！</a></h1>
       <!-- 掲載日2015/1/26 -->
     </article>
@@ -54,12 +66,6 @@ description: エビネとウチョウランの専門農園です。エビネと�
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
       <h1><a href="/news/list?tag=Column">あの小川先生がついに執筆！コラム新編スタート</a></h1>
-      <!-- 掲載日2014/12/13 -->
-    </article>
-    <article>
-      <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new">NEW!</p>
-      <h1><a href="news/information_of_orchid_exam">ラン検定に新しい問題を追加しました！合計400問以上に</a></h1>
       <!-- 掲載日2014/12/13 -->
     </article>
     <article>
