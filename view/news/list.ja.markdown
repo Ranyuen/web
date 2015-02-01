@@ -10,7 +10,7 @@ description:
 
 コラム筆者については、[コラム筆者の紹介](columns/authors/)よりご閲覧ください。
 
-コラムに掲載されたランも登場するランクイズあります! 500問近くありますので是非遊んでみてください。<br /> → [ラン検定](play/orchid_exam)
+コラムに掲載されたランも登場するランのクイズあります! 500問近くありますので是非遊んでみてください。<br /> → [ラン検定](play/orchid_exam)
 
 <div class="column">
   {% for article in articles %}
