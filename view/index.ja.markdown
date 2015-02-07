@@ -35,6 +35,12 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
+      <h1><a href="news/the_cutest_orchis_in_the_world">世界で一番キュートなオルキス ~夢ちどりとアワチドリ~</a></h1>
+      <!-- 掲載日2015/1/31 -->
+    </article>
+    <article>
+      <p><img src="/assets/images/icons/information.png"></p>
+      <p class="new">NEW!</p>
       <h1><a href="news/information_of_orchid_exam">ラン検定に新しい問題を追加しました！ついに500問突破！</a></h1>
       <!-- 掲載日2015/1/31 -->
     </article>
@@ -58,13 +64,13 @@ description: エビネとウチョウランの専門農園です。エビネと�
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new">NEW!</p>
+      <p class="new"></p>
       <h1><a href="news/information_of_orchid_exam_expert">ラン検定博士編スタート！これが解けたらラン博士レベルです！</a></h1>
       <!-- 掲載日2014/12/20 -->
     </article>
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new">NEW!</p>
+      <p class="new"></p>
       <h1><a href="/news/list?tag=Column">あの小川先生がついに執筆！コラム新編スタート</a></h1>
       <!-- 掲載日2014/12/13 -->
     </article>
