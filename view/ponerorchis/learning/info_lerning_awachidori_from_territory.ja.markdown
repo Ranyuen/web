@@ -26,7 +26,7 @@ description:
 
 ![アワチドリの自生地 (Ponerorchis) - Ranyuen](/assets/images/AWACHIDORI_habitat_NOKOGIRI-YAMA_3_ja.jpg)
 
-アワチドリの花色 (35年前の自生地にて)
+アワチドリの花色 (40年前の自生地にて)
 --
 今では品種改良がすすみ多彩なアワチドリですが、自然界に自生していた株の99%以上が淡紫紅色から紫紅色の普通個体 (通称: 並花) でした。
 

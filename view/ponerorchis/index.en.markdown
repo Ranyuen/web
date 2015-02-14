@@ -7,7 +7,7 @@ Simple techniques to grow Ponerorchis (YUMECHIDORI and AWACHIDORI)
 For beginners
 --
 <img src="/assets/images/growings_b1.jpg" width="225" height="185" align="right" style="margin: 20px 20px;" alt="Ponerorchis suzukiana and its hybrids (YUMECHIDORI and AWACHIDORI) - Ranyuen" />
-AWACHIDORI grows in wild only in a special part of the Boso-peninsula of Chiba prefecture, Japan. Today, due to the overhunting, we rarely see them in the wild. Sadly, it is now categorized as an endangered species. In our farm, after 35years of breed improvement, it has now become stronger and various orchid than ever drawing attention from around the world.  There are UCHORAN, KUROKAMIRAN and SATSUMACHIDORI in the same group and with these bases; we have improved our YUMECHIDORI to have more flowers.
+AWACHIDORI grows in wild only in a special part of the Boso-peninsula of Chiba prefecture, Japan. Today, due to the overhunting, we rarely see them in the wild. Sadly, it is now categorized as an endangered species. In our farm, after 40years of breed improvement, it has now become stronger and various orchid than ever drawing attention from around the world.  There are UCHORAN, KUROKAMIRAN and SATSUMACHIDORI in the same group and with these bases; we have improved our YUMECHIDORI to have more flowers.
 
 Planting the flower bulbs
 --
