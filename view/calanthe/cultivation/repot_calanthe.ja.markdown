@@ -7,8 +7,12 @@ description: エビネの正しい植え替え方法と株分け方法を動画�
 ==
 エビネの新芽の位置は成長に伴い、毎年バルブひとつ分 (2～3cm) 前方へ移動するのが普通です。[鉢栽培](calanthe/cultivation/growings_calanthe_in_a_pot)や[庭栽培](calanthe/cultivation/growings_calanthe_on_a_garden)などで植え付け後、数年が経過し芽数が増えて鉢いっぱいになった株や、新芽の位置が鉢のふちまで達してしまった株では、株分けや植え替えをする必要があります。栽培場所の環境や株の状態のほかに[使用する鉢](calanthe/cultivation/growings_calanthe_in_a_pot#type_of_pots)や[用土](calanthe/cultivation/growings_calanthe_in_a_pot#about_soil)また目的 (単に増殖したいのか、大きくしたいのか?) の違いにより植え替えの方法や時期も違ってきます。下の動画では、初心者でも簡単に行える方法と適期について解説しています。
 
+<div class="youtube-block">
 {{ '-AmJHMSm7K4' | echoYouTube('エビネの植え替え - 蘭裕園') | raw }}
+</div>
+<div class="youtube-block">
 {{ '4o1rCG4YndU' | echoYouTube('エビネの株分け - 蘭裕園') | raw }}
+</div>
 
 株分けと植え替えの適期
 --

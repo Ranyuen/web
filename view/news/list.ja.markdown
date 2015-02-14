@@ -3,6 +3,7 @@ title: コラム
 description:
 ---
 <link rel="stylesheet" href="/assets/stylesheets/news_column.css" />
+<link rel="stylesheet" href="/assets/stylesheets/news.css" />
 コラム
 ==
 このコラムページは日本の野生ランに魅せられた若者たちの体験記です。全て実体験を元に書きつづったものですが、30 ~ 40年前の体験記のため写真のないものもあります。
@@ -10,7 +11,11 @@ description:
 
 コラム筆者については、[コラム筆者の紹介](columns/authors/)よりご閲覧ください。
 
-コラムに掲載されたランも登場するランのクイズあります! 500問近くありますので是非遊んでみてください。<br /> → [ラン検定](play/orchid_exam)
+<div class="article-box">
+<p>コラムに掲載されたランも登場するランのクイズあります!</p>
+<p>500問近くありますので是非遊んでみてください。</p>
+<p>→ <b><a href="/play/orchid_exam">ラン検定</a></b></p>
+</div>
 
 <div class="column">
   {% for article in articles %}

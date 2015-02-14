@@ -86,7 +86,7 @@ class MainHelper extends Helper
      *
      * @return string
      */
-    public function echoYouTube($movieId, $title = '', $width = 560, $height = 315)
+    public function echoYouTube($movieId, $title = '', $width = 800, $height = 450)
     {
         $output = "<div class=\"widget-youtube\">
 <iframe width=\"$width\"

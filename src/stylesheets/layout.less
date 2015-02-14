@@ -291,6 +291,29 @@ header {
   }
 }
 
+.youtube-block {
+  margin: 20px auto;
+  max-width: 100%;
+  width: 600px;
+
+  .widget-youtube {
+    height: 0;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+
+    iframe {
+      height: 100%;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
 footer {
   background: @header-footer-bg;
   border-radius: @header-footer-radius @header-footer-radius 0 0;
