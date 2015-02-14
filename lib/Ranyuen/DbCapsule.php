@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site
  */
-
 namespace Ranyuen;
 
 use Illuminate;

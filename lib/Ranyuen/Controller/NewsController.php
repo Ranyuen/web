@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site
  */
-
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
@@ -50,16 +49,17 @@ class NewsController extends Controller
     }
 
     /**
-     * @param string $lang Request lang.
+     * @param Request $req  HTTP request.
+     * @param string  $lang Request lang.
      *
      * @return string
      *
      * @Route('/list')
      */
-    public function lists($lang)
+    public function lists($req, $lang)
     {
         $articles = [];
-        $tags = ArticleTag::findByName($this->router->request->get('tag'));
+        $tags = ArticleTag::findByName($req->get('tag'));
         if ($tags) {
             $articles = $tags->articles;
         }

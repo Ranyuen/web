@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site
  */
-
 namespace Ranyuen\Controller;
 
 use Ranyuen\App;
@@ -39,12 +38,12 @@ class NavController extends Controller
             function ($photo) {
                 $thumbWidth = 349;
                 $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
-                $photo['thumb_width'] = $thumbWidth;
+                $photo['thumb_width']  = $thumbWidth;
                 $photo['thumb_height'] = $thumbHeight;
 
                 return $photo;
             },
-            json_decode($photos->getContent())
+            json_decode($photos->getContent(), true)
         );
 
         return $this->render(
@@ -59,83 +58,13 @@ class NavController extends Controller
 
     /**
      * @param Request $req  HTTP request.
-     * @param string  $lang Request lang.
+     * @param string  $lang Language.
      *
      * @return string
      *
-     * @Route('/')
+     * @Route(error=404)
      */
-    public function toplevelIndex(Request $req, $lang)
-    {
-        return $this->response($req, $lang);
-    }
-
-    /**
-     * @param Request $req  HTTP request.
-     * @param string  $lang Request lang.
-     *
-     * @return string
-     *
-     * @Route('/{path1}')
-     */
-    public function toplevel(Request $req, $lang)
-    {
-        return $this->response($req, $lang);
-    }
-
-    /**
-     * @param Request $req  HTTP request.
-     * @param string  $lang Request lang.
-     *
-     * @return string
-     *
-     * @Route('/{path1}/')
-     */
-    public function seclevelIndex(Request $req, $lang)
-    {
-        return $this->response($req, $lang);
-    }
-
-    /**
-     * @param Request $req  HTTP request.
-     * @param string  $lang Request lang.
-     *
-     * @return string
-     *
-     * @Route('/{path1}/{path2}')
-     */
-    public function seclevel(Request $req, $lang)
-    {
-        return $this->response($req, $lang);
-    }
-
-    /**
-     * @param Request $req  HTTP request.
-     * @param string  $lang Request lang.
-     *
-     * @return string
-     *
-     * @Route('/{path1}/{path2}/')
-     */
-    public function thirdlevelIndex(Request $req, $lang)
-    {
-        return $this->response($req, $lang);
-    }
-
-    /**
-     * @param Request $req  HTTP request.
-     * @param string  $lang Request lang.
-     *
-     * @return string
-     *
-     * @Route('/{path1}/{path2}/{path3}')
-     */
-    public function thirdlevel(Request $req, $lang)
-    {
-        return $this->response($req, $lang);
-    }
-
-    public function response(Request $req, $lang)
+    public function notFound(Request $req, $lang)
     {
         foreach ($this->config['redirect'] as $from => $to) {
             if ($req->getRequestUri() === $from) {

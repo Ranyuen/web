@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site
  */
-
 namespace Ranyuen;
 
 use Ranyuen\Di\Container;
@@ -77,6 +76,16 @@ class App
     {
         $this->container['db']; // Prepare DB connection.
         $req = Request::createFromGlobals();
+        if (preg_match('#\A/(ja|en|e)#', $req->getPathInfo(), $matches)) {
+            $lang = $matches[1];
+            if (isset($config['lang'][$lang])) {
+                $lang = $config['lang'][$lang];
+            }
+            $req->query->set('lang', $lang);
+            $server = $_SERVER;
+            $server['REQUEST_URI'] = substr($req->getPathInfo(), strlen($lang) + 1);
+            $req = $req->duplicate(null, null, null, null, null, $server);
+        }
         if (!$req->get('lang')) {
             $req->query->set('lang', $this->config['lang']['default']);
         }

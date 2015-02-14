@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site
  */
-
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Request;
@@ -10,8 +9,6 @@ use Ranyuen\Model\Photo;
 
 /**
  * /api/photo controller
- *
- * @Route('/api')
  */
 class ApiPhotoController extends Controller
 {
@@ -23,7 +20,7 @@ class ApiPhotoController extends Controller
      * @return Response
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
-     * @Route('/photos')
+     * @Route('/api/photos')
      */
     public function photos(Request $req, $offset = 0, $limit = 100)
     {
@@ -45,7 +42,7 @@ class ApiPhotoController extends Controller
      * @return void
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
-     * @Route('/photo')
+     * @Route('/api/photo')
      */
     public function photo($id, $width = null, $height = null)
     {
