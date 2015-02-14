@@ -4,32 +4,53 @@
  */
 namespace Ranyuen\Controller;
 
+use Ranyuen\Little\Request;
 use Ranyuen\Model\Photo;
 
 /**
  * /api/photo controller
  */
-class ApiPhotoController extends ApiController
+class ApiPhotoController extends Controller
 {
     /**
-     * @param array $params Request params
+     * @param Request $req    HTTP request.
+     * @param int     $offset Offset.
+     * @param int     $limit  Limit.
      *
-     * @return mixed
+     * @return Response
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
+     * @Route('/api/photos')
      */
-    public function get(array $params)
+    public function photos(Request $req, $offset = 0, $limit = 100)
     {
-        if (!isset($params['id'])) {
-            return [ 'error' => ':id is required.', 'status' => 404 ];
+        $speciesName = $req->get('species_name');
+        if (is_null($speciesName)) {
+            $photos = Photo::getRandomPhotos($offset, $limit);
+        } else {
+            $photos = Photo::getPhotosBySpeciesName($speciesName, $offset, $limit);
         }
-        $id = $params['id'];
-        $width = isset($params['width']) ? $params['width'] : null;
-        $height = isset($params['height']) ?
-            $params['height'] :
-            null;
+
+        return $this->toJsonResponse($photos->toArray());
+    }
+
+    /**
+     * @param string $id     Photo ID.
+     * @param int    $width  Photo pixel width.
+     * @param int    $height Photo pixel height.
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     * @Route('/api/photo')
+     */
+    public function photo($id, $width = null, $height = null)
+    {
+        if (!$id) {
+            return $this->toJsonResponse(['error' => 'id is required.'], 404);
+        }
         if (!($width || $height)) {
-            return [ 'error' => ':width or :height is required.', 'status' => 404 ];
+            return $this->toJsonResponse(['error' => 'width xor height is required.'], 404);
         }
         $photo = Photo::find($id);
         $photo->loadImageSize();
@@ -37,7 +58,7 @@ class ApiPhotoController extends ApiController
         $photo->renderResized($width, $height);
     }
 
-    private function calcSize($photo, $newWidth, $newHeight)
+    private function calcSize(Photo $photo, $newWidth, $newHeight)
     {
         if ($newWidth && $newHeight) {
             $newHeight = min(

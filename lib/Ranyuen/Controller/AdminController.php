@@ -4,6 +4,7 @@
  */
 namespace Ranyuen\Controller;
 
+use Ranyuen\Little\Response;
 use Ranyuen\Model\Admin;
 use Ranyuen\Model\Article;
 use Ranyuen\Model\ArticleTag;
@@ -13,6 +14,7 @@ use Ranyuen\Renderer;
  * Admin
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
+ * @Route('/admin')
  */
 class AdminController extends Controller
 {
@@ -40,67 +42,79 @@ class AdminController extends Controller
         $this->renderer = $renderer;
     }
 
-    public function showLogin()
+    /**
+     * @param string $username User name.
+     * @param string $password Raw password.
+     *
+     * @return string
+     *
+     * @Route('/login')
+     */
+    public function showLogin($username = null, $password = null)
     {
-        echo $this->renderer->render(
+        return $this->renderer->render(
             'admin/login',
             [
+                'username'       => $username,
+                'password'       => $password,
                 'admin_username' => $this->session['admin_username'],
             ]
         );
-        $this->logger->addAccessInfo();
     }
 
+    /**
+     * @param string $username User name.
+     * @param string $password Raw password.
+     *
+     * @return string
+     *
+     * @Route('/login',via=POST)
+     */
     public function login($username, $password)
     {
         if (!Admin::isAuth($username, $password)) {
-            echo $this->renderer->render(
-                'admin/login',
-                [
-                    'username'       => $username,
-                    'password'       => $password,
-                    'admin_username' => $this->session['admin_username'],
-                ]
-            );
-            $this->logger->addAccessInfo();
-
-            return;
+            return new Response($this->showLogin($username, $password), 401);
         }
         $this->session['admin_username'] = $username;
-        $this->router->response->redirect('/admin/', 303);
-        $this->logger->addAccessInfo();
+
+        return new Response('', 303, ['Location' => '/admin/']);
     }
 
+    /**
+     * @return string
+     *
+     * @Route('/logout')
+     */
     public function logout()
     {
         unset($this->session['admin_username']);
-        $this->router->response->redirect('/admin/login', 303);
-        $this->logger->addAccessInfo();
+
+        return new Response('', 303, ['Location' => '/admin/login']);
     }
 
+    /**
+     * @return string
+     *
+     * @Route('/')
+     */
     public function index()
     {
-        if ($this->auth()) {
-            echo $this->renderer->render(
-                'admin/index',
-                [
-                    'admin_username' => $this->session['admin_username'],
-                    'articles'       => Article::all(),
-                    'article_tags'   => ArticleTag::all(),
-                ]
-            );
-        }
-        $this->logger->addAccessInfo();
+        $this->auth();
+
+        return $this->renderer->render(
+            'admin/index',
+            [
+                'admin_username' => $this->session['admin_username'],
+                'articles'       => Article::all(),
+                'article_tags'   => ArticleTag::all(),
+            ]
+        );
     }
 
     protected function auth()
     {
         if (!isset($this->session['admin_username'])) {
-            $this->router->halt(403, '403 Forbidden <a href="/admin/login">Login</a>');
-
-            return false;
+            throw new Http403ForbiddenException('/admin/login');
         }
-
-        return true;
     }
 }

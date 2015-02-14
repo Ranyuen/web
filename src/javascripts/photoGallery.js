@@ -52,7 +52,7 @@ PhotoGallery.prototype.loadNextpage = function () {
 
   if (this._lockLoadingNextPage) { return; }
   this._lockLoadingNextPage = true;
-  uri = URI('/api/photos/').
+  uri = URI('/api/photos').
     addSearch(URI(location.href).search(true)).
     addSearch({limit: 20, offset: this.currentPage * 20}).
     toString();
