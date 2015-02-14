@@ -4,9 +4,14 @@ description:
 ---
 <link rel="stylesheet" href="/assets/stylesheets/news_column.css" />
 <link rel="stylesheet" href="/assets/stylesheets/news.css" />
-コラム
+コラム <small>- 野生のランに魅せられて -</small>
 ==
-このコラムページは日本の野生ランに魅せられた若者たちの体験記です。全て実体験を元に書きつづったものですが、30 ~ 40年前の体験記のため写真のないものもあります。
+
+<figure>
+{{ '7e2d852c-7a30-4b53-ac9c-6335c4af21be' | echoImg('100%', '100%') | raw}}
+</figure>
+
+このコラムページは日本の野生ランに魅せられた若者たちが、自然の中に自生するランを探し歩く中でおきた一連のでき事をつづった物語です。全て実体験を元に書きつづったものですが、30 ~ 40年前の体験記のため写真のないものもあります。
 ご了承ください。
 
 コラム筆者については、[コラム筆者の紹介](columns/authors/)よりご閲覧ください。
