@@ -29,7 +29,7 @@ description: エビネとウチョウランの専門農園です。エビネと�
     <article>
       <p><img src="/assets/images/icons/information.png"></p>
       <p class="new">NEW!</p>
-      <h1><a href="news/calanthe_fair_2015">エビネ展2015のご案内</a></h1>
+      <h1><a href="news/calanthe_fair_2015">エビネ展2015 高品質エビネが世界で一番安く買えるチャンス！</a></h1>
       <!-- 掲載日2015/1/31 -->
     </article>
     <article>
@@ -79,18 +79,6 @@ description: エビネとウチョウランの専門農園です。エビネと�
       <p class="new"></p>
       <h1><a href="/about_us/how_to_buy">ご購入をご希望の方へ</a></h1>
       <!-- 掲載日2014/11/08 -->
-    </article>
-    <article>
-      <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new"></p>
-      <h1><a href="/news/shipping_spring_calanthe_2014">春色エビネの出荷が始まりました</a></h1>
-      <!-- 掲載日2014/11/01 -->
-    </article>
-    <article>
-      <p><img src="/assets/images/icons/information.png"></p>
-      <p class="new"></p>
-      <h1><a href="/calanthe/recent_failure_and_provision#aburamushi">[害虫警報] アブラムシ大量発生警報、発令中!!</a></h1>
-      <!-- 掲載日2014/10/25 -->
     </article>
   </section>
 </div>
