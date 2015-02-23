@@ -122,7 +122,7 @@ class Photo extends Eloquent\Model
         touch($cacheFilename);
         header('Content-Type: image/jpeg');
         header('Content-Length: '.filesize($cacheFilename));
-        ob_clean();
+        // ob_clean();
         flush();
         readfile($cacheFilename);
     }
