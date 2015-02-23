@@ -8,7 +8,7 @@ use Ranyuen\Little\Response;
 use Ranyuen\Model\Admin;
 use Ranyuen\Model\Article;
 use Ranyuen\Model\ArticleTag;
-use Ranyuen\Renderer;
+use Ranyuen\Template\ViewRenderer;
 
 /**
  * Admin
@@ -23,7 +23,7 @@ class AdminController extends Controller
      * @Inject
      */
     protected $router;
-    /** @var Ranyuen\Renderer */
+    /** @var Ranyuen\Template\ViewRenderer */
     protected $renderer;
     /**
      * @var Ranyuen\Logger
@@ -36,7 +36,7 @@ class AdminController extends Controller
      */
     protected $session;
 
-    public function __construct(Renderer $renderer)
+    public function __construct(ViewRenderer $renderer)
     {
         $renderer->setLayout('admin/layout');
         $this->renderer = $renderer;

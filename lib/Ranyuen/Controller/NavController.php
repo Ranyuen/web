@@ -15,7 +15,7 @@ use Ranyuen\Little\Response;
 class NavController extends Controller
 {
     /**
-     * @var Ranyuen\Renderer
+     * @var Ranyuen\Template\ViewRenderer
      * @Inject
      */
     private $renderer;

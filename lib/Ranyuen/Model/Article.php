@@ -4,9 +4,7 @@
  */
 namespace Ranyuen\Model;
 
-use dflydev\markdown\MarkdownExtraParser;
 use Illuminate\Database\Eloquent;
-use Ranyuen\Template;
 
 /**
  * Article model.

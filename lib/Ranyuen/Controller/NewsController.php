@@ -6,7 +6,7 @@ namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
 use Ranyuen\Model\ArticleTag;
-use Ranyuen\Renderer;
+use Ranyuen\Template\ViewRenderer;
 
 /**
  * News
@@ -17,12 +17,12 @@ use Ranyuen\Renderer;
 class NewsController extends Controller
 {
     /** @var
-     * Ranyuen\Renderer
+     * Ranyuen\Template\ViewRenderer
      * @Inject
      */
     private $renderer;
     /**
-     * @var Ranyuen\Renderer
+     * @var Ranyuen\Template\ViewRenderer
      * @Inject
      */
     private $articleRenderer;

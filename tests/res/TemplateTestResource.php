@@ -1,7 +1,7 @@
 <?php
 namespace TemplateTestResource;
 
-class GlobalHelper
+class TemplateTestResource
 {
     public function dokutsurutake($str)
     {
@@ -11,10 +11,7 @@ class GlobalHelper
 
         return "死の天使 $str";
     }
-}
 
-class LocalHelper
-{
     public function kaentake($arr)
     {
         if (!is_array($arr)) {

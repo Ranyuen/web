@@ -4,7 +4,7 @@
  */
 namespace Ranyuen\Model;
 
-use Illuminate\Database\Eloquent;
+use Ranyuen\Template\Template;
 
 class ArticleContent extends Element\Model
 {
@@ -17,6 +17,7 @@ class ArticleContent extends Element\Model
         if (isset($params[$name])) {
             return $params[$name];
         }
+
         return parent::__get($name);
     }
 
