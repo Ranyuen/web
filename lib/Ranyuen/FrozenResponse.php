@@ -2,7 +2,7 @@
 /**
  * Ranyuen web site
  */
-namespace Ranyuen\Controller;
+namespace Ranyuen;
 
 use Ranyuen\Little\Response;
 

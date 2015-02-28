@@ -5,7 +5,7 @@
 namespace Ranyuen\Controller;
 
 use Ranyuen\App;
-use Ranyuen\App\FrozenResponse;
+use Ranyuen\FrozenResponse;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 
