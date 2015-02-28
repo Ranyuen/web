@@ -5,6 +5,7 @@
 namespace Ranyuen\Controller;
 
 use Ranyuen\App;
+use Ranyuen\App\FrozenResponse;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 
@@ -91,6 +92,6 @@ class NavController extends Controller
             return new Response($res, 404);
         }
 
-        return $res;
+        return new FrozenResponse($res, 200);
     }
 }
