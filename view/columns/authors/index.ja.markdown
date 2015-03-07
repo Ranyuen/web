@@ -15,6 +15,10 @@ descripton: コラム筆者の紹介ページ
     <h3 class="authors-square-title"><a href="columns/authors/ogawa_toyoaki">小川豊明</a></h3>
     <img src="assets/images/author_ogawa_toyoaki.jpg" alt="小川豊明">
   </article>
+  <article class="authors-square">
+    <h3 class="authors-square-title"><a href="columns/authors/seki_akihiko">関明彦</a></h3>
+    <img src="assets/images/author_seki_akihiko.jpg" alt="関明彦">
+  </article>
 </div>
 
 [コラムに戻る](/news/list?tag=Column)
