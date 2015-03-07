@@ -31,12 +31,10 @@ class ArticleController extends Controller
                 return new Response('', 301, ['Location' => $to]);
             }
         }
-        $article = Article::where(['path' => $path])->first();
-        if (!$article) {
+        if (!($article = Article::where(['path' => $path])->first())) {
             return $router->error(404, $req);
         }
-        $content = $article->contents->where(['lang' => $lang])->first();
-        if (!$content) {
+        if (!($content = $article->contents->where(['lang' => $lang])->first())) {
             return $router->error(404, $req);
         }
         return $this->renderer->renderContent($content->content);
