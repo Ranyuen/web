@@ -68,7 +68,7 @@ class AdminController extends Controller
      *
      * @return string
      *
-     * @Route('/login',via=POST)
+     * @Route('/login_p',via=POST)
      */
     public function login($username, $password)
     {
