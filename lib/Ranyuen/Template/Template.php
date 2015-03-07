@@ -14,53 +14,70 @@ use Symfony\Component\Yaml;
  */
 class Template
 {
-    /** @var array */
+    /**
+     * Params.
+     *
+     * @var array
+     */
     public $params;
 
-    /** @var string */
-    private $content;
-    /** @var Twig_Environment */
+    /**
+     * Twig engine.
+     *
+     * @var Twig_Environment
+     */
     private $engine;
 
     /**
      * Constructor.
      *
      * @param string $content
+     * @param array  $params
      */
-    public function __construct($content, $params = [])
+    public function __construct($content, $params = [], $templateDir = null)
     {
-        list($this->content, $matter) = $this->stripYamlFrontMatter($content);
+        list($content, $matter) = $this->stripYamlFrontMatter($content);
         if ($matter) {
             $params = array_merge($matter, $params);
         }
         $this->params = $params;
         $loader = new \Twig_Loader_Array(['current' => '']);
-        $loader->setTemplate('current', $this->content);
+        $loader->setTemplate('current', $content);
         $loader = new \Twig_Loader_Chain(
             [
                 $loader,
-                new \Twig_Loader_Filesystem(null),
+                new \Twig_Loader_Filesystem($templateDir),
             ]
         );
         $this->engine = new \Twig_Environment($loader);
     }
 
-    public function registerHelper($helper)
+    /**
+     * Register a helper instance.
+     *
+     * @param object $helper
+     *
+     * @return void
+     */
+    public function addHelper($helper)
     {
         $class = new \ReflectionClass(get_class($helper));
         $methods = $class->getMethods(\ReflectionMethod::IS_PUBLIC);
         foreach ($methods as $method) {
-            $filter = new \Twig_SimpleFilter(
-                $method->getName(),
-                function () use ($helper, $method) {
-                    return $method->invokeArgs($helper, func_get_args());
-                }
+            $this->engine->addFilter(
+                new \Twig_SimpleFilter(
+                    $method->getName(),
+                    function () use ($helper, $method) {
+                        return $method->invokeArgs($helper, func_get_args());
+                    }
+                )
             );
-            $this->engine->addFilter($filter);
         }
     }
 
     /**
+     * Render the template.
+     *
      * @return string
      */
     public function render()
@@ -70,6 +87,8 @@ class Template
     }
 
     /**
+     * Strip YAML fromt matter from the content.
+     *
      * @param string $template Template string
      *
      * @return array list($content, $params)

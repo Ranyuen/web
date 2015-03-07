@@ -39,7 +39,7 @@ class AdminNewsController extends AdminController
      *
      * @return string
      *
-     * @Route('/edit/{id}')
+     * @Route('/edit/:id')
      */
     public function edit($id)
     {
@@ -84,7 +84,7 @@ class AdminNewsController extends AdminController
      *
      * @return string|Response
      *
-     * @Route('/update/{id}',via=PUT)
+     * @Route('/update/:id',via=PUT)
      */
     public function update($id)
     {
@@ -116,7 +116,7 @@ class AdminNewsController extends AdminController
      *
      * @return Response
      *
-     * @Route('/destroy/{id}',via=DELETE)
+     * @Route('/destroy/:id',via=DELETE)
      */
     public function destroy($id)
     {

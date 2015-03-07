@@ -12,6 +12,7 @@ class ViewRenderer
     private $dir;
     /** @var string */
     private $layout;
+    private $helpers = [];
 
     /**
      * @param string $templateDir Template directory.
@@ -36,6 +37,11 @@ class ViewRenderer
         if (is_file("$this->dir/$templateName.html")) {
             $this->layout = file_get_contents("$this->dir/$templateName.html");
         }
+    }
+
+    public function addHelper($helper)
+    {
+        $this->helpers[] = $helper;
     }
 
     /**
@@ -63,10 +69,10 @@ class ViewRenderer
         return $this->renderContent($this->layout, $params, $helpers);
     }
 
-    private function renderContent($content, $params, $helpers)
+    public function renderContent($content, $params = [], $helpers = [])
     {
-        $template = new Template($content, $params);
-        foreach ($helpers as $helper) {
+        $template = new Template($content, $params, $this->dir);
+        foreach (array_merge($helpers, $this->helpers) as $helper) {
             $template->addHelper($helper);
         }
 

@@ -23,7 +23,9 @@ class ChangeArticleTable extends Migration
             $t->bigIncrements('id');
             $t->string('lang', 3);
             $t->text('content');
+            $t->bigInteger('article_id')->unsigned();
             $t->timestamps();
+            $t->foreign('article_id')->references('id')->on('article')->onDelete('cascade');
         });
     }
 

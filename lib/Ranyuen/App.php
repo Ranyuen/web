@@ -76,10 +76,10 @@ class App
     {
         $this->container['db']; // Prepare DB connection.
         $req = Request::createFromGlobals();
-        if (preg_match('#\A/(ja|en|e)#', $req->getPathInfo(), $matches)) {
+        if (preg_match('#\A/(ja|en|e)\W?#', $req->getPathInfo(), $matches)) {
             $lang = $matches[1];
-            if (isset($config['lang'][$lang])) {
-                $lang = $config['lang'][$lang];
+            if (isset($this->config['lang'][$lang])) {
+                $lang = $this->config['lang'][$lang];
             }
             $req->query->set('lang', $lang);
             $server = $_SERVER;

@@ -1,7 +1,5 @@
 <?php
-namespace TemplateTestResource;
-
-class TemplateTestResource
+class TemplateHelper
 {
     public function dokutsurutake($str)
     {

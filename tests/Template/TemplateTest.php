@@ -1,8 +1,7 @@
 <?php
-require_once 'tests/res/TemplateTestResource.php';
+require_once 'tests/res/TemplateHelper.php';
 
 use Ranyuen\Template\Template;
-use TemplateTestResource\GlobalHelper;
 
 class TemplateTest extends PHPUnit_Framework_TestCase
 {
@@ -71,7 +70,7 @@ right: ジョバンニ
 症状: ヒトヨタケ.</p>
 ';
         $template = new Template($source, $params);
-        $template->registerHelper(new GlobalHelper());
+        $template->addHelper(new TemplateHelper());
         $this->assertEquals($expected, $template->render());
     }
 }

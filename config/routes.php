@@ -1,8 +1,11 @@
 <?php
 
+use Ranyuen\App;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
+use Ranyuen\Template\ViewRenderer;
+// use Ranyuen\FrozenResponse;
 
 Router::plugin('Ranyuen\Little\Plugin\ControllerAnnotationRouter');
 
@@ -27,6 +30,13 @@ $router->error(500, function (\Exception $ex) use ($h) {
     return new Response((string) $ex, 500);
 });
 
+$router->error(404, function (ViewRenderer $renderer, $lang) {
+    return new Response('404 Not Found', 404);
+    // $res = $renderer->render("error404.$lang");
+
+    // return new Response($res, 404);
+});
+
 $router->get('/columns/', function (Request $req) {
     return new Response('', 302, ['Location' => '/news/list?tag=Column']);
 });
@@ -35,5 +45,29 @@ $router->registerController('Ranyuen\Controller\ApiPhotoController');
 $router->registerController('Ranyuen\Controller\AdminNewsController');
 $router->registerController('Ranyuen\Controller\AdminNewsTagController');
 $router->registerController('Ranyuen\Controller\AdminController');
-$router->registerController('Ranyuen\Controller\NewsController');
-$router->registerController('Ranyuen\Controller\NavController');
+$router->get('/photos/', function (App $app, Request $req, ViewRenderer $renderer, $lang) {
+    $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
+    $speciesName = $req->get('species_name');
+    $photos = $controller->photos($req, 0, 20);
+    $photos = array_map(
+        function ($photo) {
+            $thumbWidth = 349;
+            $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
+            $photo['thumb_width']  = $thumbWidth;
+            $photo['thumb_height'] = $thumbHeight;
+
+            return $photo;
+        },
+        json_decode($photos->getContent(), true)
+    );
+
+    return $app->container->newInstance('Ranyuen\Controller\ArticleController')->render(
+        $lang,
+        '/photos/',
+        [
+            'species_name' => $speciesName,
+            'photos'       => $photos,
+        ]
+    );
+});
+$router->registerController('Ranyuen\Controller\ArticleController');
