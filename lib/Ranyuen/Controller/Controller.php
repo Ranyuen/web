@@ -1,13 +1,14 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Response;
 
 /**
- * Controller interface
+ * Controller interface.
  */
 abstract class Controller
 {

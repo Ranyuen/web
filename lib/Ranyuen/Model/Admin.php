@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Model;
 
 use Illuminate\Database\Eloquent;
@@ -35,8 +36,6 @@ class Admin extends Eloquent\Model
      * Hash the given password and set.
      *
      * @param string $rawPassword Password.
-     *
-     * @return void
      */
     public function setPassword($rawPassword)
     {

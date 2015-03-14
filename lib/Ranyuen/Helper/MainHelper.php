@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Helper;
 
 use Ranyuen\Model\Photo;

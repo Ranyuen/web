@@ -33,7 +33,7 @@ class FakeReadline
     }
 }
 
-(new Ranyuen\App())->getContainer()['db'];
+(new Ranyuen\App())->container['db'];
 $rl = new FakeReadline();
 echo "Ctrl^C to quit.\n";
 $doseError = false;

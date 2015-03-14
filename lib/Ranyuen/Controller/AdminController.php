@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Response;
@@ -11,7 +12,7 @@ use Ranyuen\Model\ArticleTag;
 use Ranyuen\Template\ViewRenderer;
 
 /**
- * Admin
+ * Admin.
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
  * @Route('/admin')

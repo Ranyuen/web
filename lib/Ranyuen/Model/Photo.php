@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Model;
 
 use Illuminate\Database\Eloquent;
@@ -108,8 +109,6 @@ class Photo extends Eloquent\Model
     /**
      * @param integer $newWidth  New image width px
      * @param integer $newHeight New image height px
-     *
-     * @return void
      */
     public function renderResized($newWidth, $newHeight)
     {
@@ -131,8 +130,6 @@ class Photo extends Eloquent\Model
      * @param integer $newWidth      New image width px
      * @param integer $newHeight     New image height px
      * @param string  $cacheFilename Cache file name
-     *
-     * @return void
      */
     private function createCache($newWidth, $newHeight, $cacheFilename)
     {

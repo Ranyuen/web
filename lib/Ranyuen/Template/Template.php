@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Template;
 
 use dflydev\markdown\MarkdownExtraParser;
@@ -56,8 +57,6 @@ class Template
      * Register a helper instance.
      *
      * @param object $helper
-     *
-     * @return void
      */
     public function addHelper($helper)
     {

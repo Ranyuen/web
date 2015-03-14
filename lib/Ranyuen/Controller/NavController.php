@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\App;
@@ -10,7 +11,7 @@ use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 
 /**
- * Static pages
+ * Static pages.
  */
 class NavController extends Controller
 {

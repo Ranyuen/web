@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen;
 
 use Ranyuen\Di\Container;
@@ -67,8 +68,6 @@ class App
     }
 
     /**
-     * @return void
-     *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @SuppressWarnings(PHPMD.Superglobals)
      */
@@ -97,8 +96,6 @@ class App
      * @param Container $c      DI container
      * @param string    $env    development or production or...
      * @param array     $config Additional config.
-     *
-     * @return void
      */
     private function loadServices(Container $c, $env, array $config)
     {

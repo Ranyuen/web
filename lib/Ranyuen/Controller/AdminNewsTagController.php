@@ -1,14 +1,15 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Response;
 use Ranyuen\Model\ArticleTag;
 
 /**
- * Admin news_tag
+ * Admin news_tag.
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
  * @Route('/admin/news_tag')

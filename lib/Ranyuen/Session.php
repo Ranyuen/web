@@ -1,14 +1,15 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen;
 
 use ArrayAccess;
 use IteratorAggregate;
 
 /**
- * Session storage
+ * Session storage.
  *
  * @SuppressWarnings(PHPMD.Superglobals)
  */
@@ -46,8 +47,6 @@ class Session implements ArrayAccess, IteratorAggregate
      *
      * @param mixed $offset Offset
      * @param mixed $value  Value
-     *
-     * @return void
      */
     public function offsetSet($offset, $value)
     {
@@ -62,8 +61,6 @@ class Session implements ArrayAccess, IteratorAggregate
      * Unset session value.
      *
      * @param mixed $offset Offset
-     *
-     * @return void
      */
     public function offsetUnset($offset)
     {
@@ -72,8 +69,6 @@ class Session implements ArrayAccess, IteratorAggregate
 
     /**
      * Implements foreach.
-     *
-     * @return void
      */
     public function getIterator()
     {
@@ -82,8 +77,6 @@ class Session implements ArrayAccess, IteratorAggregate
 
     /**
      * Regenerate session ID.
-     *
-     * @return void
      */
     public function regenerate()
     {
@@ -92,8 +85,6 @@ class Session implements ArrayAccess, IteratorAggregate
 
     /**
      * Destroy this session.
-     *
-     * @return void
      */
     public function destroy()
     {

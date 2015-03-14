@@ -1,18 +1,23 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Model;
 
+use Illuminate\Database\Eloquent;
 use Ranyuen\Template\Template;
 
-class ArticleContent extends Element\Model
+class ArticleContent extends Eloquent\Model
 {
     protected $table = 'article_content';
     protected $fillable = ['lang', 'content'];
 
     public function __get($name)
     {
+        if (isset($this->attributes[$name])) {
+            return $this->attributes[$name];
+        }
         $params = (new Template($this->content))->params;
         if (isset($params[$name])) {
             return $params[$name];

@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Model\Article;
@@ -9,7 +10,7 @@ use Ranyuen\Model\ArticleTag;
 use Ranyuen\Template\ViewRenderer;
 
 /**
- * News
+ * News.
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
  * @Route('/news')

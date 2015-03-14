@@ -1,7 +1,8 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Template;
 
 /**
@@ -24,8 +25,6 @@ class ViewRenderer
 
     /**
      * @param string $templateName Jinja2 HTML file path.
-     *
-     * @return void
      */
     public function setLayout($templateName)
     {

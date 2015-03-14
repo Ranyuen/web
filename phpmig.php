@@ -1,6 +1,6 @@
 <?php
 /**
- * phpmig startup
+ * phpmig startup.
  */
 require 'vendor/autoload.php';
 

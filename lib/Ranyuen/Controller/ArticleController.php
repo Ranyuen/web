@@ -1,17 +1,17 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
+
 namespace Ranyuen\Controller;
 
-use Ranyuen\App;
 use Ranyuen\Model\Article;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 
 /**
- * Static pages
+ * Static pages.
  */
 class ArticleController extends Controller
 {
@@ -31,12 +31,13 @@ class ArticleController extends Controller
                 return new Response('', 301, ['Location' => $to]);
             }
         }
-        if (!($article = Article::where(['path' => $path])->first())) {
+        if (!(
+            ($article = Article::findByPath($path))
+            && ($content = $article->getContent($lang))
+        )) {
             return $router->error(404, $req);
         }
-        if (!($content = $article->contents->where(['lang' => $lang])->first())) {
-            return $router->error(404, $req);
-        }
+
         return $this->renderer->renderContent($content->content);
     }
 
