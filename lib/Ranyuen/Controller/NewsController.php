@@ -77,7 +77,7 @@ class NewsController extends Controller
      *
      * @return string
      *
-     * @Route('/{url}')
+     * @Route('/:url')
      */
     public function show($url, $lang)
     {
