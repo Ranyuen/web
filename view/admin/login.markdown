@@ -3,7 +3,7 @@ title: Admin Login
 ---
 {{ title }}
 ==
-<form action="/admin/login_p" method="POST">
+<form action="/admin/login" method="POST">
   <div>
     <input name="username" value="{{ username }}" placeholder="User name" type="text" size="40"/>
   </div>
