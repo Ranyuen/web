@@ -5,6 +5,7 @@
 
 namespace Ranyuen\Controller;
 
+use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Model\Article;
 use Ranyuen\Model\ArticleTag;
@@ -58,18 +59,17 @@ class AdminNewsController extends AdminController
      *
      * @Route('/create',via=POST)
      */
-    public function create()
+    public function create(Request $req)
     {
         $this->auth();
         $article = null;
         $hasSaved = true;
         $this->db->transaction(
-            function () use (&$article, &$hasSaved) {
-                $article = Article::create($this->router->request->post());
-                $article->fill($this->router->request->put());
+            function () use (&$article, &$hasSaved, $req) {
+                $article = Article::create($req->request->all());
                 $hasSaved = !$article->isDirty() && $hasSaved;
                 $hasSaved = $article->syncTagsByTagNames(
-                    explode(',', trim($this->router->request->post('tags'), ', '))
+                    explode(',', trim($req->get('tags'), ', '))
                 ) && $hasSaved;
             }
         );

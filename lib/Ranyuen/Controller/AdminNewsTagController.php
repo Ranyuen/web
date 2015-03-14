@@ -5,6 +5,7 @@
 
 namespace Ranyuen\Controller;
 
+use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Model\ArticleTag;
 
@@ -50,10 +51,10 @@ class AdminNewsTagController extends AdminController
      *
      * @Route('/create',via=POST)
      */
-    public function create()
+    public function create($name_ja, $name_en)
     {
         $this->auth();
-        $tag = ArticleTag::create($this->router->request->post());
+        $tag = ArticleTag::create(['name_ja' => $name_ja, 'name_en' => $name_en]);
         if ($tag->isDirty()) {
             return $this->renderer->render('admin/news_tag/new', ['tag' => $tag]);
         }
