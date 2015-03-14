@@ -1,10 +1,10 @@
 ---
-title: 南条洋介のプロフィール
+title: 南條洋介のプロフィール
 description: コラム筆者、南條洋介のプロフィールです。
 ---
 <link rel="stylesheet" href="assets/stylesheets/authors.css" />
 
-##南条洋介のプロフィール
+##南條洋介のプロフィール
 
 <figure class="author-img">
   <img src="assets/images/author_nanjo_yosuke.jpg" alt="南条洋介">
