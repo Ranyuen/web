@@ -38,13 +38,8 @@ $router->error(404, function (ViewRenderer $renderer, $lang) {
     // return new Response($res, 404);
 });
 
-$router->get('/columns/', function (Request $req) {
-    return new Response('', 302, ['Location' => '/news/list?tag=Column']);
-});
-
 $router->registerController('Ranyuen\Controller\ApiPhotoController');
-$router->registerController('Ranyuen\Controller\AdminNewsController');
-$router->registerController('Ranyuen\Controller\AdminNewsTagController');
+$router->registerController('Ranyuen\Controller\AdminArticlesController');
 $router->registerController('Ranyuen\Controller\AdminController');
 $router->get('/photos/', function (App $app, Request $req, ViewRenderer $renderer, $lang) {
     $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
@@ -71,4 +66,4 @@ $router->get('/photos/', function (App $app, Request $req, ViewRenderer $rendere
         ]
     );
 });
-$router->registerController('Ranyuen\Controller\ArticleController');
+//$router->registerController('Ranyuen\Controller\ArticleController');

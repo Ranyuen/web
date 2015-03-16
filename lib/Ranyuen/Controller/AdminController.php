@@ -106,8 +106,7 @@ class AdminController extends Controller
             'admin/index',
             [
                 'admin_username' => $this->session['admin_username'],
-                'articles'       => Article::all(),
-                'article_tags'   => ArticleTag::all(),
+                'articles'       => Article::with('contents')->get(),
             ]
         );
     }
