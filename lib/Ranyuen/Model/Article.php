@@ -29,4 +29,31 @@ class Article extends Eloquent\Model
     {
         return ArticleContent::where(['article_id' => $this->id, 'lang' => $lang])->first();
     }
+
+    public function sync(Article $article)
+    {
+        \DB::transaction(function () use ($article) {
+            $this->path = $article->path;
+            $this->save();
+            for ($i = 0; isset($article->contents[$i]) && isset($this->contents[$i]); ++$i) {
+                $this->contents[$i]->lang    = $article->contents[$i]->lang;
+                $this->contents[$i]->content = $article->contents[$i]->content;
+            }
+            if (count($article->contents) < count($this->contents)) {
+                foreach (array_slice($this->contents, count($article->contents)) as $content) {
+                    $content->delete();
+                }
+            } elseif (count($article->contents) > count($this->contents)) {
+                foreach (array_slice($article->contents, count($this->contents)) as $content) {
+                    $newContent = new ArticleContent([
+                        'lang'    => $content->lang,
+                        'content' => $content->content,
+                    ]);
+                    $newContent->article_id = $this->id;
+                    $this->contents[] = $newContent;
+                }
+            }
+            $this->push();
+        });
+    }
 }

@@ -833,12 +833,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ranyuen/Di.git",
-                "reference": "a63f25d202ec75bf3596c44e86889a8ea2f191cd"
+                "reference": "6a10e07a96ee37b32823a0f10df79bfa60b568d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/a63f25d202ec75bf3596c44e86889a8ea2f191cd",
-                "reference": "a63f25d202ec75bf3596c44e86889a8ea2f191cd",
+                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/6a10e07a96ee37b32823a0f10df79bfa60b568d3",
+                "reference": "6a10e07a96ee37b32823a0f10df79bfa60b568d3",
                 "shasum": ""
             },
             "require": {
@@ -884,7 +884,7 @@
                 "di",
                 "method invocation"
             ],
-            "time": "2015-02-15 07:56:04"
+            "time": "2015-03-17 17:43:06"
         },
         {
             "name": "ranyuen/little",

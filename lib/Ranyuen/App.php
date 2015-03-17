@@ -134,6 +134,7 @@ class App
                 return $c->newInstance('Ranyuen\DbCapsule');
             }
         );
+        $c->facade('DB', 'db');
         $c->bind(
             'Ranyuen\Template\ViewRenderer',
             'renderer',

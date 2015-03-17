@@ -166,6 +166,9 @@ function ArticleEditor(node, article) {
   this.nodeContentInput.addEventListener('keyup', function () {
     me.currentContent.content = me.nodeContentInput.value;
   });
+  this.nodeContentInput.addEventListener('change', function () {
+    me.currentContent.content = me.nodeContentInput.value;
+  });
   this.nodeSave.addEventListener('click', function () {
     me.save();
   });
@@ -261,7 +264,7 @@ ArticleEditor.prototype.save = throttle(function () {
   return this.article.save().then(function () {
     console.log('Last saved at ' + new Date().toISOString());
     if (/\/0$/.test(location.href)) {
-      location.pushState({}, document.title, location.href.replace(/0$/, article.id));
+      history.pushState({}, document.title, location.href.replace(/0$/, article.id));
     }
     me.nodeSave.textContent = '保存済み';
     setTimeout(function () {
@@ -284,10 +287,10 @@ ArticleEditor.prototype.save = throttle(function () {
   });
 }, 2000);
 window.addEventListener('popstate', function (evt) {
-  if (!evt.originalEvent.state) {
+  if (!evt.state) {
     return;
   }
-  location.href = location.href.replace(/\d+$/, article.id);
+  history.bask();
 });
 
 ArticleEditor.prototype.attachArticle = function (article) {
@@ -423,8 +426,7 @@ Article.prototype.save = function () {
       return reject(new ValidationError(me.errors));
     }
     req.onload = function () {
-      console.log(req.response);
-      //me.id = JSON.parse(req.responseText).id;
+      me.id = JSON.parse(req.responseText).id;
       resolve();
     };
     req.onerror = function () {

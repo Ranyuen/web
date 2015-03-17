@@ -21,12 +21,6 @@ use Ranyuen\Template\Template;
 class AdminArticlesController extends AdminController
 {
     /**
-     * @var Ranyuen\DbCapsule
-     * @Inject
-     */
-    private $db;
-
-    /**
      * @param string $id News ID.
      *
      * @return string
@@ -59,29 +53,25 @@ class AdminArticlesController extends AdminController
     {
         $this->auth();
         $article = json_decode($article);
-        $entity = null;
-        $this->db->transaction(function () use ($article, &$entity) {
-            if (0 === $article->id) {
-                $entity = new Article();
-            } else {
-                if (!$entity = Article::with('contents')->find($article->id)) {
-                    return $router->error(404, $req);
-                }
-                foreach ($entity->contents as $content) {
-                    $content->delete();
-                }
+        $newArticle = new Article(['path' => $article->path]);
+        $newArticle->contents = array_map(
+            function ($content) {
+                return new ArticleContent([
+                    'lang'    => $content->lang,
+                    'content' => $content->content,
+                ]);
+            },
+            $article->contents
+        );
+        if (0 === $article->id) {
+            $original = new Article();
+        } else {
+            if (!$original = Article::with('contents')->find($article->id)) {
+                return $router->error(404, $req);
             }
-            $entity->path = $article->path;
-            foreach ($article->contents as $val) {
-                $content = new ArticleContent();
-                $content->lang       = $val->lang;
-                $content->content    = $val->content;
-                $content->article_id = $entity->id;
-                $entity->contents[]  = $content;
-            }
-            $entity->push();
-        });
-        return json_encode($entity);
+        }
+        $original->sync($newArticle);
+        return json_encode($original);
     }
 
     /**
