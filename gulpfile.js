@@ -165,7 +165,7 @@ gulp.task('uglifyjs', function () {
       src: [
         'src/bower_components/jquery/dist/jquery.min.js',
         'src/bower_components/uri.js/src/URI.min.js',
-        'src/javascripts/polyfill.js',
+        'src/javascripts/baselib.js',
         'src/javascripts/messageForDeveloperFromRanyuen.js',
         'src/javascripts/globalnav.js',
       ],
@@ -189,6 +189,7 @@ gulp.task('uglifyjs', function () {
     },
     {
       src: [
+        'src/javascripts/baselib.js',
         'src/javascripts/article_editor.js',
       ],
       dest: 'article_editor.min.js'

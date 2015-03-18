@@ -1,110 +1,12 @@
 (function (global) {
-
-if (!Array.from) {
-  Array.from = function (obj) {
-    return [].slice.call(obj);
-  };
-}
-
-if (!String.prototype.startsWith) {
-  Object.defineProperty(String.prototype, 'startsWith', {
-    enumerable   : false,
-    configurable : false,
-    writable     : false,
-    value        : function (searchString, position) {
-      position = position || 0;
-      return this.lastIndexOf(searchString, position) === position;
-    }
-  });
-}
-
-function setImmediate(fun) {
-  if (global.setImmediate) {
-    return global.setImmediate(fun);
-  }
-  if (global.requestAnimationFrame) {
-    return global.requestAnimationFrame(fun);
-  }
-  return setTimeout(fun, 0);
-}
-
-/**
- * @param {function(...:any<T>):any} fun
- * @param {number?}                  wait ms. Default uses setImmediate().
- *
- * @return {function(...:any<T>):void}
- */
-function throttle(fun, wait) {
-  var doseUseTick = false,
-      isThrottled = false;
-
-  if (!wait) {
-    doseUseTick = true;
-  }
-  if (!wait || wait <= 0) {
-    wait = 1000 / 30;
-  }
-  return function (/* arguments */) {
-    if (isThrottled) {
-      return;
-    }
-    isThrottled = true;
-    fun.apply(this, arguments);
-    if (doseUseTick) {
-      setImmediate(function () {
-        isThrottled = false;
-      });
-    } else {
-      setTimeout(function () {
-        isThrottled = false;
-      }, wait);
-    }
-  };
-}
+'use strict';
 
 function fromTemplate(id) {
   return document.importNode(document.getElementById(id).content, true).firstElementChild;
 }
 
-// {{{ BEM
-// function b(block) {
-//   if (!(this instanceof b)) {
-//     return new b(block);
-//   }
-//   this.className = block;
-// }
-//
-// b.prototype.e = function (element) {
-//   this.className += '_' + element;
-//   return this;
-// };
-//
-// b.prototype.m = function (modifier) {
-//   this.className += '-' + modifier;
-//   return this;
-// };
-//
-// b.prototype.first = function (context) {
-//   context = context || document;
-//   return context.querySelector('.' + this);
-// };
-//
-// b.prototype.all = function (context) {
-//   context = context || document;
-//   return Array.from(context.querySelectorAll('.' + this));
-// };
-//
-// b.prototype.toString = function () {
-//   return this.className;
-// };
-//
-// b.prototype.valueOf = function () {
-//   return this.className;
-// };
-// }}}
-
 // {{{ EventRouter
-EventRouter = {
+var EventRouter = {
   listeners : {},
 
   emit : function (name, params, me) {
