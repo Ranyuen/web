@@ -59,16 +59,21 @@ class ViewRenderer
         } else {
             throw new TempalteFileNotFoundException($templateName);
         }
-        $output = $this->renderContent($content, $params, $helpers);
+        return $this->renderContent($content, $params, $helpers);
+    }
+
+    public function renderContent($content, $params = [], $helpers = [])
+    {
+        $output = $this->renderRawContent($content, $params, $helpers);
         if (!$this->layout) {
             return $output;
         }
         $params['content'] = $output;
 
-        return $this->renderContent($this->layout, $params, $helpers);
+        return $this->renderRawContent($this->layout, $params, $helpers);
     }
 
-    public function renderContent($content, $params = [], $helpers = [])
+    private function renderRawContent($content, $params = [], $helpers = [])
     {
         $template = new Template($content, $params, $this->dir);
         foreach (array_merge($helpers, $this->helpers) as $helper) {

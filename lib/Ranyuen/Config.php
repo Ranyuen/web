@@ -36,12 +36,10 @@ class Config
     public function load($env = 'development')
     {
         $config = [
-            // Configuration for Ranyuen App.
             'lang'           => ['default' => 'en'],
             'layout'         => 'layout',
             'log.path'       => 'logs',
             'redirect'       => [],
-            // Configuration for Slim Framwork.
             'debug'          => true,
             'log.enabled'    => false,
             'log.level'      => 7, // INFO
