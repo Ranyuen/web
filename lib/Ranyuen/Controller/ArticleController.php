@@ -12,6 +12,7 @@ use Ranyuen\Little\Router;
 
 /**
  * Static pages.
+ * @Route('/')
  */
 class ArticleController extends Controller
 {
@@ -26,6 +27,7 @@ class ArticleController extends Controller
      */
     public function show(Router $router, Request $req, $lang, $path = '')
     {
+        $path = '/'.$path;
         foreach ($this->config['redirect'] as $from => $to) {
             if ($path === $from) {
                 return new Response('', 301, ['Location' => $to]);

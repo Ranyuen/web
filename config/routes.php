@@ -66,4 +66,4 @@ $router->get('/photos/', function (App $app, Request $req, ViewRenderer $rendere
         ]
     );
 });
-//$router->registerController('Ranyuen\Controller\ArticleController');
+$router->registerController('Ranyuen\Controller\ArticleController');
