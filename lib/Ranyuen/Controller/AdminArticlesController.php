@@ -86,7 +86,7 @@ class AdminArticlesController extends AdminController
         $this->auth();
         Article::destroy($id);
 
-        return new Response('', 303, ['Location' => '/admin']);
+        return new Response('', 303, ['Location' => '/admin/']);
     }
 
     /**

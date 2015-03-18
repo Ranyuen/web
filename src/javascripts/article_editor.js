@@ -148,6 +148,7 @@ function ArticleEditor(node, article) {
   this.nodeContentPreview = node.querySelector('.articleEditor_content_preview');
   this.nodeErrors         = node.querySelector('.articleEditor_errors');
   this.nodeSave           = node.querySelector('.articleEditor_save');
+  this.nodeRemove         = node.querySelector('.articleEditor_remove');
   EventRouter.on('selectLangTabItem', function (langTabItem, content) {
     me.switchContent(langTabItem, content);
   });
@@ -163,14 +164,11 @@ function ArticleEditor(node, article) {
   this.nodeLangTabPlus.addEventListener('click', function () {
     me.createContent();
   });
-  this.nodeContentInput.addEventListener('keyup', function () {
-    me.currentContent.content = me.nodeContentInput.value;
-  });
-  this.nodeContentInput.addEventListener('change', function () {
-    me.currentContent.content = me.nodeContentInput.value;
-  });
   this.nodeSave.addEventListener('click', function () {
     me.save();
+  });
+  this.nodeRemove.addEventListener('click', function () {
+    me.destroy();
   });
   this.attachArticle(article);
 }
@@ -179,9 +177,14 @@ ArticleEditor.prototype.run = function () {
   var me                 = this,
       lastPreviewContent = '';
   requestAnimationFrame(function preview() {
+    me.currentContent.content = me.nodeContentInput.value;
     if (lastPreviewContent !== me.currentContent.content) {
-      lastPreviewContent = me.currentContent.content;
-      me.preview();
+      me.preview(function (err) {
+        if (err) {
+          return me.showError(err);
+        }
+        lastPreviewContent = me.currentContent.content;
+      });
     }
     requestAnimationFrame(preview);
   });
@@ -213,7 +216,7 @@ ArticleEditor.prototype.removeContent = function (langTabItem, content) {
   var nextLangTabItem,
       i  = 0,
       iz = 0;
-  if (!window.confirm(content.lang + ' を削除するか?')) {
+  if (!window.confirm('ArticleContent ' + content.lang + ' を削除するか?')) {
     return;
   }
   for (i = 0, iz = this.article.contents.length; i < iz; ++i) {
@@ -242,7 +245,7 @@ ArticleEditor.prototype.removeContent = function (langTabItem, content) {
   this.nodeLangTab.removeChild(langTabItem.node);
 };
 
-ArticleEditor.prototype.preview = throttle(function () {
+ArticleEditor.prototype.preview = throttle(function (done) {
   var me = this;
   this.currentContent.render().then(function (html) {
     var sandbox  = document.createElement('div'),
@@ -253,8 +256,9 @@ ArticleEditor.prototype.preview = throttle(function () {
     });
     me.nodeContentPreview.innerHTML = '';
     me.nodeContentPreview.appendChild(fragment);
+    done && done();
   }).catch(function (err) {
-    console.error(err);
+    done && done(err);
   });
 }, 500);
 
@@ -271,19 +275,7 @@ ArticleEditor.prototype.save = throttle(function () {
       me.nodeSave.textContent = '保存';
     }, 2000);
   }).catch(function (err) {
-    var node;
-    if (err instanceof ValidationError) {
-      me.nodeErrors.appendChild(err.messages.reduce(function (fragment, message) {
-        var node = fromTemplate('articleEditor_errors_error');
-        node.textContent = message;
-        fragment.appendChild(node);
-        return fragment;
-      }, document.createDocumentFragment()));
-      return;
-    }
-    node = fromTemplate('articleEditor_errors_error');
-    node.textContent = err.message;
-    me.nodeErrors.appendChild(node);
+    me.showError(err);
   });
 }, 2000);
 window.addEventListener('popstate', function (evt) {
@@ -292,6 +284,34 @@ window.addEventListener('popstate', function (evt) {
   }
   history.bask();
 });
+
+ArticleEditor.prototype.destroy = function () {
+  var me = this;
+  if (!window.confirm('Articleを削除するか?')) {
+    return;
+  }
+  this.article.destroy().then(function () {
+    location.href = '/admin/';
+  }).catch(function (err) {
+    me.showError(err);
+  });
+};
+
+ArticleEditor.prototype.showError = function (err) {
+  var node;
+  if (err instanceof ValidationError) {
+    this.nodeErrors.appendChild(err.messages.reduce(function (fragment, message) {
+      var node = fromTemplate('articleEditor_errors_error');
+      node.textContent = message;
+      fragment.appendChild(node);
+      return fragment;
+    }, document.createDocumentFragment()));
+    return;
+  }
+  node = fromTemplate('articleEditor_errors_error');
+  node.textContent = err.message;
+  this.nodeErrors.appendChild(node);
+};
 
 ArticleEditor.prototype.attachArticle = function (article) {
   this.article = article;
@@ -436,6 +456,20 @@ Article.prototype.save = function () {
       reject(new NetworkError(req));
     };
     req.send('article=' + encodeURIComponent(me.toJson()));
+  });
+};
+
+Article.prototype.destroy = function () {
+  var req = new XMLHttpRequest();
+  req.open('DELETE', '/admin/articles/destroy/' + this.id);
+  return new Promise(function (resolve, reject) {
+    req.onload = function () {
+      resolve();
+    };
+    req.onerror = function () {
+      reject(new NetworkError(req));
+    };
+    req.send();
   });
 };
 

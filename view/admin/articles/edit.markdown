@@ -16,6 +16,7 @@ title: Edit article
   </div>
   <ul class="articleEditor_errors"></ul>
   <button class="articleEditor_save">保存</button>
+  <button class="articleEditor_remove">削除</button>
 </div>
 <template id="articleEditor_langTab_item">
   <div class="articleEditor_langTab_item">

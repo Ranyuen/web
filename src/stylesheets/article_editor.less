@@ -86,8 +86,7 @@ body { margin : 0; }
     }
   }
 
-  &_save {
-    background : @blue;
+  &_save, &_remove {
     border     : 0;
     color      : white;
     cursor     : pointer;
@@ -96,4 +95,8 @@ body { margin : 0; }
 
     &:hover { opacity : 0.9; }
   }
+
+  &_save { background : @blue; }
+
+  &_remove { background : @red; }
 }
