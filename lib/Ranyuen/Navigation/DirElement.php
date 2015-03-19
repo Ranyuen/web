@@ -20,19 +20,28 @@ class DirElement
     {
         $this->lang = $lang;
         $this->elm  = $elm;
-        $this->path = $parentPath.$elm->attributes()['path'].'/';
+        switch ($elm->getName()) {
+        case 'lang':
+            $this->path = $parentPath;
+            break;
+        case 'dir':
+            $this->path = $parentPath.$elm->attributes()['path'].'/';
+            break;
+        default:
+            throw new \Exception(print_r($elm, true));
+        }
     }
 
     public function pageChildren()
     {
         $pages = [];
         if ($elm = $this->elm->xpath('page[@path="index"]')) {
-            $pages[] = Page::fromElement($this->lang, $elm);
+            $pages[] = Page::fromElement($this->lang,$this->path, $elm);
         } if ($article = Article::findByPath($this->path)) {
             $pages[] = Page::fromArticle($this->lang, $article);
         }
         foreach ($this->elm->xpath('page') as $elm) {
-            $page = Page::fromElement($this->lang, $elm);
+            $page = Page::fromElement($this->lang, $this->path, $elm);
             if (preg_match('/\/\z/', $page->path)) {
                 continue;
             }
@@ -53,7 +62,7 @@ class DirElement
                 $pages[] = (new DirElement($this->lang, $this->path, $elm))->pages();
                 break;
             case 'page':
-                $pages[] = Page::fromElement($this->lang, $elm);
+                $pages[] = Page::fromElement($this->lang, $this->path, $elm);
                 break;
             case 'rest-pages':
                 $pages = array_merge($pages, (new RestPagesElement($this, $elm))->pages());

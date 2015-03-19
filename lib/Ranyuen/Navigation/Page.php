@@ -11,14 +11,14 @@ use Ranyuen\Model\Article;
  */
 class Page
 {
-    static public function fromElement($lang, \SimpleXMLElement $elm)
+    static public function fromElement($lang, $parentPath, \SimpleXMLElement $elm)
     {
-        return new self($lang, $elm->attributes());
+        return new self($lang, $parentPath, $elm->attributes());
     }
 
     static public function fromArticle($lang, Article $article)
     {
-        return new self($lang, [
+        return new self($lang, '', [
             'path'  => $article->path,
             'title' => $article->getContent($lang)->title,
         ]);
@@ -30,10 +30,10 @@ class Page
 
     private $article_id;
 
-    public function __construct($lang, $params)
+    public function __construct($lang, $parentPath, $params)
     {
         $this->lang       = $lang;
-        $this->path       = (string) $params['path'];
+        $this->path       = $parentPath.(string) $params['path'];
         $this->title      = (string) $params['title'];
         $this->article_id = intval((string) $params['article_id']);
         if (!($this->path && $this->title)) {

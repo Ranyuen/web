@@ -34,9 +34,8 @@ class Navigation
         foreach ($dirs as $dir) {
             $nav = $nav->xpath('dir[@path="'.h($dir).'"]')[0];
         }
-        $pages = (new DirElement($lang, implode('/', $dirs).'/', $nav))->pages();
-        //var_dump($pages);
-        return $pages;
+        $parentPath = implode('/', array_slice($dirs, 0, count($dirs) - 1)).'/';
+        return (new DirElement($lang, $parentPath, $nav))->pages();
     }
 
     /**
