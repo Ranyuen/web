@@ -5,9 +5,8 @@
 
 namespace Ranyuen;
 
-use Illuminate;
 use Illuminate\Database\Capsule\Manager;
-use Illuminate\Events\Dispatcher;
+// use Illuminate\Events\Dispatcher;
 
 /**
  * DB connection.
@@ -25,23 +24,23 @@ class DbCapsule
     {
         $this->capsule = new Manager();
         $this->capsule->addConnection($config['db']);
-        $dispatcher = new Dispatcher(new Illuminate\Container\Container());
-        $dispatcher->listen(
-            'illuminate.query',
-            function ($query, $bindings, $time, $name) use ($logger) {
-                $message = [
-                    'log.type'   => 'db',
-                    'query'      => $query,
-                    'time'       => $time,
-                    'connection' => $name,
-                ];
-                foreach ($bindings as $k => $v) {
-                    $message["bindings.$k"] = strval($v);
-                }
-                $logger->addInfo($message);
-            }
-        );
-        $this->capsule->setEventDispatcher($dispatcher);
+        // $dispatcher = new Dispatcher(new Illuminate\Container\Container());
+        // $dispatcher->listen(
+        //     'illuminate.query',
+        //     function ($query, $bindings, $time, $name) use ($logger) {
+        //         $message = [
+        //             'log.type'   => 'db',
+        //             'query'      => $query,
+        //             'time'       => $time,
+        //             'connection' => $name,
+        //         ];
+        //         foreach ($bindings as $k => $v) {
+        //             $message["bindings.$k"] = strval($v);
+        //         }
+        //         $logger->addInfo($message);
+        //     }
+        // );
+        // $this->capsule->setEventDispatcher($dispatcher);
         $this->capsule->setAsGlobal();
         $this->capsule->bootEloquent();
         $this->getConnection()->enableQueryLog();

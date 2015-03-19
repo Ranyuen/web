@@ -18,4 +18,12 @@ if (is_file('config/env.php')) {
     require_once 'config/env.php';
 }
 
+function h($text) {
+    return htmlspecialchars(
+        $text,
+        ENT_QUOTES|ENT_DISALLOWED|ENT_HTML5,
+        'UTF-8'
+    );
+}
+
 (new \Ranyuen\App())->run();

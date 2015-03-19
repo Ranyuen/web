@@ -2,72 +2,65 @@
 @import "helpers";
 
 .authors {
-  .clear-fix;
+  .cf;
 
   .authors-square {
-    margin: 0 auto;
-    position: relative;
-    width: 206.533px;
-    height: 206.533px;
+    height   : 206.533px;
+    margin   : 0 auto;
+    position : relative;
+    width    : 206.533px;
 
     .authors-square-title {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      border-radius: 5px;
-      position: absolute;
-      right: 20px;
-      bottom: 20px;
-      left: 20px;
-      line-height: 30px;
-      height: 30px;
-      background: #47914C;
-      text-align: center;
-      text-shadow: #8A8D8F -1px -1px 0px;
-      box-shadow: 1px 1px 1px rgba(000, 000, 000, 0.3);
+      background    : #47914C;
+      border        : 0;
+      border-radius : 5px;
+      bottom        : 20px;
+      box-shadow    : 1px 1px 1px rgba(000, 000, 000, 0.3);
+      height        : 30px;
+      left          : 20px;
+      line-height   : 30px;
+      margin        : 0;
+      padding       : 0;
+      position      : absolute;
+      right         : 20px;
+      text-align    : center;
+      text-shadow   : #8A8D8F -1px -1px 0px;
 
       a {
-        border-radius: 5px;
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        box-shadow: 1px 1px 1px rgba(000, 000, 000, 0.3);
-        
-        &:hover {
-          opacity: 0.6;
-        }
+        border-radius   : 5px;
+        box-shadow      : 1px 1px 1px rgba(000, 000, 000, 0.3);
+        color           : #fff;
+        display         : block;
+        text-decoration : none;
+
+        &:hover { opacity : 0.6; }
       }
     }
 
     img {
-      display: block;
-      width: 206.533px;
-      height: 206.533px;
+      display : block;
+      height  : 206.533px;
+      width   : 206.533px;
     }
   }
 }
 
 .author-img {
-  
   img {
-    margin: 0 auto;
-    display: block;
-    width: 380px;
+    margin  : 0 auto;
+    display : block;
+    width   : 380px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width : @width-phone) {
   .authors {
-    .authors-square {
-      float: left;
-    }
+    .authors-square { float : left; }
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width : @width-tablet) {
   .authors {
-    .authors-square {
-      float: left;
-    }
+    .authors-square { float : left; }
   }
 }

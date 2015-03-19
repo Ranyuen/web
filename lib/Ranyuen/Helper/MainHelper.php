@@ -22,16 +22,17 @@ class MainHelper extends Helper
     {
         $output = '';
         $isFirst = true;
-        foreach ($nav as $href => $title) {
-            if (!$title) {
+        foreach ($nav as $page) {
+            if (is_array($page)) {
+                $output .= $this->echoNav($page);
                 continue;
             }
             $output .= '<div class="nav-item '.
                 ($isFirst ? 'nav-item-home' : '').
                 '"><a href="'.
-                $this->html(preg_replace('/\/\//', '/', $base.$href)).
+                h(preg_replace('/\/\//', '/', $page->path)).
                 '">'.
-                $this->html($title).
+                h($page->title).
                 '</a></div>';
             $isFirst = false;
         }
@@ -53,9 +54,9 @@ class MainHelper extends Helper
                 continue;
             }
             $output .= '<div class="nav-item"><a href="'.
-                $this->html(preg_replace('/\/\//', '/', $base.$href)).
+                h(preg_replace('/\/\//', '/', $base.$href)).
                 '" itemprop="url"><span itemprop="title">'.
-                $this->html($title).
+                h($title).
                 '</span></a></div>';
         }
         $output .= '</div>';
@@ -97,7 +98,7 @@ class MainHelper extends Helper
         allowfullscreen></iframe>";
         if ($title) {
             $output .= "<div><a href=\"http://youtu.be/$movieId?rel=0\">".
-                $this->html($title).
+                h($title).
                 '</a></div>';
         }
         $output .= '</div>';
@@ -129,9 +130,9 @@ class MainHelper extends Helper
         if (!$height) {
             $height = $photo->height;
         }
-        $alt = $this->html("$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)");
-        $width = $this->html($width);
-        $height = $this->html($height);
+        $alt = h("$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)");
+        $width = h($width);
+        $height = h($height);
 
         return "<img src=\"$src\"
     alt=\"$alt\"

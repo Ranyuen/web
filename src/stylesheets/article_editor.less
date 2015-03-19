@@ -1,18 +1,6 @@
 @charset "UTF-8";
-
-@red   : hsl(  0,  80%, 50%);
-@green : hsl(100, 100%, 30%);
-@blue  : hsl(200, 100%, 40%);
-
-.cf() {
-  &:after {
-    clear   : both;
-    content : '';
-    display : block;
-  }
-}
-
-body { margin : 0; }
+@import "base";
+@import "helpers";
 
 .articleEditor {
   background  : white;

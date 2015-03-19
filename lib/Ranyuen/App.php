@@ -111,10 +111,10 @@ class App
             }
         );
         $c->bind(
-            'Ranyuen\Navigation',
+            'Ranyuen\Navigation\Navigation',
             'nav',
             function ($c) {
-                return $c->newInstance('Ranyuen\Navigation');
+                return $c->newInstance('Ranyuen\Navigation\Navigation');
             }
         );
         $c->bind(

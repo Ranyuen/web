@@ -111,15 +111,6 @@ gulp.task('less', function () {
     pipe(gulp.dest('assets/stylesheets'));
 });
 
-gulp.task('nav', function () {
-  return Promise.all([
-    // promiseProcess('rake nav:nav'),
-    promiseProcess('rake nav:sitemap'),
-  ]).then(function (outs) {
-    outs.forEach(function (out) { console.log(out); });
-  });
-});
-
 gulp.task('php-fixer', function () {
   return Promise.all([
     promiseProcess('vendor/bin/php-cs-fixer fix index.php', true),
@@ -207,5 +198,5 @@ gulp.task('uglifyjs', function () {
 });
 
 gulp.task('backup', ['backup-db', 'backup-images']);
-gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
+gulp.task('build', ['copy-assets', 'less', 'uglifyjs']);
 gulp.task('test', ['jshint', 'php-test']);

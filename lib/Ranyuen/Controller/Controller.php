@@ -14,16 +14,6 @@ abstract class Controller
 {
     /** @Inject */
     protected $config;
-    /**
-     * @var Ranyuen\Navigation
-     * @Inject
-     */
-    protected $nav;
-    /**
-     * @var Ranyuen\BgImage
-     * @Inject
-     */
-    protected $bgimage;
 
     protected function toJsonResponse($res, $statusCode = null, $headers = [])
     {

@@ -64,22 +64,26 @@ class ViewRenderer
 
     public function renderContent($content, $params = [], $helpers = [])
     {
-        $output = $this->renderRawContent($content, $params, $helpers);
+        $template = new Template($content, $params, $this->dir);
+        $output = $this->renderRawContent($template, $params, $helpers);
         if (!$this->layout) {
             return $output;
         }
         $params['content'] = $output;
+        $params = array_merge($template->params, $params);
 
         return $this->renderRawContent($this->layout, $params, $helpers);
     }
 
     private function renderRawContent($content, $params = [], $helpers = [])
     {
-        $template = new Template($content, $params, $this->dir);
+        if (!($content instanceof Template)) {
+            $content = new Template($content, $params, $this->dir);
+        }
         foreach (array_merge($helpers, $this->helpers) as $helper) {
-            $template->addHelper($helper);
+            $content->addHelper($helper);
         }
 
-        return $template->render();
+        return $content->render();
     }
 }

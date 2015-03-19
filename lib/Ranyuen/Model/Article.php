@@ -14,7 +14,23 @@ class Article extends Eloquent\Model
 {
     public static function findByPath($path)
     {
-        return Article::where(['path' => $path])->first();
+        return self::with('contents')->where(['path' => $path])->first();
+    }
+
+    public static function children($path, $count = 0)
+    {
+        $entities = self::with('contents')->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')->orderBy('created_at', 'DESC')->get();
+        $articles = [];
+        foreach ($entities as $entity) {
+            if (!preg_match('#^'.preg_quote($path, '#').'[^/]*$#', $entity->path)) {
+                continue;
+            }
+            $articles[] = $entity;
+            if ($count && count($pages) >= $count) {
+                break;
+            }
+        }
+        return $articles;
     }
 
     protected $table = 'article';

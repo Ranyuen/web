@@ -10,19 +10,11 @@ use Ranyuen\Template\ViewRenderer;
 
 Router::plugin('Ranyuen\Little\Plugin\ControllerAnnotationRouter');
 
-$h = function ($text) {
-    return htmlspecialchars(
-        $text,
-        ENT_QUOTES|ENT_DISALLOWED|ENT_HTML5,
-        'UTF-8'
-    );
-};
-
-$router->error(500, function (\Exception $ex) use ($h) {
+$router->error(500, function (\Exception $ex) {
     if ($ex instanceof \Ranyuen\Controller\Http403ForbiddenException) {
         $res = '403 Forbidden.';
         if ($ex->redirectUri) {
-            $res .= ' <a href="'.$h($ex->redirectUri).'">Go to '.$h($ex->redirectUri).'.</a>';
+            $res .= ' <a href="'.h($ex->redirectUri).'">Go to '.h($ex->redirectUri).'.</a>';
         }
 
         return new Response($res, 403);

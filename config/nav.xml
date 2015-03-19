@@ -1,97 +1,75 @@
 <?xml version="1.0" standalone="yes"?>
 <nav>
     <lang name="en">
-        <page path="index" title="Ranyuen"/>
-        <dir path="calanthe">
-            <page path="index" title="Grow Calanthe"/>
-        </dir>
-        <dir path="ponerorchis">
-            <page path="index" title="Grow Ponerorchis"/>
-        </dir>
+        <dir path="calanthe"/>
+        <dir path="ponerorchis"/>
         <dir path="about_us">
-            <page path="index" title="About Us"/>
-            <page path="direction" title="Direction"/>
-            <page path="exporting" title="Exporting"/>
+            <page path="direction"/>
+            <page path="exporting"/>
         </dir>
-        <dir path="photos">
-            <page path="index" title="Photos"/>
-        </dir>
+        <dir path="photos"/>
     </lang>
     <lang name="ja">
-        <page path="index" title="蘭裕園"/>
         <dir path="calanthe">
-            <page path="index" title="エビネを極める"/>
             <dir path="grouping">
-                <page path="index" title="エビネの種類"/>
-                <page path="info_about_JIEBINE_calanthe_discolor" title="ジエビネについて"/>
+                <page path="info_about_JIEBINE_calanthe_discolor"/>
             </dir>
             <dir path="cultivation">
-                <page path="index" title="エビネの栽培"/>
-                <page path="growings_calanthe_in_each_season" title="エビネの管理(春夏秋冬)"/>
-                <page path="growings_calanthe_in_a_pot" title="鉢で育てる"/>
-                <page path="growings_calanthe_on_a_garden" title="庭で育てる"/>
-                <page path="repot_calanthe" title="植え替えと株分け"/>
-                <page path="fertilizing_for_calanthe" title="上手な肥料の施し方"/>
-                <page path="controlling_pests_of_calanthe" title="エビネ病害虫の防除"/>
+                <page path="growings_calanthe_in_each_season"/>
+                <page path="growings_calanthe_in_a_pot"/>
+                <page path="growings_calanthe_on_a_garden"/>
+                <page path="repot_calanthe"/>
+                <page path="fertilizing_for_calanthe"/>
+                <page path="controlling_pests_of_calanthe"/>
             </dir>
-            <page path="tech_to_grow_calanthe_for_beginner" title="エビネの栽培(初心者編)"/>
+            <page path="tech_to_grow_calanthe_for_beginner"/>
             <dir path="learning">
-                <page path="index" title="エビネの自生地から学ぶ"/>
-                <page path="info_coffeecup_calanthe" title="コーヒーカップカランセ"/>
+                <page path="info_coffeecup_calanthe"/>
             </dir>
-            <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
-            <page path="growings_calanthe_in_the_new_way" title="エビネの育て方を極める - 最先端のエビネ栽培法"/>
+            <page path="recent_failure_and_provision"/>
+            <page path="growings_calanthe_in_the_new_way"/>
         </dir>
         <dir path="ponerorchis">
-            <page path="index" title="ウチョウランを極める"/>
-            <page path="kind_of_ponerorchis" title="ウチョウランの種類"/>
+            <page path="kind_of_ponerorchis"/>
             <dir path="cultivation">
-                <page path="index" title="ウチョウランの仲間の栽培"/>
-                <page path="growings_ponerorchis_in_each_season" title="ウチョウランの仲間の管理(春夏秋冬)"/>
-                <page path="pot_soil_water_for_ponerorchis" title="鉢・土・水やり"/>
-                <page path="watering_for_ponerorchis" title="水やりの基本"/>
-                <page path="growings_ponerorchis_on_a_garden" title="屋外での自然栽培"/>
-                <page path="overcome_the_intense_heat" title="猛暑を乗り越える裏技"/>
-                <page path="special_upbringing_of_ponerorchis" title="ウチョウランの特殊な育て方"/>
-                <page path="regulation_of_flowering_time" title="開花調節"/>
-                <page path="controlling_pests_of_ponerorchis" title="ウチョウラン病害虫の防除"/>
-                <page path="tech_to_grow_ponerorchis_for_advanced" title="ウチョウランの仲間の栽培 - 上級者編"/>
+                <page path="growings_ponerorchis_in_each_season"/>
+                <page path="pot_soil_water_for_ponerorchis"/>
+                <page path="watering_for_ponerorchis"/>
+                <page path="growings_ponerorchis_on_a_garden"/>
+                <page path="overcome_the_intense_heat"/>
+                <page path="special_upbringing_of_ponerorchis"/>
+                <page path="regulation_of_flowering_time"/>
+                <page path="controlling_pests_of_ponerorchis"/>
+                <page path="tech_to_grow_ponerorchis_for_advanced"/>
             </dir>
             <dir path="learning">
-                <page path="index" title="ウチョウランの自生地から学ぶ"/>
-                <page path="info_lerning_awachidori_from_territory" title="アワチドリの自生地"/>
+                <page path="info_lerning_awachidori_from_territory"/>
             </dir>
-            <page path="yumechidori" title="夢ちどり"/>
-            <page path="awachidori" title="アワチドリ"/>
-            <page path="tech_to_grow_ponerorchis_for_beginner" title="夢ちどり/アワチドリの栽培 (初心者編)"/>
-            <page path="as_miniminiranran" title="ミニミニランラン"/>
-            <page path="recent_failure_and_provision" title="近年に多い障害と対策"/>
-            <page path="ponerorchis_in_the_new_way" title="ウチョウランの育て方を極める - 最先端の考え方"/>
+            <page path="yumechidori"/>
+            <page path="awachidori"/>
+            <page path="tech_to_grow_ponerorchis_for_beginner"/>
+            <page path="as_miniminiranran"/>
+            <page path="recent_failure_and_provision"/>
+            <page path="ponerorchis_in_the_new_way"/>
         </dir>
         <dir path="about_us">
-            <page path="index" title="蘭裕園のご紹介"/>
-            <page path="direction" title="アクセス"/>
-            <page path="how_to_buy" title="ご購入をご希望の方へ"/>
-            <page path="history_of_author" title="筆者の足跡"/>
+            <rest-pages/>
+            <page path="history_of_author"/>
         </dir>
-        <dir path="photos">
-            <page path="index" title="写真を見る"/>
-        </dir>
+        <dir path="photos"/>
         <dir path="play">
-            <page path="index" title="蘭華で遊ぶ"/>
-            <page path="orchid_exam" title="ラン検定"/>
-            <page path="shooting_game" title="ラン害虫退治ゲーム"/>
-            <page path="slide_puzzle" title="スライドパズル"/>
+            <page path="orchid_exam"/>
+            <rest-pages/>
         </dir>
-        <!--<dir path="news">
-            <page path="index" title="お知らせ"/>
-        </dir>-->
-        <!--<dir path="column">
-            <page path="index" title="筆者紹介"/>
-            <dir path="author">
-                <page path="yamamoto_hiroshi" title="山本裕之のプロフィール"/>
-                <page path="ogawa_toyoaki" title="小川豊明のプロフィール"/>
+        <dir path="news">
+            <latest-pages count="20"/>
+        </dir>
+        <dir path="column">
+            <dir path="authors">
+                <page path="yamamoto_hiroshi"/>
+                <rest-pages/>
             </dir>
-        </dir>-->
+            <latest-pages count="20"/>
+        </dir>
     </lang>
 </nav>
