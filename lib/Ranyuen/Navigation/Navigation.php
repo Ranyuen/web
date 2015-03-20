@@ -5,6 +5,8 @@
 
 namespace Ranyuen\Navigation;
 
+use Ranyuen\Model\Article;
+
 /**
  * Load navigation config and manipulate.
  */
@@ -29,48 +31,45 @@ class Navigation
     public function getLocalNav($lang, $path)
     {
         $nav = $this->nav->xpath('/nav/lang[@name="'.h($lang).'"]')[0];
-        $path = explode('/', ltrim($path, '/'));
-        $dirs = array_slice($path, 0, count($path) - 1);
-        $file = $path[count($path) - 1];
-        foreach ($dirs as $dir) {
-            $nav = $nav->xpath('dir[@path="'.h($dir).'"]')[0];
+        $dirnames = $this->splitPath($path)[0];
+        foreach ($dirnames as $dirname) {
+            $nav = $nav->xpath('dir[@path="'.h($dirname).'"]')[0];
         }
-        $parentPath = implode('/', array_slice($dirs, 0, count($dirs) - 1)).'/';
+        $parentPath = implode('/', array_slice($dirnames, 0, count($dirnames) - 1)).'/';
         return (new DirElement($lang, $parentPath, $nav))->pages();
     }
 
     /**
-     * @param string $lang         Current lang.
-     * @param string $templateName URI path info.
+     * パンくずリスト.
+     *
+     * @param string $lang Current lang.
+     * @param string $path URI path info.
      *
      * @return array
      */
-    public function getBreadcrumb($lang, $templateName)
+    public function getBreadcrumb($lang, $path)
     {
         $nav = $this->nav->xpath('/nav/lang[@name="'.h($lang).'"]')[0];
-        $path = '/';
-        $breadcrumb = [$path => (string) $nav->page[0]['title']];
-        foreach (explode('/', $templateName) as $part) {
-            $part = h($part);
-            if ('index' === $part) {
-                break;
-            }
-            if ($nav->xpath("*[@path='$part']")) {
-                $nav = $nav->xpath("*[@path='$part']")[0];
-                $path .= $part;
-                if ($nav->getName() === 'dir') {
-                    $path .= '/';
-                }
-            } else {
-                break;
-            }
-            if ($nav->xpath("*[@path='index']")) {
-                $breadcrumb[$path] = (string) $nav->xpath("*[@path='index']")[0]['title'];
-            } elseif ($nav->getName() === 'page') {
-                $breadcrumb[$path] = (string) $nav['title'];
-            }
+        $dirnames = $this->splitPath($path)[0];
+        $parentPath = '/';
+        $pages = [];
+        $pages[] = (new DirElement($lang, $parentPath, $nav))->indexPage();
+        foreach ($dirnames as $dirname) {
+            $nav = $nav->xpath('dir[@path="'.h($dirname).'"]')[0];
+            $pages[] = (new DirElement($lang, $parentPath, $nav))->indexPage();
+            $parentPath .= $dirname.'/';
         }
+        if (!preg_match('#/\z#', $path)) {
+            $pages[] = Page::fromArticle($lang, Article::findByPath($path));
+        }
+        return $pages;
+    }
 
-        return $breadcrumb;
+    private function splitPath($path)
+    {
+        $pathparts = explode('/', ltrim($path, '/'));
+        $dirnames = array_slice($pathparts, 0, count($pathparts) - 1);
+        $filename = $pathparts[count($pathparts) - 1];
+        return [$dirnames, $filename];
     }
 }

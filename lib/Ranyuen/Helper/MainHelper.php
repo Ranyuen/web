@@ -49,14 +49,11 @@ class MainHelper extends Helper
     public function echoBreadcrumb($nav, $base = '/')
     {
         $output = '<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
-        foreach ($nav as $href => $title) {
-            if (!$title) {
-                continue;
-            }
+        foreach ($nav as $page) {
             $output .= '<div class="nav-item"><a href="'.
-                h(preg_replace('/\/\//', '/', $base.$href)).
+                h(preg_replace('/\/\//', '/', $page->path)).
                 '" itemprop="url"><span itemprop="title">'.
-                h($title).
+                h($page->title).
                 '</span></a></div>';
         }
         $output .= '</div>';

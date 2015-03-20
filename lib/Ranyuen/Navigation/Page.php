@@ -34,9 +34,9 @@ class Page
     public function __construct($lang, $parentPath, $params)
     {
         $this->lang       = $lang;
-        $this->path       = $parentPath.(string) $params['path'];
-        $this->title      = (string) $params['title'];
-        $this->article_id = intval((string) $params['article_id']);
+        $this->path       = isset($params['path'])       ? $parentPath.(string) $params['path']   : null;
+        $this->title      = isset($params['title'])      ? (string) $params['title']              : null;
+        $this->article_id = isset($params['article_id']) ? intval((string) $params['article_id']) : 0;
         if (!($this->path && $this->title)) {
             if ($this->path) {
                 $article = Article::with('contents')->where('path', $this->path)->first();

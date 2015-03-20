@@ -37,10 +37,7 @@ class DirElement
      */
     public function pages()
     {
-        $pages = [];
-        if ($page = $this->indexPage()) {
-            $pages[] = $page;
-        }
+        $pages = [$this->indexPage()];
         foreach ($this->elm->children() as $elm) {
             switch ($elm->getName()) {
             case 'dir':
@@ -67,22 +64,24 @@ class DirElement
 
     public function childPages()
     {
-        $pages = [];
-        if ($page = $this->indexPage()) {
-            $pages[] = $page;
-        }
+        $pages = [$this->indexPage()];
         foreach ($this->elm->xpath('page[@path!="index"]') as $elm) {
             $pages[] = Page::fromElement($this->lang, $this->path, $elm);
         }
         return array_values(array_unique($pages, SORT_STRING));
     }
 
-    private function indexPage()
+    public function indexPage()
     {
         if ($elm = $this->elm->xpath('page[@path="index"]')) {
             return Page::fromElement($this->lang, $this->path, $elm);
-        } elseif ($article = Article::findByPath($this->path)) {
+        }
+        if ($article = Article::findByPath($this->path)) {
             return Page::fromArticle($this->lang, $article);
         }
+        return new Page($this->lang, '', [
+            'path'  => $this->path,
+            'title' => 'Index',
+        ]);
     }
 }
