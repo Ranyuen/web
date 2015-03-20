@@ -32,36 +32,24 @@ class DirElement
         }
     }
 
-    public function pageChildren()
-    {
-        $pages = [];
-        if ($elm = $this->elm->xpath('page[@path="index"]')) {
-            $pages[] = Page::fromElement($this->lang,$this->path, $elm);
-        } if ($article = Article::findByPath($this->path)) {
-            $pages[] = Page::fromArticle($this->lang, $article);
-        }
-        foreach ($this->elm->xpath('page') as $elm) {
-            $page = Page::fromElement($this->lang, $this->path, $elm);
-            if (preg_match('/\/\z/', $page->path)) {
-                continue;
-            }
-            $pages[] = $page;
-        }
-        return $pages;
-    }
-
     /**
      * Page descendants.
      */
     public function pages()
     {
         $pages = [];
+        if ($page = $this->indexPage()) {
+            $pages[] = $page;
+        }
         foreach ($this->elm->children() as $elm) {
             switch ($elm->getName()) {
             case 'dir':
                 $pages[] = (new DirElement($this->lang, $this->path, $elm))->pages();
                 break;
             case 'page':
+                if ('index' === (string) $elm->attributes()['path']) {
+                    break;
+                }
                 $pages[] = Page::fromElement($this->lang, $this->path, $elm);
                 break;
             case 'rest-pages':
@@ -75,5 +63,26 @@ class DirElement
             }
         }
         return $pages;
+    }
+
+    public function childPages()
+    {
+        $pages = [];
+        if ($page = $this->indexPage()) {
+            $pages[] = $page;
+        }
+        foreach ($this->elm->xpath('page[@path!="index"]') as $elm) {
+            $pages[] = Page::fromElement($this->lang, $this->path, $elm);
+        }
+        return array_values(array_unique($pages, SORT_STRING));
+    }
+
+    private function indexPage()
+    {
+        if ($elm = $this->elm->xpath('page[@path="index"]')) {
+            return Page::fromElement($this->lang, $this->path, $elm);
+        } elseif ($article = Article::findByPath($this->path)) {
+            return Page::fromArticle($this->lang, $article);
+        }
     }
 }

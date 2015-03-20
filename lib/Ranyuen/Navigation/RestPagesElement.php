@@ -26,7 +26,7 @@ class RestPagesElement
             function ($page) {
                 return $page->path;
             },
-            $this->dir->pageChildren()
+            $this->dir->childPages()
         );
         $articles = Article::children($this->dir->path);
         $pages = [];

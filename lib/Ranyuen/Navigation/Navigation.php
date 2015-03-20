@@ -10,8 +10,9 @@ namespace Ranyuen\Navigation;
  */
 class Navigation
 {
-    /** @Inject */
-    private $config;
+    /**
+     * @var \SimpleXMLElement
+     */
     private $nav;
 
     public function __construct()
@@ -21,7 +22,7 @@ class Navigation
 
     /**
      * @param string $lang Current lang.
-     * @param string $path Current template name.
+     * @param string $path URI path info.
      *
      * @return array
      */
@@ -39,8 +40,8 @@ class Navigation
     }
 
     /**
-     * @param string $lang         Current lang
-     * @param string $templateName Current template name
+     * @param string $lang         Current lang.
+     * @param string $templateName URI path info.
      *
      * @return array
      */
@@ -72,44 +73,4 @@ class Navigation
 
         return $breadcrumb;
     }
-
-    private function expandPages($nav)
-    {
-        $pages = [];
-        foreach ($nav->children() as $elm) {
-            switch ($elm->getName()) {
-            case 'dir':
-                break;
-            case 'page':
-                break;
-            case 'rest-pages':
-                break;
-            case 'latest-pages':
-                break;
-            }
-        }
-        return $pages;
-    }
-
-    // private function gather($nav)
-    // {
-    //     $index = [];
-    //     $local = [];
-    //     foreach ($nav->children() as $elm) {
-    //         if ($elm->getName() === 'page') {
-    //             if ((string) $elm['path'] === 'index') {
-    //                 $index['/'] = (string) $elm['title'];
-    //             } else {
-    //                 $local[(string) $elm['path']] = (string) $elm['title'];
-    //             }
-    //         } else {
-    //             if ($elm->xpath("page[@path='index']")) {
-    //                 $local[(string) $elm['path'].'/'] = (string) $elm->xpath("page[@path='index']")[0]['title'];
-    //             }
-    //         }
-    //     }
-    //     $local = array_merge($index, $local);
-
-    //     return $local;
-    // }
 }

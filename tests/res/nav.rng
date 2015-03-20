@@ -3,7 +3,7 @@
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     <start>
         <element name="nav">
-            <zeroOrMore>
+            <oneOrMore>
                 <element name="lang">
                     <attribute name="name">
                         <text/>
@@ -15,19 +15,19 @@
                         </choice>
                     </zeroOrMore>
                 </element>
-            </zeroOrMore>
+            </oneOrMore>
         </element>
     </start>
 
     <define name="dir">
         <element name="dir">
             <ref name="path-attr"/>
-            <zeroOrMore>
+            <oneOrMore>
                 <choice>
                     <ref name="dir"/>
                     <ref name="pages"/>
                 </choice>
-            </zeroOrMore>
+            </oneOrMore>
         </element>
     </define>
 

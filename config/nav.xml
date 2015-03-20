@@ -1,13 +1,19 @@
 <?xml version="1.0" standalone="yes"?>
 <nav>
     <lang name="en">
-        <dir path="calanthe"/>
-        <dir path="ponerorchis"/>
+        <dir path="calanthe">
+            <rest-pages/>
+        </dir>
+        <dir path="ponerorchis">
+            <rest-pages/>
+        </dir>
         <dir path="about_us">
             <page path="direction"/>
             <page path="exporting"/>
         </dir>
-        <dir path="photos"/>
+        <dir path="photos">
+            <rest-pages/>
+        </dir>
     </lang>
     <lang name="ja">
         <dir path="calanthe">
@@ -56,20 +62,22 @@
             <rest-pages/>
             <page path="history_of_author"/>
         </dir>
-        <dir path="photos"/>
+        <dir path="photos">
+            <rest-pages/>
+        </dir>
         <dir path="play">
             <page path="orchid_exam"/>
             <rest-pages/>
         </dir>
         <dir path="news">
-            <latest-pages count="20"/>
+            <latest-pages count="10"/>
         </dir>
         <dir path="column">
             <dir path="authors">
                 <page path="yamamoto_hiroshi"/>
                 <rest-pages/>
             </dir>
-            <latest-pages count="20"/>
+            <latest-pages count="10"/>
         </dir>
     </lang>
 </nav>

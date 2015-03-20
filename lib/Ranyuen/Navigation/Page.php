@@ -19,8 +19,9 @@ class Page
     static public function fromArticle($lang, Article $article)
     {
         return new self($lang, '', [
-            'path'  => $article->path,
-            'title' => $article->getContent($lang)->title,
+            'path'       => $article->path,
+            'title'      => $article->getContent($lang)->title,
+            'article_id' => $article->id,
         ]);
     }
 
@@ -51,5 +52,14 @@ class Page
             $this->path  = $article->path;
             $this->title = $this->title || $article->getContent($lang)->title;
         }
+    }
+
+    public function __toString()
+    {
+        return json_encode([
+            'lang'  => $this->lang,
+            'path'  => $this->path,
+            'title' => $this->title,
+        ]);
     }
 }
