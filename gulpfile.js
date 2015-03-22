@@ -102,6 +102,7 @@ gulp.task('less', function () {
       'src/stylesheets/calanthe.less',
       'src/stylesheets/authors.less',
       'src/stylesheets/news.less',
+      'src/stylesheets/playColoring.less',
     ]).
     pipe(less({
       compress:  true,

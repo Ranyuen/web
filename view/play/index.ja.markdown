@@ -14,4 +14,7 @@ title: 蘭華で遊ぶ
 	<div class="play-menu-circle">
 		<p><a href="/play/slide_puzzle">スライドバズル</a></p>
 	</div>
+  <div class="play-menu-circle">
+    <p><a href="/play/coloring">ぬりえ</a></p>
+  </div>
 </div>

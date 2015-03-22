@@ -2,7 +2,7 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
     <loc>http://ranyuen.com/en/</loc>
-    <lastmod>2015-01-10T18:42:05Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -17,12 +17,12 @@
   </url>
   <url>
     <loc>http://ranyuen.com/en/about_us/</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/en/calanthe/</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -32,12 +32,12 @@
   </url>
   <url>
     <loc>http://ranyuen.com/en/ponerorchis/</loc>
-    <lastmod>2015-01-10T18:42:05Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/</loc>
-    <lastmod>2015-02-14T11:44:42Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/about_us/</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -67,7 +67,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/admin/login</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-03-14T14:46:12Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/growings_calanthe_in_the_new_way</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -132,7 +132,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/cultivation/growings_calanthe_on_a_garden</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/calanthe/cultivation/repot_calanthe</loc>
-    <lastmod>2015-01-10T18:42:04Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -167,12 +167,17 @@
   </url>
   <url>
     <loc>http://ranyuen.com/columns/authors/</loc>
-    <lastmod>2015-02-14T11:31:42Z</lastmod>
+    <lastmod>2015-03-14T14:46:12Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://ranyuen.com/columns/authors/ogawa_toyoaki</loc>
     <lastmod>2015-02-14T11:31:42Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://ranyuen.com/columns/authors/seki_akihiko</loc>
+    <lastmod>2015-03-14T14:46:12Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -187,7 +192,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/news/list</loc>
-    <lastmod>2015-02-14T11:31:42Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -201,8 +206,13 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://ranyuen.com/play/coloring</loc>
+    <lastmod>2015-03-22T18:15:29Z</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://ranyuen.com/play/</loc>
-    <lastmod>2015-01-10T18:42:05Z</lastmod>
+    <lastmod>2015-03-22T16:32:02Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -227,7 +237,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/awachidori</loc>
-    <lastmod>2015-02-14T19:10:53Z</lastmod>
+    <lastmod>2015-02-14T20:01:15Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -242,7 +252,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/ponerorchis_in_the_new_way</loc>
-    <lastmod>2015-02-14T11:31:43Z</lastmod>
+    <lastmod>2015-02-14T20:01:15Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -257,7 +267,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/yumechidori</loc>
-    <lastmod>2015-02-14T18:56:23Z</lastmod>
+    <lastmod>2015-02-14T20:01:15Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -297,7 +307,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/cultivation/special_upbringing_of_ponerorchis</loc>
-    <lastmod>2015-02-14T11:31:42Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -317,7 +327,7 @@
   </url>
   <url>
     <loc>http://ranyuen.com/ponerorchis/learning/info_lerning_awachidori_from_territory</loc>
-    <lastmod>2015-02-14T11:31:43Z</lastmod>
+    <lastmod>2015-02-14T20:00:39Z</lastmod>
     <changefreq>daily</changefreq>
   </url>
 </urlset>
