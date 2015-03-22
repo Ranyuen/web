@@ -44,7 +44,8 @@ function printPage(url) {
 </script>
 ぬりえ　～こころのはな～
 ==
-<p><em>プリンターで、印刷したい画像をクリックしてね！</em></p>
+<h2>ぬりえ一覧</h2>
+<p><em>印刷したい画像を、クリックしてください。</em></p>
 <div class="coloring">
   <div class="coloring-square">
     <p>
@@ -225,6 +226,24 @@ function printPage(url) {
     <p>
       <span onclick="printPage('/assets/images/play_coloring_026.jpg');">
         <img class="coloring-img" src="/assets/images/play_coloring_026.jpg" alt="塗り絵026">
+      </span>
+    </p>
+  </div>
+</div>
+<h2>お手本一覧</h2>
+<p><em>色塗りの参考に、お使いください。</em></p>
+<div class="coloring">
+  <div class="coloring-square">
+    <p>
+      <span onclick="printPage('/assets/images/play_coloring_sample_001.jpg');">
+        <img class="coloring-img" src="/assets/images/play_coloring_sample_001.jpg" alt="見本001">
+      </span>
+    </p>
+  </div>
+  <div class="coloring-square">
+    <p>
+      <span onclick="printPage('/assets/images/play_coloring_sample_002.jpg');">
+        <img class="coloring-img" src="/assets/images/play_coloring_sample_002.jpg" alt="見本002">
       </span>
     </p>
   </div>
