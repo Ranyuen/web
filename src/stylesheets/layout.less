@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import "base";
 @import "helpers";
-@import "globalnav";
+@import "foldNav";
 
 @header-footer-bg     : #ffedfe;
 @header-footer-radius : 8px;
@@ -59,6 +59,82 @@ header {
     }
   }
 
+}
+
+#globalnav {
+  @gradient_light : #de98b2;
+  @gradient_shade : #de6bb1;
+  @shadow         : #9a9d9f;
+
+  font-size   : 14px;
+  margin      : 6px 0 5px 0;
+  text-shadow : -1px -1px @shadow;
+
+  a {
+    color   : #fbfaf5;
+    padding : 2px;
+  }
+
+  & > ul > .foldnav_item {
+    background      : @gradient_shade;
+    background      : -ms-linear-gradient(top, @gradient_light, @gradient_shade);
+    background      : -moz-linear-gradient(top, @gradient_light 0%, @gradient_shade);
+    background      : -webkit-gradient(linear, left top, left bottom, from(@gradient_light), to(@gradient_shade));
+    background      : linear-gradient(to bottom, @gradient_light, @gradient_shade);
+    background-size : 100% 100%;
+    border-radius   : 5px;
+    box-shadow      : 1px 1px 1px @shadow;
+    float           : left;
+    margin          : 0.2em 0.2em;
+    min-width       : 10.8em;
+    padding         : 0 0.8em;
+    position        : relative;
+    text-align      : center;
+  }
+
+  .foldnav_item {
+    &:hover { box-shadow : 1px 1px 1px @shadow inset; }
+
+    &-hasSubmenu {
+      & > a:after {
+        border-left : 1px solid @gradient_shade;
+        display     : block;
+        float       : right;
+        width       : 0.3em;
+      }
+
+      li { border-top : 1px solid @gradient_light; }
+    }
+  }
+}
+
+#sidenav {
+  @side-nav-color : #006400;
+
+  font-size : 14px;
+  padding   : 40px 0 20px 0;
+
+  .foldnav_item {
+    a {
+      border-bottom : dotted 2px @side-nav-color;
+      padding       : 10px 2%;
+    }
+
+    &:not(.nav-item-home) {
+      a {
+        color : @side-nav-color;
+
+        &:hover { color: #00aa00; }
+      }
+    }
+
+    &_home {
+      border-top : dotted 2px @side-nav-color;
+      font-size  : larger;
+
+      a { color : inherit; }
+    }
+  }
 }
 
 .main {
@@ -201,37 +277,6 @@ header {
       }
     }
   }
-
-  .side {
-    @side-nav-color : #006400;
-
-    padding : 40px 0 20px 0;
-
-    .nav-item {
-      a {
-        border-bottom   : dotted 2px @side-nav-color;
-        display         : block;
-        font-size       : 14px;
-        padding         : 10px 2%;
-        text-decoration : none;
-      }
-    }
-
-    .nav-item:not(.nav-item-home) {
-      a {
-        color : @side-nav-color;
-
-        &:hover { color: #00aa00; }
-      }
-    }
-
-    .nav-item-home {
-      border-top : dotted 2px @side-nav-color;
-      font-size  : larger;
-
-      a { color : inherit; }
-    }
-  }
 }
 
 .youtube-block {
@@ -313,7 +358,7 @@ footer {
       width : 83%;
     }
 
-    .side {
+    #sidenav {
       float      : left;
       margin-top : 0;
       width      : 15%;

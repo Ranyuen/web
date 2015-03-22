@@ -16,10 +16,10 @@ var Promise       = require('bluebird'),
 var Check404   = require('./lib/Check404'),
     promiseSsh = require('./lib/promiseSsh');
 var sshConfig = {
-      host:     'ranyuen.sakura.ne.jp',
-      port:     '22',
-      username: 'ranyuen',
-      password: process.env.SSH_PASSWORD,
+      host     : 'ranyuen.sakura.ne.jp',
+      port     : '22',
+      username : 'ranyuen',
+      password : process.env.SSH_PASSWORD,
     };
 
 /**
@@ -158,7 +158,7 @@ gulp.task('uglifyjs', function () {
         'src/bower_components/uri.js/src/URI.min.js',
         'src/javascripts/baselib.js',
         'src/javascripts/messageForDeveloperFromRanyuen.js',
-        'src/javascripts/globalnav.js',
+        'src/javascripts/foldNav.js',
       ],
       dest: 'layout.min.js'
     },
@@ -189,9 +189,9 @@ gulp.task('uglifyjs', function () {
     return gulp.src(set.src).
       pipe(concat(set.dest)).
       pipe(uglify({
-        outSourceMap: true,
-        output:       {},
-        compress:     { unsafe: true },
+        outSourceMap : true,
+        output       : {},
+        compress     : { unsafe : true },
       })).
       pipe(gulp.dest('assets/javascripts'));
   }));

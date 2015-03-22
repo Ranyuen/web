@@ -13,57 +13,52 @@ use Ranyuen\Model\Photo;
 class MainHelper extends Helper
 {
     /**
-     * @param array  $nav  URIs and titles
-     * @param string $base Base URI
+     * @param Ranyuen\Navigation\Page[] $pages URIs and titles.
      *
      * @return string
      */
-    public function echoNav($nav, $base = '/')
+    public function echoSideNav($pages)
     {
-        $output = '';
-        $isFirst = true;
-        foreach ($nav as $page) {
+        $output  = '<ul>';
+        foreach ($pages as $page) {
             if (is_array($page)) {
-                $output .= $this->echoNav($page);
+                $output .= '<li>
+    <a href="#">'.h($page[0]->title).'</a>
+    '.$this->echoSideNav($page).'
+</li>';
                 continue;
             }
-            $output .= '<div class="nav-item '.
-                ($isFirst ? 'nav-item-home' : '').
-                '"><a href="'.
-                h(preg_replace('/\/\//', '/', $page->path)).
-                '">'.
-                h($page->title).
-                '</a></div>';
-            $isFirst = false;
+            $output .= '<li>
+    <a href="'.h(preg_replace('/\/\//', '/', $page->path)).'">'.h($page->title).'</a>
+</li>';
         }
+        $output .= '</ul>';
 
         return $output;
     }
 
     /**
-     * @param array  $nav  URIs and titles
-     * @param string $base Base URI
+     * @param Ranyuen\Navigation\Page[] $pages URIs and titles.
      *
      * @return string
      */
-    public function echoBreadcrumb($nav, $base = '/')
+    public function echoBreadcrumb($pages)
     {
-        $output = '<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
-        foreach ($nav as $page) {
-            $output .= '<div class="nav-item"><a href="'.
-                h(preg_replace('/\/\//', '/', $page->path)).
-                '" itemprop="url"><span itemprop="title">'.
-                h($page->title).
-                '</span></a></div>';
+        $output = '';
+        foreach ($pages as $page) {
+            $output .= '<div class="nav-item">
+    <a href="'.h(preg_replace('#//#', '/', $page->path)).'" itemprop="url">
+        <span itemprop="title">'.h($page->title).'</span>
+    </a>
+</div>';
         }
-        $output .= '</div>';
 
         return $output;
     }
 
     /**
-     * @param array  $links       Top URIs
-     * @param strung $currentLang Current lang
+     * @param array  $links       Top URIs.
+     * @param strung $currentLang Current lang.
      *
      * @return string
      */
@@ -71,7 +66,7 @@ class MainHelper extends Helper
     {
         $switchLang = [];
         foreach (['en' => 'English', 'ja' => '日本語'] as $k => $v) {
-            $switchLang[] =  $currentLang === $k ? $v : "<a href=\"{$links[$k]}\">$v</a>";
+            $switchLang[] = $currentLang === $k ? $v : "<a href=\"{$links[$k]}\">$v</a>";
         }
 
         return implode(' / ', $switchLang);
@@ -94,9 +89,7 @@ class MainHelper extends Helper
         frameborder=\"0\"
         allowfullscreen></iframe>";
         if ($title) {
-            $output .= "<div><a href=\"http://youtu.be/$movieId?rel=0\">".
-                h($title).
-                '</a></div>';
+            $output .= "<div><a href=\"http://youtu.be/$movieId?rel=0\">".h($title).'</a></div>';
         }
         $output .= '</div>';
 
@@ -127,13 +120,8 @@ class MainHelper extends Helper
         if (!$height) {
             $height = $photo->height;
         }
-        $alt = h("$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)");
-        $width = h($width);
-        $height = h($height);
+        $alt = "$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)";
 
-        return "<img src=\"$src\"
-    alt=\"$alt\"
-    width=\"$width\"
-    height=\"$height\"/>";
+        return '<img src="'.h($src).'" alt="'.h($alt).'" width="'.h($width).'" height="'.h($height).'"/>';
     }
 }

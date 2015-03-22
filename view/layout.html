@@ -1,7 +1,7 @@
 {% set home = 'http://ranyuen.com' ~ link.base %}
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="ie"><![endif]-->
-<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<!--[if lte IE 9]><html class="ie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -55,14 +55,20 @@
           </div>
         </div>
       </div>
-      {% include 'globalnav.' ~ lang ~ '.html' %}
+      <nav id="globalnav">
+        {% include 'globalnav.' ~ lang ~ '.html' %}
+      </nav>
     </header>
     <div class="main">
       <div class="main-inner">
-        {{ breadcrumb | echoBreadcrumb(link.base) | raw }}
+        <nav class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          {{ breadcrumb | echoBreadcrumb | raw }}
+        </nav>
         <article>{{ content | raw }}</article>
       </div>
-      <nav class="side">{{ localnav | echoNav(link.local_base) | raw }}</nav>
+      <nav id="sidenav">
+        {{ localnav | echoSideNav | raw }}
+      </nav>
     </div>
     <footer>
       <p class="copyright">
