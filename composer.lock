@@ -1485,12 +1485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "de42258d6915206e2d956a1db27ed8122170210e"
+                "reference": "67f29c50b993a534bf7e02abee8c50576c526612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/de42258d6915206e2d956a1db27ed8122170210e",
-                "reference": "de42258d6915206e2d956a1db27ed8122170210e",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/67f29c50b993a534bf7e02abee8c50576c526612",
+                "reference": "67f29c50b993a534bf7e02abee8c50576c526612",
                 "shasum": ""
             },
             "require": {
@@ -1530,7 +1530,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-03-21 12:43:49"
+            "time": "2015-03-22 09:41:55"
         },
         {
             "name": "pdepend/pdepend",

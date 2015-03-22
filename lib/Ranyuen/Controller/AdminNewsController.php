@@ -4,6 +4,7 @@
  */
 namespace Ranyuen\Controller;
 
+use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Model\Article;
 use Ranyuen\Model\ArticleTag;
@@ -39,7 +40,7 @@ class AdminNewsController extends AdminController
      *
      * @return string
      *
-     * @Route('/edit/{id}')
+     * @Route('/edit/:id')
      */
     public function edit($id)
     {
@@ -57,18 +58,17 @@ class AdminNewsController extends AdminController
      *
      * @Route('/create',via=POST)
      */
-    public function create()
+    public function create(Request $req)
     {
         $this->auth();
         $article = null;
         $hasSaved = true;
         $this->db->transaction(
-            function () use (&$article, &$hasSaved) {
-                $article = Article::create($this->router->request->post());
-                $article->fill($this->router->request->put());
+            function () use (&$article, &$hasSaved, $req) {
+                $article = Article::create($req->request->all());
                 $hasSaved = !$article->isDirty() && $hasSaved;
                 $hasSaved = $article->syncTagsByTagNames(
-                    explode(',', trim($this->router->request->post('tags'), ', '))
+                    explode(',', trim($req->get('tags'), ', '))
                 ) && $hasSaved;
             }
         );
@@ -84,7 +84,7 @@ class AdminNewsController extends AdminController
      *
      * @return string|Response
      *
-     * @Route('/update/{id}',via=PUT)
+     * @Route('/update/:id',via=PUT)
      */
     public function update($id)
     {
@@ -116,7 +116,7 @@ class AdminNewsController extends AdminController
      *
      * @return Response
      *
-     * @Route('/destroy/{id}',via=DELETE)
+     * @Route('/destroy/:id',via=DELETE)
      */
     public function destroy($id)
     {
