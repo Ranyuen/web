@@ -33,7 +33,7 @@ class Article extends Eloquent\Model
         return $articles;
     }
 
-    protected $table = 'article';
+    protected $table    = 'article';
     protected $fillable = ['path'];
 
     public function contents()

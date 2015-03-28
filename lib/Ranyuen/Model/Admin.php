@@ -22,8 +22,7 @@ class Admin extends Eloquent\Model
      */
     public static function isAuth($username, $rawPassword)
     {
-        $admin = self::where('username', $username)->first();
-        if (!$admin) {
+        if (!($admin = self::where('username', $username)->first())) {
             return false;
         }
 
