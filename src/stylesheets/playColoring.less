@@ -2,51 +2,45 @@
 @import "helpers";
 
 .coloring {
-  .clear-fix;
+  .cf;
 
-  .coloring-square {
-    margin: 0 auto;
-    position: relative;
-    width: 206.533px;
-    height: 206.533px;
+  &_square {
+    height   : 206.533px;
+    margin   : 0 auto;
+    position : relative;
+    width    : 206.533px;
+
+    &:hover { background : #de6bb1; }
 
     p {
-      margin: 0;
-      padding: 2px;
+      margin  : 0;
+      padding : 2px;
 
       img {
-      display: block;
-      width: 202.533px;
-      height: 202.533px;
+        display : block;
+        height  : 202.533px;
+        width   : 202.533px;
       }
     }
+  }
 
-    &:hover {
-      background: #de6bb1;
+  &_img {
+    img {
+      display : block;
+      margin  : 0 auto;
+      width   : 380px;
     }
   }
 }
 
-.coloring-img {
-  img {
-    margin: 0 auto;
-    display: block;
-    width: 380px;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: @width-phone) {
   .coloring {
-    .coloring-square {
-      float: left;
-    }
+    &_square { float : left; }
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: @width-tablet) {
   .coloring {
-    .coloring-square {
-      float: left;
-    }
+    &_square { float : left; }
   }
 }
