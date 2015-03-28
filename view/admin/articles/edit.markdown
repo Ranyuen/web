@@ -32,6 +32,7 @@ title: Edit article
 var editor,
     article = '{{article}}';
 article = article.
+  replace(/\t/g,     '  ').
   replace(/\n/g,     '\\n').
   replace(/\r/g,     '\\r').
   replace(/&lt;/g,   '<').

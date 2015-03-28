@@ -1,15 +1,17 @@
 @charset "utf-8";
 @import "helpers";
 
-.play-menu {
+.playMenu {
   .cf;
 
-  .play-menu-circle {
+  &_circle {
     background    : #cc99ff;
     border-radius : 50%;
     box-shadow    : 0 0 4px 4px rgba(0, 0, 0, 0.4);
 
     p {
+      &:hover { background : radial-gradient(#ff99ff, white); }
+
       background    : radial-gradient(white, #ff99ff);
       border-radius : 50%;
       box-shadow    : 0 0 4px 4px rgba(0, 0, 0, 0.4) inset;
@@ -24,15 +26,13 @@
         text-decoration : none;
         text-shadow     : 2px 2px 5px #999999;
       }
-
-      &:hover { background : radial-gradient(#ff99ff, white); }
     }
   }
 }
 
 @media screen and (min-width : @width-phone) {
-  .play-menu {
-    .play-menu-circle {
+  .playMenu {
+    &_circle {
       float : left;
       width : 50%;
     }
@@ -40,8 +40,8 @@
 }
 
 @media screen and (min-width : @width-tablet) {
-  .play-menu {
-    .play-menu-circle {
+  .playMenu {
+    &_circle {
       float : left;
       width : 25%;
     }
