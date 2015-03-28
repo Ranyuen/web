@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen;
 
@@ -11,17 +11,17 @@ namespace Ranyuen;
  */
 class Color
 {
-    /** @var integer */
+    /** @var int */
     private $r;
-    /** @var integer */
+    /** @var int */
     private $g;
-    /** @var integer */
+    /** @var int */
     private $b;
 
     /**
-     * @param integer $r 0..255
-     * @param integer $g 0..255
-     * @param integer $b 0..255
+     * @param int $r 0..255
+     * @param int $g 0..255
+     * @param int $b 0..255
      *
      * @return Color
      */
@@ -33,9 +33,9 @@ class Color
     }
 
     /**
-     * @param integer $h 0..360 degree
-     * @param integer $s 0..100 %
-     * @param integer $v 0..100 %
+     * @param int $h 0..360 degree
+     * @param int $s 0..100 %
+     * @param int $v 0..100 %
      *
      * @return Color
      */

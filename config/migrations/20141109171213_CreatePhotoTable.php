@@ -5,7 +5,7 @@ use Phpmig\Migration\Migration;
 class CreatePhotoTable extends Migration
 {
     /**
-     * Do the migration
+     * Do the migration.
      */
     public function up()
     {
@@ -29,7 +29,7 @@ class CreatePhotoTable extends Migration
     }
 
     /**
-     * Undo the migration
+     * Undo the migration.
      */
     public function down()
     {

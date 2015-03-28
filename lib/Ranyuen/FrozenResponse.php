@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen;
 

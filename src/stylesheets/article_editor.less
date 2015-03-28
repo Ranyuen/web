@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "base";
+@import "helpers";
+
+.articleEditor {
+  background  : white;
+  font-size   : 4mm;
+  line-height : 6mm;
+  padding     : 2mm;
+
+  &_path { margin-bottom : 2mm; }
+
+  &_langTab {
+    .cf;
+
+    &_item, &_plus {
+      color      : white;
+      float      : left;
+      text-align : center;
+      width      : 18mm;
+    }
+
+    &_item_lang, &_item_remove, &_plus { cursor : pointer; }
+
+    &_item {
+      background : @red;
+
+      &-selected { background : @green; }
+
+      &-selected &_lang { cursor : text; }
+
+      &_lang, &_remove {
+        float : left;
+
+        &:hover { background : rgba(255, 255, 255, 0.1); }
+      }
+
+      &_lang { width : 12mm; }
+
+      &_remove {
+        color : rgba(255, 255, 255, 0.6);
+        width : 6mm;
+      }
+    }
+
+    &_plus {
+      background : @blue;
+
+      &:hover { opacity : 0.9; }
+    }
+  }
+
+  &_content {
+    .cf;
+    border-color : @green;
+    border-style : solid;
+    border-width : 0.8mm 1px 1px 1px;
+
+    &_input, &_preview { float : left; }
+
+    &_input { width : 49%; }
+
+    &_preview { width : 50%; }
+  }
+
+  &_errors {
+    color   : @red;
+    margin  : 0;
+    padding : 0;
+
+    &_error {
+      display : block;
+      margin  : 1mm;
+    }
+  }
+
+  &_save, &_remove {
+    border     : 0;
+    color      : white;
+    cursor     : pointer;
+    margin-top : 2mm;
+    padding    : 2mm;
+
+    &:hover { opacity : 0.9; }
+  }
+
+  &_save { background : @blue; }
+
+  &_remove { background : @red; }
+}

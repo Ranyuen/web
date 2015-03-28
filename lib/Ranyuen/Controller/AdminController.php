@@ -1,17 +1,16 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Response;
 use Ranyuen\Model\Admin;
 use Ranyuen\Model\Article;
-use Ranyuen\Model\ArticleTag;
-use Ranyuen\Renderer;
+use Ranyuen\Template\ViewRenderer;
 
 /**
- * Admin
+ * Admin.
  *
  * @SuppressWarnings(PHPMD.StaticAccess)
  * @Route('/admin')
@@ -23,7 +22,7 @@ class AdminController extends Controller
      * @Inject
      */
     protected $router;
-    /** @var Ranyuen\Renderer */
+    /** @var Ranyuen\Template\ViewRenderer */
     protected $renderer;
     /**
      * @var Ranyuen\Logger
@@ -36,7 +35,7 @@ class AdminController extends Controller
      */
     protected $session;
 
-    public function __construct(Renderer $renderer)
+    public function __construct(ViewRenderer $renderer)
     {
         $renderer->setLayout('admin/layout');
         $this->renderer = $renderer;
@@ -73,7 +72,7 @@ class AdminController extends Controller
     public function login($username, $password)
     {
         if (!Admin::isAuth($username, $password)) {
-            return new Response($this->showLogin($username, $password), 401);
+            return new Response($this->showLogin($username, $password), 403);
         }
         $this->session['admin_username'] = $username;
 
@@ -105,8 +104,7 @@ class AdminController extends Controller
             'admin/index',
             [
                 'admin_username' => $this->session['admin_username'],
-                'articles'       => Article::all(),
-                'article_tags'   => ArticleTag::all(),
+                'articles'       => Article::with('contents')->get(),
             ]
         );
     }

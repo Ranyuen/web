@@ -2,50 +2,48 @@
 @import "helpers";
 
 .play-menu {
-  .clear-fix;
+  .cf;
 
   .play-menu-circle {
-    border-radius: 50%;
-    background: #cc99ff;
-    box-shadow: 0 0 4px 4px rgba(0,0,0,0.4);
+    background    : #cc99ff;
+    border-radius : 50%;
+    box-shadow    : 0 0 4px 4px rgba(0, 0, 0, 0.4);
 
     p {
-      margin: 5px;
-      border-radius: 50%;
-      line-height: 240px;
-      background: radial-gradient(#ffffff, #ff99ff);
-      box-shadow: 0 0 4px 4px rgba(0,0,0,0.4) inset;
-      font-size: 20px;
-      text-align: center;
+      background    : radial-gradient(white, #ff99ff);
+      border-radius : 50%;
+      box-shadow    : 0 0 4px 4px rgba(0, 0, 0, 0.4) inset;
+      font-size     : 20px;
+      line-height   : 240px;
+      margin        : 5px;
+      text-align    : center;
 
       a {
-        display: block;
-        color: #460e44;
-        text-decoration: none;
-        text-shadow: 2px 2px 5px #999999;
+        color           : #460e44;
+        display         : block;
+        text-decoration : none;
+        text-shadow     : 2px 2px 5px #999999;
       }
 
-      &:hover {
-        background: radial-gradient(#ff99ff, #ffffff);
-      }
+      &:hover { background : radial-gradient(#ff99ff, white); }
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width : @width-phone) {
   .play-menu {
     .play-menu-circle {
-      float: left;
-      width: 50%;
+      float : left;
+      width : 50%;
     }
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width : @width-tablet) {
   .play-menu {
     .play-menu-circle {
-      float: left;
-      width: 25%;
+      float : left;
+      width : 25%;
     }
   }
 }

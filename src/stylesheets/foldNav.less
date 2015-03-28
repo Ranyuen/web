@@ -1,0 +1,26 @@
+.foldnav {
+  ul, li {
+    display : block;
+    margin  : 0 auto;
+    padding : 0;
+  }
+
+  a {
+    display         : block ;
+    text-decoration : none;
+  }
+
+  &_item {
+    &-isClose {
+      & > a:after { content : ' \25bc'; }
+
+      ul { display : none; }
+    }
+
+    &-isOpen {
+      & > a:after { content : ' \25b2'; }
+
+      ul { display : block; }
+    }
+  }
+}

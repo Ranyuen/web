@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen\Model;
 
@@ -17,12 +17,11 @@ class Admin extends Eloquent\Model
      * @param string $username    User name.
      * @param string $rawPassword Password.
      *
-     * @return boolean
+     * @return bool
      */
     public static function isAuth($username, $rawPassword)
     {
-        $admin = self::where('username', $username)->first();
-        if (!$admin) {
+        if (!($admin = self::where('username', $username)->first())) {
             return false;
         }
 
@@ -35,8 +34,6 @@ class Admin extends Eloquent\Model
      * Hash the given password and set.
      *
      * @param string $rawPassword Password.
-     *
-     * @return void
      */
     public function setPassword($rawPassword)
     {
@@ -48,7 +45,7 @@ class Admin extends Eloquent\Model
      *
      * @param string $rawPassword Password.
      *
-     * @return boolean
+     * @return bool
      */
     public function isPasswordCorrect($rawPassword)
     {

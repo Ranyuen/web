@@ -5,7 +5,7 @@ use Phpmig\Migration\Migration;
 class CreateArticleTable extends Migration
 {
     /**
-     * Do the migration
+     * Do the migration.
      */
     public function up()
     {
@@ -22,7 +22,7 @@ class CreateArticleTable extends Migration
     }
 
     /**
-     * Undo the migration
+     * Undo the migration.
      */
     public function down()
     {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen;
 
@@ -67,8 +67,6 @@ class App
     }
 
     /**
-     * @return void
-     *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @SuppressWarnings(PHPMD.Superglobals)
      */
@@ -76,10 +74,10 @@ class App
     {
         $this->container['db']; // Prepare DB connection.
         $req = Request::createFromGlobals();
-        if (preg_match('#\A/(ja|en|e)#', $req->getPathInfo(), $matches)) {
+        if (preg_match('#\A/(ja|en|e)\W?#', $req->getPathInfo(), $matches)) {
             $lang = $matches[1];
-            if (isset($config['lang'][$lang])) {
-                $lang = $config['lang'][$lang];
+            if (isset($this->config['lang'][$lang])) {
+                $lang = $this->config['lang'][$lang];
             }
             $req->query->set('lang', $lang);
             $server = $_SERVER;
@@ -97,8 +95,6 @@ class App
      * @param Container $c      DI container
      * @param string    $env    development or production or...
      * @param array     $config Additional config.
-     *
-     * @return void
      */
     private function loadServices(Container $c, $env, array $config)
     {
@@ -114,10 +110,10 @@ class App
             }
         );
         $c->bind(
-            'Ranyuen\Navigation',
+            'Ranyuen\Navigation\Navigation',
             'nav',
             function ($c) {
-                return $c->newInstance('Ranyuen\Navigation');
+                return $c->newInstance('Ranyuen\Navigation\Navigation');
             }
         );
         $c->bind(
@@ -137,14 +133,15 @@ class App
                 return $c->newInstance('Ranyuen\DbCapsule');
             }
         );
+        $c->facade('DB', 'db');
         $c->bind(
-            'Ranyuen\Renderer',
+            'Ranyuen\Template\ViewRenderer',
             'renderer',
             $c->factory(
                 function ($c) {
                     $config = $c['config'];
-                    $renderer = (new Renderer($config['templates.path']))
-                        ->setLayout($config['layout']);
+                    $renderer = (new Template\ViewRenderer($config['templates.path']));
+                    $renderer->setLayout($config['layout']);
                     $renderer->addHelper($c->newInstance('Ranyuen\Helper\MainHelper'));
 
                     return $renderer;

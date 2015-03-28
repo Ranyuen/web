@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="nav">
+            <oneOrMore>
+                <element name="lang">
+                    <attribute name="name">
+                        <text/>
+                    </attribute>
+                    <zeroOrMore>
+                        <choice>
+                            <ref name="dir"/>
+                            <ref name="pages"/>
+                        </choice>
+                    </zeroOrMore>
+                </element>
+            </oneOrMore>
+        </element>
+    </start>
+
+    <define name="dir">
+        <element name="dir">
+            <ref name="path-attr"/>
+            <oneOrMore>
+                <choice>
+                    <ref name="dir"/>
+                    <ref name="pages"/>
+                </choice>
+            </oneOrMore>
+        </element>
+    </define>
+
+    <define name="pages">
+        <choice>
+            <element name="page">
+                <choice>
+                    <ref name="path-attr"/>
+                    <attribute name="article-id">
+                        <data type="int"/>
+                    </attribute>
+                </choice>
+                <optional>
+                    <attribute name="title">
+                        <text/>
+                    </attribute>
+                </optional>
+            </element>
+            <element name="rest-pages">
+                <empty/>
+            </element>
+            <element name="latest-pages">
+                <optional>
+                    <attribute name="count">
+                        <data type="int"/>
+                    </attribute>
+                </optional>
+            </element>
+        </choice>
+    </define>
+
+    <define name="path-attr">
+        <attribute name="path">
+            <text/>
+        </attribute>
+    </define>
+</grammar>

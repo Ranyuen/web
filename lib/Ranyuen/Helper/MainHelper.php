@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen\Helper;
 
@@ -12,59 +12,52 @@ use Ranyuen\Model\Photo;
 class MainHelper extends Helper
 {
     /**
-     * @param array  $nav  URIs and titles
-     * @param string $base Base URI
+     * @param Ranyuen\Navigation\Page[] $pages URIs and titles.
      *
      * @return string
      */
-    public function echoNav($nav, $base = '/')
+    public function echoSideNav($pages)
+    {
+        $output  = '<ul>';
+        foreach ($pages as $page) {
+            if (is_array($page)) {
+                $output .= '<li>
+    <a href="#">'.h($page[0]->title).'</a>
+    '.$this->echoSideNav($page).'
+</li>';
+                continue;
+            }
+            $output .= '<li>
+    <a href="'.h(preg_replace('/\/\//', '/', $page->path)).'">'.h($page->title).'</a>
+</li>';
+        }
+        $output .= '</ul>';
+
+        return $output;
+    }
+
+    /**
+     * @param Ranyuen\Navigation\Page[] $pages URIs and titles.
+     *
+     * @return string
+     */
+    public function echoBreadcrumb($pages)
     {
         $output = '';
-        $isFirst = true;
-        foreach ($nav as $href => $title) {
-            if (!$title) {
-                continue;
-            }
-            $output .= '<div class="nav-item '.
-                ($isFirst ? 'nav-item-home' : '').
-                '"><a href="'.
-                $this->html(preg_replace('/\/\//', '/', $base.$href)).
-                '">'.
-                $this->html($title).
-                '</a></div>';
-            $isFirst = false;
+        foreach ($pages as $page) {
+            $output .= '<div class="nav-item">
+    <a href="'.h(preg_replace('#//#', '/', $page->path)).'" itemprop="url">
+        <span itemprop="title">'.h($page->title).'</span>
+    </a>
+</div>';
         }
 
         return $output;
     }
 
     /**
-     * @param array  $nav  URIs and titles
-     * @param string $base Base URI
-     *
-     * @return string
-     */
-    public function echoBreadcrumb($nav, $base = '/')
-    {
-        $output = '<div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
-        foreach ($nav as $href => $title) {
-            if (!$title) {
-                continue;
-            }
-            $output .= '<div class="nav-item"><a href="'.
-                $this->html(preg_replace('/\/\//', '/', $base.$href)).
-                '" itemprop="url"><span itemprop="title">'.
-                $this->html($title).
-                '</span></a></div>';
-        }
-        $output .= '</div>';
-
-        return $output;
-    }
-
-    /**
-     * @param array  $links       Top URIs
-     * @param strung $currentLang Current lang
+     * @param array  $links       Top URIs.
+     * @param strung $currentLang Current lang.
      *
      * @return string
      */
@@ -72,17 +65,17 @@ class MainHelper extends Helper
     {
         $switchLang = [];
         foreach (['en' => 'English', 'ja' => '日本語'] as $k => $v) {
-            $switchLang[] =  $currentLang === $k ? $v : "<a href=\"{$links[$k]}\">$v</a>";
+            $switchLang[] = $currentLang === $k ? $v : "<a href=\"{$links[$k]}\">$v</a>";
         }
 
         return implode(' / ', $switchLang);
     }
 
     /**
-     * @param string  $movieId YouTube movie ID
-     * @param string  $title   Movie title
-     * @param integer $width   Widget width px
-     * @param integer $height  Wdget height px
+     * @param string $movieId YouTube movie ID
+     * @param string $title   Movie title
+     * @param int    $width   Widget width px
+     * @param int    $height  Wdget height px
      *
      * @return string
      */
@@ -95,9 +88,7 @@ class MainHelper extends Helper
         frameborder=\"0\"
         allowfullscreen></iframe>";
         if ($title) {
-            $output .= "<div><a href=\"http://youtu.be/$movieId?rel=0\">".
-                $this->html($title).
-                '</a></div>';
+            $output .= "<div><a href=\"http://youtu.be/$movieId?rel=0\">".h($title).'</a></div>';
         }
         $output .= '</div>';
 
@@ -105,9 +96,9 @@ class MainHelper extends Helper
     }
 
     /**
-     * @param string  $id     Photo UUID.
-     * @param integer $width  Display width.
-     * @param integer $height Display height.
+     * @param string $id     Photo UUID.
+     * @param int    $width  Display width.
+     * @param int    $height Display height.
      *
      * @return string
      *
@@ -128,13 +119,8 @@ class MainHelper extends Helper
         if (!$height) {
             $height = $photo->height;
         }
-        $alt = $this->html("$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)");
-        $width = $this->html($width);
-        $height = $this->html($height);
+        $alt = "$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)";
 
-        return "<img src=\"$src\"
-    alt=\"$alt\"
-    width=\"$width\"
-    height=\"$height\"/>";
+        return '<img src="'.h($src).'" alt="'.h($alt).'" width="'.h($width).'" height="'.h($height).'"/>';
     }
 }

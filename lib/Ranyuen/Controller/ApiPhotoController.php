@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen\Controller;
 
@@ -8,7 +8,7 @@ use Ranyuen\Little\Request;
 use Ranyuen\Model\Photo;
 
 /**
- * /api/photo controller
+ * /api/photo controller.
  */
 class ApiPhotoController extends Controller
 {
@@ -39,7 +39,6 @@ class ApiPhotoController extends Controller
      * @param int    $width  Photo pixel width.
      * @param int    $height Photo pixel height.
      *
-     * @return void
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/api/photo')

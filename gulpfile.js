@@ -16,10 +16,10 @@ var Promise       = require('bluebird'),
 var Check404   = require('./lib/Check404'),
     promiseSsh = require('./lib/promiseSsh');
 var sshConfig = {
-      host:     'ranyuen.sakura.ne.jp',
-      port:     '22',
-      username: 'ranyuen',
-      password: process.env.SSH_PASSWORD,
+      host     : 'ranyuen.sakura.ne.jp',
+      port     : '22',
+      username : 'ranyuen',
+      password : process.env.SSH_PASSWORD,
     };
 
 /**
@@ -94,30 +94,22 @@ gulp.task('jshint', function () {
 
 gulp.task('less', function () {
   return gulp.src([
-      'src/stylesheets/layout.less',
-      'src/stylesheets/photoGallery.less',
-      'src/stylesheets/playMenu.less',
-      'src/stylesheets/news_column.less',
-      'src/stylesheets/ponerorchis.less',
-      'src/stylesheets/calanthe.less',
+      'src/stylesheets/article_editor.less',
       'src/stylesheets/authors.less',
+      'src/stylesheets/calanthe.less',
+      'src/stylesheets/layout.less',
       'src/stylesheets/news.less',
+      'src/stylesheets/news_column.less',
+      'src/stylesheets/photoGallery.less',
       'src/stylesheets/playColoring.less',
+      'src/stylesheets/playMenu.less',
+      'src/stylesheets/ponerorchis.less',
     ]).
     pipe(less({
       compress:  true,
       sourceMap: true,
     })).
     pipe(gulp.dest('assets/stylesheets'));
-});
-
-gulp.task('nav', function () {
-  return Promise.all([
-    // promiseProcess('rake nav:nav'),
-    promiseProcess('rake nav:sitemap'),
-  ]).then(function (outs) {
-    outs.forEach(function (out) { console.log(out); });
-  });
 });
 
 gulp.task('php-fixer', function () {
@@ -160,42 +152,52 @@ gulp.task('php-unit', function () {
 });
 
 gulp.task('uglifyjs', function () {
-  var layout, photoGallery, changeTab,
-      uglifyOption = {
-        outSourceMap: true,
-        output:       {},
-        compress:     { unsafe: true },
-      };
-
-  layout = gulp.src([
-      'src/bower_components/jquery/dist/jquery.min.js',
-      'src/bower_components/uri.js/src/URI.min.js',
-      'src/javascripts/polyfill.js',
-      'src/javascripts/messageForDeveloperFromRanyuen.js',
-      'src/javascripts/globalnav.js',
-    ]).
-    pipe(concat('layout.min.js')).
-    pipe(uglify(uglifyOption)).
-    pipe(gulp.dest('assets/javascripts'));
-  photoGallery = gulp.src([
-      'src/bower_components/colorbox/jquery.colorbox-min.js',
-      'src/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
-      'src/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
-      'src/bower_components/masonry/dist/masonry.pkgd.min.js',
-      'src/javascripts/photoGallery.js',
-    ]).
-    pipe(concat('photoGallery.min.js')).
-    pipe(uglify(uglifyOption)).
-    pipe(gulp.dest('assets/javascripts'));
-  changeTab = gulp.src([
-      'src/javascripts/changeTab.js',
-    ]).
-    pipe(concat('changeTab.min.js')).
-    pipe(uglify(uglifyOption)).
-    pipe(gulp.dest('assets/javascripts'));
-  return merge(layout, photoGallery, changeTab);
+  return merge([
+    {
+      src: [
+        'src/bower_components/jquery/dist/jquery.min.js',
+        'src/bower_components/uri.js/src/URI.min.js',
+        'src/javascripts/baselib.js',
+        'src/javascripts/messageForDeveloperFromRanyuen.js',
+        'src/javascripts/foldNav.js',
+      ],
+      dest: 'layout.min.js'
+    },
+    {
+      src: [
+        'src/bower_components/colorbox/jquery.colorbox-min.js',
+        'src/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
+        'src/bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
+        'src/bower_components/masonry/dist/masonry.pkgd.min.js',
+        'src/javascripts/photoGallery.js',
+      ],
+      dest: 'photoGallery.min.js'
+    },
+    {
+      src: [
+        'src/javascripts/changeTab.js',
+      ],
+      dest: 'changeTab.min.js'
+    },
+    {
+      src: [
+        'src/javascripts/baselib.js',
+        'src/javascripts/article_editor.js',
+      ],
+      dest: 'article_editor.min.js'
+    },
+  ].map(function (set) {
+    return gulp.src(set.src).
+      pipe(concat(set.dest)).
+      pipe(uglify({
+        outSourceMap : true,
+        output       : {},
+        compress     : { unsafe : true },
+      })).
+      pipe(gulp.dest('assets/javascripts'));
+  }));
 });
 
 gulp.task('backup', ['backup-db', 'backup-images']);
-gulp.task('build', ['copy-assets', 'less', 'uglifyjs', 'nav']);
+gulp.task('build', ['copy-assets', 'less', 'uglifyjs']);
 gulp.task('test', ['jshint', 'php-test']);

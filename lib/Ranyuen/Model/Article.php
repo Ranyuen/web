@@ -1,10 +1,9 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  */
 namespace Ranyuen\Model;
 
-use dflydev\markdown\MarkdownExtraParser;
 use Illuminate\Database\Eloquent;
 
 /**
@@ -12,52 +11,65 @@ use Illuminate\Database\Eloquent;
  */
 class Article extends Eloquent\Model
 {
-    protected $table = 'article';
-    protected $fillable = ['title', 'description', 'content', 'url', 'lang'];
-
-    public function tags()
+    public static function findByPath($path)
     {
-        return $this->belongsToMany('Ranyuen\Model\ArticleTag', 'article_tagging');
+        return self::with('contents')->where(['path' => $path])->first();
     }
 
-    public function taggings()
+    public static function children($path, $count = 0)
     {
-        return $this->hasMany('Ranyuen\Model\ArticleTagging');
-    }
-
-    /**
-     * @return string
-     */
-    public function plainTitle()
-    {
-        return strip_tags((new MarkdownExtraParser())->transformMarkdown($this->title));
-    }
-
-    /**
-     * @param string[] $tagNames Sync ArticleTags. [primary, sub, ...]
-     *
-     * @return boolean
-     */
-    public function syncTagsByTagNames($tagNames)
-    {
-        $tags = array_map(
-            function ($tag) {
-                $tag = trim($tag);
-
-                return ArticleTag::findByname($tag)->id;
-            },
-            $tagNames
-        );
-        $hasSaved = true;
-        foreach ($this->taggings as $tagging) {
-            $tagging->is_primary = false;
-            $hasSaved = $tagging->save() && $hasSaved;
+        $entities = self::with('contents')->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')->orderBy('created_at', 'DESC')->get();
+        $articles = [];
+        foreach ($entities as $entity) {
+            if (!preg_match('#^'.preg_quote($path, '#').'[^/]*$#', $entity->path)) {
+                continue;
+            }
+            $articles[] = $entity;
+            if ($count && count($articles) >= $count) {
+                break;
+            }
         }
-        $hasSaved = ArticleTagging::firstOrCreate(['article_id' => $this->id, 'article_tag_id' => $tags[0]])
-            ->update(['is_primary' => true])
-            && $hasSaved;
-        $hasSaved = $this->tags()->sync($tags) && $hasSaved;
 
-        return $hasSaved;
+        return $articles;
+    }
+
+    protected $table    = 'article';
+    protected $fillable = ['path'];
+
+    public function contents()
+    {
+        return $this->hasMany('Ranyuen\Model\ArticleContent');
+    }
+
+    public function getContent($lang)
+    {
+        return ArticleContent::where(['article_id' => $this->id, 'lang' => $lang])->first();
+    }
+
+    public function sync(Article $article)
+    {
+        \DB::transaction(function () use ($article) {
+            $this->path = $article->path;
+            $this->save();
+            for ($i = 0; isset($article->contents[$i]) && isset($this->contents[$i]); ++$i) {
+                $this->contents[$i]->lang    = $article->contents[$i]->lang;
+                $this->contents[$i]->content = $article->contents[$i]->content;
+            }
+            if (count($article->contents) < count($this->contents)) {
+                foreach (array_slice($this->contents, count($article->contents)) as $content) {
+                    $content->delete();
+                }
+            } elseif (count($article->contents) > count($this->contents)) {
+                foreach (array_slice($article->contents, count($this->contents)) as $content) {
+                    $newContent = new ArticleContent([
+                        'lang'    => $content->lang,
+                        'content' => $content->content,
+                    ]);
+                    $newContent->article_id = $this->id;
+                    $this->contents[] = $newContent;
+                }
+            }
+            $this->push();
+        });
     }
 }

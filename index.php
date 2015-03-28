@@ -1,6 +1,6 @@
 <?php
 /**
- * Ranyuen web site
+ * Ranyuen web site.
  *
  * PHP versions from 5.4 to 5.6
  *
@@ -16,6 +16,15 @@ if (PHP_SAPI === 'cli-server' && is_file($filename)) {
 require 'vendor/autoload.php';
 if (is_file('config/env.php')) {
     require_once 'config/env.php';
+}
+
+function h($text)
+{
+    return htmlspecialchars(
+        $text,
+        ENT_QUOTES|ENT_DISALLOWED|ENT_HTML5,
+        'UTF-8'
+    );
 }
 
 (new \Ranyuen\App())->run();

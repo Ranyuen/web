@@ -1,12 +1,12 @@
 {% set home = 'http://ranyuen.com' ~ link.base %}
 <!DOCTYPE html>
-<!--[if lt IE 9]><html class="ie"><![endif]-->
-<!--[if gte IE 9]><!--><html><!--<![endif]-->
+<!--[if lte IE 9]><html class="ie"><![endif]-->
+<!--[if gt IE 9]><!--><html><!--<![endif]-->
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  {% if title == '蘭裕園' %}
-    <title>{{ title }} - {{ messages.tagline }}</title>
+  {% if title == messages.sitename %}
+    <title>{{ messages.sitename }} - {{ messages.tagline }}</title>
   {% else %}
     <title>{{ title }} | {{ messages.sitename }}</title>
   {% endif %}
@@ -34,8 +34,8 @@
 </head>
 <body class="{{ lang }}" lang="{{ lang }}">
   <div class="container">
-    <header class="clear-fix">
-      <div class="header-inner clear-fix">
+    <header>
+      <div class="header-inner">
         <div class="logo">
           <h1>
             <a rel="home" href="{{ home }}">
@@ -55,16 +55,22 @@
           </div>
         </div>
       </div>
-      {% include 'globalnav.' ~ lang ~ '.html' %}
+      <nav id="globalnav">
+        {% include 'globalnav.' ~ lang ~ '.html' %}
+      </nav>
     </header>
-    <div class="main clear-fix">
+    <div class="main">
       <div class="main-inner">
-        {{ breadcrumb | echoBreadcrumb(link.base) | raw }}
+        <nav class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+          {{ breadcrumb | echoBreadcrumb | raw }}
+        </nav>
         <article>{{ content | raw }}</article>
       </div>
-      <nav class="side">{{ nav.local | echoNav(link.local_base) | raw }}</nav>
+      <nav id="sidenav">
+        {{ localnav | echoSideNav | raw }}
+      </nav>
     </div>
-    <footer class="clear-fix">
+    <footer>
       <p class="copyright">
         <small>
           Copyright (C) 2010-2014 <a rel="home" href="{{ home }}">{{ messages.sitename }} - {{ messages.tagline }}</a> All Rights Reserved.<br/>
@@ -90,4 +96,4 @@
 </script>
 </body>
 </html>
-<!-- vim:ft=twig: -->
+<!-- vim:set ft=liquid: -->
