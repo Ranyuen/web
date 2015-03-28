@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Navigation;
 
 use Ranyuen\Model\Article;
@@ -39,6 +38,7 @@ class Navigation
         if ('/' !== substr($parentPath, 0)) {
             $parentPath = '/'.$parentPath;
         }
+
         return (new DirElement($lang, $parentPath, $nav))->pages();
     }
 
@@ -65,6 +65,7 @@ class Navigation
         if (!preg_match('#/\z#', $path)) {
             $pages[] = Page::fromArticle($lang, Article::findByPath($path));
         }
+
         return $pages;
     }
 
@@ -73,6 +74,7 @@ class Navigation
         $pathparts = explode('/', ltrim($path, '/'));
         $dirnames = array_slice($pathparts, 0, count($pathparts) - 1);
         $filename = $pathparts[count($pathparts) - 1];
+
         return [$dirnames, $filename];
     }
 }

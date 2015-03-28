@@ -2,18 +2,17 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Controller;
 
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Model\Article;
-use Ranyuen\Model\ArticleContent;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 
 /**
  * Static pages.
+ *
  * @Route('/')
  */
 class ArticleController extends Controller

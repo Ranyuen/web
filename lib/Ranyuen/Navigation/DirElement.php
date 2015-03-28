@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Navigation;
 
 use Ranyuen\Model\Article;
@@ -60,6 +59,7 @@ class DirElement
                 throw new \Exception(print_r($elm, true));
             }
         }
+
         return $pages;
     }
 
@@ -69,6 +69,7 @@ class DirElement
         foreach ($this->elm->xpath('page[@path!="index"]') as $elm) {
             $pages[] = Page::fromElement($this->lang, $this->path, $elm);
         }
+
         return array_values(array_unique($pages, SORT_STRING));
     }
 
@@ -80,6 +81,7 @@ class DirElement
         if ($article = Article::findByPath($this->path)) {
             return Page::fromArticle($this->lang, $article);
         }
+
         return new Page($this->lang, '', [
             'path'  => $this->path,
             'title' => 'Index',

@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen;
 
 use Clover\Text\LTSV;
@@ -28,11 +27,11 @@ class Logger extends Monolog\Logger
     /**
      * Override.
      *
-     * @param integer      $level   The logging level
+     * @param int          $level   The logging level
      * @param string|array $message The log message
      * @param array        $context The log context
      *
-     * @return boolean Whether the record has been processed
+     * @return bool Whether the record has been processed
      */
     public function addRecord($level, $message, array $context = [])
     {
@@ -50,7 +49,7 @@ class Logger extends Monolog\Logger
     /**
      * @SuppressWarnings(PHPMD.Superglobals)
      *
-     * @return boolean
+     * @return bool
      */
     public function addAccessInfo()
     {

@@ -2,13 +2,11 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Response;
 use Ranyuen\Model\Admin;
 use Ranyuen\Model\Article;
-use Ranyuen\Model\ArticleTag;
 use Ranyuen\Template\ViewRenderer;
 
 /**

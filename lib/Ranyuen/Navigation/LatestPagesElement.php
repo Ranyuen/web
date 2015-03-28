@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Navigation;
 
 use Ranyuen\Model\Article;
@@ -39,6 +38,7 @@ class LatestPagesElement
             }
             $pages[] = Page::fromArticle($this->dir->lang, $article);
         }
+
         return $pages;
     }
 }

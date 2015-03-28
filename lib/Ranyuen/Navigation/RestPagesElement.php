@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Navigation;
 
 use Ranyuen\Model\Article;
@@ -14,7 +13,7 @@ class RestPagesElement
     private $dir;
     private $elm;
 
-    function __construct(DirElement $dir, \SimpleXMLElement $elm)
+    public function __construct(DirElement $dir, \SimpleXMLElement $elm)
     {
         $this->dir = $dir;
         $this->elm = $elm;
@@ -37,6 +36,7 @@ class RestPagesElement
             }
             $pages[] = Page::fromArticle($this->dir->lang, $article);
         }
+
         return $pages;
     }
 }

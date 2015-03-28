@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Model;
 
 use Illuminate\Database\Eloquent;
@@ -30,6 +29,7 @@ class Article extends Eloquent\Model
                 break;
             }
         }
+
         return $articles;
     }
 

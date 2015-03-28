@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Model;
 
 use Illuminate\Database\Eloquent;
@@ -18,7 +17,7 @@ class Admin extends Eloquent\Model
      * @param string $username    User name.
      * @param string $rawPassword Password.
      *
-     * @return boolean
+     * @return bool
      */
     public static function isAuth($username, $rawPassword)
     {
@@ -46,7 +45,7 @@ class Admin extends Eloquent\Model
      *
      * @param string $rawPassword Password.
      *
-     * @return boolean
+     * @return bool
      */
     public function isPasswordCorrect($rawPassword)
     {

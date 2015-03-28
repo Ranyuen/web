@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Template;
 
 /**
@@ -59,6 +58,7 @@ class ViewRenderer
         } else {
             throw new TempalteFileNotFoundException($templateName);
         }
+
         return $this->renderContent($content, $params, $helpers);
     }
 

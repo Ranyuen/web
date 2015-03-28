@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen;
 
 use ArrayAccess;
@@ -23,7 +22,7 @@ class Session implements ArrayAccess, IteratorAggregate
     /**
      * @param mixed $offset Offset
      *
-     * @return boolean
+     * @return bool
      */
     public function offsetExists($offset)
     {

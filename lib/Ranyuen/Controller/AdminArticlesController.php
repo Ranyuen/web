@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Request;
@@ -71,6 +70,7 @@ class AdminArticlesController extends AdminController
             }
         }
         $original->sync($newArticle);
+
         return json_encode($original);
     }
 

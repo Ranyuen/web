@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Navigation;
 
 use Ranyuen\Model\Article;
@@ -11,7 +10,7 @@ use Ranyuen\Model\Article;
  */
 class Page
 {
-    static public function fromElement($lang, $parentPath, \SimpleXMLElement $elm)
+    public static function fromElement($lang, $parentPath, \SimpleXMLElement $elm)
     {
         $params = [];
         foreach ($elm->attributes() as $key => $val) {
@@ -20,12 +19,14 @@ class Page
         if (isset($params['path']) && 'index' === (string) $params['path']) {
             $params['path'] = '';
         }
+
         return new self($lang, $parentPath, $params);
     }
 
-    static public function fromArticle($lang, Article $article)
+    public static function fromArticle($lang, Article $article)
     {
         $content = $article->getContent($lang);
+
         return new self($lang, '', [
             'path'       => $article->path,
             'title'      => $content ? $content->plainTitle() : $article->path,
@@ -54,6 +55,7 @@ class Page
             if (!$article) {
                 // TODO 本来はエラーです。dev環境ではDBに記事が無いので、だうするか考へませう。
                 $this->title = $this->path;
+
                 return $this;
                 //throw new \Exception(print_r($this, true));
             }

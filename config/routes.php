@@ -40,6 +40,7 @@ $router->get('/columns/', function (ViewRenderer $renderer, $nav, $bgimage, $con
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
     $params = $renderer->defaultParams('ja', '/columns/');
     $params['articles'] = array_reverse(Article::children('/columns/'));
+
     return $renderer->render('columns/list.ja', $params);
 });
 
@@ -47,6 +48,7 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
     $params = $renderer->defaultParams('ja', '/news/');
     $params['articles'] = Article::children('/news/');
+
     return $renderer->render('news/list.ja', $params);
 });
 
@@ -69,6 +71,7 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     $params = $renderer->defaultParams($lang, $req->getPathInfo());
     $params['species_name'] = $speciesName;
     $params['photos']       = $photos;
+
     return $renderer->render("photos/index.$lang", $params);
 });
 

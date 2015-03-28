@@ -2,10 +2,10 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen;
 
 use Illuminate\Database\Capsule\Manager;
+
 // use Illuminate\Events\Dispatcher;
 
 /**

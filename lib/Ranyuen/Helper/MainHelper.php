@@ -2,7 +2,6 @@
 /**
  * Ranyuen web site.
  */
-
 namespace Ranyuen\Helper;
 
 use Ranyuen\Model\Photo;
@@ -73,10 +72,10 @@ class MainHelper extends Helper
     }
 
     /**
-     * @param string  $movieId YouTube movie ID
-     * @param string  $title   Movie title
-     * @param integer $width   Widget width px
-     * @param integer $height  Wdget height px
+     * @param string $movieId YouTube movie ID
+     * @param string $title   Movie title
+     * @param int    $width   Widget width px
+     * @param int    $height  Wdget height px
      *
      * @return string
      */
@@ -97,9 +96,9 @@ class MainHelper extends Helper
     }
 
     /**
-     * @param string  $id     Photo UUID.
-     * @param integer $width  Display width.
-     * @param integer $height Display height.
+     * @param string $id     Photo UUID.
+     * @param int    $width  Display width.
+     * @param int    $height Display height.
      *
      * @return string
      *
