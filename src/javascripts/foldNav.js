@@ -1,5 +1,6 @@
-/* global window, document */
+/* global global, foldNav */
 (function (global) {
+/* jshint browser:true */
 'use strict';
 
 /**
@@ -60,6 +61,7 @@ global.foldNav = foldNav;
 }((this || 0).self || global));
 
 window.addEventListener('DOMContentLoaded', function () {
+  'use strict';
   foldNav(document.getElementById('globalnav'));
   foldNav(document.getElementById('sidenav'));
 });

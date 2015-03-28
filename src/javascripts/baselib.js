@@ -1,6 +1,6 @@
 /* global global */
 (function (global) {
-/* jshint browser:true, sub:true */
+/* jshint browser:true, sub:true, maxstatements:1000 */
 'use strict';
 
 if (!Array.from) {

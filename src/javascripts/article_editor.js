@@ -1,4 +1,6 @@
+/* global Promise, global, throttle */
 (function (global) {
+/* jshint browser:true, maxstatements:1000 */
 'use strict';
 
 function fromTemplate(id) {
@@ -36,8 +38,12 @@ var EventRouter = {
  * @prop {HTMLElement}    node
  */
 function ArticleEditor(node, article) {
+  /* jshint maxstatements:100 */
   var me = this;
-  ArticleEditor = function () { return this; };
+  if (ArticleEditor.instance) {
+    return ArticleEditor.instance;
+  }
+  ArticleEditor.instance = this;
   article = article || new Article();
   this.article            = null;
   this.currentContent     = null;
@@ -74,6 +80,8 @@ function ArticleEditor(node, article) {
   });
   this.attachArticle(article);
 }
+
+ArticleEditor.instance = null;
 
 ArticleEditor.prototype.run = function () {
   var me                 = this,
@@ -115,6 +123,7 @@ ArticleEditor.prototype.createContent = function (content) {
 };
 
 ArticleEditor.prototype.removeContent = function (langTabItem, content) {
+  /* jshint maxstatements:100 */
   var nextLangTabItem,
       i  = 0,
       iz = 0;
@@ -158,9 +167,13 @@ ArticleEditor.prototype.preview = throttle(function (done) {
     });
     me.nodeContentPreview.innerHTML = '';
     me.nodeContentPreview.appendChild(fragment);
-    done && done();
+    if (done) {
+      done();
+    }
   }).catch(function (err) {
-    done && done(err);
+    if (done) {
+      done(err);
+    }
   });
 }, 500);
 
@@ -170,7 +183,7 @@ ArticleEditor.prototype.save = throttle(function () {
   return this.article.save().then(function () {
     console.log('Last saved at ' + new Date().toISOString());
     if (/\/0$/.test(location.href)) {
-      history.pushState({}, document.title, location.href.replace(/0$/, article.id));
+      history.pushState({}, document.title, location.href.replace(/0$/, me.article.id));
     }
     me.nodeSave.textContent = '保存済み';
     setTimeout(function () {
