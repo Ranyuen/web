@@ -101,6 +101,7 @@ gulp.task('less', function () {
       'src/stylesheets/news.less',
       'src/stylesheets/news_column.less',
       'src/stylesheets/photoGallery.less',
+      'src/stylesheets/playColoring.less',
       'src/stylesheets/playMenu.less',
       'src/stylesheets/ponerorchis.less',
     ]).

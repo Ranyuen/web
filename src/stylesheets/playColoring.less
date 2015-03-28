@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import "helpers";
+
+.coloring {
+  .clear-fix;
+
+  .coloring-square {
+    margin: 0 auto;
+    position: relative;
+    width: 206.533px;
+    height: 206.533px;
+
+    p {
+      margin: 0;
+      padding: 2px;
+
+      img {
+      display: block;
+      width: 202.533px;
+      height: 202.533px;
+      }
+    }
+
+    &:hover {
+      background: #de6bb1;
+    }
+  }
+}
+
+.coloring-img {
+  img {
+    margin: 0 auto;
+    display: block;
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .coloring {
+    .coloring-square {
+      float: left;
+    }
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .coloring {
+    .coloring-square {
+      float: left;
+    }
+  }
+}

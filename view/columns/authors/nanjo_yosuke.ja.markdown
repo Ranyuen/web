@@ -1,16 +1,16 @@
 ---
-title: 南条洋介のプロフィール
-description: コラム筆者、南条洋介のプロフィールです。
+title: 南條洋介のプロフィール
+description: コラム筆者、南條洋介のプロフィールです。
 ---
 <link rel="stylesheet" href="assets/stylesheets/authors.css" />
 
-##南条洋介のプロフィール
+##南條洋介のプロフィール
 
 <figure class="author-img">
   <img src="assets/images/author_nanjo_yosuke.jpg" alt="南条洋介">
 </figure>
 
-###南条洋介 (なんじょうようすけ) 男
+###南條洋介 (なんじょうようすけ) 男
 
 1960年　千葉県松戸市生まれ。
 
