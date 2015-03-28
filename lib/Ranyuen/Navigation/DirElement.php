@@ -44,7 +44,8 @@ class DirElement
                 $pages[] = (new DirElement($this->lang, $this->path, $elm))->pages();
                 break;
             case 'page':
-                if ('index' === (string) $elm->attributes()['path']) {
+                $attrs = $elm->attributes();
+                if (isset($attrs['path']) && 'index' === (string) $attrs['path']) {
                     break;
                 }
                 $pages[] = Page::fromElement($this->lang, $this->path, $elm);
@@ -73,8 +74,8 @@ class DirElement
 
     public function indexPage()
     {
-        if ($elm = $this->elm->xpath('page[@path="index"]')) {
-            return Page::fromElement($this->lang, $this->path, $elm);
+        if ($elms = $this->elm->xpath('page[@path="index"]')) {
+            return Page::fromElement($this->lang, $this->path, $elms[0]);
         }
         if ($article = Article::findByPath($this->path)) {
             return Page::fromArticle($this->lang, $article);

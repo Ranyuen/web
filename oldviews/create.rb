@@ -22,6 +22,7 @@ class Article
 
   def to_json
     hash = {
+      id:       0,
       path:     @path,
       contents: [],
     }
@@ -70,7 +71,7 @@ class AdminClient
     res = Net::HTTP.new(uri.host, uri.port).start{|http| http.request req }
     raise res.to_s unless res.is_a? Net::HTTPSuccess
     created_article = JSON.parse res.body
-    puts "Created #{created_article['id']}: #{create_article['path']}"
+    puts "Created #{created_article['id']}: #{created_article['path']}"
   end
 end
 

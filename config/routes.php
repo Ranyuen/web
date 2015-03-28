@@ -4,6 +4,8 @@ use Ranyuen\App;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
+use Ranyuen\Model\Article;
+use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
 
 // use Ranyuen\FrozenResponse;
@@ -33,7 +35,22 @@ $router->error(404, function (ViewRenderer $renderer, $lang) {
 $router->registerController('Ranyuen\Controller\ApiPhotoController');
 $router->registerController('Ranyuen\Controller\AdminArticlesController');
 $router->registerController('Ranyuen\Controller\AdminController');
-$router->get('/photos/', function (App $app, Request $req, ViewRenderer $renderer, $lang) {
+
+$router->get('/columns/', function (ViewRenderer $renderer, $nav, $bgimage, $config) {
+    $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
+    $params = $renderer->defaultParams('ja', '/columns/');
+    $params['articles'] = array_reverse(Article::children('/columns/'));
+    return $renderer->render('columns/list.ja', $params);
+});
+
+$router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config) {
+    $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
+    $params = $renderer->defaultParams('ja', '/news/');
+    $params['articles'] = Article::children('/news/');
+    return $renderer->render('news/list.ja', $params);
+});
+
+$router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
     $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
     $speciesName = $req->get('species_name');
     $photos = $controller->photos($req, 0, 20);
@@ -48,14 +65,11 @@ $router->get('/photos/', function (App $app, Request $req, ViewRenderer $rendere
         },
         json_decode($photos->getContent(), true)
     );
-
-    return $app->container->newInstance('Ranyuen\Controller\ArticleController')->render(
-        $lang,
-        '/photos/',
-        [
-            'species_name' => $speciesName,
-            'photos'       => $photos,
-        ]
-    );
+    $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
+    $params = $renderer->defaultParams($lang, $req->getPathInfo());
+    $params['species_name'] = $speciesName;
+    $params['photos']       = $photos;
+    return $renderer->render("photos/index.$lang", $params);
 });
+
 $router->registerController('Ranyuen\Controller\ArticleController');

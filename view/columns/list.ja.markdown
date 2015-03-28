@@ -25,7 +25,7 @@ description:
 <div class="column">
   {% for article in articles %}
     <article class="column-article">
-    	<h1><a href="/{{ article.lang }}/news/{{ article.url }}">{{ article.plainTitle | raw }}</a></h1>
+    	<h1><a href="{{ article.path }}">{{ article.getContent(lang).plainTitle | raw }}</a></h1>
     </article>
   {% endfor %}
 </div>

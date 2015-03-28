@@ -12,7 +12,7 @@
             <page path="exporting"/>
         </dir>
         <dir path="photos">
-            <rest-pages/>
+            <page path="index" title="Photos"/>
         </dir>
     </lang>
     <lang name="ja">
@@ -63,20 +63,23 @@
             <page path="history_of_author"/>
         </dir>
         <dir path="photos">
-            <rest-pages/>
+            <page path="index" title="写真を見る"/>
         </dir>
         <dir path="play">
             <page path="orchid_exam"/>
             <rest-pages/>
         </dir>
-        <dir path="news">
-            <latest-pages count="10"/>
-        </dir>
-        <dir path="column">
+        <dir path="columns">
+            <page path="index" title="コラム - 野生のランに魅せられて -"/>
             <dir path="authors">
                 <page path="yamamoto_hiroshi"/>
                 <rest-pages/>
             </dir>
+            <page path="introduction_for_column"/>
+            <latest-pages count="10"/>
+        </dir>
+        <dir path="news">
+            <page path="index" title="お知らせ"/>
             <latest-pages count="10"/>
         </dir>
     </lang>

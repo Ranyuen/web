@@ -39,7 +39,7 @@ class AdminArticlesController extends AdminController
             }
         }
 
-        return $this->renderer->render('admin/articles/edit', ['article' => json_encode($article)]);
+        return $this->renderer->render('admin/articles/edit', ['article' => str_replace('\\"', '\\\\"', json_encode($article))]);
     }
 
     /**

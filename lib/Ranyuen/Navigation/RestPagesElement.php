@@ -31,7 +31,8 @@ class RestPagesElement
         $articles = Article::children($this->dir->path);
         $pages = [];
         foreach ($articles as $article) {
-            if (is_array($article->path, $existingPaths)) {
+            if (in_array($article->path, $existingPaths)
+                || !$article->getContent($this->dir->lang)) {
                 continue;
             }
             $pages[] = Page::fromArticle($this->dir->lang, $article);

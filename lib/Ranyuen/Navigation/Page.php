@@ -13,14 +13,22 @@ class Page
 {
     static public function fromElement($lang, $parentPath, \SimpleXMLElement $elm)
     {
-        return new self($lang, $parentPath, $elm->attributes());
+        $params = [];
+        foreach ($elm->attributes() as $key => $val) {
+            $params[$key] = $val;
+        }
+        if (isset($params['path']) && 'index' === (string) $params['path']) {
+            $params['path'] = '';
+        }
+        return new self($lang, $parentPath, $params);
     }
 
     static public function fromArticle($lang, Article $article)
     {
+        $content = $article->getContent($lang);
         return new self($lang, '', [
             'path'       => $article->path,
-            'title'      => $article->getContent($lang)->title,
+            'title'      => $content ? $content->plainTitle() : $article->path,
             'article_id' => $article->id,
         ]);
     }
@@ -49,8 +57,10 @@ class Page
                 return $this;
                 //throw new \Exception(print_r($this, true));
             }
-            $this->path  = $article->path;
-            $this->title = $this->title || $article->getContent($lang)->title;
+            $this->path = $article->path;
+            if (!$this->title) {
+                $this->title = $article->getContent($lang)->plainTitle();
+            }
         }
     }
 

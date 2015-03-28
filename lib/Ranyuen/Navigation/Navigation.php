@@ -36,6 +36,9 @@ class Navigation
             $nav = $nav->xpath('dir[@path="'.h($dirname).'"]')[0];
         }
         $parentPath = implode('/', array_slice($dirnames, 0, count($dirnames) - 1)).'/';
+        if ('/' !== substr($parentPath, 0)) {
+            $parentPath = '/'.$parentPath;
+        }
         return (new DirElement($lang, $parentPath, $nav))->pages();
     }
 

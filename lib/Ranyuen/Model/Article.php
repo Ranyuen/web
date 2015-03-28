@@ -26,7 +26,7 @@ class Article extends Eloquent\Model
                 continue;
             }
             $articles[] = $entity;
-            if ($count && count($pages) >= $count) {
+            if ($count && count($articles) >= $count) {
                 break;
             }
         }

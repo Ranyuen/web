@@ -19,16 +19,26 @@ class LatestPagesElement
     {
         $this->dir   = $dir;
         $this->elm   = $elm;
-        $this->count = $elm->attributes['count'] || null;
+        $this->count = intval($elm->attributes()['count']);
     }
 
     public function pages()
     {
-        return array_map(
-            function ($article) {
-                return Page::fromArticle($this->dir->lang, $article);
+        $existingPaths = array_map(
+            function ($page) {
+                return $page->path;
             },
-            Article::children($this->dir->path, $this->count)
+            $this->dir->childPages()
         );
+        $articles = Article::children($this->dir->path, $this->count);
+        $pages = [];
+        foreach ($articles as $article) {
+            if (in_array($article->path, $existingPaths)
+                || !$article->getContent($this->dir->lang)) {
+                continue;
+            }
+            $pages[] = Page::fromArticle($this->dir->lang, $article);
+        }
+        return $pages;
     }
 }
