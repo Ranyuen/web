@@ -1,13 +1,11 @@
 #!/bin/bash
 
 if test "install" = "$1"; then
-  echo "We need PHP, Composer, Node.js and Ruby."
+  echo "We need PHP, Composer and Node.js."
   composer install
   npm install -g bower gulp
   npm install
   bower install
-  gem install bundler
-  bundle install
   gulp build
   gulp test
 elif test "update" = "$1"; then
@@ -15,7 +13,6 @@ elif test "update" = "$1"; then
   composer update
   npm update
   bower update
-  bundle update
   gulp build
   gulp test
 else
