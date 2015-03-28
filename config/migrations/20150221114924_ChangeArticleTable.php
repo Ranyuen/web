@@ -15,7 +15,7 @@ class ChangeArticleTable extends Migration
         $schema->drop('article');
         $schema->create('article', function ($t) {
             $t->bigIncrements('id');
-            $t->string('path', 1023);
+            $t->string('path', 255);
             $t->timestamps();
             $t->unique(['path']);
         });

@@ -44,6 +44,10 @@ class ArticleController extends Controller
                 return new Response('', 301, ['Location' => $to]);
             }
         }
+        if (preg_match('#\A/news/(.+)#', $path, $matches)
+            && $article = Article::findByPath("/columns/$matches[1]")) { // For migrating #94.
+            return new Response('', 301, ['Location' => "/columns/$matches[1]"]);
+        }
         if (!(
             ($article = Article::findByPath($path))
             && ($content = $article->getContent($lang))
