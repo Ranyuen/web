@@ -35,8 +35,12 @@ class MainHelper extends Helper
 </li>';
                 continue;
             }
+            $path = preg_replace('/\/\//', '/', $page->path);
+            if ('ja' !== $page->lang) {
+                $path = "/$page->lang$path";
+            }
             $output .= '<li>
-    <a href="'.h(preg_replace('/\/\//', '/', $page->path)).'">'.h($page->title).'</a>
+    <a href="'.h($path).'">'.h($page->title).'</a>
 </li>';
         }
         $output .= '</ul>';
