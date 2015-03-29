@@ -1,7 +1,9 @@
 <?php
+
 /**
  * Ranyuen web site.
  */
+
 namespace Ranyuen\Template;
 
 use Ranyuen\BgImage;

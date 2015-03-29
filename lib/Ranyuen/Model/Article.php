@@ -1,7 +1,9 @@
 <?php
+
 /**
  * Ranyuen web site.
  */
+
 namespace Ranyuen\Model;
 
 use Illuminate\Database\Eloquent;
@@ -18,7 +20,7 @@ class Article extends Eloquent\Model
 
     public static function children($path, $count = 0)
     {
-        $entities = self::with('contents')->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')->orderBy('created_at', 'DESC')->get();
+        $entities = self::with('contents')->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')->orderBy('id', 'DESC')->get();
         $articles = [];
         foreach ($entities as $entity) {
             if (!preg_match('#^'.preg_quote($path, '#').'[^/]*$#', $entity->path)) {

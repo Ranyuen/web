@@ -1,4 +1,5 @@
 <?php
+
 require_once 'tests/res/TemplateHelper.php';
 
 use Ranyuen\Template\Template;

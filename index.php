@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Ranyuen web site.
  *

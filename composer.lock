@@ -602,16 +602,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v5.0.4",
+            "version": "v5.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "1f83a771a2e3e1c5fa34b9e543229f506caa9aa2"
+                "reference": "034b43c0838a0c1aedc4d15e8de54c761728549b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/1f83a771a2e3e1c5fa34b9e543229f506caa9aa2",
-                "reference": "1f83a771a2e3e1c5fa34b9e543229f506caa9aa2",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/034b43c0838a0c1aedc4d15e8de54c761728549b",
+                "reference": "034b43c0838a0c1aedc4d15e8de54c761728549b",
                 "shasum": ""
             },
             "require": {
@@ -649,13 +649,14 @@
                 }
             ],
             "description": "The Illuminate Database package.",
+            "homepage": "http://laravel.com",
             "keywords": [
                 "database",
                 "laravel",
                 "orm",
                 "sql"
             ],
-            "time": "2015-02-11 20:11:33"
+            "time": "2015-03-27 13:53:15"
         },
         {
             "name": "illuminate/support",
@@ -961,12 +962,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ranyuen/Di.git",
-                "reference": "6a10e07a96ee37b32823a0f10df79bfa60b568d3"
+                "reference": "ec1b566fbae4e7baabb1b025d79f6634d35de840"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/6a10e07a96ee37b32823a0f10df79bfa60b568d3",
-                "reference": "6a10e07a96ee37b32823a0f10df79bfa60b568d3",
+                "url": "https://api.github.com/repos/Ranyuen/Di/zipball/ec1b566fbae4e7baabb1b025d79f6634d35de840",
+                "reference": "ec1b566fbae4e7baabb1b025d79f6634d35de840",
                 "shasum": ""
             },
             "require": {
@@ -1012,7 +1013,7 @@
                 "di",
                 "method invocation"
             ],
-            "time": "2015-03-17 17:43:06"
+            "time": "2015-03-27 20:25:22"
         },
         {
             "name": "ranyuen/little",
@@ -1020,12 +1021,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ranyuen/Little.git",
-                "reference": "4c98228539b2804e2d547a2e3886f37834a21147"
+                "reference": "a4c151ab2155ec78eaea5fcd8ffbaf653d8875af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ranyuen/Little/zipball/4c98228539b2804e2d547a2e3886f37834a21147",
-                "reference": "4c98228539b2804e2d547a2e3886f37834a21147",
+                "url": "https://api.github.com/repos/Ranyuen/Little/zipball/a4c151ab2155ec78eaea5fcd8ffbaf653d8875af",
+                "reference": "a4c151ab2155ec78eaea5fcd8ffbaf653d8875af",
                 "shasum": ""
             },
             "require": {
@@ -1067,7 +1068,7 @@
                 "router",
                 "website"
             ],
-            "time": "2015-03-14 07:05:17"
+            "time": "2015-03-27 22:08:29"
         },
         {
             "name": "symfony/class-loader",
@@ -1668,22 +1669,22 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "1.6.x-dev",
+            "version": "1.7.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "569d1b98510389eaea680e060872098e0f0089e0"
+                "reference": "583a99fb080da93d21238d87c769708acce7f2f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/569d1b98510389eaea680e060872098e0f0089e0",
-                "reference": "569d1b98510389eaea680e060872098e0f0089e0",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/583a99fb080da93d21238d87c769708acce7f2f4",
+                "reference": "583a99fb080da93d21238d87c769708acce7f2f4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.6",
                 "sebastian/diff": "~1.1",
-                "symfony/console": "~2.1",
+                "symfony/console": "~2.3",
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/filesystem": "~2.1",
                 "symfony/finder": "~2.1",
@@ -1717,7 +1718,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-03-15 21:37:31"
+            "time": "2015-03-28 19:47:10"
         },
         {
             "name": "pdepend/pdepend",
@@ -1809,16 +1810,16 @@
         },
         {
             "name": "phpmd/phpmd",
-            "version": "2.2.1",
+            "version": "2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmd/phpmd.git",
-                "reference": "58c4b00f924d301e8c5281f40cfa9a66f3df9eee"
+                "reference": "7dc4a6b5c07b119ab5da7960b56303fa6855eb84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/58c4b00f924d301e8c5281f40cfa9a66f3df9eee",
-                "reference": "58c4b00f924d301e8c5281f40cfa9a66f3df9eee",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/7dc4a6b5c07b119ab5da7960b56303fa6855eb84",
+                "reference": "7dc4a6b5c07b119ab5da7960b56303fa6855eb84",
                 "shasum": ""
             },
             "require": {
@@ -1867,7 +1868,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2015-03-02 10:26:50"
+            "time": "2015-03-26 07:47:05"
         },
         {
             "name": "phpspec/prophecy",
