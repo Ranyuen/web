@@ -432,8 +432,10 @@ ArticleContent.prototype.isValid = function () {
 };
 
 ArticleContent.prototype.render = function () {
-  var req = new XMLHttpRequest();
-  req.open('GET', '/admin/articles/preview?content=' + encodeURIComponent(this.content));
+  var me  = this,
+      req = new XMLHttpRequest();
+  req.open('POST', '/admin/articles/preview');
+  req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
   return new Promise(function (resolve, reject) {
     req.onload = function () {
       resolve(req.responseText);
@@ -441,7 +443,7 @@ ArticleContent.prototype.render = function () {
     req.onerror = function () {
       reject(new NetworkError(req));
     };
-    req.send();
+    req.send('content=' + encodeURIComponent(me.content));
   });
 };
 // }}} ArticleContent

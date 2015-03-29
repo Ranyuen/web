@@ -121,7 +121,7 @@ class AdminArticlesController extends AdminController
      *
      * @return Response
      *
-     * @Route('/preview')
+     * @Route('/preview',via=POST)
      */
     public function preview($content)
     {
