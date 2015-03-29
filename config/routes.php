@@ -30,9 +30,9 @@ $router->error(404, function (ViewRenderer $renderer, $lang) {
     // return new Response($res, 404);
 });
 
-$router->registerController('Ranyuen\Controller\ApiPhotoController');
 $router->registerController('Ranyuen\Controller\AdminArticlesController');
 $router->registerController('Ranyuen\Controller\AdminController');
+$router->registerController('Ranyuen\Controller\PhotosController');
 
 $router->get('/columns/', function (ViewRenderer $renderer, $nav, $bgimage, $config) {
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
@@ -48,29 +48,6 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
     $params['articles'] = Article::children('/news/');
 
     return $renderer->render('news/list.ja', $params);
-});
-
-$router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
-    $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
-    $speciesName = $req->get('species_name');
-    $photos = $controller->photos($req, 0, 20);
-    $photos = array_map(
-        function ($photo) {
-            $thumbWidth = 349;
-            $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
-            $photo['thumb_width']  = $thumbWidth;
-            $photo['thumb_height'] = $thumbHeight;
-
-            return $photo;
-        },
-        json_decode($photos->getContent(), true)
-    );
-    $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
-    $params = $renderer->defaultParams($lang, $req->getPathInfo());
-    $params['species_name'] = $speciesName;
-    $params['photos']       = $photos;
-
-    return $renderer->render("photos/index.$lang", $params);
 });
 
 $router->registerController('Ranyuen\Controller\ArticleController');

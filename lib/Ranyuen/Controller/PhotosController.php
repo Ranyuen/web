@@ -10,14 +10,45 @@
 
 namespace Ranyuen\Controller;
 
+use Ranyuen\App;
 use Ranyuen\Little\Request;
 use Ranyuen\Model\Photo;
+use Ranyuen\Template\MainViewRenderer;
+use Ranyuen\Template\ViewRenderer;
 
 /**
- * /api/photo controller.
+ * /photos controller.
+ *
+ * @Route('/photos')
  */
-class ApiPhotoController extends Controller
+class PhotosController extends Controller
 {
+    /**
+     * @Route('/')
+     */
+    public function index(App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
+        $controller = $app->container->newInstance('Ranyuen\Controller\PhotosController');
+        $speciesName = $req->get('species_name');
+        $photos = $controller->indexJson($req, 0, 20);
+        $photos = array_map(
+            function ($photo) {
+                $thumbWidth = 349;
+                $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
+                $photo['thumb_width']  = $thumbWidth;
+                $photo['thumb_height'] = $thumbHeight;
+
+                return $photo;
+            },
+            json_decode($photos->getContent(), true)
+        );
+        $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
+        $params = $renderer->defaultParams($lang, $req->getPathInfo());
+        $params['species_name'] = $speciesName;
+        $params['photos']       = $photos;
+
+        return $renderer->render("photos/index.$lang", $params);
+    }
+
     /**
      * List photos.
      *
@@ -28,9 +59,9 @@ class ApiPhotoController extends Controller
      * @return Response
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
-     * @Route('/api/photos')
+     * @Route('/list.json')
      */
-    public function photos(Request $req, $offset = 0, $limit = 100)
+    public function indexJson(Request $req, $offset = 0, $limit = 100)
     {
         $speciesName = $req->get('species_name');
         if (is_null($speciesName)) {
@@ -52,9 +83,9 @@ class ApiPhotoController extends Controller
      * @return void
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
-     * @Route('/api/photo')
+     * @Route('/show.jpg')
      */
-    public function photo($id, $width = null, $height = null)
+    public function showImage($id, $width = null, $height = null)
     {
         if (!$id) {
             return $this->toJsonResponse(['error' => 'id is required.'], 404);
