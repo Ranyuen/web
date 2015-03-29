@@ -1,7 +1,13 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen;
 
 /**
@@ -11,7 +17,10 @@ class BgImage
 {
     private $resources = [];
     /**
+     * Request session.
+     *
      * @var Ranyuen\Session
+     *
      * @Inject
      */
     private $session;
@@ -31,6 +40,8 @@ class BgImage
     }
 
     /**
+     * Random background image.
+     *
      * @return string
      */
     public function getRandom()
@@ -47,6 +58,8 @@ class BgImage
     }
 
     /**
+     * All available background images.
+     *
      * @return string[]
      */
     private function getAvailableImages()

@@ -1,7 +1,13 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen;
 
 use Illuminate\Database\Capsule\Manager;
@@ -13,17 +19,24 @@ use Illuminate\Database\Capsule\Manager;
  */
 class DbCapsule
 {
-    /** @var Manager */
+    /**
+     * Nakid DB capsule.
+     *
+     * @var Manager
+     */
     private $capsule;
 
     /**
-     * @param Logger $logger Logger
-     * @param array  $config Application config
+     * Constructor.
+     *
+     * @param Logger $logger Logger.
+     * @param array  $config Application config.
      */
     public function __construct(Logger $logger, array $config)
     {
         $this->capsule = new Manager();
         $this->capsule->addConnection($config['db']);
+        $logger;
         // $dispatcher = new Dispatcher(new Illuminate\Container\Container());
         // $dispatcher->listen(
         //     'illuminate.query',
@@ -47,6 +60,8 @@ class DbCapsule
     }
 
     /**
+     * Get a DB connection.
+     *
      * @return \Illuminate\Database\Connection
      */
     public function getConnection()
@@ -55,6 +70,8 @@ class DbCapsule
     }
 
     /**
+     * Do a transaction.
+     *
      * @param \Closure $callback Transaction process.
      *
      * @return mixed
@@ -67,6 +84,8 @@ class DbCapsule
     }
 
     /**
+     * Get a table schema builder.
+     *
      * @return \Illuminate\Database\Schema\Builder
      */
     public function getSchemaBuilder()

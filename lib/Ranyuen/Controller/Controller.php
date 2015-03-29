@@ -1,7 +1,13 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Response;
@@ -11,7 +17,11 @@ use Ranyuen\Little\Response;
  */
 abstract class Controller
 {
-    /** @Inject */
+    /**
+     * Config.
+     *
+     * @Inject
+     */
     protected $config;
 
     protected function toJsonResponse($res, $statusCode = null, $headers = [])

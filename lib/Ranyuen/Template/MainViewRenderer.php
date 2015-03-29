@@ -1,13 +1,20 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Template;
 
 use Ranyuen\BgImage;
 use Ranyuen\Navigation\Navigation;
 
 /**
+ * Render view with main layout.
  */
 class MainViewRenderer
 {
@@ -30,6 +37,8 @@ class MainViewRenderer
     }
 
     /**
+     * Get default parameters.
+     *
      * @param string $lang Current lang.
      * @param string $path URI path info.
      *

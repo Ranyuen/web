@@ -1,17 +1,25 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Navigation;
 
 use Ranyuen\Model\Article;
 
 /**
- * Load navigation config and manipulate.
+ * Load config/nav.xml.
  */
 class Navigation
 {
     /**
+     * Nav element.
+     *
      * @var \SimpleXMLElement
      */
     private $nav;
@@ -22,10 +30,12 @@ class Navigation
     }
 
     /**
+     * Side navigation.
+     *
      * @param string $lang Current lang.
      * @param string $path URI path info.
      *
-     * @return array
+     * @return (Page|Page[])[]
      */
     public function getLocalNav($lang, $path)
     {
@@ -48,7 +58,9 @@ class Navigation
      * @param string $lang Current lang.
      * @param string $path URI path info.
      *
-     * @return array
+     * @return Page[]
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
      */
     public function getBreadcrumb($lang, $path)
     {

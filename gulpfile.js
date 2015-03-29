@@ -6,15 +6,13 @@ var cp = require('child_process'),
 var Promise       = require('bluebird'),
     gulp          = require('gulp'),
     concat        = require('gulp-concat'),
-    exec          = require('gulp-exec'),
+    jscs          = require('gulp-jscs'),
     jshint        = require('gulp-jshint'),
     less          = require('gulp-less'),
     uglify        = require('gulp-uglifyjs'),
     jshintStylish = require('jshint-stylish'),
-    merge         = require('merge-stream'),
-    runSequence   = require('run-sequence');
-var Check404   = require('./lib/Check404'),
-    promiseSsh = require('./lib/promiseSsh');
+    merge         = require('merge-stream');
+var promiseSsh = require('./lib/promiseSsh');
 var sshConfig = {
       host     : 'ranyuen.sakura.ne.jp',
       port     : '22',
@@ -67,10 +65,6 @@ gulp.task('backup-images', function () {
   return promiseProcess('rsync -av ranyuen@ranyuen.sakura.ne.jp:~/www/images .');
 });
 
-gulp.task('check404', function () {
-  return new Check404().start('http://localhost:' + process.env.PORT + '/');
-});
-
 gulp.task('copy-assets', function () {
   return gulp.src('src/bower_components/colorbox/example1/**').
     pipe(gulp.dest('assets/stylesheets'));
@@ -86,11 +80,18 @@ gulp.task('deploy', function () {
   return promiseSsh(sshConfig, commands);
 });
 
+gulp.task('jscs', function () {
+  return gulp.src(['*.js', 'src/javascripts/**/**.js', 'lib/**/**.js']).
+    pipe(jscs());
+});
+
 gulp.task('jshint', function () {
   return gulp.src(['*.js', 'src/javascripts/**/**.js', 'lib/**/**.js']).
     pipe(jshint()).
     pipe(jshint.reporter(jshintStylish));
 });
+
+gulp.task('js-test', ['jscs', 'jshint']);
 
 gulp.task('less', function () {
   return gulp.src([
@@ -112,43 +113,8 @@ gulp.task('less', function () {
     pipe(gulp.dest('assets/stylesheets'));
 });
 
-gulp.task('php-fixer', function () {
-  return Promise.all([
-    promiseProcess('vendor/bin/php-cs-fixer fix index.php', true),
-    promiseProcess('vendor/bin/php-cs-fixer fix phpmig.php', true),
-    promiseProcess('vendor/bin/php-cs-fixer fix bin/', true),
-    promiseProcess('vendor/bin/php-cs-fixer fix config/', true),
-    promiseProcess('vendor/bin/php-cs-fixer fix lib/', true),
-    promiseProcess('vendor/bin/php-cs-fixer fix tests/', true),
-    promiseProcess('vendor/bin/php-cs-fixer fix view/', true),
-  ]);
-});
-
-gulp.task('php-lint', function () {
-  return gulp.src([
-      '*.php',
-      'bin/**/**.php',
-      'config/**/**.php',
-      'lib/**/**.php',
-      'tests/**/**.php',
-      'view/**/**.php',
-    ]).
-    pipe(exec('php -l <%= file.path %>', {})).
-    pipe(exec.reporter({stdout: false}));
-});
-
-gulp.task('php-metrics', function () {
-  return promiseProcess('vendor/bin/phpcs --standard=phpcs.xml --extensions=php lib/').
-    then(promiseProcess('vendor/bin/phpmd lib/ text phpmd.xml'));
-});
-
-gulp.task('php-test', function (done) {
-  runSequence('php-lint', 'php-fixer', 'php-metrics', 'php-unit', done);
-});
-
-gulp.task('php-unit', function () {
-  return promiseProcess('vendor/bin/phpunit').
-    then(function (out) { console.log(out); });
+gulp.task('php-test', function () {
+  return promiseProcess('vendor/bin/phing test');
 });
 
 gulp.task('uglifyjs', function () {
@@ -200,4 +166,4 @@ gulp.task('uglifyjs', function () {
 
 gulp.task('backup', ['backup-db', 'backup-images']);
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs']);
-gulp.task('test', ['jshint', 'php-test']);
+gulp.task('test', ['js-test', 'php-test']);

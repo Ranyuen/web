@@ -1,14 +1,10 @@
-// vim:set ft=json:
+// vim:ft=json:
 {
   // Enforcing options
-  "camelcase": true,
   "curly": true,
   "eqeqeq": true,
   "forin": true,
-  "immed": true,
-  "indent": 2,
   "noarg": true,
-  "quotmark": "single",
   "undef": true,
   "unused": true,
   "strict": true,
@@ -17,7 +13,6 @@
   "maxdepth": 4,
   "maxstatements": 12,
   "maxcomplexity": 10,
-  "maxlen": 120,
 
   // Relaxing options
   "validthis": true,

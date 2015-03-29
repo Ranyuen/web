@@ -1,7 +1,13 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Controller;
 
 use Ranyuen\Little\Request;
@@ -13,6 +19,8 @@ use Ranyuen\Model\Photo;
 class ApiPhotoController extends Controller
 {
     /**
+     * List photos.
+     *
      * @param Request $req    HTTP request.
      * @param int     $offset Offset.
      * @param int     $limit  Limit.
@@ -35,10 +43,13 @@ class ApiPhotoController extends Controller
     }
 
     /**
+     * Echo a photo.
+     *
      * @param string $id     Photo ID.
      * @param int    $width  Photo pixel width.
      * @param int    $height Photo pixel height.
      *
+     * @return void
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/api/photo')

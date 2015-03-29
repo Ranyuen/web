@@ -1,16 +1,25 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Model;
 
 use dflydev\markdown\MarkdownExtraParser;
 use Illuminate\Database\Eloquent;
 use Ranyuen\Template\Template;
 
+/**
+ * ArticleContent model.
+ */
 class ArticleContent extends Eloquent\Model
 {
-    protected $table = 'article_content';
+    protected $table    = 'article_content';
     protected $fillable = ['lang', 'content'];
 
     public function __get($name)
@@ -32,6 +41,8 @@ class ArticleContent extends Eloquent\Model
     }
 
     /**
+     * Strip tags in the title.
+     *
      * @return string
      */
     public function plainTitle()

@@ -1,20 +1,37 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Template;
 
 /**
+ * Render view.
  */
 class ViewRenderer
 {
-    /** @var string */
+    /**
+     * Template directory.
+     *
+     * @var string
+     */
     private $dir;
-    /** @var string */
+    /**
+     * Layout file name.
+     *
+     * @var string
+     */
     private $layout;
     private $helpers = [];
 
     /**
+     * Constructor.
+     *
      * @param string $templateDir Template directory.
      */
     public function __construct($templateDir)
@@ -23,7 +40,11 @@ class ViewRenderer
     }
 
     /**
+     * Set layout file name.
+     *
      * @param string $templateName Jinja2 HTML file path.
+     *
+     * @return void
      */
     public function setLayout($templateName)
     {
@@ -43,6 +64,8 @@ class ViewRenderer
     }
 
     /**
+     * Render.
+     *
      * @param string   $templateName Jinja2 Markdown file path.
      * @param array    $params       Template params.
      * @param object[] $helpers      Template helpers.

@@ -3,6 +3,7 @@
 /images/*/*
 *.sqlite3
 !.gitkeep
+.php_cs.cache
 
 
 # Created by https://www.gitignore.io

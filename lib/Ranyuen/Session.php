@@ -1,7 +1,13 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen;
 
 use ArrayAccess;
@@ -20,6 +26,8 @@ class Session implements ArrayAccess, IteratorAggregate
     }
 
     /**
+     * Is the key in the session.
+     *
      * @param mixed $offset Offset
      *
      * @return bool
@@ -46,6 +54,8 @@ class Session implements ArrayAccess, IteratorAggregate
      *
      * @param mixed $offset Offset
      * @param mixed $value  Value
+     *
+     * @return void
      */
     public function offsetSet($offset, $value)
     {
@@ -60,6 +70,8 @@ class Session implements ArrayAccess, IteratorAggregate
      * Unset session value.
      *
      * @param mixed $offset Offset
+     *
+     * @return void
      */
     public function offsetUnset($offset)
     {
@@ -68,6 +80,8 @@ class Session implements ArrayAccess, IteratorAggregate
 
     /**
      * Implements foreach.
+     *
+     * @return array
      */
     public function getIterator()
     {
@@ -75,7 +89,9 @@ class Session implements ArrayAccess, IteratorAggregate
     }
 
     /**
-     * Regenerate session ID.
+     * Regenerate session ID. Prevent session fixation attacks.
+     *
+     * @return void
      */
     public function regenerate()
     {
@@ -84,6 +100,8 @@ class Session implements ArrayAccess, IteratorAggregate
 
     /**
      * Destroy this session.
+     *
+     * @return void
      */
     public function destroy()
     {

@@ -1,24 +1,29 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen;
 
 /**
  * RGB and HSV color.
  *
- * http://c4se.hatenablog.com/entry/2013/08/04/190937
+ * See http://c4se.hatenablog.com/entry/2013/08/04/190937
  */
 class Color
 {
-    /** @var int */
     private $r;
-    /** @var int */
     private $g;
-    /** @var int */
     private $b;
 
     /**
+     * Load from RGB.
+     *
      * @param int $r 0..255
      * @param int $g 0..255
      * @param int $b 0..255
@@ -33,6 +38,8 @@ class Color
     }
 
     /**
+     * Load from HSV.
+     *
      * @param int $h 0..360 degree
      * @param int $s 0..100 %
      * @param int $v 0..100 %
@@ -47,7 +54,9 @@ class Color
     }
 
     /**
-     * @return integer[] [red 0..255, green 0..255, blue 0..255]
+     * Get RGB.
+     *
+     * @return int[] [red 0..255, green 0..255, blue 0..255]
      */
     public function rgb()
     {
@@ -55,7 +64,9 @@ class Color
     }
 
     /**
-     * @return integer[] [hue 0..360, saturation 0..100, value 0..100]
+     * Get HSV.
+     *
+     * @return int[] [hue 0..360, saturation 0..100, value 0..100]
      */
     public function hsv()
     {

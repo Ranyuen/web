@@ -2,23 +2,24 @@
   "require": {
     "php": ">=5.4",
     "clover/text-ltsv": "1.0.*@dev",
-    "davedevelopment/phpmig": "1.*",
+    "davedevelopment/phpmig": "~1.1",
     "dflydev/markdown": "1.0.*@dev",
     "ginq/ginq": "~0.2",
     "hafriedlander/php-peg": "dev-master@dev",
     "illuminate/database": "~5.0",
     "ircmaxell/password-compat": "~1.0",
-    "monolog/monolog": "~1.11",
+    "monolog/monolog": "~1.13",
     "ranyuen/di": "dev-dev0.2.1",
     "ranyuen/little": "dev-master",
     "symfony/yaml": "~2.6",
-    "twig/twig": "~1.16"
+    "twig/twig": "~1.18"
   },
   "require-dev": {
-    "fabpot/php-cs-fixer": "~1.6@dev",
-    "phpmd/phpmd": "~2.1",
-    "phpunit/phpunit": "~4.3",
-    "squizlabs/php_codesniffer": "~1.5"
+    "fabpot/php-cs-fixer": "~2.0@dev",
+    "phing/phing": "~2.10",
+    "phpmd/phpmd": "~2.2",
+    "phpunit/phpunit": "~4.5",
+    "squizlabs/php_codesniffer": "~2.3"
   },
   "autoload": {
     "psr-4": {"Ranyuen\\": "lib/Ranyuen/"}

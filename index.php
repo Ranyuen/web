@@ -1,11 +1,11 @@
 <?php
+
 /**
  * Ranyuen web site.
  *
- * PHP versions from 5.4 to 5.6
- *
  * @author  Ranyuen <cal_pone@ranyuen.com>
- * @license http://www.gnu.org/licenses/gpl.html GPL-3.0+
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 file_put_contents('php.pid', getmypid());
 $filename = __DIR__.preg_replace('#(\?.*)$#', '', $_SERVER['REQUEST_URI']);

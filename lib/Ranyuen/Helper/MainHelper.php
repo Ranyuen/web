@@ -1,7 +1,13 @@
 <?php
+
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
+
 namespace Ranyuen\Helper;
 
 use Ranyuen\Model\Photo;
@@ -12,6 +18,8 @@ use Ranyuen\Model\Photo;
 class MainHelper extends Helper
 {
     /**
+     * Echo side navigation.
+     *
      * @param Ranyuen\Navigation\Page[] $pages URIs and titles.
      *
      * @return string
@@ -37,6 +45,8 @@ class MainHelper extends Helper
     }
 
     /**
+     * Echo breadcrumb navigation.
+     *
      * @param Ranyuen\Navigation\Page[] $pages URIs and titles.
      *
      * @return string
@@ -56,6 +66,8 @@ class MainHelper extends Helper
     }
 
     /**
+     * Echo lang navigation.
+     *
      * @param array  $links       Top URIs.
      * @param strung $currentLang Current lang.
      *
@@ -72,10 +84,12 @@ class MainHelper extends Helper
     }
 
     /**
-     * @param string $movieId YouTube movie ID
-     * @param string $title   Movie title
-     * @param int    $width   Widget width px
-     * @param int    $height  Wdget height px
+     * Echo a Youtube player.
+     *
+     * @param string $movieId YouTube movie ID.
+     * @param string $title   Movie title.
+     * @param int    $width   Widget width px.
+     * @param int    $height  Wdget height px.
      *
      * @return string
      */
@@ -96,6 +110,8 @@ class MainHelper extends Helper
     }
 
     /**
+     * Echo an image.
+     *
      * @param string $id     Photo UUID.
      * @param int    $width  Display width.
      * @param int    $height Display height.

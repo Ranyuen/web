@@ -1,4 +1,5 @@
 <?php
+
 /**
  * phpmig startup.
  */
