@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Controller;
@@ -20,19 +24,32 @@ use Ranyuen\Template\ViewRenderer;
 class AdminController extends Controller
 {
     /**
+     * HTTP request Router.
+     *
      * @var Ranyuen\Router
+     *
      * @Inject
      */
     protected $router;
-    /** @var Ranyuen\Template\ViewRenderer */
+    /**
+     * Renderer.
+     *
+     * @var Ranyuen\Template\ViewRenderer
+     */
     protected $renderer;
     /**
+     * Logger.
+     *
      * @var Ranyuen\Logger
+     *
      * @Inject
      */
     protected $logger;
     /**
+     * Session storage.
+     *
      * @var Ranyuen\Session
+     *
      * @Inject
      */
     protected $session;
@@ -44,6 +61,8 @@ class AdminController extends Controller
     }
 
     /**
+     * Show login page.
+     *
      * @param string $username User name.
      * @param string $password Raw password.
      *
@@ -64,6 +83,8 @@ class AdminController extends Controller
     }
 
     /**
+     * Process login.
+     *
      * @param string $username User name.
      * @param string $password Raw password.
      *
@@ -82,6 +103,8 @@ class AdminController extends Controller
     }
 
     /**
+     * Process logout.
+     *
      * @return string
      *
      * @Route('/logout')
@@ -94,6 +117,8 @@ class AdminController extends Controller
     }
 
     /**
+     * Admin top page.
+     *
      * @return string
      *
      * @Route('/')

@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Model;
@@ -36,6 +40,8 @@ class Admin extends Eloquent\Model
      * Hash the given password and set.
      *
      * @param string $rawPassword Password.
+     *
+     * @return void
      */
     public function setPassword($rawPassword)
     {

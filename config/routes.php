@@ -8,8 +8,6 @@ use Ranyuen\Model\Article;
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
 
-// use Ranyuen\FrozenResponse;
-
 Router::plugin('Ranyuen\Little\Plugin\ControllerAnnotationRouter');
 
 $router->error(500, function (\Exception $ex) {

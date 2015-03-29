@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen;
@@ -16,8 +20,10 @@ use Monolog\Handler\RotatingFileHandler;
 class Logger extends Monolog\Logger
 {
     /**
-     * @param string $name   Logger name
-     * @param array  $config Application config
+     * Constructor.
+     *
+     * @param string $name   Logger name.
+     * @param array  $config Application config.
      */
     public function __construct($name, $config)
     {
@@ -29,11 +35,11 @@ class Logger extends Monolog\Logger
     /**
      * Override.
      *
-     * @param int          $level   The logging level
-     * @param string|array $message The log message
-     * @param array        $context The log context
+     * @param int          $level   The logging level.
+     * @param string|array $message The log message.
+     * @param array        $context The log context.
      *
-     * @return bool Whether the record has been processed
+     * @return bool Whether the record has been processed.
      */
     public function addRecord($level, $message, array $context = [])
     {
@@ -49,6 +55,8 @@ class Logger extends Monolog\Logger
     }
 
     /**
+     * Access log.
+     *
      * @SuppressWarnings(PHPMD.Superglobals)
      *
      * @return bool

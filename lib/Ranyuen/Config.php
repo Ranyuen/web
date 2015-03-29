@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen;
@@ -15,9 +19,12 @@ use Twig_Environment;
  */
 class Config
 {
-    /** @var string */
     private $dir = 'config/env';
-    /** @var Twig_Environment */
+    /**
+     * Twig template engine.
+     *
+     * @var Twig_Environment
+     */
     private $twig;
 
     public function __construct()
@@ -27,7 +34,9 @@ class Config
     }
 
     /**
-     * @param string $env Stag. development or production or...
+     * Load the config of current stage.
+     *
+     * @param string $env Stage. development or production or...
      *
      * @return array
      *

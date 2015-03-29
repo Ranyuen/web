@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Template;
@@ -33,8 +37,9 @@ class Template
     /**
      * Constructor.
      *
-     * @param string $content
-     * @param array  $params
+     * @param string $content     Template string.
+     * @param array  $params      Parameters.
+     * @param string $templateDir Template directory (for layout rendering).
      */
     public function __construct($content, $params = [], $templateDir = null)
     {
@@ -57,7 +62,9 @@ class Template
     /**
      * Register a helper instance.
      *
-     * @param object $helper
+     * @param object $helper Helper class instance.
+     *
+     * @return void
      */
     public function addHelper($helper)
     {
@@ -89,7 +96,7 @@ class Template
     /**
      * Strip YAML fromt matter from the content.
      *
-     * @param string $template Template string
+     * @param string $template Template string.
      *
      * @return array list($content, $params)
      */

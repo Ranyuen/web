@@ -3,14 +3,18 @@
 if test "install" = "$1"; then
   echo "We need PHP, Composer and Node.js."
   composer install
-  npm install -g bower gulp
+  vendor/bin/phpmig migrate
+  npm install -g bower gulp npm-check-updates
   npm install
   bower install
   gulp build
   gulp test
 elif test "update" = "$1"; then
   echo "Please don't always update automatically. Check major updates by yourself."
+  ./composer.pahr self-update
   composer update
+  npm update -g bower gulp npm-check-updates
+  npm-check-updates -u
   npm update
   bower update
   gulp build
@@ -18,7 +22,7 @@ elif test "update" = "$1"; then
 else
   echo -e "Manage dependencies with your dev env.
 
-bin/deps.sh COMMAND
+bin/deps COMMAND
 
 COMMAND:
 install\tInstall dependencies with dev.

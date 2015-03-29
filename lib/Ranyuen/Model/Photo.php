@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Model;
@@ -45,12 +49,22 @@ class Photo extends Eloquent\Model
 
     protected $table = 'photo';
 
-    /** @var resource */
+    /**
+     * Image file.
+     *
+     * @var resource
+     */
     private $image;
-    /** @var string */
+    /**
+     * Image file path.
+     *
+     * @var string
+     */
     private $path;
 
     /**
+     * Search image file.
+     *
      * @return string When not found, returns empty string.
      */
     public function getPath()
@@ -81,7 +95,9 @@ class Photo extends Eloquent\Model
     }
 
     /**
-     * @return Photo
+     * Get width and height from the file.
+     *
+     * @return this
      */
     public function loadImageSize()
     {
@@ -94,7 +110,9 @@ class Photo extends Eloquent\Model
     }
 
     /**
-     * @return Photo
+     * Search and load image file.
+     *
+     * @return this
      */
     public function loadImage()
     {
@@ -108,8 +126,12 @@ class Photo extends Eloquent\Model
     }
 
     /**
-     * @param int $newWidth  New image width px
-     * @param int $newHeight New image height px
+     * Echo resized image.
+     *
+     * @param int $newWidth  New image width px.
+     * @param int $newHeight New image height px.
+     *
+     * @return void
      */
     public function renderResized($newWidth, $newHeight)
     {
@@ -128,9 +150,13 @@ class Photo extends Eloquent\Model
     }
 
     /**
-     * @param int    $newWidth      New image width px
-     * @param int    $newHeight     New image height px
-     * @param string $cacheFilename Cache file name
+     * Create resized cache.
+     *
+     * @param int    $newWidth      New image width px.
+     * @param int    $newHeight     New image height px.
+     * @param string $cacheFilename Cache file name.
+     *
+     * @return void
      */
     private function createCache($newWidth, $newHeight, $cacheFilename)
     {

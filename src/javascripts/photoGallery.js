@@ -87,6 +87,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
       fragment = document.createDocumentFragment();
 
   photos.forEach(function (photo) {
+    // jscs:disable maximumLineLength
     /* jshint maxlen:1000 */
     var photoNode = document.createElement('div');
 
@@ -103,6 +104,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
   this.rootNode.appendChild(fragment);
   this._masonry.appended(photoNodes);
   this.applied();
+  // jscs:enable
 };
 
 global['PhotoGallery'] = PhotoGallery;

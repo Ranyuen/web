@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Navigation;
@@ -9,6 +13,7 @@ namespace Ranyuen\Navigation;
 use Ranyuen\Model\Article;
 
 /**
+ * Nav element rest-pages.
  */
 class RestPagesElement
 {
@@ -21,6 +26,13 @@ class RestPagesElement
         $this->elm = $elm;
     }
 
+    /**
+     * Rest pages.
+     *
+     * @return Page[]
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
     public function pages()
     {
         $existingPaths = array_map(
@@ -33,7 +45,8 @@ class RestPagesElement
         $pages = [];
         foreach ($articles as $article) {
             if (in_array($article->path, $existingPaths)
-                || !$article->getContent($this->dir->lang)) {
+                || !$article->getContent($this->dir->lang)
+            ) {
                 continue;
             }
             $pages[] = Page::fromArticle($this->dir->lang, $article);

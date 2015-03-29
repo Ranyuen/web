@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Model;
@@ -20,7 +24,10 @@ class Article extends Eloquent\Model
 
     public static function children($path, $count = 0)
     {
-        $entities = self::with('contents')->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')->orderBy('id', 'DESC')->get();
+        $entities = self::with('contents')
+            ->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')
+            ->orderBy('id', 'DESC')
+            ->get();
         $articles = [];
         foreach ($entities as $entity) {
             if (!preg_match('#^'.preg_quote($path, '#').'[^/]*$#', $entity->path)) {
@@ -48,30 +55,43 @@ class Article extends Eloquent\Model
         return ArticleContent::where(['article_id' => $this->id, 'lang' => $lang])->first();
     }
 
+    /**
+     * Syncronize this with the article.
+     *
+     * @param Article $article Source.
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.StaticAccess)
+     */
     public function sync(Article $article)
     {
-        \DB::transaction(function () use ($article) {
-            $this->path = $article->path;
-            $this->save();
-            for ($i = 0; isset($article->contents[$i]) && isset($this->contents[$i]); ++$i) {
-                $this->contents[$i]->lang    = $article->contents[$i]->lang;
-                $this->contents[$i]->content = $article->contents[$i]->content;
-            }
-            if (count($article->contents) < count($this->contents)) {
-                foreach (array_slice($this->contents, count($article->contents)) as $content) {
-                    $content->delete();
+        \DB::transaction(
+            function () use ($article) {
+                $this->path = $article->path;
+                $this->save();
+                for ($i = 0; isset($article->contents[$i]) && isset($this->contents[$i]); ++$i) {
+                    $this->contents[$i]->lang    = $article->contents[$i]->lang;
+                    $this->contents[$i]->content = $article->contents[$i]->content;
                 }
-            } elseif (count($article->contents) > count($this->contents)) {
-                foreach (array_slice($article->contents, count($this->contents)) as $content) {
-                    $newContent = new ArticleContent([
-                        'lang'    => $content->lang,
-                        'content' => $content->content,
-                    ]);
-                    $newContent->article_id = $this->id;
-                    $this->contents[] = $newContent;
+                if (count($article->contents) < count($this->contents)) {
+                    foreach (array_slice($this->contents, count($article->contents)) as $content) {
+                        $content->delete();
+                    }
+                } elseif (count($article->contents) > count($this->contents)) {
+                    foreach (array_slice($article->contents, count($this->contents)) as $content) {
+                        $newContent = new ArticleContent(
+                            [
+                            'lang'    => $content->lang,
+                            'content' => $content->content,
+                            ]
+                        );
+                        $newContent->article_id = $this->id;
+                        $this->contents[] = $newContent;
+                    }
                 }
+                $this->push();
             }
-            $this->push();
-        });
+        );
     }
 }

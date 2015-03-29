@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen\Controller;
@@ -22,7 +26,11 @@ use Ranyuen\Template\Template;
 class AdminArticlesController extends AdminController
 {
     /**
-     * @param string $id News ID.
+     * Edit article.
+     *
+     * @param Router  $router Router.
+     * @param Request $req    HTTP request.
+     * @param string  $id     News ID.
      *
      * @return string
      *
@@ -40,11 +48,19 @@ class AdminArticlesController extends AdminController
             }
         }
 
-        return $this->renderer->render('admin/articles/edit', ['article' => str_replace('\\"', '\\\\"', json_encode($article))]);
+        return $this->renderer->render(
+            'admin/articles/edit',
+            ['article' => str_replace('\\"', '\\\\"', json_encode($article))]
+        );
     }
 
     /**
-     * @param string $id News ID.
+     * Update the article.
+     *
+     * @param Router  $router  Router.
+     * @param Request $req     HTTP request.
+     * @param string  $id      News ID.
+     * @param string  $article JSON.
      *
      * @return string|Response
      *
@@ -57,17 +73,19 @@ class AdminArticlesController extends AdminController
         $newArticle = new Article(['path' => $article->path]);
         $newArticle->contents = array_map(
             function ($content) {
-                return new ArticleContent([
+                return new ArticleContent(
+                    [
                     'lang'    => $content->lang,
                     'content' => $content->content,
-                ]);
+                    ]
+                );
             },
             $article->contents
         );
-        if (0 === $article->id) {
+        if (0 === $id) {
             $original = new Article();
         } else {
-            if (!$original = Article::with('contents')->find($article->id)) {
+            if (!$original = Article::with('contents')->find($id)) {
                 return $router->error(404, $req);
             }
         }
@@ -77,6 +95,8 @@ class AdminArticlesController extends AdminController
     }
 
     /**
+     * Destroy the article.
+     *
      * @param string $id News ID.
      *
      * @return Response
@@ -92,6 +112,12 @@ class AdminArticlesController extends AdminController
     }
 
     /**
+     * Preview content.
+     *
+     * @param string $content ArticleContent.
+     *
+     * @return Response
+     *
      * @Route('/preview')
      */
     public function preview($content)

@@ -2,6 +2,10 @@
 
 /**
  * Ranyuen web site.
+ *
+ * @author  Ranyuen <cal_pone@ranyuen.com>
+ * @license http://www.gnu.org/copyleft/gpl.html GPL-3.0+
+ * @link    http://ranyuen.com/
  */
 
 namespace Ranyuen;
@@ -20,23 +24,39 @@ use Ranyuen\Little\Router;
  */
 class App
 {
-    /** @var Container */
+    /**
+     * DI container.
+     *
+     * @var Container
+     */
     public $container;
 
-    /** @Inject */
+    /**
+     * Config.
+     *
+     * @Inject
+     */
     private $config;
     /**
+     * HTTP request router.
+     *
      * @var Router
+     *
      * @Inject
      */
     private $router;
     /**
+     * Logger.
+     *
      * @var Logger
+     *
      * @Inject
      */
     private $logger;
 
     /**
+     * Constructor.
+     *
      * @param array $config Additional config. (Most config is written in config/env)
      *
      * @SuppressWarnings(PHPMD.Superglobals)
@@ -69,6 +89,10 @@ class App
     }
 
     /**
+     * Run application.
+     *
+     * @return void
+     *
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @SuppressWarnings(PHPMD.Superglobals)
      */
@@ -94,9 +118,13 @@ class App
     }
 
     /**
+     * Load services on the DI container.
+     *
      * @param Container $c      DI container
      * @param string    $env    development or production or...
      * @param array     $config Additional config.
+     *
+     * @return void
      */
     private function loadServices(Container $c, $env, array $config)
     {

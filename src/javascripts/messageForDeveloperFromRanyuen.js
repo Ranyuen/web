@@ -1,4 +1,5 @@
 // {{{ console.image
+// jscs:disable
 /* jshint ignore:start */
 // https://github.com/dunxrion/console.image
 /**
@@ -174,6 +175,7 @@
 	};
 })(console);
 /* jshint ignore:end */
+// jscs:enable
 // }}} console.image
 
 (function () {
