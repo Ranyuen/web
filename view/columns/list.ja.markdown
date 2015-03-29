@@ -18,7 +18,7 @@ description:
 
 <div class="article-box">
 <p>コラムに掲載されたランも登場するランのクイズあります!</p>
-<p>500問近くありますので是非遊んでみてください。</p>
+<p>500問以上ありますので是非遊んでみてください。</p>
 <p>→ <b><a href="/play/orchid_exam">ラン検定</a></b></p>
 </div>
 
