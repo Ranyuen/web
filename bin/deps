@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if test "install" = "$1"; then
-  echo "We need PHP, Composer and Node.js."
-  composer install
+  echo "We need PHP and Node.js."
+  php composer.phar install
   vendor/bin/phpmig migrate
   npm install -g bower gulp npm-check-updates
   npm install
@@ -11,8 +11,8 @@ if test "install" = "$1"; then
   gulp test
 elif test "update" = "$1"; then
   echo "Please don't always update automatically. Check major updates by yourself."
-  ./composer.pahr self-update
-  composer update
+  php composer.phar self-update
+  php composer.phar update
   npm update -g bower gulp npm-check-updates
   npm-check-updates -u
   npm update
