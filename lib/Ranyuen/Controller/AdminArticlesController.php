@@ -72,7 +72,8 @@ class AdminArticlesController extends AdminController
     public function update(Router $router, Request $req, $id, $article)
     {
         $this->auth();
-        $article = json_decode($article);
+        $id         = intval($id);
+        $article    = json_decode($article);
         $newArticle = new Article(['path' => $article->path]);
         $newArticle->contents = array_map(
             function ($content) {
