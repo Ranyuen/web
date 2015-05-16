@@ -7,7 +7,7 @@ RewriteEngine On
 # RewriteBase /
 
 RewriteCond %{HTTP_HOST} ^ranyuen\.com
-RewriteRule ^(.*)$ http://www.ranyuen/$1 [R=301,L]
+RewriteRule ^(.*)$ http://www.ranyuen.com/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
