@@ -24,12 +24,10 @@
   <link rel="shortcut icon" href="/assets/images/icons/ranyuen.png" type="image/png"/>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
   <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
-  <style>
-    body, .header { background: url('{{ bgimage }}') fixed; }
-  </style>
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style></style>
   <script src="/assets/javascripts/layout.min.js"></script>
 </head>
 <body class="{{ lang }}" lang="{{ lang }}">
@@ -77,12 +75,14 @@
       {% endif %}
     </div>
     <footer>
-      <p class="copyright">
-        <small>
-          Copyright (C) 2010-2014 <a rel="home" href="{{ home }}">{{ messages.sitename }} - {{ messages.tagline }}</a> All Rights Reserved.<br/>
-          Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="{{ home }}">Ranyuen</a>&#39;s farm.
-        </small>
-      </p>
+      <div class="footer-inner">
+        <p class="copyright">
+          <small>
+            Copyright (C) 2010-2014 <a rel="home" href="{{ home }}">{{ messages.sitename }} - {{ messages.tagline }}</a> All Rights Reserved.<br />
+            Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="{{ home }}">Ranyuen</a>&#39;s farm.
+          </small>
+        </p>
+      </div>
     </footer>
   </div>
 <script>

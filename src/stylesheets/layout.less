@@ -3,25 +3,30 @@
 @import "helpers";
 @import "foldNav";
 
-@header-footer-bg     : #ffedfe;
+@header-footer-bg     : url("/assets/images/header_footer_background.jpg");
 @header-footer-radius : 8px;
 
 .container {
-  background : #fbfaf5;
-  margin     : 0 auto;
-  min-width  : 320px;
-  max-width  : 1480px;
-  width      : 90%;
+  // background : #fbfaf5;
+  // margin     : 0 auto;
+  // min-width  : 320px;
+  // max-width  : 1480px;
+  // width      : 90%;
 }
 
 header {
   .cf;
   background    : @header-footer-bg;
-  border-radius : 0 0 @header-footer-radius @header-footer-radius;
-  padding       : 10px 2%;
+  padding-top: 5px;
 
   .header-inner {
     .cf;
+    background : @header-footer-bg;
+    margin     : 0 auto;
+    min-width  : 320px;
+    max-width  : 1480px;
+    width      : 90%;
+    padding    : 2px;
 
     .logo {
       float : left;
@@ -36,13 +41,14 @@ header {
     }
 
     .lang {
+      color: #FFFFFF;
       float       : right;
       font-size   : smaller;
       line-height : 54px;
       text-align  : right;
       width       : 120px;
 
-      a { color : #006400; }
+      a { color : #7E9495; }
     }
 
     .link_icon {
@@ -63,17 +69,31 @@ header {
 }
 
 #globalnav {
-  @gradient_light : #de98b2;
-  @gradient_shade : #de6bb1;
-  @shadow         : #9a9d9f;
+  // @gradient_light : #de98b2;
+  // @gradient_shade : #de6bb1;
+  // @shadow         : #9a9d9f;
+
+  @gradient_light : #ffffff;
+  @gradient_shade : #D6EDFF;
+  @shadow         : #43369F;
+
+  background : @header-footer-bg;
+  margin     : 0 auto;
+  min-width  : 320px;
+  max-width  : 1480px;
+  padding-bottom: 6px;
+  width      : 90%;
 
   font-size   : 14px;
-  margin      : 6px 0 5px 0;
-  text-shadow : -1px -1px @shadow;
 
   a {
-    color   : #fbfaf5;
+    // color   : #fbfaf5;
+    color   : #000;
     padding : 2px;
+  }
+
+  ul {
+    .cf;
   }
 
   & > ul > .foldnav_item {
@@ -140,7 +160,12 @@ header {
 
 .main {
   .cf;
+  background : #fbfaf5;
+  margin     : 0 auto;
+  min-width  : 320px;
+  max-width  : 1480px;
   padding : 20px 2%;
+  width      : 90%;
 
   h1 { margin-top : 32px; }
 
@@ -305,15 +330,23 @@ header {
 
 footer {
   .cf;
+
+  .footer-inner {
+    background    : @header-footer-bg;
+    margin     : 0 auto;
+    min-width  : 320px;
+    max-width  : 1480px;
+    width      : 90%;
+  }
+
   background    : @header-footer-bg;
-  border-radius : @header-footer-radius @header-footer-radius 0 0;
   padding       : 10px 2%;
 
   p {
     font-size  : 13px;
     text-align : center;
 
-    a { color : #006400; }
+    a { color : #FFFFFF; }
   }
 }
 
@@ -366,3 +399,5 @@ footer {
     }
   }
 }
+
+
