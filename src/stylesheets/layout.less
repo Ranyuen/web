@@ -69,27 +69,26 @@ header {
 }
 
 #globalnav {
-  // @gradient_light : #de98b2;
-  // @gradient_shade : #de6bb1;
-  // @shadow         : #9a9d9f;
 
   @gradient_light : #ffffff;
   @gradient_shade : #D6EDFF;
   @shadow         : #43369F;
+  @gradient_light2 : #9AFF9B;
+  @gradient_shade2 : #25A34A;
+  @shadow2         : #9a9d9f;
 
   background : @header-footer-bg;
   margin     : 0 auto;
   min-width  : 320px;
   max-width  : 1480px;
-  padding-bottom: 6px;
-  width      : 90%;
+  padding-bottom: 20px;
+  width      : 80%;
 
   font-size   : 14px;
 
   a {
-    // color   : #fbfaf5;
-    color   : #000;
-    padding : 2px;
+    color   : #000000;
+    padding : 2px 0;
   }
 
   ul {
@@ -103,18 +102,30 @@ header {
     background      : -webkit-gradient(linear, left top, left bottom, from(@gradient_light), to(@gradient_shade));
     background      : linear-gradient(to bottom, @gradient_light, @gradient_shade);
     background-size : 100% 100%;
-    border-radius   : 5px;
+    border-radius   : 4px;
     box-shadow      : 1px 1px 1px @shadow;
     float           : left;
-    margin          : 0.2em 0.2em;
-    min-width       : 10.8em;
-    padding         : 0 0.8em;
+    margin          : 0.1em 0.1em;
+    min-width       : 100%;
     position        : relative;
     text-align      : center;
+    width           : 100%;
   }
 
   .foldnav_item {
-    &:hover { box-shadow : 1px 1px 1px @shadow inset; }
+    &:hover {
+      box-shadow : 1px 1px 1px @shadow inset;
+    }
+
+    a.activate {
+      background      : @gradient_shade;
+      background      : -ms-linear-gradient(top, @gradient_light2, @gradient_shade2);
+      background      : -moz-linear-gradient(top, @gradient_light2 0%, @gradient_shade2);
+      background      : -webkit-gradient(linear, left top, left bottom, from(@gradient_light2), to(@gradient_shade2));
+      background      : linear-gradient(to bottom, @gradient_light2, @gradient_shade2);
+      border-radius   : 4px;
+      color: #FFFFFF;
+    }
 
     &-hasSubmenu {
       & > a:after {
@@ -367,6 +378,12 @@ footer {
         &:nth-child(6) { margin-right : 0; }
       }
     }
+    #globalnav {
+      .foldnav_item {
+        min-width: 10.8em;
+        width: 45%;
+      }
+    }
   }
 }
 
@@ -382,6 +399,13 @@ footer {
         &:nth-child(2) { margin-right : 2%; }
         &:nth-child(4) { margin-right : 2%; }
         &:nth-child(6) { margin-right : 0; }
+      }
+    }
+
+    #globalnav {
+      .foldnav_item {
+        min-width: 12.4em;
+        width: 14%;
       }
     }
   }

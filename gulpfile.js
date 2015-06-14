@@ -126,6 +126,7 @@ gulp.task('uglifyjs', function () {
         'src/javascripts/baselib.js',
         'src/javascripts/messageForDeveloperFromRanyuen.js',
         'src/javascripts/foldNav.js',
+        'src/javascripts/activeTab.js',
       ],
       dest: 'layout.min.js'
     },
