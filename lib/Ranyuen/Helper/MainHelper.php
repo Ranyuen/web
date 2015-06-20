@@ -141,6 +141,6 @@ class MainHelper extends Helper
         }
         $alt = "$photo->description_ja $photo->description_en 蘭裕園(Ranyuen)";
 
-        return '<img src="'.h($src).'" alt="'.h($alt).'" width="'.h($width).'" height="'.h($height).'"/>';
+        return '<img src="/'.h($src).'" alt="'.h($alt).'" width="'.h($width).'" height="'.h($height).'"/>';
     }
 }
