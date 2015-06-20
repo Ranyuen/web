@@ -14,6 +14,9 @@
     nav.classList.add('foldnav');
     for (i = 0, iz = topItems.length; i < iz; ++i) {
       setupItem(topItems[i]);
+      if (i === 0) {
+        topItems[i].classList.add('parent');
+      }
     }
   }
 

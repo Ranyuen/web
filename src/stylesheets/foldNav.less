@@ -9,7 +9,11 @@
   ul {
     & > .foldnav_item {
       a {
+        border-bottom: none;
         text-indent : 1em;
+      }
+      & > a:before {
+        padding-right: 5px;
       }
     }
   }
@@ -22,15 +26,22 @@
 
   &_item {
     &-isClose {
-      & > a:after { content : ' \25bc'; }
+      & > a:before {
+        content : ' \25bc';
+        padding-right: 5px;
+      }
 
       ul { display : none; }
     }
 
     &-isOpen {
-      & > a:after { content : ' \25b2'; }
+      & > a:before {
+       content : ' \25b2';
+       padding-right: 5px;
+     }
 
       ul { display : block; }
     }
   }
 }
+
