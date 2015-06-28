@@ -5,6 +5,12 @@
 
 @header-footer-bg     : url("/assets/images/header_footer_background.jpg");
 @header-footer-radius : 8px;
+@gradient_light : #ffffff;
+@gradient_shade : #D6EDFF;
+@shadow         : #43369F;
+@gradient_light2 : #9AFF9B;
+@gradient_shade2 : #25A34A;
+@shadow2         : #9a9d9f;
 
 .container {
   // background : #fbfaf5;
@@ -69,14 +75,6 @@ header {
 }
 
 #globalnav {
-
-  @gradient_light : #ffffff;
-  @gradient_shade : #D6EDFF;
-  @shadow         : #43369F;
-  @gradient_light2 : #9AFF9B;
-  @gradient_shade2 : #25A34A;
-  @shadow2         : #9a9d9f;
-
   background : @header-footer-bg;
   margin     : 0 auto;
   min-width  : 320px;
@@ -120,11 +118,12 @@ header {
     }
 
     a.activate {
-      background      : @gradient_shade;
-      background      : -ms-linear-gradient(top, @gradient_light2, @gradient_shade2);
-      background      : -moz-linear-gradient(top, @gradient_light2 0%, @gradient_shade2);
-      background      : -webkit-gradient(linear, left top, left bottom, from(@gradient_light2), to(@gradient_shade2));
-      background      : linear-gradient(to bottom, @gradient_light2, @gradient_shade2);
+      background: #FFAECF;
+      // background      : @gradient_shade;
+      // background      : -ms-linear-gradient(top, @gradient_light2, @gradient_shade2);
+      // background      : -moz-linear-gradient(top, @gradient_light2 0%, @gradient_shade2);
+      // background      : -webkit-gradient(linear, left top, left bottom, from(@gradient_light2), to(@gradient_shade2));
+      // background      : linear-gradient(to bottom, @gradient_light2, @gradient_shade2);
       border-radius   : 4px;
       color: #FFFFFF;
     }
@@ -145,9 +144,10 @@ header {
 #sidenav {
   @side-nav-color : #020202;
 
-  // border: solid 1px;
+  border: solid  1px #B8C5D6;
   font-size : 14px;
-  padding   : 40px 0 20px 0;
+  // padding   : 40px 0 20px 0;
+  // margin: 40px 0 20px 0;
 
   .foldnav_item {
 
@@ -162,7 +162,6 @@ header {
     &:not(.nav-item-home) {
       a {
         color : @side-nav-color;
-        //&:hover { color: #00aa00; }
       }
     }
 
@@ -174,11 +173,11 @@ header {
     }
 
     &.parent a {
-      background: #43779D;
+      // background: #6DB6D6;
+      background: #FFAECF;
       border: none;
       color: #FFFFFF;
-      font-size: larger;
-      padding: 11px 2% 11px 10px;
+      padding: 11px 2% 11px 7px;
     }
   }
 }
@@ -427,13 +426,15 @@ footer {
   .main {
     .main-inner {
       float : right;
-      width : 83%;
+      // width : 83%;
+      width: 82.3%;
     }
 
     #sidenav {
       float      : left;
-      margin-top : 0;
-      width      : 17%;
+      margin-top : 40px;
+      // width      : 16.8%;
+      width: 17.5%;
     }
   }
 }
