@@ -14,6 +14,9 @@
     nav.classList.add('foldnav');
     for (i = 0, iz = topItems.length; i < iz; ++i) {
       setupItem(topItems[i]);
+      if (i === 0) {
+        topItems[i].classList.add('parent');
+      }
     }
   }
 
@@ -21,15 +24,24 @@
    * @param {HTMLLiElement} item
    */
   function setupItem(item) {
+
+    var i = 0,
+        iz = 0;
+
     item.classList.add('foldnav_item');
     if (item.querySelector('ul')) {
       item.classList.add('foldnav_item-hasSubmenu');
       item.classList.add('foldnav_item-isClose');
       item.addEventListener('click', onClickItemHasSubmenu, true);
       Array.from(item.querySelector('ul').children).filter(function (node) {
+        ++i;
         return 'li' === node.tagName.toLowerCase();
       }).forEach(function (li) {
+        iz++;
         setupItem(li);
+        if (i === iz) {
+          li.classList.add('last_child');
+        }
       });
     }
   }

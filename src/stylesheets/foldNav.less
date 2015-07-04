@@ -9,7 +9,20 @@
   ul {
     & > .foldnav_item {
       a {
+        border-bottom: none;
         text-indent : 1em;
+      }
+      & > a:before {
+        content : '┣ ';
+        color: #B8C5D6;
+        padding-right: 5px;
+      }
+    }
+    & > .last_child {
+      & > a:before {
+        content: '┗ ';
+        color: #B8C5D6;
+        padding-right: 5px;
       }
     }
   }
@@ -22,15 +35,22 @@
 
   &_item {
     &-isClose {
-      & > a:after { content : ' \25bc'; }
+      & > a:before {
+        content : ' \25be';
+        padding-right: 5px;
+      }
 
       ul { display : none; }
     }
 
     &-isOpen {
-      & > a:after { content : ' \25b2'; }
+      & > a:before {
+       content : ' \25b4';
+       padding-right: 5px;
+     }
 
       ul { display : block; }
     }
   }
 }
+
