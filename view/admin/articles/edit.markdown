@@ -30,16 +30,8 @@ title: Edit article
 <script src="/assets/javascripts/article_editor.min.js"></script>
 <script>
 var editor,
-    article = '{{article}}';
-article = article.
-  replace(/\t/g,     '  ').
-  replace(/\n/g,     '\\n').
-  replace(/\r/g,     '\\r').
-  replace(/&lt;/g,   '<').
-  replace(/&gt;/g,   '>').
-  replace(/&quot;/g, '"').
-  replace(/&#039;/g, "'").
-  replace(/&amp;/g,  '&');
+    article = '{{article | raw}}';
+article = decodeURIComponent(article);
 article = JSON.parse(article);
 article = article ? Article.fromJson(article) : new Article();
 window.addEventListener('DOMContentLoaded', function () {
