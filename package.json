@@ -5,18 +5,18 @@
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
-    "URIjs": "^1.14.2",
-    "bluebird": "~2.9.16",
-    "gulp": "~3.8.11",
-    "gulp-concat": "~2.5.2",
-    "gulp-jscs": "^1.4.0",
-    "gulp-jshint": "~1.9.4",
-    "gulp-less": "~3.0.2",
-    "gulp-uglifyjs": "~0.6.1",
-    "jsdom": "^4.0.5",
-    "jshint-stylish": "~1.0.1",
-    "merge-stream": "~0.1.7",
-    "ssh2": "^0.4.4"
+    "URIjs": "^1.15.2",
+    "bluebird": "~2.9.32",
+    "gulp": "~3.9.0",
+    "gulp-concat": "~2.6.0",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "~1.11.2",
+    "gulp-less": "~3.0.3",
+    "gulp-uglifyjs": "~0.6.2",
+    "jsdom": "^5.5.0",
+    "jshint-stylish": "~2.0.1",
+    "merge-stream": "~0.1.8",
+    "ssh2": "^0.4.9"
   },
   "scripts": {
     "test": "gulp test"
