@@ -89,8 +89,12 @@ class Template
      */
     public function render()
     {
-        return (new MarkdownExtraParser())
-            ->transformMarkdown($this->engine->render('current', $this->params));
+        $content = $this->engine->render('current', $this->params);
+        if (preg_match('/\A<!DOCTYPE /', $content)) {
+            return $content;
+        } else {
+            return (new MarkdownExtraParser())->transformMarkdown($content);
+        }
     }
 
     /**
