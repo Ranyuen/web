@@ -122,6 +122,6 @@ class AdminArticlesController extends AdminController
      */
     public function preview($content)
     {
-        return (new Template($content))->render();
+        return $this->renderer->renderContent($content);
     }
 }
