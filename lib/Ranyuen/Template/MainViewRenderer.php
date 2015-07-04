@@ -61,7 +61,7 @@ class MainViewRenderer
     }
 
     /**
-     * 日本語版 / 英語版の対応をとります。.
+     * 日本語版 / 英語版の対応をとります。
      *
      * @param string $lang Current lang.
      * @param string $path URI path info.

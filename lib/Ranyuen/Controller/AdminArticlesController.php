@@ -47,13 +47,9 @@ class AdminArticlesController extends AdminController
                 return $router->error(404, $req);
             }
         }
-        $json = json_encode($article);
-        $json = str_replace('\\"', '\\\\"', $json);
-        $json = str_replace('\\s', '\\\\\\s', $json);
-        // $json = preg_replace('#\\[^nr]#', '\\\\\\$0', $json);
         return $this->renderer->render(
             'admin/articles/edit',
-            ['article' => $json]
+            ['article' => rawurlencode(json_encode($article))]
         );
     }
 
@@ -126,6 +122,6 @@ class AdminArticlesController extends AdminController
      */
     public function preview($content)
     {
-        return (new Template($content))->render();
+        return $this->renderer->renderContent($content);
     }
 }
