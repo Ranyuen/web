@@ -18,5 +18,7 @@
   "validthis": true,
 
   // Environments
-  "devel": true
+  "browser": true,
+  "devel": true,
+  "jquery": true
 }

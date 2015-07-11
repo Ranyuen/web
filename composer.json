@@ -9,8 +9,8 @@
     "illuminate/database": "~5.0",
     "ircmaxell/password-compat": "~1.0",
     "monolog/monolog": "~1.13",
-    "ranyuen/di": "dev-dev0.2.1",
-    "ranyuen/little": "dev-master",
+    "ranyuen/di": "~0.2.2",
+    "ranyuen/little": "~0.1.2",
     "symfony/yaml": "~2.6",
     "twig/twig": "~1.18"
   },
