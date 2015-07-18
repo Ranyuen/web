@@ -3,30 +3,31 @@
 
 .column {
   margin: 0;
-  padding: 5px;
-  border-radius: 10px;
-  background: #FFEDFE;
-
-  .column-article {
+  padding: 0;
+  
+  .column_section {
     margin: 0;
-    padding: 0;
-
-    h1 {
+    padding: 15px;
+    
+    .column_section_title {
+      border-left: 10px solid #CDF6DC;
+      border-bottom: 2px solid #CDF6DC;
       margin: 0;
       padding: 5px;
+    }
 
-      a {
-        padding: 10px;
-        border: solid 2px #460E44;
-        border-radius: 10px;
-        display: block;
-        color: #460E44;
-        font-size: 18px;
-        text-decoration: none;
-      }
-
-      a:hover {
-        opacity: 0.6;
+    .column_section_list {
+      list-style: none;
+      margin: 0;
+      margin-top: 15px;
+      padding: 0;
+      
+      .column_section_list_item {
+        font-size: 20px;
+        margin: 0;
+        margin-top: 15px;
+        padding: 5px;
+        text-indent: 5px;
       }
     }
   }
