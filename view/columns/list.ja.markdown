@@ -26,11 +26,9 @@ description:
   <section class="column_section">
     <h1 class="column_section_title">野生のランに魅せられて</h1>
     <ol class="column_section_list">
-      {% for article in articles if article.id in article.wild and article.id == 64 %}
       <li class="column_section_list_item">
-        <a href="{{ article.path }}">{{ article.getContent(lang).plainTitle | raw }}</a>
+        <a href="/columns/introduction_for_column">はじめに</a>
       </li>
-      {% endfor %}
       {% for article in articles if article.id in article.wild and article.id != 64 %}
       <li class="column_section_list_item">
         <a href="{{ article.path }}">{{ article.getContent(lang).plainTitle | raw }}</a>
@@ -41,11 +39,9 @@ description:
   <section class="column_section">
     <h1 class="column_section_title">夢のある農業</h1>
     <ol class="column_section_list">
-      {% for article in articles if article.id in article.dream and article.id == 127 %}
       <li class="column_section_list_item">
-        <a href="{{ article.path }}">{{ article.getContent(lang).plainTitle | raw }}</a>
+        <a href="/columns/introduction_for_column_second">はじめに</a>
       </li>
-      {% endfor %}
       {% for article in articles if article.id in article.dream and article.id != 127 %}
       <li class="column_section_list_item">
         <a href="{{ article.path }}">{{ article.getContent(lang).plainTitle | raw }}</a>
