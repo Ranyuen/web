@@ -45,6 +45,9 @@ class Article extends Eloquent\Model
     protected $table    = 'article';
     protected $fillable = ['path'];
 
+    public $kisu = array(0, 1, 3, 5, 23);
+    protected $gusu = array(2, 4, 6, 8);
+
     public function contents()
     {
         return $this->hasMany('Ranyuen\Model\ArticleContent');

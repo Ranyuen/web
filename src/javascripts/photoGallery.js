@@ -5,6 +5,9 @@
 
 var debounce = global.debounce;
 
+var selectBox = $('.select');
+var offset = selectBox.offset();
+
 function PhotoGallery() {
   this.rootNode = null;
   this.currentPage = 1;
@@ -12,6 +15,14 @@ function PhotoGallery() {
   this._lockLoadingNextPage = false;
   this._lastPhotoNode = null;
 }
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() + 50 > offset.top) {
+    selectBox.addClass('fixed');
+  } else {
+    selectBox.removeClass('fixed');
+  }
+});
 
 PhotoGallery.prototype.init = function (rootNode) {
   this.rootNode = rootNode;

@@ -3,7 +3,7 @@ title: 写真を見る
 ---
 蘭裕園の写真を見る
 ==
-<form id="search-form" method="GET">
+<form class="select" id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
     <option value="" {% if species_name == null %}selected{% endif %}>-- 写真の種類を選ぶ --</option>
     <option value="all" {% if species_name == 'all' %}selected{% endif %}>全て見る</option>
@@ -32,6 +32,29 @@ title: 写真を見る
     </div>
   {% endfor %}
 </div>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
+<p>aaaaaa</p>
 <link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
 <link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
 <script src="/assets/javascripts/photoGallery.min.js"></script>
