@@ -32,29 +32,6 @@ title: 写真を見る
     </div>
   {% endfor %}
 </div>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
-<p>aaaaaa</p>
 <link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
 <link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
 <script src="/assets/javascripts/photoGallery.min.js"></script>
