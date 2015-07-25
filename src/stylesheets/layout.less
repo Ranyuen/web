@@ -308,6 +308,24 @@ header {
     }
   }
 
+  #search-form {
+    select {
+      border: 1px solid #999;
+      background: #eee;
+      background: url(/assets/images/arrow.png) right 50% no-repeat, -webkit-linear-gradient(top, @gradient_light 0%, @gradient_shade 100%);
+      background: url(/assets/images/arrow.png) right 50% no-repeat, linear-gradient(to bottom, @gradient_light 0%, @gradient_shade 100%);
+      background-position: right 20px bottom 50%;
+      background-size: 20px, 100%;
+      margin: 20px 0 20px 0;
+      min-width: 200px;
+      padding: 10px;
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  }
+
   .breadcrumb {
     .cf;
     font-size     : smaller;
@@ -427,6 +445,12 @@ footer {
     .main-inner {
       float : right;
       width: 81.3%;
+    }
+
+    #search-form {
+      select {
+        width: 600px;
+      }
     }
 
     #sidenav {
