@@ -63,7 +63,7 @@ class Article extends Eloquent\Model
     );
 
     public $dream = array(
-        127
+        127, 129, 130, 131
     );
 
     public function contents()
