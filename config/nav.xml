@@ -71,9 +71,12 @@
             <rest-pages/>
         </dir>
         <dir path="columns">
-            <page path="index" title="コラム - 野生のランに魅せられて -"/>
+            <page path="index" title="コラム"/>
             <dir path="authors">
                 <page path="yamamoto_hiroshi"/>
+                <page path="seki_akihiko"/>
+                <page path="nanjo_yosuke"/>
+                <page path="ogawa_toyoaki"/>
                 <rest-pages/>
             </dir>
             <page path="introduction_for_column"/>

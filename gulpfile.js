@@ -105,6 +105,7 @@ gulp.task('less', function () {
       'src/stylesheets/playColoring.less',
       'src/stylesheets/playMenu.less',
       'src/stylesheets/ponerorchis.less',
+      'src/stylesheets/columns.less',
     ]).
     pipe(less({
       compress:  true,

@@ -3,22 +3,15 @@
 @import "helpers";
 @import "foldNav";
 
-@header-footer-bg     : url("/assets/images/header_footer_background.jpg");
-@header-footer-radius : 8px;
-@gradient_light : #ffffff;
-@gradient_shade : #D6EDFF;
-@shadow         : #43369F;
-@gradient_light2 : #9AFF9B;
-@gradient_shade2 : #25A34A;
-@shadow2         : #9a9d9f;
-
-.container {
-  // background : #fbfaf5;
-  // margin     : 0 auto;
-  // min-width  : 320px;
-  // max-width  : 1480px;
-  // width      : 90%;
-}
+@max-width: 1480px;
+@header-footer-bg: url("/assets/images/header_footer_background.jpg");
+@header-footer-radius: 8px;
+@gradient_light: #FFFFFF;
+@gradient_shade: #D6EDFF;
+@shadow: #43369F;
+@gradient_light2: #9AFF9B;
+@gradient_shade2: #25A34A;
+@shadow2: #9a9d9f;
 
 header {
   .cf;
@@ -30,7 +23,7 @@ header {
     background : @header-footer-bg;
     margin     : 0 auto;
     min-width  : 320px;
-    max-width  : 1480px;
+    max-width  : @max-width;
     width      : 90%;
     padding    : 2px;
 
@@ -78,7 +71,7 @@ header {
   background : @header-footer-bg;
   margin     : 0 auto;
   min-width  : 320px;
-  max-width  : 1480px;
+  max-width  : @max-width;
   padding-bottom: 20px;
   width      : 80%;
 
@@ -119,11 +112,6 @@ header {
 
     a.activate {
       background: #FFAECF;
-      // background      : @gradient_shade;
-      // background      : -ms-linear-gradient(top, @gradient_light2, @gradient_shade2);
-      // background      : -moz-linear-gradient(top, @gradient_light2 0%, @gradient_shade2);
-      // background      : -webkit-gradient(linear, left top, left bottom, from(@gradient_light2), to(@gradient_shade2));
-      // background      : linear-gradient(to bottom, @gradient_light2, @gradient_shade2);
       border-radius   : 4px;
       color: #FFFFFF;
     }
@@ -146,13 +134,10 @@ header {
 
   border: solid  1px #B8C5D6;
   font-size : 14px;
-  // padding   : 40px 0 20px 0;
-  // margin: 40px 0 20px 0;
 
   .foldnav_item {
 
     a {
-      // box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
       background: none;
       border-bottom: solid 1px #E3E5FF;
       padding : 8px 2%;
@@ -173,7 +158,6 @@ header {
     }
 
     &.parent a {
-      // background: #6DB6D6;
       background: #FFAECF;
       border: none;
       color: #FFFFFF;
@@ -187,7 +171,7 @@ header {
   background : #fbfaf5;
   margin     : 0 auto;
   min-width  : 320px;
-  max-width  : 1480px;
+  max-width  : @max-width;
   padding : 20px 2%;
   width      : 90%;
 
@@ -384,7 +368,7 @@ footer {
     background    : @header-footer-bg;
     margin     : 0 auto;
     min-width  : 320px;
-    max-width  : 1480px;
+    max-width  : @max-width;
     width      : 90%;
   }
 
@@ -475,5 +459,3 @@ footer {
     }
   }
 }
-
-
