@@ -37,7 +37,7 @@ description:
     </ol>
   </section>
   <section class="column_section">
-    <h1 class="column_section_title">夢のある農業</h1>
+    <h1 class="column_section_title">夢のある農業 〜ドラマチック農業のすすめ〜</h1>
     <ol class="column_section_list">
       <li class="column_section_list_item">
         <a href="/columns/introduction_for_column_second">はじめに</a>
