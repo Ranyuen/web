@@ -1,9 +1,9 @@
 ---
-title: コラム
+title: コラム - 蘭裕園スタイル
 description:
 ---
 <link rel="stylesheet" href="/assets/stylesheets/columns.css" />
-コラム
+コラム - 蘭裕園スタイル
 ==
 <div class="columns">
   <div class="columns_column">
