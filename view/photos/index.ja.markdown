@@ -5,7 +5,7 @@ title: 写真を見る
 ==
 <form class="select" id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
-    <option value="" {% if species_name == null %}selected{% endif %}>--写真の種類を選択したい方はこちらのボタンを押して下さい--</option>
+    <option value="" {% if species_name == null %}selected{% endif %}>-- 写真の種類を選択する --</option>
     <option value="all" {% if species_name == 'all' %}selected{% endif %}>全て見る</option>
     <option value="Calanthe" {% if species_name == 'Calanthe' %}selected{% endif %}>エビネ</option>
     <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>アワチドリ/夢ちどり</option>

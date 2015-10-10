@@ -27,6 +27,11 @@ class MainHelper extends Helper
     public function echoSideNav($pages)
     {
         $output  = '<ul>';
+
+        if ($pages[0]->path === '/news/') {
+            $pages = array_reverse($pages);
+        }
+
         foreach ($pages as $page) {
             if (is_array($page)) {
                 $output .= '<li>
