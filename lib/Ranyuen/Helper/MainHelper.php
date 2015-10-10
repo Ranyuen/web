@@ -32,6 +32,7 @@ class MainHelper extends Helper
             $first_ele = array_shift($pages);
             $pages = array_reverse($pages);
             array_unshift($pages, $first_ele);
+            array_splice($pages, 10);
         }
 
         foreach ((array)$pages as $page) {

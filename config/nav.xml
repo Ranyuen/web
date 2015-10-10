@@ -84,7 +84,7 @@
         </dir>
         <dir path="news">
             <page path="index" title="お知らせ"/>
-            <latest-pages count="10"/>
+            <rest-pages/>
         </dir>
     </lang>
 </nav>

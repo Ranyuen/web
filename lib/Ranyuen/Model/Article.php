@@ -45,6 +45,7 @@ class Article extends Eloquent\Model
     protected $table    = 'article';
     protected $fillable = ['path'];
 
+    /*
     public $wild = array(
          64,  65,
          66,  67,  68,  69,  70,
@@ -66,6 +67,7 @@ class Article extends Eloquent\Model
         127, 129, 130, 131, 132,
         133, 134
     );
+    */
 
     public function contents()
     {
