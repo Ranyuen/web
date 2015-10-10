@@ -29,10 +29,12 @@ class MainHelper extends Helper
         $output  = '<ul>';
 
         if ($pages[0]->path === '/news/') {
+            $first_ele = array_shift($pages);
             $pages = array_reverse($pages);
+            array_unshift($pages, $first_ele);
         }
 
-        foreach ($pages as $page) {
+        foreach ((array)$pages as $page) {
             if (is_array($page)) {
                 $output .= '<li>
     <a href="#">'.h($page[0]->title).'</a>
