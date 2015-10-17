@@ -79,6 +79,9 @@
                 <page path="ogawa_toyoaki"/>
                 <rest-pages/>
             </dir>
+            <dir path="fascinated_by_the_orchid_wild">
+                
+            </dir>
             <page path="introduction_for_column"/>
             <latest-pages count="10"/>
         </dir>
