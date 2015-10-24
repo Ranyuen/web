@@ -15,5 +15,4 @@ RewriteRule ^(.*)$ http://ranyuen.com/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 
-# Columns Redirect
-Redirect permanent /columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
+Redirect permanent http://ranyuen.com/columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
