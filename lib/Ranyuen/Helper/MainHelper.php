@@ -34,6 +34,15 @@ class MainHelper extends Helper
             array_unshift($pages, $first_ele);
             array_splice($pages, 10);
         }
+        /*
+        if ($pages[0]->path === '/wild_orchids/') {
+            $output = $output .= '<li>
+    <a href="'.h($path).'">'.h($page->title).'</a>
+</li>';
+
+            return $output;
+        }
+        */
 
         foreach ((array)$pages as $page) {
             if (is_array($page)) {
