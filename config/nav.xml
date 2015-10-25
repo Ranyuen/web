@@ -79,7 +79,6 @@
                 <rest-pages/>
             </dir>
             <page path="introduction_for_column"/>
-            <latest-pages count="10"/>
             <dir path="fascinated_by_the_orchid_wild">
               <latest-pages count="10"/>
             </dir>
