@@ -15,8 +15,6 @@ RewriteRule ^(.*)$ http://ranyuen.com/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 
-# Redirect permanent /columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
-
 # Redirect permanent /columns/fascinated_to_wild_orchids_top http://ranyuen.com/columns/fascinated_by_the_orchid_wild
 # Redirect permanent /columns/adventure_for_tanegashimashikouran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_tanegashimashikouran
 # Redirect permanent /columns/adventure_for_himekurisoran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_himekurisoran
