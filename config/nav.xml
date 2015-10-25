@@ -8,6 +8,7 @@
             <rest-pages/>
         </dir>
         <dir path="about_us">
+            <rest-pages/>
             <page path="direction"/>
             <page path="exporting"/>
         </dir>
@@ -67,6 +68,7 @@
         </dir>
         <dir path="play">
             <page path="orchid_exam"/>
+            <rest-pages/>
         </dir>
         <dir path="columns">
             <page path="index" title="コラム - 蘭裕園スタイル"/>
@@ -75,6 +77,7 @@
                 <page path="seki_akihiko"/>
                 <page path="nanjo_yosuke"/>
                 <page path="ogawa_toyoaki"/>
+                <rest-pages/>
             </dir>
             <page path="introduction_for_column"/>
             <latest-pages count="10"/>
