@@ -26,7 +26,7 @@ class Article extends Eloquent\Model
     {
         $entities = self::with('contents')
             ->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')
-            ->orderBy('id', 'ASC')
+            ->orderBy('id', 'DESC')
             ->get();
         $articles = [];
         foreach ($entities as $entity) {

@@ -3,8 +3,8 @@ RewriteEngine On
 # Some hosts may require you to use the `RewriteBase` directive.
 # If you need to use the `RewriteBase` directive, it should be the
 # absolute physical path to the directory that contains this htaccess file.
-#
-# RewriteBase /
+
+RewriteBase /
 
 RewriteCond %{HTTP_HOST} ^www.ranyuen\.com
 RewriteRule ^(.*)$ http://ranyuen.com/$1 [R=301,L]
@@ -16,3 +16,102 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 
 # Redirect permanent /columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
+
+# 野生のランに魅せられて
+
+Redirect permanent /columns/fascinated_to_wild_orchids_top http://ranyuen.com/columns/fascinated_by_the_orchid_wild
+Redirect permanent /columns/adventure_for_tanegashimashikouran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_tanegashimashikouran
+Redirect permanent /columns/adventure_for_himekurisoran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_himekurisoran
+Redirect permanent /columns/adventure_for_matsugekayaran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_matsugekayaran
+Redirect permanent /columns/adventure_for_shikouran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_shikouran
+Redirect permanent /columns/adventure_for_hahazimahozakiran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hahazimahozakiran
+Redirect permanent /columns/adventure_for_ogasawarashikouran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_ogasawarashikouran
+Redirect permanent /columns/encounter_with_poison_snake_1 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_1
+Redirect permanent /columns/encounter_with_poison_snake_2 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_2
+Redirect permanent /columns/encounter_with_poison_snake_3 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_3
+Redirect permanent /columns/encounter_with_poison_snake_4 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_4
+Redirect permanent /columns/adventure_for_sakurajimaebine http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_sakurajimaebine
+Redirect permanent /columns/adventure_for_kinoesasaran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_kinoesasaran
+Redirect permanent /columns/adventure_for_kusukusuran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_kusukusuran
+Redirect permanent /columns/adventure_for_hetsukaran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran
+Redirect permanent /columns/journey_to_miyakejima_in_Spring_1983 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_miyakejima_in_Spring_1983
+Redirect permanent /columns/journey_to_shimokoshikijima_in_August_1983 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_shimokoshikijima_in_August_1983
+Redirect permanent /columns/adventure_for_hetsukaran_in_Spring_1985 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran_in_Spring_1985
+Redirect permanent /columns/journey_to_yakushima_in_August_1983 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_August_1983
+Redirect permanent /columns/be_careful_with_tsutsugamushi http://ranyuen.com/columns/fascinated_by_the_orchid_wild/be_careful_with_tsutsugamushi
+Redirect permanent /columns/adventure_for_nyuumenran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_nyuumenran
+Redirect permanent /columns/seki_diary_in_1985_0302 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/seki_diary_in_1985_0302
+Redirect permanent /columns/journey_to_miyakezima_in_June_1983 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_miyakezima_in_June_1983
+Redirect permanent /columns/journey_to_koshikijima_in_January_1984 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_koshikijima_in_January_1984
+Redirect permanent /columns/adventure_for_ryukyusekkoku http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_ryukyusekkoku
+Redirect permanent /columns/journey_to_nagano_in_1984 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_nagano_in_1984
+Redirect permanent /columns/journey_to_yakushima_in_August_1984 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_August_1984
+Redirect permanent /columns/journey_to_yakushima_in_1980 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_1980
+Redirect permanent /columns/adventure_for_oosaran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_oosaran
+Redirect permanent /columns/goodbye_hustler250 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/goodbye_hustler250
+Redirect permanent /columns/international_spying_1984_3 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/international_spying_1984_3
+Redirect permanent /columns/gourd_island_exploring_1984_85_86 http://ranyuen.com/columns/fascinated_by_the_orchid_wild/gourd_island_exploring_1984_85_86
+Redirect permanent /columns/beautiful_liparis_elliptica http://ranyuen.com/columns/fascinated_by_the_orchid_wild/beautiful_liparis_elliptica
+Redirect permanent /columns/search_for_nioiebine http://ranyuen.com/columns/fascinated_by_the_orchid_wild/search_for_nioiebine
+Redirect permanent /columns/journey_to_yaeyamashotou　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yaeyamashotou
+Redirect permanent /columns/plant_hunter_in_asia_1　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_1
+Redirect permanent /columns/plant_hunter_in_asia_2　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_2
+Redirect permanent /columns/journey_to_amamishotou　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_amamishotou
+Redirect permanent /columns/plant_hunter_in_asia_2_photos　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_2_photos
+Redirect permanent /columns/plant_hunter_in_asia_3　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_3
+Redirect permanent /columns/plant_hunter_in_asia_4　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_4
+Redirect permanent /columns/plant_hunter_in_asia_5　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_5
+Redirect permanent /columns/plant_hunter_in_asia_6　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_6
+Redirect permanent /columns/fear_experiences_in_searching_for_orchid　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/fear_experiences_in_searching_for_orchid
+Redirect permanent /columns/searching_for_yamapikaran　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_yamapikaran
+Redirect permanent /columns/searching_for_iwachidori_in_kiihanto　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_iwachidori_in_kiihanto
+Redirect permanent /columns/country_hill_in_Chiba_1　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_1
+Redirect permanent /columns/country_hill_in_Chiba_2　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_2
+Redirect permanent /columns/searching_for_kenmunran　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_kenmunran
+Redirect permanent /columns/encounter_with_awachidori_at_first_sight　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_awachidori_at_first_sight
+Redirect permanent /columns/searching_for_awachidori　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_awachidori
+Redirect permanent /columns/taking_a_photo_of_awachidori　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/taking_a_photo_of_awachidori
+Redirect permanent /columns/kuroshima_investigation_symbol　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/kuroshima_investigation_symbol
+Redirect permanent /columns/strange_experience_in_miyakejima　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_miyakejima
+Redirect permanent /columns/going_to_isolated_island_by_bike　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/going_to_isolated_island_by_bike
+Redirect permanent /columns/chichijimamaru_and_native_orchid_in_ogasawara　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/chichijimamaru_and_native_orchid_in_ogasawara
+Redirect permanent /columns/asahiebine　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/asahiebine
+Redirect permanent /columns/journey_to_mikurajima_at_first　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_mikurajima_at_first
+Redirect permanent /columns/journey_to_mikurajima_again　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_mikurajima_again
+Redirect permanent /columns/adventure_for_iwachidori　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_iwachidori
+Redirect permanent /columns/encounter_with_poison_snake_5　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_5
+Redirect permanent /columns/search_for_sekkoku_by_bicycle　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/search_for_sekkoku_by_bicycle
+Redirect permanent /columns/calanthes_paradise_niijima　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/calanthes_paradise_niijima
+Redirect permanent /columns/country_hill_in_chiba_3　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_chiba_3
+Redirect permanent /columns/kakuchouran_of_dondonbokon　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/kakuchouran_of_dondonbokon
+Redirect permanent /columns/searching_for_uchouran_in_1978　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_uchouran_in_1978
+Redirect permanent /columns/orchid_of_house　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/orchid_of_house
+Redirect permanent /columns/tomiyamahutaoran　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/tomiyamahutaoran
+Redirect permanent /columns/adventure_for_toshima　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_toshima
+Redirect permanent /columns/creature_with_orchidsRedirect permanent　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/creature_with_orchids
+
+# 夢の農業
+
+Redirect permanent /columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
+Redirect permanent /columns/agriculture_of_mind http://ranyuen.com/columns/agriculture_with_a_dream/agriculture_of_mind
+Redirect permanent /columns/feeling_to_be_nurtured_by_the_agriculture http://ranyuen.com/columns/agriculture_with_a_dream/feeling_to_be_nurtured_by_the_agriculture
+Redirect permanent /columns/that_i_think_i_have_anxiety_about_six_primary_industry http://ranyuen.com/columns/agriculture_with_a_dream/that_i_think_i_have_anxiety_about_six_primary_industry
+Redirect permanent /columns/about_abandoned_farmland http://ranyuen.com/columns/agriculture_with_a_dream/about_abandoned_farmland
+Redirect permanent /columns/recommendation_of_the_dramatic_agriculture_1 http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_1
+Redirect permanent /columns/recommendation_of_the_dramatic_agriculture_2 http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_2
+Redirect permanent /columns/recommendation_of_the_dramatic_agriculture_3 http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_3
+Redirect permanent /columns/recommendation_of_the_dramatic_agriculture_4 http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_4
+Redirect permanent /columns/recommendation_of_the_dramatic_agriculture_5 http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_5
+Redirect permanent /columns/recommendation_of_the_dramatic_agriculture_6 http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_6
+Redirect permanent /columns/a_small_reform_of_agricultural_1 http://ranyuen.com/columns/agriculture_with_a_dream/a_small_reform_of_agricultural_1
+Redirect permanent /columns/ultimate_horticulture http://ranyuen.com/columns/agriculture_with_a_dream/ultimate_horticulture
+Redirect permanent /columns/thinking_from_the_front_and_back http://ranyuen.com/columns/agriculture_with_a_dream/thinking_from_the_front_and_back
+Redirect permanent /columns/voice_of_agriculture_high_school_students_1 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_1
+Redirect permanent /columns/voice_of_agriculture_high_school_students_2 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_2
+Redirect permanent /columns/voice_of_agriculture_high_school_students_3 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_3
+Redirect permanent /columns/voice_of_agriculture_high_school_students_4 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_4
+Redirect permanent /columns/voice_of_agriculture_high_school_students_5 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_5
+Redirect permanent /columns/voice_of_agriculture_high_school_students_6 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_6
+Redirect permanent /columns/voice_of_agriculture_high_school_students_7 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_7
+Redirect permanent /columns/voice_of_agriculture_high_school_students_8 http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_8
+Redirect permanent /columns/thinking_from_the_front_and_back http://ranyuen.com/columns/agriculture_with_a_dream/thinking_from_the_front_and_back
