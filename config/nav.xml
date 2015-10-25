@@ -9,7 +9,6 @@
         </dir>
         <dir path="about_us">
             <rest-pages/>
-            <page path="history_of_author"/>
         </dir>
         <dir path="photos">
             <page path="index" title="Photos"/>
