@@ -17,8 +17,6 @@ RewriteRule ^ index.php [QSA,L]
 
 # Redirect permanent /columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
 
-# # 野生のランに魅せられて
-
 # Redirect permanent /columns/fascinated_to_wild_orchids_top http://ranyuen.com/columns/fascinated_by_the_orchid_wild
 # Redirect permanent /columns/adventure_for_tanegashimashikouran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_tanegashimashikouran
 # Redirect permanent /columns/adventure_for_himekurisoran http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_himekurisoran
@@ -89,8 +87,6 @@ RewriteRule ^ index.php [QSA,L]
 # Redirect permanent /columns/tomiyamahutaoran　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/tomiyamahutaoran
 # Redirect permanent /columns/adventure_for_toshima　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_toshima
 # Redirect permanent /columns/creature_with_orchidsRedirect permanent　http://ranyuen.com/columns/fascinated_by_the_orchid_wild/creature_with_orchids
-
-# # 夢の農業
 
 # Redirect permanent /columns/introduction_for_column_second http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second
 # Redirect permanent /columns/agriculture_of_mind http://ranyuen.com/columns/agriculture_with_a_dream/agriculture_of_mind
