@@ -79,12 +79,13 @@
                 <rest-pages/>
             </dir>
             <page path="introduction_for_column"/>
-            <dir path="fascinated_by_the_orchid_wild">
+            <latest-pages count="10"/>
+            <!-- <dir path="fascinated_by_the_orchid_wild">
                 <rest-pages/>
             </dir>
             <dir path="agriculture_with_a_dream">
                 <rest-pages/>
-            </dir>
+            </dir> -->
         </dir>
         <dir path="news">
             <page path="index" title="お知らせ"/>
