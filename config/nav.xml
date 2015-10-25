@@ -80,12 +80,12 @@
             </dir>
             <page path="introduction_for_column"/>
             <latest-pages count="10"/>
-            <!-- <dir path="fascinated_by_the_orchid_wild">
+            <dir path="fascinated_by_the_orchid_wild">
               <latest-pages count="10"/>
             </dir>
             <dir path="agriculture_with_a_dream">
               <latest-pages count="10"/>
-            </dir> -->
+            </dir>
         </dir>
         <dir path="news">
             <page path="index" title="お知らせ"/>
