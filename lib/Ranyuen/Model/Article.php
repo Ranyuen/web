@@ -26,7 +26,7 @@ class Article extends Eloquent\Model
     {
         $entities = self::with('contents')
             ->where('path', 'LIKE', str_replace('%', '\\%', $path).'%')
-            ->orderBy('id', 'ASC')
+            ->orderBy('id', 'DESC')
             ->get();
         $articles = [];
         foreach ($entities as $entity) {
@@ -44,30 +44,6 @@ class Article extends Eloquent\Model
 
     protected $table    = 'article';
     protected $fillable = ['path'];
-
-    /*
-    public $wild = array(
-         64,  65,
-         66,  67,  68,  69,  70,
-         71,  72,  73,  74,  75,
-         76,  77,  78,  79,  80,
-         81,  82,  83,  84,  85,
-         86,  87,  88,  89,  90,
-         91,  92,  93,  94,  95,
-         96,  97,  98,  99, 100,
-        101, 102, 103, 104, 105,
-        106, 107, 108, 109,
-        111,      113, 114, 115,
-        116, 117, 118, 119, 120,
-        121, 122, 123, 124, 125,
-        126, 128
-    );
-
-    public $dream = array(
-        127, 129, 130, 131, 132,
-        133, 134
-    );
-    */
 
     public function contents()
     {

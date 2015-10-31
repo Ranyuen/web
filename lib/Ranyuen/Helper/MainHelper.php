@@ -28,21 +28,12 @@ class MainHelper extends Helper
     {
         $output  = '<ul>';
 
-        if ($pages[0]->path === '/news/') {
-            $first_ele = array_shift($pages);
-            $pages = array_reverse($pages);
-            array_unshift($pages, $first_ele);
-            array_splice($pages, 10);
-        }
-        /*
-        if ($pages[0]->path === '/wild_orchids/') {
-            $output = $output .= '<li>
-    <a href="'.h($path).'">'.h($page->title).'</a>
-</li>';
-
-            return $output;
-        }
-        */
+        // if ($pages[0]->path === '/news/') {
+        //     $first_ele = array_shift($pages);
+        //     $pages = array_reverse($pages);
+        //     array_unshift($pages, $first_ele);
+        //     array_splice($pages, 10);
+        // }
 
         foreach ((array)$pages as $page) {
             if (is_array($page)) {

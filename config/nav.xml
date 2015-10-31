@@ -76,20 +76,20 @@
                 <page path="seki_akihiko"/>
                 <page path="nanjo_yosuke"/>
                 <page path="ogawa_toyoaki"/>
-                <rest-pages/>
             </dir>
-            <page path="introduction_for_column"/>
-            <latest-pages count="10"/>
-            <!-- <dir path="fascinated_by_the_orchid_wild">
-                <rest-pages/>
+            <!-- <page path="introduction_for_column"/> -->
+            <!-- <latest-pages count="10"/> -->
+            <dir path="fascinated_by_the_orchid_wild">
+                <latest-pages count="10"/>
             </dir>
             <dir path="agriculture_with_a_dream">
                 <rest-pages/>
-            </dir> -->
+            </dir>
         </dir>
         <dir path="news">
             <page path="index" title="お知らせ"/>
-            <rest-pages/>
+            <latest-pages count="10"/>
+            <!-- <rest-pages/> -->
         </dir>
     </lang>
 </nav>
