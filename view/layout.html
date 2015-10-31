@@ -62,7 +62,7 @@
       <div>
         <article>{{ content | raw }}</article>
       </div>
-      <!-- {% elseif title == messages.localnav_01 %}
+      {% elseif title == messages.localnav_01 %}
       <div class="main-inner">
         <nav class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
           {{ breadcrumb | echoBreadcrumb | raw }}
@@ -77,7 +77,7 @@
         </nav>
         <article>{{ content | raw }}</article>
       </div>
-      {% include 'localnav_02.' ~ lang ~ '.html' %} -->
+      {% include 'localnav_02.' ~ lang ~ '.html' %}
       {% else %}
       <div class="main-inner">
         <nav class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
