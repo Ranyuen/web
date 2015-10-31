@@ -83,7 +83,7 @@
                 <latest-pages count="10"/>
             </dir>
             <dir path="agriculture_with_a_dream">
-                <rest-pages/>
+                <latest-pages count="10"/>
             </dir>
         </dir>
         <dir path="news">
