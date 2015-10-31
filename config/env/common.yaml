@@ -6,8 +6,8 @@ message:
     sitename: 蘭裕園
     tagline: エビネとウチョウランの専門農園
     keywords: エビネ, ウチョウラン
-    localnav_01: 野生のランに魅せられて
-    localnav_02: 夢のある農業 〜ドラマチック農業のすすめ〜
+    # localnav_01: 野生のランに魅せられて
+    # localnav_02: 夢のある農業 〜ドラマチック農業のすすめ〜
   en:
     sitename: Ranyuen
     tagline: Nurcery for Japanese Orchids
