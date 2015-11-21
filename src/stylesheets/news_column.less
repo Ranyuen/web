@@ -1,6 +1,78 @@
 @charset "utf-8";
 @import "helpers";
 
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  border-radius: 4px;
+  margin-top: 4px;
+
+  a {
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+    padding: 4px 10px;
+    text-decoration: none;
+
+    &:before {
+      margin-right: 10px;
+      content: '●';
+    }
+  }
+}
+
+.link-default {
+  background: #99FF99;
+
+  a {
+    color: #003300;
+
+    &:hover {
+      background: #99EE99;
+    }
+  }
+}
+
+.link-recommend {
+  background: #77FF77;
+
+  a {
+    color: #003300;
+
+    &:hover {
+      background: #77EE77;
+    }
+  }
+}
+
+.link-highschooler {
+  background: #55FF55;
+
+  a {
+    color: #003300;
+
+    &:hover {
+      background: #55EE55;
+    }
+  }
+}
+
+.link-success {
+  background: #44FF44;
+
+  a {
+    color: #003300;
+
+    &:hover {
+      background: #44EE44;
+    }
+  }
+}
+
 .column {
   margin: 0;
   padding: 0;
