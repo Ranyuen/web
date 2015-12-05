@@ -10,65 +10,55 @@
 .link {
   border-radius: 4px;
   margin-top: 4px;
+  list-style-type: none;
 
   a {
+    background: #79CDAA;
     border-radius: 4px;
+    color: #f0f8ff;
     display: block;
     font-size: 15px;
-    padding: 4px 10px;
+    padding: 4px;
     text-decoration: none;
 
     &:before {
-      margin-right: 10px;
-      content: '●';
+      padding: 4px 8px;
+    }
+
+    &:hover {
+      background: #65AD8F;
     }
   }
 }
 
 .link-default {
-  background: #99FF99;
-
   a {
-    color: #003300;
-
-    &:hover {
-      background: #99EE99;
+    &:before {
+      content: url("/assets/images/agriculture_with_a_dream_link_default.gif");
     }
   }
 }
 
 .link-recommend {
-  background: #77FF77;
-
   a {
-    color: #003300;
-
-    &:hover {
-      background: #77EE77;
+    &:before {
+      content: url("/assets/images/agriculture_with_a_dream_link_recommend.gif");
     }
   }
 }
 
 .link-highschooler {
-  background: #55FF55;
-
   a {
-    color: #003300;
-
-    &:hover {
-      background: #55EE55;
+    &:before {
+      content: url("/assets/images/agriculture_with_a_dream_link_highschooler.gif");
     }
   }
 }
 
 .link-success {
-  background: #44FF44;
-
   a {
-    color: #003300;
-
-    &:hover {
-      background: #44EE44;
+    &:before {
+      content: url("/assets/images/agriculture_with_a_dream_link_success.gif");
     }
   }
 }
