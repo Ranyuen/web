@@ -1,4 +1,5 @@
 .foldnav {
+
   ul, li {
     display : block;
     margin  : 0 auto;
@@ -6,23 +7,31 @@
   }
 
 .foldnav_item {
+
   ul {
+
+    background: #FFE7F5;
+
     & > .foldnav_item {
+      padding-left: 2.5em;
+
       a {
         border-bottom: none;
-        text-indent : 1em;
+        text-indent : -2em;
       }
+
       & > a:before {
-        content : '┣ ';
+        content : '┣  ';
         color: #B8C5D6;
-        padding-right: 5px;
+        padding-right: 0.5em;
       }
     }
+
     & > .last_child {
       & > a:before {
-        content: '┗ ';
+        content: '┗  ';
         color: #B8C5D6;
-        padding-right: 5px;
+        padding-right: 0.5em;
       }
     }
   }
@@ -34,19 +43,23 @@
   }
 
   &_item {
+
     &-isClose {
-      & > a:before {
+      & > a:after {
         content : ' \25be';
-        padding-right: 5px;
+        padding-left: 5px;
       }
 
       ul { display : none; }
     }
 
     &-isOpen {
-      & > a:before {
+
+      background: #FFE7F5;
+
+      & > a:after {
        content : ' \25b4';
-       padding-right: 5px;
+       padding-left: 5px;
      }
 
       ul { display : block; }
