@@ -27,7 +27,6 @@
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <style></style>
   <script src="/assets/javascripts/layout.min.js"></script>
 </head>
 <body class="{{ lang }}" lang="{{ lang }}">
@@ -56,6 +55,9 @@
       <nav id="globalnav">
         {% include 'globalnav.' ~ lang ~ '.html' %}
       </nav>
+      <div class="link_sitemap">
+        <a href="/about_us/sitemap">ホームページの目次</a>
+      </div>
     </header>
     <div class="main">
       {% if title == messages.sitename %}

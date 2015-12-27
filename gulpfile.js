@@ -106,6 +106,7 @@ gulp.task('less', function () {
       'src/stylesheets/playMenu.less',
       'src/stylesheets/ponerorchis.less',
       'src/stylesheets/columns.less',
+      'src/stylesheets/sitemap.less',
     ]).
     pipe(less({
       compress:  true,
