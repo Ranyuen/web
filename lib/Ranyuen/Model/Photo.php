@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent;
  */
 class Photo extends Eloquent\Model
 {
-    public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150gsc)
+    public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
     {
         switch ($speciesName) {
             case 'all':
