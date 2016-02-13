@@ -30,7 +30,7 @@ class ApiPhotoController extends Controller
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/api/photos')
      */
-    public function photos(Request $req, $offset = 0, $limit = 100)
+    public function photos(Request $req, $offset = 0, $limit = 150)
     {
         $speciesName = $req->get('species_name');
         if (is_null($speciesName)) {

@@ -53,7 +53,7 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
 $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
     $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
     $speciesName = $req->get('species_name');
-    $photos = $controller->photos($req, 0, 20);
+    $photos = $controller->photos($req, 0, 30);
     $photos = array_map(
         function ($photo) {
             $thumbWidth = 349;

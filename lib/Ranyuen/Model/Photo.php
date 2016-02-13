@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent;
  */
 class Photo extends Eloquent\Model
 {
-    public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 100)
+    public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
     {
         switch ($speciesName) {
             case 'all':
@@ -25,11 +25,13 @@ class Photo extends Eloquent\Model
             case 'others':
                 return self::whereNull('species_name')
                     ->skip($offset)
+                    ->orderByRaw('RANDOM()')
                     ->take($limit)
                     ->get();
             default:
                 return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])
                     ->skip($offset)
+                    ->orderByRaw('RANDOM()')
                     ->take($limit)
                     ->get();
         }
