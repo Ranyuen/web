@@ -19,23 +19,24 @@ class Photo extends Eloquent\Model
 {
     public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
     {
+        $orderBy = (((new self())->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
         switch ($speciesName) {
             case 'all':
-                return self::skip($offset)->take($limit)->get();
+                return self::orderByRaw($orderBy)->take($limit)->get();
             case 'others':
-                return self::whereNull('species_name')
-                    ->skip($offset)
-                    ->take($limit)
-                    ->get();
+                return self::whereNull('species_name')->orderByRaw($orderBy)->take($limit)->get();
+                        // ->skip($offset)
+                        // ->take($limit)
+                        // ->get();
             default:
-                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])
-                    ->skip($offset)
-                    ->take($limit)
-                    ->get();
+                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])->orderByRaw($orderBy)->take($limit)->get();
+                        // ->skip($offset)
+                        // ->take($limit)
+                        // ->get();
         }
     }
 
-    public static function getRandomPhotos($offset = 0, $limit = 100)
+    public static function getRandomPhotos($offset = 0, $limit = 150)
     {
         switch ((new self())->getConnection()->getConfig('driver')) {
             case 'sqlite':
