@@ -52,6 +52,7 @@ class MainViewRenderer
 
         return [
             'lang'       => $lang,
+            'path'       => substr($path, 1, (strcspn($path, '/', 1) + 1)),
             'localnav'   => $this->nav->getLocalNav($lang, $path),
             'breadcrumb' => $this->nav->getBreadcrumb($lang, $path),
             'link'       => $this->getLinks($lang, $path),
