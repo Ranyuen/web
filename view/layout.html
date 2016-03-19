@@ -34,33 +34,29 @@
 </head>
 <body class="{{ lang }}" lang="{{ lang }}">
   <div class="container">
-    <header>
+    <header class="header">
       <div class="header-inner">
         <div class="logo">
-          <h1>
-            <a rel="home" href="{{ home }}">
-              <img src="/assets/images/icons/ranyuen.png"
-                   alt="{{ messages.sitename }} ～{{ messages.tagline }}～"
-                   longdesc="{{ home }}"/>
-            </a>
-          </h1>
+          <h1><a rel="home" href="{{ home }}"><img src="/assets/images/icons/ranyuen2.png" width="211" height="120" alt="{{ messages.sitename }} ～{{ messages.tagline }}～" longdesc="{{ home }}"/></a></h1>
         </div>
-        <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
-        <div class="link_icon">
-          <div class="fb_icon">
-            <a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a>
+        <div class="link">
+          <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
+          <div class="icons">
+            <div class="icon">
+              <p><a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a></p>
+            </div>
+            <div class="icon">
+              <p><a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a></p>
+            </div>
           </div>
-          <div class="yt_icon">
-            <a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a>
+          <div class="sitemap">
+            <a href="/about_us/sitemap">ホームページの目次</a>
           </div>
         </div>
       </div>
-      <nav id="globalnav">
+      <nav class="nav">
         {% include 'globalnav.' ~ lang ~ '.html' %}
       </nav>
-      <div class="link_sitemap">
-        <a href="/about_us/sitemap">ホームページの目次</a>
-      </div>
     </header>
     <div class="main">
       {% if title == messages.sitename %}

@@ -74,6 +74,5 @@
 
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
-  foldNav(document.getElementById('globalnav'));
   foldNav(document.getElementById('sidenav'));
 });
