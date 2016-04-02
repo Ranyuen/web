@@ -3,7 +3,7 @@ title: 自然人の語り
 description:
 ---
 <link rel="stylesheet" href="/assets/stylesheets/columns.css" />
-自然人の語り
+自然人の語り - 100タイトルを超える仲間達とのコラム
 ==
 <div class="columns">
   <div class="columns_column">
@@ -14,8 +14,8 @@ description:
   </div>
 </div>
 
-自然人達については、[自然人達の紹介](columns/authors/)よりご閲覧ください。
+筆者については、[自然人の紹介](columns/authors/)よりご閲覧ください。
 
-自然人達の語りに掲載されたランも登場するランのクイズ、500問以上ありますので是非遊んでみてください。
+自然人の語りに掲載されたランも登場するランのクイズ、500問以上ありますので是非遊んでみてください。
 
 → <b><a href="/play/orchid_exam">ラン検定</a></b>
