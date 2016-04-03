@@ -15,7 +15,7 @@
 
 .header {
   background: @header-footer-bg;
-  background-size: contain;
+  background-size: 100% 100%;
   border-bottom: 2px solid #451360;
 
   .cf;
@@ -62,7 +62,7 @@
         }
       }
       .linksitemap {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 25px;
         height: 25px;
         margin-top: 25px;
@@ -117,11 +117,7 @@
   }
 }
 
-// @nav_background: url("/assets/images/header_footer_background_6.jpg");
 @nav-items_width: 98%;
-// @nav-item_background: #ffe8e0;
-// @nav-item_background_gradient1: #ffffff;
-// @nav-item_background_gradient2: #ffe8e0;
 @nav-item_background: #C6C1FF;
 @nav-item_background_gradient1: #94B4FF;
 @nav-item_background_gradient2: #B3B4FF;
@@ -153,7 +149,6 @@
       .activate {
         color: #ffffff;
         border-radius: 2px;
-        // background: #ffaecf;
         background: #A463FF;
       }
       &:hover {
@@ -175,6 +170,8 @@
         &:nth-child(2n) {
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
+          box-sizing: border-box;
+          border-right: 1px solid #FFF;
         }
         &:nth-child(3), &:nth-child(5), &:last-child {
           border-top-left-radius: 0;
@@ -192,6 +189,8 @@
       .nav-item {
         width: 14% / @nav-items_width * 100%;
         margin-top: 0;
+        box-sizing: border-box;
+        border-right: 1px solid #FFF;
         &:first-child {
           width: 14% / @nav-items_width * 100%;
           border-radius: 2px 0 0 2px;
@@ -205,6 +204,7 @@
           border-bottom-right-radius: 0;
         }
         &:last-child {
+          border: none;
           border-radius: 0 2px 2px 0;
         }
       }
