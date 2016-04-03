@@ -1,9 +1,9 @@
 ---
-title: コラム - 蘭裕園スタイル
+title: 自然人の語り
 description:
 ---
 <link rel="stylesheet" href="/assets/stylesheets/columns.css" />
-コラム - 蘭裕園スタイル
+自然人の語り - 100タイトルを超える仲間達とのコラム
 ==
 <div class="columns">
   <div class="columns_column">
@@ -14,8 +14,8 @@ description:
   </div>
 </div>
 
-コラム筆者については、[コラム筆者の紹介](columns/authors/)よりご閲覧ください。
+筆者については、[自然人の紹介](columns/authors/)よりご閲覧ください。
 
-コラムに掲載されたランも登場するランのクイズ、500問以上ありますので是非遊んでみてください。
+自然人の語りに掲載されたランも登場するランのクイズ、500問以上ありますので是非遊んでみてください。
 
 → <b><a href="/play/orchid_exam">ラン検定</a></b>

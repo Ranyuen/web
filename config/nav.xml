@@ -70,7 +70,7 @@
             <rest-pages/>
         </dir>
         <dir path="columns">
-            <page path="index" title="コラム - 蘭裕園スタイル"/>
+            <page path="index" title="自然人の語り"/>
             <dir path="authors">
                 <page path="yamamoto_hiroshi"/>
                 <page path="seki_akihiko"/>
