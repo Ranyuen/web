@@ -59,7 +59,10 @@
             <page path="ponerorchis_in_the_new_way"/>
         </dir>
         <dir path="about_us">
-            <rest-pages/>
+            <page path="sitemap"/>
+            <page path="news"/>
+            <page path="direction"/>
+            <page path="how_to_buy"/>
             <page path="history_of_author"/>
         </dir>
         <dir path="photos">
