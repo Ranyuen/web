@@ -3,12 +3,14 @@ title: 写真を見る
 ---
 蘭裕園の写真を見る
 ==
+<link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
+<link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
 <form class="select" id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
     <option value="" {% if species_name == null %}selected{% endif %}>-- 写真の種類を選択する --</option>
     <option value="all" {% if species_name == 'all' %}selected{% endif %}>全て見る</option>
     <option value="Calanthe" {% if species_name == 'Calanthe' %}selected{% endif %}>エビネ</option>
-    <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>アワチドリ/夢ちどり</option>
+    <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>アワチドリ / 夢ちどり</option>
     <option value="Japanease native orchid" {% if species_name == 'Japanease native orchid' %}selected{% endif %}>日本の野生ラン</option>
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>その他</option>
   </select>
@@ -32,8 +34,6 @@ title: 写真を見る
     </div>
   {% endfor %}
 </div>
-<link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
-<link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
 <script src="/assets/javascripts/photoGallery.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
