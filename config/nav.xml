@@ -67,6 +67,10 @@
         </dir>
         <dir path="photos">
             <page path="index" title="写真を見る"/>
+            <!-- <page path="calanthe" title="エビネ"/> -->
+            <!-- <page path="ponerorchis" title="アワチドリ / 夢ちどり"/> -->
+            <!-- <page path="japanease_native_orchid" title="日本の野生ラン"/> -->
+            <!-- <page path="others" title="その他"/> -->
         </dir>
         <dir path="play">
             <page path="orchid_exam"/>

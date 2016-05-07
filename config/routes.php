@@ -70,7 +70,21 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     $params['species_name'] = $speciesName;
     $params['photos']       = $photos;
 
-    return $renderer->render("photos/index.$lang", $params);
+    // if($params['species_name'] === 'Calanthe') {
+    //     return $renderer->render("photos/calanthe.$lang", $params);
+    // }
+    // else if($params['species_name'] === 'Ponerorchis') {
+    //     return $renderer->render("photos/ponerorchis.$lang", $params);
+    // }
+    // else if($params['species_name'] === 'Japanease native orchid') {
+    //     return $renderer->render("photos/japanease_native_orchid.$lang", $params);
+    // }
+    // else if($params['species_name'] === 'others') {
+    //     return $renderer->render("photos/others.$lang", $params);
+    // }
+    // else {
+        return $renderer->render("photos/index.$lang", $params);
+    // }
 });
 
 $router->registerController('Ranyuen\Controller\ArticleController');
