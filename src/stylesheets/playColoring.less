@@ -4,43 +4,34 @@
 .coloring {
   .cf;
 
-  &_square {
-    height   : 206.533px;
-    margin   : 0 auto;
-    position : relative;
-    width    : 206.533px;
+  .coloring_square {
+    width: 100% / 100% * 100%;
+    float: left;
 
-    &:hover { background : #de6bb1; }
-
-    p {
-      margin  : 0;
-      padding : 2px;
-
-      img {
-        display : block;
-        height  : 202.533px;
-        width   : 202.533px;
-      }
-    }
-  }
-
-  &_img {
     img {
-      display : block;
-      margin  : 0 auto;
-      width   : 380px;
+      margin: 0 auto;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .coloring_square:hover {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .coloring {
+    .coloring_square {
+      width: 50% / 100% * 100%;
     }
   }
 }
 
-@media screen and (min-width: @width-phone) {
+@media screen and (min-width: 960px) {
   .coloring {
-    &_square { float : left; }
-  }
-}
-
-@media screen and (min-width: @width-tablet) {
-  .coloring {
-    &_square { float : left; }
+    .coloring_square {
+      width: 25% / 100% * 100%;
+    }
   }
 }
