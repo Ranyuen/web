@@ -3,20 +3,22 @@
 
 .playMenu {
   .cf;
+  margin-bottom: 30px;
 
   &_circle {
-    padding       : 4px;
+    padding       : 2px;
     height        : 199px;
     width         : 199px;
+    margin: 0 auto;
 
     p {
       background    : #cc99ff;
-      padding       : 6px;
-      border-radius : 187px;
+      padding       : 2px;
+      width         : 187px;
       height        : 187px;
+      border-radius : 187px;
       text-align    : center;
       text-indent   : 0;
-      width         : 187px;
 
       a {
         background      : #de6bb1;
@@ -25,10 +27,10 @@
         box-shadow      : 0 0 8px 0 rgba(0,0,0,0.4);
         color           : #fbfaf5;
         display         : block;
+        width           : 175px;
         height          : 175px;
         line-height     : 175px;
         text-decoration : none;
-        width           : 175px;
 
         &:hover {
           background : #de98b2;
@@ -39,18 +41,32 @@
   }
 }
 
-@media screen and (min-width : @width-phone) {
+
+@media screen and (max-width : 768px){
   .playMenu {
+    text-align: center;
+    margin: 0 auto 30px;
     &_circle {
-      float : left;
+     display: inline-block;
     }
   }
 }
-
-@media screen and (min-width : @width-tablet) {
+@media screen and (min-width : 768px) and (max-width:1280px){
   .playMenu {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 30px;
     &_circle {
-      float  : left;
+      display: inline-block;
+    }
+  }
+}
+@media screen and (min-width : 1280px) {
+  .playMenu {
+    max-width: 1280px;
+    text-align: center;
+    &_circle {
+      display: inline-block;
     }
   }
 }

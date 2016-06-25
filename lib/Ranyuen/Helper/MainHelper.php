@@ -132,7 +132,7 @@ class MainHelper extends Helper
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      */
-    public function echoImg($id, $width = null, $height = null, $alt = null)
+    public function echoImg($id, $width = null, $height = null, $alt = null, $title = null)
     {
         $photo = Photo::find($id);
         if (!$photo) {
@@ -147,8 +147,11 @@ class MainHelper extends Helper
         if (!$height) {
             $height = $photo->height;
         }
+        if (!$title) {
+            $title = $alt;
+        }
         $alt =  $alt . " 蘭裕園(Ranyuen)";
 
-        return '<img src="/'.h($src).'" alt="'.h($alt).'" width="'.h($width).'" height="'.h($height).'"/>';
+        return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'"/>';
     }
 }
