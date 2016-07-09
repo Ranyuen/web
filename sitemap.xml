@@ -1,1074 +1,1658 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
 <url>
   <loc>http://ranyuen.com/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>1.0</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/about_us/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/calanthe/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/ponerorchis/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/photos/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/play/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/about_us/sitemap</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/news/information_of_mail_order_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/about_us/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/calanthe/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_niijima</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/ponerorchis/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/new_food_education</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/columns/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/photos/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/new_volunteer</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/play/</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/ultimate_horticulture_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/news/shipping_spring_ponerorchis_2016</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/news/information_of_the_towards_the_kanasai_area</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/jakoukinuran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/suzukichi</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_10</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/news/information_of_shipping_of_awachidori_and_yumechidori_2016</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_hachijoujima</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/dobon_incident</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_9</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/news/report_of_calanthe_fair_2016_03</loc>
+  <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/secret_habitat_of_kurokamiran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>http://ranyuen.com/news/report_of_calanthe_fair_2016_02</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/news/report_of_calanthe_fair_2016_01</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/learn_from_wild_orchid</loc>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.8</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/calanthe/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/ponerorchis/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/about_us/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/photos/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/about_us/direction</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/about_us/how_to_buy</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/about_us/history_of_author</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/grouping/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/grouping/info_about_JIEBINE_calanthe_discolor</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/grouping/info_about_NIOIEBINE_calanthe_discolor</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/growings_calanthe_in_each_season</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/growings_calanthe_in_a_pot</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/growings_calanthe_on_a_garden</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/repot_calanthe</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/fertilizing_for_calanthe</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/cultivation/controlling_pests_of_calanthe</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/tech_to_grow_calanthe_for_beginner</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/learning/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/learning/info_coffeecup_calanthe</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/recent_failure_and_provision</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/calanthe/growings_calanthe_in_the_new_way</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/kind_of_ponerorchis</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/growings_ponerorchis_in_each_season</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/pot_soil_water_for_ponerorchis</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/watering_for_ponerorchis</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/growings_ponerorchis_on_a_garden</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/overcome_the_intense_heat</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/special_upbringing_of_ponerorchis</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/regulation_of_flowering_time</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/controlling_pests_of_ponerorchis</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/cultivation/tech_to_grow_ponerorchis_for_advanced</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/learning/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/learning/info_lerning_awachidori_from_territory</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/yumechidori</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/awachidori</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/tech_to_grow_ponerorchis_for_beginner</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/as_miniminiranran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/recent_failure_and_provision</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/ponerorchis/ponerorchis_in_the_new_way</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/play/orchid_exam</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/authors/</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/authors/yamamoto_hiroshi</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.7</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/columns/authors/seki_akihiko</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/nanjo_yosuke</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/ogawa_toyoaki</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/okamoto_morio</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/yamada_kiyotaka</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/hirokawa_kouji</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/yamazaki_yoshimi</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/authors/aikawa_yasuyuki</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/memories_of_huuran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/huge_nagoran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_8</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_7</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/successful_example_of_dramatic_agriculture_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_6</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/play/shooting_game</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/play/slide_puzzle</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/play/coloring</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/</loc>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/photos/?species_name=all</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/photos/?species_name=Calanthe</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/photos/?species_name=Ponerorchis</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/photos/?species_name=Japanease+native+orchid</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/photos/?species_name=others</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/play/orchid_exam</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/play/coloring</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/play/shooting_game</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/play/slide_puzzle</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/about_us/news</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/columns/authors/</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/yamamoto_hiroshi</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/seki_akihiko</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/nanjo_yosuke</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/ogawa_toyoaki</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/okamoto_morio</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/yamada_kiyotaka</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/hirokawa_kouji</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/yamazaki_yoshimi</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/aikawa_yasuyuki</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/umemoto_seisaku</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/shibata_kazuhiko</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/nishio_shigeaki</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/nasu_youichi</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/suzukichi&amp;apos;s_ponerorchis_story</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/school_trip_with_okinawachidori</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_suzumushisou</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/disappeared_carts</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_nagoran</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_kakkou</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/phantom_of_the_shunran</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_bosohanto</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/heaven_of_pear</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/new_food_education</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/new_volunteer</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/ultimate_horticulture_2</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_10</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_9</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_8</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_7</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/successful_example_of_dramatic_agriculture_1</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/news/calanthe_fair_2016</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/news/information_of_mail_order_2015</loc>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/to_customers_arriving_from_touhoku</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/information_of_shipping_of_awachidori_and_yumechidori_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/dobon_incident/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/dobon_incident/columns/</loc>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/learn_from_wild_orchid/columns/</loc>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/thanks_for_calanthe_fair_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/report_of_calanthe_fair_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/bluray_present_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/report_of_calanthe_shop_2015_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/report_of_calanthe_shop_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/the_cutest_orchis_in_the_world</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/calanthe_fair_2015</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/information_of_orchid_exam_expert</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/shipping_spring_calanthe_2014</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/information_of_orchid_exam</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/information_of_new_photos</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/information_of_shipping_of_awachidori_and_yumechidori_2014</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/information_of_calanthe_fair_2014</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/report_of_calanthe_fair_2014</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/calanthe_fair_2014</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/news/bluray_present_2014</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.7</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/about_us/exporting</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/en/about_us/direction</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/assets/swf/growings_controlling_pests_of_calanthe_musi.swf.html</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>http://ranyuen.com/calanthe/grouping/calanthe/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/assets/swf/growings_controlling_pests_of_calanthe_byo.swf.html</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>http://ranyuen.com/calanthe/grouping/info_about_JIEBINE_calanthe_discolor/calanthe/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/assets/swf/growings_controlling_pests_of_ponerorchis_musi.swf.html</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>http://ranyuen.com/calanthe/growings_calanthe_in_the_new_way/calanthe/learning/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/assets/swf/growings_controlling_pests_of_ponerorchis_byo.swf.html</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>http://ranyuen.com/calanthe/growings_calanthe_in_the_new_way/calanthe/cultivation/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/assets/swf/territory_of_ponerorchis.swf.html</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/taking_a_photo_of_awachidori</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>http://ranyuen.com/columns/authors/columns/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/introduction_for_column</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_tanegashimashikouran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_himekurisoran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_matsugekayaran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_shikouran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hahazimahozakiran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_ogasawarashikouran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_4</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_sakurajimaebine</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_kinoesasaran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_kusukusuran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_miyakejima_in_Spring_1983</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_shimokoshikijima_in_August_1983</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran_in_Spring_1985</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_August_1983</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/be_careful_with_tsutsugamushi</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_nyuumenran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/seki_diary_in_1985_0302</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_miyakezima_in_June_1983</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_koshikijima_in_January_1984</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_ryukyusekkoku</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_nagano_in_1984</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_August_1984</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_1980</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_oosaran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/goodbye_hustler250</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/international_spying_1984_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/gourd_island_exploring_1984_85_86</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/beautiful_liparis_elliptica</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/search_for_nioiebine</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yaeyamashotou</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_amamishotou</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_2_photos</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_4</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_5</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_6</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/fear_experiences_in_searching_for_orchid</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_yamapikaran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_iwachidori_in_kiihanto</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_kenmunran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_awachidori_at_first_sight</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_awachidori</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/taking_a_photo_of_awachidori</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/kuroshima_investigation_symbol</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_miyakejima</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/going_to_Isolated_island_by_bike</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/chichijimamaru_and_native_orchid_in_ogasawara</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/asahiebine</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_mikurajima_at_first</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_mikurajima_again</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_iwachidori</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_5</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/search_for_sekkoku_by_bicycle</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/calanthe_paradise_niijima</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/kakuchouran_of_dondonbokon</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_uchouran_in_1978</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/orchid_of_house</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/tomiyamahutaoran</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_toshima</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/creature_with_orchids</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/huge_nagoran</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/memories_of_huuran</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/secret_habitat_of_kurokamiran</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_hachijoujima</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/jakoukinuran</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_3</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_3</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_niijima</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_1</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/seven_buddhist_monks</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_2</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/columns/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/agriculture_of_mind</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/feeling_to_be_nurtured_by_the_agriculture</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/that_i_think_i_have_anxiety_about_six_primary_industry</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/about_abandoned_farmland</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/a_small_reform_of_agricultural_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/ultimate_horticulture</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/thinking_from_the_front_and_back</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_1</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_2</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_4</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_5</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_6</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_7</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_8</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_4</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_5</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
 </url>
 <url>
-  <loc>http://ranyuen.com/assets/swf/slide_puzzle.swf.html</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_6</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/play/orchid_exam/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/yamamoto_hiroshi/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/seki_akihiko/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/nanjo_yosuke/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/ogawa_toyoaki/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/okamoto_morio/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/yamada_kiyotaka/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/hirokawa_kouji/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/yamazaki_yoshimi/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/aikawa_yasuyuki/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/umemoto_seisaku/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/shibata_kazuhiko/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/nishio_shigeaki/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/authors/nasu_youichi/columns/authors/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/school_trip_with_okinawachidori/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/school_trip_with_okinawachidori/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_suzumushisou/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_suzumushisou/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/disappeared_carts/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/disappeared_carts/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_nagoran/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_nagoran/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_kakkou/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/looking_for_kakkou/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/phantom_of_the_shunran/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/phantom_of_the_shunran/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_bosohanto/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_bosohanto/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/heaven_of_pear/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/new_food_education/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/new_volunteer/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/ultimate_horticulture_2/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_10/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_9/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_8/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_7/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/successful_example_of_dramatic_agriculture_1/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/news/the_cutest_orchis_in_the_world/columns/</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/news/calanthe_fair_2015/assets/calanthe_fair_request.pdf</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/news/calanthe_fair_2015/columns/</loc>
+  <priority>0.6</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/play/orchid_exam?type=expert</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.51</priority>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/assets/calanthe_fair_2014_request.pdf</loc>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/about_us/exporting</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_tanegashimashikouran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_himekurisoran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_matsugekayaran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_shikouran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hahazimahozakiran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_ogasawarashikouran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_4/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_sakurajimaebine/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_kinoesasaran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_kusukusuran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_miyakejima_in_Spring_1983/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_shimokoshikijima_in_August_1983/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran_in_Spring_1985/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_hetsukaran_in_Spring_1985/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_August_1983/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/be_careful_with_tsutsugamushi/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_nyuumenran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/seki_diary_in_1985_0302/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_miyakezima_in_June_1983/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_koshikijima_in_January_1984/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_ryukyusekkoku/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_nagano_in_1984/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_August_1984/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yakushima_in_1980/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_oosaran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/goodbye_hustler250/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/international_spying_1984_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/gourd_island_exploring_1984_85_86/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/beautiful_liparis_elliptica/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/search_for_nioiebine/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_yaeyamashotou/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_amamishotou/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_2_photos/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_4/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_5/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_6/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/plant_hunter_in_asia_6/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/fear_experiences_in_searching_for_orchid/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_yamapikaran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_iwachidori_in_kiihanto/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_kenmunran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_awachidori_at_first_sight/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_awachidori/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/taking_a_photo_of_awachidori/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/kuroshima_investigation_symbol/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_miyakejima/columns/</loc>
+  <priority>0.5</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/going_to_isolated_island_by_bike</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.41</priority>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/going_to_Isolated_island_by_bike/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/chichijimamaru_and_native_orchid_in_ogasawara/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/asahiebine/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_mikurajima_at_first/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/journey_to_mikurajima_again/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_iwachidori/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/encounter_with_poison_snake_5/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/search_for_sekkoku_by_bicycle/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/calanthe_paradise_niijima/columns/</loc>
+  <priority>0.5</priority>
 </url>
 <url>
   <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_chiba_3</loc>
-  <lastmod>2016-01-09T11:46:13+00:00</lastmod>
-  <priority>0.41</priority>
+  <priority>0.5</priority>
 </url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/country_hill_in_Chiba_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/kakuchouran_of_dondonbokon/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/searching_for_uchouran_in_1978/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/orchid_of_house/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/orchid_of_house/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/tomiyamahutaoran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/adventure_for_toshima/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/creature_with_orchids/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_1/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_2/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/huge_nagoran/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/huge_nagoran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/memories_of_huuran/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/memories_of_huuran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/secret_habitat_of_kurokamiran/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/secret_habitat_of_kurokamiran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_hachijoujima/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_hachijoujima/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/jakoukinuran/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_3/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_3/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_iriomote_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/strange_experience_in_niijima/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_1/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/seven_buddhist_monks/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/seven_buddhist_monks/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_2/columns/fascinated_by_the_orchid_wild/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/survival_diary_in_tokunoshima_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/introduction_for_column_second/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/agriculture_of_mind/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/feeling_to_be_nurtured_by_the_agriculture/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/that_i_think_i_have_anxiety_about_six_primary_industry/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/about_abandoned_farmland/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/a_small_reform_of_agricultural_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/ultimate_horticulture/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/thinking_from_the_front_and_back/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream.voice_of_agriculture_high_school_students_4</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_1/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_2/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_3/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_4/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_5/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_6/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns//agriculture_with_a_dream/voice_of_agriculture_high_school_students_1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/voice_of_agriculture_high_school_students_7/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_4/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_5/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/agriculture_with_a_dream/recommendation_of_the_dramatic_agriculture_6/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/play/orchid_exam?type=expert/columns/</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://ranyuen.com/columns/fascinated_by_the_orchid_wild/going_to_isolated_island_by_bike/columns/</loc>
+  <priority>0.5</priority>
+</url>
+
 </urlset>
