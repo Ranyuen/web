@@ -1,2 +1,4 @@
 User-agent: *
 Sitemap: http://ranyuen.com/sitemap.xml
+Disallow: /admin
+Disallow: /admin/*
