@@ -23,9 +23,9 @@ class ExamQuestion extends Eloquent\Model
             // select type easy, hard, expert
             if ($exams['name'] === '蘭検定 (初級)') {
                 $type = 'easy';
-            } else if ($exam['name'] === '蘭検定 (上級)') {
+            } else if ($exams['name'] === '蘭検定 (上級)') {
                 $type = 'hard';
-            } else if ($exam['name'] === '蘭検定 (博士編)') {
+            } else if ($exams['name'] === '蘭検定 (博士編)') {
                 $type = 'expert';
             }
             $exams = $exams['questions'];
@@ -42,8 +42,6 @@ class ExamQuestion extends Eloquent\Model
                     ExamAnswer::registerExamAnswer($q->id, $answer);
                 }
             }
-
-            return $exams;
         }
     }
 }

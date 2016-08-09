@@ -107,6 +107,7 @@ gulp.task('less', function () {
       'src/stylesheets/ponerorchis.less',
       'src/stylesheets/columns.less',
       'src/stylesheets/sitemap.less',
+      'src/stylesheets/orchidExam.less',
     ]).
     pipe(less({
       compress:  true,
@@ -155,6 +156,12 @@ gulp.task('uglifyjs', function () {
       ],
       dest: 'article_editor.min.js'
     },
+    {
+      src: [
+        'src/javascripts/orchidExam.js'
+      ],
+      dest :'orchidExam.js'
+    }
   ].map(function (set) {
     return gulp.src(set.src).
       pipe(concat(set.dest)).

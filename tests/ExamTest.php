@@ -26,5 +26,7 @@ class ExamTest extends PHPUnit_Framework_TestCase
 
     public function testReadJSON() {
         ExamQuestion::readFromJSON('assets/exam/easy.json');
+        ExamQuestion::readFromJSON('assets/exam/hard.json');
+        ExamQuestion::readFromJSON('assets/exam/expert.json');
     }
 }
