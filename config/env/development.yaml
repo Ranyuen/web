@@ -1,3 +1,12 @@
 db:
-  driver: sqlite
-  database: ./db.sqlite3
+  host: localhost
+  driver: mysql
+  database: ranyuen_production
+  username: root
+  password:
+  charset: utf8
+  collation: utf8_unicode_ci
+
+# db:
+#   driver: sqlite
+#   database: ./db.sqlite3
