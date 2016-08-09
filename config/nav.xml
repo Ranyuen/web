@@ -74,11 +74,12 @@
             <page path="?species_name=others" title="その他"/>
         </dir>
         <dir path="play">
-            <dir path="exam">
-            </dir>
-            <page path="coloring" title="ぬりえ"/>
+            <!-- <dir path="exam">
+            </dir> -->
+            <!-- <page path="coloring" title="ぬりえ"/>
             <page path="shooting_game" title="ラン害虫退治ゲーム"/>
-            <page path="slide_puzzle" title="スライドパズル"/>
+            <page path="slide_puzzle" title="スライドパズル"/> -->
+            <rest-pages/>
         </dir>
         <dir path="columns">
             <page path="index" title="自然人の語り"/>
