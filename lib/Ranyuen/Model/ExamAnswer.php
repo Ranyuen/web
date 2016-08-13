@@ -12,10 +12,10 @@ class ExamAnswer extends Eloquent\Model
     protected $table   = 'exam_answer';
     protected $guarded = ['id'];
 
-    public function question() {
+    // public function question() {
 
-        return $this->belongsTo(ExamQuestion::class);
-    }
+    //     return $this->belongsTo(ExamQuestion::class);
+    // }
 
     public static function registerExamAnswer($_id, array $answer) {
         if (! empty($answer)) {

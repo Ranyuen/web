@@ -12,10 +12,10 @@ class ExamQuestion extends Eloquent\Model
     protected $table   = 'exam_question';
     protected $guarded = ['id'];
 
-    public function answers() {
+    // public function answers() {
 
-        return $this->hasMany(ExamAnswer::class);
-    }
+    //     return $this->hasMany(ExamAnswer::class);
+    // }
 
     public static function readFromJSON($json_file) {
         if (isset($json_file)) {
