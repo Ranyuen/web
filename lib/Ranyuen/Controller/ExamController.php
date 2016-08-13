@@ -91,12 +91,15 @@ class ExamController extends Controller
         $renderer = new MainViewRenderer($this->renderer, $this->nav, $this->bgimage, $this->config);
         $params = $renderer->defaultParams('ja', '/play/exam/' . $type);
 
+        $instance = new ExamQuestion();
+        $orderBy = (($instance->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
+
         $questions = ExamQuestion::where('type', $type)
-                                    ->orderByRaw("RAND()")
+                                    ->orderByRaw($orderBy)
                                     ->take(100)
                                     ->get();
         foreach ($questions as $question) {
-            $question['answers'] = ExamAnswer::orderByRaw("RAND()")
+            $question['answers'] = ExamAnswer::orderByRaw($orderBy)
                                     ->where('question_id', $question->id)
                                     ->get();
         }
@@ -119,21 +122,24 @@ class ExamController extends Controller
         $renderer = new MainViewRenderer($this->renderer, $this->nav, $this->bgimage, $this->config);
         $params = $renderer->defaultParams('ja', '/play/exam/' . $type);
 
+        $instance = new ExamQuestion();
+        $orderBy = (($instance->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
+
         if ($id === 0) {
             $questions = ExamQuestion::where('type', $type)
                                     ->skip($id === '1' ? 0 : (50 * ($id - 1)))
                                     ->take(25)
-                                    ->orderByRaw("RAND()")
+                                    ->orderByRaw($orderBy)
                                     ->get();
         } else {
             $questions = ExamQuestion::where('type', $type)
                                     ->take(25)
-                                    ->orderByRaw("RAND()")
+                                    ->orderByRaw($orderBy)
                                     ->get();
         }
 
         foreach ($questions as $question) {
-            $question['answers'] = ExamAnswer::orderByRaw("RAND()")
+            $question['answers'] = ExamAnswer::orderByRaw($orderBy)
                                     ->where('question_id', $question->id)
                                     ->get();
         }
