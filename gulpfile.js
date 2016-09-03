@@ -101,12 +101,14 @@ gulp.task('less', function () {
       'src/stylesheets/layout.less',
       'src/stylesheets/news.less',
       'src/stylesheets/news_column.less',
+      'src/stylesheets/pagination.less',
       'src/stylesheets/photoGallery.less',
       'src/stylesheets/playColoring.less',
       'src/stylesheets/playMenu.less',
       'src/stylesheets/ponerorchis.less',
       'src/stylesheets/columns.less',
       'src/stylesheets/sitemap.less',
+      'src/stylesheets/pagination.less'
     ]).
     pipe(less({
       compress:  true,

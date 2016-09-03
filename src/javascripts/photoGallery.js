@@ -24,6 +24,7 @@ $(window).scroll(function() {
   }
 });
 
+//* select_list && box_CSS
 PhotoGallery.prototype.init = function (rootNode) {
   this.rootNode = rootNode;
   this._masonry = new Masonry(rootNode, {
@@ -38,6 +39,8 @@ PhotoGallery.prototype.init = function (rootNode) {
   this.applied();
 };
 
+
+//* select_list
 PhotoGallery.prototype.applied = function () {
   $('.lightbox').colorbox({
     rel:        'gallery',
@@ -50,6 +53,8 @@ PhotoGallery.prototype.applied = function () {
   this._lastPhotoNode = this.rootNode.querySelector('.photo:last-of-type');
 };
 
+
+//* select_list
 PhotoGallery.prototype.onscroll = function () {
   if (document.documentElement.clientHeight >
       this._lastPhotoNode.getBoundingClientRect().top) {
@@ -57,41 +62,45 @@ PhotoGallery.prototype.onscroll = function () {
   }
 };
 
-PhotoGallery.prototype.loadNextpage = function () {
-  var req, uri,
-      _this = this;
 
-  if (this._lockLoadingNextPage) { return; }
-  this._lockLoadingNextPage = true;
-  uri = URI('/api/photos').
-    addSearch(URI(location.href).search(true)).
-    addSearch({limit: 20, offset: this.currentPage * 20}).
-    toString();
-  req = new XMLHttpRequest();
-  req.open('GET', uri);
-  req.send();
-  req.onreadystatechange = function () {
-    var res;
+//* load_photo
+// PhotoGallery.prototype.loadNextpage = function () {
+//   var req, uri,
+//       _this = this;
 
-    if (req.readyState !== 4) { return; }
-    _this._lockLoadingNextPage = false;
-    if (req.status !== 200) { return console.error([req.status, req]); }
-    try {
-      res = JSON.parse(req.responseText);
-    } catch (err) {
-      return console.error([err, req.responseText]);
-    }
-    ++ _this.currentPage;
-    _this.insertPhotoNodes(res.map(function (photo) {
-      var thumbWidth = 349,
-          thumbHeight = ~~(photo.height * thumbWidth / photo.width);
+//   if (this._lockLoadingNextPage) { return; }
 
-      photo['thumb_width'] = thumbWidth;
-      photo['thumb_height'] = thumbHeight;
-      return photo;
-    }));
-  };
-};
+//   this._lockLoadingNextPage = true;
+//   uri = URI('/api/photos').
+//     addSearch(URI(location.href).search(true)).
+//     addSearch({limit: 20, offset: this.currentPage * 20}).
+//     toString();
+//   req = new XMLHttpRequest();
+//   req.open('GET', uri);
+//   req.send();
+//   req.onreadystatechange = function () {
+//     var res;
+
+//     if (req.readyState !== 4) { return; }
+//     _this._lockLoadingNextPage = false;
+//     if (req.status !== 200) { return console.error([req.status, req]); }
+//     try {
+//       res = JSON.parse(req.responseText);
+//     } catch (err) {
+//       return console.error([err, req.responseText]);
+//     }
+//     ++ _this.currentPage;
+//     _this.insertPhotoNodes(res.map(function (photo) {
+//       var thumbWidth = 349,
+//           thumbHeight = ~~(photo.height * thumbWidth / photo.width);
+
+//       photo['thumb_width'] = thumbWidth;
+//       photo['thumb_height'] = thumbHeight;
+//       return photo;
+//     }));
+//   };
+// };
+
 
 PhotoGallery.prototype.insertPhotoNodes = function (photos) {
   var photoNodes = [],
@@ -117,6 +126,7 @@ PhotoGallery.prototype.insertPhotoNodes = function (photos) {
   this.applied();
   // jscs:enable
 };
+
 
 global['PhotoGallery'] = PhotoGallery;
 })((this || 0).self || global);
