@@ -12,7 +12,7 @@ function PhotoGallery() {
   this.rootNode = null;
   this.currentPage = 1;
   this._masonry = null;
-  this._lockLoadingNextPage = false;
+  // this._lockLoadingNextPage = false;
   this._lastPhotoNode = null;
 }
 
@@ -58,7 +58,7 @@ PhotoGallery.prototype.applied = function () {
 PhotoGallery.prototype.onscroll = function () {
   if (document.documentElement.clientHeight >
       this._lastPhotoNode.getBoundingClientRect().top) {
-    this.loadNextpage();
+    // this.loadNextpage();
   }
 };
 

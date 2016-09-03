@@ -22,13 +22,6 @@ title: 写真を見る
   {{ paginator | raw }}
 </div>
 
-<script>
-$('.pagination li a').each(function() {
-  var href = $(this).attr('href');
-  $(this).attr('href', 'photos/' + href);
-});
-</script>
-
 <div id="photo-gallery" class="photos">
 
   {% for item in paginator %}
@@ -54,6 +47,13 @@ $('.pagination li a').each(function() {
 <div>
   {{ paginator | raw }}
 </div>
+
+<script>
+$('.pagination li a').each(function() {
+  var href = $(this).attr('href');
+  $(this).attr('href', 'photos/' + href);
+});
+</script>
 
 <script src="/assets/javascripts/photoGallery.min.js"></script>
 <script>
