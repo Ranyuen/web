@@ -19,6 +19,12 @@ var sshConfig = {
       username : 'ranyuen',
       password : process.env.SSH_PASSWORD,
     };
+var sshStagingConfig = {
+      host     : 'ranyuen-staging.sakura.ne.jp',
+      port     : '22',
+      username : 'ranyuen-staging',
+      password : process.env.SSH_STAGING_PASSWORD,
+    };
 
 /**
  * @param {string} cmd
@@ -78,6 +84,16 @@ gulp.task('deploy', function () {
       ];
 
   return promiseSsh(sshConfig, commands);
+});
+
+gulp.task('staging', function () {
+  var commands = [
+    'cd ~/www; git pull --ff-only origin development',
+    'cd ~/www; php composer.phar install --no-dev',
+    'cd ~/www; set SERVER_ENV=staging;',
+  ];
+
+  return promiseSsh(sshStagingConfig, commands);
 });
 
 gulp.task('jscs', function () {

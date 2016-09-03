@@ -70,6 +70,7 @@ class App
                 ini_set('display_errors', 0);
                 break;
             case 'development':
+            case 'staging':
             default:
                 ini_set('display_errors', 1);
         }
