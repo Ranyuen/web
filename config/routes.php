@@ -5,6 +5,7 @@ use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 use Ranyuen\Model\Article;
+use Ranyuen\Model\ExamQuestion;
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
 
@@ -109,6 +110,7 @@ $router->error(404, function (ViewRenderer $renderer, $lang) {
 $router->registerController('Ranyuen\Controller\ApiPhotoController');
 $router->registerController('Ranyuen\Controller\AdminArticlesController');
 $router->registerController('Ranyuen\Controller\AdminController');
+$router->registerController('Ranyuen\Controller\ExamController');
 
 $router->get('/columns/', function (ViewRenderer $renderer, $nav, $bgimage, $config) {
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
