@@ -90,7 +90,7 @@ gulp.task('staging', function () {
   var commands = [
     'cd ~/www; git pull --ff-only origin development',
     'cd ~/www; php composer.phar install --no-dev',
-    'cd ~/www; set SERVER_ENV=staging;',
+    'cd ~/www; set SERVER_ENV=staging; vendor/bin/phpmig migrate',
   ];
 
   return promiseSsh(sshStagingConfig, commands);
