@@ -102,30 +102,30 @@ PhotoGallery.prototype.onscroll = function () {
 // };
 
 
-PhotoGallery.prototype.insertPhotoNodes = function (photos) {
-  var photoNodes = [],
-      fragment = document.createDocumentFragment();
+// PhotoGallery.prototype.insertPhotoNodes = function (photos) {
+//   var photoNodes = [],
+//       fragment = document.createDocumentFragment();
 
-  photos.forEach(function (photo) {
-    // jscs:disable maximumLineLength
-    /* jshint maxlen:1000 */
-    var photoNode = document.createElement('div');
+//   photos.forEach(function (photo) {
+//     // jscs:disable maximumLineLength
+//     /* jshint maxlen:1000 */
+//     var photoNode = document.createElement('div');
 
-    photoNode.classList.add('photo');
-    photo.alt = photo['description_ja'] + ' 蘭裕園 Ranyuen';
-    photo.origUrl = '/images/gallery/' + photo.id + '.jpg';
-    photo.thumbUrl = '/api/photo?format=jpeg&id=' + photo.id + '&width=' + photo['thumb_width'];
-    photoNode.innerHTML = Hogan.
-      compile('<a class="lightbox" href="{{origUrl}}" title="{{alt}}"><img rel="gallery" src="{{thumbUrl}}" width="{{thumb_width}}" height="{{thumb_height}}" alt="{{alt}}"/></a><div>{{description_ja}}</div><div>{{description_en}}</div>').
-      render(photo);
-    fragment.appendChild(photoNode);
-    photoNodes.push(photoNode);
-  });
-  this.rootNode.appendChild(fragment);
-  this._masonry.appended(photoNodes);
-  this.applied();
-  // jscs:enable
-};
+//     photoNode.classList.add('photo');
+//     photo.alt = photo['description_ja'] + ' 蘭裕園 Ranyuen';
+//     photo.origUrl = '/images/gallery/' + photo.id + '.jpg';
+//     photo.thumbUrl = '/api/photo?format=jpeg&id=' + photo.id + '&width=' + photo['thumb_width'];
+//     photoNode.innerHTML = Hogan.
+//       compile('<a class="lightbox" href="{{origUrl}}" title="{{alt}}"><img rel="gallery" src="{{thumbUrl}}" width="{{thumb_width}}" height="{{thumb_height}}" alt="{{alt}}"/></a><div>{{description_ja}}</div><div>{{description_en}}</div>').
+//       render(photo);
+//     fragment.appendChild(photoNode);
+//     photoNodes.push(photoNode);
+//   });
+//   this.rootNode.appendChild(fragment);
+//   this._masonry.appended(photoNodes);
+//   this.applied();
+//   // jscs:enable
+// };
 
 
 global['PhotoGallery'] = PhotoGallery;
