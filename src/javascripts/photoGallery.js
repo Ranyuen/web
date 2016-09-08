@@ -33,7 +33,8 @@ PhotoGallery.prototype.init = function (rootNode) {
     itemSelector:       '.photo',
     hiddenStyle:        { opacity: 0 },
     visibleStyle:       { opacity: 1 },
-    transitionDuration: '0.8s',
+    // transitionDuration: '0.8s',
+    transitionDuration: '7.8s',
   });
   window.onscroll = debounce(this.onscroll.bind(this));
   this.applied();

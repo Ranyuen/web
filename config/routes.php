@@ -74,13 +74,6 @@ class CustomAdapter implements CollectionAdapter{
 }
 //
 
-
-
-
-
-
-
-
 Router::plugin('Ranyuen\Little\Plugin\ControllerAnnotationRouter');
 
 $router->error(500, function (\Exception $ex) {
@@ -124,18 +117,11 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
     return $renderer->render('news/list.ja', $params);
 });
 
-
-
-
-
-
-
-
-
 $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
     $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
     $speciesName = $req->get('species_name');
-    $photos = $controller->photos($req, 0, 500);
+    // $photos = $controller->photos($req, 0, 1000);
+    $photos = $controller->photos($req, 0, 2000);
     $photos = array_map(
         function ($photo) {
             $thumbWidth = 349;
@@ -152,8 +138,7 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     $records = $photos;
     $strana = new \Strana\Paginator();
 
-
-    $paginator = $strana->perPage(10)->make($records, null, $config);
+    $paginator = $strana->perPage(20)->make($records, null, $config);
 
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
 
@@ -164,14 +149,6 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     $params['paginator']    = $paginator;
 
     return $renderer->render("photos/index.$lang", $params);
-
-
-
-
-
-
-
-
 
 
 });
