@@ -11,10 +11,6 @@ use Ranyuen\Template\ViewRenderer;
 
 
 
-
-
-
-
 //
 use Strana\ConfigHelper;
 use Strana\Interfaces\CollectionAdapter;
@@ -157,7 +153,7 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     $strana = new \Strana\Paginator();
 
 
-    $paginator = $strana->perPage(30)->make($records, null, $config);
+    $paginator = $strana->perPage(10)->make($records, null, $config);
 
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
 
