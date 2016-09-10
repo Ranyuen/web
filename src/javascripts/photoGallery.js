@@ -4,7 +4,6 @@
 'use strict';
 
 var debounce = global.debounce;
-
 var selectBox = $('.select');
 var offset = selectBox.offset();
 
@@ -60,7 +59,6 @@ PhotoGallery.prototype.onscroll = function () {
   }
 };
 
-//* load_photo
 // PhotoGallery.prototype.loadNextpage = function () {
 //   var req, uri,
 //       _this = this;
