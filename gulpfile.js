@@ -89,7 +89,7 @@ gulp.task('deploy', function () {
 
 gulp.task('staging', function () {
   var commands = [
-    'cd ~/www; git pull --ff-only origin development',
+    'cd ~/www; git pull --ff-only origin staging',
     'cd ~/www; php composer.phar install --no-dev',
     'cd ~/www; set SERVER_ENV=staging; vendor/bin/phpmig migrate',
   ];
