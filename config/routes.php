@@ -8,10 +8,6 @@ use Ranyuen\Model\Article;
 use Ranyuen\Model\ExamQuestion;
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
-
-
-
-//
 use Strana\ConfigHelper;
 use Strana\Interfaces\CollectionAdapter;
 
@@ -120,8 +116,7 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
 $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
     $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
     $speciesName = $req->get('species_name');
-    // $photos = $controller->photos($req, 0, 1000);
-    $photos = $controller->photos($req, 0, 2000);
+    $photos = $controller->photos($req, 0, 500);
     $photos = array_map(
         function ($photo) {
             $thumbWidth = 349;
@@ -134,22 +129,16 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
         json_decode($photos->getContent(), true)
     );
 
-
     $records = $photos;
     $strana = new \Strana\Paginator();
-
-    $paginator = $strana->perPage(20)->make($records, null, $config);
-
+    $paginator = $strana->perPage(30)->make($records, null, $config);
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
-
     $params = $renderer->defaultParams($lang, $req->getPathInfo());
-
     $params['species_name'] = $speciesName;
     $params['photos']       = $photos;
     $params['paginator']    = $paginator;
 
     return $renderer->render("photos/index.$lang", $params);
-
 
 });
 

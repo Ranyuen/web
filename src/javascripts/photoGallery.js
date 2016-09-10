@@ -4,7 +4,6 @@
 'use strict';
 
 var debounce = global.debounce;
-
 var selectBox = $('.select');
 var offset = selectBox.offset();
 
@@ -33,8 +32,7 @@ PhotoGallery.prototype.init = function (rootNode) {
     itemSelector:       '.photo',
     hiddenStyle:        { opacity: 0 },
     visibleStyle:       { opacity: 1 },
-    // transitionDuration: '0.8s',
-    transitionDuration: '7.8s',
+    transitionDuration: '0.8s',
   });
   window.onscroll = debounce(this.onscroll.bind(this));
   this.applied();
@@ -63,8 +61,6 @@ PhotoGallery.prototype.onscroll = function () {
   }
 };
 
-
-//* load_photo
 // PhotoGallery.prototype.loadNextpage = function () {
 //   var req, uri,
 //       _this = this;
@@ -127,7 +123,6 @@ PhotoGallery.prototype.onscroll = function () {
 //   this.applied();
 //   // jscs:enable
 // };
-
 
 global['PhotoGallery'] = PhotoGallery;
 })((this || 0).self || global);
