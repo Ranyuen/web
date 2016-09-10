@@ -33,13 +33,11 @@ PhotoGallery.prototype.init = function (rootNode) {
     itemSelector:       '.photo',
     hiddenStyle:        { opacity: 0 },
     visibleStyle:       { opacity: 1 },
-    // transitionDuration: '0.8s',
-    transitionDuration: '7.8s',
+    transitionDuration: '0.8s',
   });
   window.onscroll = debounce(this.onscroll.bind(this));
   this.applied();
 };
-
 
 //* select_list
 PhotoGallery.prototype.applied = function () {
@@ -54,7 +52,6 @@ PhotoGallery.prototype.applied = function () {
   this._lastPhotoNode = this.rootNode.querySelector('.photo:last-of-type');
 };
 
-
 //* select_list
 PhotoGallery.prototype.onscroll = function () {
   if (document.documentElement.clientHeight >
@@ -62,7 +59,6 @@ PhotoGallery.prototype.onscroll = function () {
     // this.loadNextpage();
   }
 };
-
 
 //* load_photo
 // PhotoGallery.prototype.loadNextpage = function () {
@@ -127,7 +123,6 @@ PhotoGallery.prototype.onscroll = function () {
 //   this.applied();
 //   // jscs:enable
 // };
-
 
 global['PhotoGallery'] = PhotoGallery;
 })((this || 0).self || global);
