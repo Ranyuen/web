@@ -75,7 +75,9 @@
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
   var targetElem = document.getElementById('sidenav');
-    if(targetElem){
-      foldNav(document.getElementById('sidenav'));
-    }
+
+  if(targetElem){
+    foldNav(document.getElementById('sidenav'));
+  }
+
 });
