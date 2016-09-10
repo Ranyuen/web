@@ -48,3 +48,11 @@ Deploy.
 ```bash
 gulp deploy
 ```
+
+Staging.
+
+```bash
+gulp staging
+```
+
+
