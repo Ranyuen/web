@@ -17,34 +17,22 @@ use Illuminate\Database\Eloquent;
  */
 class Photo extends Eloquent\Model
 {
-    public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
+    public static function getPhotos()
     {
-        $orderBy = (((new self())->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
-        switch ($speciesName) {
-            case 'all':
-                return self::orderByRaw($orderBy)->take($limit)->get();
-            case 'others':
-                return self::whereNull('species_name')->orderByRaw($orderBy)->take($limit)->get();
-                        // ->skip($offset)
-                        // ->take($limit)
-                        // ->get();
-            default:
-                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])->orderByRaw($orderBy)->take($limit)->get();
-                        // ->skip($offset)
-                        // ->take($limit)
-                        // ->get();
-        }
+        return self::all();
     }
 
-    public static function getRandomPhotos($offset = 0, $limit = 150)
+
+    // public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
+    public static function getPhotosBySpeciesName($speciesName)
     {
-        switch ((new self())->getConnection()->getConfig('driver')) {
-            case 'sqlite':
-                return self::orderByRaw('RANDOM()')->take($limit)->get();
-            case 'mysql':
-                return self::orderByRaw('RAND()')->take($limit)->get();
+        switch ($speciesName) {
+            case 'all':
+                return self::all();
+            case 'others':
+                return self::whereNull('species_name')->get();
             default:
-                return self::skip($offset)->take($limit)->get();
+                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])->get();
         }
     }
 

@@ -13,6 +13,7 @@ namespace Ranyuen;
 use Ranyuen\Di\Container;
 use Ranyuen\Little\Request;
 use Ranyuen\Little\Router;
+use Exception;
 
 /**
  * Application main class.
@@ -69,6 +70,7 @@ class App
                 ini_set('display_errors', 0);
                 break;
             case 'development':
+            case 'staging':
             default:
                 ini_set('display_errors', 1);
         }
@@ -98,23 +100,27 @@ class App
      */
     public function run()
     {
-        $this->container['db']; // Prepare DB connection.
-        $req = Request::createFromGlobals();
-        if (preg_match('#\A/(ja|en|e)\W?#', $req->getPathInfo(), $matches)) {
-            $lang = $matches[1];
-            if (isset($this->config['lang'][$lang])) {
-                $lang = $this->config['lang'][$lang];
+        try {
+            $this->container['db']; // Prepare DB connection.
+            $req = Request::createFromGlobals();
+            if (preg_match('#\A/(ja|en|e)\W?#', $req->getPathInfo(), $matches)) {
+                $lang = $matches[1];
+                if (isset($this->config['lang'][$lang])) {
+                    $lang = $this->config['lang'][$lang];
+                }
+                $req->query->set('lang', $lang);
+                $server = $_SERVER;
+                $server['REQUEST_URI'] = substr($req->getPathInfo(), strlen($lang) + 1);
+                $req = $req->duplicate(null, null, null, null, null, $server);
             }
-            $req->query->set('lang', $lang);
-            $server = $_SERVER;
-            $server['REQUEST_URI'] = substr($req->getPathInfo(), strlen($lang) + 1);
-            $req = $req->duplicate(null, null, null, null, null, $server);
+            if (!$req->get('lang')) {
+                $req->query->set('lang', $this->config['lang']['default']);
+            }
+            $this->router->run($req)->send();
+            $this->logger->addAccessInfo();
+        } catch (Exception $e) {
+            $this->logger->addError($e);
         }
-        if (!$req->get('lang')) {
-            $req->query->set('lang', $this->config['lang']['default']);
-        }
-        $this->router->run($req)->send();
-        $this->logger->addAccessInfo();
     }
 
     /**

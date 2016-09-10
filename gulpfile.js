@@ -19,6 +19,12 @@ var sshConfig = {
       username : 'ranyuen',
       password : process.env.SSH_PASSWORD,
     };
+var sshStagingConfig = {
+      host     : 'ranyuen-staging.sakura.ne.jp',
+      port     : '22',
+      username : 'ranyuen-staging',
+      password : process.env.SSH_STAGING_PASSWORD,
+    };
 
 /**
  * @param {string} cmd
@@ -61,6 +67,7 @@ gulp.task('backup-db', function () {
   });
 });
 
+
 gulp.task('backup-images', function () {
   return promiseProcess('rsync -av ranyuen@ranyuen.sakura.ne.jp:~/www/images .');
 });
@@ -78,6 +85,16 @@ gulp.task('deploy', function () {
       ];
 
   return promiseSsh(sshConfig, commands);
+});
+
+gulp.task('staging', function () {
+  var commands = [
+    'cd ~/www; git pull --ff-only origin staging',
+    'cd ~/www; php composer.phar install --no-dev',
+    'cd ~/www; set SERVER_ENV=staging; vendor/bin/phpmig migrate',
+  ];
+
+  return promiseSsh(sshStagingConfig, commands);
 });
 
 gulp.task('jscs', function () {
@@ -101,12 +118,15 @@ gulp.task('less', function () {
       'src/stylesheets/layout.less',
       'src/stylesheets/news.less',
       'src/stylesheets/news_column.less',
+      'src/stylesheets/pagination.less',
       'src/stylesheets/photoGallery.less',
       'src/stylesheets/playColoring.less',
       'src/stylesheets/playMenu.less',
       'src/stylesheets/ponerorchis.less',
       'src/stylesheets/columns.less',
       'src/stylesheets/sitemap.less',
+      'src/stylesheets/pagination.less',
+      'src/stylesheets/orchidExam.less',
     ]).
     pipe(less({
       compress:  true,
@@ -156,6 +176,12 @@ gulp.task('uglifyjs', function () {
       ],
       dest: 'article_editor.min.js'
     },
+    {
+      src: [
+        'src/javascripts/orchidExam.js'
+      ],
+      dest :'orchidExam.js'
+    }
   ].map(function (set) {
     return gulp.src(set.src).
       pipe(concat(set.dest)).

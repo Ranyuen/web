@@ -5,8 +5,74 @@ use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 use Ranyuen\Model\Article;
+use Ranyuen\Model\ExamQuestion;
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
+
+
+
+//
+use Strana\ConfigHelper;
+use Strana\Interfaces\CollectionAdapter;
+
+class CustomAdapter implements CollectionAdapter{
+
+    /**
+     * @var \Strana\ConfigHelper
+     * Config helper is a helper class, which gives you config values
+     *  used by Strana.
+     */
+    protected $configHelper;
+
+    /**
+     * @var
+     */
+    protected $records;
+
+    public function __construct($records, ConfigHelper $configHelper)
+    {
+        $this->records = $records;
+        $this->configHelper = $configHelper;
+    }
+
+    /**
+     * This method should limit and offset your records and return.
+     */
+    public function slice()
+    {
+        // Here you will get the database object passed to Strana.
+        //  Clone it.
+        $records = clone($this->records);
+
+        // Get the limit number from Strana config
+        $limit = $this->configHelper->getLimit();
+
+        // Get the offset number from Strana config
+        $offset = $this->configHelper->getOffset();
+
+        // Limit your records
+        $records->limit($limit);
+        // Offset your records
+        $records->offset($offset);
+
+        // Return your sliced records
+        return $records->get();
+    }
+
+    /**
+     * This method should return total count of all of your records.
+     */
+    public function total()
+    {
+        // Here you will get the database object passed to Strana.
+        //  Clone it.
+        $records = clone($this->records);
+
+        // Return your total records count, unsliced.
+        return $records->count();
+    }
+}
+//
 
 Router::plugin('Ranyuen\Little\Plugin\ControllerAnnotationRouter');
 
@@ -33,6 +99,7 @@ $router->error(404, function (ViewRenderer $renderer, $lang) {
 $router->registerController('Ranyuen\Controller\ApiPhotoController');
 $router->registerController('Ranyuen\Controller\AdminArticlesController');
 $router->registerController('Ranyuen\Controller\AdminController');
+$router->registerController('Ranyuen\Controller\ExamController');
 
 $router->get('/columns/', function (ViewRenderer $renderer, $nav, $bgimage, $config) {
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
@@ -53,7 +120,7 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
 $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
     $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
     $speciesName = $req->get('species_name');
-    $photos = $controller->photos($req, 0, 50);
+    $photos = $controller->photos($req, 0, 500);
     $photos = array_map(
         function ($photo) {
             $thumbWidth = 349;
@@ -65,26 +132,18 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
         },
         json_decode($photos->getContent(), true)
     );
+
+    $records = $photos;
+    $strana = new \Strana\Paginator();
+    $paginator = $strana->perPage(30)->make($records, null, $config);
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
     $params = $renderer->defaultParams($lang, $req->getPathInfo());
     $params['species_name'] = $speciesName;
     $params['photos']       = $photos;
+    $params['paginator']    = $paginator;
 
-    // if($params['species_name'] === 'Calanthe') {
-    //     return $renderer->render("photos/calanthe.$lang", $params);
-    // }
-    // else if($params['species_name'] === 'Ponerorchis') {
-    //     return $renderer->render("photos/ponerorchis.$lang", $params);
-    // }
-    // else if($params['species_name'] === 'Japanease native orchid') {
-    //     return $renderer->render("photos/japanease_native_orchid.$lang", $params);
-    // }
-    // else if($params['species_name'] === 'others') {
-    //     return $renderer->render("photos/others.$lang", $params);
-    // }
-    // else {
-        return $renderer->render("photos/index.$lang", $params);
-    // }
+    return $renderer->render("photos/index.$lang", $params);
+
 });
 
 $router->registerController('Ranyuen\Controller\ArticleController');

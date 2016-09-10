@@ -1,0 +1,9 @@
+debug: false
+db:
+  host: mysql413.db.sakura.ne.jp
+  driver: mysql
+  database: ranyuen-staging_ranyuen_staging
+  username: ranyuen-staging
+  password: {{DB_PASSWORD}}
+  charset: utf8
+  collation: utf8_unicode_ci
