@@ -8,10 +8,6 @@ use Ranyuen\Model\Article;
 use Ranyuen\Model\ExamQuestion;
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
-
-
-
-//
 use Strana\ConfigHelper;
 use Strana\Interfaces\CollectionAdapter;
 
