@@ -67,6 +67,11 @@
       <div>
         <article>{{ content | raw }}</article>
       </div>
+      {% elseif (title == '写真を見る') or (title == 'Photos') %}
+      <nav class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        {{ breadcrumb | echoBreadcrumb | raw }}
+      </nav>
+      <article>{{ content | raw }}</article>
       {% else %}
       <div class="main-inner">
         <nav class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
