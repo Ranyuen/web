@@ -23,7 +23,6 @@ title: 写真を見る
 </div>
 
 <div id="photo-gallery" class="photos">
-
   {% for item in paginator %}
     <div class="photo">
       <a href="/images/gallery/{{ item.id }}.jpg"

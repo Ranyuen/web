@@ -3,6 +3,9 @@ title: Photos
 ---
 Photos in Ranyuen
 ==
+<link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
+<link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
+<link href="/assets/stylesheets/pagination.css" rel="stylesheet"/>
 <form id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
     <option value="" {% if species_name == null %}selected{% endif %}>--Select species--</option>
@@ -13,26 +16,36 @@ Photos in Ranyuen
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>Others</option>
   </select>
 </form>
+<div>
+  {{ paginator | raw }}
+</div>
 <div id="photo-gallery" class="photos">
-  {% for photo in photos %}
+  {% for item in paginator %}
     <div class="photo">
-      <a href="/images/gallery/{{ photo.id }}.jpg"
+      <a href="/images/gallery/{{ item.id }}.jpg"
         class="lightbox"
-        title="{{ photo.description_en }} Ranyuen">
+        title="{{ item.description_en }} Ranyuen">
         <img rel="gallery"
-        src="/api/photo?format=jpeg&id={{ photo.id }}&width={{ photo.thumb_width }}"
-        width="{{ photo.thumb_width }}"
-        height="{{ photo.thumb_height }}"
-        alt="{{ photo.description_en }} Ranyuen"/>
+        src="/api/photo?format=jpeg&id={{ item.id }}&width={{ item.thumb_width }}"
+        width="{{ item.thumb_width }}"
+        height="{{ item.thumb_height }}"
+        alt="{{ item.description_en }} Ranyuen"/>
       </a>
       <div class="photo-description">
-        <div>{{ photo.description_en }}</div>
+        <div>{{ item.description_en }}</div>
       </div>
     </div>
   {% endfor %}
 </div>
-<link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
-<link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
+<div>
+  {{ paginator | raw }}
+</div>
+<script>
+$('.pagination li a').each(function() {
+  var href = $(this).attr('href');
+  $(this).attr('href', 'photos/' + href);
+});
+</script>
 <script src="/assets/javascripts/photoGallery.min.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', function () {
