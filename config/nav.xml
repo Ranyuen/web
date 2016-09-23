@@ -97,9 +97,6 @@
                 <page path="nishio_shigeaki"/>
                 <page path="nasu_youichi"/>
             </dir>
-            <dir path="fascinated_by_the_orchid_wild">
-                <latest-pages count="10"/>
-            </dir>
             <dir path="fascinated_by_the_wild_orchid">
                 <latest-pages count="10"/>
             </dir>
