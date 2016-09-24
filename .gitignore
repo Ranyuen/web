@@ -4,7 +4,7 @@
 *.sqlite3
 !.gitkeep
 .php_cs.cache
-
+sitemap.xml
 
 # Created by https://www.gitignore.io
 
