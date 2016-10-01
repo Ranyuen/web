@@ -131,7 +131,7 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
 
     $records = $photos;
     $strana = new \Strana\Paginator();
-    $paginator = $strana->perPage(30)->make($records, null, $config);
+    $paginator = $strana->perPage(30)->make($records, null, array('maximumPages' => 10));
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
     $params = $renderer->defaultParams($lang, $req->getPathInfo());
     $params['species_name'] = $speciesName;
