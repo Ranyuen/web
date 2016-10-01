@@ -19,7 +19,7 @@ class SitemapGenerator
     private $sitemap;
     private $urlset = array();
 
-    function __construct() {
+    public function __construct() {
         $this->sitemap                     = new DOMDocument('1.0', 'UTF-8');
         $this->sitemap->preserveWhiteSpace = false;
         $this->sitemap->formatOutput       = true;
@@ -28,7 +28,7 @@ class SitemapGenerator
         $this->urlset->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
     }
 
-    function add($params) {
+    private function add($params) {
         $url = $this->urlset->appendChild($this->sitemap->createElement('url'));
         foreach ($params as $key => $value){
             if (strlen($value)){
@@ -37,7 +37,7 @@ class SitemapGenerator
         }
     }
 
-    function generate($file = null) {
+    private function generate($file = null) {
         if (is_null($file)) {
             header("Content-Type: text/xml; charset=utf-8");
             echo $this->sitemap->saveXML();
