@@ -97,14 +97,6 @@ gulp.task('staging', function () {
   return promiseSsh(sshStagingConfig, commands);
 });
 
-gulp.task('sitemap', function () {
-  var commands = [
-    'cd ~/www; php bin/generateSitemap.php',
-  ];
-
-  return promiseSsh(sshStagingConfig, commands);
-});
-
 gulp.task('jscs', function () {
   return gulp.src(['*.js', 'src/javascripts/**/**.js', 'lib/**/**.js']).
     pipe(jscs());
