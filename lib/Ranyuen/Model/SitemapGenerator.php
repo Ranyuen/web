@@ -69,6 +69,7 @@ class SitemapGenerator
         foreach ($this->articles() as $article) {
             $sitemap->add([
                 'loc' => 'http://ranyuen.com' . $article->path,
+                'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
 
@@ -88,50 +89,91 @@ class SitemapGenerator
                             : ceil(Photo::where('species_name', NULL)->count() / 30);
         $sitemap->add([
            'loc' => 'http://ranyuen.com/photos/?species_name=all',
+           'priority' => $this->priority('http://ranyuen.com' . $article->path)
         ]);
         $sitemap->add([
            'loc' => 'http://ranyuen.com/photos/?species_name=Calanthe',
+           'priority' => $this->priority('http://ranyuen.com' . $article->path)
         ]);
         $sitemap->add([
            'loc' => 'http://ranyuen.com/photos/?species_name=Ponerorchis',
+           'priority' => $this->priority('http://ranyuen.com' . $article->path)
         ]);
         $sitemap->add([
            'loc' => 'http://ranyuen.com/photos/?species_name=Japanease native orchid',
+           'priority' => $this->priority('http://ranyuen.com' . $article->path)
         ]);
         $sitemap->add([
            'loc' => 'http://ranyuen.com/photos/?species_name=others',
+           'priority' => $this->priority('http://ranyuen.com' . $article->path)
         ]);
         for ($i = 1; $i <= $all; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
         for ($i = 1; $i <= $all; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=all&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
         for ($i = 1; $i <= $calanthe; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=calanthe&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
         for ($i = 1; $i <= $ponerorchis; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=ponerorchis&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
         for ($i = 1; $i <= $nativeOrchid; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=Japanease native orchid&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
         for ($i = 1; $i <= $others; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=others&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
 
         $sitemap->generate('sitemap.xml');
+    }
+
+    private function priority($url) {
+        $last  = mb_substr($url, -1);
+        $count = mb_substr_count($url, '/');
+
+        if($last === '/') {
+            if($count === 3) {
+                $priority = '1.0';
+            }
+            else if($count === 4) {
+                $priority = '0.8';
+            }
+            else if($count === 5) {
+                $priority = '0.6';
+            }
+        }
+        else {
+            if($count === 3) {
+                $priority = '0.9';
+            }
+            else if($count === 4) {
+                $priority = '0.7';
+            }
+            else if($count === 5) {
+                $priority = '0.5';
+            }
+        }
+
+        return $priority;
     }
 }

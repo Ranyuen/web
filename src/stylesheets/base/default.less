@@ -1,0 +1,37 @@
+/*
+==== ==== ==== ====
+  style
+==== ==== ==== ====
+*/
+
+body {
+  font-size: 16px;
+  line-height: 1.8em;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.8pt;
+  color: #333333;
+  background: #F3F3FF;
+  &.ja {
+    font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "MS Pゴシック", sans-serif;
+    q {
+      &:before {
+        content: "「";
+      }
+      &:after {
+        content: "」";
+      }
+    }
+  }
+  &.en {
+    font-family: "Alef", sans-serif;
+    q {
+      &:before {
+        content: "“";
+      }
+      &:after {
+        content: "”";
+      }
+    }
+  }
+}
