@@ -8,7 +8,6 @@ require 'vendor/autoload.php';
 use Phpmig\Adapter;
 use Ranyuen\App;
 
-(new Ranyuen\App())->container['db'];
 $c = (new App())->container;
 $c['schema'] = function ($c) {
     return $c['db']->getSchemaBuilder();
