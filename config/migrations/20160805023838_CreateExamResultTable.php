@@ -16,7 +16,6 @@ class CreateExamResultTable extends Migration
             $t->string('type', 25);
             $t->timestamps();
         });
-
     }
 
     /**
