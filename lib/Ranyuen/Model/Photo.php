@@ -22,7 +22,6 @@ class Photo extends Eloquent\Model
         return self::all();
     }
 
-
     // public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
     public static function getPhotosBySpeciesName($speciesName)
     {

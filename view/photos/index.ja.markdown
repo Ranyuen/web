@@ -17,7 +17,6 @@ title: 写真を見る
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>その他</option>
   </select>
 </form>
-
 <div>
   {{ paginator | raw }}
 </div>
