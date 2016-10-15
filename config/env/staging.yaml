@@ -1,4 +1,4 @@
-debug: false
+debug: true
 db:
   host: mysql413.db.sakura.ne.jp
   driver: mysql
