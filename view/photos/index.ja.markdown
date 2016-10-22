@@ -17,7 +17,16 @@ title: 写真を見る
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>その他</option>
   </select>
 </form>
-<div>
+<form class="select" id="search-form-color" method="GET">
+  <input type="hidden" name="species_name" value="{{ species_name }}">
+  <select id="search-form-color" name="color">
+    <option value="">-- 花色別に見たい人 --</option>
+    {% for color in colors %}
+    <option value="{{ color.color }}">{{ color.color }}</option>
+    {% endfor %}
+  </select>
+</form>
+<div style="clear: both;">
   {{ paginator | raw }}
 </div>
 
@@ -59,6 +68,9 @@ $('.pagination li a').each(function() {
     new PhotoGallery().init(document.getElementById("photo-gallery"));
     document.getElementById('search-form-species_name').onchange = function () {
       document.getElementById('search-form').submit();
+    };
+    document.getElementById('search-form-color').onchange = function () {
+      document.getElementById('search-form-color').submit();
     };
   });
 </script>

@@ -22,7 +22,6 @@ class Photo extends Eloquent\Model
         return self::all();
     }
 
-    // public static function getPhotosBySpeciesName($speciesName, $offset = 0, $limit = 150)
     public static function getPhotosBySpeciesName($speciesName)
     {
         switch ($speciesName) {
@@ -33,6 +32,13 @@ class Photo extends Eloquent\Model
             default:
                 return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])->get();
         }
+    }
+
+    public static function getPhotosBySpeciesNameAndColor($speciesName, $color)
+    {
+        return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])
+                    ->where('color', $color)
+                    ->get();
     }
 
     protected $table = 'photo';

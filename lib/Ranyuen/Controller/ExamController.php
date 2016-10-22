@@ -161,7 +161,6 @@ class ExamController extends Controller
     public function registerResult() {
         if (isset($_POST['exam']) && !empty($_POST['exam']['userName'])) {
             $result = $_POST['exam'];
-            var_dump($result);
             $examResult            = new ExamResult;
             $examResult->user_name = htmlspecialchars($result['userName']);
             $examResult->points    = $result['correctsNumber'];

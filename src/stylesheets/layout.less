@@ -383,7 +383,7 @@
       }
     }
   }
-  #search-form {
+  #search-form, #search-form-color {
     select {
       width: 100%;
       min-width: 200px;
@@ -458,7 +458,6 @@ footer {
     min-width: 320px;
     max-width: @max-width;
     margin: 0 auto;
-    // background: @header-footer-bg;
   }
   p {
     font-size: 13px;
@@ -475,11 +474,15 @@ footer {
       float: right;
       width: 81.3%;
     }
-    #search-form {
+    #search-form, #search-form-color {
       select {
-        width: 600px;
+        float: left;
+        margin-right: 20px;
+        width: 45%;
+        .cf;
       }
     }
+
     #sidenav {
       float: left;
       width: 18.5%;
