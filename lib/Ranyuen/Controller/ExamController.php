@@ -128,7 +128,7 @@ class ExamController extends Controller
         if ($id === 0) {
             $questions = ExamQuestion::where('type', $type)
                                     ->skip($id === '1' ? 0 : (50 * ($id - 1)))
-                                    ->take(25)
+                                    ->take(2)
                                     ->orderByRaw($orderBy)
                                     ->get();
         } else {
@@ -146,7 +146,6 @@ class ExamController extends Controller
 
         $params['questions'] = $questions;
         $params['type'] = $type;
-
 
         $article = Article::findByPath('/play/exam/' . $type . '/practice');
         $content = $article->getContent('ja');

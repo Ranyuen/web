@@ -132,7 +132,7 @@ class MainHelper extends Helper
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      */
-    public function echoImg($id, $width = null, $height = null, $alt = null, $title = null)
+    public function echoImg($id, $width = null, $height = null, $alt = null, $title = null, $class = null)
     {
         $photo = Photo::find($id);
         if (!$photo) {
@@ -151,7 +151,12 @@ class MainHelper extends Helper
         if (!$title) {
             $title = $alt;
         }
+        if (empty($class)) {
 
-        return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'"/>';
+            return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'">';
+        } else {
+
+            return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'" class="' . h($class) . '" />';
+        }
     }
 }
