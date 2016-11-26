@@ -1,7 +1,7 @@
 ---
-title: 写真を見る
+title: 花華アルバム
 ---
-蘭裕園の写真を見る
+花華アルバム
 ==
 <link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
 <link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
@@ -17,7 +17,16 @@ title: 写真を見る
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>その他</option>
   </select>
 </form>
-<div>
+<form class="select" id="search-form-color" method="GET">
+  <input type="hidden" name="species_name" value="{{ species_name }}">
+  <select id="search-form-color" name="color">
+    <option value="">-- select color --</option>
+    {% for color in colors %}
+    <option value="{{ color.color }}">{{ color.color }}</option>
+    {% endfor %}
+  </select>
+</form>
+<div style="clear: both;">
   {{ paginator | raw }}
 </div>
 
@@ -35,8 +44,8 @@ title: 写真を見る
           alt="{{ item.description_ja }} 蘭裕園 Ranyuen"/>
       </a>
       <div class="photo-description">
-        <div>{{ item.description_ja }}</div>
-        <div>{{ item.description_en }}</div>
+        <span>{{ item.description_ja }}</span> /
+        <span>{{ item.description_en }}</span>
       </div>
     </div>
   {% endfor %}
@@ -59,6 +68,9 @@ $('.pagination li a').each(function() {
     new PhotoGallery().init(document.getElementById("photo-gallery"));
     document.getElementById('search-form-species_name').onchange = function () {
       document.getElementById('search-form').submit();
+    };
+    document.getElementById('search-form-color').onchange = function () {
+      document.getElementById('search-form-color').submit();
     };
   });
 </script>

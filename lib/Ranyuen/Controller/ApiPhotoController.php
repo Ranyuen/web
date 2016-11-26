@@ -30,16 +30,18 @@ class ApiPhotoController extends Controller
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/api/photos')
      */
-    // public function photos(Request $req, $offset = 0, $limit = 150)
     public function photos(Request $req, $offset = 0, $limit = 0)
     {
         $speciesName = $req->get('species_name');
+        $color       = $req->get('color');
         if (is_null($speciesName)) {
-            // $photos = Photo::getRandomPhotos($offset, $limit);
             $photos = Photo::getPhotos();
         } else {
-            // $photos = Photo::getPhotosBySpeciesName($speciesName, $offset, $limit);
-            $photos = Photo::getPhotosBySpeciesName($speciesName);
+            if (is_null($color)) {
+                $photos = Photo::getPhotosBySpeciesName($speciesName);
+            } else {
+                $photos = Photo::getPhotosBySpeciesNameAndColor($speciesName, $color);
+            }
         }
 
         return $this->toJsonResponse($photos->toArray());
