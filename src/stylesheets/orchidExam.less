@@ -1,12 +1,15 @@
 .q_box {
   margin: 0 0 70px 0;
 }
+
 .choices {
   margin: 15px 0 0 0;
 }
+
 #examHeader {
   margin: 50px 0 40px 0;
 }
+
 #timer {
   display: inline-block;
   width: 49%;
@@ -14,20 +17,24 @@
   text-align: right;
   float: right;
 }
+
 #userName {
   display: inline-block;
   width: 50%;
   min-width: 250px;
 }
+
 #t_userName {
   border:0;
   border:solid 1px #ccc;
   width: 250px;
 }
+
 .links {
   margin-bottom: 50px;
   text-align: center;
 }
+
 #chk {
   background: #a463ff;
   border: 1px solid #DDD;
@@ -38,6 +45,7 @@
   width: 200px;
   padding: 10px 0;
 }
+
 .btn {
   background: #a463ff;
   border: 1px solid #DDD;
@@ -48,6 +56,7 @@
   width: 200px;
   padding: 10px 0;
 }
+
 #record {
   box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
   border: solid 2px #a463ff;
@@ -55,26 +64,65 @@
   padding: 20px 5px;
   margin-bottom: 50px;
 }
+
 .rank {
   width: 200px;
 }
+
 .exam_photo {
   margin: 0;
-  // width: 30%;
   margin-right: 8px;
-  // min-width: 230px;
   display: inline-block;
   vertical-align: top;
 }
+
 .thum {
-  display: block;
   width: 300px;
   height: 300px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+
+  &:hover {
+    filter: brightness(140%);
+  }
+
+  .choice_img {
+    width: auto;
+    height: 100%;
+  }
 }
-.thum .chpice_img {
-  position: absolute;
-  float: left;
+
+.is_correct {
+  margin-top: 15px;
 }
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+  font-weight: bold;
+}
+
+.expansion {
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+
+  .photo {
+    position: relative;
+    display: inline-block;
+    padding-top: 3px;
+    margin-top: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+}
+

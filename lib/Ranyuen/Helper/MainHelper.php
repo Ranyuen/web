@@ -153,10 +153,10 @@ class MainHelper extends Helper
         }
         if (empty($class)) {
 
-            return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'">';
+            return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'" />';
         } else {
 
-            return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'" class="' . h($class) . '" />';
+            return '<img src="/'.h($src).'" alt="'.h($alt).'" title="'.h($title).'" width="'.h($width).'" height="'.h($height).'" class="'.h($class).'" />';
         }
     }
 }
