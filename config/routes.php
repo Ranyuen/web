@@ -136,6 +136,7 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     if (!is_null($speciesName)) {
         $params['colors'] = Photo::where('species_name', $speciesName)->whereNotNull('color')->distinct()->get(['color']);
     }
+    $params['select_color']        = $color;
     $params['species_name'] = $speciesName;
     $params['photos']       = $photos;
     $params['paginator']    = $paginator;

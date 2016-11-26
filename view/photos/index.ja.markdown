@@ -20,9 +20,9 @@ title: 花華アルバム
 <form class="select" id="search-form-color" method="GET">
   <input type="hidden" name="species_name" value="{{ species_name }}">
   <select id="search-form-color" name="color">
-    <option value="">-- select color --</option>
+    <option value="">-- エビネの花色選択 --</option>
     {% for color in colors %}
-    <option value="{{ color.color }}">{{ color.color }}</option>
+    <option value="{{ color.color }}" {% if select_color == color.color %}selected{% endif %}>{{ color.color }}</option>
     {% endfor %}
   </select>
 </form>
