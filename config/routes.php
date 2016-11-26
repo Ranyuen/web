@@ -88,9 +88,6 @@ $router->error(500, function (\Exception $ex) {
 
 $router->error(404, function (ViewRenderer $renderer, $lang) {
     return new Response('404 Not Found', 404);
-    // $res = $renderer->render("error404.$lang");
-
-    // return new Response($res, 404);
 });
 
 $router->registerController('Ranyuen\Controller\ApiPhotoController');

@@ -53,5 +53,8 @@ $('.pagination li a').each(function() {
     document.getElementById('search-form-species_name').onchange = function () {
       document.getElementById('search-form').submit();
     };
+    document.getElementById('search-form-color').onchange = function () {
+      document.getElementById('search-form-color').submit();
+    };
   });
 </script>

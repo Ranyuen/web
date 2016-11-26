@@ -20,7 +20,7 @@ title: 写真を見る
 <form class="select" id="search-form-color" method="GET">
   <input type="hidden" name="species_name" value="{{ species_name }}">
   <select id="search-form-color" name="color">
-    <option value="">-- 花色別に見たい人 --</option>
+    <option value="">-- select color --</option>
     {% for color in colors %}
     <option value="{{ color.color }}">{{ color.color }}</option>
     {% endfor %}
@@ -44,8 +44,8 @@ title: 写真を見る
           alt="{{ item.description_ja }} 蘭裕園 Ranyuen"/>
       </a>
       <div class="photo-description">
-        <div>{{ item.description_ja }}</div>
-        <div>{{ item.description_en }}</div>
+        <span>{{ item.description_ja }}</span> /
+        <span>{{ item.description_en }}</span>
       </div>
     </div>
   {% endfor %}
