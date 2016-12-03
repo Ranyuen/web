@@ -15,20 +15,16 @@ class ExamQuestion extends Eloquent\Model
     public static function readFromJSON($json_file) {
         if (isset($json_file)) {
             $exams = json_decode(file_get_contents($json_file), true);
+            var_dump($exam);
             // select type easy, hard, expert, photo
-            switch ($exams['name']) {
-                case '蘭検定 (初級)':
-                    $type = 'easy';
-                    break;
-                case '蘭検定 (上級)':
-                    $type = 'hard';
-                    break;
-                case '蘭検定 (博士編)':
-                    $type = 'expert';
-                    break;
-                case '蘭検定 (写真編)':
-                    $type = 'photo';
-                    break;
+            if ($exams['name'] === '蘭検定 (初級)') {
+                $type = 'easy';
+            } else if ($exams['name'] === '蘭検定 (上級)') {
+                $type = 'hard';
+            } else if ($exams['name'] === '蘭検定 (博士編)') {
+                $type = 'expert';
+            } else if ($exams['name'] === '蘭検定 (写真編)') {
+                $type = 'photo';
             }
             $exams = $exams['questions'];
             // register question
