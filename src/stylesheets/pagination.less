@@ -1,39 +1,48 @@
 @charset "utf-8";
-// @import (less) "../bower_components/colorbox/example1/colorbox.css";
 
 .disabled{
   visibility : hidden;
 }
 
 ul.pagination {
-  margin-bottom: 20px;
+  margin: 1.5rem 0 2.0rem;
   list-style: none;
-  padding: 10px;
+  padding: 10px 0;
+  min-width: 300px;
+  text-align: center;
 
   li{
     display: inline-block;
     margin-bottom: 10px;
 
+    &.active {
+      a {
+        background-color: rgba(71, 255, 92, 0.8);
+        pointer-events: none;
+        color: #fff;
+      }
+    }
+
     a {
-      color: #555;
+      display: block;
+      width: 1.8rem;
+      height: 1.8rem;
+      text-align: center;
+      color: #000;
       margin: 5px;
-      padding: 3px 10px;
-      border: solid 1px;
+      padding: 1px;
+      border: solid 1px #888;
       border-radius: 5px;
       text-decoration: none;
-      line-height: 2;
-
+      -webkit-transition: 0.6s;
+      -moz-transition: 0.6s;
+      -o-transition: 0.6s;
+      -ms-transition: 0.6s;
+      transition: 0.6s;
     }
-    a:hover{
-      background-color: #ffe8e0;
-      border-color: #ffe8e0;
-    }
-  }
-}
 
-.active{
-  a {
-    background-color: #CFFFDE;
-    pointer-events : none;
+    a:hover {
+      background-color: #cfffde;
+    }
   }
 }
