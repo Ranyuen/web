@@ -12,21 +12,23 @@ class ExamQuestion extends Eloquent\Model
     protected $table   = 'exam_question';
     protected $guarded = ['id'];
 
-    // public function answers() {
-
-    //     return $this->hasMany(ExamAnswer::class);
-    // }
-
     public static function readFromJSON($json_file) {
         if (isset($json_file)) {
             $exams = json_decode(file_get_contents($json_file), true);
-            // select type easy, hard, expert
-            if ($exams['name'] === '蘭検定 (初級)') {
-                $type = 'easy';
-            } else if ($exams['name'] === '蘭検定 (上級)') {
-                $type = 'hard';
-            } else if ($exams['name'] === '蘭検定 (博士編)') {
-                $type = 'expert';
+            // select type easy, hard, expert, photo
+            switch ($exams['name']) {
+                case '蘭検定 (初級)':
+                    $type = 'easy';
+                    break;
+                case '蘭検定 (上級)':
+                    $type = 'hard';
+                    break;
+                case '蘭検定 (博士編)':
+                    $type = 'expert';
+                    break;
+                case '蘭検定 (写真編)':
+                    $type = 'photo';
+                    break;
             }
             $exams = $exams['questions'];
             // register question
