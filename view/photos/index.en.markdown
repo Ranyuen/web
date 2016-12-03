@@ -6,6 +6,7 @@ Photos in Ranyuen
 <link href="/assets/stylesheets/photoGallery.css" rel="stylesheet"/>
 <link href="/assets/stylesheets/colorbox.css" rel="stylesheet"/>
 <link href="/assets/stylesheets/pagination.css" rel="stylesheet"/>
+
 <form id="search-form" method="GET">
   <select id="search-form-species_name" name="species_name">
     <option value="" {% if species_name == null %}selected{% endif %}>--Select species--</option>
@@ -14,6 +15,15 @@ Photos in Ranyuen
     <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>Ponerorchis</option>
     <option value="Japanease native orchid" {% if species_name == 'Japanease native orchid' %}selected{% endif %}>Japanese native orchids</option>
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>Others</option>
+  </select>
+</form>
+<form class="select" id="search-form-color" method="GET">
+  <input type="hidden" name="species_name" value="{{ species_name }}">
+  <select id="search-form-color" name="color">
+    <option value="">-- エビネの花色選択 --</option>
+    {% for color in colors %}
+    <option value="{{ color.color }}" {% if select_color == color.color %}selected{% endif %}>{{ color.color }}</option>
+    {% endfor %}
   </select>
 </form>
 <div>

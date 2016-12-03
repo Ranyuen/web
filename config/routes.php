@@ -112,10 +112,10 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
 });
 
 $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
-    $controller = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
+    $controller  = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
     $speciesName = $req->get('species_name');
     $color       = $req->get('color');
-    $photos = $controller->photos($req, 0, 500);
+    $photos      = $controller->photos($req, 0, 500);
     $photos = array_map(
         function ($photo) {
             $thumbWidth = 349;
@@ -134,9 +134,10 @@ $router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
     $params = $renderer->defaultParams($lang, $req->getPathInfo());
     if (!is_null($speciesName)) {
-        $params['colors'] = Photo::where('species_name', $speciesName)->whereNotNull('color')->distinct()->get(['color']);
+        $params['colors'] = Photo::where('species_name', $speciesName)
+            ->whereNotNull('color')->distinct()->get(['color']);
     }
-    $params['select_color']        = $color;
+    $params['select_color'] = $color;
     $params['species_name'] = $speciesName;
     $params['photos']       = $photos;
     $params['paginator']    = $paginator;

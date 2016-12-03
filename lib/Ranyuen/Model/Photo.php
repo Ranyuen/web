@@ -41,6 +41,11 @@ class Photo extends Eloquent\Model
                     ->get();
     }
 
+    public static function getNewPhotos()
+    {
+        return self::orderBy('is_top', 'desc')->get();
+    }
+
     protected $table = 'photo';
 
     /**
@@ -138,7 +143,6 @@ class Photo extends Eloquent\Model
         touch($cacheFilename);
         header('Content-Type: image/jpeg');
         header('Content-Length: '.filesize($cacheFilename));
-        // ob_clean();
         flush();
         readfile($cacheFilename);
     }
@@ -166,9 +170,6 @@ class Photo extends Eloquent\Model
     private function deleteOldCache()
     {
         $cacheDir = 'images/.cache';
-        // $isDirTooLarge = function () use ($cacheDir) {
-        //     return preg_match('/\A[0-9]+G/', exec("du -h $cacheDir"));
-        // };
         if ($dir = opendir($cacheDir)) {
             while (($file = readdir($dir)) !== false) {
                 if (is_file($file)
@@ -180,16 +181,5 @@ class Photo extends Eloquent\Model
             }
             closedir($dir);
         }
-        // if ($isDirTooLarge()) {
-        //     $filenames = glob("$cacheDir/*.*");
-        //     $filesizes = array_map(
-        //         function ($filename) { return filesize($filename); },
-        //         $filenames);
-        //     array_multisort($filenames,
-        //         $filesizes, SORT_ASC);
-        //     while ($isDirTooLarge() && $filenames) {
-        //         unlink(array_pop($filenames));
-        //     }
-        // }
     }
 }
