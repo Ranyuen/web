@@ -43,20 +43,39 @@ function checkAnswers() {
       selectedAnswers.push('未選択');
     }
   }
+  $('.thum').css({
+    'filter': 'brightness(35%)',
+    'border': 'solid 2px red',
+    'margin': '-2px'
+  });
   var correction = selectedAnswers.map(function(element, index) {
     var html;
-    if (element === collectAnswers[index]) {
-      ++exam.correctsNumber;
-      html = '<div style="margin-top: 15px;"><span style="color: red; font-weight: bold;">◯</span> あなたの回答 : <span style="color: red;">' + element + '</span><div>';
+    if (exam.type == 'photo') {
+      $('#' + collectAnswers[index]).css({
+        'filter': 'brightness(100%)'
+      });
+      if (element === collectAnswers[index]) {
+        ++exam.correctsNumber;
+        html = '<div class="is_correct"><span class="red">◯ 正解!</span>';
+      } else {
+        html = '<div class="is_correct"><span class="blue">× 不正解</span>';
+      }
     } else {
-      html = '<div style="margin-top: 15px;"><span style="color: blue; font-weight: bold;">×</span> あなたの回答 : ' + element + '</div><div style="color: red;">　正解 : ' + collectAnswers[index] + '</div>';
+      if (element === collectAnswers[index]) {
+        ++exam.correctsNumber;
+        html = '<div style="margin-top: 15px;"><span style="color: red; font-weight: bold;">◯</span> あなたの回答 : <span style="color: red;">' + element + '</span><div>';
+      } else {
+        html = '<div style="margin-top: 15px;"><span style="color: blue; font-weight: bold;">×</span> あなたの回答 : ' + element + '</div><div style="color: red;">　正解 : ' + collectAnswers[index] + '</div>';
+      }
     }
-
     return html;
   });
+
   for(var i in correction) {
     var _i = Number(i) + 1;
     $('#true_or_false' + _i).html(correction[i]);
+    $('description' + _i).html(questions[i].description);
+
   }
   makeRecord();
   if ($('#t_userName').val()) {
@@ -65,7 +84,15 @@ function checkAnswers() {
   } else {
 
   }
-  deleteElement();
+  if (exam.type === 'photo') {
+    $('#chk').remove();
+    $('.radio').remove();
+    $('#examHeader').remove();
+  } else {
+    $('.choices').remove();
+    $('#chk').remove();
+    $('#examHeader').remove();
+  }
   createLinks();
 }
 
@@ -87,8 +114,10 @@ function makeRecord() {
     type = '初級編';
   } else if (exam.type === 'hard') {
     type = '上級編';
-  } else {
+  } else if (exam.type === 'expert') {
     type = '博士編';
+  } else {
+    type = '写真編';
   }
   exam.record = exam.point * exam.correctsNumber;
   if (exam.questionNumber !== 100) {
@@ -143,12 +172,6 @@ function makeRecord() {
   );
 
   return exam.record;
-}
-
-function deleteElement() {
-  $('.choices').remove();
-  $('#chk').remove();
-  $('#examHeader').remove();
 }
 
 function createLinks() {

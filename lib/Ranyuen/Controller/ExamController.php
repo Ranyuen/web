@@ -62,8 +62,8 @@ class ExamController extends Controller
      */
     public function index() {
         $renderer = new MainViewRenderer($this->renderer, $this->nav, $this->bgimage, $this->config);
-        $params = $renderer->defaultParams('ja', '/play/exam/');
-        $types = ['easy', 'hard', 'expert'];
+        $params   = $renderer->defaultParams('ja', '/play/exam/');
+        $types    = ['easy', 'hard', 'expert', 'photo'];
         foreach ($types as $type) {
             $query = ExamResult::selectRaw("user_name, max(points) as points, created_at")
                             ->orderBy('points', 'desc')
@@ -89,11 +89,9 @@ class ExamController extends Controller
     public function examQuestions($type)
     {
         $renderer = new MainViewRenderer($this->renderer, $this->nav, $this->bgimage, $this->config);
-        $params = $renderer->defaultParams('ja', '/play/exam/' . $type);
-
-        $instance = new ExamQuestion();
-        $orderBy = (($instance->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
-
+        $params   = $renderer->defaultParams('ja', '/play/exam/' . $type);
+        $exam     = new ExamQuestion();
+        $orderBy  = (($exam->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
         $questions = ExamQuestion::where('type', $type)
                                     ->orderByRaw($orderBy)
                                     ->take(100)
@@ -120,10 +118,9 @@ class ExamController extends Controller
     public function practiceQuestions($type, $id)
     {
         $renderer = new MainViewRenderer($this->renderer, $this->nav, $this->bgimage, $this->config);
-        $params = $renderer->defaultParams('ja', '/play/exam/' . $type);
-
-        $instance = new ExamQuestion();
-        $orderBy = (($instance->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
+        $params   = $renderer->defaultParams('ja', '/play/exam/' . $type);
+        $exam     = new ExamQuestion();
+        $orderBy = (($exam->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
 
         if ($id === 0) {
             $questions = ExamQuestion::where('type', $type)
@@ -146,7 +143,6 @@ class ExamController extends Controller
 
         $params['questions'] = $questions;
         $params['type'] = $type;
-
 
         $article = Article::findByPath('/play/exam/' . $type . '/practice');
         $content = $article->getContent('ja');
