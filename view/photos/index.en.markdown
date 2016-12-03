@@ -26,7 +26,7 @@ Photos in Ranyuen
     {% endfor %}
   </select>
 </form>
-<div>
+<div style="clear: both;">
   {{ paginator | raw }}
 </div>
 <div id="photo-gallery" class="photos">
