@@ -165,6 +165,13 @@ gulp.task('uglifyjs', function () {
     },
     {
       src: [
+        'src/bower_components/colorbox/jquery.colorbox-min.js',
+        'src/bower_components/colorbox/i18n/jquery.colorbox-ja.js',
+      ],
+      dest: 'colorbox.min.js'
+    },
+    {
+      src: [
         'src/javascripts/changeTab.js',
       ],
       dest: 'changeTab.min.js'
