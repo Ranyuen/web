@@ -141,11 +141,19 @@ class MainHelper extends Helper
             $photo->loadImageSize();
         }
         $src = $photo->getPath();
+        list($originWidth, $originHeight) = getimagesize($src);
         if (!$width) {
             $width = $photo->width;
         }
         if (!$height) {
             $height = $photo->height;
+        }
+        if ($class === 'choice_img') {
+            if ($originWidth > $originHeight) {
+                $class = 'choice_img_w';
+            } else {
+                $class = 'choice_img_h';
+            }
         }
         $alt =  $alt . "";
         if (!$title) {
