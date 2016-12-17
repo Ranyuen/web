@@ -10,6 +10,7 @@ var init = $(function () {
   exam.record         = 0;
   exam.type           = questions[0].type;
   exam.userName       = null;
+  exam.passWd         = null;
   var countDown = setInterval(function() {
     if (exam.time === 0) {
       clearInterval(countDown);
@@ -80,6 +81,7 @@ function checkAnswers() {
   makeRecord();
   if ($('#t_userName').val()) {
     exam.userName = sanitaize($('#t_userName').val());
+    exam.passWd   = sanitaize($('#t_passWd').val());
     registResult();
   } else {
 
@@ -182,6 +184,9 @@ function createLinks() {
 }
 
 function finish() {
+  $('body, html').animate({
+    scrollTop: 0
+  }, 500);
   exam.time = 0;
 }
 

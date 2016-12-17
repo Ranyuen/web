@@ -159,6 +159,7 @@ class ExamController extends Controller
             $result = $_POST['exam'];
             $examResult            = new ExamResult;
             $examResult->user_name = htmlspecialchars($result['userName']);
+            $examResult->passwd    = htmlspecialchars($result['passWd']);
             $examResult->points    = $result['correctsNumber'];
             $examResult->type      = $result['type'];
             $examResult->save();
