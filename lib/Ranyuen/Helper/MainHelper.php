@@ -134,7 +134,7 @@ class MainHelper extends Helper
      */
     public function echoImg($uuid, $width = null, $height = null, $alt = null, $title = null, $class = null)
     {
-        $photo = Photo::find($uuid);
+        $photo = Photo::where('uuid', $uuid)->first();
         if (!$photo) {
             $photo = new Photo();
             $photo->uuid = $uuid;

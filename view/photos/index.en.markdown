@@ -36,7 +36,7 @@ Photos in Ranyuen
         class="lightbox"
         title="{{ item.description_en }} Ranyuen">
         <img rel="gallery"
-        src="/images/gallery/{{ item.uuid }}.jpg"
+        src="/api/photo?format=jpeg&uuid={{ item.uuid }}&width={{ item.thumb_width }}"
         width="{{ item.thumb_width }}"
         height="{{ item.thumb_height }}"
         alt="{{ item.description_en }} Ranyuen"/>
