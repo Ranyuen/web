@@ -50,7 +50,7 @@ class ApiPhotoController extends Controller
     /**
      * Echo a photo.
      *
-     * @param string $id     Photo ID.
+     * @param string $uuid     Photo UUID.
      * @param int    $width  Photo pixel width.
      * @param int    $height Photo pixel height.
      *
@@ -59,15 +59,15 @@ class ApiPhotoController extends Controller
      * @SuppressWarnings(PHPMD.StaticAccess)
      * @Route('/api/photo')
      */
-    public function photo($id, $width = null, $height = null)
+    public function photo($uuid, $width = null, $height = null)
     {
-        if (!$id) {
+        if (!$uuid) {
             return $this->toJsonResponse(['error' => 'id is required.'], 404);
         }
         if (!($width || $height)) {
             return $this->toJsonResponse(['error' => 'width xor height is required.'], 404);
         }
-        $photo = Photo::find($id);
+        $photo = Photo::find($uuid);
         $photo->loadImageSize();
         list($width, $height) = $this->calcSize($photo, $width, $height);
         $photo->renderResized($width, $height);

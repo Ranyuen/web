@@ -32,11 +32,11 @@ Photos in Ranyuen
 <div id="photo-gallery" class="photos">
   {% for item in paginator %}
     <div class="photo">
-      <a href="/images/gallery/{{ item.id }}.jpg"
+      <a href="/images/gallery/{{ item.uuid }}.jpg"
         class="lightbox"
         title="{{ item.description_en }} Ranyuen">
         <img rel="gallery"
-        src="/api/photo?format=jpeg&id={{ item.id }}&width={{ item.thumb_width }}"
+        src="/images/gallery/{{ item.uuid }}.jpg"
         width="{{ item.thumb_width }}"
         height="{{ item.thumb_height }}"
         alt="{{ item.description_en }} Ranyuen"/>

@@ -33,12 +33,12 @@ title: 花華アルバム
 <div id="photo-gallery" class="photos">
   {% for item in paginator %}
     <div class="photo">
-      <a href="/images/gallery/{{ item.id }}.jpg"
+      <a href="/images/gallery/{{ item.uuid }}.jpg"
         class="lightbox"
         target="_blank"
         title="{{ item.description_ja }} 蘭裕園 Ranyuen">
         <img rel="gallery"
-          src="/api/photo?format=jpeg&id={{ item.id }}&width={{ item.thumb_width }}"
+          src="/api/photo?format=jpeg&uuid={{ item.uuid }}&width={{ item.thumb_width }}"
           width="{{ item.thumb_width }}"
           height="{{ item.thumb_height }}"
           alt="{{ item.description_ja }} 蘭裕園 Ranyuen"/>
