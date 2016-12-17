@@ -124,7 +124,7 @@ class MainHelper extends Helper
     /**
      * Echo an image.
      *
-     * @param string $id     Photo UUID.
+     * @param string $uuid     Photo UUID.
      * @param int    $width  Display width.
      * @param int    $height Display height.
      *
@@ -132,12 +132,12 @@ class MainHelper extends Helper
      *
      * @SuppressWarnings(PHPMD.StaticAccess)
      */
-    public function echoImg($id, $width = null, $height = null, $alt = null, $title = null, $class = null)
+    public function echoImg($uuid, $width = null, $height = null, $alt = null, $title = null, $class = null)
     {
-        $photo = Photo::find($id);
+        $photo = Photo::where('uuid', $uuid)->first();
         if (!$photo) {
             $photo = new Photo();
-            $photo->id = $id;
+            $photo->uuid = $uuid;
             $photo->loadImageSize();
         }
         $src = $photo->getPath();
