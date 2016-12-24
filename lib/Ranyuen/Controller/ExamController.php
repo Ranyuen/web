@@ -67,6 +67,7 @@ class ExamController extends Controller
         foreach ($types as $type) {
             $query = ExamResult::selectRaw("user_name, max(points) as points, created_at")
                             ->orderBy('points', 'desc')
+                            ->orderBy('created_at', 'asc')
                             ->where('type', $type)
                             ->groupBy('user_name')
                             ->take(10)
