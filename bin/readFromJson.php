@@ -10,4 +10,5 @@ use Ranyuen\Model\ExamQuestion;
 // ExamQuestion::readFromJSON('assets/exam/hard.json');
 // ExamQuestion::readFromJSON('assets/exam/expert.json');
 // ExamQuestion::readFromJSON('assets/exam/photo.json');
-ExamQuestion::readFromJSON('assets/exam/20161217_photo.json');
+// ExamQuestion::readFromJSON('assets/exam/20161217_photo.json');
+ExamQuestion::readFromJSON('assets/exam/20161224_photo.json');
