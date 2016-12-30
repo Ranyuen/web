@@ -35,7 +35,7 @@ class ApiPhotoController extends Controller
         $speciesName = $req->get('species_name');
         $color       = $req->get('color');
         if (is_null($speciesName)) {
-            $photos = Photo::getNewPhotos();
+            $photos = Photo::getRandomPhotos();
         } else {
             if (is_null($color)) {
                 $photos = Photo::getPhotosBySpeciesName($speciesName);

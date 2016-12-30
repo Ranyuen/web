@@ -19,14 +19,15 @@ class Photo extends Eloquent\Model
 {
     public static function getPhotos()
     {
-        return self::all();
+        return self::orderByRaw('RAND()')->get();;
     }
 
     public static function getPhotosBySpeciesName($speciesName)
     {
         switch ($speciesName) {
             case 'all':
-                return self::all();
+            case '':
+                return self::orderByRaw('RAND()')->get();;
             case 'others':
                 return self::whereNull('species_name')->get();
             default:
@@ -44,6 +45,11 @@ class Photo extends Eloquent\Model
     public static function getNewPhotos()
     {
         return self::orderBy('is_top', 'desc')->orderBy('id', 'desc')->get();
+    }
+
+    public static function getRandomPhotos()
+    {
+        return self::orderByRaw('RAND()')->get();
     }
 
     protected $table = 'photo';
