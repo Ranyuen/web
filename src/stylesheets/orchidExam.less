@@ -10,6 +10,29 @@
   display: inline-block;
 }
 
+.radio {
+  display: none;
+}
+
+.radio .radio-icon {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  font-weight: 30px;
+}
+
+.radio-icon:before {
+  content: "\f00c";
+  color: #CCC;
+  font-size: 30px;
+}
+
+.radio:checked + .radio-icon:before {
+  content: "✔︎";
+  color: #DE2434;
+  font-size: 30px;
+}
+
 #examHeader {
   margin: 50px 0 40px 0;
   padding: 10px 10px;
