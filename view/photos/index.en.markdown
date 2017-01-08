@@ -14,6 +14,7 @@ Photos in Ranyuen
     <option value="Calanthe" {% if species_name == 'Calanthe' %}selected{% endif %}>Calanthe</option>
     <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>Ponerorchis</option>
     <option value="Japanease native orchid" {% if species_name == 'Japanease native orchid' %}selected{% endif %}>Japanese native orchids</option>
+    <option value="Ranyuen style" {% if species_name == 'Ranyuen style' %}selected{% endif %}>Ranyuen style</option>
     <option value="others" {% if species_name == 'others' %}selected{% endif %}>Others</option>
   </select>
 </form>

@@ -89,6 +89,7 @@ function checkAnswers() {
   if (exam.type === 'photo') {
     $('#chk').remove();
     $('.radio').remove();
+    $('.radio-icon').remove();
     $('#examHeader').remove();
   } else {
     $('.choices').remove();

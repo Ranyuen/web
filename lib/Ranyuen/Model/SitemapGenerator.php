@@ -84,6 +84,9 @@ class SitemapGenerator
         $nativeOrchid = Photo::where('species_name', 'Japanease native orchid')->count() % 30 === 0
                                       ? Photo::where('species_name', 'Japanease native orchid')->count() / 30
                                       : ceil(Photo::where('species_name', 'Japanease native orchid')->count() / 30);
+        $ranyuenStyle = Photo::where('species_name', 'Ranyuen style')->count() % 30 === 0
+                                    ? Photo::where('species_name', 'Ranyuen style')->count() / 30
+                                    : ceil(Photo::where('species_name', 'Ranyuen style')->count() / 30);
         $others = Photo::where('species_name', NULL)->count() % 30 === 0
                             ? Photo::where('species_name', NULL)->count() / 30
                             : ceil(Photo::where('species_name', NULL)->count() / 30);
@@ -101,6 +104,10 @@ class SitemapGenerator
         ]);
         $sitemap->add([
            'loc' => 'http://ranyuen.com/photos/?species_name=Japanease native orchid',
+           'priority' => $this->priority('http://ranyuen.com' . $article->path)
+        ]);
+        $sitemap->add([
+           'loc' => 'http://ranyuen.com/photos/?species_name=Ranyuen style',
            'priority' => $this->priority('http://ranyuen.com' . $article->path)
         ]);
         $sitemap->add([
@@ -134,6 +141,12 @@ class SitemapGenerator
         for ($i = 1; $i <= $nativeOrchid; $i++) {
             $sitemap->add([
                'loc' => 'http://ranyuen.com/photos/?species_name=Japanease native orchid&page=' . $i,
+               'priority' => $this->priority('http://ranyuen.com' . $article->path)
+            ]);
+        }
+        for ($i = 1; $i <= $ranyuenStyle; $i++) {
+            $sitemap->add([
+               'loc' => 'http://ranyuen.com/photos/?species_name=Ranyuen style&page=' . $i,
                'priority' => $this->priority('http://ranyuen.com' . $article->path)
             ]);
         }
