@@ -67,6 +67,7 @@ class ExamController extends Controller
         foreach ($types as $type) {
             $query = ExamResult::selectRaw("user_name, max(points) as points, created_at")
                             ->orderBy('points', 'desc')
+                            ->orderBy('created_at', 'asc')
                             ->where('type', $type)
                             ->groupBy('user_name')
                             ->take(10)
@@ -122,7 +123,7 @@ class ExamController extends Controller
         $exam     = new ExamQuestion();
         $orderBy = (($exam->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
 
-        if ($id === 0) {
+        if ($id !== 0) {
             $questions = ExamQuestion::where('type', $type)
                                     ->skip($id === '1' ? 0 : (50 * ($id - 1)))
                                     ->take(25)

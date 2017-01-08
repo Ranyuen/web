@@ -20,25 +20,28 @@ title: 花華アルバム
 <form class="select" id="search-form-color" method="GET">
   <input type="hidden" name="species_name" value="{{ species_name }}">
   <select id="search-form-color" name="color">
-    <option value="">-- エビネの花色選択 --</option>
-    {% for color in colors %}
-    <option value="{{ color.color }}" {% if select_color == color.color %}selected{% endif %}>{{ color.color }}</option>
-    {% endfor %}
+    {% if species_name == 'Calanthe' %}
+      <option value="">select colors</option>}
+      {% for color in colors %}
+        <option value="{{ color.color }}" {% if select_color == color.color %}selected{% endif %}>{{ color.color }}</option>
+      {% endfor %}
+    {% else %}
+      <option value="">----</option>}
+    {% endif %}
   </select>
 </form>
 <div style="clear: both;">
   {{ paginator | raw }}
 </div>
-
 <div id="photo-gallery" class="photos">
   {% for item in paginator %}
     <div class="photo">
-      <a href="/images/gallery/{{ item.id }}.jpg"
+      <a href="/images/gallery/{{ item.uuid }}.jpg"
         class="lightbox"
         target="_blank"
         title="{{ item.description_ja }} 蘭裕園 Ranyuen">
         <img rel="gallery"
-          src="/api/photo?format=jpeg&id={{ item.id }}&width={{ item.thumb_width }}"
+          src="/api/photo?format=jpeg&uuid={{ item.uuid }}&width={{ item.thumb_width }}"
           width="{{ item.thumb_width }}"
           height="{{ item.thumb_height }}"
           alt="{{ item.description_ja }} 蘭裕園 Ranyuen"/>

@@ -19,14 +19,15 @@ class Photo extends Eloquent\Model
 {
     public static function getPhotos()
     {
-        return self::all();
+        return self::orderByRaw('RAND()')->get();;
     }
 
     public static function getPhotosBySpeciesName($speciesName)
     {
         switch ($speciesName) {
             case 'all':
-                return self::all();
+            case '':
+                return self::orderByRaw('RAND()')->get();;
             case 'others':
                 return self::whereNull('species_name')->get();
             default:
@@ -43,7 +44,12 @@ class Photo extends Eloquent\Model
 
     public static function getNewPhotos()
     {
-        return self::orderBy('is_top', 'desc')->get();
+        return self::orderBy('is_top', 'desc')->orderBy('id', 'desc')->get();
+    }
+
+    public static function getRandomPhotos()
+    {
+        return self::orderByRaw('RAND()')->get();
     }
 
     protected $table = 'photo';
@@ -78,8 +84,8 @@ class Photo extends Eloquent\Model
                 continue;
             }
             foreach (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'] as $ext) {
-                if (is_file("images/$entry/$this->id.$ext")) {
-                    $path = "images/$entry/$this->id.$ext";
+                if (is_file("images/$entry/$this->uuid.$ext")) {
+                    $path = "images/$entry/$this->uuid.$ext";
                     break;
                 }
             }
@@ -134,7 +140,7 @@ class Photo extends Eloquent\Model
      */
     public function renderResized($newWidth, $newHeight)
     {
-        $cacheFilename = "images/.cache/{$this->id}_{$newWidth}x$newHeight.jpg";
+        $cacheFilename = "images/.cache/{$this->uuid}_{$newWidth}x$newHeight.jpg";
         $this->deleteOldCache();
         if (!file_exists($cacheFilename)) {
             $this->loadImage();
