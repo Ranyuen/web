@@ -3,7 +3,7 @@ $(function () {
   $('nav ul li a').each(function () {
     var href = $(this).attr('href');
     if (location.href.match(href)) {
-      if (href !== '/') {
+      if (href !== '/' && href !== '/en/') {
         $(this).addClass('activate');
       }
     } else {
