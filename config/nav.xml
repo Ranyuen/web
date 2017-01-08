@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="yes"?>
 <nav>
     <lang name="en">
+        <dir path="about_us">
+            <rest-pages/>
+        </dir>
         <dir path="calanthe">
             <rest-pages/>
         </dir>
         <dir path="ponerorchis">
-            <rest-pages/>
-        </dir>
-        <dir path="about_us">
             <rest-pages/>
         </dir>
         <dir path="photos">
