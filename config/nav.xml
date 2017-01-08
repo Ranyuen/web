@@ -71,6 +71,7 @@
             <page path="?species_name=Calanthe" title="エビネ"/>
             <page path="?species_name=Ponerorchis" title="アワチドリ / 夢ちどり"/>
             <page path="?species_name=Japanease+native+orchid" title="日本の野生ラン"/>
+            <page path="?species_name=Ranyuen+style" title="蘭裕園スタイル"/>
             <page path="?species_name=others" title="その他"/>
         </dir>
         <dir path="play">
