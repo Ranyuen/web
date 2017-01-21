@@ -5,7 +5,8 @@
             <rest-pages/>
         </dir>
         <dir path="calanthe">
-            <rest-pages/>
+            <dir path="cultivation">
+            </dir>
         </dir>
         <dir path="ponerorchis">
             <rest-pages/>
