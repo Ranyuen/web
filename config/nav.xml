@@ -81,6 +81,7 @@
             <page path="coloring" title="ぬりえ"/>
             <page path="shooting_game" title="ラン害虫退治ゲーム"/>
             <page path="slide_puzzle" title="スライドパズル"/>
+            <page path="download_images" title="壁紙プレゼント"/>
         </dir>
         <dir path="columns">
             <page path="index" title="自然人の語り"/>
