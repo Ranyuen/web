@@ -9,7 +9,11 @@
             </dir>
         </dir>
         <dir path="ponerorchis">
-            <rest-pages/>
+            <dir path="cultivation">
+            </dir>
+        </dir>
+        <dir path="cymbidium">
+            <page path="index" title="Cymbidium"/>
         </dir>
         <dir path="photos">
             <page path="index" title="Photos"/>
