@@ -1,5 +1,5 @@
-@charset "utf-8";
-@import "helpers";
+@charset 'utf-8';
+@import 'helpers';
 
 article h1 {
   background-image: url(/assets/images/icons/uchoran_icon.gif);
@@ -8,14 +8,125 @@ article h1 {
   line-height: 70px;
   padding-left: 35px;
   padding-top: 3px;
-  text-shadow: 3px 3px 1px #fff, -3px 3px 1px #fff, 3px -3px 1px #fff, -3px -3px 1px #fff, 3px 0 1px #fff, 0 3px 1px #fff, -3px 0 1px #fff, 0 -3px 1px #fff;
+  text-shadow: 3px 3px 1px #ffffff, -3px 3px 1px #ffffff, 3px -3px 1px #ffffff, -3px -3px 1px #ffffff, 3px 0 1px #ffffff, 0 3px 1px #ffffff, -3px 0 1px #ffffff, 0 -3px 1px #ffffff;
 }
 
 figure {
   margin: 10px auto;
   width: 90%;
+  figcaption {
+    display: none;
+  }
 
   &.awayume_img {
     max-width: 700px;
+  }
+}
+
+.pests-ul {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+
+  .cf;
+  .pests-li {
+    position: relative;
+    z-index: auto;
+    float: left;
+    width: 50% / 100% * 100%;
+    a {
+      display: block;
+      padding: 1% / 50% * 100%;
+      border-radius: 4px;
+      img {
+        width: 100% / 1% * 100%;
+      }
+      &:hover {
+        opacity: .8;
+        background: #dd0000;
+        .pests-li-box {
+          z-index: 3;
+          display: block;
+        }
+      }
+      .pests-li-box {
+        line-height: 32px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        display: none;
+        padding: 4px;
+        border-radius: 4px;
+        background: #dd0000;
+        .pests-li-box-text {
+          margin: 0;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+.pests-section {
+  margin-top: 8% / 90% * 100%;
+
+  .cf;
+}
+
+.pests-section-figure {
+  float: left;
+  width: 25% / 100% * 100%;
+  img {
+    width: 90% / 100% * 100%;
+    margin-top: 5% / 90% * 100%;
+    margin-right: 10% / 90% * 100%;
+  }
+  figcaption {
+    margin-top: 5% / 90% * 100%;
+    margin-right: 10% / 90% * 100%;
+  }
+}
+
+.pests-section-ol {
+  float: left;
+  width: 75% / 100% * 100%;
+  list-style-position: inside;
+}
+
+.pests-section-p {
+  float: left;
+  width: 75% / 100% * 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .pests-ul {
+    .pests-li {
+      width: 25% / 100% * 100%;
+      a {
+        .pests-li-box {
+          top: 0;
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .pests-ul {
+    .pests-li {
+      width: 10% / 100% * 100%;
+      a {
+        .pests-li-box {
+          top: 100px;
+          right: -40px;
+          left: -40px;
+        }
+      }
+    }
   }
 }
