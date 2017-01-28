@@ -15,7 +15,6 @@ use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 use Ranyuen\Model\Article;
 use Ranyuen\Model\ArticleContent;
-use Ranyuen\Model\SitemapGenerator;
 use Ranyuen\Template\Template;
 
 /**
@@ -92,9 +91,6 @@ class AdminArticlesController extends AdminController
         }
         $original->sync($newArticle);
 
-        $sitemap = new SitemapGenerator;
-        $sitemap->generateSitemap();
-
         return json_encode($original);
     }
 
@@ -111,9 +107,6 @@ class AdminArticlesController extends AdminController
     {
         $this->auth();
         Article::destroy($id);
-
-        $sitemap = new SitemapGenerator;
-        $sitemap->generateSitemap();
 
         return new Response('', 303, ['Location' => '/admin/']);
     }

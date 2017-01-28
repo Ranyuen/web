@@ -5,7 +5,6 @@ use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 use Ranyuen\Model\Article;
-use Ranyuen\Model\Photo;
 use Ranyuen\Model\ExamQuestion;
 use Ranyuen\Template\MainViewRenderer;
 use Ranyuen\Template\ViewRenderer;
@@ -111,39 +110,5 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
     return $renderer->render('news/list.ja', $params);
 });
 
-$router->get('/photos/', function (App $app, Request $req, $lang, ViewRenderer $renderer, $nav, $bgimage, $config) {
-    $controller  = $app->container->newInstance('Ranyuen\Controller\ApiPhotoController');
-    $speciesName = $req->get('species_name');
-    $color       = $req->get('color');
-    $photos      = $controller->photos($req, 0, 500);
-    $photos = array_map(
-        function ($photo) {
-            $thumbWidth = 349;
-            $thumbHeight = floor($photo['height'] * $thumbWidth / $photo['width']);
-            $photo['thumb_width']  = $thumbWidth;
-            $photo['thumb_height'] = $thumbHeight;
-
-            return $photo;
-        },
-        json_decode($photos->getContent(), true)
-    );
-
-    $records = $photos;
-    $strana = new \Strana\Paginator();
-    $paginator = $strana->perPage(30)->make($records, null, array('maximumPages' => 10));
-    $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
-    $params = $renderer->defaultParams($lang, $req->getPathInfo());
-    if (!is_null($speciesName)) {
-        $params['colors'] = Photo::where('species_name', $speciesName)
-            ->whereNotNull('color')->distinct()->get(['color']);
-    }
-    $params['select_color'] = $color;
-    $params['species_name'] = $speciesName;
-    $params['photos']       = $photos;
-    $params['paginator']    = $paginator;
-
-    return $renderer->render("photos/index.$lang", $params);
-
-});
-
+$router->registerController('Ranyuen\Controller\PhotoController');
 $router->registerController('Ranyuen\Controller\ArticleController');
