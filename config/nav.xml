@@ -65,6 +65,7 @@
         </dir>
         <dir path="about_us">
             <page path="sitemap"/>
+            <page path="q_a"/>
             <page path="news"/>
             <page path="direction"/>
             <page path="how_to_buy"/>
