@@ -28,10 +28,10 @@
   {% if path == 'columns/' %}
   <link rel="stylesheet" href="/assets/stylesheets/columns.css"/>
   {% endif %}
-  <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
   <script src="/assets/javascripts/layout.min.js"></script>
+  {% if path == 'cymbidium/' %}
+  <script src="/assets/javascripts/infinitescroll.min.js"></script>
+  {% endif %}
 </head>
 <body class="{{ lang }}" lang="{{ lang }}">
   <div class="container">
@@ -46,9 +46,6 @@
         <div class="linkicon">
           <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
           <div class="icons">
-<!--             <div class="icon">
-              <p><a href="http://www.instagram.com/ranyuen/"><img src="/assets/images/icons/ig_icon.png" height="25" alt="instagramのアイコン" /></a></p>
-            </div> -->
             <div class="icon">
               <p><a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a></p>
             </div>
