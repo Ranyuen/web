@@ -39,6 +39,7 @@
             </dir>
             <page path="recent_failure_and_provision"/>
             <page path="growings_calanthe_in_the_new_way"/>
+            <page path="calanthe_q_a"/>
         </dir>
         <dir path="ponerorchis">
             <page path="kind_of_ponerorchis"/>
@@ -65,7 +66,6 @@
         </dir>
         <dir path="about_us">
             <page path="sitemap"/>
-            <page path="q_a"/>
             <page path="news"/>
             <page path="direction"/>
             <page path="how_to_buy"/>
