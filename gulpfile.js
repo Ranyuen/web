@@ -186,6 +186,12 @@ gulp.task('uglifyjs', function () {
     },
     {
       src: [
+        'src/javascripts/photo_editor.js',
+      ],
+      dest: 'photo_editor.min.js'
+    },
+    {
+      src: [
         'src/javascripts/orchidExam.js'
       ],
       dest :'orchidExam.js'

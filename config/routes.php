@@ -93,6 +93,7 @@ $router->registerController('Ranyuen\Controller\ApiPhotoController');
 $router->registerController('Ranyuen\Controller\AdminArticlesController');
 $router->registerController('Ranyuen\Controller\AdminController');
 $router->registerController('Ranyuen\Controller\ExamController');
+$router->registerController('Ranyuen\Controller\AdminPhotosController');
 
 $router->get('/columns/', function (ViewRenderer $renderer, $nav, $bgimage, $config) {
     $renderer = new MainViewRenderer($renderer, $nav, $bgimage, $config);
@@ -109,6 +110,7 @@ $router->get('/news/', function (ViewRenderer $renderer, $nav, $bgimage, $config
 
     return $renderer->render('news/list.ja', $params);
 });
+
 
 $router->registerController('Ranyuen\Controller\PhotoController');
 $router->registerController('Ranyuen\Controller\ArticleController');

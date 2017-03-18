@@ -188,4 +188,18 @@ class Photo extends Eloquent\Model
             closedir($dir);
         }
     }
+
+    /**
+     * Show inserted photos
+     *
+     * @return Photo
+     */
+    public static function getInsertedPhotos()
+    {
+        return self::selectRaw('created_at, count(*) as count, species_name')
+                    ->whereNotIn('created_at', ['0000-00-00 00:00:00'])
+                    ->groupBy('created_at')
+                    ->orderBy('created_at', 'desc')
+                    ->get();
+    }
 }

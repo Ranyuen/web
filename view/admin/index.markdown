@@ -5,6 +5,8 @@ Admin
 ==
 Articles
 --
+[New photos](photos/)
+
 [New article](articles/edit/0)
 
 {% for article in articles %}
