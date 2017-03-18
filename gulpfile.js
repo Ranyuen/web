@@ -123,6 +123,7 @@ gulp.task('less', function () {
       'src/stylesheets/playColoring.less',
       'src/stylesheets/playMenu.less',
       'src/stylesheets/ponerorchis.less',
+      'src/stylesheets/cymbidium.less',
       'src/stylesheets/columns.less',
       'src/stylesheets/sitemap.less',
       'src/stylesheets/pagination.less',
