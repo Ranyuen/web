@@ -7,6 +7,8 @@ Articles
 --
 [New photos](photos/)
 
+[New photos(assets)](photos/assets)
+
 [New article](articles/edit/0)
 
 {% for article in articles %}

@@ -25,13 +25,13 @@ class Util extends Eloquent\Model
     }
 
     /**
-     * FileExtensionGetAllowUpload
+     * fileExtensionGetAllowUpload
      *
      * @param [type] $ext [description]
      *
      * @return boolean
      */
-    public static function FileExtensionGetAllowUpload($ext){
+    public static function fileExtensionGetAllowUpload($ext){
         $allowExt = array('jpg');
         foreach ($allowExt as $v) {
           if ($v === $ext) {
@@ -39,5 +39,22 @@ class Util extends Eloquent\Model
           }
         }
         return false;
+    }
+
+    /**
+     * uploadFileValidator description
+     *
+     * @param  [file] $uploadFiles [description]
+     *
+     * @return boolean
+     */
+    public static function uploadFileValidator($uploadFiles)
+    {
+        foreach ($uploadFiles['error'] as $error) {
+            if (!isset($error) && !is_int($error)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

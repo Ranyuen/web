@@ -25,7 +25,9 @@ use Ranyuen\Model\Util;
  */
 class AdminPhotosController extends AdminController
 {
-    private $galleryPath = 'images/tmp/';
+    private $galleryPath = 'images/gallery_new/';
+    private $assetsPath  = 'images/assets_new/';
+
     /**
      * AdminPhotos index
      *
@@ -47,17 +49,34 @@ class AdminPhotosController extends AdminController
     }
 
     /**
+     * [photosAssets description]
+     * @param  Router $router [description]
+     * @return [type]         [description]
+     *
+     * @Route('/photos/assets')
+     */
+    public function photosAssets(Router $router)
+    {
+        $this->auth();
+
+        return $this->renderer->render(
+            'admin/photos/assets', []
+        );
+    }
+
+    /**
      * registrePhotos
      *
      * @Route('/photos/', via=POST)
      */
     public function registerPhotos()
     {
-        if (!isset($_POST['photos_upload']) || empty($_POST['description_en']) || empty($_POST['description_ja']) || empty($_POST['species_name'])) return false;
+        if (!Util::uploadFileValidator($_FILES['folder_select'])) return;
+        if (!isset($_POST['photos_upload']) || empty($_POST['description_en']) || empty($_POST['description_ja']) || empty($_POST['species_name'])) return;
 
         for ($i = 0; $i < count($_FILES['folder_select']['name']); $i++) {
             $fileExt = pathinfo($_FILES['folder_select']['name'][$i], PATHINFO_EXTENSION);
-            if (Util::FileExtensionGetAllowUpload($fileExt) && is_uploaded_file($_FILES['folder_select']['tmp_name'][$i])) {
+            if (Util::fileExtensionGetAllowUpload($fileExt) && is_uploaded_file($_FILES['folder_select']['tmp_name'][$i])) {
 
                 $photoSize = getimagesize($_FILES['folder_select']['tmp_name'][$i]);
                 $uuid = Util::makeUuid();
@@ -73,11 +92,43 @@ class AdminPhotosController extends AdminController
                 $photo->width          = $photoSize[0];
                 $photo->height         = $photoSize[1];
                 $photo->save();
-            } else {
             }
         }
 
         return new Response('', 303, ['Location' => '/admin/photos/']);
+    }
+
+    /**
+     * registerPhotosAssets
+     *
+     * @param  Router $router [description]
+     * @return [type]         [description]
+     *
+     * @Route('/photos/assets', via=POST)
+     */
+    public function registerPhotosAssets()
+    {
+        $uploaded = array();
+
+        if (!isset($_POST['photos_assets_upload'])) return;
+        if (!Util::uploadFileValidator($_FILES['folder_select'])) {
+            return new Response('', 303, ['Location' => '/admin/photos/assets']);
+        }
+
+        for ($i = 0; $i < count($_FILES['folder_select']['name']); $i++) {
+            $fileExt = pathinfo($_FILES['folder_select']['name'][$i], PATHINFO_EXTENSION);
+            if (Util::fileExtensionGetAllowUpload($fileExt) && is_uploaded_file($_FILES['folder_select']['tmp_name'][$i])) {
+                $uuid = Util::makeUuid();
+                move_uploaded_file($_FILES['folder_select']['tmp_name'][$i], $this->assetsPath . $uuid . '.' . $fileExt);
+                array_push($uploaded, $uuid);
+            }
+        }
+        return $this->renderer->render(
+            'admin/photos/confirm_upload',
+            [
+                'uploaded' => $uploaded,
+            ]
+        );
     }
 
     /**

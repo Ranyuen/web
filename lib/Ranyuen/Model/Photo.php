@@ -190,7 +190,7 @@ class Photo extends Eloquent\Model
     }
 
     /**
-     * Show inserted photos
+     * Get inserted photos
      *
      * @return Photo
      */
