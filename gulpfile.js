@@ -209,6 +209,11 @@ gulp.task('uglifyjs', function () {
   }));
 });
 
+gulp.task('watch', function() {
+  gulp.watch('src/stylesheets/*.less', ['less']);
+  gulp.watch('src/javascripts/*.js', ['uglifyjs']);
+});
+
 gulp.task('backup', ['backup-db', 'backup-images']);
 gulp.task('build', ['copy-assets', 'less', 'uglifyjs']);
 gulp.task('test', ['js-test', 'php-test']);
