@@ -13,12 +13,13 @@
 @gradient_light2: #9aff9b;
 @gradient_shade2: #25a34a;
 @shadow2: #9a9d9f;
+@separated_line_color: #999;
 
 .header {
   background: @header-footer-bg;
   background-size: 100% 100%;
   // border-bottom: 2px solid #451360;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid @separated_line_color;
 
   .cf;
   .header-inner {
@@ -276,7 +277,6 @@
   min-width: 320px;
   max-width: @max-width;
   margin: 0 auto;
-  // padding: 20px 2%;
   padding: 1px 2%;
   background: #fbfaf5;
 
@@ -461,7 +461,7 @@
 footer {
   padding: 10px 2%;
   background: @header-footer-bg;
-  border-top: 2px solid #451360;
+  border-top: 1px solid @separated_line_color;
 
   .cf;
   .footer-inner {
