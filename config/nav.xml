@@ -22,6 +22,7 @@
     <lang name="ja">
         <dir path="calanthe">
             <dir path="grouping">
+                <page path="original_calanthe_type"/>
                 <page path="info_about_JIEBINE_calanthe_discolor"/>
                 <page path="info_about_NIOIEBINE_calanthe_discolor"/>
             </dir>
