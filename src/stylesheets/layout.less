@@ -4,7 +4,6 @@
 @import "foldNav";
 @import "color";
 
-@max-width: 1280px;
 @header-footer-bg: url("/assets/images/header_footer_background_6.jpg");
 @header-footer-radius: 8px;
 @gradient_light: #ffffff;
@@ -18,7 +17,6 @@
 .header {
   background: @header-footer-bg;
   background-size: 100% 100%;
-  // border-bottom: 2px solid #451360;
   border-bottom: 1px solid @separated_line_color;
 
   .cf;
@@ -274,7 +272,7 @@
 .main {
   width: 90%;
   min-width: 320px;
-  max-width: @max-width;
+  max-width: @width-tablet;
   margin: 0 auto;
   padding: 1px 2%;
   background: #fbfaf5;
@@ -466,7 +464,7 @@ footer {
   .footer-inner {
     width: 90%;
     min-width: 320px;
-    max-width: @max-width;
+    max-width: @width-tablet;
     margin: 0 auto;
   }
   p {
