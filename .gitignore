@@ -5,6 +5,7 @@
 !.gitkeep
 .php_cs.cache
 sitemap.xml
+.htpasswd
 
 # Created by https://www.gitignore.io
 
