@@ -104,7 +104,7 @@
 @media screen and (min-width: 960px) {
   .header {
     .header-inner {
-      max-width: 1280px;
+      max-width: @width-tablet;
       .logo {
         float: left;
         width: 22% / 98% * 100%;
@@ -207,7 +207,7 @@
 @media screen and (min-width: 960px) {
   .nav {
     .nav-items {
-      max-width: 1280px;
+      max-width: @width-tablet;
       .nav-item {
         width: 14% / @nav-items_width * 100%;
         margin-top: 0;
@@ -318,7 +318,6 @@
         width: 25%;
         height: 50px;
         line-height: 50px;
-        // margin-right: 1%;
         margin-bottom: 0;
         background: #abdaaa;
         a {
@@ -473,6 +472,27 @@ footer {
     a {
       color: #ffffff;
     }
+  }
+}
+
+//** article content widh flex
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-item {
+  padding: 3px;
+}
+
+@media screen and (max-width: @width-phone) {
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: @width-phone) {
+  .half-width {
+    width: 50%;
   }
 }
 
