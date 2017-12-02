@@ -25,42 +25,65 @@
   <link rel="shortcut icon" href="/assets/images/icons/ranyuen.png" type="image/png"/>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
   <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
+  <link rel="stylesheet" href="/assets/stylesheets/menu.css"/>
   {% if path == 'columns/' %}
   <link rel="stylesheet" href="/assets/stylesheets/columns.css"/>
   {% endif %}
   <script src="/assets/javascripts/layout.min.js"></script>
+  <script>
+  (function($) {
+      $(function() {
+          var $header = $('#top-head');
+          // Nav Fixed
+          $(window).scroll(function() {
+              if ($(window).scrollTop() > 350) {
+                  $header.addClass('fixed');
+              } else {
+                  $header.removeClass('fixed');
+              }
+          });
+          // Nav Toggle Button
+          $('#nav-toggle').click(function(){
+              $header.toggleClass('open');
+          });
+      });
+  })(jQuery);
+  </script>
 </head>
+
 <body class="{{ lang }}" lang="{{ lang }}">
   <div class="container">
     <header class="header">
-      <div class="header-inner">
-        <div class="logo">
-          <h1><a rel="home" href="{{ home }}"><img src="/assets/images/icons/ranyuen2.png" alt="{{ messages.sitename }} ～{{ messages.tagline }}～" longdesc="{{ home }}"/></a></h1>
-        </div>
-        <div class="policy">
-          <h1><img src="/assets/images/ranyuen_style.gif" width="400" height="40" /></h1>
-        </div>
-        <div class="linkicon">
-          <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
-          <div class="icons">
-            <div class="icon">
-              <p><a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a></p>
-            </div>
-            <div class="icon">
-              <p><a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a></p>
-            </div>
+      <div id="top-head">
+          <div class="inner">
+              <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
+              <div class="icons">
+                <p><a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a></p>
+                <p><a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a></p>
+                {% if lang == 'ja' %}
+                <p class="sitemap"><a href="/about_us/sitemap"><img src="/assets/images/icons/sitemap.png" alt="sitemap"/></a></p>
+                {% endif %}
+              </div>
+              <div id="mobile-head">
+                  <h1 class="logo"><a rel="home" href="{{ home }}"><img src="/assets/images/icons/ranyuen2.png" alt="{{ messages.sitename }} ～{{ messages.tagline }}～" longdesc="{{ home }}"/></a></h1>
+                  <div id="nav-toggle">
+                    <p id="nav-font">MENU</p>
+                      <div>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
+              </div>
+              <nav id="global-nav">
+              {% include 'globalnav.' ~ lang ~ '.html' %}
+              <ul class="nav-items">
+                <li class="nav-item" id="mobile-global-nav"><a href="/about_us/sitemap">ホームページの目次</a></li>
+              </ul>
+              </nav>
           </div>
-          {% if lang == 'ja' %}
-          <div class="linksitemap">
-            <a href="/about_us/sitemap"><img src="/assets/images/icons/sitemap.png" alt="sitemap"/></a>
-          </div>
-          {% endif %}
-        </div>
-      </div>
-      <nav class="nav">
-        {% include 'globalnav.' ~ lang ~ '.html' %}
-      </nav>
-    </header>
+      </div> <!-- top-head -->
+    </header> <!-- header -->
     <div class="main">
       {% if title == messages.sitename %}
       <div>

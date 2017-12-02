@@ -129,6 +129,7 @@ gulp.task('less', function () {
       'src/stylesheets/pagination.less',
       'src/stylesheets/orchidExam.less',
       'src/stylesheets/accordion.less',
+      'src/stylesheets/menu.less',
     ]).
     pipe(less({
       compress:  true,
