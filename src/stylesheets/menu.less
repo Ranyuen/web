@@ -76,11 +76,10 @@
   border-radius: 2px;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
   text-decoration: none;
-}
-
-#global-nav ul li a.activate {
-  background: @purple;
-  pointer-events: none;
+  &.activate {
+    background: @purple;
+    pointer-events: none;
+  }
 }
 
 #global-nav ul li a:hover {
@@ -179,20 +178,10 @@
   height: 5em;
 }
 
-// mobile 
-#mobile-global-nav {
-  display: none;
-}
-
 @media screen and (max-width: @width-phone) {
-  #mobile-global-nav {
-    display: block;
-  }
-
   .main {
     margin-top: 50px;
   }
-
   #top-head,
   .inner {
     width: 100%;
