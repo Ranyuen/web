@@ -2,11 +2,13 @@
 @import "helpers";
 
 .columns {
-  .cf;
+  -moz-display: flex;
+  display: flex;
+  -moz-flex-direction: column;
+  flex-direction: column;
 
   .columns_column {
-    float: left;
-    width: 100%;
+    margin: 0 auto;
 
     .columns_column_title {
       letter-spacing: 1px;
@@ -19,12 +21,12 @@
         box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5) inset;
         color: #fff;
         display: block;
+        margin: 0 auto;
         padding: 4px;
         text-align: center;
         text-decoration: none;
         text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-        width: 100% - 8px;
-
+        width: 100% - 4px;
 
         &:hover {
           filter:alpha(opacity=50);
@@ -38,21 +40,7 @@
 
 @media screen and (min-width: @width-phone) {
   .columns {
-    .cf;
-
-    .columns_column {
-      width: 50%;
-    }
-  }
-}
-
-@media screen and (min-width: @width-tablet) {
-  .columns {
-    .cf;
-
-    .columns_column {
-      float: left;
-      width: 50%;
-    }
+    -moz-flex-direction: row;
+    flex-direction: row;
   }
 }
