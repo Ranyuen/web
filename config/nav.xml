@@ -113,6 +113,9 @@
             <dir path="agriculture_with_a_dream">
                 <latest-pages count="10"/>
             </dir>
+            <dir path="view_from_the_sky">
+                <latest-pages count="10"/>
+            </dir>
         </dir>
         <dir path="news">
             <page path="index" title="お知らせ"/>

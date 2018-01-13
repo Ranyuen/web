@@ -15,9 +15,16 @@ description:
     <p class="columns_column_title"><a href="/columns/agriculture_with_a_dream/"><img src="/images/assets/b8e818d8-6a46-4703-8948-ded3bb987278.jpg"></a></p>
   </div>
 </div>
+<div class="columns">
+  <div class="columns_column">
+    <p class="columns_column_title"><a href="/columns/view_from_the_sky/">
+      <img src="/images/assets/view_from_the_sky.jpg">
+    </a></p>
+  </div>
+</div>
 
 筆者については、[自然人の紹介](columns/authors/)よりご閲覧ください。
 
-自然人の語りに掲載されたランも登場するランのクイズ、500問以上ありますので是非遊んでみてください。
+自然人の語りに掲載されたランも登場するランのクイズ、800問以上ありますので是非遊んでみてください。
 
 → <b><a href="/play/orchid_exam">ラン検定</a></b>
