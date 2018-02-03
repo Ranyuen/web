@@ -91,7 +91,7 @@
             <page path="download_images" title="壁紙プレゼント"/>
         </dir>
         <dir path="columns">
-            <page path="index" title="自然人の語り"/>
+            <page path="index" title="自然人のコラム"/>
             <dir path="authors">
                 <page path="yamamoto_hiroshi"/>
                 <page path="seki_akihiko"/>

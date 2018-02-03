@@ -6,7 +6,6 @@ description:
 自然人のコラム
 ==
 ###100タイトルを超える仲間達とのコラム
-
 <div class="columns">
   <div class="columns_column">
     <p class="columns_column_title"><a href="/columns/fascinated_by_the_wild_orchid/"><img src="/images/assets/7e2d852c-7a30-4b53-ac9c-6335c4af21be.jpg"></a></p>
@@ -25,6 +24,6 @@ description:
 
 筆者については、[自然人の紹介](columns/authors/)よりご閲覧ください。
 
-自然人の語りに掲載されたランも登場するランのクイズ、800問以上ありますので是非遊んでみてください。
+自然人のコラムに掲載されたランも登場するランのクイズ、800問以上ありますので是非遊んでみてください。
 
 → <b><a href="/play/orchid_exam">ラン検定</a></b>
