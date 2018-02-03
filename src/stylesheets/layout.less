@@ -304,10 +304,16 @@ footer {
 .flex-item {
   padding: 3px;
 }
+.flex_reverse {
+  flex-direction: row-reverse;
+}
 
 @media screen and (max-width: @width-phone) {
   .flex {
     flex-direction: column;
+  }
+  .flex_reverse {
+    flex-direction: column-reverse;
   }
   h1#top-image {
     margin: 0 -8%;
