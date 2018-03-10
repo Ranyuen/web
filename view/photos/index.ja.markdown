@@ -15,7 +15,6 @@ title: 花華アルバム
     <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>アワチドリ / 夢ちどり</option>
     <option value="Japanease native orchid" {% if species_name == 'Japanease native orchid' %}selected{% endif %}>日本の野生ラン</option>
     <option value="Ranyuen style" {% if species_name == 'Ranyuen style' %}selected{% endif %}>蘭裕園スタイル</option>
-    <option value="others" {% if species_name == 'others' %}selected{% endif %}>その他</option>
   </select>
 </form>
 <form class="select" id="search-form-color" method="GET">
