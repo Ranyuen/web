@@ -28,9 +28,11 @@
 
 #top-head .logo {
   margin: 0 .3em .3em .3em;
-  img {
-    max-width: 4em;
+  a {
     margin-left: 6%;
+  }
+  a, img {
+    max-width: 4em;
   }
 }
 
@@ -50,12 +52,14 @@
   right: 20%;
   p {
    display: inline-block;
-   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
    border-radius: 8px;
   }
   p.sitemap-icon {
     width: 50%;
     height: 50%;
+  }
+  p:hover {
+    opacity: 0.6;
   }
 }
 
@@ -65,47 +69,18 @@
   list-style-type: none;
   font-size: 14px;
 }
-#global-nav ul li {
-  padding: .2em;
-}
 #global-nav ul li a {
   background: #a9a1de;
   padding: .2em .5em;
   font-size: 18px;
   color: #fff;
-  border-radius: 2px;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+  border: solid 1px;
   text-decoration: none;
-  &.activate {
-    background: @purple;
-  }
 }
 
 #global-nav ul li a:hover {
   opacity: .7;
 }
-
-/* Glopal Fixed with PC */
-// #top-head.fixed {
-//     margin-top: 0;
-//     top: 0;
-//     position: fixed;
-//     padding-top: 10px;
-//     height: 100px;
-//     background: #fbfaf5;
-//     transition: top 0.65s ease-in;
-//     -webkit-transition: top 0.65s ease-in;
-//     -moz-transition: top 0.65s ease-in;
-// }
-// #top-head.fixed .logo {
-//     font-size: 24px;
-//     color: #333;
-// }
-// #top-head.fixed #global-nav ul li a {
-//     color: #333;
-//     // padding: 0 20px;
-//     background: red;
-// }
 
 /* Toggle Button */
 #nav-toggle {
@@ -150,12 +125,12 @@
 // Flex with Display
 @media screen and (max-width: 1000px) { // 0 ~ 1000px
   #global-nav ul li a {
-    padding: .2em .3em;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
  
 // Flex with Display
+// @media screen and (min-width: @width-phone) {
 @media screen and (min-width: @width-phone) {
   #global-nav ul {
     display: flex;
@@ -163,11 +138,11 @@
     justify-content: center;
   }
   #global-nav ul li {
-    margin-bottom: .7em;
+    margin-bottom: .8em;
   }
   #global-nav ul li a {
     background: #a9a1de;
-    padding: .4em .8em;
+    padding: .2em .8em;
     color: #fff;
   }
 }
@@ -215,7 +190,6 @@
     width: 100%;
     height: 100%;
     text-align: center;
-
     img {
       width: auto;
       height: auto;
@@ -225,7 +199,6 @@
   }
   #global-nav {
     position: absolute;
-    /* display out */
     top: -500px;
     background: @bg-white;
     width: 100%;
@@ -236,7 +209,6 @@
     transition: .5s ease-in-out;
   }
   #global-nav ul {
-    list-style: none;
     position: static;
     right: 0;
     bottom: 0;
@@ -251,10 +223,10 @@
     width: 100%;
     display: block;
     color: #fff;
-    padding: 18px 0;
+    padding: 16px 0;
   }
   #global-nav ul li:nth-child(1) {
-  // background: red;
+
   }
   #nav-toggle p#nav-font{
     font-weight: bold;
