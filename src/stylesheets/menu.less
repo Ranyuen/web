@@ -18,68 +18,45 @@
   line-height: 1;
   z-index: 999;
 }
-#top-head a,
-#top-head {
-
-}
 #top-head .inner {
   position: relative;
 }
 
+/* logo */
 #top-head .logo {
+  width: 3.8em;
   margin: 0 .3em .3em .3em;
   a {
     margin-left: 6%;
   }
   a, img {
-    max-width: 4em;
-  }
-}
-
-#top-head .lang {
-  position: absolute;
-  top: 12px;
-  right: 12%;
-  font-size: 12px;
-  a {
-
-  }
-}
-
-#top-head .icons {
-  position: absolute;
-  top: 12px;
-  right: 20%;
-  p {
-   display: inline-block;
-   border-radius: 8px;
-  }
-  p.sitemap-icon {
-    width: 50%;
-    height: 50%;
-  }
-  p:hover {
-    opacity: 0.6;
+    max-width: 3.5em;
   }
 }
 
 #global-nav ul {
-  list-style: none;
-  padding: 0 .1em;
+  white-space: nowrap;
   list-style-type: none;
-  font-size: 14px;
-}
-#global-nav ul li a {
-  background: #a9a1de;
-  padding: .2em .5em;
-  font-size: 18px;
-  color: #fff;
-  border: solid 1px;
-  text-decoration: none;
-}
-
-#global-nav ul li a:hover {
-  opacity: .7;
+  li {
+    a {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center; /* Safari */
+      align-items: center;
+      -webkit-justify-content: center; /* Safari */
+      justify-content: center;
+      height: 100%;
+      background: #a9a1de;
+      padding: .2em .5em;
+      font-size: 17px;
+      color: #fff;
+      border: solid 1px;
+      text-decoration: none;
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
 }
 
 /* Toggle Button */
@@ -96,11 +73,6 @@
 #nav-toggle div {
   position: relative;
 }
-
-#nav-toggle p {
-
-}
-
 #nav-toggle span {
   display: block;
   position: absolute;
@@ -122,15 +94,9 @@
   top: 22px;
 }
 
-// Flex with Display
-@media screen and (max-width: 1000px) { // 0 ~ 1000px
-  #global-nav ul li a {
-    font-size: 15px;
-  }
-}
- 
-// Flex with Display
-// @media screen and (min-width: @width-phone) {
+/*********************
+* wide PC view
+*********************/
 @media screen and (min-width: @width-phone) {
   #global-nav ul {
     display: flex;
@@ -138,20 +104,41 @@
     justify-content: center;
   }
   #global-nav ul li {
-    margin-bottom: .8em;
+    margin-bottom: .6em; // default
   }
-  #global-nav ul li a {
-    background: #a9a1de;
-    padding: .2em .8em;
-    color: #fff;
+  #mobile-head {
+    position: relative;
+    height: 66px;
+    max-width: @width-tablet;
+    margin: 0 auto;
+    .lang {
+      position: absolute;
+      top: 16px;
+      right: 10%;
+      font-size: 12px;
+    }
+    .icons {
+      position: absolute;
+      top: 12px;
+      right: 22%;
+      p {
+       display: inline-block;
+       border-radius: 8px;
+      }
+      p.sitemap-icon {
+        width: 50%;
+        height: 50%;
+      }
+      p:hover {
+        opacity: 0.6;
+      }
+    }
   }
 }
 
-#top-head #mobile-head {
-  width: 100%;
-  height: 5em;
-}
-
+/*********************
+* mobile&tablet view
+*********************/
 @media screen and (max-width: @width-phone) {
   .main {
     margin-top: 50px;
@@ -166,8 +153,6 @@
     position: fixed;
     margin-top: 0;
   }
-
-  /* Fixed reset */
   #top-head.fixed {
     padding-top: 0;
     background: transparent;
@@ -175,6 +160,7 @@
   #mobile-head {
     background: @bg-white;
     width: 100%;
+    height: 5em;
     max-height: 60px;
     z-index: 999;
     position: relative;
@@ -208,25 +194,12 @@
     -moz-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
   }
-  #global-nav ul {
-    position: static;
-    right: 0;
-    bottom: 0;
-    font-size: 14px;
-  }
-  #global-nav ul li {
-    float: none;
-    position: static;
-  }
   #top-head #global-nav ul li a,
   #top-head.fixed #global-nav ul li a {
     width: 100%;
     display: block;
     color: #fff;
     padding: 16px 0;
-  }
-  #global-nav ul li:nth-child(1) {
-
   }
   #nav-toggle p#nav-font{
     font-weight: bold;
@@ -256,7 +229,6 @@
 
   /* #global-nav slide */
   .open #global-nav {
-    /* #global-nav top + #mobile-head height */
     -moz-transform: translateY(550px);
     -webkit-transform: translateY(550px);
     transform: translateY(550px);
