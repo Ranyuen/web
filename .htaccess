@@ -7,10 +7,13 @@ RewriteEngine On
 # RewriteBase /
 
 RewriteCond %{HTTP_HOST} ^www.ranyuen\.com
-RewriteRule ^(.*)$ http://ranyuen.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://ranyuen.com/$1 [R=301,L]
 
 RewriteCond %{HTTP_HOST} ^www.ranyuen/
-RewriteRule ^(.*)$ http://ranyuen.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://ranyuen.com/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
+
+Redirect permanent /columns/agriculture_with_a_dream/new_volunteer https://ranyuen.com/columns/view_from_the_sky/new_volunteer
+Redirect permanent /columns/agriculture_with_a_dream/terrible_status_quo https://ranyuen.com/columns/view_from_the_sky/terrible_status_quo
