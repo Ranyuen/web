@@ -9,7 +9,7 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.ranyuen\.com
 RewriteRule ^(.*)$ https://ranyuen.com/$1 [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^www.ranyuen/
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://ranyuen.com/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
