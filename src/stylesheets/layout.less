@@ -239,9 +239,9 @@
   }
 }
 
-/******************************
+/********************
 * campaign button CSS
-******************************/
+********************/
 .campaign-btn {
   display: inline-block;
   width: 110px;
@@ -290,13 +290,18 @@ footer {
     max-width: @width-tablet;
     margin: 0 auto;
   }
+  .footer-icons {
+    margin-right: .3rem;
+  }
   p {
     font-size: 13px;
     text-align: center;
   }
 }
 
-//** article content widh flex
+/*********************
+* flex class
+*********************/
 .flex {
   display: -webkit-flex;
   display: flex;
@@ -309,6 +314,9 @@ footer {
   padding: 3px;
 }
 
+/*********************
+* mobile&tablet view
+*********************/
 @media screen and (max-width: @width-phone) {
   .flex {
     flex-direction: column;
@@ -319,19 +327,20 @@ footer {
   #top-image {
     margin: 0 -8%;
   }
-}
-
-@media screen and (min-width: @width-phone) {
-  .half-width {
-    width: 50%;
+  .icons ,
+  .lang {
+    display: none;
   }
 }
 
+/*********************
+* wide PC view
+*********************/
 @media screen and (min-width : @width-tablet) {
   .main {
     .main-inner {
       float: right;
-      width: 81.3%;
+      width: 81%;
     }
     #search-form, #search-form-color {
       select {
@@ -341,7 +350,6 @@ footer {
         .cf;
       }
     }
-
     #sidenav {
       float: left;
       width: 18.5%;

@@ -11,8 +11,7 @@
   <title>{{ title }} | {{ messages.sitename }}</title>
   {% endif %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <!-- <meta name="keywords" content="{{ messages.keywords }}"/> -->
-  <meta name="keywords" content="{{ keywords }}"/>
+  <meta name="keywords" content="{{ messages.keywords }}"/>
   {% if description %}
   <meta name="description" content="{{ description }}"/>
   {% endif %}
@@ -23,7 +22,7 @@
   <base href="{{ link.base }}"/>
   <link rel="author" href="https://plus.google.com/117493105665785554638?rel=author"/>
   <link rel="shortcut icon" href="/assets/images/icons/ranyuen.png" type="image/png"/>
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef:400,700" type="text/css"/>
   <link rel="stylesheet" href="/assets/stylesheets/layout.css"/>
   <link rel="stylesheet" href="/assets/stylesheets/menu.css"/>
   {% if path == 'columns/' %}
@@ -55,31 +54,31 @@
   <div class="container">
     <header class="header">
       <div id="top-head">
-          <div class="inner">
-              <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
-              <div class="icons">
-                <p><a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a></p>
-                {% if lang == 'ja' %}
-                <p class="sitemap-icon"><a href="/about_us/sitemap"><img src="/assets/images/icons/sitemap.png" alt="sitemap"/></a></p>
-                {% endif %}
+        <div class="inner">
+          <div id="mobile-head">
+            <h1 class="logo"><a rel="home" href="{{ home }}"><img src="/assets/images/icons/ranyuen2.png" alt="{{ messages.sitename }} ～{{ messages.tagline }}～" longdesc="{{ home }}"/></a></h1>
+            <div id="nav-toggle">
+              <p id="nav-font">MENU</p>
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
-              <div id="mobile-head">
-                  <h1 class="logo"><a rel="home" href="{{ home }}"><img src="/assets/images/icons/ranyuen2.png" alt="{{ messages.sitename }} ～{{ messages.tagline }}～" longdesc="{{ home }}"/></a></h1>
-                  <div id="nav-toggle">
-                    <p id="nav-font">MENU</p>
-                      <div>
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                      </div>
-                  </div>
-              </div>
-              <nav id="global-nav">
-              {% include 'globalnav.' ~ lang ~ '.html' %}
-              </nav>
-          </div>
-      </div> <!-- top-head -->
+            </div>
+            <div class="lang">{{ link | echoSwitchLang(lang) | raw }}</div>
+            <div class="icons">
+              <p><a href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a></p>
+              <p><a href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a></p>
+              {% if lang == 'ja' %}
+              <p class="sitemap-icon"><a href="/about_us/sitemap"><img src="/assets/images/icons/sitemap.png" alt="sitemap"/></a></p>
+              {% endif %}
+            </div>
+          </div> <!-- mobile-head --> 
+          <nav id="global-nav">
+          {% include 'globalnav.' ~ lang ~ '.html' %}
+          </nav>
+        </div> <!-- inner --> 
+      </div>
     </header> <!-- header -->
     <div class="main">
       {% if title == messages.sitename %}
@@ -107,8 +106,12 @@
       <div class="footer-inner">
         <p class="copyright">
           <small>
-            Copyright (C) 2010-2014 <a rel="home" href="{{ home }}">{{ messages.sitename }} - {{ messages.tagline }}</a> All Rights Reserved.<br />
+            Copyright (C) 2010-2018 <a rel="home" href="{{ home }}">{{ messages.sitename }} - {{ messages.tagline }}</a> All Rights Reserved.<br />
             Spring Calanthe (EBINE) and Ponerorchis (AWACHIDORI &amp; YUMECHIDORI) you see on our website are all bred, researched and developed in our <a rel="home" href="{{ home }}">Ranyuen</a>&#39;s farm.
+            <p><a class="footer-icons" href="http://fb.me/ranyuenjapan"><img src="/assets/images/icons/f_b_icon.png" height="25" alt="Facebookのアイコン" /></a>
+              <a class="footer-icons" href="https://www.youtube.com/playlist?list=PLt3tRMFWeZB-ce852wXcEHamgRZe_PiWD"><img src="/assets/images/icons/yt_icon.png" height="25" alt="youtubeのアイコン" /></a>
+              <span class="footer-icons">{{ link | echoSwitchLang(lang) | raw }}</span>
+            </p>
           </small>
         </p>
       </div>
