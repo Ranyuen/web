@@ -2,7 +2,6 @@
 /config/migrations/*.log
 /images/*/*
 *.sqlite3
-!.gitkeep
 .php_cs.cache
 sitemap.xml
 .htpasswd
@@ -11,8 +10,7 @@ sitemap.xml
 
 ### Node ###
 # Logs
-logs
-*.log
+/logs/*
 
 # Runtime data
 pids
@@ -39,10 +37,8 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-
 ### Bower ###
 bower_components
-
 
 ### Composer ###
 composer.phar
@@ -89,3 +85,6 @@ robots.txt
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# DIRKEEP
+!.gitkeep
