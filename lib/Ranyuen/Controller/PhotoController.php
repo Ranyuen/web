@@ -84,7 +84,7 @@ class PhotoController extends Controller
 
         $records   = $photos;
         $strana    = new \Strana\Paginator();
-        $paginator = $strana->perPage(30)->make($records, null, array('maximumPages' => 10));
+        $paginator = $strana->perPage(20)->make($records, null, array('maximumPages' => 10));
         $renderer  = new MainViewRenderer($renderer, $nav, $bgimage, $config);
         $params    = $renderer->defaultParams($lang, $req->getPathInfo());
         if (!is_null($speciesName)) {
