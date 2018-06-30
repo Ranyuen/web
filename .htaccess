@@ -17,3 +17,22 @@ RewriteRule ^ index.php [QSA,L]
 
 Redirect permanent /columns/agriculture_with_a_dream/new_volunteer https://ranyuen.com/columns/view_from_the_sky/new_volunteer
 Redirect permanent /columns/agriculture_with_a_dream/terrible_status_quo https://ranyuen.com/columns/view_from_the_sky/terrible_status_quo
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 weeks"
+ExpiresByType image/gif "access plus 1 weeks"
+ExpiresByType image/png "access plus 1 weeks"
+ExpiresByType image/jpg "access plus 1 weeks"
+ExpiresByType image/jpeg "access plus 1 weeks"
+ExpiresByType text/html "access plus 1 weeks"
+ExpiresByType text/css "access plus 1 weeks"
+ExpiresByType text/javascript "access plus 1 weekss"
+ExpiresByType application/javascript "access plus 1 weeks"
+ExpiresByType application/x-javascript "access plus 1 weeks"
+ExpiresByType application/x-shockwave-flash "access plus 1 weeks"
+ExpiresByType font/opentype "access plus 1 weeks"
+ExpiresByType font/ttf "access plus 1 weeks"
+ExpiresByType font/eot "access plus 1 weeks"
+ExpiresByType font/otf "access plus 1 weeks"
+</IfModule>
