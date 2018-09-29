@@ -1,0 +1,705 @@
+﻿{
+    "name": "蘭検定 (写真編)",
+    "questions": [
+        {
+            "id": 1,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "9a73dc8b03dcaf074844c0cc5400d111",
+                        "47110652ea4923813b094c9d5b1415e9",
+                        "943fb9e9c74a48c48bf83e74642f1acd"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "37d4a83bf60b5cce99dcb0e7cd267776",
+                        "6d1d0e0972d2c93dee37f8422f22cd4e",
+                        "3e40f60ab64a59f9928ed32bdb827ab7"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "91e047494054e105c6307152cc1645a5",
+                        "654015f1a07a24256ce8c699ed70c04a",
+                        "a2b669d0d506b32e595a5867219b59fb"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "67cc1284476d673d866353bc94a15bd2",
+                        "0265eeaa4ce0bee26de92de485538bb0",
+                        "8cff62b7686436a39479996dce83bd7d"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "537749a01c7a6a5233b15c6fb152df9c",
+                        "76159954b1c7f95dee2f501322ca4f50",
+                        "335bce25a6691d67c6008a4572028014"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "467b626890cf607cb80d6aa8ea9b3dcb",
+                        "14954c6e55d0de2f83a9b1a03cb54692",
+                        "6d492dd85bb648d733024b8d52ced9d3"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "dbec189220f68e83e04a21d0b0c44fdf",
+                        "bb4764209c71b69ff6065ed569be2b96",
+                        "cbcf5423c87f67d622189ad3a51e68a8"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "ef682073ed003f38ba8ca86c6ce51a5b",
+                        "e5add8b109dd4f12954eaeb857c81a15",
+                        "2053a7efffc4f1c01cd5a0d491bb5d21"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "01b1cd2db5c2ed512e437488d45cb167",
+                        "93515868f48567b8d8c627dab103c6cb",
+                        "c387aa46fb3db637ec2ca544c9bac709"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "57e402a9a9697424c5cab875b85015f8",
+                        "1ac956dbdce3e345d8b8716040e376cc",
+                        "18ab263603414631463b2b2d3e9bf1cf"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "e24fb0b58fe127b829f28508c03f6a88",
+                        "e7af601d6387d7cd23019bfb8b03ab64",
+                        "4afd233df7601ea200614ab96c13e444"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "89e6be32e95ffa40eb4e0447d29efc05",
+                        "dafabc553c253538c7162e371ff74c1d",
+                        "6cd8a9528443af1d78ecb0d72be30dbb"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "efe12dd42b092942c1363575866b0e1e",
+                        "3b52d15e8b546606d66a62140b1cded5",
+                        "2b7b971b562988d46094bcc0e5a01814"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "0fcccdfbc4fb8b10c5640bdf1a83e3b4",
+                        "2099900e19204f44b80b5b1876c8ea40",
+                        "ccecfa8b53c0ed3dc61e8a65dc6cee96"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "5e1d3b1a3f5924425ada9b5ebd121082",
+                        "6efaac90f27640adc844b4a2ebdf8716",
+                        "540da4b9f0159598517dbcb46df9dde0"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "59756f7a0d2df4f8eb296a4cf677c042",
+                        "ef4e2b6f26d3c813e7fd2361357a4347",
+                        "bc04840d6ccab2b6962e6308437229be"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "7c9e3fde009a510584d914b20c47e87d",
+                        "03c42309a165a9b8f3c3f74435cb08b3",
+                        "fcf1c2d5548ed7273a47fb0664765bce"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "ec6e7f858a7eeea401b3dccc878cdbb0",
+                        "d5ff59949393418ccc66f2760d1d2019",
+                        "1059b4b1dcd899169674d3245322ae72"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "5740dfe96551da129ddf5e9b60522eae",
+                        "3db622312586de4b8ca1b5ac0d64cda1",
+                        "8e6b115eb8b8bb6e450c93ba9eee86ec"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "a6480faf50bdb915c9f40bbd134ddda4",
+                        "a10fcb21f2acc1d3c0bff715a140544e",
+                        "06d7596f14fc93d425fdc455908001e6"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "098c11fd5cd496b922cbfa2b7ce7d11d",
+                        "6a7476b43c600cff86b32d4326ef093b",
+                        "6baacbc5ad9deed285d04fc46db57f23"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "e3847e2e46d5683b34d4cc80f350bafb",
+                        "b3f74b51b223e42498da2357b4453098",
+                        "1bc6cc6237d2cb7504a62bbe933ae116"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "853fe5dd527d2a437925c42e679df842",
+                        "ea582141de269a3de2f92cf8b02640b4",
+                        "37913829e58f108bacc16d4dd6d18886"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "fefe1b15bbd3ad413cb307f32f063082",
+                        "9611ad882c0355adc2d2c6a3c1c8455c",
+                        "9f7188dcb6d895e74f2e6e73e6393b2a"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "dea12c9d48204177506e297c5b620417",
+                        "a2373d0dcf4218feda29568bbe8ce3b0",
+                        "bccfbebb459365cae2ab2b3d11f91ff8"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "4a40af35ff8e68b05285d27d8f1638f8",
+                        "af03218567b36b5648eb0af00bb04e59",
+                        "99a5f53c82ce479a27beb7675800ba2c"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "9bb77ae8acf4d7e67ce07a557435df45",
+                        "fbc500ae1344791674b50c51ca9c0865",
+                        "52e9c317fe2c0b4f8ae42adf28a5f41a"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "q": "シンビジウムでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "bbc6fc1f1d5256fa8c643b318c5e1486",
+                        "782c68662f3b58a3d95a1e3401810bea",
+                        "806f5359afff21baaf79e83c6eb32d41"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "b5fe9427b0b2aa5b989f55b78f7ef5d9",
+                        "d554bb987afe2123de67ff02729aec39",
+                        "71c1da2ccbca9ef503dc9d6dd7725f51"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "506f628ef89c4597844f39243f7f890e",
+                        "d4fdeeed02cb18e32a0c81a5fd21efff",
+                        "3e685e50fe0ca9a9f66391f9087b729f"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "a78369b0c82ce848282ebafe69369c52",
+                        "890ca3603fd982ff094bee12f1e232bd",
+                        "0b4e50df2ffef9295d9d5d07d8915da9"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "c118c9898bcb1f408df0b7d8cb1b39dd",
+                        "77f20e25ff9dec5505aeb981f2460974",
+                        "3266d284336219514b4c6846488b2008"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "fe4d0f3897ce8003bb69f7910c66e958",
+                        "09cdf1041bb41475f210314d63cacd55",
+                        "3bbfa410bc68cc14fea8481b70a380dc"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "q": "パフィオペディラムは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "7db725cedd52e24faf7908eeed9e49b4",
+                        "2e3e8a9dea794e528e4222f72ed701d8",
+                        "56076341fbec8965a3cb25f9206e4126"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "ad4a40529b3f03c4865d5bcd9169781d",
+                        "ea08cc801a9cb86c652b69ad84040caf",
+                        "ef01b5b6bdc287cf208d418d9633655c"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "603917c77a68007d5529c4b9699dd7f9",
+                        "0b68e96bdfa53845961563f53279fa21",
+                        "fdbc581e67d043d1bf8e32c696c1f9cd"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "c310082bdaaabfb2e0b43c9f77ad0312",
+                        "f4e128c66c94d21ac83ab6000f7d92b0",
+                        "6795a12d82c7b663f50bdfcd72c4d67d"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "7f6e78d567e9cf1e813aad50e8516d8a",
+                        "2bf96142f6f56c1418aee640b871f6ed",
+                        "0fef37181c09cb28910be41672fa9495"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 39,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "a2b5bac7a6bb441bd64af9a064be7f97",
+                        "1830bf8e85323b2a2e2be81f1c0f6967",
+                        "ca34631890891e2a8d697853784523d4"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "36e3ce56624f4c5ea86c9f644284cfca",
+                        "259f9825481039f189ae9cef9c3803ac",
+                        "0fc93c0281b91b535f58b9ea135c6dc3"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "3afad853de58ee83f7d6b4efacd95a5c",
+                        "74a899c3ac1ec61d5409a68230cc1d6e",
+                        "4e0ef606ec6169d3556490ccf1ba3dbc"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "5a5c2ae95fc4734a1fb7715f2b7f018e",
+                        "a626b07098ab1780c794be8d97581937",
+                        "d4391d74cadb77569e6185f44dab0511"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "26ab8fef7b5cbce56d24158d96f2780d",
+                        "421c5f1ff47bfdb1995c749eb92ae0a7",
+                        "ff38512639bae7f4a1a55dae2d71b613"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "6c9f20a35c839d350ebfba814eef8652",
+                        "d88637f8975f4b82e191a4785116681f",
+                        "8d9847b92d7c32999edc3b4508ce50e9"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 45,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "b456147bfa76ed062933460d375517e0",
+                        "3b1af3f759c08566771540990f69d88a",
+                        "5bed0346724d76c8d6ed1db10aad3bb2"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 46,
+            "q": "シンビジウムでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "4ccad59ab42f2158cc39140d4f01a757",
+                        "cdf52607aedc2e6d8a6995d4edf6b9d7",
+                        "16f4aebe66cbeba8443b9251a141b54c"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 47,
+            "q": "ランでないのは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "e6c5612d8aa481f6dcb6d8e24cec0ec7",
+                        "9db2db752d358ed9c6beb603f9cb9ffe",
+                        "d0b5453c6ed9aa1251d966e6b0ba57a2"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 48,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "0f3f05233b86d06150ecf42e6b881a29",
+                        "2f4ebde75a269bc8e2ba81e57c0e3089",
+                        "965d9c3b80f7d42e2579a9b850011d5f"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 49,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "36e492fdf66886626d1f20d522e08a2b",
+                        "a81e9d6acc61aeb41b27ab3b058ebd7f",
+                        "eba3f6ae71d71f3cb27a2abbd73bd9a1"
+                    ],
+                    "ans": 3
+                }
+            ]
+        },
+        {
+            "id": 50,
+            "q": "ランは、どれですか？",
+            "answers": [
+                {
+                    "choices": [
+                        "abded8f81aeba1d8dcf8a5aea85c3f9e",
+                        "93ab3170f4ce70fbdc53c3a14562c83b",
+                        "47250a37e85bed5a0e56aedacafaa5e2"
+                    ],
+                    "ans": 3
+                }
+            ]
+        }
+    ]
+}
