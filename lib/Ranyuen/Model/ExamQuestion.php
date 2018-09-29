@@ -15,7 +15,6 @@ class ExamQuestion extends Eloquent\Model
     public static function readFromJSON($json_file) {
         if (isset($json_file)) {
             $exams = json_decode(file_get_contents($json_file), true);
-            var_dump($exam);
             // select type easy, hard, expert, photo
             if ($exams['name'] === '蘭検定 (初級)') {
                 $type = 'easy';
