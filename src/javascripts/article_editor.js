@@ -406,7 +406,7 @@ Article.prototype.findByLang = function (lang) {
  */
 function ArticleContent() {
   this.lang    = '';
-  this.content = '---\ntitle: 題\ndescription: 説明\n---\n{{ title }}\n==\n本文。';
+  this.content = '---\ntitle: 題\ndescription: 説明\n---\n{{ title }}\n==\n本文。\n\n----\n\n → [関連コラム](/)\n\nイラスト：xxxx\n\nコラム筆者：[xxxx](/)\n\n[「xxxx」へ戻る](/)\n\n[ホームへ戻る](/)';
   this.errors  = [];
 }
 
