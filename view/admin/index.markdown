@@ -5,6 +5,8 @@ Admin
 ==
 Articles
 --
+[Check info](checkInfo)
+
 [New photos](photos/)
 
 [New photos(assets)](photos/assets)

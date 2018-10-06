@@ -136,6 +136,26 @@ class AdminController extends Controller
         );
     }
 
+    /**
+     * Admin php info.
+     *
+     * @return string
+     *
+     * @Route('/checkInfo')
+     */
+    public function checkInfo()
+    {
+        $this->auth();
+
+        return $this->renderer->render(
+            'admin/index',
+            [
+                'admin_username' => $this->session['admin_username'],
+                'info' => phpinfo()
+            ]
+        );
+    }
+
     protected function auth()
     {
         if (!isset($this->session['admin_username'])) {
