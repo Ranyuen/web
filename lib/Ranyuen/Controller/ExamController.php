@@ -65,9 +65,9 @@ class ExamController extends Controller
         $params   = $renderer->defaultParams('ja', '/play/exam/');
         $types    = ['easy', 'hard', 'expert', 'photo'];
         foreach ($types as $type) {
-            $query = ExamResult::selectRaw("user_name, max(points) as points, created_at")
+            $query = ExamResult::selectRaw("user_name, max(points) as points, created_at, max(created_at) as max_data")
                             ->orderBy('points', 'desc')
-                            ->orderBy('created_at', 'asc')
+                            ->orderBy('max_data', 'asc')
                             ->where('type', $type)
                             ->groupBy('user_name')
                             ->take(10)
