@@ -22,14 +22,16 @@ $(function () {
       $(this).addClass('activate');
     }
   });
-  // change sideNav the exam ( Exception )
-  $('#sidenav ul li a').each(function () {
-    if($(this).attr('href') == "/play/exam/") {
-      var addElement = $(this)[0].parentNode;
-      var firstNav = $('#sidenav ul li')[0];
-      var removeElement = firstNav.nextElementSibling;
-      removeElement.parentNode.removeChild(removeElement);
-      firstNav.parentNode.insertBefore(addElement, firstNav.nextSibling);
-    }
-  });
+  // サイドナビの不要なドロップダウンを削除
+  if(window.location.pathname == "/play/"){
+    $('#sidenav ul li a').each(function () {
+      if($(this).attr('href') == "/play/exam/") {
+        var addElement = $(this)[0].parentNode;
+        var firstNav = $('#sidenav ul li')[0];
+        var removeElement = firstNav.nextElementSibling;
+        removeElement.parentNode.removeChild(removeElement);
+        firstNav.parentNode.insertBefore(addElement, firstNav.nextSibling);
+      }
+    });
+  }
 });
