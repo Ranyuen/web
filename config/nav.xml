@@ -66,6 +66,9 @@
             <page path="recent_failure_and_provision"/>
             <page path="ponerorchis_in_the_new_way"/>
         </dir>
+        <dir path="cymbidium">
+            <page path="index"/>
+        </dir>
         <dir path="about_us">
             <page path="sitemap"/>
             <page path="news"/>
