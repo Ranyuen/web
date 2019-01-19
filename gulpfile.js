@@ -131,6 +131,7 @@ gulp.task('less', function () {
       'src/stylesheets/accordion.less',
       'src/stylesheets/menu.less',
       'src/stylesheets/notice.less',
+      'src/stylesheets/admin_editor.less',
     ]).
     pipe(less({
       compress:  true,
