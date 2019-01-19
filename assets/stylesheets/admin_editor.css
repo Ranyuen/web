@@ -1,0 +1,1 @@
+@charset "UTF-8";*{margin:0;padding:0}a#up{position:fixed;top:2%;right:8%}a#down{position:fixed;bottom:2%;right:8%}a#up,a#down{width:50px;height:50px;padding:10px;opacity:.7;background:gray;color:white}div h1,div h2,div p{font-size:16px;margin:0}div ol li{list-style-type:none;margin:10px 5px;border-bottom:solid 1px}div ol li a{text-decoration:none}
