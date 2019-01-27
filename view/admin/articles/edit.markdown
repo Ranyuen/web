@@ -6,6 +6,7 @@ title: Edit article
   <div class="articleEditor_path">
     <label for="articleEditor_path_input">URLパス</label>
     <input id="articleEditor_path_input" class="articleEditor_path_input" type="text" size="80" placeholder="/admin/articles/edit"/>
+    <button class="articleEditor_save" style="position: absolute; right: 2%">保存</button>
   </div>
   <div class="articleEditor_langTab">
     <div class="articleEditor_langTab_plus">+</div>
