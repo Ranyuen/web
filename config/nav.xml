@@ -68,6 +68,7 @@
         </dir>
         <dir path="cymbidium">
             <page path="photo_album"/>
+            <page path="cultivation"/>
         </dir>
         <dir path="about_us">
             <page path="sitemap"/>
