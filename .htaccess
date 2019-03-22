@@ -15,9 +15,6 @@ RewriteRule ^(.*)$ https://ranyuen.com/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 
-Redirect permanent /columns/agriculture_with_a_dream/new_volunteer https://ranyuen.com/columns/view_from_the_sky/new_volunteer
-Redirect permanent /columns/agriculture_with_a_dream/terrible_status_quo https://ranyuen.com/columns/view_from_the_sky/terrible_status_quo
-
 <IfModule mod_expires.c>
 ExpiresActive On
 ExpiresDefault "access plus 1 weeks"
