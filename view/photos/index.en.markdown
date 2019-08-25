@@ -13,6 +13,7 @@ Photos in Ranyuen
     <option value="all" {% if species_name == 'all' %}selected{% endif %}>All</option>
     <option value="Calanthe" {% if species_name == 'Calanthe' %}selected{% endif %}>Calanthe</option>
     <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>Ponerorchis</option>
+    <option value="Cymbidium" {% if species_name == 'Cymbidium' %}selected{% endif %}>Cymbidium goeringii</option>
     <option value="Japanease native orchid" {% if species_name == 'Japanease native orchid' %}selected{% endif %}>Japanese native orchids</option>
     <option value="Ranyuen style" {% if species_name == 'Ranyuen style' %}selected{% endif %}>Ranyuen style</option>
   </select>

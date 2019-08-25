@@ -13,6 +13,7 @@ title: 花華アルバム
     <option value="all" {% if species_name == 'all' %}selected{% endif %}>全て見る</option>
     <option value="Calanthe" {% if species_name == 'Calanthe' %}selected{% endif %}>エビネ</option>
     <option value="Ponerorchis" {% if species_name == 'Ponerorchis' %}selected{% endif %}>アワチドリ / 夢ちどり</option>
+    <option value="Cymbidium" {% if species_name == 'Cymbidium' %}selected{% endif %}>春蘭</option>
     <option value="Japanease native orchid" {% if species_name == 'Japanease native orchid' %}selected{% endif %}>日本の野生ラン</option>
     <option value="Ranyuen style" {% if species_name == 'Ranyuen style' %}selected{% endif %}>蘭裕園スタイル</option>
   </select>
