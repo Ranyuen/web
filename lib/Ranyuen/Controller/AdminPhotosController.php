@@ -25,7 +25,7 @@ use Ranyuen\Model\Util;
  */
 class AdminPhotosController extends AdminController
 {
-    private $galleryPath = 'images/gallery_new/';
+    private $galleryPath = 'images/gallery/';
     private $assetsPath  = 'images/assets_new/';
 
     /**
