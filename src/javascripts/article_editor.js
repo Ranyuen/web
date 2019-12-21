@@ -56,6 +56,7 @@ function ArticleEditor(node, article) {
   this.nodeContentPreview = node.querySelector('.articleEditor_content_preview');
   this.nodeErrors         = node.querySelector('.articleEditor_errors');
   this.nodeSave           = node.querySelector('.articleEditor_save');
+  this.nodeSaveTop           = node.querySelector('.articleEditor_save_top');
   this.nodeRemove         = node.querySelector('.articleEditor_remove');
   EventRouter.on('selectLangTabItem', function (langTabItem, content) {
     me.switchContent(langTabItem, content);
@@ -73,6 +74,9 @@ function ArticleEditor(node, article) {
     me.createContent();
   });
   this.nodeSave.addEventListener('click', function () {
+    me.save();
+  });
+  this.nodeSaveTop.addEventListener('click', function () {
     me.save();
   });
   this.nodeRemove.addEventListener('click', function () {
