@@ -19,7 +19,7 @@ class Photo extends Eloquent\Model
 {
     public static function getPhotos()
     {
-        return self::orderByRaw('RAND()')->get();;
+        return self::orderByRaw('RAND()')->get();
     }
 
     public static function getPhotosBySpeciesName($speciesName)
@@ -27,11 +27,13 @@ class Photo extends Eloquent\Model
         switch ($speciesName) {
             case 'all':
             case '':
-                return self::orderByRaw('RAND()')->get();;
+                return self::orderByRaw('RAND()')->get();
             case 'others':
                 return self::whereNull('species_name')->get();
             default:
-                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])->get();
+                return self::whereRaw('LOWER(species_name) LIKE ?', ['%'.strtolower($speciesName).'%'])
+                    ->orderBy('created_at', 'desc')
+                    ->get();
         }
     }
 
