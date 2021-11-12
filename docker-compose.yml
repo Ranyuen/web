@@ -1,0 +1,31 @@
+---
+version: "3"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    image: ghcr.io/ranyuen/web/web-backend:latest
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "2"
+    ports:
+      - 8000:80
+    volumes:
+      - ${PWD:-.}:/mnt:cached
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    image: ghcr.io/ranyuen/web/web-frontend:latest
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "2"
+    volumes:
+      - ${PWD:-.}:/mnt:cached
+
+volumes: {}

@@ -1,27 +1,27 @@
 {
   "require": {
-    "php": ">=5.4",
+    "php": ">=7.4",
     "clover/text-ltsv": "1.0.*@dev",
-    "davedevelopment/phpmig": "~1.1",
+    "davedevelopment/phpmig": "~1.0",
     "dflydev/markdown": "1.0.*@dev",
-    "ginq/ginq": "~0.2",
+    "ginq/ginq": "~0.0",
     "hafriedlander/php-peg": "dev-master@dev",
-    "illuminate/database": "~5.0",
+    "illuminate/database": "~8.0",
     "ircmaxell/password-compat": "~1.0",
-    "monolog/monolog": "~1.13",
-    "ranyuen/di": "~0.2.2",
-    "ranyuen/little": "~0.1.2",
-    "symfony/yaml": "~2.6",
-    "twig/twig": "~1.18",
+    "monolog/monolog": "~2.0",
+    "ranyuen/di": "~0.2",
+    "ranyuen/little": "~0.1",
+    "symfony/yaml": "~5.0",
+    "twig/twig": "~3.0",
     "usmanhalalit/strana": "1.*@dev",
-    "ramsey/uuid": "~3.4"
+    "ramsey/uuid": "~4.0"
   },
   "require-dev": {
-    "fabpot/php-cs-fixer": "~2.0@dev",
-    "phing/phing": "~2.10",
-    "phpmd/phpmd": "~2.2",
-    "phpunit/phpunit": "~4.5",
-    "squizlabs/php_codesniffer": "~2.3"
+     "friendsofphp/php-cs-fixer": "~3.2",
+     "phing/phing": "~2.17",
+     "phpmd/phpmd": "~2.10",
+     "phpunit/phpunit": "~9.5",
+     "squizlabs/php_codesniffer": "~3.6"
   },
   "autoload": {
     "psr-4": {"Ranyuen\\": "lib/Ranyuen/"}
