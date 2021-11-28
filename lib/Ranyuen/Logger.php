@@ -41,7 +41,7 @@ class Logger extends Monolog\Logger
      *
      * @return bool Whether the record has been processed.
      */
-    public function addRecord(int $level, string $message, array $context = [])
+    public function addRecord(int $level, string $message, array $context = []): bool
     {
         if (is_array($message)) {
             $ltsv = new LTSV();
