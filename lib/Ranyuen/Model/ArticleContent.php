@@ -10,7 +10,7 @@
 
 namespace Ranyuen\Model;
 
-use dflydev\markdown\MarkdownExtraParser;
+use League\CommonMark\CommonMarkConverter;
 use Illuminate\Database\Eloquent;
 use Ranyuen\Template\Template;
 
@@ -47,6 +47,11 @@ class ArticleContent extends Eloquent\Model
      */
     public function plainTitle()
     {
-        return strip_tags((new MarkdownExtraParser())->transformMarkdown($this->title));
+        $converter = new CommonMarkConverter([
+            'html_input' => 'strip',
+            'allow_unsafe_links' => false,
+        ]);
+        
+        return strip_tags($converter->convertToHtml($this->title));
     }
 }

@@ -10,7 +10,7 @@
 
 namespace Ranyuen\Template;
 
-use dflydev\markdown\MarkdownExtraParser;
+use League\CommonMark\CommonMarkConverter;
 use Symfony\Component\Yaml;
 
 /**
@@ -93,7 +93,12 @@ class Template
         if (preg_match('/\A<!DOCTYPE /', $content)) {
             return $content;
         } else {
-            return (new MarkdownExtraParser())->transformMarkdown($content);
+            $converter = new CommonMarkConverter([
+                'html_input' => 'strip',
+                'allow_unsafe_links' => false,
+            ]);
+            
+            return $converter->convertToHtml($content);
         }
     }
 
