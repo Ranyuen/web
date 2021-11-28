@@ -14,7 +14,8 @@
     "symfony/yaml": "~2.6",
     "twig/twig": "~1.18",
     "usmanhalalit/strana": "1.*@dev",
-    "ramsey/uuid": "~3.4"
+    "ramsey/uuid": "~3.4",
+    "michelf/php-markdown": "^1.9"
   },
   "require-dev": {
     "fabpot/php-cs-fixer": "~2.0@dev",
