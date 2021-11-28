@@ -11,7 +11,7 @@
 namespace Ranyuen\Model;
 
 use League\CommonMark\CommonMarkConverter;
-use Erusev\Parsedown\Parsedown;
+use Michelf\Markdown;
 use Illuminate\Database\Eloquent;
 use Ranyuen\Template\Template;
 
@@ -48,6 +48,6 @@ class ArticleContent extends Eloquent\Model
      */
     public function plainTitle()
     {    
-        return strip_tags((new Parsedown())->text($this->title));
+        return strip_tags(Markdown::defaultTransform($this->title));
     }
 }
