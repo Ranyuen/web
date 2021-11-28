@@ -48,15 +48,15 @@ class Template
             $params = array_merge($matter, $params);
         }
         $this->params = $params;
-        $loader = new \Twig_Loader_Array(['current' => '']);
+        $loader = new \Twig\Loader\ArrayLoader(['current' => '']);
         $loader->setTemplate('current', $content);
-        $loader = new \Twig_Loader_Chain(
+        $loader = new \Twig\Loader\ChainLoader(
             [
                 $loader,
-                new \Twig_Loader_Filesystem($templateDir),
+                new \Twig\Loader\FilesystemLoader($templateDir),
             ]
         );
-        $this->engine = new \Twig_Environment($loader);
+        $this->engine = new \Twig\Environment($loader);
     }
 
     /**
