@@ -36,12 +36,12 @@ class Logger extends Monolog\Logger
      * Override.
      *
      * @param int          $level   The logging level.
-     * @param string|array $message The log message.
+     * @param string       $message The log message.
      * @param array        $context The log context.
      *
      * @return bool Whether the record has been processed.
      */
-    public function addRecord($level, $message, array $context = [])
+    public function addRecord(int $level, string $message, array $context = [])
     {
         if (is_array($message)) {
             $ltsv = new LTSV();
