@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eux
+
 if test "install" = "$1"; then
   echo "We need PHP and Node.js."
   php composer.phar install

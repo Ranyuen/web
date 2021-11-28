@@ -1,0 +1,13 @@
+FROM node:16-slim
+
+SHELL ["/bin/bash", "-ex", "-o", "pipefail", "-c"]
+
+WORKDIR /mnt
+VOLUME /mnt
+
+COPY package-lock.json \
+     package.json \
+     ./
+RUN npm ci
+
+ENTRYPOINT ["gulp", "build"]
