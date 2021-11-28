@@ -72,7 +72,7 @@ class Template
         $methods = $class->getMethods(\ReflectionMethod::IS_PUBLIC);
         foreach ($methods as $method) {
             $this->engine->addFilter(
-                new \Twig_SimpleFilter(
+                new \Twig\TwigFilter(
                     $method->getName(),
                     function () use ($helper, $method) {
                         return $method->invokeArgs($helper, func_get_args());
