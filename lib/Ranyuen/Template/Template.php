@@ -10,7 +10,7 @@
 
 namespace Ranyuen\Template;
 
-use dflydev\markdown\MarkdownExtraParser;
+use Michelf\Markdown;
 use Symfony\Component\Yaml;
 
 /**
@@ -30,7 +30,7 @@ class Template
     /**
      * Twig engine.
      *
-     * @var Twig_Environment
+     * @var \Twig\Environment
      */
     private $engine;
 
@@ -48,15 +48,15 @@ class Template
             $params = array_merge($matter, $params);
         }
         $this->params = $params;
-        $loader = new \Twig_Loader_Array(['current' => '']);
+        $loader = new \Twig\Loader\ArrayLoader(['current' => '']);
         $loader->setTemplate('current', $content);
-        $loader = new \Twig_Loader_Chain(
+        $loader = new \Twig\Loader\ChainLoader(
             [
                 $loader,
-                new \Twig_Loader_Filesystem($templateDir),
+                new \Twig\Loader\FilesystemLoader($templateDir),
             ]
         );
-        $this->engine = new \Twig_Environment($loader);
+        $this->engine = new \Twig\Environment($loader);
     }
 
     /**
@@ -72,7 +72,7 @@ class Template
         $methods = $class->getMethods(\ReflectionMethod::IS_PUBLIC);
         foreach ($methods as $method) {
             $this->engine->addFilter(
-                new \Twig_SimpleFilter(
+                new \Twig\TwigFilter(
                     $method->getName(),
                     function () use ($helper, $method) {
                         return $method->invokeArgs($helper, func_get_args());
@@ -93,7 +93,7 @@ class Template
         if (preg_match('/\A<!DOCTYPE /', $content)) {
             return $content;
         } else {
-            return (new MarkdownExtraParser())->transformMarkdown($content);
+            return Markdown::defaultTransform($content);
         }
     }
 
