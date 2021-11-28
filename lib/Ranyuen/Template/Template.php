@@ -10,7 +10,7 @@
 
 namespace Ranyuen\Template;
 
-use Erusev\Parsedown\Parsedown;
+use Michelf\Markdown;
 use Symfony\Component\Yaml;
 
 /**
@@ -94,7 +94,7 @@ class Template
             return $content;
         } else {
             
-            return (new Parsedown())->text($content);
+            return Markdown::defaultTransform($content);
         }
     }
 
