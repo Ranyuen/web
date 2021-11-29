@@ -79,6 +79,6 @@ class Logger extends Monolog\Logger
             $message['ua'] = $_SERVER['HTTP_USER_AGENT'];
         }
 
-        return $this->addInfo($message);
+        return $this->addRecord(1, $message);
     }
 }
