@@ -100,8 +100,6 @@ class AdminController extends Controller
         }
         $this->session['admin_username'] = $username;
 
-        ExamQuestion::readFromJSON('assets/exam/20211227_photo.json');
-
         return new Response('', 303, ['Location' => '/admin/']);
     }
 
