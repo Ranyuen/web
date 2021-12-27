@@ -10,7 +10,8 @@
 
 namespace Ranyuen\Model;
 
-use dflydev\markdown\MarkdownExtraParser;
+use League\CommonMark\CommonMarkConverter;
+use Michelf\Markdown;
 use Illuminate\Database\Eloquent;
 use Ranyuen\Template\Template;
 
@@ -46,7 +47,7 @@ class ArticleContent extends Eloquent\Model
      * @return string
      */
     public function plainTitle()
-    {
-        return strip_tags((new MarkdownExtraParser())->transformMarkdown($this->title));
+    {    
+        return strip_tags(Markdown::defaultTransform($this->title));
     }
 }
