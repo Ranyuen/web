@@ -94,8 +94,8 @@ class ExamController extends Controller
         $exam     = new ExamQuestion();
         $orderBy  = (($exam->getConnection()->getConfig('driver')) == 'sqlite') == 'sqlite' ? 'RANDOM()' : 'RAND()';
         $questions = ExamQuestion::where('type', $type)
-                                    ->orderByRaw($orderBy)
-                                    ->take(100)
+                                    // ->orderByRaw($orderBy)
+                                    // ->take(100)
                                     ->get();
         foreach ($questions as $question) {
             $question['answers'] = ExamAnswer::orderByRaw($orderBy)
