@@ -71,7 +71,7 @@ class ExamController extends Controller
                             ->where('type', $type)
                             ->groupBy('user_name')
                             ->take(20)
-                            ->where('2021-12-28 23:00:00' < 'created_at')
+                            ->where('created_at', '>', '2021-12-28 23:00:00')
                             ->get();
             ;
             $params[$type] = $query;
