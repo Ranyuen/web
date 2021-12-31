@@ -14,6 +14,7 @@ use Ranyuen\Little\Response;
 use Ranyuen\Model\Admin;
 use Ranyuen\Model\Article;
 use Ranyuen\Template\ViewRenderer;
+use Ranyuen\Model\ExamQuestion;
 
 /**
  * Admin.
@@ -98,6 +99,8 @@ class AdminController extends Controller
             return new Response($this->showLogin($username, $password), 403);
         }
         $this->session['admin_username'] = $username;
+
+        ExamQuestion::readFromJSON('assets/exam/20211227_photo.json');
 
         return new Response('', 303, ['Location' => '/admin/']);
     }

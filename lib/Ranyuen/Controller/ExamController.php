@@ -70,7 +70,8 @@ class ExamController extends Controller
                             ->orderBy('max_data', 'asc')
                             ->where('type', $type)
                             ->groupBy('user_name')
-                            ->take(10)
+                            ->take(20)
+                            ->where('created_at', '>', '2021-12-28 23:00:00')
                             ->get();
             ;
             $params[$type] = $query;
