@@ -78,8 +78,8 @@ class ExamController extends Controller
                             })
                             ->orderBy('points', 'desc')
                             ->orderBy('created_at', 'asc')
-                            // ->where('type', $type)
-                            // ->where('created_at', '>', '2021-12-28 23:00:00')
+                            ->where('type', $type)
+                            ->where('created_at', '>', '2021-12-28 23:00:00')
                             // ->groupBy('user_name')
                             ->take(20)
                             ->get();
