@@ -20,7 +20,7 @@ use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 use Illuminate\Database\Eloquent;
-use DB;
+use Illuminate\Database\Query;
 // use Illuminate\Database\Query as Query;
 /**
  *  Exam.
@@ -67,6 +67,11 @@ class ExamController extends Controller
         $types    = ['easy', 'hard', 'expert', 'photo'];
         $subQuery = DB::raw("select user_name, max(points) as max_points from exam_result where created_at > '2021-12-28 23:00:00' group by user_name");
         foreach ($types as $type) {
+            $subQuery = ExamResult::selectRaw("user_name, max(points) as max_points")
+                ->where('created_at', '>', '2021-12-28 23:00:00')
+                ->where('type', $type)
+                ->where('created_at', '>', '2021-12-28 23:00:00')
+                ->groupBy('user_name');
             $query = ExamResult::selectRaw("user_name, points, created_at")
                             ->join("({$subQuery}) as sub", function($join) {
                                 $join->on('sub.user_name', '=', 'user_name');
@@ -74,9 +79,9 @@ class ExamController extends Controller
                             })
                             ->orderBy('points', 'desc')
                             ->orderBy('created_at', 'asc')
-                            ->where('type', $type)
-                            ->where('created_at', '>', '2021-12-28 23:00:00')
-                            ->groupBy('user_name')
+                            // ->where('type', $type)
+                            // ->where('created_at', '>', '2021-12-28 23:00:00')
+                            // ->groupBy('user_name')
                             ->take(20)
                             ->get();
             ;
