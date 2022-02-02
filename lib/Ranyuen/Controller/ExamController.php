@@ -20,6 +20,7 @@ use Ranyuen\Little\Request;
 use Ranyuen\Little\Response;
 use Ranyuen\Little\Router;
 use Illuminate\Database\Eloquent;
+use Illuminate\Database\Query;
 // use Illuminate\Database\Query as Query;
 /**
  *  Exam.
@@ -65,12 +66,21 @@ class ExamController extends Controller
         $params   = $renderer->defaultParams('ja', '/play/exam/');
         $types    = ['easy', 'hard', 'expert', 'photo'];
         foreach ($types as $type) {
-            $query = ExamResult::selectRaw("user_name, max(points) as points, max(created_at) as created_at")
+            $subQuery = ExamResult::selectRaw("user_name, max(points) as max_points")
+                ->where('created_at', '>', '2021-12-28 23:00:00')
+                ->where('type', $type)
+                ->where('created_at', '>', '2021-12-28 23:00:00')
+                ->groupBy('user_name');
+            $query = ExamResult::selectRaw("exam_result.user_name, points, created_at")
+                            ->joinSub($subQuery, 'sub', function($join) {
+                                $join->on('sub.user_name', '=', 'exam_result.user_name');
+                                $join->on('sub.max_points', '=', 'exam_result.points');
+                            })
                             ->orderBy('points', 'desc')
                             ->orderBy('created_at', 'asc')
-                            ->where('type', $type)
-                            ->where('created_at', '>', '2021-12-28 23:00:00')
-                            ->groupBy('user_name')
+                            // ->where('type', $type)
+                            // ->where('created_at', '>', '2021-12-28 23:00:00')
+                            // ->groupBy('user_name')
                             ->take(20)
                             ->get();
             ;
