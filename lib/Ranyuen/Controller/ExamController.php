@@ -72,7 +72,7 @@ class ExamController extends Controller
                 ->where('created_at', '>', '2021-12-28 23:00:00')
                 ->groupBy('user_name');
             $query = ExamResult::selectRaw("user_name, points, created_at")
-                            ->join("({$subQuery}) as sub", function($join) {
+                            ->joinSub($subQuery, 'sub', function($join) {
                                 $join->on('sub.user_name', '=', 'user_name');
                                 $join->on('sub.max_points', '=', 'points');
                             })
