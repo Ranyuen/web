@@ -65,7 +65,6 @@ class ExamController extends Controller
         $renderer = new MainViewRenderer($this->renderer, $this->nav, $this->bgimage, $this->config);
         $params   = $renderer->defaultParams('ja', '/play/exam/');
         $types    = ['easy', 'hard', 'expert', 'photo'];
-        $subQuery = DB::raw("select user_name, max(points) as max_points from exam_result where created_at > '2021-12-28 23:00:00' group by user_name");
         foreach ($types as $type) {
             $subQuery = ExamResult::selectRaw("user_name, max(points) as max_points")
                 ->where('created_at', '>', '2021-12-28 23:00:00')
