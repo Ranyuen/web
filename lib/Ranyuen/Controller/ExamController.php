@@ -73,8 +73,8 @@ class ExamController extends Controller
                 ->groupBy('user_name');
             $query = ExamResult::selectRaw("user_name, points, created_at")
                             ->joinSub($subQuery, 'sub', function($join) {
-                                $join->on('sub.user_name', '=', 'user_name');
-                                $join->on('sub.max_points', '=', 'points');
+                                $join->on('sub.user_name', '=', 'exam_result.user_name');
+                                $join->on('sub.max_points', '=', 'exam_result.points');
                             })
                             ->orderBy('points', 'desc')
                             ->orderBy('created_at', 'asc')
